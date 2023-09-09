@@ -31,7 +31,7 @@ module.exports = (app, port) => {
                         "hidden": false,
                         "_type": "CommonUI Simple Message Base",
                         "subgame": "br",
-                        "body": "Made by kemo (@xkem0x) and Beat (@TheBeatYT_evil).\r\nDiscord: https://discord.gg/DJ6VUmD",
+                        "body": "Made by kemo (@xkem0x) and Beat (@TheBeatYT_evil), Maintained by unrealhybrid (@unrealhybrid).\r\nDiscord: https://discord.gg/neo-mods-897532507048796210",
                         "title": "Neonite V2",
                         "spotlight": false
                     },
@@ -57,7 +57,7 @@ module.exports = (app, port) => {
                             "hidden": false,
                             "_type": "CommonUI Emergency Notice Base",
                             "title": "Neonite V2",
-                            "body": "Made by kemo (@xkem0x) and Beat (@TheBeatYT_evil)..\r\nDiscord: https://discord.gg/DJ6VUmD",
+                            "body": "Made by kemo (@xkem0x) and Beat (@TheBeatYT_evil), Maintained by unrealhybrid (@unrealhybrid)\r\nDiscord: https://discord.gg/DJ6VUmD",
                         }
                     ]
                 },

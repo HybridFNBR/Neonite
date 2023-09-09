@@ -789,40 +789,45 @@ module.exports = (app) => {
 	app.post('*/discovery/surface/*', (req, res) =>{
         season = req.headers["user-agent"].split('-')[1];
 		seasonglobal = req.headers["user-agent"].split('-')[1].split('.')[0]
-		try{
-			if (season === "22.40") {
-				return res.json(discoveryResponses.ver2240);
-			}
-			if (season === "20.40") {
-				return res.json(discoveryResponses.ver2040);
-			}
-			if (season === "18.40") {
-				return res.json(discoveryResponses.ver1840);
-			}
-			if (season === "17.50") {
-				return res.json(discoveryResponses.ver1750);
-			}
-			if(seasonglobal === "19"){
-				return res.json(discoveryResponses.ver19)
-			}
-			else {
-				return res.json(Default);
-			}
-		}
-		catch{}
+		const seasonData = {
+			"22.40": discoveryResponses.ver2240,
+			"20.40": discoveryResponses.ver2040,
+			"18.40": discoveryResponses.ver1840,
+			"17.50": discoveryResponses.ver1750,
+		  };
+		  
+		  if (season == seasonData) {
+			return res.json(seasonData[season]);
+		  }
+		  if(seasonglobal === "19"){
+			return res.json(discoveryResponses.ver19)
+		  }
+		  else{
+			return res.json(Default)
+		  }
 });
 
 	app.post('/links/api/fn/mnemonic/', (req, res) => {
 		season = req.headers["user-agent"].split('-')[1]
 		seasonglobal = req.headers["user-agent"].split('-')[1].split('.')[0]
         formatting = []
-        if(season=="22.40"){for(var i in discoveryResponses.ver2240.Panels[0].Pages[0].results){formatting.push(discoveryResponses.ver2240.Panels[0].Pages[0].results[i].linkData)} return res.json(formatting)}
-        if(season=="20.40"){for(var i in discoveryResponses.ver2040.Panels[0].Pages[0].results){formatting.push(discoveryResponses.ver2040.Panels[0].Pages[0].results[i].linkData)} return res.json(formatting)} 
-        if(season=="18.40"){for(var i in discoveryResponses.ver1840.Panels[0].Pages[0].results){formatting.push(discoveryResponses.ver1840.Panels[0].Pages[0].results[i].linkData)} return res.json(formatting)} 
-        if(season=="17.50"){for(var i in discoveryResponses.ver1750.Panels[0].Pages[0].results){formatting.push(discoveryResponses.ver1750.Panels[0].Pages[0].results[i].linkData)} return res.json(formatting)} 
-		if(seasonglobal=="19"){for(var i in discoveryResponses.ver19.Panels[0].Pages[0].results){formatting.push(discoveryResponses.ver19.Panels[0].Pages[0].results[i].linkData)} return res.json(formatting)} 
-		else{for(var i in Default.Panels[0].Pages[0].results){formatting.push(Default.Panels[0].Pages[0].results[i].linkData)} return res.json(formatting)}
-
+		const seasonData = {
+			"22.40": discoveryResponses.ver2240,
+			"20.40": discoveryResponses.ver2040,
+			"18.40": discoveryResponses.ver1840,
+			"17.50": discoveryResponses.ver1840,
+		  };
+		  const selectedData = seasonData[season]
+		  if (seasonData == season) {
+			const results = seasonData.Panels[0].Pages[0].results;
+			for (const i in results) {
+			  formatting.push(results[i].linkData);
+			}
+			
+			return res.json(formatting);
+		  }
+		  if(seasonglobal=="19"){for(var i in discoveryResponses.ver19.Panels[0].Pages[0].results){formatting.push(discoveryResponses.ver19.Panels[0].Pages[0].results[i].linkData)} return res.json(formatting)}
+		  else{for(var i in Default.Panels[0].Pages[0].results){formatting.push(Default.Panels[0].Pages[0].results[i].linkData)} return res.json(formatting)} 
 	});
 	
 	app.get('/links/api/fn/mnemonic/:playlistId/related', (req, res) => {

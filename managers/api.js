@@ -50,6 +50,7 @@ module.exports = (app) => {
 			}
 		]);
 	});
+	
 
 	app.get("/lightswitch/api/service/:serviceId/status", (req, res) => {
 		const serviceId = req.params.serviceId.toLowerCase();
@@ -102,28 +103,8 @@ module.exports = (app) => {
 			});
 		});
 
-	app.get('/Builds/Fortnite/Content/CloudDir/*.manifest', (req, res) => {
-		res.setHeader("content-type", "application/octet-stream")
-		res.sendFile(path.join(__dirname, '../LauncherAssets/Neonite.manifest'));
-	});
+		app.use('/Builds/Fortnite/Content/CloudDir', Express.static(path.join(__dirname, '../LauncherAssets'))); //could break if anything additional is put into the folder(i am not responsible) -uneralhybrid
 
-	app.get('/Builds/Fortnite/Content/CloudDir/*.ini', (req, res) => {
-		res.setHeader("content-type", "application/octet-stream")
-		res.sendFile(path.join(__dirname, '../LauncherAssets/Full.ini'));
-	});
-
-	app.get('/Builds/Fortnite/Content/CloudDir/*.chunk', (req, res) => {
-		res.setHeader("content-type", "application/octet-stream")
-		res.sendFile(path.join(__dirname, '../LauncherAssets/Neonite.chunk'));
-	});
-
-	
-	app.get('/fortnite/api/game/v2/creative/*', (req, res) =>
-		res.json({
-			"results": [],
-			"hasMore": false
-		})
-	)
 
 
 	app.get('/api/v1/assets/Fortnite/:version/', (req, res) => {
@@ -171,6 +152,7 @@ module.exports = (app) => {
 		res.json(require("../discovery/FrontEndAssets.json"))//you can add more to the file but at the moment its only being used for discovery.
 	});
 
+	//itemshop
 	app.get('/fortnite/api/storefront/v2/catalog', function (req, res) {
 		res.json(require("../shop.json"));
 	});
@@ -193,6 +175,7 @@ module.exports = (app) => {
 
 	//presence ?
 	app.get('/presence/api/v1/_/:accountId/settings/subscriptions', (req, res) => { res.status(204).end(); });
+
 
 	app.get('/socialban/api/public/v1/:accountId', (req, res) => {
 		res.json({
@@ -219,7 +202,7 @@ module.exports = (app) => {
 			res.json({
 			'data': {
 				'ageGate': 0,
-				'controlsEnabled': False,
+				'controlsEnabled': false,
 				'maxEpicProfilePrivacy': 'none',
 				'principalId': req.params.accountId
 			}
