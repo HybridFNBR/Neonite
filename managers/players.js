@@ -258,5 +258,131 @@ module.exports = (app) => {
         })
     })
 
+    app.get('/friends/api/public/blocklist/:accountId', (req, res) => {
+		res.json({
+			blockedUsers: []
+		})
+	});
+
+	//friends setting
+	app.get('/friends/api/v1/:accountId/settings', (req, res) => {
+		res.json({
+			acceptInvites: "public",
+			mutualPrivacy: 'NONE'
+		})
+	});
+
+	//recent players
+	app.get('/friends/api/public/list/fortnite/:accountId/recentPlayers', (req, res) => {
+		res.json([]);
+	});
+
+    app.post("/friends/api/v1/:accountId/friends/NeoniteBot", (req, res) => {
+		res.status(204).send()
+	})
+
+    app.post("/friends/api/v1/:accountId/blocklist/NeoniteBot", (req, res) => {
+		res.status(403).json({ "errorCode": "errors.com.epicgames.Neonite.common.forbidden", "errorMessage": "You cannot remove the bot", "messageVars": [], "numericErrorCode": 14004, "originatingService": "party", "intent": "prod" })
+
+		var client = global.xmppClients.find(x => x.accountId == req.params.accountId);
+		if (!client) return;
+
+		client.functions.SendMessage(JSON.stringify({
+			"type": "FRIENDSHIP_REQUEST",
+			"timestamp": new Date(),
+			"from": "NeoniteBot",
+			"to": req.params.accountId,
+			"status": "ACCEPTED"
+		}))
+
+		client.functions.SendMessage(JSON.stringify({
+			"payload": {
+				"accountId": "NeoniteBot",
+				"status": "ACCEPTED",
+				"direction": "INBOUND",
+				"created": new Date(),
+				"favorite": false
+			},
+			"type": "com.epicgames.friends.core.apiobjects.Friend",
+			"timestamp": new Date()
+		}))
+
+
+	})
+
+    app.get('/friends/api/v1/:accountId/summary', (req, res) => {
+		res.json({
+			"friends": [{
+				"accountId": "NeoniteBot",
+				"groups": [],
+				"mutual": 0,
+				"alias": "",
+				"note": "",
+				"favorite": true,
+				"created": "2021-01-17T16:42:04.125Z"
+			}],
+			"incoming": [],
+			"suggested": [],
+			"blocklist": [],
+			"settings": {
+				"acceptInvites": "public"
+			},
+			"limitsReached": {
+				"incoming": false,
+				"outgoing": false,
+				"accepted": false
+			}
+		})
+	})
+
+    app.get("/friends/api/v1/*/blocklist", (req, res) => { res.json([]) })
+
+	app.get("/friends/api/v1/*/recent/fortnite", (req, res) => { res.json([]) })
+
+    app.delete("/friends/api/v1/:accountId/friends/NeoniteBot", (req, res) => {
+		res.status(403).json({ "errorCode": "errors.com.epicgames.Neonite.common.forbidden", "errorMessage": "You cannot remove the bot", "messageVars": [], "numericErrorCode": 14004, "originatingService": "party", "intent": "prod" })
+		var client = global.xmppClients.find(x => x.accountId == req.params.accountId);
+		if (!client) return;
+
+		client.functions.SendMessage(JSON.stringify({
+			"type": "FRIENDSHIP_REQUEST",
+			"timestamp": new Date(),
+			"from": "NeoniteBot",
+			"to": req.params.accountId,
+			"status": "ACCEPTED"
+		}))
+
+		client.functions.SendMessage(JSON.stringify({
+			"payload": {
+				"accountId": "NeoniteBot",
+				"status": "ACCEPTED",
+				"direction": "INBOUND",
+				"created": new Date(),
+				"favorite": false
+			},
+			"type": "com.epicgames.friends.core.apiobjects.Friend",
+			"timestamp": new Date()
+		}))
+	})
+
+	//friends list
+	app.get('/friends/api/public/friends/:accountId', (req, res) => {
+		res.json([
+			{
+				accountId: 'NeoniteBot',
+				status: 'ACCEPTED',
+				direction: 'INBOUND',
+				created: '2018-12-06T04:46:01.296Z',
+				favorite: false
+			},
+			{
+				accountId: req.params.accountId,
+				status: 'ACCEPTED',
+				direction: 'INBOUND',
+				created: '2018-12-06T04:46:01.296Z',
+				favorite: false
+			}
+		]);
+	});
 }
 

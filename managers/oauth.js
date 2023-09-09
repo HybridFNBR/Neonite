@@ -207,5 +207,9 @@ module.exports = (app) => {
 		secret: "null"
 	}));
 
+	app.get('/account/api/public/account/:accountId/externalAuths', (req, res) => {
+		res.json([])
+	});
+
 	app.delete('/account/api/public/account/:accountId/deviceAuth/*', (req, res) => res.status(204).end());
 }
