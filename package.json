@@ -1,0 +1,40 @@
+{
+  "name": "neonitev2",
+  "version": "2.7.4",
+  "description": "A Fortnite private server/lobby emulator allowing you to design your dream Fortnite experience",
+  "main": "app.js",
+  "dependencies": {
+    "axios": "^0.21.2",
+    "body-parser": "^1.19.0",
+    "compare-versions": "^4.1.2",
+    "cookie-parser": "^1.4.6",
+    "express": "^4.17.1",
+    "express-ws": "^4.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "multer": "^1.4.2",
+    "path": "^0.12.7",
+    "uuid": "^8.3.2",
+    "xml-parser": "^1.2.1",
+    "xmlbuilder": "^15.1.1",
+    "follow-redirects": ">=1.14.8"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "test": "node --unhandled-rejections=strict app.js --test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NeoniteDev/NeoniteV2.git"
+  },
+  "author": "kemo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NeoniteDev/NeoniteV2/pulls"
+  },
+  "homepage": "https://github.com/NeoniteDev/NeoniteV2#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.11",
+    "@types/ws": "^7.4.0",
+    "typescript": "^4.1.5"
+  }
+}
