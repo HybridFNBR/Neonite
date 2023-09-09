@@ -826,8 +826,8 @@ module.exports = (app) => {
 			
 			return res.json(formatting);
 		  }
-		  if(seasonglobal=="19"){for(var i in discoveryResponses.ver19.Panels[0].Pages[0].results){formatting.push(discoveryResponses.ver19.Panels[0].Pages[0].results[i].linkData)} return res.json(formatting)}
-		  else{for(var i in Default.Panels[0].Pages[0].results){formatting.push(Default.Panels[0].Pages[0].results[i].linkData)} return res.json(formatting)} 
+		  if(seasonglobal === "19"){var s19 = discoveryResponses.ver19.Panels[0].Pages[0].results.map(result => result.linkData); return res.json(s19);}		  
+		  else{var defaultResponse = Default.Panels[0].Pages[0].results.map(result => result.linkData)} return res.json(defaultResponse)
 	});
 	
 	app.get('/links/api/fn/mnemonic/:playlistId/related', (req, res) => {
