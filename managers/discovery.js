@@ -815,7 +815,7 @@ module.exports = (app) => {
 			"22.40": discoveryResponses.ver2240,
 			"20.40": discoveryResponses.ver2040,
 			"18.40": discoveryResponses.ver1840,
-			"17.50": discoveryResponses.ver1840,
+			"17.50": discoveryResponses.ver1750,
 		  };
 		  const selectedData = seasonData[season]
 		  if (seasonData == season) {
@@ -863,6 +863,7 @@ module.exports = (app) => {
 				}
 			})
 	});
+
 
 
 	app.get('/links/api/fn/mnemonic/:playlistId', (req, res) => {

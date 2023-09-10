@@ -87,13 +87,15 @@ async function compareAndUpdateKeychain() {
 	require('./xmpp')
 
 	const app = express();
+	/*app.use((req, res, next) => {
+		NeoLog.Debug(`Requested URL: ${req.url}`);
+		next();
+	});*/ //for debugging purposes
 	app.use("/", express.static("public"));
-
 	app.use(express.urlencoded({ extended: false }));
 	app.use(express.json());
 	app.use(cookieParser());
 	app.set("etag", false);
-
 
 
 	const fs = require('fs');

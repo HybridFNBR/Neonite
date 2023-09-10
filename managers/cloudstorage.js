@@ -2,6 +2,8 @@ const path = require('path');
 const crypto = require("crypto");
 const fs = require('fs');
 
+
+
 const hotfixPath = path.join(__dirname, '../hotfixes/');
 
 module.exports = (app) => {

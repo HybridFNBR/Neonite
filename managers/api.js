@@ -8,6 +8,7 @@ const { ErrDef, ApiException, com } = require('./../structs/errors');
 var builder = require('xmlbuilder');
 const Express = require('express');
 
+
 Date.prototype.addHours = function (h) {
 	this.setTime(this.getTime() + (h * 60 * 60 * 1000));
 	return this;
@@ -28,7 +29,9 @@ Array.prototype.shuffle = function () {
 /**
  * 
  * @param {Express.Application} app 
+ * 
  */
+
 module.exports = (app) => {
 	//lightswitch
 	app.get('/lightswitch/api/service/bulk/status', (req, res) => {
