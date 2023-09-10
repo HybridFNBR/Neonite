@@ -865,7 +865,7 @@ module.exports = (app) => {
 	});
 
 
-	app.get('/links/api/fn/mnemonic/:playlistId/', (req, res) => {
+	app.get('/links/api/fn/mnemonic/:playlistId', (req, res) => {
 		try{
 			res.json({
 				"namespace": "fn",

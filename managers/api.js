@@ -94,16 +94,25 @@ module.exports = (app) => {
 				"distributions": [
 					"https://epicgames-download1.akamaized.net/Builds/Fortnite/Content/CloudDir/",
 					"https://download.epicgames.com/Builds/Fortnite/Content/CloudDir/",
-					"https://download2.epicgames.com/Builds/Fortnite/Content/CloudDir/",
-					"https://download3.epicgames.com/Builds/Fortnite/Content/CloudDir/",
-					"https://download4.epicgames.com/Builds/Fortnite/Content/CloudDir/",
-					"https://fastly-download.epicgames.com/Builds/Fortnite/Content/CloudDir/",
 					"https://127.0.0.0:5595/Builds/Fortnite/Content/CloudDir/"
 				]
 			});
 		});
 
-		app.use('/Builds/Fortnite/Content/CloudDir', Express.static(path.join(__dirname, '../LauncherAssets'))); //could break if anything additional is put into the folder(i am not responsible) -uneralhybrid
+		app.get('/Builds/Fortnite/Content/CloudDir/*.manifest', (req, res) => {
+			res.setHeader("content-type", "application/octet-stream")
+			res.sendFile(path.join(__dirname, '../LauncherAssets/Neonite.manifest'));
+		});
+	
+		app.get('/Builds/Fortnite/Content/CloudDir/*.ini', (req, res) => {
+			res.setHeader("content-type", "application/octet-stream")
+			res.sendFile(path.join(__dirname, '../LauncherAssets/Full.ini'));
+		});
+	
+		app.get('/Builds/Fortnite/Content/CloudDir/*.chunk', (req, res) => {
+			res.setHeader("content-type", "application/octet-stream")
+			res.sendFile(path.join(__dirname, '../LauncherAssets/Neonite.chunk'));
+		});
 
 
 
@@ -219,14 +228,3 @@ module.exports = (app) => {
 
 
 };
-
-function RandomString(length) {
-	var result = [];
-	var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-	var charactersLength = characters.length;
-	for (var i = 0; i < length; i++) {
-		result.push(characters.charAt(Math.floor(Math.random() *
-			charactersLength)));
-	}
-	return result.join('');
-}
