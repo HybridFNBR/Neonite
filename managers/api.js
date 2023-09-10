@@ -196,6 +196,13 @@ module.exports = (app) => {
 		})
 	});
 
+	app.get('/fortnite/api/game/v2/creative/*', (req, res) =>
+		res.json({
+			"results": [],
+			"hasMore": false
+		})
+	)
+
 	//sac
 	app.get('/affiliate/api/public/affiliates/slug/:affiliateName', (req, res) => {
 		if (req.params.affiliateName != "Neonite") {
@@ -228,6 +235,4 @@ module.exports = (app) => {
 	app.get('/fortnite/api/storefront/v2/keychain', (req, res) => {
 		res.json(require("../keychain.json"));
 	})
-
-
 };

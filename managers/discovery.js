@@ -1,5 +1,6 @@
 
-const Default = require("../discovery/discoveryMenu.json")
+const Default = require("../discovery/discoveryMenu.json");
+const NeoLog = require("../structs/NeoLog");
 
 const discoveryResponses = {
     ver2240 : {
@@ -794,20 +795,19 @@ module.exports = (app) => {
 			"20.40": discoveryResponses.ver2040,
 			"18.40": discoveryResponses.ver1840,
 			"17.50": discoveryResponses.ver1750,
-		  };
-		  
-		  if (season == seasonData) {
-			return res.json(seasonData[season]);
-		  }
-		  if(seasonglobal === "19"){
+		};
+		for(var i in seasonData){ if (i == season){return res.json(seasonData[season])}}
+		if(seasonglobal === "19")
+		{
 			return res.json(discoveryResponses.ver19)
-		  }
-		  else{
+		}
+		else
+		{
 			return res.json(Default)
-		  }
-});
+		}
+	});
 
-	app.post('/links/api/fn/mnemonic/', (req, res) => {
+	app.post('/links/api/fn/mnemonic/', async(req, res) => {
 		season = req.headers["user-agent"].split('-')[1]
 		seasonglobal = req.headers["user-agent"].split('-')[1].split('.')[0]
         formatting = []
@@ -817,17 +817,16 @@ module.exports = (app) => {
 			"18.40": discoveryResponses.ver1840,
 			"17.50": discoveryResponses.ver1750,
 		  };
-		  const selectedData = seasonData[season]
-		  if (seasonData == season) {
-			const results = seasonData.Panels[0].Pages[0].results;
-			for (const i in results) {
-			  formatting.push(results[i].linkData);
-			}
-			
-			return res.json(formatting);
-		  }
-		  if(seasonglobal === "19"){var s19 = discoveryResponses.ver19.Panels[0].Pages[0].results.map(result => result.linkData); return res.json(s19);}		  
-		  else{var defaultResponse = Default.Panels[0].Pages[0].results.map(result => result.linkData)} return res.json(defaultResponse)
+		  
+			for(var i in seasonData)
+			{
+				if(i == season){
+					var eventBuilds = seasonData[season].Panels[0].Pages[0].results.map(result => result.linkData); 
+					return res.json(eventBuilds);
+				}
+			}	
+		  	if(seasonglobal === "19"){var s19 = discoveryResponses.ver19.Panels[0].Pages[0].results.map(result => result.linkData); return res.json(s19);}		  
+		  	else{var defaultResponse = Default.Panels[0].Pages[0].results.map(result => result.linkData)} return res.json(defaultResponse)
 	});
 	
 	app.get('/links/api/fn/mnemonic/:playlistId/related', (req, res) => {
@@ -866,30 +865,44 @@ module.exports = (app) => {
 
 
 
+
 	app.get('/links/api/fn/mnemonic/:playlistId', (req, res) => {
-		try{
-			res.json({
-				"namespace": "fn",
-				"mnemonic": req.params.playlistId,
-				"linkType": "BR:Playlist",
-				"active": true,
-				"disabled": false,
-				"version": 95,
-				"moderationStatus": "Unmoderated",
-				"accountId": "epic",
-				"creatorName": "Epic",
-				"descriptionTags": [],
-				"metadata": {
-				  "image_url": `${PlaylistData.links[`${req.params.playlistId}`].image_url[0]}`,
-				  "matchmaking": {
-					"override_playlist": req.params.playlistId
-				  }
-				},
-			  "lastVisited": null,
-			  "linkCode": req.params.playlistId,
-			  "isFavorite": false
-			})
+		const seasonData = {
+			"22.40": discoveryResponses.ver2240,
+			"20.40": discoveryResponses.ver2040,
+			"18.40": discoveryResponses.ver1840,
+			"17.50": discoveryResponses.ver1750,
+		};
+		season = req.headers["user-agent"].split('-')[1]
+		seasonglobal = req.headers["user-agent"].split('-')[1].split('.')[0]
+		for(var i in seasonData)
+		{
+			if(i == season)
+			{
+				for (var i2 in seasonData[season].Panels[0].Pages[0].results) {
+					if (seasonData[season].Panels[0].Pages[0].results[i2].linkData.mnemonic == req.params.playlistId){
+						return res.json(seasonData[season].Panels[0].Pages[0].results[i2].linkData)
+					}
+				}
+
+			}
+			if(seasonglobal == "19"){
+				for(var i2 in discoveryResponses.ver19.Panels[0].Pages[0].results){
+					if(discoveryResponses.ver19.Panels[0].Pages[0].results[i2].linkData.mnemonic == req.params.playlistId){
+						return res.json(discoveryResponses.ver19.Panels[0].Pages[0].results[i2].linkData)
+					}
+				}
+
+			}
+			else{
+				for(var i2 in Default.Panels[0].Pages[0].results){
+					if(Default.Panels[0].Pages[0].results[i2].linkData.mnemonic == req.params.playlistId){
+						return res.json(Default.Panels[0].Pages[0].results[i2].linkData)
+					}
+				}
+			}
 		}
-		catch{} //catches errors when the playlist is null on startup which happens most of the time.
 	});
+
+	//you may be wonder why it looks like this, well we need to support event versions somehow right. :D
 }
