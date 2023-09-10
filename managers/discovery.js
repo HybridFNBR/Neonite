@@ -807,7 +807,7 @@ module.exports = (app) => {
 		}
 	});
 
-	app.post('/links/api/fn/mnemonic/', async(req, res) => {
+	app.post('/links/api/fn/mnemonic/', (req, res) => {
 		season = req.headers["user-agent"].split('-')[1]
 		seasonglobal = req.headers["user-agent"].split('-')[1].split('.')[0]
         formatting = []
@@ -877,30 +877,33 @@ module.exports = (app) => {
 		seasonglobal = req.headers["user-agent"].split('-')[1].split('.')[0]
 		for(var i in seasonData)
 		{
-			if(i == season)
-			{
-				for (var i2 in seasonData[season].Panels[0].Pages[0].results) {
-					if (seasonData[season].Panels[0].Pages[0].results[i2].linkData.mnemonic == req.params.playlistId){
-						return res.json(seasonData[season].Panels[0].Pages[0].results[i2].linkData)
+			try{
+				if(i == season)
+				{
+					for (var i2 in seasonData[season].Panels[0].Pages[0].results) {
+						if (seasonData[season].Panels[0].Pages[0].results[i2].linkData.mnemonic == req.params.playlistId){
+							return res.json(seasonData[season].Panels[0].Pages[0].results[i2].linkData)
+						}
 					}
-				}
 
-			}
-			if(seasonglobal == "19"){
-				for(var i2 in discoveryResponses.ver19.Panels[0].Pages[0].results){
-					if(discoveryResponses.ver19.Panels[0].Pages[0].results[i2].linkData.mnemonic == req.params.playlistId){
-						return res.json(discoveryResponses.ver19.Panels[0].Pages[0].results[i2].linkData)
-					}
 				}
+				if(seasonglobal == "19"){
+					for(var i2 in discoveryResponses.ver19.Panels[0].Pages[0].results){
+						if(discoveryResponses.ver19.Panels[0].Pages[0].results[i2].linkData.mnemonic == req.params.playlistId){
+							return res.json(discoveryResponses.ver19.Panels[0].Pages[0].results[i2].linkData)
+						}
+					}
 
-			}
-			else{
-				for(var i2 in Default.Panels[0].Pages[0].results){
-					if(Default.Panels[0].Pages[0].results[i2].linkData.mnemonic == req.params.playlistId){
-						return res.json(Default.Panels[0].Pages[0].results[i2].linkData)
+				}
+				else{
+					for(var i2 in Default.Panels[0].Pages[0].results){
+						if(Default.Panels[0].Pages[0].results[i2].linkData.mnemonic == req.params.playlistId){
+							return res.json(Default.Panels[0].Pages[0].results[i2].linkData)
+						}
 					}
 				}
 			}
+			catch{}// catches null erros
 		}
 	});
 

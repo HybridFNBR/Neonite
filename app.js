@@ -90,7 +90,7 @@ async function compareAndUpdateKeychain() {
 	/*app.use((req, res, next) => {
 		NeoLog.Debug(`Requested URL: ${req.url}`);
 		next();
-	});*/ //for debugging purposes
+	}); //for debugging purposes*/
 	app.use("/", express.static("public"));
 	app.use(express.urlencoded({ extended: false }));
 	app.use(express.json());
