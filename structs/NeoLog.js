@@ -11,4 +11,8 @@ module.exports = {
   Debug(data) {
     console.log(`[\x1b[32mDEBUG\x1b[0m]: ${data}\x1b[0m`)
   },
+
+  URL(data) {
+    console.log(`[\x1b[32mLOG URL\x1b[0m]: ${data}\x1b[0m`)
+  },
 }

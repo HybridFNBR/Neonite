@@ -40,19 +40,6 @@ module.exports = (app) => {
 	});
 
 
-	app.get('/fortnite/api/cloudstorage/system/:filename', (req, res) => {
-		const fileName = req.params.filename;
-		const filePath = hotfixPath + fileName;
-
-		if (fs.existsSync(filePath)) {
-			res.sendFile(filePath);
-			return;
-		} else {
-			res.status(404).end();
-			return;
-		}
-	});
-
 	app.get('/fortnite/api/cloudstorage/system/DefaultGame.ini', (req, res) => {
 		season = req.headers["user-agent"].split('-')[1]
 		res.setHeader("content-type", "application/octet-stream")
@@ -114,6 +101,19 @@ module.exports = (app) => {
 			);
 		}		
 		res.send(index)
+	});
+
+	app.get('/fortnite/api/cloudstorage/system/:filename', (req, res) => {
+		const fileName = req.params.filename;
+		const filePath = hotfixPath + fileName;
+
+		if (fs.existsSync(filePath)) {
+			res.sendFile(filePath);
+			return;
+		} else {
+			res.status(404).end();
+			return;
+		}
 	});
 
 	app.get('/fortnite/api/cloudstorage/user/:accountId', (req, res) => {

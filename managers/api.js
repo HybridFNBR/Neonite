@@ -73,7 +73,7 @@ module.exports = (app) => {
 	})
 
 	//external auth
-	app.get("/launcher/api/public/assets/:platform/:catalogItemId/:appName", async (req, res) => {
+	app.get("/launcher/api/public/assets/:platform/:catalogItemId/:appName", (req, res) => {
 		res.json({
 			"appName": req.params.appName,
 			"labelName": `${req.query.label}-${req.params.platform}`,

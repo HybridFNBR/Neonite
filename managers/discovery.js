@@ -860,7 +860,7 @@ module.exports = (app) => {
 					"moderationStatus": "Unmoderated"
 				  }
 				}
-			})
+			}) //fixes the play button being disabled
 	});
 
 
@@ -907,5 +907,4 @@ module.exports = (app) => {
 		}
 	});
 
-	//you may be wonder why it looks like this, well we need to support event versions somehow right. :D
 }
