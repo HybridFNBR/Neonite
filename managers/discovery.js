@@ -827,6 +827,10 @@ module.exports = (app) => {
 			}	
 		  	if(seasonglobal === "19"){var s19 = discoveryResponses.ver19.Panels[0].Pages[0].results.map(result => result.linkData); return res.json(s19);}		  
 		  	else{var defaultResponse = Default.Panels[0].Pages[0].results.map(result => result.linkData)} return res.json(defaultResponse)
+			//placeholder  
+			/** else{
+				res.json(require("../responseFull.json"))
+			}*/
 	});
 	
 	app.get('/links/api/fn/mnemonic/:playlistId/related', (req, res) => {
@@ -861,6 +865,45 @@ module.exports = (app) => {
 				  }
 				}
 			}) //fixes the play button being disabled
+
+			
+			//placeholder for when discovery breaks again 
+			/**if(req.params.playlistId == "playlist_papaya"){
+			return res.json({
+				"parentLinks": [],
+				"links": {
+				 [req.params.playlistId]: {
+					"namespace": "fn",
+					"accountId": "epic",
+					"creatorName": "Epic",
+					"mnemonic": req.params.playlistId,
+					"linkType": "BR:Playlist",
+					"metadata": {
+					  "image_url": "",
+					  "image_urls": {
+						"url_s": "",
+						"url_xs": "",
+						"url_m": "",
+						"url": "" 
+					  },
+					  "matchmaking": {
+						"override_playlist": req.params.playlistId
+					  }
+					},
+					"version": 95,
+					"active": true,
+					"disabled": false,
+					"created": "2021-10-01T00:56:45.010Z",
+					"published": "2021-08-03T15:27:20.251Z",
+					"descriptionTags": [],
+					"moderationStatus": "Unmoderated"
+				  }
+				}
+			})
+		}
+		else{
+			return res.json(require("../relateddata.json"))
+		} */
 	});
 
 
