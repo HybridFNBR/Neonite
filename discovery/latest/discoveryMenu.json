@@ -1,0 +1,1256 @@
+[
+    {
+        "namespace": "fn",
+        "accountId": "epic",
+        "creatorName": "Epic",
+        "mnemonic": "playlist_habanerosolo",
+        "linkType": "BR:Playlist",
+        "metadata": {
+            "matchmakingV2": {
+                "ratingType": "ranked-br",
+                "isRanked": true
+            },
+            "parent_set": "set_habanero_playlists",
+            "favorite_override": "set_habanero_playlists",
+            "play_history_override": "set_habanero_playlists",
+            "discoveryOptionsOverride": "OnlyFillSolo",
+            "alt_title": {
+                "de": "Solo",
+                "ru": "В одиночку",
+                "ko": "솔로",
+                "pt-BR": "Solo",
+                "en": "Solo",
+                "it": "Singolo",
+                "fr": "Solo",
+                "zh-CN": "",
+                "es": "En solitario",
+                "es-MX": "En solitario",
+                "zh": "",
+                "ar": "فردي",
+                "zh-Hant": "",
+                "ja": "ソロ",
+                "pl": "Solo",
+                "es-419": "En solitario",
+                "tr": "Tekli"
+            },
+            "image_url": "https://cdn2.unrealengine.com/26ranked-c4s4-modetiles-br-solo-1920x1080-1920x1080-532a9fc97d5c.jpg",
+            "image_urls": {
+                "url_s": "https://cdn2.unrealengine.com/26ranked-c4s4-modetiles-br-solo-480-480x270-521534cffc79.jpg",
+                "url_xs": "https://cdn2.unrealengine.com/26ranked-c4s4-modetiles-br-solo-256x144-256x144-81a5852c0f89.jpg",
+                "url_m": "https://cdn2.unrealengine.com/26ranked-c4s4-modetiles-br-solo-640-640x360-8643b51c4bf7.jpg",
+                "url": "https://cdn2.unrealengine.com/26ranked-c4s4-modetiles-br-solo-1920x1080-1920x1080-532a9fc97d5c.jpg"
+            },
+            "matchmaking": {
+                "override_playlist": "playlist_habanerosolo"
+            },
+            "title": "Solo"
+        },
+        "version": 1,
+        "active": true,
+        "disabled": false,
+        "created": "2023-03-28T19:48:00.449Z",
+        "published": "2023-03-28T19:48:00.449Z",
+        "descriptionTags": [],
+        "moderationStatus": "Unmoderated",
+        "lastActivatedDate": "2023-03-28T19:48:00.451Z",
+        "discoveryIntent": "PUBLIC"
+    },
+    {
+        "namespace": "fn",
+        "accountId": "epic",
+        "creatorName": "Epic",
+        "mnemonic": "playlist_habaneroduo",
+        "linkType": "BR:Playlist",
+        "metadata": {
+            "matchmakingV2": {
+                "ratingType": "ranked-br",
+                "isRanked": true
+            },
+            "parent_set": "set_habanero_playlists",
+            "favorite_override": "set_habanero_playlists",
+            "play_history_override": "set_habanero_playlists",
+            "discoveryOptionsOverride": "OnlyFillSolo",
+            "alt_title": {
+                "de": "Duo",
+                "ru": "Парные сражения",
+                "ko": "듀오",
+                "pt-BR": "Duplas",
+                "en": "Duo",
+                "it": "Coppie",
+                "fr": "Duo",
+                "zh-CN": "",
+                "es": "Dúos",
+                "es-MX": "En dúo",
+                "zh": "",
+                "ar": "ثنائي",
+                "zh-Hant": "",
+                "ja": "デュオ",
+                "pl": "Pary",
+                "es-419": "En dúo",
+                "tr": "Çiftli"
+            },
+            "image_url": "https://cdn2.unrealengine.com/26ranked-c4s4-modetiles-br-duos-1920x1080-1920x1080-2834b8e8616c.jpg",
+            "image_urls": {
+                "url_s": "https://cdn2.unrealengine.com/26ranked-c4s4-modetiles-br-duos-480-480x270-5a5d20570b54.jpg",
+                "url_xs": "https://cdn2.unrealengine.com/26ranked-c4s4-modetiles-br-duos-256x144-256x144-8536ad6af8d2.jpg",
+                "url_m": "https://cdn2.unrealengine.com/26ranked-c4s4-modetiles-br-duos-640-640x360-9bdf7f7ff0b4.jpg",
+                "url": "https://cdn2.unrealengine.com/26ranked-c4s4-modetiles-br-duos-1920x1080-1920x1080-2834b8e8616c.jpg"
+            },
+            "matchmaking": {
+                "override_playlist": "playlist_habaneroduo"
+            },
+            "title": "Duo"
+        },
+        "version": 1,
+        "active": true,
+        "disabled": false,
+        "created": "2023-03-16T00:09:06.826Z",
+        "published": "2023-03-16T00:09:06.826Z",
+        "descriptionTags": [],
+        "moderationStatus": "Unmoderated",
+        "lastActivatedDate": "2023-03-16T00:09:06.828Z",
+        "discoveryIntent": "PUBLIC"
+    },
+    {
+        "namespace": "fn",
+        "accountId": "epic",
+        "creatorName": "Epic",
+        "mnemonic": "playlist_habanerosquad",
+        "linkType": "BR:Playlist",
+        "metadata": {
+            "matchmakingV2": {
+                "ratingType": "ranked-br",
+                "isRanked": true
+            },
+            "parent_set": "set_habanero_playlists",
+            "favorite_override": "set_habanero_playlists",
+            "play_history_override": "set_habanero_playlists",
+            "discoveryOptionsOverride": "OnlyFillSolo",
+            "alt_title": {
+                "de": "Team",
+                "ru": "Бои отрядов",
+                "ko": "스쿼드",
+                "pt-BR": "Esquadrões",
+                "en": "Squad",
+                "it": "Squadre",
+                "fr": "Sections",
+                "zh-CN": "",
+                "es": "Escuadrones",
+                "es-MX": "En escuadrón",
+                "zh": "",
+                "ar": "فِرق",
+                "zh-Hant": "",
+                "ja": "スクワッド",
+                "pl": "Oddziały",
+                "es-419": "En escuadrón",
+                "tr": "Ekipli"
+            },
+            "image_url": "https://cdn2.unrealengine.com/26ranked-c4s4-modetiles-br-squads-1920x1080-1920x1080-32d96d183fe1.jpg",
+            "image_urls": {
+                "url_s": "https://cdn2.unrealengine.com/26ranked-c4s4-modetiles-br-ps5-squads-480x270-480x270-8443f4311eef.jpg",
+                "url_xs": "https://cdn2.unrealengine.com/26ranked-c4s4-modetiles-br-squad-256x144-256x144-bc379a0405d0.jpg",
+                "url_m": "https://cdn2.unrealengine.com/26ranked-c4s4-modetiles-br-squads-640-640x360-dd4e88beddf1.jpg",
+                "url": "https://cdn2.unrealengine.com/26ranked-c4s4-modetiles-br-squads-1920x1080-1920x1080-32d96d183fe1.jpg"
+            },
+            "matchmaking": {
+                "override_playlist": "playlist_habanerosquad"
+            },
+            "title": "Squad"
+        },
+        "version": 1,
+        "active": true,
+        "disabled": false,
+        "created": "2023-03-28T19:48:01.293Z",
+        "published": "2023-03-28T19:48:01.293Z",
+        "descriptionTags": [],
+        "moderationStatus": "Unmoderated",
+        "lastActivatedDate": "2023-03-28T19:48:01.295Z",
+        "discoveryIntent": "PUBLIC"
+    },
+    {
+        "namespace": "fn",
+        "accountId": "epic",
+        "creatorName": "Epic",
+        "mnemonic": "playlist_nobuildbr_habanero_duo",
+        "linkType": "BR:Playlist",
+        "metadata": {
+            "matchmakingV2": {
+                "ratingType": "ranked-zb",
+                "isRanked": true
+            },
+            "parent_set": "set_nobuildbr_habanero_playlists",
+            "favorite_override": "set_nobuildbr_habanero_playlists",
+            "play_history_override": "set_nobuildbr_habanero_playlists",
+            "discoveryOptionsOverride": "OnlyFillSolo",
+            "alt_title": {
+                "de": "Duo",
+                "ru": "Парные сражения",
+                "ko": "듀오",
+                "pt-BR": "Duplas",
+                "en": "Duo",
+                "it": "Coppie",
+                "fr": "Duo",
+                "zh-CN": "",
+                "es": "Dúos",
+                "es-MX": "En dúo",
+                "zh": "",
+                "ar": "ثنائي",
+                "zh-Hant": "",
+                "ja": "デュオ",
+                "pl": "Pary",
+                "es-419": "En dúo",
+                "tr": "Çiftli"
+            },
+            "image_url": "https://cdn2.unrealengine.com/26ranked-c4s4-modetiles-zb-duos-1920x1080-1920x1080-0b67a217eb1e.jpg",
+            "image_urls": {
+                "url_s": "https://cdn2.unrealengine.com/26ranked-c4s4-modetiles-zb-duos-480-480x270-2337be33281f.jpg",
+                "url_xs": "https://cdn2.unrealengine.com/26ranked-c4s4-modetiles-zb-duos-256x144-256x144-8d7098e99e9a.jpg",
+                "url_m": "https://cdn2.unrealengine.com/26ranked-c4s4-modetiles-zb-duos-640-640x360-d3dec00c3e11.jpg",
+                "url": "https://cdn2.unrealengine.com/26ranked-c4s4-modetiles-zb-duos-1920x1080-1920x1080-0b67a217eb1e.jpg"
+            },
+            "matchmaking": {
+                "override_playlist": "playlist_nobuildbr_habanero_duo"
+            },
+            "title": "Duo"
+        },
+        "version": 1,
+        "active": true,
+        "disabled": false,
+        "created": "2023-03-28T19:48:01.273Z",
+        "published": "2023-03-28T19:48:01.273Z",
+        "descriptionTags": [],
+        "moderationStatus": "Unmoderated",
+        "lastActivatedDate": "2023-03-28T19:48:01.274Z",
+        "discoveryIntent": "PUBLIC"
+    },
+    {
+        "namespace": "fn",
+        "accountId": "epic",
+        "creatorName": "Epic",
+        "mnemonic": "playlist_defaultsolo",
+        "linkType": "BR:Playlist",
+        "metadata": {
+            "parent_set": "set_br_playlists",
+            "favorite_override": "set_br_playlists",
+            "play_history_override": "set_br_playlists",
+            "alt_title": {
+                "de": "Solo",
+                "ru": "В одиночку",
+                "ko": "솔로",
+                "pt-BR": "Solo",
+                "en": "Solo",
+                "it": "Singolo",
+                "fr": "Solo",
+                "zh-CN": "",
+                "es": "En solitario",
+                "es-MX": "En solitario",
+                "zh": "",
+                "ar": "فردي",
+                "zh-Hant": "",
+                "ja": "ソロ",
+                "pl": "Solo",
+                "es-419": "En solitario",
+                "tr": "Tekli"
+            },
+            "image_url": "https://cdn2.unrealengine.com/s26-solo-1920-1920x1080-1e4a6e8f4f98.jpg",
+            "image_urls": {
+                "url_s": "https://cdn2.unrealengine.com/s26-solo-480-480x270-20f222365aa5.jpg",
+                "url_xs": "https://cdn2.unrealengine.com/s26-solo-256-256x144-855d0ba232f5.jpg",
+                "url_m": "https://cdn2.unrealengine.com/s26-solo-640-640x360-a851067cbcc2.jpg",
+                "url": "https://cdn2.unrealengine.com/s26-solo-1920-1920x1080-1e4a6e8f4f98.jpg"
+            },
+            "matchmaking": {
+                "override_playlist": "playlist_defaultsolo"
+            },
+            "video_vuid": "taqdZkWyokbCyEFWld",
+            "title": "Solo"
+        },
+        "version": 95,
+        "active": true,
+        "disabled": false,
+        "created": "2021-10-01T00:56:43.870Z",
+        "published": "2021-08-03T15:27:17.540Z",
+        "descriptionTags": [],
+        "moderationStatus": "Unmoderated"
+    },
+    {
+        "namespace": "fn",
+        "accountId": "epic",
+        "creatorName": "Epic",
+        "mnemonic": "playlist_defaultduo",
+        "linkType": "BR:Playlist",
+        "metadata": {
+            "parent_set": "set_br_playlists",
+            "favorite_override": "set_br_playlists",
+            "play_history_override": "set_br_playlists",
+            "alt_title": {
+                "de": "Duo",
+                "ru": "Парные сражения",
+                "ko": "듀오",
+                "pt-BR": "Duplas",
+                "en": "Duo",
+                "it": "Coppie",
+                "fr": "Duo",
+                "zh-CN": "",
+                "es": "Dúos",
+                "es-MX": "En dúo",
+                "zh": "",
+                "ar": "ثنائي",
+                "zh-Hant": "",
+                "ja": "デュオ",
+                "pl": "Pary",
+                "es-419": "En dúo",
+                "tr": "Çiftli"
+            },
+            "image_url": "https://cdn2.unrealengine.com/s26-duos-1920-1920x1080-d29e3f452e5c.jpg",
+            "image_urls": {
+                "url_s": "https://cdn2.unrealengine.com/s26-duos-480-480x270-07ae5f891004.jpg",
+                "url_xs": "https://cdn2.unrealengine.com/s26-duos-256-256x144-645623b81eaa.jpg",
+                "url_m": "https://cdn2.unrealengine.com/s26-duos-640-640x360-eed386bd6957.jpg",
+                "url": "https://cdn2.unrealengine.com/s26-duos-1920-1920x1080-d29e3f452e5c.jpg"
+            },
+            "matchmaking": {
+                "override_playlist": "playlist_defaultduo"
+            },
+            "video_vuid": "taqdZkWyokbCyEFWld",
+            "title": "Duo"
+        },
+        "version": 95,
+        "active": true,
+        "disabled": false,
+        "created": "2021-10-01T00:56:46.389Z",
+        "published": "2021-08-03T15:27:17.523Z",
+        "descriptionTags": [],
+        "moderationStatus": "Unmoderated"
+    },
+    {
+        "namespace": "fn",
+        "accountId": "epic",
+        "creatorName": "Epic",
+        "mnemonic": "playlist_trios",
+        "linkType": "BR:Playlist",
+        "metadata": {
+            "parent_set": "set_br_playlists",
+            "favorite_override": "set_br_playlists",
+            "play_history_override": "set_br_playlists",
+            "alt_title": {
+                "de": "Trio",
+                "ru": "Трио",
+                "ko": "트리오",
+                "pt-BR": "Trios",
+                "en": "Trio",
+                "it": "Terzetti",
+                "fr": "Trios",
+                "zh-CN": "",
+                "es": "Tríos",
+                "es-MX": "En trío",
+                "zh": "",
+                "ar": "ثلاثي",
+                "zh-Hant": "",
+                "ja": "トリオ",
+                "pl": "Trójki",
+                "es-419": "En trío",
+                "tr": "Üçlü"
+            },
+            "image_url": "https://cdn2.unrealengine.com/s26-trios-1920-1920x1080-a8bbb61d9229.jpg",
+            "image_urls": {
+                "url_s": "https://cdn2.unrealengine.com/s26-trios-480-480x270-5d2267f72cd5.jpg",
+                "url_xs": "https://cdn2.unrealengine.com/s26-trios-256-256x144-ec3f21163583.jpg",
+                "url_m": "https://cdn2.unrealengine.com/s26-trios-640-640x360-fa5ca473906c.jpg",
+                "url": "https://cdn2.unrealengine.com/s26-trios-1920-1920x1080-a8bbb61d9229.jpg"
+            },
+            "matchmaking": {
+                "override_playlist": "playlist_trios"
+            },
+            "video_vuid": "taqdZkWyokbCyEFWld",
+            "title": "Trio"
+        },
+        "version": 95,
+        "active": true,
+        "disabled": false,
+        "created": "2021-10-01T00:56:45.053Z",
+        "published": "2021-08-03T15:27:20.799Z",
+        "descriptionTags": [],
+        "moderationStatus": "Unmoderated"
+    },
+    {
+        "namespace": "fn",
+        "accountId": "epic",
+        "creatorName": "Epic",
+        "mnemonic": "playlist_defaultsquad",
+        "linkType": "BR:Playlist",
+        "metadata": {
+            "parent_set": "set_br_playlists",
+            "favorite_override": "set_br_playlists",
+            "play_history_override": "set_br_playlists",
+            "alt_title": {
+                "de": "Team",
+                "ru": "Бои отрядов",
+                "ko": "스쿼드",
+                "pt-BR": "Esquadrões",
+                "en": "Squad",
+                "it": "Squadre",
+                "fr": "Sections",
+                "zh-CN": "",
+                "es": "Escuadrones",
+                "es-MX": "En escuadrón",
+                "zh": "",
+                "ar": "فِرق",
+                "zh-Hant": "",
+                "ja": "スクワッド",
+                "pl": "Oddziały",
+                "es-419": "En escuadrón",
+                "tr": "Ekipli"
+            },
+            "image_url": "https://cdn2.unrealengine.com/s26-squads-1920-1920x1080-55628a1543ea.jpg",
+            "image_urls": {
+                "url_s": "https://cdn2.unrealengine.com/s26-squads-480-480x270-06da0fac4ea9.jpg",
+                "url_xs": "https://cdn2.unrealengine.com/s26-squad-256-256x144-e4de3c40cfd1.jpg",
+                "url_m": "https://cdn2.unrealengine.com/s26-squads-640-640x360-6addc29cbde9.jpg",
+                "url": "https://cdn2.unrealengine.com/s26-squads-1920-1920x1080-55628a1543ea.jpg"
+            },
+            "tagline": "",
+            "matchmaking": {
+                "override_playlist": "playlist_defaultsquad"
+            },
+            "video_vuid": "taqdZkWyokbCyEFWld",
+            "title": "Squad"
+        },
+        "version": 95,
+        "active": true,
+        "disabled": false,
+        "created": "2021-10-01T00:56:42.938Z",
+        "published": "2021-08-03T15:27:17.566Z",
+        "descriptionTags": [],
+        "moderationStatus": "Unmoderated"
+    },
+    {
+        "namespace": "fn",
+        "accountId": "epic",
+        "creatorName": "Epic",
+        "mnemonic": "playlist_nobuildbr_solo",
+        "linkType": "BR:Playlist",
+        "metadata": {
+            "parent_set": "set_nobuild_playlists",
+            "favorite_override": "set_nobuild_playlists",
+            "play_history_override": "set_nobuild_playlists",
+            "alt_title": {
+                "de": "Solo",
+                "ru": "В одиночку",
+                "ko": "솔로",
+                "pt-BR": "Solo",
+                "en": "Solo",
+                "it": "Singolo",
+                "fr": "Solo",
+                "zh-CN": "",
+                "es": "En solitario",
+                "es-MX": "En solitario",
+                "zh": "",
+                "ar": "فردي",
+                "zh-Hant": "",
+                "ja": "ソロ",
+                "pl": "Solo",
+                "es-419": "En solitario",
+                "tr": "Tekli"
+            },
+            "image_url": "https://cdn2.unrealengine.com/26r-zerobuild-playlisttiles-solos-1920x1080-1920x1080-3274e0cb46fe.jpg",
+            "image_urls": {
+                "url_s": "https://cdn2.unrealengine.com/26r-zerobuild-playlisttiles-solos-480x270-480x270-f6ed6fb7440a.jpg",
+                "url_xs": "https://cdn2.unrealengine.com/26r-zerobuild-playlisttiles-solos-256x144-256x144-edf7ca6b5dd3.jpg",
+                "url_m": "https://cdn2.unrealengine.com/26r-zerobuild-playlisttiles-solos-640x360--640x360-c70310ee7011.jpg",
+                "url": "https://cdn2.unrealengine.com/26r-zerobuild-playlisttiles-solos-1920x1080-1920x1080-3274e0cb46fe.jpg"
+            },
+            "matchmaking": {
+                "override_playlist": "playlist_nobuildbr_solo"
+            },
+            "video_vuid": "VTfsLUcDGhrnzHppNB",
+            "title": "Solo"
+        },
+        "version": 1,
+        "active": true,
+        "disabled": false,
+        "created": "2021-11-08T22:28:08.011Z",
+        "published": "2021-11-08T22:28:08.011Z",
+        "descriptionTags": [],
+        "moderationStatus": "Unmoderated"
+    },
+    {
+        "namespace": "fn",
+        "accountId": "epic",
+        "creatorName": "Epic",
+        "mnemonic": "playlist_nobuildbr_duo",
+        "linkType": "BR:Playlist",
+        "metadata": {
+            "parent_set": "set_nobuild_playlists",
+            "favorite_override": "set_nobuild_playlists",
+            "play_history_override": "set_nobuild_playlists",
+            "alt_title": {
+                "de": "Duo",
+                "ru": "Парные сражения",
+                "ko": "듀오",
+                "pt-BR": "Duplas",
+                "en": "Duo",
+                "it": "Coppie",
+                "fr": "Duo",
+                "zh-CN": "",
+                "es": "Dúos",
+                "es-MX": "En dúo",
+                "zh": "",
+                "ar": "ثنائي",
+                "zh-Hant": "",
+                "ja": "デュオ",
+                "pl": "Pary",
+                "es-419": "En dúo",
+                "tr": "Çiftli"
+            },
+            "image_url": "https://cdn2.unrealengine.com/26r-zerobuild-playlisttiles-duos-1920x1080-1920x1080-45b87d74bab0.jpg",
+            "image_urls": {
+                "url_s": "https://cdn2.unrealengine.com/26r-zerobuild-playlisttiles-duos-480x270-480x270-52e3d4b611ae.jpg",
+                "url_xs": "https://cdn2.unrealengine.com/26r-zerobuild-playlisttiles-duos-256x144-256x144-f858017fba04.jpg",
+                "url_m": "https://cdn2.unrealengine.com/26r-zerobuild-playlisttiles-duos-640x360--640x360-890223fe534d.jpg",
+                "url": "https://cdn2.unrealengine.com/26r-zerobuild-playlisttiles-duos-1920x1080-1920x1080-45b87d74bab0.jpg"
+            },
+            "matchmaking": {
+                "override_playlist": "playlist_nobuildbr_duo"
+            },
+            "video_vuid": "VTfsLUcDGhrnzHppNB",
+            "title": "Duo"
+        },
+        "version": 1,
+        "active": true,
+        "disabled": false,
+        "created": "2021-11-08T22:28:07.415Z",
+        "published": "2021-11-08T22:28:07.415Z",
+        "descriptionTags": [],
+        "moderationStatus": "Unmoderated"
+    },
+    {
+        "namespace": "fn",
+        "accountId": "epic",
+        "creatorName": "Epic",
+        "mnemonic": "playlist_nobuildbr_trio",
+        "linkType": "BR:Playlist",
+        "metadata": {
+            "parent_set": "set_nobuild_playlists",
+            "favorite_override": "set_nobuild_playlists",
+            "play_history_override": "set_nobuild_playlists",
+            "alt_title": {
+                "de": "Trio",
+                "ru": "Трио",
+                "ko": "트리오",
+                "pt-BR": "Trios",
+                "en": "Trio",
+                "it": "Terzetti",
+                "fr": "Trios",
+                "zh-CN": "",
+                "es": "Tríos",
+                "es-MX": "En trío",
+                "zh": "",
+                "ar": "ثلاثي",
+                "zh-Hant": "",
+                "ja": "トリオ",
+                "pl": "Trójki",
+                "es-419": "En trío",
+                "tr": "Üçlü"
+            },
+            "alt_tagline": {
+                "de": "Jede Menge Kämpfe, kein Bauen! Null Bauen ist ein neuer Spielmodus mit all der Action, der Beute und dem Spielverlauf des typischen Battle Royale, jedoch ohne Bauen. Spieler verfügen über einen Schutzschild, der sich wieder auflädt, um bis zuletzt überleben zu können.",
+                "ru": "Битва без строительства! «Нулевая высота» — это новый игровой режим с добычей, всеми возможностями и правилами классической «Королевской битвы», только без строительства! Теперь у игроков будет перезаряжающийся суперщит, который поможет им продержаться до конца и одержать победу.",
+                "ko": "건설 없는 전투! 빌드 제로는 다양한 액션과 전리품들로 가득한 클래식 배틀로얄 게임에서 건설을 뺀 새로운 게임 모드입니다! 건설은 사라졌지만 새롭게 추가된 충전형 외장 보호막을 사용해 최후의 생존자가 되어 보세요!",
+                "pt-BR": "Só batalhas, nada de construção! A Construção Zero é um novo modo de jogo com ação, saques e progressão iguais aos do Battle Royale clássico, mas sem as construções! Os jogadores contam com a defesa extra de um Sobrescudo que se regenera enquanto lutam para serem o último sobrevivente.",
+                "it": "Tutta battaglia, niente costruzione! Zero costruzioni è una nuova modalità di gioco con tutta l'azione, il bottino e la progressione di una classica Battaglia reale, senza la costruzione! Ora i giocatori hanno uno scudo supplementare ricaricabile per difendersi meglio mentre combattono per resistere fino alla fine della partita.",
+                "fr": "Du combat sans construction. Zéro construction est un nouveau mode qui conserve toute l'action, le butin et la progression du Battle Royale, mais sans la construction ! Les joueurs disposent désormais d'un surbouclier qui se recharge pour les aider à être le dernier survivant.",
+                "zh-CN": "",
+                "es": "¡Solo batalla, nada de construcción! Cero construcción es un nuevo modo de juego que conserva toda la acción, botín y progreso del clásico Battle Royale, ¡solo que sin construcción! Los jugadores tendrán un escudo total recargable que los defenderá en su lucha por ser los últimos en pie.",
+                "es-MX": "¡Combate total sin construcción! Cero construcción es un nuevo modo de juego con toda la acción, botín y progreso de Batalla campal clásica sin construcción. Los jugadores ahora tienen un escudo adicional que se recarga para una mayor defensa mientras luchan por ser el último en pie.",
+                "zh": "",
+                "ar": "قتال مستمر بلا بناء! يُعد بلا بناء وضع لعبة جديد يحتوي على كل الإثارة والغنيمة والتقدم في باتل رويال الكلاسيكية، ولكن من دون البناء! يمتلك اللاعبون الآن درعًا واقيًا مشحونًا لتوفير دفاع إضافي، حيث يقاتل كل لاعب ليكون آخر لاعب صامد.",
+                "ja": "戦闘のみ、建築なし！ゼロビルドとは、通常のバトルロイヤルでのアクション、戦利品、進行はそのままに、建築がなしとなっている新ゲームモードだ！ 追加の防御手段としてリチャージするオーバーシールドが付与され、最後まで生き残るプレイヤーを目指すことになるぞ。",
+                "pl": "Sama walka, żadnego budowania! Zero Budowania to nowy tryb gry z dynamiką, łupami i postępami z klasycznego Battle Royale, ale bez budowania! Gracze walczący do ostatniego ocalałego mają teraz dodatkową ochronę z odnawiającej się Nadosłony.",
+                "es-419": "¡Combate total sin construcción! Cero construcción es un nuevo modo de juego con toda la acción, botín y progreso de Batalla campal clásica sin construcción. Los jugadores ahora tienen un escudo adicional que se recarga para una mayor defensa mientras luchan por ser el último en pie."
+            },
+            "image_url": "https://cdn2.unrealengine.com/26r-zerobuild-playlisttiles-trios-1920x1080-1920x1080-df51bfbc1dd8.jpg",
+            "image_urls": {
+                "url_s": "https://cdn2.unrealengine.com/26r-zerobuild-playlisttiles-trios-480x270-480x270-0550c2beccbe.jpg",
+                "url_xs": "https://cdn2.unrealengine.com/26r-zerobuild-playlisttiles-trios-256x144-256x144-239579f1d0ef.jpg",
+                "url_m": "https://cdn2.unrealengine.com/26r-zerobuild-playlisttiles-trios-640x360-640x360-fe8931f51cf9.jpg",
+                "url": "https://cdn2.unrealengine.com/26r-zerobuild-playlisttiles-trios-1920x1080-1920x1080-df51bfbc1dd8.jpg"
+            },
+            "tagline": "All battle, no building! Zero Build is all the action, loot, and progression of classic Battle Royale, without the Building! Players now have a recharging Overshield for added defense as they fight to be the last one standing.",
+            "matchmaking": {
+                "override_playlist": "playlist_nobuildbr_trio"
+            },
+            "video_vuid": "VTfsLUcDGhrnzHppNB",
+            "title": "Trio"
+        },
+        "version": 1,
+        "active": true,
+        "disabled": false,
+        "created": "2021-11-08T22:28:07.933Z",
+        "published": "2021-11-08T22:28:07.933Z",
+        "descriptionTags": [],
+        "moderationStatus": "Unmoderated"
+    },
+    {
+        "namespace": "fn",
+        "accountId": "epic",
+        "creatorName": "Epic",
+        "mnemonic": "playlist_nobuildbr_squad",
+        "linkType": "BR:Playlist",
+        "metadata": {
+            "parent_set": "set_nobuild_playlists",
+            "favorite_override": "set_nobuild_playlists",
+            "play_history_override": "set_nobuild_playlists",
+            "alt_title": {
+                "de": "Team",
+                "ru": "Бои отрядов",
+                "ko": "스쿼드",
+                "pt-BR": "Esquadrões",
+                "en": "Squad",
+                "it": "Squadre",
+                "fr": "Sections",
+                "zh-CN": "",
+                "es": "Escuadrones",
+                "es-MX": "En escuadrón",
+                "zh": "",
+                "ar": "فِرق",
+                "zh-Hant": "",
+                "ja": "スクワッド",
+                "pl": "Oddziały",
+                "es-419": "En escuadrón",
+                "tr": "Ekipli"
+            },
+            "image_url": "https://cdn2.unrealengine.com/26r-zerobuild-playlisttiles-squads-1920x1080-1920x1080-a60e7dbc24b1.jpg",
+            "image_urls": {
+                "url_s": "https://cdn2.unrealengine.com/26r-zerobuild-playlisttiles-squads-480x270-480x270-c6516f1743bb.jpg",
+                "url_xs": "https://cdn2.unrealengine.com/26r-zerobuild-playlisttiles-squads-256x144-256x144-a11aef3b77f9.jpg",
+                "url_m": "https://cdn2.unrealengine.com/26r-zerobuild-playlisttiles-squads-640x360-640x360-23b2d715164b.jpg",
+                "url": "https://cdn2.unrealengine.com/26r-zerobuild-playlisttiles-squads-1920x1080-1920x1080-a60e7dbc24b1.jpg"
+            },
+            "matchmaking": {
+                "override_playlist": "playlist_nobuildbr_squad"
+            },
+            "video_vuid": "VTfsLUcDGhrnzHppNB",
+            "title": "Squad"
+        },
+        "version": 1,
+        "active": true,
+        "disabled": false,
+        "created": "2021-11-08T22:28:07.891Z",
+        "published": "2021-11-08T22:28:07.891Z",
+        "descriptionTags": [],
+        "moderationStatus": "Unmoderated"
+    },
+    {
+        "namespace": "fn",
+        "accountId": "epic",
+        "creatorName": "Epic",
+        "mnemonic": "playlist_playgroundv2",
+        "linkType": "BR:Playlist",
+        "metadata": {
+            "alt_title": {
+                "de": "Kreativmodus",
+                "ru": "Творческий режим",
+                "ko": "포크리",
+                "pt-BR": "Modo Criativo",
+                "en": "Creative",
+                "it": "Modalità creativa",
+                "fr": "Mode Créatif",
+                "zh-CN": "",
+                "es": "Modo Creativo",
+                "es-MX": "Modo Creativo",
+                "zh": "",
+                "ar": "الإبداعي",
+                "zh-Hant": "",
+                "ja": "クリエイティブ",
+                "pl": "Tryb kreatywny",
+                "es-419": "Modo Creativo",
+                "tr": "Kreatif"
+            },
+            "matchmaking": {
+                "override_playlist": "playlist_playgroundv2"
+            },
+            "video_vuid": "pOQbjpyNSnZNptoned",
+            "title": "Creative"
+        },
+        "version": 95,
+        "active": true,
+        "disabled": false,
+        "created": "2021-10-01T00:56:41.202Z",
+        "published": "2021-08-03T15:27:18.172Z",
+        "descriptionTags": [],
+        "moderationStatus": "Unmoderated"
+    },
+    {
+        "namespace": "fn",
+        "accountId": "epic",
+        "creatorName": "Epic",
+        "mnemonic": "campaign",
+        "linkType": "SubGame",
+        "metadata": {
+            "ownership_token": "Token:campaignaccess",
+            "image_url": "https://static-assets-prod.s3.amazonaws.com/fn/static/creative/Fortnite_STW.jpg",
+            "alt_introduction": {
+                "de": "Dränge die anstürmenden Monsterhorden zurück und erforsche eine weitläufige, zerstörbare Welt.  Baue riesige Festungen, stelle Waffen her, finde Beute und steige im Level auf!",
+                "ru": "Сдерживайте боем полчища монстров и исследуйте обширный разрушаемый мир.  Отстраивайте огромные форты, создавайте оружие, находите добычу и повышайте уровень.",
+                "ko": "몬스터 호드에 맞서 싸우고, 광활하고 파괴적인 세상을 탐험해 보세요. 거대한 요새를 짓고, 무기를 제작하고, 전리품을 찾으면서 레벨을 올리세요! ",
+                "pt-BR": "Lute para conter hordas de monstros e explorar um vasto mundo destrutível. Construa fortes enormes, crie armas, encontre saques e suba de nível.",
+                "it": "Lotta per respingere orde di mostri ed esplorare un vasto mondo distruttibile. Costruisci fortezze, crea armi, raccogli bottino e sali di livello.",
+                "fr": "Repoussez des hordes de monstres et explorez un immense terrain destructible. Bâtissez des forts énormes, fabriquez des armes, dénichez du butin et montez en niveau.",
+                "zh-CN": "",
+                "es": "Lucha para contener las hordas de monstruos y recorre un mundo inmenso y destructible.  Construye fuertes enormes, fabrica armas exóticas, busca botín y sube de nivel.",
+                "es-MX": "Lucha para contener las hordas de monstruos y explora un mundo vasto y destructible.  Construye fuertes enormes, fabrica armas, encuentra botín y sube de nivel.",
+                "zh": "",
+                "ar": "قاتل لكبح جماح الوحوش واستكشاف عالم شاسع قابل للتدمير. ابنِ حصونًا ضخمة واصنع الأسلحة واعثر على الغنائم وارتقِ بالمستوى.",
+                "zh-Hant": "",
+                "ja": "モンスターの群れを食い止め、壊すこともできる広大な世界を探索しよう。巨大な要塞を築き、武器をクラフトし、戦利品を見つてレベルアップしよう。",
+                "pl": "Walcz, by powstrzymać hordy potworów i odkrywaj wielki świat podlegający destrukcji. Buduj olbrzymie forty, twórz broń, zbieraj łupy, awansuj.",
+                "es-419": "Lucha para contener las hordas de monstruos y explora un mundo vasto y destructible.  Construye fuertes enormes, fabrica armas, encuentra botín y sube de nivel.",
+                "tr": "Canavar sürüsünü geri püskürtmek için savaş ve yıkılabilir geniş bir dünyayı keşfet. Devasa kaleler inşa et, silahlar üret, ganimetleri topla ve seviye atla."
+            },
+            "locale": "en",
+            "title": "Save The World",
+            "matchmaking": {
+                "joinInProgressType": "JoinImmediately",
+                "playersPerTeam": 4,
+                "maximumNumberOfPlayers": 4,
+                "override_Playlist": "",
+                "playerCount": 4,
+                "mmsType": "keep_full",
+                "mmsPrivacy": "Public",
+                "numberOfTeams": 1,
+                "bAllowJoinInProgress": true,
+                "minimumNumberOfPlayers": 1,
+                "joinInProgressTeam": 1
+            },
+            "video_vuid": "FafeDLtfnvVWWmOFzQ",
+            "disallowedPlatforms": [
+                "IOS",
+                "Android",
+                "Switch",
+                "GFNMobile",
+                "HeliosMobile",
+                "LunaMobile"
+            ],
+            "alt_title": {
+                "de": "Rette die Welt",
+                "ru": "Сражение с Бурей",
+                "ko": "세이브 더 월드",
+                "pt-BR": "Salve o Mundo",
+                "it": "Salva il mondo",
+                "fr": "Sauver le monde",
+                "zh-CN": "",
+                "es": "Salvar el mundo",
+                "es-MX": "Salva el mundo",
+                "zh": "",
+                "ar": "أنقِذ العالم",
+                "zh-Hant": "",
+                "ja": "世界を救え",
+                "pl": "Ratowanie Świata",
+                "es-419": "Salva el mundo",
+                "tr": "Dünyayı Kurtar"
+            },
+            "alt_tagline": {
+                "de": "Dränge die anstürmenden Monsterhorden zurück und erforsche eine weitläufige, zerstörbare Welt.  Baue riesige Festungen, stelle Waffen her, finde Beute und steige im Level auf!",
+                "ru": "Сдерживайте боем полчища монстров и исследуйте обширный разрушаемый мир.  Отстраивайте огромные форты, создавайте оружие, находите добычу и повышайте уровень.",
+                "ko": "몬스터 호드에 맞서 싸우고, 광활하고 파괴적인 세상을 탐험해 보세요. 거대한 요새를 짓고, 무기를 제작하고, 전리품을 찾으면서 레벨을 올리세요! ",
+                "pt-BR": "Lute para conter hordas de monstros e explorar um vasto mundo destrutível. Construa fortes enormes, crie armas, encontre saques e suba de nível.",
+                "it": "Lotta per respingere orde di mostri ed esplorare un vasto mondo distruttibile. Costruisci fortezze, crea armi, raccogli bottino e sali di livello.",
+                "fr": "Repoussez des hordes de monstres et explorez un immense terrain destructible. Bâtissez des forts énormes, fabriquez des armes, dénichez du butin et montez en niveau.",
+                "zh-CN": "",
+                "es": "Lucha para contener las hordas de monstruos y recorre un mundo inmenso y destructible.  Construye fuertes enormes, fabrica armas exóticas, busca botín y sube de nivel.",
+                "es-MX": "Lucha para contener las hordas de monstruos y explora un mundo vasto y destructible.  Construye fuertes enormes, fabrica armas, encuentra botín y sube de nivel.",
+                "zh": "",
+                "ar": "قاتل لكبح جماح الوحوش واستكشاف عالم شاسع قابل للتدمير. ابنِ حصونًا ضخمة واصنع الأسلحة واعثر على الغنائم وارتقِ بالمستوى.",
+                "zh-Hant": "",
+                "ja": "モンスターの群れを食い止め、壊すこともできる広大な世界を探索しよう。巨大な要塞を築き、武器をクラフトし、戦利品を見つけてレベルアップしよう。",
+                "pl": "Walcz, by powstrzymać hordy potworów i odkrywaj wielki świat podlegający destrukcji. Buduj olbrzymie forty, twórz broń, zbieraj łupy, awansuj.",
+                "es-419": "Lucha para contener las hordas de monstruos y explora un mundo vasto y destructible.  Construye fuertes enormes, fabrica armas, encuentra botín y sube de nivel.",
+                "tr": "Canavar sürüsünü geri püskürtmek için savaş ve yıkılabilir geniş bir dünyayı keşfet. Devasa kaleler inşa et, silahlar üret, ganimetleri topla ve seviye atla."
+            },
+            "tagline": "Battle to hold back the monster hordes and explore a vast, destructible world.  Build huge forts, craft weapons, find loot and level up.",
+            "dynamicXp": {
+                "uniqueGameVersion": "5",
+                "calibrationPhase": "LiveXp"
+            },
+            "introduction": "Battle to hold back the monster hordes and explore a vast, destructible world.  Build huge forts, craft weapons, find loot and level up."
+        },
+        "version": 5,
+        "active": true,
+        "disabled": false,
+        "created": "2021-10-01T15:06:32.241Z",
+        "published": "2021-08-25T20:02:50.051Z",
+        "descriptionTags": [
+            "pve"
+        ],
+        "moderationStatus": "Unmoderated"
+    },
+    {
+        "namespace": "fn",
+        "accountId": "epic",
+        "creatorName": "Epic",
+        "mnemonic": "playlist_tutorial_1",
+        "linkType": "BR:Playlist",
+        "metadata": {
+            "image_url": "https://cdn2.unrealengine.com/Fortnite%2Ffortnite-game%2Fplaylistinformation%2Fv94%2FFORT_Tile_Tutorial-1024x512-72a618fa185a0bbc26ab6a290bc0a45cf460c576.png",
+            "matchmaking": {
+                "override_playlist": "playlist_tutorial_1"
+            },
+            "disallowedPlatforms": [
+                "PS4",
+                "PS5",
+                "Switch",
+                "XSX",
+                "Helios",
+                "GFN",
+                "XboxOne",
+                "PC",
+                "Luna"
+            ]
+        },
+        "version": 97,
+        "active": true,
+        "disabled": false,
+        "created": "2022-02-17T18:21:19.019Z",
+        "published": "2021-08-03T15:27:20.823Z",
+        "descriptionTags": [],
+        "moderationStatus": "Unmoderated",
+        "lastActivatedDate": "2022-02-17T18:21:19.023Z"
+    },
+    {
+        "namespace": "fn",
+        "accountId": "epic",
+        "creatorName": "Epic",
+        "mnemonic": "playlist_respawn_24_alt",
+        "linkType": "BR:Playlist",
+        "metadata": {
+            "alt_title": {
+                "de": "Gruppenkeile",
+                "ru": "Командная потасовка",
+                "ko": "팀 럼블",
+                "pt-BR": "Equipe Tumulto",
+                "it": "Rissa a squadre",
+                "fr": "Foire d'empoigne",
+                "zh-CN": "",
+                "es": "Refriega de equipos",
+                "es-MX": "Combate de equipos",
+                "zh": "",
+                "ar": "دمدمة الفريق",
+                "zh-Hant": "",
+                "ja": "チームランブル",
+                "pl": "Huk-drużyna",
+                "es-419": "Combate de equipos",
+                "tr": "Kapışma Takımı"
+            },
+            "image_url": "https://cdn2.unrealengine.com/br06-teamrumble-1920x1080-1920x1080-3379c4a1f2e0.jpg",
+            "image_urls": {
+                "ru": {
+                    "url_s": "https://cdn2.unrealengine.com/br06-teamrumble-1920x1080-1920x1080-3379c4a1f2e0.jpg?maxWidth=480",
+                    "url_m": "https://cdn2.unrealengine.com/br06-teamrumble-1920x1080-1920x1080-3379c4a1f2e0.jpg?maxWidth=640",
+                    "url": "https://cdn2.unrealengine.com/br06-teamrumble-1920x1080-1920x1080-3379c4a1f2e0.jpg"
+                },
+                "en_US": {
+                    "url_s": "https://cdn2.unrealengine.com/br06-teamrumble-1920x1080-1920x1080-3379c4a1f2e0.jpg?maxWidth=480",
+                    "url_m": "https://cdn2.unrealengine.com/br06-teamrumble-1920x1080-1920x1080-3379c4a1f2e0.jpg?maxWidth=640",
+                    "url": "https://cdn2.unrealengine.com/br06-teamrumble-1920x1080-1920x1080-3379c4a1f2e0.jpg"
+                },
+                "pl": {
+                    "url_s": "https://cdn2.unrealengine.com/br06-teamrumble-1920x1080-1920x1080-3379c4a1f2e0.jpg?maxWidth=480",
+                    "url_m": "https://cdn2.unrealengine.com/br06-teamrumble-1920x1080-1920x1080-3379c4a1f2e0.jpg?maxWidth=640",
+                    "url": "https://cdn2.unrealengine.com/br06-teamrumble-1920x1080-1920x1080-3379c4a1f2e0.jpg"
+                }
+            },
+            "matchmaking": {
+                "override_playlist": "playlist_respawn_24_alt"
+            },
+            "video_vuid": "QljBuQXFYaplYHblAR",
+            "title": "Team Rumble"
+        },
+        "version": 95,
+        "active": true,
+        "disabled": false,
+        "created": "2021-10-01T00:56:43.052Z",
+        "published": "2021-08-03T15:27:20.393Z",
+        "descriptionTags": [],
+        "moderationStatus": "Unmoderated"
+    },
+    {
+        "namespace": "fn",
+        "accountId": "epic",
+        "creatorName": "Epic",
+        "mnemonic": "playlist_papaya",
+        "linkType": "BR:Playlist",
+        "metadata": {
+            "alt_title": {
+                "de": "Party Royale",
+                "ru": "Королевская вечеринка",
+                "ko": "파티로얄",
+                "pt-BR": "Festa Royale",
+                "it": "Party Reale",
+                "fr": "Fête royale",
+                "zh-CN": "",
+                "es": "Fiesta magistral",
+                "es-MX": "Fiesta campal",
+                "zh": "",
+                "ar": "الحفل الملكي",
+                "zh-Hant": "",
+                "ja": "パーティーロイヤル",
+                "pl": "Królewska Impreza",
+                "es-419": "Fiesta campal",
+                "tr": "Çılgın Parti"
+            },
+            "image_url": "https://cdn2.unrealengine.com/partyroyale-1920-1920x1080-7001724bc7ab.jpg",
+            "image_urls": {
+                "url_s": "https://cdn2.unrealengine.com/partyroyale-480-480x270-a4ce24699034.jpg",
+                "url_xs": "https://cdn2.unrealengine.com/partyroyale-256-256x144-932b805e9fb7.jpg",
+                "url_m": "https://cdn2.unrealengine.com/partyroyale-640-640x360-983da0123af2.jpg",
+                "url": "https://cdn2.unrealengine.com/partyroyale-1920-1920x1080-7001724bc7ab.jpg"
+            },
+            "matchmaking": {
+                "override_playlist": "playlist_papaya"
+            },
+            "title": "Party Royale"
+        },
+        "version": 95,
+        "active": true,
+        "disabled": false,
+        "created": "2021-10-01T00:56:45.010Z",
+        "published": "2021-08-03T15:27:20.251Z",
+        "descriptionTags": [],
+        "moderationStatus": "Unmoderated"
+    },
+    {
+        "namespace": "fn",
+        "accountId": "epic",
+        "creatorName": "Epic",
+        "mnemonic": "set_habanero_playlists",
+        "linkType": "ModeSet",
+        "metadata": {
+            "image_url": "https://cdn2.unrealengine.com/26ranked-c4s4-modetiles-br-solo-1920x1080-1920x1080-532a9fc97d5c.jpg",
+            "image_urls": {
+                "url_s": "https://cdn2.unrealengine.com/26ranked-c4s4-modetiles-br-solo-480-480x270-521534cffc79.jpg",
+                "url_xs": "https://cdn2.unrealengine.com/26ranked-c4s4-modetiles-br-solo-256x144-256x144-81a5852c0f89.jpg",
+                "url_m": "https://cdn2.unrealengine.com/26ranked-c4s4-modetiles-br-solo-640-640x360-8643b51c4bf7.jpg",
+                "url": "https://cdn2.unrealengine.com/26ranked-c4s4-modetiles-br-solo-1920x1080-1920x1080-532a9fc97d5c.jpg"
+            },
+            "locale": "en",
+            "title": "Ranked Battle Royale",
+            "unlockConditions": {
+                "allOf": {
+                    "conditions": [
+                        {
+                            "id": "habanero_unlocked",
+                            "type": "profile"
+                        }
+                    ]
+                },
+                "partyEligibility": "EVERYONE"
+            },
+            "sub_link_codes": [
+                "playlist_habanerosolo",
+                "playlist_habaneroduo",
+                "playlist_habanerosquad"
+            ],
+            "matchmakingV2": {
+                "ratingType": "ranked-br",
+                "isRanked": true
+            },
+            "alt_title": {
+                "de": "Ranked Battle Royale",
+                "ru": "Рейтинговая «Королевская битва»",
+                "ko": "랭크 배틀로얄",
+                "pt-BR": "Battle Royale Ranqueado",
+                "it": "Battaglia reale in Classifica",
+                "fr": "Battle Royale classé",
+                "zh-CN": "",
+                "es": "Clasificatoria de Battle Royale",
+                "es-MX": "Clasificatoria de Batalla campal",
+                "zh": "",
+                "ar": "باتل رويال مُصنّفة",
+                "zh-Hant": "",
+                "ja": "ランクバトルロイヤル",
+                "pl": "Gra rankingowa: Battle Royale",
+                "es-419": "Clasificatoria de Battle Royale",
+                "tr": "Dereceli Battle Royale"
+            },
+            "alt_tagline": {
+                "de": "Wie das klassische Battle Royale, nur mit noch mehr Nervenkitzel! Tritt gegen andere Spieler mit ähnlichem Rang an. Beweise deine Fähigkeiten, schließe Herausforderungen für Belohnungen ab, und steig in der Rangliste auf!",
+                "ru": "Классическая «Королевская битва», но теперь мотивация побеждать ещё больше! Сразитесь с игроками своего ранга. Демонстрируйте навыки, выполняйте задания для получения наград и повышайте рейтинг.",
+                "ko": "클래식 배틀로얄의 경쟁이 더욱 치열해집니다! 비슷한 랭크의 플레이어들과 마지막까지 싸우세요. 실력을 자랑하고, 보상을 향한 도전을 완료하며, 랭크를 올리세요.",
+                "pt-BR": "Igualzinho ao Battle Royale clássico, mas com um tchan a mais! Jogue contra outras pessoas de ranque semelhante. Mostre suas habilidades, complete os desafios para obter recompensas e suba de ranque.",
+                "it": "Come la classica Battaglia reale, ma si alza la posta!  Sfida altri giocatori con posizioni simili e metti in mostra le tue abilità, completa incarichi per ricevere ricompense e scala la Classifica!",
+                "fr": "Le Battle Royale classique, mais avec un peu plus d'enjeux ! Mesurez-vous à d'autres joueurs de niveau similaire. Montrez de quoi vous êtes capable, accomplissez des défis pour recevoir des récompenses et grimpez dans le classement.",
+                "zh-CN": "",
+                "es": "Como el modo Battle Royale clásico, pero ¡con más emoción! Enfréntate a jugadores con un rango similar. Demuestra tus habilidades, completa desafíos para obtener recompensas y sube de rango.",
+                "es-MX": "Como el modo Batalla campal clásico, ¡pero con un poco más en juego! Enfréntate a jugadores con un rango similar. Demuestra tus habilidades, completa desafíos para obtener recompensas y sube de rango.",
+                "zh": "",
+                "ar": "تمامًا مثل الباتل رويال الكلاسيكية، مع مزيد من المكافآت للّعب من أجلها! تنافس مع لاعبين آخرين من تصنيفك نفسه. استعرض مهاراتك وأكمل التحديات للحصول على المكافآت وارفع تصنيفك.",
+                "zh-Hant": "",
+                "ja": "代表的なバトルロイヤルのようで、ひと味違う！ ランクの近いプレイヤーたち相手に戦い抜け。君の能力を駆使し、報酬獲得のためにチャレンジをクリアして、ランクを上げよう。",
+                "pl": "Zupełnie jak klasyczne Battle Royale, tyle że grasz o większą stawkę! Zmierz się z graczami, którzy dorównują ci siłą. Pokaż, co potrafisz, kończ wyzwania, aby zdobyć nagrody i wspinaj się na szczyt rankingu.",
+                "es-419": "Como el modo Batalla campal clásico, ¡pero con un poco más en juego! Enfréntate a jugadores con un rango similar. Demuestra tus habilidades, completa desafíos para obtener recompensas y sube de rango.",
+                "tr": "Klasik Battle Royale gibi ama bu biraz daha heyecanlı! Sana yakın derecelerden diğer oyuncularla kapış. Becerilerini göster, görevleri tamamlayıp ödülleri kap ve dereceni yükselt."
+            },
+            "fallback_links": {
+                "graceful": "playlist_respawn_24_alt"
+            },
+            "tagline": "Just like classic Battle Royale, with a little more to play for!\nBattle it out against other players of similar rank. Show off your skills, complete challenges for rewards, and climb the ranks.",
+            "corresponding_sets": {
+                "unranked": "set_br_playlists"
+            },
+            "default_sub_link_code": "playlist_habanerosquad"
+        },
+        "version": 1,
+        "active": true,
+        "disabled": false,
+        "created": "2023-04-11T18:32:46.910Z",
+        "published": "2023-04-11T18:32:46.910Z",
+        "descriptionTags": [],
+        "moderationStatus": "Unmoderated",
+        "lastActivatedDate": "2023-04-11T18:32:46.913Z",
+        "discoveryIntent": "PUBLIC"
+    },
+    {
+        "namespace": "fn",
+        "accountId": "epic",
+        "creatorName": "Epic",
+        "mnemonic": "set_nobuildbr_habanero_playlists",
+        "linkType": "ModeSet",
+        "metadata": {
+            "image_url": "https://cdn2.unrealengine.com/26ranked-c4s4-modetiles-zb-duos-1920x1080-1920x1080-0b67a217eb1e.jpg",
+            "image_urls": {
+                "url_s": "https://cdn2.unrealengine.com/26ranked-c4s4-modetiles-zb-duos-480-480x270-2337be33281f.jpg",
+                "url_xs": "https://cdn2.unrealengine.com/26ranked-c4s4-modetiles-zb-duos-256x144-256x144-8d7098e99e9a.jpg",
+                "url_m": "https://cdn2.unrealengine.com/26ranked-c4s4-modetiles-zb-duos-640-640x360-d3dec00c3e11.jpg",
+                "url": "https://cdn2.unrealengine.com/26ranked-c4s4-modetiles-zb-duos-1920x1080-1920x1080-0b67a217eb1e.jpg"
+            },
+            "locale": "en",
+            "title": "Ranked Zero Build",
+            "unlockConditions": {
+                "allOf": {
+                    "conditions": [
+                        {
+                            "id": "habanero_unlocked",
+                            "type": "profile"
+                        }
+                    ]
+                },
+                "partyEligibility": "EVERYONE"
+            },
+            "sub_link_codes": [
+                "playlist_nobuildbr_habanero_duo"
+            ],
+            "matchmakingV2": {
+                "ratingType": "ranked-zb",
+                "isRanked": true
+            },
+            "alt_title": {
+                "de": "Ranked Null Bauen",
+                "ru": "Рейтинговая «Нулевая высота»",
+                "ko": "랭크 빌드 제로",
+                "pt-BR": "Construção Zero Ranqueada",
+                "it": "Zero costruzioni in Classifica",
+                "fr": "Zéro construction classé",
+                "zh-CN": "",
+                "es": "Clasificatoria de Cero construcción",
+                "es-MX": "Clasificatoria de Cero construcción",
+                "zh": "",
+                "ar": "بلا بناء مُصنّفة",
+                "zh-Hant": "",
+                "ja": "ランクゼロビルド",
+                "pl": "Gra rankingowa: Zero Budowania",
+                "es-419": "Clasificatoria de Cero construcción",
+                "tr": "Dereceli Sıfır İnşa"
+            },
+            "alt_tagline": {
+                "de": "Wie das klassische Null Bauen, nur mit noch mehr Nervenkitzel! Tritt gegen andere Spieler mit ähnlichem Rang an. Beweise deine Fähigkeiten, schließe Herausforderungen für Belohnungen ab, und steig in der Rangliste auf!",
+                "ru": "Классическая «Нулевая высота», но теперь мотивация побеждать ещё больше! Сразитесь с игроками своего ранга. Демонстрируйте навыки, выполняйте задания для получения наград и повышайте рейтинг.",
+                "ko": "빌드 제로의 경쟁이 더욱 치열해집니다! 비슷한 랭크의 플레이어들과 마지막까지 싸우세요. 실력을 자랑하고, 보상을 향한 도전을 완료하며, 랭크를 올리세요.",
+                "pt-BR": "Igualzinho à Construção Zero tradicional, mas com um tchan a mais! Jogue com outras pessoas de ranque semelhante. Mostre suas habilidades, complete os desafios para obter recompensas e suba de ranque.",
+                "it": "Come la popolare Zero costruzioni, ma si alza la posta! Sfida altri giocatori con posizioni simili e metti in mostra le tue abilità, completa incarichi per ricevere ricompense e scala la Classifica!",
+                "fr": "Le Zéro construction normal, mais avec un peu plus d'enjeux ! Mesurez-vous à d'autres joueurs de niveau similaire. Montrez de quoi vous êtes capable, accomplissez des  défis pour recevoir des récompenses et grimpez dans le classement.",
+                "zh-CN": "",
+                "es": "Como el modo Cero construcción de siempre, pero ¡con más emoción! Enfréntate a jugadores con un rango similar. Demuestra tus habilidades, completa desafíos para obtener recompensas y sube de rango.",
+                "es-MX": "Como el modo Cero construcción clásico, ¡pero con un poco más en juego! Enfréntate a jugadores con un rango similar. Demuestra tus habilidades, completa desafíos para obtener recompensas y sube de rango.",
+                "zh": "",
+                "ar": "مثل وضع بلا بناء المعتاد، مع مزيد من المكافآت للّعب من أجلها! تنافس مع لاعبين آخرين من تصنيفك نفسه. استعرض مهاراتك وأكمل التحديات للحصول على المكافآت وارفع تصنيفك.",
+                "zh-Hant": "",
+                "ja": "従来のゼロビルドのようで、ひと味違う！ ランクの近いプレイヤーたち相手に戦い抜け。君の能力を駆使し、報酬獲得のためにチャレンジをクリアして、ランクを上げよう。",
+                "pl": "Zupełnie jak klasyczne Zero Budowania, tyle że grasz o większą stawkę! Zmierz się z graczami, którzy dorównują ci siłą. Pokaż, co potrafisz, kończ wyzwania, aby zdobyć nagrody i wspinaj się na szczyt rankingu.",
+                "es-419": "Como el modo Cero construcción clásico, ¡pero con un poco más en juego! Enfréntate a jugadores con un rango similar. Demuestra tus habilidades, completa desafíos para obtener recompensas y sube de rango.",
+                "tr": "Geleneksel Sıfır İnşa gibi ama bu biraz daha heyecanlı! Sana yakın derecelerden diğer oyuncularla kapış. Becerilerini göster, görevleri tamamlayıp ödülleri kap ve dereceni yükselt."
+            },
+            "fallback_links": {
+                "graceful": "playlist_respawn_24_alt"
+            },
+            "tagline": "Just like traditional Zero Build, with a little more to play for!\nBattle it out against other players of similar rank. Show off your skills, complete challenges for rewards, and climb the ranks.",
+            "corresponding_sets": {
+                "unranked": "set_nobuild_playlists"
+            },
+            "default_sub_link_code": "playlist_nobuildbr_habanero_duo"
+        },
+        "version": 1,
+        "active": true,
+        "disabled": false,
+        "created": "2023-04-11T18:41:23.517Z",
+        "published": "2023-04-11T18:41:23.517Z",
+        "descriptionTags": [],
+        "moderationStatus": "Unmoderated",
+        "lastActivatedDate": "2023-04-11T18:41:23.518Z",
+        "discoveryIntent": "PUBLIC"
+    },
+    {
+        "namespace": "fn",
+        "accountId": "epic",
+        "creatorName": "Epic",
+        "mnemonic": "set_br_playlists",
+        "linkType": "ModeSet",
+        "metadata": {
+            "alt_title": {
+                "de": "Battle Royale",
+                "ru": "Королевская битва",
+                "ko": "배틀로얄",
+                "pt-BR": "Battle Royale",
+                "it": "Battaglia reale",
+                "fr": "Battle Royale",
+                "zh-CN": "",
+                "es": "Battle Royale",
+                "es-MX": "Batalla campal",
+                "zh": "",
+                "ar": "باتل رويال",
+                "zh-Hant": "",
+                "ja": "バトルロイヤル",
+                "pl": "Battle Royale",
+                "es-419": "Batalla campal",
+                "tr": "Battle Royale"
+            },
+            "alt_tagline": {
+                "de": "Überlebe allein in einer Schlacht bis auf den letzten Spieler.",
+                "ru": "Отправляйтесь на битву в одиночку и переживите всех соперников.",
+                "ko": "죽느냐 사느냐... 혼자서 싸우는 서바이벌 혈투!",
+                "pt-BR": "Entre sozinho em uma batalha para ser o último sobrevivente.",
+                "it": "Combatti in solitaria fino a diventare l'ultimo superstite.",
+                "fr": "Combattez en solitaire et soyez le dernier survivant.",
+                "zh-CN": "",
+                "es": "Entra en solitario en un combate para ser el último en pie.",
+                "es-MX": "Entra por tu cuenta a un combate y pelea hasta que solo quedes tú en pie.",
+                "zh": "",
+                "ar": "خُض المعركة بمفردك لتصبح آخر من يتبقى من اللاعبين.",
+                "zh-Hant": "",
+                "ja": "単身でバトルに飛び込み、最後の1人になるまで生き残れ。",
+                "pl": "Walcz samotnie w bitwie do ostatniego.",
+                "es-419": "Entra por tu cuenta a un combate y pelea hasta que solo quedes tú en pie.",
+                "tr": "Savaşa tek başına gir ve hayatta kalan son kişi ol."
+            },
+            "image_url": "https://cdn2.unrealengine.com/s26-condensed-1920-1920x1080-8a78431610d9.jpg",
+            "fallback_links": {
+                "graceful": "playlist_respawn_24_alt"
+            },
+            "image_urls": {
+                "url_s": "https://cdn2.unrealengine.com/s26-condensed-480-480x270-f896407407e6.jpg",
+                "url_xs": "https://cdn2.unrealengine.com/s26-condensed-256-256x144-90fe3627fdf1.jpg",
+                "url_m": "https://cdn2.unrealengine.com/s26-condensed-640-640x360-2c3bf8766c85.jpg",
+                "url": "https://cdn2.unrealengine.com/s26-condensed-1920-1920x1080-8a78431610d9.jpg"
+            },
+            "tagline": "The battle is building! \r\n Drop into the Battle Royale. Loot, build, explore, and fight in a game of 100 players competing to be the last one standing.",
+            "title": "Battle Royale",
+            "locale": "en",
+            "video_vuid": "taqdZkWyokbCyEFWld",
+            "corresponding_sets": {
+                "ranked": "set_habanero_playlists"
+            },
+            "sub_link_codes": [
+                "playlist_defaultsolo",
+                "playlist_defaultduo",
+                "playlist_trios",
+                "playlist_defaultsquad"
+            ],
+            "default_sub_link_code": "playlist_defaultsquad"
+        },
+        "version": 1,
+        "active": true,
+        "disabled": false,
+        "created": "2022-06-30T17:57:54.767Z",
+        "published": "2022-06-30T17:57:54.767Z",
+        "descriptionTags": [],
+        "moderationStatus": "Unmoderated",
+        "lastActivatedDate": "2022-06-30T17:57:54.770Z"
+    },
+    {
+        "namespace": "fn",
+        "accountId": "epic",
+        "creatorName": "Epic",
+        "mnemonic": "set_nobuild_playlists",
+        "linkType": "ModeSet",
+        "metadata": {
+            "alt_title": {
+                "de": "NULL BAUEN",
+                "ru": "НУЛЕВАЯ ВЫСОТА",
+                "ko": "빌드 제로",
+                "pt-BR": "CONSTRUÇÃO ZERO",
+                "it": "ZERO COSTRUZIONI",
+                "fr": "ZÉRO CONSTRUCTION",
+                "zh-CN": "",
+                "es": "CERO CONSTRUCCIÓN",
+                "es-MX": "CERO CONSTRUCCIÓN",
+                "zh": "",
+                "ar": "بلا بناء",
+                "zh-Hant": "",
+                "ja": "ゼロビルド",
+                "pl": "ZERO BUDOWANIA",
+                "es-419": "CERO CONSTRUCCIÓN",
+                "tr": "SIFIR İNŞA"
+            },
+            "alt_tagline": {
+                "de": "Jede Menge Kämpfe, kein Bauen! \r\n Null Bauen bietet dir die ganze Action, die Beute und den Spielverlauf des typischen Battle Royale, jedoch ohne Bauen. Spieler verfügen über einen Schutzschild, der sich wieder auflädt, um bis zuletzt überleben zu können.",
+                "ru": "Битва без строительства! \r\n «Нулевая высота» — это формат игры с добычей, всеми возможностями и правилами классической «Королевской битвы», только без строительства! Теперь у игроков есть перезаряжающийся суперщит, который поможет им продержаться до конца и одержать победу.",
+                "ko": "건설 없는 전투! \r\n 빌드 제로에서는 건설 없이 클래식 배틀로얄과 동일한 액션, 전리품 획득, 성장을 경험할 수 있습니다! 플레이어는 재충전 가능한 외장 보호막의 보호를 받으며 최후의 승자가 되기 위해 싸워야 합니다.",
+                "pt-BR": "Só batalhas, nada de construção! \r\n A Construção Zero tem ação, saques e progressão iguais aos do Battle Royale clássico, mas sem as construções! Os jogadores contam com a defesa extra de um Sobrescudo que se regenera enquanto lutam para serem o último sobrevivente.",
+                "it": "Tutta battaglia, niente costruzione! \r\n Zero costruzioni è tutta l'azione, il bottino e la progressione di una classica Battaglia reale, senza la costruzione! Ora i giocatori hanno uno scudo supplementare ricaricabile per difendersi meglio mentre combattono per resistere fino alla fine della partita.",
+                "fr": "Du combat sans construction \r\n Zéro construction conserve toute l'action, le butin et la progression du Battle Royale, mais sans la construction ! Les joueurs disposent désormais d'un surbouclier qui se recharge pour les aider à être le dernier survivant.",
+                "zh-CN": "",
+                "es": "¡Solo batalla, nada de construcción! \r\n Cero construcción conserva toda la acción, botín y progreso del clásico Battle Royale, ¡solo que sin construcción! Los jugadores tendrán un escudo total recargable que los defenderá en su lucha por ser los últimos en pie.",
+                "es-MX": "¡Combate total sin construcción! \r\n Cero construcción tiene toda la acción, botín y progreso de Batalla campal clásico, ¡pero sin construcción! Ahora, los jugadores tienen un escudo adicional que se recarga para proporcionar una defensa mayor mientras luchan por ser el último en pie.",
+                "zh": "",
+                "ar": "قتال مستمر، بلا بناء! \r\n يتمحور بلا بناء وضع حول كل الإثارة والغنيمة والتقدم في باتل رويال الكلاسيكية، ولكن من دون البناء! يمتلك اللاعبون الآن درعًا واقيًا مشحونًا لتوفير دفاع إضافي، حيث يقاتل كل لاعب ليكون آخر لاعب صامد.",
+                "zh-Hant": "",
+                "ja": "戦闘のみ、建築なし！\r\n ゼロビルドとは、通常のバトルロイヤルでのアクション、戦利品、進行はそのままに、建築がなしとなっている！ 追加の防御手段としてリチャージするオーバーシールドが付与され、最後まで生き残るプレイヤーを目指すことになるぞ。",
+                "pl": "Sama walka, żadnego budowania! \r\n Zero Budowania to akcja, łupy i postępy z klasycznego Battle Royale, ale bez budowania! Gracze walczący do ostatniego ocalałego mają teraz dodatkową ochronę w postaci odnawiającej się Nadosłony.",
+                "es-419": "¡Combate total sin construcción! \r\n Cero construcción tiene toda la acción, botín y progreso de Batalla campal clásico, ¡pero sin construcción! Ahora, los jugadores tienen un escudo adicional que se recarga para proporcionar una defensa mayor mientras luchan por ser el último en pie.",
+                "tr": "İnşa yok, sadece savaş var! \r\n Battle Royale'in olmazsa olmazları aksiyon, ganimet ve oyuncu ilerlemesinin tamamı Sıfır İnşa'da bulunuyor. Olmayan tek şey inşa! Artık oyuncuların, tüm rakiplerini elemek için savaşırken onlara destek olacak bir de yenilenen kalkan kaplamaları var."
+            },
+            "image_url": "https://cdn2.unrealengine.com/26r-zerobuild-playlisttiles-squads-1920x1080-1920x1080-a60e7dbc24b1.jpg",
+            "fallback_links": {
+                "graceful": "playlist_respawn_24_alt"
+            },
+            "image_urls": {
+                "url_s": "https://cdn2.unrealengine.com/26r-zerobuild-playlisttiles-squads-480x270-480x270-c6516f1743bb.jpg",
+                "url_xs": "https://cdn2.unrealengine.com/26r-zerobuild-playlisttiles-squads-256x144-256x144-a11aef3b77f9.jpg",
+                "url_m": "https://cdn2.unrealengine.com/26r-zerobuild-playlisttiles-squads-640x360-640x360-23b2d715164b.jpg",
+                "url": "https://cdn2.unrealengine.com/26r-zerobuild-playlisttiles-squads-1920x1080-1920x1080-a60e7dbc24b1.jpg"
+            },
+            "tagline": "All battle, no building! \r\n Zero Build is all the action, loot, and progression of classic Battle Royale, without the Building! Players now have a recharging Overshield for added defense as they fight to be the last one standing.",
+            "title": "Zero Build - Battle Royale",
+            "locale": "en",
+            "video_vuid": "VTfsLUcDGhrnzHppNB",
+            "corresponding_sets": {
+                "ranked": "set_nobuildbr_habanero_playlists"
+            },
+            "sub_link_codes": [
+                "playlist_nobuildbr_solo",
+                "playlist_nobuildbr_duo",
+                "playlist_nobuildbr_trio",
+                "playlist_nobuildbr_squad"
+            ],
+            "default_sub_link_code": "playlist_nobuildbr_squad"
+        },
+        "version": 1,
+        "active": true,
+        "disabled": false,
+        "created": "2022-06-30T18:00:25.174Z",
+        "published": "2022-06-30T18:00:25.174Z",
+        "descriptionTags": [],
+        "moderationStatus": "Unmoderated",
+        "lastActivatedDate": "2022-06-30T18:00:25.176Z"
+    }
+]

@@ -786,52 +786,86 @@ const discoveryResponses = {
 
 }
 
-module.exports = (app) => {
-	app.post('*/discovery/surface/*', (req, res) =>{
-        season = req.headers["user-agent"].split('-')[1];
-		seasonglobal = req.headers["user-agent"].split('-')[1].split('.')[0]
-		const seasonData = {
-			"22.40": discoveryResponses.ver2240,
-			"20.40": discoveryResponses.ver2040,
-			"18.40": discoveryResponses.ver1840,
-			"17.50": discoveryResponses.ver1750,
-		};
-		for(var i in seasonData){ if (i == season){return res.json(seasonData[season])}}
-		if(seasonglobal === "19")
-		{
-			return res.json(discoveryResponses.ver19)
-		}
-		else
-		{
-			return res.json(Default)
-		}
-	});
 
-	app.post('/links/api/fn/mnemonic/', (req, res) => {
-		season = req.headers["user-agent"].split('-')[1]
-		seasonglobal = req.headers["user-agent"].split('-')[1].split('.')[0]
-        formatting = []
-		const seasonData = {
-			"22.40": discoveryResponses.ver2240,
-			"20.40": discoveryResponses.ver2040,
-			"18.40": discoveryResponses.ver1840,
-			"17.50": discoveryResponses.ver1750,
-		  };
-		  
-			for(var i in seasonData)
-			{
-				if(i == season){
-					var eventBuilds = seasonData[season].Panels[0].Pages[0].results.map(result => result.linkData); 
-					return res.json(eventBuilds);
-				}
-			}	
-		  	if(seasonglobal === "19"){var s19 = discoveryResponses.ver19.Panels[0].Pages[0].results.map(result => result.linkData); return res.json(s19);}		  
-		  	else{var defaultResponse = Default.Panels[0].Pages[0].results.map(result => result.linkData)} return res.json(defaultResponse)
-			//placeholder  
-			/** else{
-				res.json(require("../responseFull.json"))
-			}*/
-	});
+const seasonData = {
+	"22.40": discoveryResponses.ver2240,
+	"20.40": discoveryResponses.ver2040,
+	"18.40": discoveryResponses.ver1840,
+	"17.50": discoveryResponses.ver1750,
+  };
+
+function getSeasonInfo(req) {
+const userAgent = req.headers["user-agent"];
+const season = userAgent.split('-')[1];
+const seasonglobal = season.split('.')[0];
+return { season, seasonglobal };
+}
+
+
+module.exports = (app) => {
+	app.post('*/discovery/surface/*', (req, res) => {
+		const { season, seasonglobal } = getSeasonInfo(req);
+		if (seasonData[season]) {
+		  return res.json(seasonData[season]);
+		}
+		if (seasonglobal === "19") {
+		  return res.json(discoveryResponses.ver19);
+		}
+		if(season >= 26.10){
+			return res.json({
+				"panels": [
+					{
+						"PanelName": "ByEpicNoBigBattle6Col",
+						"Pages": [
+							{
+								"results": [
+									{
+										"lastVisited": null,
+										"linkCode": "set_br_playlists", //there is habanero but why load into a comp playlist anyway.
+										"isFavorite": false,
+										"globalCCU": 0
+                            		},
+									{
+										"lastVisited": null,
+										"linkCode": "playlist_papaya",
+										"isFavorite": false,
+										"globalCCU": 0
+									}
+                       			],
+                        		"hasMore": false
+                    		}
+                		]
+            		}
+       			 ],
+        		"testCohorts": [
+            		"testing"
+				]
+			})}
+		else{
+			return res.json(Default);
+		}
+});
+	  
+	  
+	  app.post('/links/api/fn/mnemonic/', (req, res) => {
+		const { season, seasonglobal } = getSeasonInfo(req);
+		if (seasonData[season]) {
+		  const eventBuilds = seasonData[season].Panels[0].Pages[0].results.map(result => result.linkData);
+		  return res.json(eventBuilds);
+		}
+		if (seasonglobal === "19") {
+		  const s19 = discoveryResponses.ver19.Panels[0].Pages[0].results.map(result => result.linkData);
+		  return res.json(s19);
+		}
+		if(season >= 26.10){
+			return res.json(require("../discovery/latest/discoveryMenu.json"))
+		}
+		else{
+			const defaultResponse = Default.Panels[0].Pages[0].results.map(result => result.linkData);
+			return res.json(defaultResponse);
+		}
+	  });
+
 	
 	app.get('/links/api/fn/mnemonic/:playlistId/related', (req, res) => {
 		return res.json({
@@ -865,89 +899,34 @@ module.exports = (app) => {
 				  }
 				}
 			}) //fixes the play button being disabled
-
-			
-			//placeholder for when discovery breaks again 
-			/**if(req.params.playlistId == "playlist_papaya"){
-			return res.json({
-				"parentLinks": [],
-				"links": {
-				 [req.params.playlistId]: {
-					"namespace": "fn",
-					"accountId": "epic",
-					"creatorName": "Epic",
-					"mnemonic": req.params.playlistId,
-					"linkType": "BR:Playlist",
-					"metadata": {
-					  "image_url": "",
-					  "image_urls": {
-						"url_s": "",
-						"url_xs": "",
-						"url_m": "",
-						"url": "" 
-					  },
-					  "matchmaking": {
-						"override_playlist": req.params.playlistId
-					  }
-					},
-					"version": 95,
-					"active": true,
-					"disabled": false,
-					"created": "2021-10-01T00:56:45.010Z",
-					"published": "2021-08-03T15:27:20.251Z",
-					"descriptionTags": [],
-					"moderationStatus": "Unmoderated"
-				  }
-				}
-			})
-		}
-		else{
-			return res.json(require("../relateddata.json"))
-		} */
 	});
 
 
 
 
 	app.get('/links/api/fn/mnemonic/:playlistId', (req, res) => {
-		const seasonData = {
-			"22.40": discoveryResponses.ver2240,
-			"20.40": discoveryResponses.ver2040,
-			"18.40": discoveryResponses.ver1840,
-			"17.50": discoveryResponses.ver1750,
-		};
-		season = req.headers["user-agent"].split('-')[1]
-		seasonglobal = req.headers["user-agent"].split('-')[1].split('.')[0]
-		for(var i in seasonData)
-		{
-			try{
-				if(i == season)
-				{
-					for (var i2 in seasonData[season].Panels[0].Pages[0].results) {
-						if (seasonData[season].Panels[0].Pages[0].results[i2].linkData.mnemonic == req.params.playlistId){
-							return res.json(seasonData[season].Panels[0].Pages[0].results[i2].linkData)
-						}
-					}
-
-				}
-				if(seasonglobal == "19"){
-					for(var i2 in discoveryResponses.ver19.Panels[0].Pages[0].results){
-						if(discoveryResponses.ver19.Panels[0].Pages[0].results[i2].linkData.mnemonic == req.params.playlistId){
-							return res.json(discoveryResponses.ver19.Panels[0].Pages[0].results[i2].linkData)
-						}
-					}
-
-				}
-				else{
-					for(var i2 in Default.Panels[0].Pages[0].results){
-						if(Default.Panels[0].Pages[0].results[i2].linkData.mnemonic == req.params.playlistId){
-							return res.json(Default.Panels[0].Pages[0].results[i2].linkData)
-						}
-					}
-				}
+		const { season, seasonglobal } = getSeasonInfo(req);
+		if (seasonData[season]) {
+		  for (const result of seasonData[season].Panels[0].Pages[0].results) {
+			if (result.linkData.mnemonic === req.params.playlistId) {
+			  return res.json(result.linkData);
 			}
-			catch{}// catches null erros
+		  }
 		}
-	});
+		if (seasonglobal === "19") {
+		  for (const result of discoveryResponses.ver19.Panels[0].Pages[0].results) {
+			if (result.linkData.mnemonic === req.params.playlistId) {
+			  return res.json(result.linkData);
+			}
+		  }
+		}
+		 else {
+		  for (const result of Default.Panels[0].Pages[0].results) {
+			if (result.linkData.mnemonic === req.params.playlistId) {
+			  return res.json(result.linkData);
+			}
+		  }
+		}
+	  });
 
 }

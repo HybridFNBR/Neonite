@@ -72,7 +72,7 @@ module.exports = (app) => {
 		})
 	})
 
-	//external auth
+
 	app.get("/launcher/api/public/assets/:platform/:catalogItemId/:appName", (req, res) => {
 		res.json({
 			"appName": req.params.appName,
