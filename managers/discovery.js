@@ -815,7 +815,7 @@ module.exports = (app) => {
 		if (seasonglobal === "19") {
 		  return res.json(discoveryResponses.ver19);
 		}
-		if(season >= 24.00){
+		if(season >= 23.50){
 			return res.json({
 				"panels": [
 					{
@@ -861,7 +861,7 @@ module.exports = (app) => {
 		  const s19 = discoveryResponses.ver19.Panels[0].Pages[0].results.map(result => result.linkData);
 		  return res.json(s19);
 		}
-		if(season >= 24.00){
+		if(season >= 23.50){
 			return res.json(require("../discovery/latest/discoveryMenu.json"))
 		}
 		else{
@@ -924,7 +924,7 @@ module.exports = (app) => {
 			}
 		  }
 		}
-		if(season >= 24.00){
+		if(season >= 23.50){
 			if(req.params.playlistId == "set_br_playlists")
 			{
 				return res.json(require("../discovery/latest/setbrplaylist.json"))
