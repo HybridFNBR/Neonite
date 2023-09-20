@@ -1,0 +1,45 @@
+{
+    "namespace": "fn",
+    "accountId": "epic",
+    "creatorName": "Epic",
+    "mnemonic": "playlist_papaya",
+    "linkType": "BR:Playlist",
+    "metadata": {
+      "alt_title": {
+        "de": "Party Royale",
+        "ru": "\u041a\u043e\u0440\u043e\u043b\u0435\u0432\u0441\u043a\u0430\u044f \u0432\u0435\u0447\u0435\u0440\u0438\u043d\u043a\u0430",
+        "ko": "\ud30c\ud2f0\ub85c\uc584",
+        "pt-BR": "Festa Royale",
+        "it": "Party Reale",
+        "fr": "F\u00eate royale",
+        "zh-CN": "",
+        "es": "Fiesta magistral",
+        "es-MX": "Fiesta campal",
+        "zh": "",
+        "ar": "\u0627\u0644\u062d\u0641\u0644 \u0627\u0644\u0645\u0644\u0643\u064a",
+        "zh-Hant": "",
+        "ja": "\u30d1\u30fc\u30c6\u30a3\u30fc\u30ed\u30a4\u30e4\u30eb",
+        "pl": "Kr\u00f3lewska Impreza",
+        "es-419": "Fiesta campal",
+        "tr": "\u00c7\u0131lg\u0131n Parti"
+      },
+      "image_url": "https://cdn2.unrealengine.com/partyroyale-1920-1920x1080-7001724bc7ab.jpg",
+      "image_urls": {
+        "url_s": "https://cdn2.unrealengine.com/partyroyale-480-480x270-a4ce24699034.jpg",
+        "url_xs": "https://cdn2.unrealengine.com/partyroyale-256-256x144-932b805e9fb7.jpg",
+        "url_m": "https://cdn2.unrealengine.com/partyroyale-640-640x360-983da0123af2.jpg",
+        "url": "https://cdn2.unrealengine.com/partyroyale-1920-1920x1080-7001724bc7ab.jpg"
+      },
+      "matchmaking": {
+        "override_playlist": "playlist_papaya"
+      },
+      "title": "Party Royale"
+    },
+    "version": 95,
+    "active": true,
+    "disabled": false,
+    "created": "2021-10-01T00:56:45.010Z",
+    "published": "2021-08-03T15:27:20.251Z",
+    "descriptionTags": [],
+    "moderationStatus": "Unmoderated"
+}

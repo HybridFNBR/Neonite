@@ -1,0 +1,50 @@
+{    "namespace": "fn",
+    "accountId": "epic",
+    "creatorName": "Epic",
+    "mnemonic": "playlist_defaultsquad",
+    "linkType": "BR:Playlist",
+    "metadata": {
+        "parent_set": "set_br_playlists",
+        "favorite_override": "set_br_playlists",
+        "play_history_override": "set_br_playlists",
+        "alt_title": {
+            "de": "Team",
+            "ru": "Бои отрядов",
+            "ko": "스쿼드",
+            "pt-BR": "Esquadrões",
+            "en": "Squad",
+            "it": "Squadre",
+            "fr": "Sections",
+            "zh-CN": "",
+            "es": "Escuadrones",
+            "es-MX": "En escuadrón",
+            "zh": "",
+            "ar": "فِرق",
+            "zh-Hant": "",
+            "ja": "スクワッド",
+            "pl": "Oddziały",
+            "es-419": "En escuadrón",
+            "tr": "Ekipli"
+        },
+        "image_url": "https://cdn2.unrealengine.com/s26-squads-1920-1920x1080-55628a1543ea.jpg",
+        "image_urls": {
+            "url_s": "https://cdn2.unrealengine.com/s26-squads-480-480x270-06da0fac4ea9.jpg",
+            "url_xs": "https://cdn2.unrealengine.com/s26-squad-256-256x144-e4de3c40cfd1.jpg",
+            "url_m": "https://cdn2.unrealengine.com/s26-squads-640-640x360-6addc29cbde9.jpg",
+            "url": "https://cdn2.unrealengine.com/s26-squads-1920-1920x1080-55628a1543ea.jpg"
+        },
+        "tagline": "",
+        "matchmaking": {
+            "override_playlist": "playlist_defaultsquad"
+        },
+        "video_vuid": "taqdZkWyokbCyEFWld",
+        "title": "Squad"
+    },
+    "version": 95,
+    "active": true,
+    "disabled": false,
+    "created": "2021-10-01T00:56:42.938Z",
+    "published": "2021-08-03T15:27:17.566Z",
+    "descriptionTags": [],
+    "moderationStatus": "Unmoderated"
+}

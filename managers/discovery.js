@@ -787,22 +787,26 @@ const discoveryResponses = {
 }
 
 
-const seasonData = {
-	"22.40": discoveryResponses.ver2240,
-	"20.40": discoveryResponses.ver2040,
-	"18.40": discoveryResponses.ver1840,
-	"17.50": discoveryResponses.ver1750,
-  };
 
-function getSeasonInfo(req) {
-const userAgent = req.headers["user-agent"];
-const season = userAgent.split('-')[1];
-const seasonglobal = season.split('.')[0];
-return { season, seasonglobal };
-}
 
 
 module.exports = (app) => {
+
+	const seasonData = {
+		"22.40": discoveryResponses.ver2240,
+		"20.40": discoveryResponses.ver2040,
+		"18.40": discoveryResponses.ver1840,
+		"17.50": discoveryResponses.ver1750,
+	  };
+	
+	function getSeasonInfo(req) {
+	const userAgent = req.headers["user-agent"];
+	const season = userAgent.split('-')[1];
+	const seasonglobal = season.split('.')[0];
+	return { season, seasonglobal };
+	}
+
+
 	app.post('*/discovery/surface/*', (req, res) => {
 		const { season, seasonglobal } = getSeasonInfo(req);
 		if (seasonData[season]) {
@@ -811,7 +815,7 @@ module.exports = (app) => {
 		if (seasonglobal === "19") {
 		  return res.json(discoveryResponses.ver19);
 		}
-		if(season >= 26.10){
+		if(season >= 24.00){
 			return res.json({
 				"panels": [
 					{
@@ -857,7 +861,7 @@ module.exports = (app) => {
 		  const s19 = discoveryResponses.ver19.Panels[0].Pages[0].results.map(result => result.linkData);
 		  return res.json(s19);
 		}
-		if(season >= 26.10){
+		if(season >= 24.00){
 			return res.json(require("../discovery/latest/discoveryMenu.json"))
 		}
 		else{
@@ -913,17 +917,29 @@ module.exports = (app) => {
 			}
 		  }
 		}
-		if (seasonglobal === "19") {
+		if (seasonglobal == "19") {
 		  for (const result of discoveryResponses.ver19.Panels[0].Pages[0].results) {
 			if (result.linkData.mnemonic === req.params.playlistId) {
 			  return res.json(result.linkData);
 			}
 		  }
 		}
+		if(season >= 24.00){
+			if(req.params.playlistId == "set_br_playlists")
+			{
+				return res.json(require("../discovery/latest/setbrplaylist.json"))
+			}
+			else{
+				try{
+					return res.json(require(`../discovery/latest/coreLtms/${req.params.playlistId}.json`))
+				}
+				catch{}
+			}
+		}
 		 else {
 		  for (const result of Default.Panels[0].Pages[0].results) {
 			if (result.linkData.mnemonic === req.params.playlistId) {
-			  return res.json(result.linkData);
+			  return res.json(result.linkData); 
 			}
 		  }
 		}

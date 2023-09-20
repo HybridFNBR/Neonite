@@ -1,0 +1,50 @@
+{
+    "namespace": "fn",
+    "accountId": "epic",
+    "creatorName": "Epic",
+    "mnemonic": "playlist_defaultsolo",
+    "linkType": "BR:Playlist",
+    "metadata": {
+        "parent_set": "set_br_playlists",
+        "favorite_override": "set_br_playlists",
+        "play_history_override": "set_br_playlists",
+        "alt_title": {
+            "de": "Solo",
+            "ru": "В одиночку",
+            "ko": "솔로",
+            "pt-BR": "Solo",
+            "en": "Solo",
+            "it": "Singolo",
+            "fr": "Solo",
+            "zh-CN": "",
+            "es": "En solitario",
+            "es-MX": "En solitario",
+            "zh": "",
+            "ar": "فردي",
+            "zh-Hant": "",
+            "ja": "ソロ",
+            "pl": "Solo",
+            "es-419": "En solitario",
+            "tr": "Tekli"
+        },
+        "image_url": "https://cdn2.unrealengine.com/s26-solo-1920-1920x1080-1e4a6e8f4f98.jpg",
+        "image_urls": {
+            "url_s": "https://cdn2.unrealengine.com/s26-solo-480-480x270-20f222365aa5.jpg",
+            "url_xs": "https://cdn2.unrealengine.com/s26-solo-256-256x144-855d0ba232f5.jpg",
+            "url_m": "https://cdn2.unrealengine.com/s26-solo-640-640x360-a851067cbcc2.jpg",
+            "url": "https://cdn2.unrealengine.com/s26-solo-1920-1920x1080-1e4a6e8f4f98.jpg"
+        },
+        "matchmaking": {
+            "override_playlist": "playlist_defaultsolo"
+        },
+        "video_vuid": "taqdZkWyokbCyEFWld",
+        "title": "Solo"
+    },
+    "version": 95,
+    "active": true,
+    "disabled": false,
+    "created": "2021-10-01T00:56:43.870Z",
+    "published": "2021-08-03T15:27:17.540Z",
+    "descriptionTags": [],
+    "moderationStatus": "Unmoderated"
+}
