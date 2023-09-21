@@ -16,7 +16,13 @@ const NeoLog = require("../structs/NeoLog");
  * @param {Application} app 
  */
 module.exports = (app) => {
-	app.post('/fortnite/api/game/v2/profile/:accountId/client/:command', async (req, res, next) => {
+
+
+	app.post('/fortnite/api/game/v2/profile/hybrid/client/QueryProfile?profileId=profile0&rvn=-1', (req, res) => {
+		res.statusCode(404).end() //we dont support stw
+	});
+
+	app.post('/fortnite/api/game/v2/profile/:accountId/client/:command',(req, res, next) => {
 		res.setHeader("Content-Type", "application/json");
 		var accountId = req.params.accountId;
 
@@ -155,6 +161,10 @@ module.exports = (app) => {
 			}
 			case "SetRandomCosmeticLoadoutFlag": {
 				checkValidProfileID("athena");
+				break;
+			}
+
+			case "RequestRestedStateIncrease":{
 				break;
 			}
 

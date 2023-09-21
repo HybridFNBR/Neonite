@@ -152,6 +152,10 @@ module.exports = (app) => {
 		res.json({ "type": "NO_UPDATE" })
 	});
 
+	app.get('/fortnite/api/versioncheck*', (req, res) => {
+		res.json({ "type": "NO_UPDATE" })
+	});
+
 	//privacy
 	app.get('/fortnite/api/game/v2/privacy/account/:accountId', (req, res) => {
 		res.json({
@@ -165,7 +169,7 @@ module.exports = (app) => {
 	});
 
 	//itemshop
-	app.get('/fortnite/api/storefront/v2/catalog', function (req, res) {
+	app.get('/fortnite/api/storefront/v2/catalog',(req, res) => {
 		res.json(require("../shop.json"));
 	});
 
