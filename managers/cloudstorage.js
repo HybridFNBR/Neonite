@@ -39,7 +39,6 @@ module.exports = (app) => {
 		res.json(output);
 	});
 
-
 	app.get('/fortnite/api/cloudstorage/system/DefaultGame.ini', (req, res) => {
 		season = req.headers["user-agent"].split('-')[1]
 		res.setHeader("content-type", "application/octet-stream")

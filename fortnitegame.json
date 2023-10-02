@@ -135,6 +135,52 @@
     "lastModified": "2020-12-05T23:52:44.269Z",
     "_locale": "en-US"
   },
+  "tournamentinformation": {
+    "conversion_config": {
+      "containerName": "tournament_info",
+      "_type": "Conversion Config",
+      "enableReferences": true,
+      "contentName": "tournaments"
+    },
+    "tournament_info": {
+      "tournaments": [
+        {
+            "background_text_color": "161616",
+            "poster_back_image": "https://cdn2.unrealengine.com/25comp-evergreens-in-game-br-poster-back-750x1080-e56607bf30e3.jpg",
+            "flavor_description": "Win cash prizes with your best friend!",
+            "poster_front_image": "https://cdn2.unrealengine.com/25comp-evergreens-in-game-br-poster-front-option3-750x1080-6fd9762215b3.jpg",
+            "short_format_title": "Duos Tournament",
+            "title_line_2": "Cash Cup",
+            "title_line_1": "Duos",
+            "background_title": "",
+            "details_description": "Unlock this tournament by playing Ranked Battle Royale. You and your partner must be ranked in Gold or higher in Battle Royale to unlock this tournament. This tournament occurs across two rounds, with the top 50 teams from Round 1 advancing to Round 2. Players must be at least 13 years old (or such other age, if greater, as may be required in their country of residence), have MFA enabled and an account level of 15 or greater. For more details see: www.epicgames.com/fortnite/competitive/news.",
+            "long_format_title": "Duos Cash Cup",
+            "poster_fade_color": "001A41",
+            "secondary_color": "161616",
+            "title_color": "FFFFFF",
+            "loading_screen_image": "https://cdn2.unrealengine.com/25comp-evergreens-in-game-br-tile-1920x1080-1920x1080-642a5305f1bc.jpg",
+            "background_right_color": "0054D3",
+            "_type": "Tournament Display Info",
+            "pin_earned_text": "Winner!",
+            "tournament_display_id": "s26_brcash_duos",
+            "highlight_color": "F7FF00",
+            "schedule_info": "Various Dates",
+            "primary_color": "FFFFFF",
+            "shadow_color": "161616",
+            "background_left_color": "00265F",
+            "playlist_tile_image": "https://cdn2.unrealengine.com/25comp-evergreens-in-game-br-tile-1920x1080-1920x1080-642a5305f1bc.jpg",
+            "base_color": "FFFFFF"
+        }
+    ],
+    "_type": "Tournaments Info"
+  },
+  "_title": "tournamentinformation",
+  "_noIndex": false,
+  "_activeDate": "2018-11-13T22:32:47.734Z",
+  "lastModified": "2021-04-06T17:26:47.948Z",
+  "_locale": "en-US",
+  "_templateName": "FortniteGameTournamentInfo"
+},
   "shopSections": {},
   "playlistinformation": {
     "is_tile_hidden": false,

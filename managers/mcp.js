@@ -18,7 +18,7 @@ const NeoLog = require("../structs/NeoLog");
 module.exports = (app) => {
 
 
-	app.post('/fortnite/api/game/v2/profile/hybrid/client/QueryProfile?profileId=profile0&rvn=-1', (req, res) => {
+	app.post('/fortnite/api/game/v2/profile/hybrid/client/QueryProfile?profileId=profile0*', (req, res) => {
 		res.statusCode(404).end() //we dont support stw
 	});
 

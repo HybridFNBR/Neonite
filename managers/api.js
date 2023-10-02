@@ -123,12 +123,22 @@ module.exports = (app) => {
 		res.json([])
 	});
 
+	app.get('/fortnite/api/game/v2/leaderboards/cohort/*', (req, res) => {
+        res.json([])
+    })
+
 	app.get("/fortnite/api/game/v2/world/info", (req, res) => res.json({}))
 
-	app.get("/api/v1/events/:game/download/:accountId", (req, res) => {
+
+	app.all("/api/v1/events/Fortnite/:event/history/:accountId", (req, res) => { 
+		res.status(404)
+	});
+
+	app.get("/api/v1/events/Fortnite/download/:accountId", (req, res) => {
+		console.log(req.body)
 		res.json({
 			"player": {
-				"gameId": req.params.game,
+				"gameId": "Fortnite",
 				"accountId": req.params.accountId,
 				"tokens": [],
 				"teams": {},
@@ -137,9 +147,139 @@ module.exports = (app) => {
 				"persistentScores": {},
 				"groupIdentity": {}
 			},
-			"events": [],
-			"templates": [],
-			"scores": []
+			"events": [{
+				"gameId": "Fortnite",
+				"eventId": "epicgames_S26_DuosCashCup_EU",
+				"regions": [
+				"EU"
+				],
+				"regionMappings": {
+				"EU": "EUCOMP"
+				},
+				"platforms": [
+				"Windows"
+				],
+				"platformMappings": {},
+				"displayDataId": "s26_brcash_duos",
+				"eventGroup": "Season26DuosCashCup",
+				"announcementTime": "2023-08-25T14:00:00.000Z",
+				"appId": null,
+				"environment": null,
+				"link": {
+				"type": "br:tournament",
+				"code": "tournament_epicgames_s26_duoscashcup_eu",
+				"version": 1
+				},
+				"metadata": {
+				"TeamLockType": "Window",
+				"minimumAccountLevel": 15,
+				"TrackedStats": [
+					"MMO_LootIsland",
+					"MMO_RadioTower"
+				],
+				"RegionLockType": "Event",
+				"AccountLockType": "Window"
+				},
+				"eventWindows": [
+				{
+					"eventWindowId": "S26_DuosCashCup_EU_Event1_Round1",
+					"eventTemplateId": "EventTemplate_S26_DuosCashCup_EU_Event1_Round1",
+					"countdownBeginTime": "2023-09-07T15:00:00.000Z",
+					"beginTime": "2023-09-07T17:00:00.000Z",
+					"endTime": "2023-09-07T20:00:00.000Z",
+					"blackoutPeriods": [],
+					"round": 0,
+					"payoutDelay": 32,
+					"isTBD": false,
+					"canLiveSpectate": false,
+					"scoreLocations": [
+					{
+						"leaderboardDefId": "S26DuosCashCupRound1LeaderboardDef",
+						"windowEndCondition": null,
+						"isMainWindowLeaderboard": true
+					}
+					],
+					"visibility": "public",
+					"requireAllTokens": [],
+					"requireAnyTokens": [],
+					"requireNoneTokensCaller": [
+					"Season26DuosCashCup_OCE",
+					"EpicAccountPrizingRestriction",
+					"Season26DuosCashCup_NAC",
+					"Season26DuosCashCup_ME",
+					"Season26DuosCashCup_ASIA",
+					"Season26DuosCashCup_BR"
+					],
+					"requireAllTokensCaller": [],
+					"requireAnyTokensCaller": [],
+					"additionalRequirements": [
+					"mfa",
+					"eula:s26_brcash_rules",
+					"currentRanking:ranked-br:6"
+					],
+					"teammateEligibility": "all",
+					"regionMappings": null,
+					"metadata": {
+					"ServerReplays": true,
+					"RoundType": "Qualifiers",
+					"liveSpectateAccessToken": "WeeklyTournamentSpectator"
+					}
+				}
+				],
+				"beginTime": "2023-09-07T17:00:00.000Z",
+				"endTime": "2023-11-02T21:00:00.000Z"
+			}],
+				"templates": [],
+				"scores": [],
+				"leaderboardDefs":[{
+					"gameId": "Fortnite",
+					"leaderboardDefId": "S26DuosCashCupRound1LeaderboardDef",
+					"leaderboardStorageId": "Fortnite_GLOBAL",
+					"leaderboardInstanceGroupingKeyFormat": "${eventId}",
+					"leaderboardInstanceIdFormat": "${windowId}",
+					"maxSessionHistorySize": 20,
+					"onlyScoreTopN": null,
+					"useIndividualScores": false,
+					"tiebreakerFormula": {
+					"basePointsBits": 11,
+					"components": [
+						{
+						"trackedStat": "VICTORY_ROYALE_STAT",
+						"bits": 4,
+						"multiplier": null,
+						"aggregation": "sum"
+						},
+						{
+						"trackedStat": "TEAM_ELIMS_STAT_INDEX",
+						"bits": 12,
+						"multiplier": 100,
+						"aggregation": "avg"
+						},
+						{
+						"trackedStat": "PLACEMENT_TIEBREAKER_STAT",
+						"bits": 14,
+						"multiplier": 100,
+						"aggregation": "avg"
+						},
+						{
+						"trackedStat": "TIME_ALIVE_STAT",
+						"bits": 11,
+						"multiplier": null,
+						"aggregation": "avg"
+						}
+					]
+					},
+					"scoringRuleSetId": "S26DuosCashCupRound1ScoringRules",
+					"clampsToZero": true,
+					"payoutsConfig": null,
+					"bestNTeams": null,
+					"hidePlayerScores": false
+				}],
+				"resolvedWindowLocations": {
+					"Fortnite:epicgames_S26_DuosCashCup_EU:S26_DuosCashCup_EU_Event1_Round1": [
+					"Fortnite:epicgames_S26_DuosCashCup_EU:S26_DuosCashCup_EU_Event1_Round1"
+					]
+				}
 		})
 	})
 

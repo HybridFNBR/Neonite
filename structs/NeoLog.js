@@ -13,6 +13,6 @@ module.exports = {
   },
 
   URL(data) {
-    console.log(`[\x1b[32mLOG URL\x1b[0m]: ${data}\x1b[0m`)
+    console.log(`[\x1b[32mLogURL\x1b[0m]: ${data}\x1b[0m`)
   },
 }
