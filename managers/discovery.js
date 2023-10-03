@@ -117,10 +117,7 @@ module.exports = (app) => {
 				}
 			}) //fixes the play button being disabled
 	});
-
-
-
-
+	
 	app.get('/links/api/fn/mnemonic/:playlistId', (req, res) => {
 		const { season, seasonglobal } = getSeasonInfo(req);
 		if (seasonData[season]) {

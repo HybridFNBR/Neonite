@@ -7,6 +7,7 @@ const errors = require('./../structs/errors');
 const { ErrDef, ApiException, com } = require('./../structs/errors');
 var builder = require('xmlbuilder');
 const Express = require('express');
+const NeoLog = require('../structs/NeoLog');
 
 
 Date.prototype.addHours = function (h) {
@@ -32,6 +33,8 @@ Array.prototype.shuffle = function () {
  * 
  */
 
+
+
 module.exports = (app) => {
 	//lightswitch
 	app.get('/lightswitch/api/service/bulk/status', (req, res) => {
@@ -54,6 +57,7 @@ module.exports = (app) => {
 		]);
 	});
 	
+
 
 	app.get("/lightswitch/api/service/:serviceId/status", (req, res) => {
 		const serviceId = req.params.serviceId.toLowerCase();
@@ -131,7 +135,6 @@ module.exports = (app) => {
 	});
 
 	app.get("/api/v1/events/Fortnite/download/:accountId", (req, res) => {
-		console.log(req.body)
 		res.json({
 			"player": {
 				"gameId": "Fortnite",
@@ -321,8 +324,33 @@ module.exports = (app) => {
 
 
 	//datarouter
-	app.post('/datarouter/api/v1/public/*', (req, res) => {
-		res.status(204).end();
+	app.post('/datarouter/api/v1/public/*', (req, res) => { //this is called after hostfixes so requires another realaunch
+		/*try{
+			season = req.headers["user-agent"].split('-')[1]
+			if (season == "10.40") {
+				if(req.body["Events"][0]["GameState"] == "FortGameStateFrontEnd"){
+					NeoLog.Debug("Reverting Frontend back to defaults")
+					filePath = 'hotfixes/DefaultGameUserSettings.ini'
+					const contentToWrite = ""
+					fs.writeFile(filePath, contentToWrite, 'utf8', (err) => {
+						if (err) {console.error('Error writing file:', err);} 
+					});
+				}
+				if (req.body["Events"][1]["GameState"] == "Athena_GameState_C") {
+					if(req.body["Events"][2]["PlaylistName"] == "Playlist_Music_Highest"){ //only do it for the end event
+						NeoLog.Debug("Changing Frontend to the blackhole")
+						filePath = 'hotfixes/DefaultGameUserSettings.ini'
+						const contentToWrite = "[/Script/FortniteGame.FortGameUserSettings]\nUserPreferredFrontend=NoBernieNo";
+						fs.writeFile(filePath, contentToWrite, 'utf8', (err) => {
+						if (err) {console.error('Error writing file:', err);}
+						});			
+					}
+				}
+			}
+			else{res.status(204).end();}
+		}
+		catch{} was going to be used for changing the lobby on seasonx to get the blackhole but this will be handled by cranium*/
+		res.status(204).end()
 	});
 
 	//presence ?
