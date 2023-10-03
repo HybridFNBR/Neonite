@@ -80,6 +80,12 @@ module.exports = (app) => {
         res.json(response)
     })
 
+
+    //leaderboard for chapter 1+?
+    app.get('/fortnite/api/game/v2/leaderboards/cohort/*', (req, res) => {
+        res.json([])
+    })
+
     app.patch('/party/api/v1/*/parties/:partyId/members/:accountId/meta', (req, res) => {
         var client = global.xmppClients.find(x => x.accountId == req.params.accountId);
 

@@ -123,10 +123,6 @@ module.exports = (app) => {
 		res.json([])
 	});
 
-	app.get('/fortnite/api/game/v2/leaderboards/cohort/*', (req, res) => {
-        res.json([])
-    })
-
 	app.get("/fortnite/api/game/v2/world/info", (req, res) => res.json({}))
 
 

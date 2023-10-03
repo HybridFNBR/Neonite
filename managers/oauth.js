@@ -139,9 +139,6 @@ module.exports = (app) => {
 		res.status(204);
 	});
 
-	app.delete('/account/api/oauth/sessions/kill', (req, res) => {
-		res.status(204).end();
-	})
 	//account info
 	app.get('/account/api/public/account/:accountId', (req, res) => {
 		res.json({
