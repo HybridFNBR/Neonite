@@ -8,6 +8,7 @@ const { ErrDef, ApiException, com } = require('./../structs/errors');
 var builder = require('xmlbuilder');
 const Express = require('express');
 const NeoLog = require('../structs/NeoLog');
+const { json } = require('body-parser');
 
 
 Date.prototype.addHours = function (h) {
@@ -325,17 +326,22 @@ module.exports = (app) => {
 
 	//datarouter
 	app.post('/datarouter/api/v1/public/*', (req, res) => { //this is called after hostfixes so requires another realaunch
-		/*try{
+		try{
+			
+			const jsonKey = Object.keys(req.body)[0];
+			const jsonString = JSON.stringify(jsonKey, null, 2);
+			const jsonData = JSON.parse(jsonString);
+			const regex = /SessionStart/
+			if (regex.test(jsonData)) {
+				NeoLog.Debug("Reverting Frontend back to defaults")
+				filePath = 'hotfixes/DefaultGameUserSettings.ini'
+				const contentToWrite = ""
+				fs.writeFile(filePath, contentToWrite, 'utf8', (err) => {
+					if (err) {console.error('Error writing file:', err);} 
+				});
+			}
 			season = req.headers["user-agent"].split('-')[1]
 			if (season == "10.40") {
-				if(req.body["Events"][0]["GameState"] == "FortGameStateFrontEnd"){
-					NeoLog.Debug("Reverting Frontend back to defaults")
-					filePath = 'hotfixes/DefaultGameUserSettings.ini'
-					const contentToWrite = ""
-					fs.writeFile(filePath, contentToWrite, 'utf8', (err) => {
-						if (err) {console.error('Error writing file:', err);} 
-					});
-				}
 				if (req.body["Events"][1]["GameState"] == "Athena_GameState_C") {
 					if(req.body["Events"][2]["PlaylistName"] == "Playlist_Music_Highest"){ //only do it for the end event
 						NeoLog.Debug("Changing Frontend to the blackhole")
@@ -349,7 +355,7 @@ module.exports = (app) => {
 			}
 			else{res.status(204).end();}
 		}
-		catch{} was going to be used for changing the lobby on seasonx to get the blackhole but this will be handled by cranium*/
+		catch{}
 		res.status(204).end()
 	});
 

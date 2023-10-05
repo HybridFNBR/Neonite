@@ -52,8 +52,8 @@ module.exports = (app) => {
 						},
 						{
 							eventType: "NN1", // The End Countdown
-                            activeUntil: "9999-12-01T21:10:00.000Z",
-                            activeSince: "9999-11-21T07:00:00.000Z"
+                            activeUntil: "2023-10-05T00:41:00.000Z",
+                            activeSince: "2023-10-05T00:00:00.000Z"
 						},
 						{
                             eventType: "JCD01", // Travis Related
@@ -209,6 +209,12 @@ module.exports = (app) => {
                             eventType: "EventFlag.LTE_WinterFestTab", // Winterfest 2022
                             activeUntil: "9999-09-14T07:00:00.000Z",
                             activeSince: "2021-07-27T06:00:00.000Z"
+                        },
+                        {
+                            
+                            eventType: "survey_br_nick_001", // nightnight blackhole
+                            activeUntil: "2040-09-14T07:00:00.000Z",
+                            activeSince: "9999-09-14T07:00:00.000Z"
                         }
                     ],
                     state: {
@@ -358,10 +364,10 @@ module.exports = (app) => {
                         rmtPromotion: "melody"
                     }
                 }],
-                cacheExpire: "9999-12-31T23:59:59.999Z"
+                cacheExpire: "9999-09-14T07:00:00.000Z"
             }
         },
-        cacheIntervalMins: 1.0,
+        cacheIntervalMins: 0.1,
         currentTime: new Date().toISOString()
     })
 })
