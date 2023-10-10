@@ -49,7 +49,7 @@ module.exports = (app) => {
 
 
     //stats
-    app.get('/statsproxy/api/statsv2/account/:accountId', (req, res) => {
+    app.get('*/api/statsv2/account/:accountId', (req, res) => {
 		res.json({
 			"startTime": 0,
 			"endTime": 0,

@@ -20,7 +20,7 @@ const { v4: uuidv4 } = require("uuid");
 const { default: axios } = require('axios');
 const axiosPackage = require('axios/package.json')
 const versionCompare = require('compare-versions');
-
+const compression = require('compression');
 
 const { ApiException } = errors;
 
@@ -48,7 +48,7 @@ async function compareAndUpdateKeychain() {
 	  const response = await axios.get('https://spush-tracker-v3.up.railway.app/keychain');
 	  const data = response.data;
 	  // read the local JSON array from the file
-	  const localData = JSON.parse(fs.readFileSync('./keychain.json'));
+	  const localData = JSON.parse(fs.readFileSync('./responses/keychain.json'));
 	  // iterate over the entries in the URL array
 	  for (const entry of data) {
 		// check if the entry is not present in the local array
@@ -58,26 +58,26 @@ async function compareAndUpdateKeychain() {
 		}
 	  }
 	  // save the updated local array to the file
-	  fs.writeFileSync('./keychain.json', JSON.stringify(localData));
+	  fs.writeFileSync('./responses/keychain.json', JSON.stringify(localData));
 	  
 	} catch {
 
 		const response = await axios.get('https://api.nitestats.com/v1/epic/keychain');
 	  	const data = response.data;
-		const localData = JSON.parse(fs.readFileSync('./keychain.json'));
+		const localData = JSON.parse(fs.readFileSync('./responses/keychain.json'));
 		for (const entry of data) {
 			if (!localData.includes(entry)) {
 			localData.push(entry);
 			}
 		}
-		fs.writeFileSync('./keychain.json', JSON.stringify(localData));
+		fs.writeFileSync('./responses/keychain.json', JSON.stringify(localData));
 		;}
-		fs.readFile('./keychain.json', 'utf8', (err, data) => {
+		fs.readFile('./responses/keychain.json', 'utf8', (err, data) => {
 		if (err) throw err;
   
 		const updated = data.replace(/,/g, ',\n'); // i know there are better ways to do this
 		
-		fs.writeFile('./keychain.json', updated, 'utf8', (err) => {
+		fs.writeFile('./responses/keychain.json', updated, 'utf8', (err) => {
 	 	 if (err) throw err;
 		});
   });
@@ -107,10 +107,15 @@ async function compareAndUpdateKeychain() {
 	app.use(express.json());
 	app.use(cookieParser());
 	app.set("etag", false);
-
+	app.use(compression());
 
 	const fs = require('fs');
 	compareAndUpdateKeychain();
+
+	var filePath = 'hotfixes/DefaultGameUserSettings.ini'
+	fs.unlink(filePath, (err) => {
+		if (err){} 								
+	});
 
 	fs.readdirSync(`${__dirname}/managers`).forEach(route => {
 		require(`${__dirname}/managers/${route}`)(app, port);

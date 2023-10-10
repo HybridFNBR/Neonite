@@ -205,7 +205,7 @@ module.exports = (app) => {
 			case "PurchaseCatalogEntry": {
 				checkValidProfileID("common_core");
 
-				const shop = require("./../shop.json");
+				const shop = require("../responses/shop.json");
 
 				let catalogEntryToPurchase = null;
 

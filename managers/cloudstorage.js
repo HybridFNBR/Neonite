@@ -32,7 +32,7 @@ module.exports = (app) => {
 				"contentType": "text/plain",
 				"uploaded": fs.statSync(filePath).mtime,
 				"storageType": "S3",
-				"doNotCache": true
+				"doNotCache": false
 			});
 		}
 

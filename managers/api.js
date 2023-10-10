@@ -97,6 +97,10 @@ module.exports = (app) => {
 		})
 	})
 
+	app.all('/mesh/Fortnite/*', (req, res) => { 
+		res.status(204).end()
+	})
+
 	app.get("/launcher/api/public/distributionpoints/", (req, res) => {
 			res.json({
 				"distributions": [
@@ -310,7 +314,7 @@ module.exports = (app) => {
 
 	//itemshop
 	app.get('/fortnite/api/storefront/v2/catalog',(req, res) => {
-		res.json(require("../shop.json"));
+		res.json(require("../responses/shop.json"));
 	});
 
 	//grant access
@@ -325,9 +329,9 @@ module.exports = (app) => {
 
 
 	//datarouter
-	app.post('/datarouter/api/v1/public/*', (req, res) => { //this is called after hostfixes so requires another realaunch
-		try{
-			
+	app.post('/datarouter/api/v1/public/*', (req, res) => {
+		res.status(204)
+		/*try{
 			const jsonKey = Object.keys(req.body)[0];
 			const jsonString = JSON.stringify(jsonKey, null, 2);
 			const jsonData = JSON.parse(jsonString);
@@ -353,10 +357,9 @@ module.exports = (app) => {
 					}
 				}
 			}
-			else{res.status(204).end();}
+			else{res.status(204)}
 		}
-		catch{}
-		res.status(204).end()
+		catch{}*/
 	});
 
 	//presence ?
@@ -407,6 +410,6 @@ module.exports = (app) => {
 
 	//keychain
 	app.get('/fortnite/api/storefront/v2/keychain', (req, res) => {
-		res.json(require("../keychain.json"));
+		res.json(require("../responses/keychain.json"));
 	})
 };

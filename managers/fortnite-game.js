@@ -12,21 +12,18 @@ module.exports = (app, port) => {
 
 
     function getSeasonInfo(req) {
-        
-        const userAgent = req.headers["user-agent"];
-        const season = userAgent.split('-')[1];
-        const seasonglobal = season.split('.')[0];
+        const userAgent = req.headers['user-agent'];
+        const season = userAgent?.split('-')[1];
+        const seasonglobal = season?.split('.')[0];
         return { season, seasonglobal };
-        
-    }
-    
+      }
+
     app.get(["/content/api/pages/fortnite-game", "/content/api/pages/"], async (req, res) => {
-        const content = (await axios.get('https://fortnitecontent-website-prod07.ol.epicgames.com/content/api/pages/fortnite-game').catch(() => {})).data;
+        const content = (await axios.get('https://fortnitecontent-website-prod07.ol.epicgames.com/content/api/pages/fortnite-game').catch(() => {}))?.data;
         try{
         const { season, seasonglobal } = getSeasonInfo(req);
-        const fortnitegame = JSON.parse(JSON.stringify(require("../fortnitegame.json"))); //maybe just doing "require" causes problems
+        const fortnitegame = JSON.parse(JSON.stringify(require("../responses/fortnitegame.json"))); //maybe just doing "require" causes problems
         const backgrounds = fortnitegame.dynamicbackgrounds.backgrounds.backgrounds;
-        fortnitegame.shopSections = content.shopSections;
         switch (seasonglobal) {
             case "10":
                 backgrounds[0].stage = "seasonx";
@@ -109,47 +106,8 @@ module.exports = (app, port) => {
 
        
     
-    app.post("/api/v1/fortnite-br/surfaces/motd/target", (req, res) => {
-        res.json({
-            	"contentType": "collection",
-		"contentId": "motd-default-collection",
-		"tcId": "cca20b46-eb7d-4852-94b9-8479ddb53b2d",
-		"contentItems": [
-			{
-				"contentType": "content-item",
-				"contentId": "753b2fed-a492-4e11-a34f-9741cc739d47",
-				"tcId": "9b89584d-0711-4269-980d-09d50d04f857",
-				"contentFields": {
-					"body": "Made by Kemo (@xkem0x) and maintained by Beat (@TheBeatYT_evil). If you have any bugs, you can join our Discord by clicking the button below.",
-					"entryType": "Website",
-					"image": [
-						{
-							"width": 1920,
-							"height": 1080,
-							"url": `http://127.0.0.1:${port}/NeoniteWallpaper1920x1080.png`
-						},
-						{
-							"width": 960,
-							"height": 540,
-							"url": `http://127.0.0.1:${port}/NeoniteWallpaper1920x1080.png`
-						}
-					],
-					"tabTitleOverride": "NeoniteV2",
-					"tileImage": [
-						{
-							"width": 1024,
-							"height": 512,
-							"url": `http://127.0.0.1:${port}/NeoniteWallpaper1920x1080.png`
-						}
-					],
-					"title": "NeoniteV2",
-					"websiteButtonText": "Join our discord",
-            				"websiteURL": "https://discord.gg/DJ6VUmD",
-            				"websiteSKickIntroDo": false
-				},
-				"contentSchemaName": "MotdWebsiteNews"
-			}
-		]
-        })
-    })
+    /*app.post("/api/v1/fortnite-br/surfaces/motd/target", (req, res) => {
+        const motdData = require("../responses/news.json")
+        res.json(motdData)
+    })*/
 }
