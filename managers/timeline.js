@@ -212,15 +212,10 @@ module.exports = (app) => {
                         },
                         {
                             
-                            eventType: "survey_br_nick_001", // nightnight blackhole
-                            activeUntil: "2040-09-14T07:00:00.000Z",
+                            eventType: "survey_br_nick_001", // nightnight blackhole lobby mini event for 10.40
+                            activeUntil: "9999-09-14T07:00:00.000Z",
                             activeSince: "9999-09-14T07:00:00.000Z"
                         },
-                        {
-                            eventType: "RC01", // Radish event manager "CalendarEventName"
-                            activeUntil: "2040-09-14T07:00:00.000Z",
-                            activeSince: "2021-09-14T07:00:00.000Z"
-                        }
                     ],
                     state: {
                         activeStorefronts: [],

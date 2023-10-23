@@ -37,6 +37,14 @@ Array.prototype.shuffle = function () {
 
 
 module.exports = (app) => {
+
+	function getSeasonInfo(req) {
+		const userAgent = req.headers["user-agent"];
+		const season = userAgent.split('-')[1];
+		const seasonglobal = season.split('.')[0];
+		return { season, seasonglobal };
+	}
+
 	//lightswitch
 	app.get('/lightswitch/api/service/bulk/status', (req, res) => {
 		//adds serviceId based on what the game feeds it, if undefined defaults to fortnite
@@ -47,7 +55,10 @@ module.exports = (app) => {
 				"status": "UP",
 				"message": "Hi",
 				"maintenanceUri": "https://dsc.gg/neonite",
-				"allowedActions": [],
+				"allowedActions": [
+					"PLAY",
+					"DOWNLOAD"
+				],
 				"banned": false,
 				"launcherInfoDTO": {
 					"appName": "Fortnite",
@@ -136,8 +147,62 @@ module.exports = (app) => {
 
 
 	app.all("/api/v1/events/Fortnite/:event/history/:accountId", (req, res) => { 
-		res.status(404)
+		res.json([])
 	});
+
+	app.get('/api/v1/leaderboards/Fortnite/:eventId/:eventWindowId/*', (req, res) => {
+		res.json({
+			"gameId": "Fortnite",
+			"eventId": req.params.eventId,
+			"eventWindowId": req.params.eventWindowId,
+			"page": 0,
+			"totalPages": 1,
+			"updatedTime": "2023-10-15T15:18:46.668Z",
+			"entries": [
+			{
+				"gameId": "Fortnite",
+				"eventId": "epicgames_S26_DuosCashCup_EU",
+				"eventWindowId": "S26_DuosCashCup_EU_Event1_Round1",
+				"teamAccountIds": [
+					"Place Holder"
+				],
+				"liveSessionId": null,
+				"pointsEarned": 999,
+				"score": 83566254310678,
+				"rank": 1,
+				"percentile": 0,
+				"pointBreakdown": {
+					"TEAM_ELIMS_STAT_INDEX:1": {
+						"timesAchieved": 999,
+						"pointsEarned": 4
+					},
+					"VICTORY_ROYALE_STAT:1":{
+						"timesAchieved": 999,
+						"pointsEarned": 4
+					}
+				},
+				"sessionHistory": [
+				{
+					"sessionId": "5b8dd79a7e664b15b059d5898d8fc41f",
+					"endTime": "2023-09-07T20:00:00.000Z",
+					"trackedStats": {
+						"TIME_ALIVE_STAT": 1302,
+						"PLACEMENT_TIEBREAKER_STAT": 74,
+						"MMO_LootIsland": 1,
+						"VICTORY_ROYALE_STAT": 0,
+						"MMO_RadioTower": 0,
+						"TEAM_ELIMS_STAT_INDEX": 1,
+					}
+				}
+				],
+				"unscoredSessions": [],
+				"tokens": [],
+				"teamId": ""
+				}
+			],
+			"liveSessions": {}
+		})
+	})
 
 	app.get("/api/v1/events/Fortnite/download/:accountId", (req, res) => {
 		res.json({
@@ -155,13 +220,13 @@ module.exports = (app) => {
 				"gameId": "Fortnite",
 				"eventId": "epicgames_S26_DuosCashCup_EU",
 				"regions": [
-				"EU"
+					"EU"
 				],
 				"regionMappings": {
-				"EU": "EUCOMP"
+					"EU": "EUCOMP"
 				},
 				"platforms": [
-				"Windows"
+					"Windows"
 				],
 				"platformMappings": {},
 				"displayDataId": "s26_brcash_duos",
@@ -170,19 +235,19 @@ module.exports = (app) => {
 				"appId": null,
 				"environment": null,
 				"link": {
-				"type": "br:tournament",
-				"code": "tournament_epicgames_s26_duoscashcup_eu",
-				"version": 1
+					"type": "br:tournament",
+					"code": "tournament_epicgames_s26_duoscashcup_eu",
+					"version": 1
 				},
 				"metadata": {
-				"TeamLockType": "Window",
-				"minimumAccountLevel": 15,
-				"TrackedStats": [
-					"MMO_LootIsland",
-					"MMO_RadioTower"
-				],
-				"RegionLockType": "Event",
-				"AccountLockType": "Window"
+					"TeamLockType": "Window",
+					"minimumAccountLevel": 15,
+					"TrackedStats": [
+						"MMO_LootIsland",
+						"MMO_RadioTower"
+					],
+					"RegionLockType": "Event",
+					"AccountLockType": "Window"
 				},
 				"eventWindows": [
 				{
@@ -207,26 +272,26 @@ module.exports = (app) => {
 					"requireAllTokens": [],
 					"requireAnyTokens": [],
 					"requireNoneTokensCaller": [
-					"Season26DuosCashCup_OCE",
-					"EpicAccountPrizingRestriction",
-					"Season26DuosCashCup_NAC",
-					"Season26DuosCashCup_ME",
-					"Season26DuosCashCup_ASIA",
-					"Season26DuosCashCup_BR"
+						"Season26DuosCashCup_OCE",
+						"EpicAccountPrizingRestriction",
+						"Season26DuosCashCup_NAC",
+						"Season26DuosCashCup_ME",
+						"Season26DuosCashCup_ASIA",
+						"Season26DuosCashCup_BR"
 					],
 					"requireAllTokensCaller": [],
 					"requireAnyTokensCaller": [],
 					"additionalRequirements": [
-					"mfa",
-					"eula:s26_brcash_rules",
-					"currentRanking:ranked-br:6"
+						"mfa",
+						"eula:s26_brcash_rules",
+						"currentRanking:ranked-br:6"
 					],
 					"teammateEligibility": "all",
 					"regionMappings": null,
 					"metadata": {
-					"ServerReplays": true,
-					"RoundType": "Qualifiers",
-					"liveSpectateAccessToken": "WeeklyTournamentSpectator"
+						"ServerReplays": true,
+						"RoundType": "Qualifiers",
+						"liveSpectateAccessToken": "WeeklyTournamentSpectator"
 					}
 				}
 				],
@@ -247,30 +312,30 @@ module.exports = (app) => {
 					"tiebreakerFormula": {
 					"basePointsBits": 11,
 					"components": [
-						{
+					{
 						"trackedStat": "VICTORY_ROYALE_STAT",
 						"bits": 4,
 						"multiplier": null,
 						"aggregation": "sum"
-						},
-						{
+					},
+					{
 						"trackedStat": "TEAM_ELIMS_STAT_INDEX",
 						"bits": 12,
 						"multiplier": 100,
 						"aggregation": "avg"
-						},
-						{
+					},
+					{
 						"trackedStat": "PLACEMENT_TIEBREAKER_STAT",
 						"bits": 14,
 						"multiplier": 100,
 						"aggregation": "avg"
-						},
-						{
+					},
+					{
 						"trackedStat": "TIME_ALIVE_STAT",
 						"bits": 11,
 						"multiplier": null,
 						"aggregation": "avg"
-						}
+					}
 					]
 					},
 					"scoringRuleSetId": "S26DuosCashCupRound1ScoringRules",
@@ -309,12 +374,17 @@ module.exports = (app) => {
 	});
 
 	app.post('/api/v1/assets/Fortnite/:version/:netcl', (req, res) => {
-		res.json(require("../discovery/FrontEndAssets.json"))//you can add more to the file but at the moment its only being used for discovery.
+		res.json(require("../discovery/FrontEndAssets.json"))
 	});
 
 	//itemshop
 	app.get('/fortnite/api/storefront/v2/catalog',(req, res) => {
-		res.json(require("../responses/shop.json"));
+		const {season} = getSeasonInfo(req);
+		if(season >= 25.30)
+			res.json(require("../responses/shopv2.json"));
+		else{
+			res.json(require("../responses/shopv1.json"))
+		}
 	});
 
 	//grant access

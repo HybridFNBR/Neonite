@@ -32,36 +32,20 @@ global.LobbyBotPort = 80;
 
 axios.defaults.headers["user-agent"] = `NeoniteServer/${version} axios/${axiosPackage.version}`;
 
-axios.get('https://raw.githubusercontent.com/timjans01/NeoniteV2/main/package.json', { validateStatus: undefined }).then((response) => {
-	if (response.status == 200) {
-		var compare = versionCompare(response.data.version, version);
-
-		if (compare > 0) {
-			console.log('\n')
-			NeoLog.warn(`NEW UPDATE IS AVAILABLE, PLEASE CONSIDER UPDATING TO FIX POTENTIAL BUGS AND SECURITY ISSUES.\nVERSION ${response.data.version} IS NOW AVAILABLE\nCURRENT VERSION IS ${version}`, false)
-		}
-	}
-});
 
 async function compareAndUpdateKeychain() {
 	try {
 	  const response = await axios.get('https://spush-tracker-v3.up.railway.app/keychain');
 	  const data = response.data;
-	  // read the local JSON array from the file
 	  const localData = JSON.parse(fs.readFileSync('./responses/keychain.json'));
-	  // iterate over the entries in the URL array
 	  for (const entry of data) {
-		// check if the entry is not present in the local array
 		if (!localData.includes(entry)) {
-		  // add the entry to the local array
 		  localData.push(entry);
 		}
 	  }
-	  // save the updated local array to the file
 	  fs.writeFileSync('./responses/keychain.json', JSON.stringify(localData));
 	  
 	} catch {
-
 		const response = await axios.get('https://api.nitestats.com/v1/epic/keychain');
 	  	const data = response.data;
 		const localData = JSON.parse(fs.readFileSync('./responses/keychain.json'));
@@ -82,7 +66,6 @@ async function compareAndUpdateKeychain() {
 		});
   });
   NeoLog.Debug(`Updated keychain.json`)
-
   }
 
 (function () {
@@ -111,11 +94,6 @@ async function compareAndUpdateKeychain() {
 
 	const fs = require('fs');
 	compareAndUpdateKeychain();
-
-	var filePath = 'hotfixes/DefaultGameUserSettings.ini'
-	fs.unlink(filePath, (err) => {
-		if (err){} 								
-	});
 
 	fs.readdirSync(`${__dirname}/managers`).forEach(route => {
 		require(`${__dirname}/managers/${route}`)(app, port);

@@ -178,7 +178,7 @@ wss.on("connection", ws => {
                         /*
 
                         <iq xmlns="jabber:client" from="neonite.dev"
-                            to="BeatYT@neonite.dev/V2:Fortnite:WIN::B1D5CD0B469E2ADB22F639BFB8620D0D" 
+                            to="BeatYT@neonite.dev/V2:Fortnite:WIN::B1D5CD0B469E2ADB22F639BFB8620D0D"
                             type="result" id="_xmpp_bind1">
                             <bind xmlns="urn:ietf:params:xml:ns:xmpp-bind">
                                 <jid>BeatYT@neonite.dev/V2:Fortnite:WIN::B1D5CD0B469E2ADB22F639BFB8620D0D</jid>
@@ -362,7 +362,7 @@ wss.on("connection", ws => {
                         axios.get(`https://fortnite-api.com/v2/cosmetics/br/search/all?name=${body}&matchMethod=contains`).then(response => {
                             /** @type {Array} */
                             const body = response.data.data;
-                            
+
                             if (body.length == 1) {
 
                                 // console.log(body[0])
@@ -442,7 +442,7 @@ wss.on("connection", ws => {
                         break;
                     default:
                         break;
-                    
+
                 }
 
             }
