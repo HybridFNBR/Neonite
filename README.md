@@ -27,7 +27,7 @@ _In acquiescence to Epic Games Inc. - Please note that access to all cosmetics f
  * How do I access Neonite V2?
    * You can access Neonite V2's dashboard at http://localhost:5595/.
  * Can I go in-game?
-   * No, however, Neonite++ is available to use for in-game support, Check it out [here](https://github.com/NeoniteDev/NeonitePP).
+   * Yes on most past versions of fortnite, however with the latest version fortnite it can vary, Check it out [here](https://discord.gg/neo-mods-897532507048796210).
  * Will I get banned?
    * No, you won't get banned because Neonite V2 doesn't connect to any Epic Games related services.
  * How do I play with my friends?
@@ -36,7 +36,7 @@ _In acquiescence to Epic Games Inc. - Please note that access to all cosmetics f
    * We removed cosmetics because Epic Games made it clear it does not like services that offer cosmetics for free. If you wish for skins you're welcome to add them yourself.
 
 <!-- CONTACT -->
-## Contact
+## Support
 Discord Server: [Neo Mods](https://discord.gg/neo-mods-897532507048796210) <- *you can get the launcher + backend alternatively from here since there is a possibility this repo wont be updated*
 
 
