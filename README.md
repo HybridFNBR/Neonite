@@ -9,17 +9,25 @@
 
 <!-- PROJECT LOGO -->
 
+<!-- ABOUT NEONITEV2 -->
+## About Neonite V2
+
+Neonite V2 is a popular private server written in [Node.js](https://nodejs.org/en/download/current/), aimed to provide a fun yet easy-to-use program for people wanting to customize their Fortnite experience.
+_This project was made for fun and it doesn't aim to harm the original game by any means, If you are an Epic Games employee and have any problems with this project, please do not hesitate to [contact us](#contact) through your official business email._ <br>
+_In acquiescence to Epic Games Inc. - Please note that access to all cosmetics for Neonite V2 has been stripped. If you want to use skins, please purchase them on Fortnite._
+
 <!-- INSTALL -->
 ## Installation
 
 - Install the latest version of **[Node.js](https://nodejs.org/en/download/current/)**. 
-- Extract the source code.
 - Open `run.bat`, it should say `[Neonite]: v2.* is listening on port 5595!` (Do not close this while running Neonite V2!)	
-- You can get the launcher from [Hear]
-
 <!-- FAQs -->
 ## FAQs
 
+ * How do I access Neonite V2?
+   * You can access Neonite V2's dashboard at http://localhost:5595/.
+ * Can I go in-game?
+   * No, however, Neonite++ is available to use for in-game support, Check it out [here](https://github.com/NeoniteDev/NeonitePP).
  * Will I get banned?
    * No, you won't get banned because Neonite V2 doesn't connect to any Epic Games related services.
  * How do I play with my friends?
@@ -28,19 +36,22 @@
    * We removed cosmetics because Epic Games made it clear it does not like services that offer cosmetics for free. If you wish for skins you're welcome to add them yourself.
 
 <!-- CONTACT -->
-## Discord Server
-[Neo Mods]((https://discord.gg/neo-mods-897532507048796210))
+## Contact
+Discord Server: [Neo Mods](https://discord.gg/neo-mods-897532507048796210) <- *you can get the launcher + backend alternatively from here since there is a possibility this repo wont be updated*
 
 
 <!-- CREDITS -->
 ## Credits
+
+### Used APIs
+<img src="https://api.nitestats.com/v1/static/ns-logo.png" width="15" title="NiteStats-API"> [NiteStats API](https://nitestats.com/) developed by [VastBlast](https://github.com/VastBlast)
 
 ### Contributors
 
 | Contributor | Helped with |
 | ----------- | ----------- |
 | [Kemo](https://github.com/kem0o)  | Original creator and maintainer |
-| [Hybrid]([https://github.com/Beat-YT](https://github.com/HybridFNBR))   | Current maintainer |
+| [Hybrid](https://github.com/HybridFNBR)   | Current maintainer |
 | [Beat-YT](https://github.com/Beat-YT)   | maintainer |
 | [Amrsatrio](https://github.com/Amrsatrio)  | Write-up of profile.js and API-reversing |
 | [Kyiro](https://github.com/Kyiro)   | Pull requests |
