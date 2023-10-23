@@ -40,7 +40,7 @@
 | Contributor | Helped with |
 | ----------- | ----------- |
 | [Kemo](https://github.com/kem0o)  | Original creator and maintainer |
-| [Hybrid](https://github.com/Beat-YT)   | maintainer |
+| [Hybrid]([https://github.com/Beat-YT](https://github.com/HybridFNBR))   | Current maintainer |
 | [Beat-YT](https://github.com/Beat-YT)   | maintainer |
 | [Amrsatrio](https://github.com/Amrsatrio)  | Write-up of profile.js and API-reversing |
 | [Kyiro](https://github.com/Kyiro)   | Pull requests |
