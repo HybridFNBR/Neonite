@@ -98,7 +98,6 @@ module.exports = (app, port) => {
                 backgrounds[0].backgroundimage = content.dynamicbackgrounds.backgrounds.backgrounds[0].backgroundimage;
                 backgrounds[0].stage = content.dynamicbackgrounds.backgrounds.backgrounds[0].stage;
         }
-        fortnitegame.mpItemShop.shopData = MPitemshop;
         return res.json(fortnitegame);
     }
     catch{}
