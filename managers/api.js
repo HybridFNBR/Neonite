@@ -108,9 +108,7 @@ module.exports = (app) => {
 		})
 	})
 
-	app.all('/mesh/Fortnite/*', (req, res) => { 
-		res.status(204).end()
-	})
+
 
 	app.get("/launcher/api/public/distributionpoints/", (req, res) => {
 			res.json({
@@ -380,7 +378,7 @@ module.exports = (app) => {
 	//itemshop
 	app.get('/fortnite/api/storefront/v2/catalog',(req, res) => {
 		const {season} = getSeasonInfo(req);
-		if(season >= 25.30)
+		if(season >= 26.30)
 			res.json(require("../responses/shopv2.json"));
 		else{
 			res.json(require("../responses/shopv1.json"))
@@ -480,6 +478,6 @@ module.exports = (app) => {
 
 	//keychain
 	app.get('/fortnite/api/storefront/v2/keychain', (req, res) => {
-		res.json(require("../responses/keychain.json"));
+		res.json(require("../responses/keychain.json")).status(200).end();
 	})
 };

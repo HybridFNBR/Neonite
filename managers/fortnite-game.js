@@ -19,11 +19,12 @@ module.exports = (app, port) => {
       }
 
     app.get(["/content/api/pages/fortnite-game", "/content/api/pages/"], async (req, res) => {
-        const content = (await axios.get('https://fortnitecontent-website-prod07.ol.epicgames.com/content/api/pages/fortnite-game').catch(() => {}))?.data;
+        const content = (await axios.get('https://fortnitecontent-website-prod07.ol.epicgames.com/content/api/pages/fortnite-game').catch(() => {})).data;
         try{
         const { season, seasonglobal } = getSeasonInfo(req);
         const fortnitegame = JSON.parse(JSON.stringify(require("../responses/fortnitegame.json"))); //maybe just doing "require" causes problems
         const backgrounds = fortnitegame.dynamicbackgrounds.backgrounds.backgrounds;
+        const MPitemshop = content.mpItemShop.shopData;
         switch (seasonglobal) {
             case "10":
                 backgrounds[0].stage = "seasonx";
@@ -97,6 +98,7 @@ module.exports = (app, port) => {
                 backgrounds[0].backgroundimage = content.dynamicbackgrounds.backgrounds.backgrounds[0].backgroundimage;
                 backgrounds[0].stage = content.dynamicbackgrounds.backgrounds.backgrounds[0].stage;
         }
+        fortnitegame.mpItemShop.shopData = MPitemshop;
         return res.json(fortnitegame);
     }
     catch{}

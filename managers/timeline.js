@@ -138,13 +138,17 @@ module.exports = (app) => {
                         {
                             eventType: "KEL02", // Sky Fire Event-related (Countdown)
                             activeUntil: "9999-09-14T07:00:00.000Z",
-                            activeSince: "2021-07-27T06:00:00.000Z"
+                            activeSince: "2023-10-10T06:00:00.000Z"
                         },
 						{
 							eventType: "LCCS02", // S18 Corruption
-							activeUntil: "2021-11-18T07:00:00.000Z",
-							activeSince: "2015-10-10T06:00:00.000Z"
+							activeUntil: "2023-10-18T07:00:00.000Z",
+							activeSince: "2022-10-10T06:00:00.000Z"
 						},
+                        {   eventType: "LCCS01", // S18 Corruption?
+                            activeUntil: "2023-10-18T07:00:00.000Z",
+                            activeSince: "2022-10-10T06:00:00.000Z"
+                        },
                         {
                             eventType: "GGL01", // Chapter 2 Finale Event-related (Countdown)
                             activeUntil: "9999-09-14T07:00:00.000Z",
@@ -212,9 +216,64 @@ module.exports = (app) => {
                         },
                         {
                             
-                            eventType: "survey_br_nick_001", // nightnight blackhole lobby mini event for 10.40
+                            eventType: "survey_br_nick_001", // nightnight blackhole lobby mini event
                             activeUntil: "9999-09-14T07:00:00.000Z",
                             activeSince: "9999-09-14T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "SM1",//scorch marks 13.40
+                            activeUntil: "9999-09-14T07:00:00.000Z",
+                            activeSince: "2015-09-14T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "TC1",//thorhammer 'poi' 13.40
+                            activeUntil: "9999-09-14T07:00:00.000Z",
+                            activeSince: "2015-09-14T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "TR1",//unhides the rift in the sky in season13(13.40)
+                            activeUntil: "9999-09-14T07:00:00.000Z",
+                            activeSince: "2015-09-14T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "WL0", //water level 0(season 13)
+                            activeUntil: "9999-09-14T07:00:00.000Z",
+                            activeSince: "2015-09-14T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "WL1", //water level 1(season 13)
+                            activeUntil: "9999-09-14T07:00:00.000Z",
+                            activeSince: "2015-09-14T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "WL2", //water level 2(season 13)
+                            activeUntil: "9999-09-14T07:00:00.000Z",
+                            activeSince: "2015-09-14T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "WL3", //water level 3(season 13)
+                            activeUntil: "9999-09-14T07:00:00.000Z",
+                            activeSince: "2015-09-14T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "WL4", //water level 4(season 13)
+                            activeUntil: "9999-09-14T07:00:00.000Z",
+                            activeSince: "2015-09-14T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "WL5", //water level 5(season 13)
+                            activeUntil: "9999-09-14T07:00:00.000Z",
+                            activeSince: "2015-09-14T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "WL6", //water level 6(season 13)
+                            activeUntil: "9999-09-14T07:00:00.000Z",
+                            activeSince: "2015-09-14T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "WL7", //water level 7(season 13)
+                            activeUntil: "9999-09-14T07:00:00.000Z",
+                            activeSince: "2015-09-14T07:00:00.000Z"
                         },
                     ],
                     state: {
