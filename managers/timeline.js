@@ -526,9 +526,274 @@ module.exports = (app) => {
                             activeSince: "9999-09-09T07:00:00.000Z"
                         },
                         {
+                            eventType: "FMVE", //Mothership Move To: Farm(Ch2S7 related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "9999-09-09T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "ABDFRM", //Farm: Abduction(Ch2S7 related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "9999-09-09T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "FDS", //Farm Default State(Ch2S7 related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "9999-09-09T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "FWRMDUP", //Farm Warm Up Event: Beam Turning On(Ch2S7 related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "9999-09-09T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "FDOPN", //Farm Warm Up Event: Doors Opening(Ch2S7 related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "9999-09-09T07:00:00.000Z"
+                        },
+                        {
                             eventType: "BPAQ", //Bomb Parts Assembling(Ch2S7 related)
                             activeUntil: "9999-09-09T07:00:00.000Z",
                             activeSince: "2020-09-09T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "CCSP01", //Cube Corruption Spread Paused(Ch2S8 related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "9999-09-09T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "LCCS01", //Lobby Corruption Spread 1(Ch2S8 related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "9999-09-09T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "LCCS02", //Lobby Corruption Spread 2(Ch2S8 related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "9999-09-09T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "LCCSP01", //Lobby Corruption Spread Paused(Ch2S8 related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "9999-09-09T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "CTCS01", //Cube Town Corruption Spread(Ch2S8 related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "9999-09-09T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "GCFP01", //Golden Cube Final Placement(Ch2S8 related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "9999-09-09T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "GCMFP01", //Golden Cube Move Final Placement(Ch2S8 related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "9999-09-09T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "CSAWS01", //Crash Site 1 AwakenedState(Ch2S8 related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "9999-09-09T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "CSAWS02", //Crash Site 2 AwakenedState(Ch2S8 related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "9999-09-09T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "CSAWS03", //Crash Site 3 AwakenedState(Ch2S8 related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "9999-09-09T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "CSAWS04", //Crash Site 4 AwakenedState(Ch2S8 related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "9999-09-09T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "CSAWS05", //Crash Site 5 AwakenedState(Ch2S8 related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "9999-09-09T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "GCA01", //Golden Cube Awaken 1(Ch2S8 related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "9999-09-09T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "GCA02", //Golden Cube Awaken 2(Ch2S8 related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "9999-09-09T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "GCA03", //Golden Cube Awaken 3(Ch2S8 related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "9999-09-09T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "GCA04", //Golden Cube Awaken 4(Ch2S8 related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "9999-09-09T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "GCA05", //Golden Cube Awaken 5(Ch2S8 related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "9999-09-09T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "CT01", //Cube Town Phase 1(Ch2S8 related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "9999-09-09T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "CT02", //Cube Town Phase 2(Ch2S8 related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "9999-09-09T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "CT03", //Cube Town Phase 3(Ch2S8 related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "9999-09-09T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "2021_SM01", //Snow Stage 01(Ch3S1 related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "2020-09-09T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "2021_SM02", //Snow Stage 02(Ch3S1 related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "9999-09-09T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "2021_SM03", //Snow Stage 03(Ch3S1 related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "9999-09-09T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "2021_SM04", //Snow Stage 04(Ch3S1 related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "9999-09-09T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "2021_SM05", //Snow Stage 05(Ch3S1 related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "9999-09-09T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "2021_SM06", //Snow Stage 06(Ch3S1 related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "9999-09-09T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "2021_SM07", //Snow Stage 07(Ch3S1 related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "9999-09-09T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "2021_SM08", //Snow Stage 08(Ch3S1 related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "9999-09-09T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "2021_SM09", //Snow Stage 09(Ch3S1 related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "9999-09-09T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "AS01", //Armadillo Start(Ch3S2 related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "2020-09-09T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "AL02", //Armadillo Lobby Leadup(Ch3S2 related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "2020-09-09T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "AL01", //Armadillo In-Game Leadup(Ch3S2 related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "2020-09-09T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "ARLU01", //ArmadilloRoll Lead Up(Ch3S2 related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "2020-09-09T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "FNBD05", //Fortnite Birthday Map Changes(Ch3S4 related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "2020-09-09T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "S22_Vortex_Active", //S22 Nanomist Vortex(Ch3S4 related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "2020-09-09T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "S22_Vortex_Active", //S22 Nanomist Vortex(Ch3S4 related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "2020-09-09T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "RR01", //Radish Root(Ch3S4 related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "2020-09-09T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "DataLayerTest0", //DataLayerTest0(Ch4S1 related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "2020-09-09T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "DataLayerTest1", //DataLayerTest1(Ch4S1 related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "9999-09-09T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "DataLayerTest2", //DataLayerTest2(Ch4S1 related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "9999-09-09T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "NYE_Loader", //New Years Eve Loader(Ch4S1 related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "2020-09-09T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "NYE", //New Years Eve Event 2022(Ch4S1 related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "2020-09-09T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "RGCONSTUCTION02", //Rift Gate Construction Stage 2(Ch4S1 related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "9999-09-09T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "RG01", //RiftGate_Stage_01(Ch4S1 related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "9999-09-09T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "RG02", //RiftGate_Stage_02(Ch4S1 related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "9999-09-09T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "ST01", //ST_Stage_01(Ch4S1 related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "9999-09-09T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "ST02", //ST_Stage_02(Ch4S1 related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "9999-09-09T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "MLQ24", 
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "9999-09-09T07:00:00.000Z"
                         },
                     ],
                     state: {
