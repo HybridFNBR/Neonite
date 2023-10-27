@@ -795,6 +795,16 @@ module.exports = (app) => {
                             activeUntil: "9999-09-09T07:00:00.000Z",
                             activeSince: "9999-09-09T07:00:00.000Z"
                         },
+                        {
+                            eventType: "DL01", // CH1/Ch4 end event leadup in-game(27.11)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "9999-09-09T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "DL02", // CH1/Ch4 end event leadup lobby(27.11)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "9999-09-09T07:00:00.000Z"
+                        },
                     ],
                     state: {
                         activeStorefronts: [],
