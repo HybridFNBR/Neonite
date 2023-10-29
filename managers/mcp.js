@@ -18,14 +18,13 @@ const NeoLog = require("../structs/NeoLog");
 module.exports = (app) => {
 
 
-	app.post('/fortnite/api/game/v2/profile/hybrid/client/QueryProfile?profileId=profile0*', (req, res) => {
+	app.post('/fortnite/api/game/v2/profile/:accountId/client/QueryProfile?profileId=profile0*', (req, res) => {
 		res.statusCode(404).end() //we dont support stw
 	});
 
 	app.post('/fortnite/api/game/v2/profile/:accountId/client/:command',(req, res, next) => {
 		res.setHeader("Content-Type", "application/json");
 		var accountId = req.params.accountId;
-
 		var season = 1;
 		try {
 			season = parseInt(req.headers["user-agent"].split('-')[1].split('.')[0]);

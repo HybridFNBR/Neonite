@@ -40,13 +40,13 @@ module.exports = (app) => {
 										"lastVisited": null,
 										"linkCode": "set_br_playlists", //there is habanero but why load into a comp playlist anyway.
 										"isFavorite": false,
-										"globalCCU": 0
+										"globalCCU": 1
                             		},
 									{
 										"lastVisited": null,
 										"linkCode": "playlist_papaya",
 										"isFavorite": false,
-										"globalCCU": 0
+										"globalCCU": 1
 									}
                        			],
                         		"hasMore": false

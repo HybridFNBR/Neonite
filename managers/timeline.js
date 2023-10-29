@@ -798,12 +798,27 @@ module.exports = (app) => {
                         {
                             eventType: "DL01", // CH1/Ch4 end event leadup in-game(27.11)
                             activeUntil: "9999-09-09T07:00:00.000Z",
-                            activeSince: "9999-09-09T07:00:00.000Z"
+                            activeSince: "2020-09-09T07:00:00.000Z"
                         },
                         {
                             eventType: "DL02", // CH1/Ch4 end event leadup lobby(27.11)
                             activeUntil: "9999-09-09T07:00:00.000Z",
-                            activeSince: "9999-09-09T07:00:00.000Z"
+                            activeSince: "2020-09-09T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "F0", // Fetivus Event Leadup(Ch1S7 Related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "2020-10-29T00:00:00.000Z"
+                        },
+                        {
+                            eventType: "F1", // Fetivus Event(Ch1S7 Related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "2020-10-29T00:00:00.000Z"
+                        },
+                        {
+                            eventType: "EventFlag.LTE_Festivus", // Fetivus Event(Ch1S7 Related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "2020-10-29T00:00:00.000Z"
                         },
                     ],
                     state: {
@@ -953,10 +968,10 @@ module.exports = (app) => {
                         rmtPromotion: "melody"
                     }
                 }],
-                cacheExpire: "9999-12-31T23:59:59.999Z"
+                cacheExpire: new Date(new Date().getTime() + 30000).toISOString()
             }
         },
-        cacheIntervalMins: 1.0,
+        cacheIntervalMins: 0.3,
         currentTime: new Date().toISOString()
     })
 })
