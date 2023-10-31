@@ -38,7 +38,7 @@ module.exports = (app) => {
 		res.json({
             "access_token":access_token,
             "token_type":"bearer",
-			"expires_at":"9999-12-31T23:59:59.999Z",
+			   "expires_at":"9999-12-31T23:59:59.999Z",
             "features":[],
             "organization_id":"o-aa83a0a9bc45e98c80c1b1c9d92e9e",
             "product_id":"prod-fn",

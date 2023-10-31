@@ -233,9 +233,14 @@ module.exports = (app) => {
                             
                             eventType: "survey_br_nick_001", // nightnight blackhole lobby mini event
                             activeUntil: "9999-09-14T07:00:00.000Z",
-                            activeSince: "9999-09-14T07:00:00.000Z"
+                            activeSince: "2020-09-14T07:00:00.000Z"
                         },
                         {
+                            eventType: "WL0", //water level 0(season 13)
+                            activeUntil: "9999-09-14T07:00:00.000Z",
+                            activeSince: "2015-09-14T07:00:00.000Z"
+                        },
+                        /*{      
                             eventType: "SM1",//scorch marks 13.40
                             activeUntil: "9999-09-14T07:00:00.000Z",
                             activeSince: "2015-09-14T07:00:00.000Z"
@@ -247,11 +252,6 @@ module.exports = (app) => {
                         },
                         {
                             eventType: "TR1",//unhides the rift in the sky in season13(13.40)
-                            activeUntil: "9999-09-14T07:00:00.000Z",
-                            activeSince: "2015-09-14T07:00:00.000Z"
-                        },
-                        {
-                            eventType: "WL0", //water level 0(season 13)
                             activeUntil: "9999-09-14T07:00:00.000Z",
                             activeSince: "2015-09-14T07:00:00.000Z"
                         },
@@ -556,6 +556,16 @@ module.exports = (app) => {
                             activeSince: "2020-09-09T07:00:00.000Z"
                         },
                         {
+                            eventType: "KEL01", // Kiwi Event Leadup(Ch2S7 Related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "2020-10-29T00:00:00.000Z"
+                        },
+                        {
+                            eventType: "KEL02", // Kiwi Event Leadup 2(Ch2S7 Related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "2020-10-29T00:00:00.000Z"
+                        },
+                        {
                             eventType: "CCSP01", //Cube Corruption Spread Paused(Ch2S8 related)
                             activeUntil: "9999-09-09T07:00:00.000Z",
                             activeSince: "9999-09-09T07:00:00.000Z"
@@ -748,12 +758,12 @@ module.exports = (app) => {
                         {
                             eventType: "DataLayerTest1", //DataLayerTest1(Ch4S1 related)
                             activeUntil: "9999-09-09T07:00:00.000Z",
-                            activeSince: "9999-09-09T07:00:00.000Z"
+                            activeSince: "2020-09-09T07:00:00.000Z"
                         },
                         {
                             eventType: "DataLayerTest2", //DataLayerTest2(Ch4S1 related)
                             activeUntil: "9999-09-09T07:00:00.000Z",
-                            activeSince: "9999-09-09T07:00:00.000Z"
+                            activeSince: "2020-09-09T07:00:00.000Z"
                         },
                         {
                             eventType: "NYE_Loader", //New Years Eve Loader(Ch4S1 related)
@@ -820,6 +830,26 @@ module.exports = (app) => {
                             activeUntil: "9999-09-09T07:00:00.000Z",
                             activeSince: "2020-10-29T00:00:00.000Z"
                         },
+                        {
+                            eventType: "EventFlag.BR_S5_Cube_TurnOn", // Cube Lightning(Ch1S5 Related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "2020-10-29T00:00:00.000Z"
+                        },
+                        {
+                            eventType: "EventFlag.BR_S5_Cube_Rune1", // Cube Rune 1(Ch1S5 Related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "2020-10-29T00:00:00.000Z"
+                        },
+                        {
+                            eventType: "EventFlag.BR_S6_Island_MoveTo1", // Cube Move to Rune 1(Ch1S6 Related)
+                            activeUntil: "2023-11-00T07:00:00.000Z",
+                            activeSince: "2020-10-29T00:00:00.000Z"
+                        },
+                        {
+                            eventType: "EventFlag.BR_S6_Island_Drain", //IslandRune1(Ch1S6 Related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "2020-10-29T00:00:00.000Z"
+                        },*/
                     ],
                     state: {
                         activeStorefronts: [],
@@ -968,10 +998,10 @@ module.exports = (app) => {
                         rmtPromotion: "melody"
                     }
                 }],
-                cacheExpire: new Date(new Date().getTime() + 30000).toISOString()
+                cacheExpire: "9999-12-31T23:59:59.999Z"
             }
         },
-        cacheIntervalMins: 0.3,
+        cacheIntervalMins: 1.0,
         currentTime: new Date().toISOString()
     })
 })
