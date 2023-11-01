@@ -16,8 +16,14 @@ const NeoLog = require("../structs/NeoLog");
  * @param {Application} app 
  */
 module.exports = (app) => {
+	function getSeasonInfo(req) {
+        const userAgent = req.headers['user-agent'];
+        const season = userAgent?.split('-')[1];
+        const seasonglobal = season?.split('.')[0];
+        return { season, seasonglobal };
+      }
 
-	
+
 	app.post('/fortnite/api/game/v2/profile/:accountId/client/QueryProfile?profileId=profile0*', (req, res) => {
 		res.statusCode(404).end() //we dont support stw
 	});
@@ -26,6 +32,7 @@ module.exports = (app) => {
 		res.setHeader("Content-Type", "application/json");
 		var accountId = req.params.accountId;
 		var athenprofile = Profile.readProfile(accountId, "athena")
+		const { season, seasonglobal } = getSeasonInfo(req);
 		const getOrCreateProfile = profileId => {
 			var profileData = Profile.readProfile(accountId, profileId);
 
@@ -335,66 +342,68 @@ module.exports = (app) => {
 				break;
 			}
 			case "QueryProfile": {
-				try{//athena.items does not exist if there is no profile so just try and catch the error until it exists.
-					const grantDefaultItems = getOrCreateProfile("athena");
-					Profile.addItem(athenprofile, "AthenaCharacter:CID_001_Athena_Commando_F_Default", {
-						attributes: {
-							"max_level_bonus": 0,
-							"level": 1,
-							"item_seen": true,
-							"xp": 0,
-							"variants": [],
-							"favorite": false
-						},
-						"templateId": "AthenaCharacter:CID_001_Athena_Commando_F_Default"
-						
-					})
-					Profile.addItem(athenprofile, "AthenaPickaxe:DefaultPickaxe", {
-						attributes: {
-							"max_level_bonus": 0,
-							"level": 1,
-							"item_seen": true,
-							"xp": 0,
-							"variants": [],
-							"favorite": false
-						},
-						"templateId": "AthenaPickaxe:DefaultPickaxe"
-						
-					})
-					Profile.addItem(athenprofile, "AthenaGlider:DefaultGlider", {
-						attributes: {
-							"max_level_bonus": 0,
-							"level": 1,
-							"item_seen": true,
-							"xp": 0,
-							"variants": [],
-							"favorite": false
-						},
-						"templateId": "AthenaGlider:DefaultGlider"
-						
-					})
+				if(season <= 10.40 || season =="Cert")
+				{
+					try{//athena.items does not exist if there is no profile so just try and catch the error until it exists.
+						const grantDefaultItems = getOrCreateProfile("athena");
+						Profile.addItem(athenprofile, "AthenaCharacter:CID_001_Athena_Commando_F_Default", {
+							attributes: {
+								"max_level_bonus": 0,
+								"level": 1,
+								"item_seen": true,
+								"xp": 0,
+								"variants": [],
+								"favorite": false
+							},
+							"templateId": "AthenaCharacter:CID_001_Athena_Commando_F_Default"
+							
+						})
+						Profile.addItem(athenprofile, "AthenaPickaxe:DefaultPickaxe", {
+							attributes: {
+								"max_level_bonus": 0,
+								"level": 1,
+								"item_seen": true,
+								"xp": 0,
+								"variants": [],
+								"favorite": false
+							},
+							"templateId": "AthenaPickaxe:DefaultPickaxe"
+							
+						})
+						Profile.addItem(athenprofile, "AthenaGlider:DefaultGlider", {
+							attributes: {
+								"max_level_bonus": 0,
+								"level": 1,
+								"item_seen": true,
+								"xp": 0,
+								"variants": [],
+								"favorite": false
+							},
+							"templateId": "AthenaGlider:DefaultGlider"
+							
+						})
 
-					if(athenprofile.stats){
 						athenprofile.stats["attributes"]["favorite_character"] = "AthenaCharacter:CID_001_Athena_Commando_F_Default"
 						athenprofile.stats["attributes"]["favorite_pickaxe"] = "AthenaPickaxe:DefaultPickaxe"
 						athenprofile.stats["attributes"]["favorite_glider"] = "AthenaGlider:DefaultGlider"
 						Profile.saveProfile(accountId, "athena", athenprofile)
 						Profile.bumpRvn(athenprofile)
+							
 						
+						Profile.saveProfile(accountId, "athena", athenprofile)
+						Profile.bumpRvn(athenprofile)
+						grantDefaultItems.response.profileChanges = [
+							{
+								changeType: "fullProfileUpdate",
+								profile: athenprofile
+							}
+						]
+						response.multiUpdate = [grantDefaultItems.response]
 					}
-
-					Profile.bumpRvn(athenprofile)
-					Profile.saveProfile(accountId, "athena", athenprofile)
-					grantDefaultItems.response.profileChanges = [
-						{
-							changeType: "fullProfileUpdate",
-							profile: athenprofile
-						}
-					]
-					response.multiUpdate = [grantDefaultItems.response]
+					catch{}
+					break
 				}
-				catch{}
-				break
+				else{break}
 			}
 			case "RemoveGiftBox": {
 				checkValidProfileID("common_core", "campaign", "athena");
@@ -463,6 +472,7 @@ module.exports = (app) => {
 				}
 
 				// FIXME: It's unclear at which condition the `lockerSlot` might not exist.
+				console.log
 				if (!lockerSlot) {
 					lockerSlot = locker_slots_data.slots[req.body.category] = {
 						items: new Array(expectedCapacity),
