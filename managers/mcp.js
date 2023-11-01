@@ -25,6 +25,7 @@ module.exports = (app) => {
 	app.post('/fortnite/api/game/v2/profile/:accountId/client/:command',(req, res, next) => {
 		res.setHeader("Content-Type", "application/json");
 		var accountId = req.params.accountId;
+		var athenprofile = Profile.readProfile(accountId, "athena")
 		var season = 1;
 		try {
 			season = parseInt(req.headers["user-agent"].split('-')[1].split('.')[0]);
@@ -52,6 +53,7 @@ module.exports = (app) => {
 					NeoLog.Error("Failed creating profile.");
 					throw e;
 				}
+
 			}
 
 			// Set some extra attributes only at runtime for 100 seasons to
@@ -73,6 +75,17 @@ module.exports = (app) => {
 				profileData.stats["attributes"]["past_seasons"] = pastSeasons;
 			}
 			
+			try{
+				if(athenprofile.stats){
+					athenprofile.stats["attributes"]["favorite_character"] = "AthenaCharacter:CID_001_Athena_Commando_F_Default"
+					athenprofile.stats["attributes"]["favorite_pickaxe"] = "AthenaPickaxe:DefaultPickaxe"
+					athenprofile.stats["attributes"]["favorite_glider"] = "AthenaGlider:DefaultGlider"
+					Profile.saveProfile(accountId, "athena", athenprofile)
+					Profile.bumpRvn(athenprofile)
+				}
+			}
+			catch{}
+
 			return {
 				profileData,
 				response: {
@@ -85,16 +98,65 @@ module.exports = (app) => {
 					"responseVersion": 1
 				}
 			};
-		};
+			
 
+		};
 		var command = req.params.command;
 		var profileId = req.query.profileId || "common_core";
 		const { profileData, response } = getOrCreateProfile(profileId);
 		const { profileChanges } = response;
 		const checkValidProfileID = (...validProfileIds) => checkValidProfileID0(command, profileId, next, ...validProfileIds);
+	
+		const grantDefaultItems = getOrCreateProfile("athena");
+		Profile.addItem(athenprofile, "AthenaCharacter:CID_001_Athena_Commando_F_Default", {
+			attributes: {
+				"max_level_bonus": 0,
+				"level": 1,
+				"item_seen": true,
+				"xp": 0,
+				"variants": [],
+				"favorite": false
+			},
+			"templateId": "AthenaCharacter:CID_001_Athena_Commando_F_Default"
+			
+		})
+		Profile.addItem(athenprofile, "AthenaPickaxe:DefaultPickaxe", {
+			attributes: {
+				"max_level_bonus": 0,
+				"level": 1,
+				"item_seen": true,
+				"xp": 0,
+				"variants": [],
+				"favorite": false
+			},
+			"templateId": "AthenaPickaxe:DefaultPickaxe"
+			
+		})
+		Profile.addItem(athenprofile, "AthenaGlider:DefaultGlider", {
+			attributes: {
+				"max_level_bonus": 0,
+				"level": 1,
+				"item_seen": true,
+				"xp": 0,
+				"variants": [],
+				"favorite": false
+			},
+			"templateId": "AthenaGlider:DefaultGlider"
+			
+		})
+		Profile.saveProfile(accountId, "athena", athenprofile)
+		grantDefaultItems.response.profileChanges = [
+			{
+				changeType: "fullProfileUpdate",
+				profile: grantDefaultItems.profileData
+			}
+		]
+		response.multiUpdate = [grantDefaultItems.response]
+		Profile.bumpRvn(athenprofile)
 
 		
-		//profile commands
+
+
 		switch (command) {
 			// Presets by iDrDoge
 			case "CopyCosmeticLoadout": {
@@ -202,12 +264,22 @@ module.exports = (app) => {
 			}
 
 			case "PurchaseCatalogEntry": {
-				checkValidProfileID("common_core");
+				checkValidProfileID("common_core")
+				const commoncore = Profile.readProfile(accountId, "common_core");
+				const finalValue = commoncore.items["Currency:MtxPurchased"]["quantity"] - req.body["expectedTotalPrice"]
+				commoncore.items = {
+					"Currency:MtxPurchased": {
+						"attributes": {
+						  "platform": "EpicPC"
+						},
+						"quantity": finalValue,
+						"templateId": "Currency:MtxPurchased"
+					  }
+				}				
+				
 
-				const shop = require("../responses/shop.json");
-
+				const shop = require("../responses/shopv2.json");
 				let catalogEntryToPurchase = null;
-
 				for (storefront of shop.storefronts) {
 					/*if (!storefront.name.startsWith("BR")) {
 						throw new Error("Unsupported");
@@ -219,6 +291,7 @@ module.exports = (app) => {
 						}
 					}
 				}
+				
 
 				if (catalogEntryToPurchase == null) {
 					throw next(new ApiException(errors.com.epicgames.modules.gamesubcatalog.catalog_out_of_date).with(req.body.offerId));
@@ -236,6 +309,33 @@ module.exports = (app) => {
 						"quantity": itemGrant.quantity
 					});
 				}
+				
+				Profile.bumpRvn(commoncore)
+				commoncore.stats.attributes["mtx_purchase_history"] = {
+					"refundsUsed" : 0,
+					"refundCredits" : 3,
+					"tokenRefreshReferenceTime" : "2023-10-12T00:00:00.000Z",
+					"purchases" : [ {
+						"purchaseId" : "cc8442a6-77b0-45c7-9c14-6dca6d5cfefe",
+						"offerId" : "v2:/b0ddecc601a1d316ed24a6fbce4297d931599dfcb16fc9c4bd9ef646f0a3a843",
+						"purchaseDate" : new Date().toISOString(),
+						"undoTimeout" : "9999-11-01T17:50:35.861Z",
+						"freeRefundEligible" : true,
+						"fulfillments" : [ ],
+						"lootResult" : [ {
+							"itemType" : catalogEntryToPurchase.itemGrants.templateId,
+                  			"itemGuid" : catalogEntryToPurchase.itemGrants.templateId,
+                  			"itemProfile" : catalogEntryToPurchase.itemGrants.itemProfile,
+                  			"quantity" : catalogEntryToPurchase.itemGrants.quantity
+						}
+						],
+						"totalMtxPaid" : req.body["expectedTotalPrice"],
+						"metadata" : {},
+						"gameContext" : ""
+					}]
+				}
+				Profile.saveProfile(accountId, "common_core", commoncore)
+
 
 				// add creation_time because kyiro had a heartattack when it wasnt their
 				for (lootResultEntry of lootResult) {
@@ -283,15 +383,13 @@ module.exports = (app) => {
 				break;
 			}
 
-			case "QueryProfile": {
-				break;
-			}
-
 			case "RefreshExpeditions": {
 				checkValidProfileID("campaign");
 				break;
 			}
-
+			case "QueryProfile": {
+				break
+			}
 			case "RemoveGiftBox": {
 				checkValidProfileID("common_core", "campaign", "athena");
 
