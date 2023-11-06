@@ -32,20 +32,25 @@ global.LobbyBotPort = 80;
 
 axios.defaults.headers["user-agent"] = `NeoniteServer/${version} axios/${axiosPackage.version}`;
 
-
 async function compareAndUpdateKeychain() {
 	try {
 	  const response = await axios.get('https://spush-tracker-v3.up.railway.app/keychain');
 	  const data = response.data;
+	  // read the local JSON array from the file
 	  const localData = JSON.parse(fs.readFileSync('./responses/keychain.json'));
+	  // iterate over the entries in the URL array
 	  for (const entry of data) {
+		// check if the entry is not present in the local array
 		if (!localData.includes(entry)) {
+		  // add the entry to the local array
 		  localData.push(entry);
 		}
 	  }
+	  // save the updated local array to the file
 	  fs.writeFileSync('./responses/keychain.json', JSON.stringify(localData));
 	  
 	} catch {
+
 		const response = await axios.get('https://api.nitestats.com/v1/epic/keychain');
 	  	const data = response.data;
 		const localData = JSON.parse(fs.readFileSync('./responses/keychain.json'));
@@ -55,17 +60,18 @@ async function compareAndUpdateKeychain() {
 			}
 		}
 		fs.writeFileSync('./responses/keychain.json', JSON.stringify(localData));
-		;}
+		}
 		fs.readFile('./responses/keychain.json', 'utf8', (err, data) => {
 		if (err) throw err;
-  
+
 		const updated = data.replace(/,/g, ',\n'); // i know there are better ways to do this
-		
+
 		fs.writeFile('./responses/keychain.json', updated, 'utf8', (err) => {
 	 	 if (err) throw err;
 		});
   });
   NeoLog.Debug(`Updated keychain.json`)
+
   }
 
 (function () {
@@ -82,8 +88,13 @@ async function compareAndUpdateKeychain() {
 
 	const app = express();
 	app.use((req, res, next) => {
-		NeoLog.URL(`${req.originalUrl}`);
-		next();
+		if(req.originalUrl === "/fortnite/api/calendar/v1/timeline"){
+			next()//cleans up the log
+		}
+		else{
+			NeoLog.URL(`${req.originalUrl}`);
+			next();
+		}
 	});
 	app.use("/", express.static("public"));
 	app.use(express.urlencoded({ extended: false }));

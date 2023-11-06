@@ -24,13 +24,13 @@ module.exports = (app, port) => {
         const { season, seasonglobal } = getSeasonInfo(req);
         const fortnitegame = JSON.parse(JSON.stringify(require("../responses/fortnitegame.json")));
         const backgrounds = fortnitegame.dynamicbackgrounds.backgrounds.backgrounds;
-        var config = ini.parse(fs.readFileSync(path.join(__dirname, '../BackgroundConfig.ini'), 'utf-8'));
-        if(config.config_background.custom_background == true){
+        var config = ini.parse(fs.readFileSync(path.join(__dirname, '../config.ini'), 'utf-8'));
+        if(config.custom_background == true){
             backgrounds[0].stage = "defaultnotris"
-            backgrounds[0].backgroundimage = config.config.image_url
+            backgrounds[0].backgroundimage = config.config_background.image_url
             return res.json(fortnitegame);
         }
-        if(config.config_background.custom_background == false)
+        if(config.custom_background == false)
         {
             switch (seasonglobal) {
                 case "10":
