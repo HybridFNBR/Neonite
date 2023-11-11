@@ -851,7 +851,7 @@ module.exports = (app) => {
                                 eventType: "EventFlag.BR_S6_Island_Drain", //IslandRune1(Ch1S6 Related)
                                 activeUntil: "9999-09-09T07:00:00.000Z",
                                 activeSince: "2020-10-29T00:00:00.000Z"
-                            },*/
+                            },*/ //having this many event flags active at once causes other ones to break.
                         ],
                         state: {
                             activeStorefronts: [],
