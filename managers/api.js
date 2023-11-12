@@ -108,7 +108,9 @@ module.exports = (app) => {
 		})
 	})
 
-
+	app.all('/mesh/Fortnite/*', (req, res) => { 
+		res.status(204).end()
+	})
 
 	app.get("/launcher/api/public/distributionpoints/", (req, res) => {
 			res.json({
@@ -162,7 +164,7 @@ module.exports = (app) => {
 				"eventId": "epicgames_S26_DuosCashCup_EU",
 				"eventWindowId": "S26_DuosCashCup_EU_Event1_Round1",
 				"teamAccountIds": [
-					"Place Holder"
+					""
 				],
 				"liveSessionId": null,
 				"pointsEarned": 999,
@@ -350,6 +352,54 @@ module.exports = (app) => {
 		})
 	})
 
+	app.get("/api/v1/games/fortnite/tracks/query*", (req, res) => {
+		res.json([
+			{
+			  "gameId": "fortnite",
+			  "trackguid": "OiK9k9",
+			  "rankingType": "ranked-br",
+			  "beginTime": "2023-11-02T07:00:18Z",
+			  "endTime": "2025-01-01T07:00:17Z",
+			  "divisionCount": 18
+			},
+			{
+			  "gameId": "fortnite",
+			  "trackguid": "hEKWqj",
+			  "rankingType": "ranked-zb",
+			  "beginTime": "2023-11-02T07:00:18Z",
+			  "endTime": "2025-01-01T07:00:17Z",
+			  "divisionCount": 18
+			}
+		  ])
+	})
+
+	app.get("/api/v1/games/fortnite/trackprogress/:accountId", (req, res) => {
+		res.json([
+			{
+			  "gameId": "fortnite",
+			  "trackguid": "hEKWqj",
+			  "accountId": req.params.accountId,
+			  "rankingType": "ranked-zb",
+			  "lastUpdated": "1970-01-01T00:00:00Z",
+			  "currentDivision": 0,
+			  "highestDivision": 0,
+			  "promotionProgress": 0,
+			  "currentPlayerRanking": null
+			},
+			{
+			  "gameId": "fortnite",
+			  "trackguid": "OiK9k9",
+			  "accountId": req.params.accountId,
+			  "rankingType": "ranked-br",
+			  "lastUpdated": "2023-11-05T19:51:28.002Z",
+			  "currentDivision": 9,
+			  "highestDivision": 18,
+			  "promotionProgress": 0.88,
+			  "currentPlayerRanking": null
+			}
+		  ])
+	})
+
 
 	app.get("/catalog/api/shared/bulk/offers", (req, res) => { res.json({}) })
 
@@ -372,16 +422,19 @@ module.exports = (app) => {
 	});
 
 	app.post('/api/v1/assets/Fortnite/:version/:netcl', (req, res) => {
-		res.json(require("../discovery/FrontEndAssets.json"))
+		res.json(require("../discovery/FrontEndAssets.json"))//you can add more to the file but at the moment its only being used for discovery.
 	});
 
 	//itemshop
 	app.get('/fortnite/api/storefront/v2/catalog',(req, res) => {
 		const {season} = getSeasonInfo(req);
 		if(season >= 26.30)
-			res.json(require("../responses/shopv2.json"));
+			return res.json(require("../responses/shopv2.json"));
+		if(season == "Cert" || season == "Live"){
+			return res.status(404).end();
+		}
 		else{
-			res.json(require("../responses/shopv1.json"))
+			return res.json(require("../responses/shopv1.json"))
 		}
 	});
 
@@ -439,6 +492,10 @@ module.exports = (app) => {
 			"bans": [],
         	"warnings": []
 		})
+	});
+
+	app.get('/eulatracking/api/public/agreements/fn/account/:accountId', (req, res) => {
+		res.status(204).end();
 	});
 
 	app.get('/fortnite/api/game/v2/creative/*', (req, res) =>

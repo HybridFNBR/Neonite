@@ -84,8 +84,6 @@ async function compareAndUpdateKeychain() {
 		});
 	};
 
-	require('./xmpp')
-
 	const app = express();
 	app.use((req, res, next) => {
 		if(req.originalUrl === "/fortnite/api/calendar/v1/timeline"){

@@ -169,6 +169,16 @@ module.exports = (app) => {
 		})
 	});
 
+	app.all("/fortnite/api/discovery/accessToken/:fortniteVersion", (req, res) => {
+		const useragent = req.headers["user-agent"];
+		const regex = useragent.match(/\+\+Fortnite\+Release-\d+\.\d+/);
+		res.json({
+			"branchName" : regex[0],
+			"appId" : "Fortnite",
+			"token" : `${crypto.randomBytes(10).toString("hex")}=`
+		  })
+	})
+
 	app.get("/account/api/public/account/displayName/:displayName", (req, res) => {
 		res.json({
 			"id": req.params.displayName,
@@ -189,23 +199,11 @@ module.exports = (app) => {
 
 
 	app.get('/account/api/public/account/', (req, res) => {
-		try {
-			var response = []
-			req.query.accountId.forEach(accId => {
-				response.push([{
-					id: accId,
-					displayName: accId.startsWith("NeoniteBot") ? "NeoniteBot" : accId,
-					externalAuths: {}
-				}])
-			})
-			res.json(response)
-		} catch {
-			res.json([{
-				id: req.query.accountId,
-				displayName: req.query.accountId.startsWith("NeoniteBot") ? "NeoniteBot" : req.query.accountId,
-				externalAuths: {}
-			}])
-		}
+		res.json([{
+			id: req.query.accountId,
+			displayName: req.query.accountId,
+			externalAuths: {}
+		}])			
 	});
 
 	// device auth

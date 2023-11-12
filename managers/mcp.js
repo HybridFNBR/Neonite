@@ -24,9 +24,6 @@ module.exports = (app) => {
       }
 
 
-	app.post('/fortnite/api/game/v2/profile/:accountId/client/QueryProfile?profileId=profile0*', (req, res) => {
-		res.statusCode(404).end() //we dont support stw
-	});
 
 	app.post('/fortnite/api/game/v2/profile/:accountId/client/:command', (req, res, next) => {
 		res.setHeader("Content-Type", "application/json");
@@ -77,6 +74,7 @@ module.exports = (app) => {
 				profileData.stats["attributes"]["past_seasons"] = pastSeasons;
 			}
 			
+			
 
 			return {
 				profileData,
@@ -101,12 +99,13 @@ module.exports = (app) => {
 		const checkValidProfileID = (...validProfileIds) => checkValidProfileID0(command, profileId, next, ...validProfileIds);
 
 		switch (command) {
+
 			// Presets by iDrDoge
 			case "CopyCosmeticLoadout": {
 				//sourceIndex = 0 (Save)
 				//sourceIndex > 0 (Load)
 				checkValidProfileID("athena");
-				var item;
+				let item;
 
 				if (req.body.sourceIndex == 0) {
 					item = profileData.items[`neoset${req.body.targetIndex}_loadout`];
@@ -171,10 +170,7 @@ module.exports = (app) => {
 			case "RequestRestedStateIncrease":{
 				break;
 			}
-			
-			case "RefreshExpeditions":{
-				break
-			}
+
 			case "GetMcpTimeForLogin":{
 				break
 			}
@@ -234,7 +230,7 @@ module.exports = (app) => {
 
 				const shop = require("../responses/shopv2.json");
 				let catalogEntryToPurchase = null;
-				for (storefront of shop.storefronts) {
+				for (let storefront of shop.storefronts) {
 					/*if (!storefront.name.startsWith("BR")) {
 						throw new Error("Unsupported");
 					}*/
@@ -338,11 +334,11 @@ module.exports = (app) => {
 			}
 
 			case "RefreshExpeditions": {
-				checkValidProfileID("campaign");
+				checkValidProfileID("profile0");
 				break;
 			}
 			case "QueryProfile": {
-				if(season <= 10.40 || season =="Cert")
+				if(season <= 10.40 || season =="Cert" || season == "Live")
 				{
 					try{//athena.items does not exist if there is no profile so just try and catch the error until it exists.
 						const grantDefaultItems = getOrCreateProfile("athena");
@@ -382,7 +378,7 @@ module.exports = (app) => {
 							"templateId": "AthenaGlider:DefaultGlider"
 							
 						})
-
+						
 						athenprofile.stats["attributes"]["favorite_character"] = "AthenaCharacter:CID_001_Athena_Commando_F_Default"
 						athenprofile.stats["attributes"]["favorite_pickaxe"] = "AthenaPickaxe:DefaultPickaxe"
 						athenprofile.stats["attributes"]["favorite_glider"] = "AthenaGlider:DefaultGlider"
@@ -422,7 +418,6 @@ module.exports = (app) => {
 
 			case "SetAffiliateName": {
 				checkValidProfileID("common_core");
-				Profile.modifyStat(profileData, "mtx_affiliate", true ? "Neonite" : req.body.affiliateName, profileChanges);
 				Profile.modifyStat(profileData, "mtx_affiliate_set_time", new Date().toISOString(), profileChanges);
 				break;
 			}
@@ -472,7 +467,6 @@ module.exports = (app) => {
 				}
 
 				// FIXME: It's unclear at which condition the `lockerSlot` might not exist.
-				console.log
 				if (!lockerSlot) {
 					lockerSlot = locker_slots_data.slots[req.body.category] = {
 						items: new Array(expectedCapacity),
@@ -489,16 +483,16 @@ module.exports = (app) => {
 				const startIndex = req.body.slotIndex < 0 ? 0 : req.body.slotIndex;
 				const endIndex = req.body.slotIndex < 0 ? expectedCapacity : (startIndex + 1);
 
-				for (var index = startIndex; index < endIndex; index++) {
+				for (let index = startIndex; index < endIndex; index++) {
 					// The inner loop makes sure that missing intermediate elements 
 					// will be prefilled, because otherwise it will fail if the request 
 					// tries to set at an out of bounds index.
-					for (var i = itemsArray.length; i < index; i++) {
+					for (let i = itemsArray.length; i < index; i++) {
 						itemsArray.push("");
 					}
 					// If the index points to the array's last index, then the array
 					// isn't big enough yet, so we have to append it.
-					if (index == itemsArray.length) {
+					if (index === itemsArray.length) {
 						itemsArray.push(req.body.itemToSlot);
 						bChanged = true;
 					} else if (index < itemsArray.length) {
@@ -531,7 +525,7 @@ module.exports = (app) => {
 			}
 
 			case "EquipBattleRoyaleCustomization": {
-				var statName, itemToSlot
+				let statName, itemToSlot
 
 				switch (req.body.slotName) {
 					case "Character":
@@ -567,7 +561,7 @@ module.exports = (app) => {
 						var bIsDance = req.body.slotName == "Dance";
 						statName = bIsDance ? "favorite_dance" : "favorite_itemwraps";
 						var arr = profileData.stats.attributes[statName] || [];
-						if (req.body.indexWithinSlot == -1) {
+						if (req.body.indexWithinSlot === -1) {
 							// handle wrap "Apply To All"
 							arr = [];
 
@@ -590,6 +584,7 @@ module.exports = (app) => {
 
 				if (statName != null && itemToSlot != null) {
 					Profile.modifyStat(profileData, statName, itemToSlot, response.profileChanges);
+					Profile.bumpRvn(athenprofile)
 				}
 				break;
 			}
