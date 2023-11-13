@@ -16,6 +16,7 @@
     "jsonwebtoken": "^9.0.0",
     "multer": "^1.4.2",
     "path": "^0.12.7",
+    "simple-git": "^3.20.0",
     "uuid": "^8.3.2",
     "xml-parser": "^1.2.1",
     "xmlbuilder": "^15.1.1"

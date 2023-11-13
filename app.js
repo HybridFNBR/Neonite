@@ -1,4 +1,15 @@
 const NeoLog = require('./structs/NeoLog')
+const simpleGit = require('simple-git');
+const express = require("express");
+const fs = require("fs");
+const errors = require("./structs/errors");
+const { v4: uuidv4 } = require("uuid");
+const { default: axios } = require('axios');
+const axiosPackage = require('axios/package.json')
+const versionCompare = require('compare-versions');
+const compression = require('compression');
+
+autoUpdate()
 
 try {
 	var cookieParser = require("cookie-parser");
@@ -13,24 +24,27 @@ try {
 	} catch { NeoLog.Error('Module install failed, join our discord for more help: https://dsc.gg/neonite'); }
 }
 
-const express = require("express");
-const fs = require("fs");
-const errors = require("./structs/errors");
-const { v4: uuidv4 } = require("uuid");
-const { default: axios } = require('axios');
-const axiosPackage = require('axios/package.json')
-const versionCompare = require('compare-versions');
-const compression = require('compression');
+
+
 
 const { ApiException } = errors;
-
 const version = require('./package.json').version;
-
 global.xmppClients = [];
 global.port = 5595;
-global.LobbyBotPort = 80;
+
 
 axios.defaults.headers["user-agent"] = `NeoniteServer/${version} axios/${axiosPackage.version}`;
+
+
+async function autoUpdate(){
+	const git = simpleGit();
+	git.pull('https://github.com/HybridFNBR/Neonite.git', 'main', (error, result) => {
+        if (error) {
+            console.error(`couldnt fetch changes from github`);
+        } else {}
+    });
+}
+
 
 async function compareAndUpdateKeychain() {
 	try {
@@ -73,7 +87,6 @@ async function compareAndUpdateKeychain() {
   NeoLog.Debug(`Updated keychain.json`)
 
   }
-
 (function () {
 	"use strict";
 
