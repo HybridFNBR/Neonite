@@ -1,5 +1,4 @@
 const NeoLog = require('./structs/NeoLog')
-const simpleGit = require('simple-git');
 const express = require("express");
 const fs = require("fs");
 const errors = require("./structs/errors");
@@ -9,7 +8,6 @@ const axiosPackage = require('axios/package.json')
 const versionCompare = require('compare-versions');
 const compression = require('compression');
 
-autoUpdate()
 
 try {
 	var cookieParser = require("cookie-parser");
@@ -36,14 +34,6 @@ global.port = 5595;
 axios.defaults.headers["user-agent"] = `NeoniteServer/${version} axios/${axiosPackage.version}`;
 
 
-async function autoUpdate(){
-	const git = simpleGit();
-	git.pull('https://github.com/HybridFNBR/Neonite.git', 'main', (error, result) => {
-        if (error) {
-            console.error(`couldnt fetch changes from github`);
-        } else {}
-    });
-}
 
 
 async function compareAndUpdateKeychain() {
