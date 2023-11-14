@@ -1,6 +1,5 @@
 
 const Default = require("../discovery/discoveryMenu.json");
-const NeoLog = require("../structs/NeoLog");
 const {discoveryResponses} = require("../discovery/events")
 
 module.exports = (app) => {

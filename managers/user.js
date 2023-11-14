@@ -1,3 +1,8 @@
+/**
+ * 
+ * @param {Express.Application} app 
+ */
+
 module.exports = (app) => {
     app.post("/api/v1/user/setting", (req, res) => {
 		res.json([

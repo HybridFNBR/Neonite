@@ -2,6 +2,11 @@ const path = require('path');
 var fs = require('fs')
 var ini = require('ini')
 
+/**
+ * 
+ * @param {Express.Application} app 
+ */
+
 module.exports = (app) => {
     app.get('/fortnite/api/calendar/v1/timeline', (req, res) => {
         var season

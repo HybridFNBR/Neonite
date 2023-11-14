@@ -1,3 +1,9 @@
+
+/**
+ * 
+ * @param {Express.Application} app 
+ */
+
 module.exports = (app) => {
     app.all("/fortnite/api/game/v2/matchmakingservice/ticket/player/:accountId", (req, res) => {
 		var ParsedBckt = {

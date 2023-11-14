@@ -7,13 +7,11 @@ const { v4: uuidv4 } = require("uuid");
 Array.prototype.insert = function ( index, item ) {
 	this.splice( index, 0, item );
 };
-
-const { Application } = require("express");
 const NeoLog = require("../structs/NeoLog");
 
 /**
  * 
- * @param {Application} app 
+ * @param {Express.Application} app 
  */
 module.exports = (app) => {
 	function getSeasonInfo(req) {

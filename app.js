@@ -5,7 +5,6 @@ const errors = require("./structs/errors");
 const { v4: uuidv4 } = require("uuid");
 const { default: axios } = require('axios');
 const axiosPackage = require('axios/package.json')
-const versionCompare = require('compare-versions');
 const compression = require('compression');
 
 
@@ -29,11 +28,6 @@ const { ApiException } = errors;
 const version = require('./package.json').version;
 global.xmppClients = [];
 global.port = 5595;
-
-
-axios.defaults.headers["user-agent"] = `NeoniteServer/${version} axios/${axiosPackage.version}`;
-
-
 
 
 async function compareAndUpdateKeychain() {

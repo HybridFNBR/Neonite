@@ -1,14 +1,7 @@
-const axios = require('axios').default;
 const path = require('path');
-const fs = require('fs');
-const jwt = require("jsonwebtoken");
-const { setTimeout } = require('timers');
 const errors = require('./../structs/errors');
-const { ErrDef, ApiException, com } = require('./../structs/errors');
-var builder = require('xmlbuilder');
+const {ApiException} = require('./../structs/errors');
 const Express = require('express');
-const NeoLog = require('../structs/NeoLog');
-const { json } = require('body-parser');
 
 
 Date.prototype.addHours = function (h) {

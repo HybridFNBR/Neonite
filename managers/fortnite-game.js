@@ -1,16 +1,13 @@
 const { default: axios } = require("axios");
-const { application } = require('express')
 const path = require('path');
 var fs = require('fs')
 var ini = require('ini')
 
-
 /**
  * 
- * @param {application} app 
- * @param {String} port 
+ * @param {Express.Application} app 
  */
-module.exports = (app, port) => {
+module.exports = (app) => {
 
     function getSeasonInfo(req) {
         const userAgent = req.headers['user-agent'];

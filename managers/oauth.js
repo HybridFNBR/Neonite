@@ -1,20 +1,13 @@
 const crypto = require('crypto');
-const fs = require('fs');
-const uuid = require('uuid')
-const Profile = require("../profile");
 const {
 	ApiException
 } = require('../structs/errors');
 const errors = require("../structs/errors");
-
-const {
-	application
-} = require('express');
 const jsonwebtoken = require('jsonwebtoken');
 
 /**
  * 
- * @param {application} app 
+ * @param {Express.Application} app 
  */
 module.exports = (app) => {
 	//token
