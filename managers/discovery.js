@@ -5,7 +5,6 @@ const {discoveryResponses} = require("../discovery/events")
 module.exports = (app) => {
 
 	const seasonData = {
-		"27.11": discoveryResponses.ver2711,
 		"22.40": discoveryResponses.ver2240,
 		"20.40": discoveryResponses.ver2040,
 		"18.40": discoveryResponses.ver1840,

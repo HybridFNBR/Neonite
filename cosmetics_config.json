@@ -1,0 +1,24 @@
+{
+    "Characters":[
+        "AthenaCharacter:CID_001_Athena_Commando_F_Default"
+    ],
+    "Emotes":[
+        "AthenaDance:EID_DanceMoves"
+    ],
+    "BackBlings":[
+        ""
+    ],
+    "LoadingScreens":[
+        ""
+    ],
+    "WeaponWraps":[
+        ""
+    ],
+    "Pickaxes":[
+        "AthenaPickaxe:DefaultPickaxe"
+    ],
+    "Gliders":[
+        "AthenaGlider:DefaultGlider"
+    ]
+    
+}

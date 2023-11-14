@@ -3,11 +3,16 @@ const errors = require("../structs/errors");
 const { ApiException } = errors;
 const fs = require("fs");
 const { v4: uuidv4 } = require("uuid");
+const path = require('path');
+var ini = require('ini')
+
 
 Array.prototype.insert = function ( index, item ) {
 	this.splice( index, 0, item );
 };
 const NeoLog = require("../structs/NeoLog");
+var config = ini.parse(fs.readFileSync(path.join(__dirname, '../config.ini'), 'utf-8'));
+const cosmetics = JSON.parse(JSON.stringify(require("../cosmetics_config.json")));
 
 /**
  * 
@@ -336,10 +341,10 @@ module.exports = (app) => {
 				break;
 			}
 			case "QueryProfile": {
+				const grantDefaultItems = getOrCreateProfile("athena");
 				if(season <= 10.40 || season =="Cert" || season == "Live")
 				{
 					try{//athena.items does not exist if there is no profile so just try and catch the error until it exists.
-						const grantDefaultItems = getOrCreateProfile("athena");
 						Profile.addItem(athenprofile, "AthenaCharacter:CID_001_Athena_Commando_F_Default", {
 							attributes: {
 								"max_level_bonus": 0,
@@ -379,10 +384,7 @@ module.exports = (app) => {
 						
 						athenprofile.stats["attributes"]["favorite_character"] = "AthenaCharacter:CID_001_Athena_Commando_F_Default"
 						athenprofile.stats["attributes"]["favorite_pickaxe"] = "AthenaPickaxe:DefaultPickaxe"
-						athenprofile.stats["attributes"]["favorite_glider"] = "AthenaGlider:DefaultGlider"
-						Profile.saveProfile(accountId, "athena", athenprofile)
-						Profile.bumpRvn(athenprofile)
-							
+						athenprofile.stats["attributes"]["favorite_glider"] = "AthenaGlider:DefaultGlider"				
 						
 						Profile.saveProfile(accountId, "athena", athenprofile)
 						Profile.bumpRvn(athenprofile)
@@ -395,9 +397,48 @@ module.exports = (app) => {
 						response.multiUpdate = [grantDefaultItems.response]
 					}
 					catch{}
-					break
+					break;
 				}
-				else{break}
+				if(config.simpleProfile == true){
+					const cosmeticArrays = [
+						cosmetics.Characters,
+						cosmetics.Emotes,
+						cosmetics.BackBlings,
+						cosmetics.LoadingScreens,
+						cosmetics.WeaponWraps,
+						cosmetics.Pickaxes,
+						cosmetics.Gliders
+					];
+					try{
+						cosmeticArrays.forEach(cosmeticArray => {
+							cosmeticArray.forEach(cosmeticItem => {
+								Profile.addItem(athenprofile, cosmeticItem, {
+									attributes: {
+										"max_level_bonus": 0,
+										"level": 1,
+										"item_seen": true,
+										"xp": 0,
+										"variants": [],
+										"favorite": false
+									},
+									"templateId": cosmeticItem
+								});
+							});
+						})
+						Profile.saveProfile(accountId, "athena", athenprofile)
+						Profile.bumpRvn(athenprofile)
+						grantDefaultItems.response.profileChanges = [
+							{
+								changeType: "fullProfileUpdate",
+								profile: athenprofile
+							}
+						]
+						response.multiUpdate = [grantDefaultItems.response]
+					}
+					catch{}
+				}
+				
+				break;
 			}
 			case "RemoveGiftBox": {
 				checkValidProfileID("common_core", "campaign", "athena");
