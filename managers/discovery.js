@@ -111,12 +111,17 @@ module.exports = (app) => {
 					"created": "2021-10-01T00:56:45.010Z",
 					"published": "2021-08-03T15:27:20.251Z",
 					"descriptionTags": [],
-					"moderationStatus": "Unmoderated"
+					"moderationStatus": "Approved"
 				  }
 				}
 			}) //fixes the play button being disabled
 	});
 	
+
+	app.post('/api/v1/links/favorites/*', (req, res) => {
+		res.json({"results":[],"hasMore":false})
+	})
+
 	app.get('/links/api/fn/mnemonic/:playlistId', (req, res) => {
 		const { season, seasonglobal } = getSeasonInfo(req);
 		if (seasonData[season]) {

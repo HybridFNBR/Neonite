@@ -563,6 +563,67 @@ module.exports = (app) => {
 				break;
 			}
 
+			case "SetCosmeticLockerSlots": {
+				const item = profileData.items[req.body.lockerItem];
+
+				if (!item) {
+					throw next(new ApiException(errors.com.epicgames.fortnite.item_not_found).withMessage("Locker item {0} not found", req.body.lockerItem));
+				}
+
+				const locker_slots_data = item.attributes.locker_slots_data;
+				let lockerSlot = locker_slots_data.slots[req.body.category];
+
+				var expectedCapacity;
+				switch (req.body.category) {
+					case "Dance":
+						expectedCapacity = 6;
+						break;
+					case "ItemWrap":
+						expectedCapacity = 7;
+						break;
+					default:
+						expectedCapacity = 1;
+						break;
+				}
+				if (!lockerSlot) {
+					lockerSlot = locker_slots_data.slots[req.body.category] = {
+						items: new Array(expectedCapacity),
+						activeVariants: new Array(expectedCapacity)
+					};
+				}
+
+				const itemsArray = lockerSlot.items;
+				let bChanged = false;
+				const startIndex = req.body.slotIndex < 0 ? 0 : req.body.slotIndex;
+				const endIndex = req.body.slotIndex < 0 ? expectedCapacity : (startIndex + 1);
+
+				for (let index = startIndex; index < endIndex; index++) {
+					for (let i = itemsArray.length; i < index; i++) {
+						itemsArray.push("");
+					}
+					if (index === itemsArray.length) {
+						itemsArray.push(req.body.itemToSlot);
+						bChanged = true;
+					} else if (index < itemsArray.length) {
+						if (itemsArray[index] != req.body.itemToSlot) {
+							itemsArray[index] = req.body.itemToSlot;
+							bChanged = true;
+						}
+					} else {
+						console.log("[Error] Unexpected slot index & capacity configuration.");
+					}
+				}
+
+				console.log(req.body.lockerItem)
+
+				
+
+				if (bChanged) {
+					Profile.changeItemAttribute(profileData, req.body.lockerItem, "locker_slots_data", locker_slots_data, profileChanges);
+				}
+				break;
+			}
+
 			case "EquipBattleRoyaleCustomization": {
 				let statName, itemToSlot
 
