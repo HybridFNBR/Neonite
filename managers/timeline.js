@@ -240,7 +240,7 @@ module.exports = (app) => {
                                 
                                 eventType: "survey_br_nick_001", // nightnight blackhole lobby mini event
                                 activeUntil: "9999-09-14T07:00:00.000Z",
-                                activeSince: "2020-09-14T07:00:00.000Z"
+                                activeSince: "9999-09-14T07:00:00.000Z"
                             },
                             {
                                 eventType: "WL0", //water level 0(season 13)
