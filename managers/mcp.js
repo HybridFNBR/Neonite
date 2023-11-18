@@ -407,7 +407,9 @@ module.exports = (app) => {
 						cosmetics.LoadingScreens,
 						cosmetics.WeaponWraps,
 						cosmetics.Pickaxes,
-						cosmetics.Gliders
+						cosmetics.Gliders,
+						cosmetics.MusicPacks
+
 					];
 					try{
 						cosmeticArrays.forEach(cosmeticArray => {
