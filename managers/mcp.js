@@ -14,6 +14,8 @@ const NeoLog = require("../structs/NeoLog");
 var config = ini.parse(fs.readFileSync(path.join(__dirname, '../config.ini'), 'utf-8'));
 const cosmetics = JSON.parse(JSON.stringify(require("../cosmetics_config.json")));
 
+//testing
+
 /**
  * 
  * @param {Express.Application} app 
