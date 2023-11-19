@@ -248,13 +248,13 @@ module.exports = (app) => {
                                 activeSince: "2015-09-14T07:00:00.000Z"
                             },
                             {
-                                eventType: "DL01", // CH1/Ch4 end event leadup in-game(27.11)
-                                activeUntil: "9999-09-09T07:00:00.000Z",
+                                eventType: "DL01", // Durian Event-related (Countdown)
+                                activeUntil: "2023-12-02T21:10:00.000Z",
                                 activeSince: "2020-09-09T07:00:00.000Z"
                             },
                             {
-                                eventType: "DL02", // CH1/Ch4 end event leadup lobby(27.11)
-                                activeUntil: "9999-09-09T07:00:00.000Z",
+                                eventType: "DL02", // Durian Event-related (Countdown)
+                                activeUntil: "2023-12-02T21:10:00.000Z",
                                 activeSince: "2020-09-09T07:00:00.000Z"
                             },
                             
