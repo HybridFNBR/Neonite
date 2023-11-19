@@ -1,4 +1,5 @@
-{    "namespace": "fn",
+{
+    "namespace": "fn",
     "accountId": "epic",
     "creatorName": "Epic",
     "mnemonic": "playlist_defaultsquad",
@@ -26,12 +27,13 @@
             "es-419": "En escuadrón",
             "tr": "Ekipli"
         },
-        "image_url": "https://cdn2.unrealengine.com/s26-squads-1920-1920x1080-55628a1543ea.jpg",
+        "image_url": "https://cdn2.unrealengine.com/ogbr-squads-640-640x360-6231add9fe53.jpg",
+        "product_tag": "Product.BR.Build.Squad",
         "image_urls": {
-            "url_s": "https://cdn2.unrealengine.com/s26-squads-480-480x270-06da0fac4ea9.jpg",
-            "url_xs": "https://cdn2.unrealengine.com/s26-squad-256-256x144-e4de3c40cfd1.jpg",
-            "url_m": "https://cdn2.unrealengine.com/s26-squads-640-640x360-6addc29cbde9.jpg",
-            "url": "https://cdn2.unrealengine.com/s26-squads-1920-1920x1080-55628a1543ea.jpg"
+            "url_s": "https://cdn2.unrealengine.com/ogbr-squads-640-640x360-6231add9fe53.jpg",
+            "url_xs": "https://cdn2.unrealengine.com/ogbr-squads-640-640x360-6231add9fe53.jpg",
+            "url_m": "https://cdn2.unrealengine.com/ogbr-squads-640-640x360-6231add9fe53.jpg",
+            "url": "https://cdn2.unrealengine.com/ogbr-squads-640-640x360-6231add9fe53.jpg"
         },
         "tagline": "",
         "matchmaking": {
@@ -44,7 +46,7 @@
     "active": true,
     "disabled": false,
     "created": "2021-10-01T00:56:42.938Z",
-    "published": "2021-08-03T15:27:17.566Z",
+    "published": "2023-11-03T08:25:06.100Z",
     "descriptionTags": [],
     "moderationStatus": "Unmoderated"
 }

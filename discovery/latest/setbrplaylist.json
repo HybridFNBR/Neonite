@@ -1,77 +1,183 @@
 {
-    "namespace": "fn",
-    "accountId": "epic",
-    "creatorName": "Epic",
-    "mnemonic": "set_br_playlists",
-    "linkType": "ModeSet",
-    "metadata": {
-      "alt_title": {
-        "de": "Battle Royale",
-        "ru": "\u041a\u043e\u0440\u043e\u043b\u0435\u0432\u0441\u043a\u0430\u044f \u0431\u0438\u0442\u0432\u0430",
-        "ko": "\ubc30\ud2c0\ub85c\uc584",
-        "pt-BR": "Battle Royale",
-        "it": "Battaglia reale",
-        "fr": "Battle Royale",
-        "zh-CN": "",
-        "es": "Battle Royale",
-        "es-MX": "Batalla campal",
-        "zh": "",
-        "ar": "\u0628\u0627\u062a\u0644 \u0631\u0648\u064a\u0627\u0644",
-        "zh-Hant": "",
-        "ja": "\u30d0\u30c8\u30eb\u30ed\u30a4\u30e4\u30eb",
-        "pl": "Battle Royale",
-        "es-419": "Batalla campal",
-        "tr": "Battle Royale"
-      },
-      "alt_tagline": {
-        "de": "\u00dcberlebe allein in einer Schlacht bis auf den letzten Spieler.",
-        "ru": "\u041e\u0442\u043f\u0440\u0430\u0432\u043b\u044f\u0439\u0442\u0435\u0441\u044c \u043d\u0430 \u0431\u0438\u0442\u0432\u0443 \u0432 \u043e\u0434\u0438\u043d\u043e\u0447\u043a\u0443 \u0438 \u043f\u0435\u0440\u0435\u0436\u0438\u0432\u0438\u0442\u0435 \u0432\u0441\u0435\u0445 \u0441\u043e\u043f\u0435\u0440\u043d\u0438\u043a\u043e\u0432.",
-        "ko": "\uc8fd\ub290\ub0d0 \uc0ac\ub290\ub0d0... \ud63c\uc790\uc11c \uc2f8\uc6b0\ub294 \uc11c\ubc14\uc774\ubc8c \ud608\ud22c!",
-        "pt-BR": "Entre sozinho em uma batalha para ser o \u00faltimo sobrevivente.",
-        "it": "Combatti in solitaria fino a diventare l'ultimo superstite.",
-        "fr": "Combattez en solitaire et soyez le dernier survivant.",
-        "zh-CN": "",
-        "es": "Entra en solitario en un combate para ser el \u00faltimo en pie.",
-        "es-MX": "Entra por tu cuenta a un combate y pelea hasta que solo quedes t\u00fa en pie.",
-        "zh": "",
-        "ar": "\u062e\u064f\u0636 \u0627\u0644\u0645\u0639\u0631\u0643\u0629 \u0628\u0645\u0641\u0631\u062f\u0643 \u0644\u062a\u0635\u0628\u062d \u0622\u062e\u0631 \u0645\u0646 \u064a\u062a\u0628\u0642\u0649 \u0645\u0646 \u0627\u0644\u0644\u0627\u0639\u0628\u064a\u0646.",
-        "zh-Hant": "",
-        "ja": "\u5358\u8eab\u3067\u30d0\u30c8\u30eb\u306b\u98db\u3073\u8fbc\u307f\u3001\u6700\u5f8c\u306e1\u4eba\u306b\u306a\u308b\u307e\u3067\u751f\u304d\u6b8b\u308c\u3002",
-        "pl": "Walcz samotnie w bitwie do ostatniego.",
-        "es-419": "Entra por tu cuenta a un combate y pelea hasta que solo quedes t\u00fa en pie.",
-        "tr": "Sava\u015fa tek ba\u015f\u0131na gir ve hayatta kalan son ki\u015fi ol."
-      },
-      "image_url": "https://cdn2.unrealengine.com/s26-condensed-1920-1920x1080-8a78431610d9.jpg",
-      "fallback_links": {
-        "graceful": "playlist_respawn_24_alt"
-      },
+  "namespace": "fn",
+  "accountId": "epic",
+  "creatorName": "Epic",
+  "mnemonic": "set_br_playlists",
+  "linkType": "ModeSet",
+  "metadata": {
+      "image_url": "https://cdn2.unrealengine.com/ogbr-logo-1920-1920x1080-642ac8e12fc1.jpg",
       "image_urls": {
-        "url_s": "https://cdn2.unrealengine.com/s26-condensed-480-480x270-f896407407e6.jpg",
-        "url_xs": "https://cdn2.unrealengine.com/s26-condensed-256-256x144-90fe3627fdf1.jpg",
-        "url_m": "https://cdn2.unrealengine.com/s26-condensed-640-640x360-2c3bf8766c85.jpg",
-        "url": "https://cdn2.unrealengine.com/s26-condensed-1920-1920x1080-8a78431610d9.jpg"
+          "url_s": "https://cdn2.unrealengine.com/ogbr-logo-480-480x270-2d0521c07edc.jpg",
+          "url_xs": "https://cdn2.unrealengine.com/ogbr-logo-256-256x144-25b34d79ca46.jpg",
+          "url_m": "https://cdn2.unrealengine.com/ogbr-logo-640-640x360-50590a2dfe12.jpg",
+          "url": "https://cdn2.unrealengine.com/ogbr-logo-1920-1920x1080-642ac8e12fc1.jpg"
       },
-      "tagline": "The battle is building! \r\n Drop into the Battle Royale. Loot, build, explore, and fight in a game of 100 players competing to be the last one standing.",
       "title": "Battle Royale",
       "locale": "en",
-      "video_vuid": "tMxxShcqdutMflWvpG",
-      "corresponding_sets": {
-        "ranked": "set_habanero_playlists"
-      },
+      "video_vuid": "CaGHsWoMJxMGUDasbB",
       "sub_link_codes": [
-        "playlist_defaultsolo",
-        "playlist_defaultduo",
-        "playlist_trios",
-        "playlist_defaultsquad"
+          "playlist_defaultsolo",
+          "playlist_defaultduo",
+          "playlist_trios",
+          "playlist_defaultsquad"
       ],
+      "alt_title": {
+          "de": "Battle Royale",
+          "ru": "Королевская битва",
+          "ko": "배틀로얄",
+          "pt-BR": "Battle Royale",
+          "it": "Battaglia reale",
+          "fr": "Battle Royale",
+          "zh-CN": "",
+          "es": "Battle Royale",
+          "es-MX": "Batalla campal",
+          "zh": "",
+          "ar": "باتل رويال",
+          "zh-Hant": "",
+          "ja": "バトルロイヤル",
+          "pl": "Battle Royale",
+          "es-419": "Batalla campal",
+          "tr": "Battle Royale"
+      },
+      "alt_tagline": {
+          "de": "Überlebe allein in einer Schlacht bis auf den letzten Spieler.",
+          "ru": "Отправляйтесь на битву в одиночку и переживите всех соперников.",
+          "ko": "죽느냐 사느냐... 혼자서 싸우는 서바이벌 혈투!",
+          "pt-BR": "Entre sozinho em uma batalha para ser o último sobrevivente.",
+          "it": "Combatti in solitaria fino a diventare l'ultimo superstite.",
+          "fr": "Combattez en solitaire et soyez le dernier survivant.",
+          "zh-CN": "",
+          "es": "Entra en solitario en un combate para ser el último en pie.",
+          "es-MX": "Entra por tu cuenta a un combate y pelea hasta que solo quedes tú en pie.",
+          "zh": "",
+          "ar": "خُض المعركة بمفردك لتصبح آخر من يتبقى من اللاعبين.",
+          "zh-Hant": "",
+          "ja": "単身でバトルに飛び込み、最後の1人になるまで生き残れ。",
+          "pl": "Walcz samotnie w bitwie do ostatniego.",
+          "es-419": "Entra por tu cuenta a un combate y pelea hasta que solo quedes tú en pie.",
+          "tr": "Savaşa tek başına gir ve hayatta kalan son kişi ol."
+      },
+      "ratings": {
+          "rating_received_time": "2023-11-16T00:00:00.575Z",
+          "cert_id": "c45968aa-ecc7-4fff-8142-12502e85ac3f",
+          "boards": {
+              "ACB": {
+                  "descriptors": [
+                      "ACB_Violence",
+                      "ACB_GEMCO"
+                  ],
+                  "rating_overridden": false,
+                  "rating": "ACB_AGE_M",
+                  "initial_rating": "ACB_AGE_M",
+                  "interactive_elements": [
+                      "IE_UsersInteract",
+                      "IE_InGamePurchases_v7_1"
+                  ]
+              },
+              "PEGI": {
+                  "descriptors": [
+                      "PEGI_ModerateViolence"
+                  ],
+                  "rating_overridden": false,
+                  "rating": "PEGI_AGE_12",
+                  "initial_rating": "PEGI_AGE_12",
+                  "interactive_elements": [
+                      "IE_UsersInteract",
+                      "IE_InGamePurchases_v7_1"
+                  ]
+              },
+              "Generic": {
+                  "descriptors": [
+                      "GEN_ModerateViolence"
+                  ],
+                  "rating_overridden": false,
+                  "rating": "GEN_AGE_12",
+                  "initial_rating": "GEN_AGE_12",
+                  "interactive_elements": [
+                      "IE_UsersInteract",
+                      "IE_InGamePurchases_v7_1"
+                  ]
+              },
+              "ClassInd": {
+                  "descriptors": [
+                      "ClassInd_Violencia",
+                      "ClassInd_LinguagemImpropria"
+                  ],
+                  "rating_overridden": false,
+                  "rating": "CLASSIND_AGE_12",
+                  "initial_rating": "CLASSIND_AGE_12",
+                  "interactive_elements": [
+                      "IE_UsersInteract",
+                      "IE_InGamePurchases_v7_1"
+                  ]
+              },
+              "GRAC": {
+                  "descriptors": [
+                      "GRAC_Violence_v7_1"
+                  ],
+                  "rating_overridden": false,
+                  "rating": "GRAC_AGE_12",
+                  "initial_rating": "GRAC_AGE_12",
+                  "interactive_elements": [
+                      "IE_UsersInteract",
+                      "IE_InGamePurchases_v7_1"
+                  ]
+              },
+              "USK": {
+                  "descriptors": [
+                      "USK_FantasyGewalt_v9_0"
+                  ],
+                  "rating_overridden": false,
+                  "rating": "USK_AGE_12",
+                  "initial_rating": "USK_AGE_12",
+                  "interactive_elements": [
+                      "IE_UsersInteract",
+                      "IE_InGamePurchases_v7_1"
+                  ]
+              },
+              "ESRB": {
+                  "descriptors": [
+                      "ESRB_Violence"
+                  ],
+                  "rating_overridden": false,
+                  "rating": "ESRB_AGE_T",
+                  "initial_rating": "ESRB_AGE_T",
+                  "interactive_elements": [
+                      "IE_UsersInteract",
+                      "IE_InGamePurchases_v7_1"
+                  ]
+              },
+              "Russia": {
+                  "descriptors": [
+                      "RUS_Violence_v7_0"
+                  ],
+                  "rating_overridden": false,
+                  "rating": "RUSSIA_AGE_12",
+                  "initial_rating": "RUSSIA_AGE_12",
+                  "interactive_elements": [
+                      "IE_UsersInteract",
+                      "IE_InGamePurchases_v7_1"
+                  ]
+              }
+          }
+      },
+      "product_tag": "Product.BR.Build",
+      "fallback_links": {
+          "graceful": "playlist_respawn_24_alt"
+      },
+      "tagline": "The battle is building! \r\n Drop into the Battle Royale. Loot, build, explore, and fight in a game of 100 players competing to be the last one standing.",
+      "corresponding_sets": {
+          "ranked": "set_habanero_playlists"
+      },
       "default_sub_link_code": "playlist_defaultsquad"
-    },
-    "version": 1,
-    "active": true,
-    "disabled": false,
-    "created": "2022-06-30T17:57:54.767Z",
-    "published": "2022-06-30T17:57:54.767Z",
-    "descriptionTags": [],
-    "moderationStatus": "Unmoderated",
-    "lastActivatedDate": "2022-06-30T17:57:54.770Z"
-  }
+  },
+  "version": 1,
+  "active": true,
+  "disabled": false,
+  "created": "2022-06-30T17:57:54.767Z",
+  "published": "2023-11-16T17:00:34.973Z",
+  "descriptionTags": [],
+  "moderationStatus": "Approved",
+  "lastActivatedDate": "2022-06-30T17:57:54.770Z",
+  "discoveryIntent": "PUBLIC"
+}

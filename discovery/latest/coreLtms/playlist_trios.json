@@ -27,12 +27,13 @@
             "es-419": "En trío",
             "tr": "Üçlü"
         },
-        "image_url": "https://cdn2.unrealengine.com/s26-trios-1920-1920x1080-a8bbb61d9229.jpg",
+        "image_url": "https://cdn2.unrealengine.com/ogbr-trios-640-640x360-522fe9b4f8fb.jpg",
+        "product_tag": "Product.BR.Build.Trio",
         "image_urls": {
-            "url_s": "https://cdn2.unrealengine.com/s26-trios-480-480x270-5d2267f72cd5.jpg",
-            "url_xs": "https://cdn2.unrealengine.com/s26-trios-256-256x144-ec3f21163583.jpg",
-            "url_m": "https://cdn2.unrealengine.com/s26-trios-640-640x360-fa5ca473906c.jpg",
-            "url": "https://cdn2.unrealengine.com/s26-trios-1920-1920x1080-a8bbb61d9229.jpg"
+            "url_s": "https://cdn2.unrealengine.com/ogbr-trios-640-640x360-522fe9b4f8fb.jpg",
+            "url_xs": "https://cdn2.unrealengine.com/ogbr-trios-640-640x360-522fe9b4f8fb.jpg",
+            "url_m": "https://cdn2.unrealengine.com/ogbr-trios-640-640x360-522fe9b4f8fb.jpg",
+            "url": "https://cdn2.unrealengine.com/ogbr-trios-640-640x360-522fe9b4f8fb.jpg"
         },
         "matchmaking": {
             "override_playlist": "playlist_trios"
@@ -44,7 +45,7 @@
     "active": true,
     "disabled": false,
     "created": "2021-10-01T00:56:45.053Z",
-    "published": "2021-08-03T15:27:20.799Z",
+    "published": "2023-11-03T08:28:43.403Z",
     "descriptionTags": [],
     "moderationStatus": "Unmoderated"
 }

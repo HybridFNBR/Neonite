@@ -5,46 +5,47 @@
   "mnemonic": "playlist_defaultduo",
   "linkType": "BR:Playlist",
   "metadata": {
-    "parent_set": "set_br_playlists",
-    "favorite_override": "set_br_playlists",
-    "play_history_override": "set_br_playlists",
-    "alt_title": {
-      "de": "Duo",
-      "ru": "\u041f\u0430\u0440\u043d\u044b\u0435 \u0441\u0440\u0430\u0436\u0435\u043d\u0438\u044f",
-      "ko": "\ub4c0\uc624",
-      "pt-BR": "Duplas",
-      "en": "Duo",
-      "it": "Coppie",
-      "fr": "Duos",
-      "zh-CN": "",
-      "es": "D\u00faos",
-      "es-MX": "En d\u00fao",
-      "zh": "",
-      "ar": "\u062b\u0646\u0627\u0626\u064a",
-      "zh-Hant": "",
-      "ja": "\u30c7\u30e5\u30aa",
-      "pl": "Pary",
-      "es-419": "En d\u00fao",
-      "tr": "\u00c7iftli"
-    },
-    "image_url": "https://cdn2.unrealengine.com/s26-duos-1920-1920x1080-d29e3f452e5c.jpg",
-    "image_urls": {
-      "url_s": "https://cdn2.unrealengine.com/s26-duos-480-480x270-07ae5f891004.jpg",
-      "url_xs": "https://cdn2.unrealengine.com/s26-duos-256-256x144-645623b81eaa.jpg",
-      "url_m": "https://cdn2.unrealengine.com/s26-duos-640-640x360-eed386bd6957.jpg",
-      "url": "https://cdn2.unrealengine.com/s26-duos-1920-1920x1080-d29e3f452e5c.jpg"
-    },
-    "matchmaking": {
-      "override_playlist": "playlist_defaultduo"
-    },
-    "video_vuid": "taqdZkWyokbCyEFWld",
-    "title": "Duo"
+      "parent_set": "set_br_playlists",
+      "favorite_override": "set_br_playlists",
+      "play_history_override": "set_br_playlists",
+      "alt_title": {
+          "de": "Duo",
+          "ru": "Парные сражения",
+          "ko": "듀오",
+          "pt-BR": "Duplas",
+          "en": "Duo",
+          "it": "Coppie",
+          "fr": "Duos",
+          "zh-CN": "",
+          "es": "Dúos",
+          "es-MX": "En dúo",
+          "zh": "",
+          "ar": "ثنائي",
+          "zh-Hant": "",
+          "ja": "デュオ",
+          "pl": "Pary",
+          "es-419": "En dúo",
+          "tr": "Çiftli"
+      },
+      "image_url": "https://cdn2.unrealengine.com/ogbr-duos-640-640x360-bae457925977.jpg",
+      "product_tag": "Product.BR.Build.Duo",
+      "image_urls": {
+          "url_s": "https://cdn2.unrealengine.com/ogbr-duos-640-640x360-bae457925977.jpg",
+          "url_xs": "https://cdn2.unrealengine.com/ogbr-duos-640-640x360-bae457925977.jpg",
+          "url_m": "https://cdn2.unrealengine.com/ogbr-duos-640-640x360-bae457925977.jpg",
+          "url": "https://cdn2.unrealengine.com/ogbr-duos-640-640x360-bae457925977.jpg"
+      },
+      "matchmaking": {
+          "override_playlist": "playlist_defaultduo"
+      },
+      "video_vuid": "taqdZkWyokbCyEFWld",
+      "title": "Duo"
   },
   "version": 95,
   "active": true,
   "disabled": false,
   "created": "2021-10-01T00:56:46.389Z",
-  "published": "2021-08-03T15:27:17.523Z",
+  "published": "2023-11-03T08:25:34.690Z",
   "descriptionTags": [],
   "moderationStatus": "Unmoderated"
 }
