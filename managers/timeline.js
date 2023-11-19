@@ -247,6 +247,17 @@ module.exports = (app) => {
                                 activeUntil: "9999-09-14T07:00:00.000Z",
                                 activeSince: "2015-09-14T07:00:00.000Z"
                             },
+                            {
+                                eventType: "DL01", // CH1/Ch4 end event leadup in-game(27.11)
+                                activeUntil: "9999-09-09T07:00:00.000Z",
+                                activeSince: "2020-09-09T07:00:00.000Z"
+                            },
+                            {
+                                eventType: "DL02", // CH1/Ch4 end event leadup lobby(27.11)
+                                activeUntil: "9999-09-09T07:00:00.000Z",
+                                activeSince: "2020-09-09T07:00:00.000Z"
+                            },
+                            
                             /*{      
                                 eventType: "SM1",//scorch marks 13.40
                                 activeUntil: "9999-09-14T07:00:00.000Z",
@@ -811,16 +822,6 @@ module.exports = (app) => {
                                 eventType: "MLQ24", 
                                 activeUntil: "9999-09-09T07:00:00.000Z",
                                 activeSince: "9999-09-09T07:00:00.000Z"
-                            },
-                            {
-                                eventType: "DL01", // CH1/Ch4 end event leadup in-game(27.11)
-                                activeUntil: "9999-09-09T07:00:00.000Z",
-                                activeSince: "2020-09-09T07:00:00.000Z"
-                            },
-                            {
-                                eventType: "DL02", // CH1/Ch4 end event leadup lobby(27.11)
-                                activeUntil: "9999-09-09T07:00:00.000Z",
-                                activeSince: "2020-09-09T07:00:00.000Z"
                             },
                             {
                                 eventType: "F0", // Fetivus Event Leadup(Ch1S7 Related)
