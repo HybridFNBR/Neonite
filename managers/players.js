@@ -122,7 +122,28 @@ module.exports = (app) => {
 	})
 
     app.get('/friends/api/v1/:accountId/summary', (req, res) => {
-		res.json({})
+		res.json({
+			"friends": [{
+				"accountId": req.params.accountId,
+				"groups": [],
+				"mutual": 0,
+				"alias": "",
+				"note": "",
+				"favorite": true,
+				"created": "2021-01-17T16:42:04.125Z"
+			}],
+			"incoming": [],
+			"suggested": [],
+			"blocklist": [],
+			"settings": {
+				"acceptInvites": "public"
+			},
+			"limitsReached": {
+				"incoming": false,
+				"outgoing": false,
+				"accepted": false
+			}
+		})
 	})
 
     app.get("/friends/api/v1/*/blocklist", (req, res) => { res.json([]) })

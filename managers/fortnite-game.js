@@ -24,7 +24,7 @@ module.exports = (app) => {
         var config = ini.parse(fs.readFileSync(path.join(__dirname, '../config.ini'), 'utf-8'));
         if(config.custom_background == true){
             backgrounds[0].stage = "defaultnotris"
-            backgrounds[0].backgroundimage = config.config_background.image_url
+            backgrounds[0].backgroundimage = config.image_url
             return res.json(fortnitegame);
         }
         if(config.custom_background == false)
