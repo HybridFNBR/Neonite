@@ -160,7 +160,7 @@ module.exports = (app) => {
                             {
                                 eventType: "KEL02", // Sky Fire Event-related (Countdown)
                                 activeUntil: "9999-09-14T07:00:00.000Z",
-                                activeSince: "2023-10-10T06:00:00.000Z"
+                                activeSince: "2020-10-10T06:00:00.000Z"
                             },
                             {
                                 eventType: "LCCS02", // S18 Corruption
@@ -257,7 +257,11 @@ module.exports = (app) => {
                                 activeUntil: "2023-12-02T21:10:00.000Z",
                                 activeSince: "2020-09-09T07:00:00.000Z"
                             },
-                            
+                            {
+                                eventType: "KEL01", // Kiwi Event Leadup(Ch2S7 Related)
+                                activeUntil: "9999-09-09T07:00:00.000Z",
+                                activeSince: "2023-10-29T00:00:00.000Z"
+                            },  
                             /*{      
                                 eventType: "SM1",//scorch marks 13.40
                                 activeUntil: "9999-09-14T07:00:00.000Z",
@@ -572,16 +576,6 @@ module.exports = (app) => {
                                 eventType: "BPAQ", //Bomb Parts Assembling(Ch2S7 related)
                                 activeUntil: "9999-09-09T07:00:00.000Z",
                                 activeSince: "2020-09-09T07:00:00.000Z"
-                            },
-                            {
-                                eventType: "KEL01", // Kiwi Event Leadup(Ch2S7 Related)
-                                activeUntil: "9999-09-09T07:00:00.000Z",
-                                activeSince: "2020-10-29T00:00:00.000Z"
-                            },
-                            {
-                                eventType: "KEL02", // Kiwi Event Leadup 2(Ch2S7 Related)
-                                activeUntil: "9999-09-09T07:00:00.000Z",
-                                activeSince: "2020-10-29T00:00:00.000Z"
                             },
                             {
                                 eventType: "CCSP01", //Cube Corruption Spread Paused(Ch2S8 related)
