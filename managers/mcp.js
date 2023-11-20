@@ -14,7 +14,7 @@ const NeoLog = require("../structs/NeoLog");
 var config = ini.parse(fs.readFileSync(path.join(__dirname, '../config.ini'), 'utf-8'));
 const cosmetics = JSON.parse(JSON.stringify(require("../cosmetics_config.json")));
 
-//testing
+
 
 /**
  * 
@@ -30,7 +30,7 @@ module.exports = (app) => {
 
 
 
-	app.post('/fortnite/api/game/v2/profile/:accountId/client/:command', (req, res, next) => {
+	app.post('/fortnite/api/game/v2/profile/:accountId/client/:command', async (req, res, next) => {
 		res.setHeader("Content-Type", "application/json");
 		var accountId = req.params.accountId;
 		var athenprofile = Profile.readProfile(accountId, "athena")
@@ -344,6 +344,50 @@ module.exports = (app) => {
 			}
 			case "QueryProfile": {
 				const grantDefaultItems = getOrCreateProfile("athena");
+				
+				async function simpleProfile(){
+					if(config.simpleProfile == true){
+						const cosmeticArrays = [
+							cosmetics.Characters,
+							cosmetics.Emotes,
+							cosmetics.BackBlings,
+							cosmetics.LoadingScreens,
+							cosmetics.WeaponWraps,
+							cosmetics.Pickaxes,
+							cosmetics.Gliders,
+							cosmetics.MusicPacks
+	
+						];
+						try{
+							cosmeticArrays.forEach(cosmeticArray => {
+								cosmeticArray.forEach(async cosmeticItem => {
+									await Profile.addItem(athenprofile, cosmeticItem, {
+										attributes: {
+											"max_level_bonus": 0,
+											"level": 1,
+											"item_seen": true,
+											"xp": 0,
+											"variants": [],
+											"favorite": false
+										},
+										"templateId": cosmeticItem
+									});
+								});
+							})
+							Profile.bumpRvn(athenprofile)
+							Profile.saveProfile(accountId, "athena", athenprofile)
+							grantDefaultItems.response.profileChanges = [
+								{
+									changeType: "fullProfileUpdate",
+									profile: athenprofile
+								}
+							]
+							response.multiUpdate = [grantDefaultItems.response]
+						}
+						catch{}
+					}
+				}
+
 				if(season <= 10.40 || season =="Cert" || season == "Live")
 				{
 					try{//athena.items does not exist if there is no profile so just try and catch the error until it exists.
@@ -383,7 +427,7 @@ module.exports = (app) => {
 							"templateId": "AthenaGlider:DefaultGlider"
 							
 						})
-						
+						simpleProfile()
 						athenprofile.stats["attributes"]["favorite_character"] = "AthenaCharacter:CID_001_Athena_Commando_F_Default"
 						athenprofile.stats["attributes"]["favorite_pickaxe"] = "AthenaPickaxe:DefaultPickaxe"
 						athenprofile.stats["attributes"]["favorite_glider"] = "AthenaGlider:DefaultGlider"				
@@ -401,47 +445,9 @@ module.exports = (app) => {
 					catch{}
 					break;
 				}
-				if(config.simpleProfile == true){
-					const cosmeticArrays = [
-						cosmetics.Characters,
-						cosmetics.Emotes,
-						cosmetics.BackBlings,
-						cosmetics.LoadingScreens,
-						cosmetics.WeaponWraps,
-						cosmetics.Pickaxes,
-						cosmetics.Gliders,
-						cosmetics.MusicPacks
-
-					];
-					try{
-						cosmeticArrays.forEach(cosmeticArray => {
-							cosmeticArray.forEach(cosmeticItem => {
-								Profile.addItem(athenprofile, cosmeticItem, {
-									attributes: {
-										"max_level_bonus": 0,
-										"level": 1,
-										"item_seen": true,
-										"xp": 0,
-										"variants": [],
-										"favorite": false
-									},
-									"templateId": cosmeticItem
-								});
-							});
-						})
-						Profile.saveProfile(accountId, "athena", athenprofile)
-						Profile.bumpRvn(athenprofile)
-						grantDefaultItems.response.profileChanges = [
-							{
-								changeType: "fullProfileUpdate",
-								profile: athenprofile
-							}
-						]
-						response.multiUpdate = [grantDefaultItems.response]
-					}
-					catch{}
+				else{
+					simpleProfile()
 				}
-				
 				break;
 			}
 			case "RemoveGiftBox": {
