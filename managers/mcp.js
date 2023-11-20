@@ -222,16 +222,15 @@ module.exports = (app) => {
 				checkValidProfileID("common_core")
 				const commoncore = Profile.readProfile(accountId, "common_core");
 				const finalValue = commoncore.items["Currency:MtxPurchased"]["quantity"] - req.body["expectedTotalPrice"]
-				commoncore.items = {
-					"Currency:MtxPurchased": {
+				commoncore.items["Currency:MtxPurchased"] = {
 						"attributes": {
 						  "platform": "EpicPC"
 						},
 						"quantity": finalValue,
 						"templateId": "Currency:MtxPurchased"
-					  }
-				}				
-				
+					  
+					}
+				Profile.saveProfile(accountId, "common_core", commoncore)
 
 				const shop = require("../responses/shopv2.json");
 				let catalogEntryToPurchase = null;
@@ -265,7 +264,6 @@ module.exports = (app) => {
 					});
 				}
 				
-				Profile.bumpRvn(commoncore)
 				commoncore.stats.attributes["mtx_purchase_history"] = {
 					"refundsUsed" : 0,
 					"refundCredits" : 3,
