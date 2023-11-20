@@ -232,7 +232,13 @@ module.exports = (app) => {
 					}
 				Profile.saveProfile(accountId, "common_core", commoncore)
 
-				const shop = require("../responses/shopv2.json");
+				if(season >= 26.30){
+					const shop = require("../responses/shopv2.json");
+				}
+				else{
+					shop = require("../responses/shopv1.json"); 
+				}
+				
 				let catalogEntryToPurchase = null;
 				for (let storefront of shop.storefronts) {
 					/*if (!storefront.name.startsWith("BR")) {
