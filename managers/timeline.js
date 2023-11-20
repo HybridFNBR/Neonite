@@ -261,7 +261,27 @@ module.exports = (app) => {
                                 eventType: "KEL01", // Kiwi Event Leadup(Ch2S7 Related)
                                 activeUntil: "9999-09-09T07:00:00.000Z",
                                 activeSince: "2023-10-29T00:00:00.000Z"
-                            },  
+                            },
+                            {
+                                eventType: "WSL0", //Snow Level(season 11)
+                                activeUntil: "9999-09-14T07:00:00.000Z",
+                                activeSince: "9999-09-14T07:00:00.000Z"
+                            },
+                            {
+                                eventType: "WSL1", //Snow Level(season 11)
+                                activeUntil: "9999-09-14T07:00:00.000Z",
+                                activeSince: "9999-09-14T07:00:00.000Z"
+                            },
+                            {
+                                eventType: "WSL2", //Snow Level(season 11)
+                                activeUntil: "9999-09-14T07:00:00.000Z",
+                                activeSince: "9999-09-14T07:00:00.000Z"
+                            },
+                            {
+                                eventType: "WSL3", //Snow Level(season 11)
+                                activeUntil: "9999-09-14T07:00:00.000Z",
+                                activeSince: "2015-09-14T07:00:00.000Z"
+                            },
                             /*{      
                                 eventType: "SM1",//scorch marks 13.40
                                 activeUntil: "9999-09-14T07:00:00.000Z",
