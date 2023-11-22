@@ -361,6 +361,7 @@ module.exports = (app) => {
 								cosmetics.Pickaxes,
 								cosmetics.Gliders,
 								cosmetics.MusicPacks,
+								cosmetics.Contrails
 		
 							];
 						

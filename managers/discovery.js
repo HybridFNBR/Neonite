@@ -46,8 +46,7 @@ module.exports = (app) => {
 										"linkCode": "playlist_durian",
 										"isFavorite": false,
 										"globalCCU": 1
-									}
-									,
+									},
 									{
 										"lastVisited": null,
 										"linkCode": "playlist_papaya",
