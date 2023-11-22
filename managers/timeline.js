@@ -283,7 +283,7 @@ module.exports = (app) => {
                                 activeSince: "2015-09-14T07:00:00.000Z"
                             },
                             {
-                                eventType: "TopSecret", //Holiday Bus(season 13)
+                                eventType: "TopSecret", //Holiday Bus(season 11)
                                 activeUntil: "9999-09-14T07:00:00.000Z",
                                 activeSince: "2015-09-14T07:00:00.000Z"
                             },

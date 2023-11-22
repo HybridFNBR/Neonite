@@ -350,19 +350,20 @@ module.exports = (app) => {
 				const grantDefaultItems = getOrCreateProfile("athena");
 				
 				async function simpleProfile(){
-					if(config.simpleProfile == true){
-						const cosmeticArrays = [
-							cosmetics.Characters,
-							cosmetics.Emotes,
-							cosmetics.BackBlings,
-							cosmetics.LoadingScreens,
-							cosmetics.WeaponWraps,
-							cosmetics.Pickaxes,
-							cosmetics.Gliders,
-							cosmetics.MusicPacks
-	
-						];
-						try{
+					try{
+						if(config.simpleProfile == true){
+							const cosmeticArrays = [
+								cosmetics.Characters,
+								cosmetics.Emotes,
+								cosmetics.BackBlings,
+								cosmetics.LoadingScreens,
+								cosmetics.WeaponWraps,
+								cosmetics.Pickaxes,
+								cosmetics.Gliders,
+								cosmetics.MusicPacks,
+		
+							];
+						
 							cosmeticArrays.forEach(cosmeticArray => {
 								cosmeticArray.forEach(async cosmeticItem => {
 									await Profile.addItem(athenprofile, cosmeticItem, {
@@ -388,10 +389,9 @@ module.exports = (app) => {
 							]
 							response.multiUpdate = [grantDefaultItems.response]
 						}
-						catch{}
-					}
+					}catch{}
 				}
-
+					
 				if(season <= 10.40 || season =="Cert" || season == "Live")
 				{
 					try{//athena.items does not exist if there is no profile so just try and catch the error until it exists.
