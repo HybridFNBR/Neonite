@@ -249,12 +249,12 @@ module.exports = (app) => {
                             },
                             {
                                 eventType: "DL01", // Durian Event-related (Countdown)
-                                activeUntil: "2023-12-02T21:10:00.000Z",
+                                activeUntil: "2023-12-02T18:57:00.000Z",
                                 activeSince: "2020-09-09T07:00:00.000Z"
                             },
                             {
                                 eventType: "DL02", // Durian Event-related (Countdown)
-                                activeUntil: "2023-12-02T21:10:00.000Z",
+                                activeUntil: "2023-12-02T18:57:00.000Z",
                                 activeSince: "2020-09-09T07:00:00.000Z"
                             },
                             {
