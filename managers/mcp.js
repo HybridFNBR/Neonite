@@ -366,8 +366,8 @@ module.exports = (app) => {
 							];
 						
 							cosmeticArrays.forEach(cosmeticArray => {
-								cosmeticArray.forEach(async cosmeticItem => {
-									await Profile.addItem(athenprofile, cosmeticItem, {
+								cosmeticArray.forEach(cosmeticItem => {
+									Profile.addItem(athenprofile, cosmeticItem, {
 										attributes: {
 											"max_level_bonus": 0,
 											"level": 1,
@@ -451,7 +451,10 @@ module.exports = (app) => {
 					break;
 				}
 				else{
-					simpleProfile()
+					try{
+						simpleProfile()
+					}
+					catch{}
 				}
 				break;
 			}
