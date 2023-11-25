@@ -451,10 +451,9 @@ module.exports = (app) => {
 					break;
 				}
 				else{
-					try{
-						simpleProfile()
-					}
-					catch{}
+					
+					simpleProfile()
+					
 				}
 				break;
 			}
