@@ -911,7 +911,7 @@ module.exports = (app) => {
 
         if(seasonglobal == 14 || seasonglobal == 18 || seasonglobal == 22){
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
-                eventType: "EventFlag.HalloweenBattleBus", //Halloween Bus (S7/S11/S15/S19)
+                eventType: "EventFlag.HalloweenBattleBus", //Halloween Bus (S14/S18/S22)
                 activeUntil: "9999-09-14T07:00:00.000Z",
                 activeSince: "2015-09-14T07:00:00.000Z"
             })
