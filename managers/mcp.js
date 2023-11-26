@@ -30,7 +30,7 @@ module.exports = (app) => {
 
 
 
-	app.post('/fortnite/api/game/v2/profile/:accountId/client/:command', async (req, res, next) => {
+	app.post('/fortnite/api/game/v2/profile/:accountId/client/:command', (req, res, next) => {
 		res.setHeader("Content-Type", "application/json");
 		var accountId = req.params.accountId;
 		var athenprofile = Profile.readProfile(accountId, "athena")
@@ -349,7 +349,7 @@ module.exports = (app) => {
 			case "QueryProfile": {
 				const grantDefaultItems = getOrCreateProfile("athena");
 				
-				async function simpleProfile(){
+				function simpleProfile(){
 					try{
 						if(config.simpleProfile == true){
 							const cosmeticArrays = [

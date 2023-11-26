@@ -162,16 +162,6 @@ module.exports = (app) => {
 		})
 	});
 
-	app.all("/fortnite/api/discovery/accessToken/:fortniteVersion", (req, res) => {
-		const useragent = req.headers["user-agent"];
-		const regex = useragent.match(/\+\+Fortnite\+Release-\d+\.\d+/);
-		res.json({
-			"branchName" : regex[0],
-			"appId" : "Fortnite",
-			"token" : `${crypto.randomBytes(10).toString("hex")}=`
-		  })
-	})
-
 	app.get("/account/api/public/account/displayName/:displayName", (req, res) => {
 		res.json({
 			"id": req.params.displayName,

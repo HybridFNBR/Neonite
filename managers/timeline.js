@@ -7,14 +7,17 @@ var ini = require('ini')
  * @param {Express.Application} app 
  */
 
+
+function getSeasonInfo(req) {
+    const userAgent = req.headers["user-agent"];
+    const season = userAgent.split('-')[1];
+    const seasonglobal = season.split('.')[0];
+    return { season, seasonglobal };
+}
+
 module.exports = (app) => {
     app.get('/fortnite/api/calendar/v1/timeline', (req, res) => {
-        var season
-        try {
-            season = req.headers["user-agent"].split("-")[1].split(".")[0]
-        } catch {
-            season = 1
-        }
+        const { season, seasonglobal } = getSeasonInfo(req);
         var config = ini.parse(fs.readFileSync(path.join(__dirname, '../config.ini'), 'utf-8'));
         const timeline = {
             channels: {
@@ -113,7 +116,7 @@ module.exports = (app) => {
                                 activeSince: "2019-12-31T23:59:59.999Z"
                             },
                             {
-                                eventType: `EventFlag.LobbySeason${season}`,
+                                eventType: `EventFlag.LobbySeason${seasonglobal}`,
                                 activeUntil: "2021-09-24T14:00:00.000Z",
                                 activeSince: "2021-06-05T14:00:00.000Z"
                             },
@@ -282,11 +285,7 @@ module.exports = (app) => {
                                 activeUntil: "9999-09-14T07:00:00.000Z",
                                 activeSince: "2015-09-14T07:00:00.000Z"
                             },
-                            {
-                                eventType: "TopSecret", //Holiday Bus (S7/S11/S15/S19)
-                                activeUntil: "9999-09-14T07:00:00.000Z",
-                                activeSince: "2015-09-14T07:00:00.000Z"
-                            },
+                            
                             /*{      
                                 eventType: "SM1",//scorch marks 13.40
                                 activeUntil: "9999-09-14T07:00:00.000Z",
@@ -901,6 +900,23 @@ module.exports = (app) => {
             cacheIntervalMins: 0.1,
             currentTime: new Date().toISOString()
         }
+
+        if(seasonglobal == 7 || seasonglobal == 11 || seasonglobal == 15 || seasonglobal == 19){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push({
+                eventType: "TopSecret", //Holiday Bus (S7/S11/S15/S19)
+                activeUntil: "9999-09-14T07:00:00.000Z",
+                activeSince: "2015-09-14T07:00:00.000Z"
+            })
+        }
+
+        if(seasonglobal == 14 || seasonglobal == 18 || seasonglobal == 22){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push({
+                eventType: "EventFlag.HalloweenBattleBus", //Halloween Bus (S7/S11/S15/S19)
+                activeUntil: "9999-09-14T07:00:00.000Z",
+                activeSince: "2015-09-14T07:00:00.000Z"
+            })
+        }
+
         if(config.RufusWeek2 == true){
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "RufusWeek2", // Rufus Week 2(Chapter 4 Season OG)
