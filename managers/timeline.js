@@ -117,7 +117,7 @@ module.exports = (app) => {
                             },
                             {
                                 eventType: `EventFlag.LobbySeason${seasonglobal}`,
-                                activeUntil: "2021-09-24T14:00:00.000Z",
+                                activeUntil: "9999-12-31T23:59:59.999Z",
                                 activeSince: "2021-06-05T14:00:00.000Z"
                             },
                             {
@@ -881,8 +881,8 @@ module.exports = (app) => {
                             activeStorefronts: [],
                             eventNamedWeights: {},
                             activeEvents: [],
-                            seasonNumber: season,
-                            seasonTemplateId: `AthenaSeason:athenaseason${season}`,
+                            seasonNumber: seasonglobal,
+                            seasonTemplateId: `AthenaSeason:athenaseason${seasonglobal}`,
                             matchXpBonusPoints: 0,
                             eventPunchCardTemplateId: "",
                             seasonBegin: "2021-06-05T14:00:00Z",
