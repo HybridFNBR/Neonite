@@ -422,7 +422,7 @@ module.exports = (app) => {
 		const {season} = getSeasonInfo(req);
 		if(season >= 26.30)
 			return res.json(require("../responses/shopv2.json"));
-		if(season == "Cert" || season == "Live"){
+		if(season == "Cert" || season == "Live" || season <= 3.5){
 			return res.status(404).end();
 		}
 		else{
