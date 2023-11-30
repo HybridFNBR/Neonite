@@ -212,15 +212,14 @@
         "linkType": "BR:Playlist",
         "metadata": {
             "alt_title": {},
-            "alt_tagline":{},
-            "image_url": "https://media.discordapp.net/attachments/897572308837892196/1176520077332463678/T_LS_S27_DurianKeyArt.png",
+            "image_url": "https://cdn2.unrealengine.com/durianplaylisttile-1920x1080-29e3df9ddaac.jpg",
+            "tagline": "Experience a new beginning, featuring an appearance by Eminem. But this isn't a concert...it's The Big Bang! \r\n PHOTOSENSITIVITY/SEIZURES WARNING: The event has flashing lights. IMMEDIATELY DISCONTINUE if you experience any discomfort.",
             "image_urls": {
-                "url_s": "https://media.discordapp.net/attachments/897572308837892196/1176520077332463678/T_LS_S27_DurianKeyArt.png",
-                "url_xs": "https://media.discordapp.net/attachments/897572308837892196/1176520077332463678/T_LS_S27_DurianKeyArt.png",
-                "url_m": "https://media.discordapp.net/attachments/897572308837892196/1176520077332463678/T_LS_S27_DurianKeyArt.png",
-                "url": "https://media.discordapp.net/attachments/897572308837892196/1176520077332463678/T_LS_S27_DurianKeyArt.png"
+                "url_s": "https://cdn2.unrealengine.com/durianplaylisttile-1920x1080-29e3df9ddaac.jpg",
+                "url_xs": "https://cdn2.unrealengine.com/durianplaylisttile-1920x1080-29e3df9ddaac.jpg",
+                "url_m": "https://cdn2.unrealengine.com/durianplaylisttile-1920x1080-29e3df9ddaac.jpg",
+                "url": "https://cdn2.unrealengine.com/durianplaylisttile-1920x1080-29e3df9ddaac.jpg"
             },
-            "tagline": "Experience a new beginning, featuring an appearance by Eminem. But this isn't a concert... it's The Big Bang!",
             "matchmaking": {
                 "override_playlist": "playlist_durian"
             },
