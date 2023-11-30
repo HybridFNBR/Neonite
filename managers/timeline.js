@@ -195,41 +195,6 @@ module.exports = (app) => {
                                 activeSince: "2021-07-27T06:00:00.000Z"
                             },
                             {
-                                eventType: "RL01", // Fracture Event-related (Countdown)
-                                activeUntil: "9999-09-14T07:00:00.000Z",
-                                activeSince: "2021-07-27T06:00:00.000Z"
-                            },
-                            {
-                                eventType: "RL02", // Fracture Event-related (Countdown)
-                                activeUntil: "9999-09-14T07:00:00.000Z",
-                                activeSince: "2021-07-27T06:00:00.000Z"
-                            },
-                            {
-                                eventType: "RL12", // Fracture Event-related (Countdown)
-                                activeUntil: "9999-09-14T07:00:00.000Z",
-                                activeSince: "2021-07-27T06:00:00.000Z"
-                            },
-                            {
-                                eventType: "RL13", // Fracture Event-related (Countdown)
-                                activeUntil: "9999-09-14T07:00:00.000Z",
-                                activeSince: "2021-07-27T06:00:00.000Z"
-                            },
-                            {
-                                eventType: "RL14", // Fracture Event-related (Countdown)
-                                activeUntil: "9999-09-14T07:00:00.000Z",
-                                activeSince: "2021-07-27T06:00:00.000Z"
-                            },
-                            {
-                                eventType: "RL15", // Fracture Event-related (Countdown)
-                                activeUntil: "9999-09-14T07:00:00.000Z",
-                                activeSince: "2021-07-27T06:00:00.000Z"
-                            },
-                            {
-                                eventType: "RL16", // Fracture Event-related (Countdown)
-                                activeUntil: "9999-09-14T07:00:00.000Z",
-                                activeSince: "2021-07-27T06:00:00.000Z"
-                            },
-                            {
                                 eventType: "CalendarEvent_Season23_Winterfest", // Winterfest 2022
                                 activeUntil: "9999-09-14T07:00:00.000Z",
                                 activeSince: "2021-07-27T06:00:00.000Z"
@@ -886,7 +851,7 @@ module.exports = (app) => {
                             matchXpBonusPoints: 0,
                             eventPunchCardTemplateId: "",
                             seasonBegin: "2021-06-05T14:00:00Z",
-                            seasonEnd: "2021-09-24T14:00:00Z",
+                            seasonEnd: "9999-12-31T23:59:59.999Z",
                             seasonDisplayedEnd: "2021-09-30T04:00:00Z",
                             dailyStoreEnd: "9999-12-31T23:59:59.999Z",
                             weeklyStoreEnd: "9999-12-31T23:59:59.999Z",
@@ -899,6 +864,77 @@ module.exports = (app) => {
             },
             cacheIntervalMins: 0.1,
             currentTime: new Date().toISOString()
+        }
+
+
+        if(season == 18.40){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push(
+                {
+                    eventType: "GGL01", // Chapter 2 Finale Event-related (Countdown)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2021-07-27T06:00:00.000Z"
+                },
+                {
+                    eventType: "GGL02", // Chapter 2 Finale Event-related (Countdown)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2021-07-27T06:00:00.000Z"
+                }
+            )
+        }
+
+        if(season == 20.40){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push(
+                {
+                    eventType: "AL01", // Collision Event-related (Countdown)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2021-07-27T06:00:00.000Z"
+                },
+                {
+                    eventType: "AL02", // Collision Event-related (Countdown)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2021-07-27T06:00:00.000Z"
+                }
+            )
+        }
+
+        if(season == 22.40){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push(
+                {
+                    eventType: "RL01", // Fracture Event-related (Countdown)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2021-07-27T06:00:00.000Z"
+                },
+                {
+                    eventType: "RL02", // Fracture Event-related (Countdown)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2021-07-27T06:00:00.000Z"
+                },
+                {
+                    eventType: "RL12", // Fracture Event-related (Countdown)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2021-07-27T06:00:00.000Z"
+                },
+                {
+                    eventType: "RL13", // Fracture Event-related (Countdown)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2021-07-27T06:00:00.000Z"
+                },
+                {
+                    eventType: "RL14", // Fracture Event-related (Countdown)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2021-07-27T06:00:00.000Z"
+                },
+                {
+                    eventType: "RL15", // Fracture Event-related (Countdown)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2021-07-27T06:00:00.000Z"
+                },
+                {
+                    eventType: "RL16", // Fracture Event-related (Countdown)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2021-07-27T06:00:00.000Z"
+                }
+            )
         }
 
         if(seasonglobal == 7 || seasonglobal == 11 || seasonglobal == 15 || seasonglobal == 19){

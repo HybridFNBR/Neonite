@@ -107,6 +107,10 @@ module.exports = (app) => {
                             backgrounds[0].stage = "season2600"
                             backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/0814-ch4s4-lobby-2048x1024-2048x1024-e3c2cf8d342d.png"
                         }
+                        if(season === "27.11"){
+                            backgrounds[0].stage = "defaultnotris"
+                            backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/durianlobby-4096x2048-7adfc906c50a.jpg"
+                        }
                     break;
                 default:
                     backgrounds[0].backgroundimage = content.dynamicbackgrounds.backgrounds.backgrounds[0].backgroundimage;
