@@ -346,7 +346,23 @@ module.exports = (app) => {
 				checkValidProfileID("profile0");
 				break;
 			}
+
+			case "SetItemArchivedStatusBatch": {
+				checkValidProfileID("campaign", "athena");
+
+				req.body.itemIds.forEach(itemId => {
+					if (typeof itemId === "string" && typeof req.body.archived === "boolean") {
+						Profile.changeItemAttribute(profileData, itemId, "archived", req.body.archived, profileChanges);
+					}
+				});
+				Profile.bumpRvn(athenprofile)
+
+				break;
+			}
+
 			case "QueryProfile": {
+				console.log(req.body)
+				console.log(req.query)
 				const grantDefaultItems = getOrCreateProfile("athena");
 				
 				function simpleProfile(){
