@@ -771,6 +771,11 @@ module.exports = (app) => {
 				break;
 			}
 
+			case "ExchangeGameCurrencyForBattlePassOffer":{
+				checkValidProfileID("athena")
+				break;
+			}
+
 			case "RefundMtxPurchase": {
 				checkValidProfileID("common_core");
 
@@ -787,6 +792,8 @@ module.exports = (app) => {
 				}
 				break;
 			}
+
+			c
 
 			default: {
 				return next(new ApiException(errors.com.epicgames.fortnite.operation_not_found).with(req.params.command));
