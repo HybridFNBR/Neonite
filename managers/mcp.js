@@ -523,8 +523,6 @@ module.exports = (app) => {
 
 				const locker_slots_data = item.attributes.locker_slots_data;
 				let lockerSlot = locker_slots_data.slots[req.body.category];
-
-				// Define the expected locker items capacity.
 				var expectedCapacity;
 				switch (req.body.category) {
 					case "Dance":
@@ -538,7 +536,6 @@ module.exports = (app) => {
 						break;
 				}
 
-				// FIXME: It's unclear at which condition the `lockerSlot` might not exist.
 				if (!lockerSlot) {
 					lockerSlot = locker_slots_data.slots[req.body.category] = {
 						items: new Array(expectedCapacity),
@@ -767,6 +764,39 @@ module.exports = (app) => {
 				if (typeof req.body.bReceiveGifts === "boolean") {
 					Profile.modifyStat(profileData, "allowed_to_receive_gifts", req.body.bReceiveGifts, profileChanges);
 				}
+
+				break;
+			}
+
+			case "PutModularCosmeticLoadout":{
+				/*const Athena = getOrCreateProfile("athena")
+				const parsedData = JSON.parse(req.body["loadoutData"])
+				//these indexes shouldnt change
+				const CharacterSlot = parsedData["slots"][0]["equipped_item"]
+				const BackpackSlot = parsedData["slots"][1]["equipped_item"]
+				const PickaxeSlot = parsedData["slots"][2]["equipped_item"]
+				const GliderSlot = parsedData["slots"][3]["equipped_item"]
+				const ContrailSlot = parsedData["slots"][4]["equipped_item"]
+				const AuraSlot = parsedData["slots"][5]["equipped_item"]
+
+				const slots = athenprofile.items.sandbox_loadout.attributes["locker_slots_data"]["slots"];
+				slots["Character"] = {
+					"items":[
+						CharacterSlot
+					]
+				}
+
+				Profile.saveProfile(accountId, "athena", athenprofile)
+				Profile.bumpRvn(athenprofile)
+				Athena.response.profileChanges = [
+					{
+						changeType: "fullProfileUpdate",
+						profile: athenprofile
+					}
+				]*/
+
+				//will finish later
+
 
 				break;
 			}
