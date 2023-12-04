@@ -361,8 +361,6 @@ module.exports = (app) => {
 			}
 
 			case "QueryProfile": {
-				console.log(req.body)
-				console.log(req.query)
 				const grantDefaultItems = getOrCreateProfile("athena");
 				
 				function simpleProfile(){
