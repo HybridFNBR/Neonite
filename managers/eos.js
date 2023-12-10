@@ -64,7 +64,7 @@ module.exports = (app) => {
         });
 	});
 
-    app.get(['/sdk/v1/product/prod-fn','/sdk/v1/default'], (req, res) => {
+    app.get('/sdk/v1/*', (req, res) => {
 		res.json({
             "client":{
                "RateLimiter.InventoryClient":{

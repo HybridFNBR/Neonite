@@ -78,9 +78,6 @@ module.exports = (app) => {
 
 				profileData.stats["attributes"]["past_seasons"] = pastSeasons;
 			}
-			
-			
-
 			return {
 				profileData,
 				response: {
@@ -362,7 +359,6 @@ module.exports = (app) => {
 
 			case "QueryProfile": {
 				const grantDefaultItems = getOrCreateProfile("athena");
-				
 				function simpleProfile(){
 					try{
 						if(config.simpleProfile == true){
@@ -767,36 +763,53 @@ module.exports = (app) => {
 			}
 
 			case "PutModularCosmeticLoadout":{
-				/*const Athena = getOrCreateProfile("athena")
-				const parsedData = JSON.parse(req.body["loadoutData"])
-				//these indexes shouldnt change
-				const CharacterSlot = parsedData["slots"][0]["equipped_item"]
-				const BackpackSlot = parsedData["slots"][1]["equipped_item"]
-				const PickaxeSlot = parsedData["slots"][2]["equipped_item"]
-				const GliderSlot = parsedData["slots"][3]["equipped_item"]
-				const ContrailSlot = parsedData["slots"][4]["equipped_item"]
-				const AuraSlot = parsedData["slots"][5]["equipped_item"]
-
-				const slots = athenprofile.items.sandbox_loadout.attributes["locker_slots_data"]["slots"];
-				slots["Character"] = {
-					"items":[
-						CharacterSlot
-					]
+				const Athena = getOrCreateProfile("athena")
+				var parsedData = JSON.parse(req.body["loadoutData"])
+				var cosmesticloadout = athenprofile.items["NEONITE"]
+				if (typeof cosmesticloadout == 'undefined'){
+					Profile.modifyStat(athenprofile, "loadout_presets", {
+						"CosmeticLoadout:LoadoutSchema_Character" : {
+							"0" : "NEONITE",
+						}
+					})
+					Profile.addItem(athenprofile, "NEONITE", {
+						"templateId": "CosmeticLoadout:LoadoutSchema_Character",
+						"attributes": parsedData
+					});
+					
+					Profile.saveProfile(accountId, "athena", athenprofile)
+					Profile.bumpRvn(athenprofile)
+					Athena.response.profileChanges = {
+						"changeType" : "itemAttrChanged",
+						"itemId" : "NEONITE",
+						"attributeName" : "slots",
+						"attributeValue" : [ {
+							parsedData
+						} ]
+					}
+					response.multiUpdate = [Athena.response]
+					console.log("its undefined")
+				}
+				else{
+					athenprofile.items["NEONITE"] = {
+						"templateId": "CosmeticLoadout:LoadoutSchema_Character",
+						"attributes": parsedData
+					}
+					Profile.saveProfile(accountId, "athena", athenprofile)
+					Profile.bumpRvn(athenprofile)
+					Athena.response.profileChanges = {
+						"changeType" : "itemAttrChanged",
+						"itemId" : "NEONITE",
+						"attributeName" : "slots",
+						"attributeValue" : [ {
+							parsedData
+						} ]
+					}
+					response.multiUpdate = [Athena.response]
 				}
 
-				Profile.saveProfile(accountId, "athena", athenprofile)
-				Profile.bumpRvn(athenprofile)
-				Athena.response.profileChanges = [
-					{
-						changeType: "fullProfileUpdate",
-						profile: athenprofile
-					}
-				]*/
-
-				//will finish later
-
-
 				break;
+				//for some reason fortnite only requests this the first time changing cosmetic, changing cosmetic after the fact this does not get requested again unless booting up the game *this is not intended and will be fixed
 			}
 
 			case "ExchangeGameCurrencyForBattlePassOffer":{
