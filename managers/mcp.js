@@ -229,12 +229,14 @@ module.exports = (app) => {
 					}
 				Profile.saveProfile(accountId, "common_core", commoncore)
 
+				let shop
 				if(season >= 26.30){
-					const shop = require("../responses/shopv2.json");
+					shop = require("../responses/shopv2.json");
 				}
 				else{
 					shop = require("../responses/shopv1.json"); 
 				}
+				
 				
 				let catalogEntryToPurchase = null;
 				for (let storefront of shop.storefronts) {
@@ -788,7 +790,6 @@ module.exports = (app) => {
 						} ]
 					}
 					response.multiUpdate = [Athena.response]
-					console.log("its undefined")
 				}
 				else{
 					athenprofile.items["NEONITE"] = {
