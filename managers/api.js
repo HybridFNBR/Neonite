@@ -497,10 +497,16 @@ module.exports = (app) => {
 	app.post("/fortnite/api/game/v2/profileToken/verify/*", (req, res) => { res.status(204).end() })
 
 
-	app.get('/fortnite/api/storefront/v2/keychain', (req, res) => {
+	
 
-		//makes it easier to manage event keychains then having them in keychain.json
+	app.get('/fortnite/api/storefront/v2/keychain', async(req, res) => {
+		const {season} = getSeasonInfo(req);
+		const keychain = require("../responses/keychain.json")
+
 		const EventKeychainManager = {
+			"Marshmello Concert":[
+				"A9AFB4A346420DB1399A2FB2065528F5:Zjzo+CaLNmCygplzQo2wUL4LT33DEiL6qZWE2R0EYMg="
+			],
 			"The Big Bang LTM":[
 				"020BFB18192345A6CF1AB75A66D879DD:T9UgbPCAqJBtxypUfcH/MqLBL5D8dc2rh8H6/La3FDk=",
 				"0C81D16F6CF41C862D0B097DBE5E624A:qIzymfmYIWAQbAhalU2MQOR6vwmj42xHgtW41rhIev4=",
@@ -537,14 +543,19 @@ module.exports = (app) => {
 				"52366B48F1048E512A4ADB69B1830522:4/yBC527LoHOBvjPVZZOG3vqIFRZMYJKlKuD1OgYK9Q=",
 				"9E380D6486FDC2BD798C4AC03EA99956:IG7ZP06IgAnipEmMYxb7jdt7HuXHo5u8zUpomvJYgjM=",
 			]
-
+	
 		}
-		const keychain = require("../responses/keychain.json")
-		EventKeychainManager['The Big Bang LTM'].forEach(item => {
-			keychain.push(item);
-		});
-		
-		
-		res.json(keychain)
+
+		if (season == "7.30") {
+			EventKeychainManager['Marshmello Concert'].forEach(item => {
+			  keychain.push(item);
+			});
+		}
+		else if(season == "27.11"){
+			EventKeychainManager['The Big Bang LTM'].forEach(item => {
+			  keychain.push(item);
+			});
+		}
+		return res.json(keychain)
 	})
 };
