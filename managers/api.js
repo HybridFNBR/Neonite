@@ -507,6 +507,50 @@ module.exports = (app) => {
 			"Marshmello Concert":[
 				"A9AFB4A346420DB1399A2FB2065528F5:Zjzo+CaLNmCygplzQo2wUL4LT33DEiL6qZWE2R0EYMg="
 			],
+			"Monster Vs Robot":[
+				"79F7D9C856E8CF354109D3298F076C06:Ak3TOM0i0Mq/KYxd7SDlSuS7o55USaf+urL6WqnmalY="
+			],
+			"The End Event Season 10":[
+				"8C623F6A49CFF9ADC7895A466CA1C896:kLmYdLi+jOBs2k+B/UxrCcPSdvuNYTha0xl9+SvUzJU="
+			],
+			"StarWars Event":[
+				"0C2DFF3432352A23684E05B0794DFFC7:FG55cmgdBnszsr5pS0aBC44NVl7OyI+AuOXxALyaNKA=",
+				"37B3D2284CB3924E6592C2D1D11451E4:CMJclyQ1I9iY+VkDiajhGxxYQmZGHrTAlEl/wtlT+pk=",
+				"F71D60AE5231E90CEA7F53D90DC4F007:ver8B06IS0up7tNYy03zkhCl+CrTl3czgmXPYYONcM8=",
+				"FBAC0AD8C03AAB2DC3BC077597517179:5oj8B4R53plPxRictMN6QkQ741CibMbmzRJYIDIQ5iM="
+			],
+			"Travis Scott":[
+				"8734362B2A2A8B0FBC9EDE6160627E1D:8ZsoLeTeezxjoIxnNfUrNf61XfqMEKfnyTb3u4o/X6g=",
+			],
+			"Doomsday device event":[
+				"F51C8301B1C9BE9D4C4F48ED2C0FE067:+MsgNTH4cF1Mr4mjNVZVgsf3GBgjSjYn2yRZn2fE70A=",
+			],
+			"Devour of Worlds Event":[
+				"C60475E046D0F0FBCFE6DE6F9E040E0E:Wc6IzWuqnm7EHqcSx14i6KwXwl4+PmQq180ESMdR+08=",
+			],
+			"Rift Tour":[
+				"6A2047910081947B9A5DCF542A9AEBE5:V/jMTWL+zbqeIlKCE9+SM3+X69aYbt/cN0+G1D0GBQU=",
+				"71C3BFE2AF0BC8DE7BC3735614CE6263:hNLsvUTUw0cw1WrfOEjm7oSGPfpEZer6R0G7F2El6Q0=",
+				"7F5ACEFE3F67BC0CCEB59A4E8EB82BAF:iDG2HB2LypEtzw5/EjKVpJmQ1o30BE3nVv01rOTyq64=",
+				"8D578CF915DB851F9BE73C937D3565E4:Xk8kUK9cut4tXr0VQjufZdoepp+TzGmlDA7fzYA1rAc=",
+				"BE20AAF89FE897368E52AAA193DEEB53:jHRZho9v4IKzFzk51RD0nAVFCZ27vIwcstPkdQeSupc=",
+			],
+			"SkyFire":[
+				"BE20AAF89FE897368E52AAA193DEEB53:jHRZho9v4IKzFzk51RD0nAVFCZ27vIwcstPkdQeSupc=:SkyFire_Playlist",
+				"955C5EA2C28764221AF554097C5CE9E6:jzkT7NbAZpMlRIC/qnSOUAcAz6CXh00ZF3EK+GfWbGQ=:SkyFire_Event",
+			],
+			"Chapter 2 Finale":[
+				"B3A4B83DA3274522D4B9F117DCF9A0B3:y5n7vfr0uucr+psZzb2F3g45pWUsv3i3j/M6bl78Z9A=",
+				"9972857939D69D9799D6800D0D70ACE4:J5NKMyEoVZ2zBlCiTGN65eKAAHStaOO+bVGbJfsFI/k="
+			],
+			"Collision Event":[
+				"1398A4C2E6C3954EDDC49F85C5AB251B:qF0+04jSaU0kgws/RigbWpwnyPQMDnK+4Vf4G0tmTns=:Collision_Playlist",
+				"1301F2838EB647C3D111CC1A61C7D8C3:OuEyyvjyHEYgHt7u8KA2UvKxsCBLlwmwq01D/ErBAWc=:Collision_Event"
+			],
+			"Fracture Event":[
+				"C624A3D18A8A2494288EE915D11518B7:/q+bDo9akBx2JId6QvLQW1YoN4jBEEn+QdzBXjB3OpQ=",
+				"F00E08CB606091AEFAB37D9B0A01B833:uEmoAK5xdbd8KefVf9o7uJiGcGTYk2r9QevsGe4vBII=",
+			],
 			"The Big Bang LTM":[
 				"020BFB18192345A6CF1AB75A66D879DD:T9UgbPCAqJBtxypUfcH/MqLBL5D8dc2rh8H6/La3FDk=",
 				"0C81D16F6CF41C862D0B097DBE5E624A:qIzymfmYIWAQbAhalU2MQOR6vwmj42xHgtW41rhIev4=",
@@ -542,14 +586,67 @@ module.exports = (app) => {
 				"FEE2FF88D47ACD4788C23A72025AE3CB:cUGhkqZYUbnXJ4uNhMKeuDMmpzO/QqyQJXIW7d1X4mU=",
 				"52366B48F1048E512A4ADB69B1830522:4/yBC527LoHOBvjPVZZOG3vqIFRZMYJKlKuD1OgYK9Q=",
 				"9E380D6486FDC2BD798C4AC03EA99956:IG7ZP06IgAnipEmMYxb7jdt7HuXHo5u8zUpomvJYgjM=",
-			]
-	
+			],
 		}
-
 		if (season == "7.30") {
 			EventKeychainManager['Marshmello Concert'].forEach(item => {
 			  keychain.push(item);
 			});
+		}
+		if (season == "9.40" || season == "9.41"){
+			EventKeychainManager['Monster Vs Robot'].forEach(item => {
+				keychain.push(item);
+			});
+		}
+		if(season == "10.40"){
+			EventKeychainManager['The End Event Season 10'].forEach(item => {
+				keychain.push(item);
+			});
+		}
+		if(season == "11.30" || season == "11.31"){
+			EventKeychainManager['StarWars Event'].forEach(item => {
+				keychain.push(item);
+			});
+		}
+		if(season == "12.41"){
+			EventKeychainManager['Travis Scott'].forEach(item => {
+				keychain.push(item);
+			})
+		}
+		if(season == "12.61"){
+			EventKeychainManager['Doomsday device event'].forEach(item => {
+				keychain.push(item);
+			})
+		}
+		if(season == "14.60"){
+			EventKeychainManager['Devour of Worlds Event'].forEach(item => {
+				keychain.push(item);
+			})
+		}
+		if(season == "17.30"){
+			EventKeychainManager['Rift Tour'].forEach(item => {
+				keychain.push(item);
+			})
+		}
+		if(season == "17.50"){
+			EventKeychainManager['SkyFire'].forEach(item => {
+				keychain.push(item);
+			})
+		}
+		if(season == "18.40"){
+			EventKeychainManager['Chapter 2 Finale'].forEach(item => {
+				keychain.push(item);
+			})
+		}
+		if(season == "20.40"){
+			EventKeychainManager['Collision Event'].forEach(item => {
+				keychain.push(item);
+			})
+		}
+		if(season == "22.40"){
+			EventKeychainManager['Fracture Event'].forEach(item => {
+				keychain.push(item);
+			})
 		}
 		else if(season == "27.11"){
 			EventKeychainManager['The Big Bang LTM'].forEach(item => {
