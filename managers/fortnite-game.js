@@ -122,7 +122,10 @@ module.exports = (app) => {
     });
     
         
-
+    app.get("/content/api/pages/fortnite-game/spark-tracks", async (req, res) => {
+        const data = (await axios.get('https://fortnitecontent-website-prod07.ol.epicgames.com/content/api/pages/fortnite-game/spark-tracks').catch(() => {})).data;
+        res.json(data);
+    })
        
     
     /*app.post("/api/v1/fortnite-br/surfaces/motd/target", (req, res) => {

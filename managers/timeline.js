@@ -250,6 +250,17 @@ module.exports = (app) => {
                                 activeUntil: "9999-09-14T07:00:00.000Z",
                                 activeSince: "2015-09-14T07:00:00.000Z"
                             },
+                            {
+                                eventType: "CalendarEvent_SparksS01_SparksPack", //Snow Level(season 11)
+                                activeUntil: "9999-09-14T07:00:00.000Z",
+                                activeSince: "2015-09-14T07:00:00.000Z"
+                            },    
+                            {
+                                eventType: "SparksPackS01Event", //Snow Level(season 11)
+                                activeUntil: "9999-09-14T07:00:00.000Z",
+                                activeSince: "2015-09-14T07:00:00.000Z"
+                            },                                                      
+                            
                             
                             /*{      
                                 eventType: "SM1",//scorch marks 13.40
