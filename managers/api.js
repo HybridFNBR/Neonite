@@ -496,10 +496,220 @@ module.exports = (app) => {
 	// ?
 	app.post("/fortnite/api/game/v2/profileToken/verify/*", (req, res) => { res.status(204).end() })
 
+	app.get('/api/v1/namespace/fn/worlds/accessibleTo/:accountID', (req, res) => {
+		res.json([
+			{
+			  "world": {
+				"namespaceId": "fn",
+				"worldId": "0698808c300847598130d19d9ed15d6d",
+				"ownerAccountId": req.params.accountID,
+				"version": 0,
+				"currentVersion": 0,
+				"name": "1",
+				"createdAt": "2023-12-04T01:48:27.732497643Z",
+				"updatedAt": "2023-12-04T01:48:27.736925445Z",
+				"sanction": null,
+				"metadataConstraint": "juno_default",
+				"metadata": {
+				  "mode": "Sandbox",
+				  "friendlyCreatures": "On",
+				  "hostileCreatures": "Off",
+				  "npcs": "On",
+				  "dropInventoryOnDeath": "On",
+				  "seed": 108257004,
+				  "death": "On",
+				  "temperature": "Off",
+				  "thumbnailTableRowName": "Grassland_01",
+				  "staminaDrain": "On",
+				  "hunger": "Off"
+				},
+				"session": {
+				  "owningSessionId": null,
+				  "sessionKey": null,
+				  "currentPlayers": null,
+				  "sessionCreatedAt": null,
+				  "lastServerHeartbeat": null,
+				  "totalSecondsPlayed": 0
+				}
+			  },
+			  "grants": [],
+			  "session": null
+			},
+			{
+			  "world": {
+				"namespaceId": "fn",
+				"worldId": "d5c7520e2b534046b739cee2a25c4022",
+				"ownerAccountId": req.params.accountID,
+				"version": 0,
+				"currentVersion": 0,
+				"name": "4",
+				"createdAt": "2023-12-05T15:15:43.856079102Z",
+				"updatedAt": "2023-12-05T15:15:43.865613446Z",
+				"sanction": null,
+				"metadataConstraint": "juno_default",
+				"metadata": {
+				  "mode": "Survival",
+				  "friendlyCreatures": "On",
+				  "hostileCreatures": "On",
+				  "npcs": "On",
+				  "dropInventoryOnDeath": "On",
+				  "seed": 277512771,
+				  "death": "On",
+				  "temperature": "On",
+				  "thumbnailTableRowName": "Grassland_01",
+				  "staminaDrain": "On",
+				  "hunger": "On"
+				},
+				"session": {
+				  "owningSessionId": null,
+				  "sessionKey": null,
+				  "currentPlayers": null,
+				  "sessionCreatedAt": null,
+				  "lastServerHeartbeat": null,
+				  "totalSecondsPlayed": 0
+				}
+			  },
+			  "grants": [],
+			  "session": null
+			},
+			{
+			  "world": {
+				"namespaceId": "fn",
+				"worldId": "1a668a920c5e49d0b44c84630bd087e9",
+				"ownerAccountId": req.params.accountID,
+				"version": 0,
+				"currentVersion": 0,
+				"name": "2",
+				"createdAt": "2023-12-04T01:52:53.65963271Z",
+				"updatedAt": "2023-12-04T01:52:53.683499442Z",
+				"sanction": null,
+				"metadataConstraint": "juno_default",
+				"metadata": {
+				  "mode": "Sandbox",
+				  "friendlyCreatures": "On",
+				  "hostileCreatures": "Off",
+				  "npcs": "On",
+				  "dropInventoryOnDeath": "On",
+				  "seed": 1,
+				  "death": "On",
+				  "temperature": "Off",
+				  "thumbnailTableRowName": "Grassland_01",
+				  "staminaDrain": "On",
+				  "hunger": "Off"
+				},
+				"session": {
+				  "owningSessionId": null,
+				  "sessionKey": null,
+				  "currentPlayers": null,
+				  "sessionCreatedAt": null,
+				  "lastServerHeartbeat": null,
+				  "totalSecondsPlayed": 0
+				}
+			  },
+			  "grants": [],
+			  "session": null
+			},
+			{
+			  "world": {
+				"namespaceId": "fn",
+				"worldId": "fa3ebd2fa353496fa8dc790b2511e584",
+				"ownerAccountId": req.params.accountID,
+				"version": 0,
+				"currentVersion": 0,
+				"name": "3",
+				"createdAt": "2023-12-04T02:02:35.064338267Z",
+				"updatedAt": "2023-12-04T02:02:35.074813555Z",
+				"sanction": null,
+				"metadataConstraint": "juno_default",
+				"metadata": {
+				  "mode": "Survival",
+				  "friendlyCreatures": "On",
+				  "hostileCreatures": "On",
+				  "npcs": "On",
+				  "dropInventoryOnDeath": "On",
+				  "seed": 471759095,
+				  "death": "On",
+				  "temperature": "On",
+				  "thumbnailTableRowName": "Grassland_01",
+				  "staminaDrain": "On",
+				  "hunger": "On"
+				},
+				"session": {
+				  "owningSessionId": null,
+				  "sessionKey": null,
+				  "currentPlayers": null,
+				  "sessionCreatedAt": null,
+				  "lastServerHeartbeat": null,
+				  "totalSecondsPlayed": 0
+				}
+			  },
+			  "grants": [],
+			  "session": null
+			}
+		  ])
+	})
 
+	app.post('/api/v1/namespace/fn/worlds/account/:accountId', (req, res) => {
+		res.json({
+			"namespaceId": "fn",
+			"worldId": "d5c7520e2b534046b739cee2a25c4022",
+			"ownerAccountId": req.params.accountID,
+			"version": 0,
+			"currentVersion": 0,
+			"name": "4",
+			"createdAt": "2023-12-05T15:15:43.856079102Z",
+			"updatedAt": "2023-12-05T15:15:43.865613446Z",
+			"sanction": null,
+			"metadataConstraint": "juno_default",
+			"metadata": {
+			  "seed": 277512771,
+			  "mode": "Survival",
+			  "hostileCreatures": "On",
+			  "friendlyCreatures": "On",
+			  "dropInventoryOnDeath": "On",
+			  "hunger": "On",
+			  "staminaDrain": "On",
+			  "npcs": "On",
+			  "thumbnailTableRowName": "Grassland_01",
+			  "temperature": "On",
+			  "death": "On"
+			},
+			"session": {
+			  "owningSessionId": null,
+			  "sessionKey": null,
+			  "currentPlayers": null,
+			  "sessionCreatedAt": null,
+			  "lastServerHeartbeat": null,
+			  "totalSecondsPlayed": 0
+			}
+		  })
+		});
+
+		app.get('/api/v1/namespace/fn/worlds/world/:worldID/session', (req, res) => {
+			return res.status(404).json(
+				{
+					"messageVars": [
+					  req.params.worldID,
+					  "fn"
+					],
+					"errorMessage": `could not find a session record for world ID ${req.params.worldID} in namespace 'fn'`,
+					"errorCode": "errors.com.epicgames.dbs.wasp.world_session_not_found",
+					"correlationId": "FN-tauaxoS2kUuaxi4CxfGF5w",
+					"numericErrorCode": 1004,
+					"responseStatus": 404,
+					"intent": "live",
+					"originatingService": "wasp-service"
+				  }
+			)
+		});
+
+		app.get('/api/v1/namespace/fn/worlds/world/:worldId/attest/:accountId', (req, res) => {
+			res.set("Content-Type", "application/jwt;charset=utf-8")
+			return res.send("wasp~eyJraWQiOiJhdHRlc3QxIiwidHlwIjoiSldUIiwiYWxnIjoiRWREU0EifQ.eyJhY2NvdW50SWQiOiJlN2MzODg2NjRlNTQ0MmU4OWYzMGIzOTZkOWZhNzE4MyIsIm5hbWVzcGFjZUlkIjoiZm4iLCJ3b3JsZElkIjoiZDVjNzUyMGUyYjUzNDA0NmI3MzljZWUyYTI1YzQwMjIiLCJpc3MiOiJlcGljZ2FtZXMiLCJleHAiOjE3MDE3OTAyMDAsImlhdCI6MTcwMTc4OTkwMH0.ckpiVt4WaUesyICZEJ4A-k51ZxWIlvMdgbRHV5o6xp3m7hAuVt4_Tthcbf5BV0_Y9RCH4iBgv4q1bmQ4eyFyBA")
+		})
 	
 
-	app.get('/fortnite/api/storefront/v2/keychain', async(req, res) => {
+	app.get('/fortnite/api/storefront/v2/keychain',(req, res) => {
 		const {season} = getSeasonInfo(req);
 		const keychain = require("../responses/keychain.json")
 
@@ -653,6 +863,6 @@ module.exports = (app) => {
 			  keychain.push(item);
 			});
 		}
-		return res.json(keychain)
+		res.json(keychain)
 	})
 };
