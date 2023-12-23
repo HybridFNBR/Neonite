@@ -20,6 +20,7 @@ module.exports = (app) => {
 
 
 	app.post('/api/v2/discovery/surface/CreativeDiscoverySurface_Frontend', (req, res) => {
+		const { season, seasonglobal } = getSeasonInfo(req);
 		if(season >= 23.50){
 			return res.json({
 				"panels": [
