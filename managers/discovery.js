@@ -19,80 +19,87 @@ module.exports = (app) => {
 	}
 
 
-	app.post('*/discovery/surface/*', (req, res) => {
-		const { season, seasonglobal } = getSeasonInfo(req);
-		if (seasonData[season]) {
-		  return res.json(seasonData[season]);
-		}
-		if (seasonglobal === "19") {
-		  return res.json(discoveryResponses.ver19);
-		}
+	app.post('/api/v2/discovery/surface/CreativeDiscoverySurface_Frontend', (req, res) => {
 		if(season >= 23.50){
 			return res.json({
 				"panels": [
 					{
 						"PanelName": "ByEpicNoBigBattle6Col",
-						"Pages": [
-							{
-								"results": [
-									{
-										"lastVisited": null,
-										"linkCode": "set_br_playlists", //there is habanero but why load into a comp playlist anyway.
-										"isFavorite": false,
-										"globalCCU": 1
-                            		},
-									{
-										"lastVisited": null,
-										"linkCode": "playlist_durian",
-										"isFavorite": false,
-										"globalCCU": 1
-									},
-									{
-										"lastVisited": null,
-										"linkCode": "playlist_papaya",
-										"isFavorite": false,
-										"globalCCU": 1
-									},
-									{
-										"lastVisited": null,
-										"linkCode": "playlist_juno",
-										"isFavorite": false,
-										"globalCCU": 1
-									}
-                       			],
-                        		"hasMore": false
-                    		}
-                		]
-            		}
-       			 ],
-        		"testCohorts": [
-            		"testing"
-				]
+						"featureTags": [
+							"col:5"
+						],
+						"firstPage": {
+							"results": [
+								{
+									"lastVisited": null,
+									"linkCode": "set_br_playlists", //there is habanero but why load into a comp playlist anyway.
+									"isFavorite": false,
+									"globalCCU": 1
+								},
+								{
+									"lastVisited": null,
+									"linkCode": "playlist_durian",
+									"isFavorite": false,
+									"globalCCU": 1
+								},
+								{
+									"lastVisited": null,
+									"linkCode": "playlist_papaya",
+									"isFavorite": false,
+									"globalCCU": 1
+								},
+								{
+									"lastVisited": null,
+									"linkCode": "playlist_juno",
+									"isFavorite": false,
+									"globalCCU": 1
+								}
+							   ],
+							"hasMore": true,
+							"panelTargetName": null
+						},
+						"panelType": "AnalyticsList",
+						"playHistoryType": null
+					}
+       			 ]
 			})}
 		else{
 			return res.json(Default);
 		}
-});
-	  
-	  
-	  app.post('/links/api/fn/mnemonic/', (req, res) => {
+	});
+
+	app.post('/fortnite/api/game/v2/creative/discovery/surface/*', (req, res) => {
 		const { season, seasonglobal } = getSeasonInfo(req);
 		if (seasonData[season]) {
-		  const eventBuilds = seasonData[season].Panels[0].Pages[0].results.map(result => result.linkData);
-		  return res.json(eventBuilds);
+			return res.json(seasonData[season]);
 		}
 		if (seasonglobal === "19") {
-		  const s19 = discoveryResponses.ver19.Panels[0].Pages[0].results.map(result => result.linkData);
-		  return res.json(s19);
-		}
-		if(season >= 23.50){
-			return res.json(require("../discovery/latest/discoveryMenu.json"))
+			return res.json(discoveryResponses.ver19);
 		}
 		else{
-			const defaultResponse = Default.Panels[0].Pages[0].results.map(result => result.linkData);
-			return res.json(defaultResponse);
+			return res.json(Default);
 		}
-	  });
+	})
+	  
+
+	app.post('/links/api/fn/mnemonic/', (req, res) => {
+	const { season, seasonglobal } = getSeasonInfo(req);
+	if (seasonData[season]) {
+		const eventBuilds = seasonData[season].Panels[0].Pages[0].results.map(result => result.linkData);
+		return res.json(eventBuilds);
+	}
+	if (seasonglobal === "19") {
+		const s19 = discoveryResponses.ver19.Panels[0].Pages[0].results.map(result => result.linkData);
+		return res.json(s19);
+	}
+	if(season >= 23.50){
+		return res.json(require("../discovery/latest/discoveryMenu.json"))
+	}
+	else{
+		const defaultResponse = Default.Panels[0].Pages[0].results.map(result => result.linkData);
+		return res.json(defaultResponse);
+	}
+	});
 
 	
 	app.get('/links/api/fn/mnemonic/:playlistId/related', (req, res) => {
