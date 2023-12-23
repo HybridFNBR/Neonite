@@ -19,7 +19,7 @@ module.exports = (app) => {
 	}
 
 
-	app.post('/api/v2/discovery/surface/CreativeDiscoverySurface_Frontend', (req, res) => {
+	app.post('*/discovery/surface/*', (req, res) => {
 		const { season, seasonglobal } = getSeasonInfo(req);
 		if(season >= 23.50){
 			return res.json({
@@ -64,13 +64,6 @@ module.exports = (app) => {
 					}
        			 ]
 			})}
-		else{
-			return res.json(Default);
-		}
-	});
-
-	app.post('/fortnite/api/game/v2/creative/discovery/surface/*', (req, res) => {
-		const { season, seasonglobal } = getSeasonInfo(req);
 		if (seasonData[season]) {
 			return res.json(seasonData[season]);
 		}
@@ -80,7 +73,7 @@ module.exports = (app) => {
 		else{
 			return res.json(Default);
 		}
-	})
+	});
 	  
 
 	app.post('/links/api/fn/mnemonic/', (req, res) => {
