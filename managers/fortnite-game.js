@@ -97,7 +97,7 @@ module.exports = (app) => {
                         else{
                             backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/t-bp23-lobby-2048x1024-2048x1024-26f2c1b27f63.png"
                         }
-                    case "24":
+                    case "26":
                         if(season === "26.30")
                         {  
                             backgrounds[0].stage = "season2630"
@@ -107,9 +107,14 @@ module.exports = (app) => {
                             backgrounds[0].stage = "season2600"
                             backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/0814-ch4s4-lobby-2048x1024-2048x1024-e3c2cf8d342d.png"
                         }
+                    break;
+                    case "27":
                         if(season === "27.11"){
                             backgrounds[0].stage = "defaultnotris"
-                            backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/durianlobby-4096x2048-7adfc906c50a.jpg"
+                            backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/durianlobby2-4096x2048-242a51b6a8ee.jpg"
+                        }
+                        else{
+                            backgrounds[0].stage = "season2700"
                         }
                     break;
                 default:
