@@ -1,4 +1,5 @@
 
+const { skipPartiallyEmittedExpressions } = require("typescript");
 const Default = require("../discovery/discoveryMenu.json");
 const {discoveryResponses} = require("../discovery/events")
 
@@ -18,10 +19,75 @@ module.exports = (app) => {
 	return { season, seasonglobal };
 	}
 
-
-	app.post('*/discovery/surface/*', (req, res) => {
+	//first iteration of discovery
+	app.post('/fortnite/api/game/v2/creative/discovery/surface/*', (req, res) => {
 		const { season, seasonglobal } = getSeasonInfo(req);
+		if (seasonData[season]) {
+			return res.json(seasonData[season]);
+		}
+		if (seasonglobal === "19") {
+			return res.json(discoveryResponses.ver19);
+		}
+		else{
+			return res.json(Default);
+		}
+	})
+
+	//second interation
+	app.post('/api/v1/discovery/surface/*', (req, res) => {
+		const { season, seasonglobal } = getSeasonInfo(req);
+		if (seasonData[season]) {
+			return res.json(seasonData[season]);
+		}
 		if(season >= 23.50){
+			return res.json({
+				"panels": [
+					{
+						"PanelName": "ByEpicNoBigBattle6Col",
+						"Pages": [
+							{
+								"results": [
+									{
+										"lastVisited": null,
+										"linkCode": "set_br_playlists", //there is habanero but why load into a comp playlist anyway.
+										"isFavorite": false,
+										"globalCCU": 1
+                            		},
+									{
+										"lastVisited": null,
+										"linkCode": "playlist_durian",
+										"isFavorite": false,
+										"globalCCU": 1
+									},
+									{
+										"lastVisited": null,
+										"linkCode": "playlist_papaya",
+										"isFavorite": false,
+										"globalCCU": 1
+									},
+									{
+										"lastVisited": null,
+										"linkCode": "playlist_juno",
+										"isFavorite": false,
+										"globalCCU": 1
+									}
+                       			],
+                        		"hasMore": false
+                    		}
+                		]
+            		}
+       			 ],
+        		"testCohorts": [
+            		"testing"
+				]
+			})}
+		else{
+			return res.json(Default);
+		}
+	})
+	
+	//third interation - currently used.
+	app.post('/api/v2/discovery/surface/CreativeDiscoverySurface_Frontend', (req, res) => {
 			return res.json({
 				"panels": [
 					{
@@ -62,17 +128,8 @@ module.exports = (app) => {
 						"panelType": "AnalyticsList",
 						"playHistoryType": null
 					}
-       			 ]
-			})}
-		if (seasonData[season]) {
-			return res.json(seasonData[season]);
-		}
-		if (seasonglobal === "19") {
-			return res.json(discoveryResponses.ver19);
-		}
-		else{
-			return res.json(Default);
-		}
+				]
+		})
 	});
 	  
 
