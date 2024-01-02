@@ -117,7 +117,7 @@ module.exports = (app) => {
 			refresh_expires: 115200,
 			refresh_expires_at: "9999-12-31T23:59:59.999Z",
 			account_id: "ninja",
-			client_id: "3446cd72694c4a4485d81b77adbb2141",
+			client_id: "ec684b8c687f479fadea3cb2ad83f5c6",
 			internal_client: true,
 			client_service: "fortnite",
 			displayName: req.h,

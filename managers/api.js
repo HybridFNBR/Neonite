@@ -91,8 +91,8 @@ module.exports = (app) => {
 			"items": {
 				"MANIFEST": {
 					"signature": "NEONITE",
-					"distribution": "https://127.0.0.0:5595/Builds/Fortnite/Content/CloudDir/",
-					"path": `Neonite.manifest`,
+					"distribution": "http://localhost:5595/",
+					"path": `Builds/Fortnite/Content/CloudDir/Neonite.manifest`,
 					"additionalDistributions": []
 				}
 			},
@@ -106,10 +106,11 @@ module.exports = (app) => {
 
 	app.get("/launcher/api/public/distributionpoints/", (req, res) => {
 			res.json({
-				"distributions": [
-					"https://epicgames-download1.akamaized.net/Builds/Fortnite/Content/CloudDir/",
-					"https://download.epicgames.com/Builds/Fortnite/Content/CloudDir/",
-					"https://127.0.0.0:5595/Builds/Fortnite/Content/CloudDir/"
+				"distributions" : [ 
+					"http://localhost:5595/",
+					"https://download.epicgames.com/",
+					"https://epicgames-download1.akamaized.net/", 
+					"https://fastly-download.epicgames.com/", 
 				]
 			});
 		});
