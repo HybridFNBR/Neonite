@@ -4,6 +4,8 @@ const {ApiException} = require('./../structs/errors');
 const Express = require('express');
 const { default: axios } = require("axios");
 const fs = require("fs");
+const expressWs = require('express-ws');
+const jsonwebtoken = require('jsonwebtoken');
 
 
 Date.prototype.addHours = function (h) {
@@ -31,13 +33,65 @@ Array.prototype.shuffle = function () {
 
 
 module.exports = (app) => {
-
+	expressWs(app);
 	function getSeasonInfo(req) {
 		const userAgent = req.headers["user-agent"];
 		const season = userAgent.split('-')[1];
 		const seasonglobal = season.split('.')[0];
 		return { season, seasonglobal };
 	}
+
+	//matchmaking xmpp
+	
+	app.ws('*', (ws, req) => {
+		ws.send(JSON.stringify({
+			"payload": {
+			  "state": "Connecting"
+			},
+			"name": "StatusUpdate"
+		  }));
+		new Promise(resolve => setTimeout(resolve, 2000));
+		ws.send(JSON.stringify({
+			"payload": {
+				"totalPlayers": 1,
+				"connectedPlayers": 1,
+				"state": "Waiting"
+			},
+			"name": "StatusUpdate"
+		}))
+		ws.send(JSON.stringify({
+			payload: {
+				ticketId: "NEONITE",
+				queuedPlayers: 1,
+				estimatedWaitSec: 1,
+				status: {},
+				state: "Queued",
+				},
+				name: "StatusUpdate",
+			})
+		);
+		let matchmakingtoken = jsonwebtoken.sign({
+			"joinDelaySec":4,
+			"iss":"mms",
+			"sessionId":"NEONITE",
+			"exp":9668532724,
+			"env":"prod",
+			"iat":1668529124,
+			"matchId":"NEONITE",
+			"jti":"j1GaITnR4Op4JD6l1lbH9dfbyntYLIYn",
+			"playerId":"198b3f9aa494490a83e8d541622235b0"
+		}, "RS256")
+		ws.send(JSON.stringify({
+			"payload": {
+				"matchId": "NEONITE",
+				"sessionId": "NEONITE",
+				"playerId": "198b3f9aa494490a83e8d541622235b0",
+				"joinDelaySec": 4
+			},
+			"payloadJwt": matchmakingtoken,
+			"name": "Play"
+		}))
+	})
 
 	//lightswitch
 	app.get('/lightswitch/api/service/bulk/status', (req, res) => {

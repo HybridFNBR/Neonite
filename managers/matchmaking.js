@@ -60,7 +60,7 @@ module.exports = (app) => {
 		var payload = Buffer.from(JSON.stringify(data, null, 0)).toString('base64');
 
 		res.json({
-			"serviceUrl": "ws://matchmaking-fn.herokuapp.com/",
+			"serviceUrl": "ws://localhost:5595",
 			"ticketType": "mms-player",
 			"payload": payload,
 			"signature": undefined
