@@ -204,6 +204,10 @@ module.exports = (app) => {
 				break;
 			}
 
+			case "QuestLogin":{
+				break;
+			}
+
 			case "MarkItemSeen": {
 				checkValidProfileID("common_core", "campaign", "athena");
 				req.body.itemIds.forEach(itemId => Profile.changeItemAttribute(profileData, itemId, "item_seen", true, profileChanges));
