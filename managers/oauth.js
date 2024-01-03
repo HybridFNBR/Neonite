@@ -65,11 +65,23 @@ module.exports = (app) => {
 				accountId = req.body.exchange_code;
 
 				break;
-
-			default:
-				throw new ApiException(errors.com.epicgames.common.oauth.unsupported_grant_type).with(req.body.grant_type)
-				break;
+			
 		}
+		let refresh_token = jsonwebtoken.sign({
+			"sub": displayName,
+			"pfsid": "fn",
+			"iss": "https://api.epicgames.dev/epic/oauth/v1",
+			"dn": displayName,
+			"pfpid": "prod-fn",
+			"aud": "ec684b8c687f479fadea3cb2ad83f5c6",
+			"pfdid": "62a9473a2dca46b29ccf17577fcf42d7",
+			"t": "epic_id",
+			"appid": "fghi4567FNFBKFz3E4TROb0bmPS8h1GW",
+			"scope": "basic_profile friends_list openid presence",
+			"exp": 2147483647,
+			"iat": 1668528139,
+			"jti": "5c2585dd6fc1414784a6bc735085b2c2"
+		  }, "RSAPSSSHA256");
 
 		res.json({
 			access_token: "NEONITE",
@@ -80,7 +92,7 @@ module.exports = (app) => {
 			client_id: "ec684b8c687f479fadea3cb2ad83f5c6",
 			internal_client: true,
 			client_service: "fortnite",
-			refresh_token: "eyJ0IjoiZXBpY19pZCIsImFsZyI6IlJTMjU2Iiwia2lkIjoiV01TN0Vua0lHcGNIOURHWnN2MldjWTl4c3VGblpDdHhaamo0QWhiLV84RSJ9.eyJzdWIiOiJlMjE0ODYyMjgzMjA0YjE5OTcyODU3ZjU2MGJhZDhlMCIsInBmc2lkIjoiZm4iLCJpc3MiOiJodHRwczpcL1wvYXBpLmVwaWNnYW1lcy5kZXZcL2VwaWNcL29hdXRoXC92MSIsImRuIjoiUyDOlCBNIFUiLCJwZnBpZCI6InByb2QtZm4iLCJhdWQiOiJlYzY4NGI4YzY4N2Y0NzlmYWRlYTNjYjJhZDgzZjVjNiIsInBmZGlkIjoiNjJhOTQ3M2EyZGNhNDZiMjljY2YxNzU3N2ZjZjQyZDciLCJ0IjoiZXBpY19pZCIsImFwcGlkIjoiZmdoaTQ1NjdGTkZCS0Z6M0U0VFJPYjBibVBTOGgxR1ciLCJzY29wZSI6ImJhc2ljX3Byb2ZpbGUgZnJpZW5kc19saXN0IG9wZW5pZCBwcmVzZW5jZSIsImV4cCI6MTY2ODU1NjkzOSwiaWF0IjoxNjY4NTI4MTM5LCJqdGkiOiI1YzI1ODVkZDZmYzE0MTQ3ODRhNmJjNzM1MDg1YjJjMiJ9.k6n-oFrrQF2x5eNn1BWO7-buauGWSlCcDnc6m-p_-1KK2WZv1cjSFQbfdC3rPPKtABGhfyvy7TNkgZGmCr7W4Kh2PgXT_zJMnRIZ49ibZqKzsCcg-AU3MrNgPz4lqfwwi7uU5oLc6LdgXym2KUADLYygMQn0tM5oYJHGM2FzHhFvgdjigdFIxp94wNG7DiWKpYHB5XkvOJfcctF20RtCufuy9VswvmIXSe443RvWJFsfO0pZZ4vlxbz3FUV9b3Dc-0UQRdg-RaSMLebT7GoaQL7uajYglXEL6WEYQEJccopitAJtjqAvr_5F-7w2fbVyBLWD4xByTcAzLa3KGrWrLQ",
+			refresh_token: refresh_token,
 			refresh_expires: 115200,
 			refresh_expires_at: "9999-12-31T23:59:59.999Z",
 			displayName: displayName,
@@ -104,17 +116,17 @@ module.exports = (app) => {
 			"t": "epic_id",
 			"appid": "fghi4567FNFBKFz3E4TROb0bmPS8h1GW",
 			"scope": "basic_profile friends_list openid presence",
-			"exp": 9668556939,
+			"exp": 2147483647,
 			"iat": 1668528139,
 			"jti": "5c2585dd6fc1414784a6bc735085b2c2"
-		  }, "ciao");
+		  }, "RSAPSSSHA256");
 		res.json({
 			access_token: "NEONITE",
-			expires_in: 28800,
+			expires_in: 2147483647,
 			expires_at: "9999-12-31T23:59:59.999Z",
 			token_type: "bearer",
-			refresh_token: refresh_token,
-			refresh_expires: 115200,
+			refresh_token: `eg1~${refresh_token}`,
+			refresh_expires: 2147483647,
 			refresh_expires_at: "9999-12-31T23:59:59.999Z",
 			account_id: "ninja",
 			client_id: "ec684b8c687f479fadea3cb2ad83f5c6",
