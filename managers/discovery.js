@@ -2,6 +2,7 @@
 const { skipPartiallyEmittedExpressions } = require("typescript");
 const Default = require("../discovery/discoveryMenu.json");
 const {discoveryResponses} = require("../discovery/events")
+const {ApiException} = require('./../structs/errors');
 
 module.exports = (app) => {
 
@@ -119,8 +120,6 @@ module.exports = (app) => {
 				]
 		})
 	});
-	  
-
 	app.post('/links/api/fn/mnemonic/', (req, res) => {
 	const { season, seasonglobal } = getSeasonInfo(req);
 	if (seasonData[season]) {
@@ -182,6 +181,13 @@ module.exports = (app) => {
 
 	app.get('/links/api/fn/mnemonic/:playlistId', (req, res) => {
 		const { season, seasonglobal } = getSeasonInfo(req);
+		const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+		if(seasonglobal <= 15){
+			if(numbers.some(number => req.originalUrl.includes(number))){
+				res.status(404).end();
+			}
+		}//fixes the season cinamtics not starting on Chapter 1/2 versions.
+
 		if (seasonData[season]) {
 		  for (const result of seasonData[season].Panels[0].Pages[0].results) {
 			if (result.linkData.mnemonic === req.params.playlistId) {
@@ -189,6 +195,7 @@ module.exports = (app) => {
 			}
 		  }
 		}
+
 		if (seasonglobal == "19") {
 		  for (const result of discoveryResponses.ver19.Panels[0].Pages[0].results) {
 			if (result.linkData.mnemonic === req.params.playlistId) {
