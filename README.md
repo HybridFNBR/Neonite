@@ -37,7 +37,7 @@ _In acquiescence to Epic Games Inc. - Please note that access to all cosmetics f
 
 <!-- CONTACT -->
 ## Support
-Discord Server: [Neo Mods](https://discord.gg/carbondev) <- *you can get the launcher + backend alternatively from here since there is a possibility this repo wont be updated*
+Discord Server: [Carbon](https://discord.gg/carbondev) <- *you can get the launcher + backend alternatively from here since there is a possibility this repo wont be updated*
 
 
 <!-- CREDITS -->
