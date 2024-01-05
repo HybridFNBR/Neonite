@@ -701,4 +701,14 @@ module.exports = (app) => {
 		}
 		res.json(keychain)
 	})
+
+	app.post('/region/check',(req, res) => {
+		res.json({
+			"content_id": "AF9yLAAsklQALFTy",
+			"allowed": true,
+			"resolved": true,
+			"limit": "Res=656"
+		})
+		//https://github.com/LeleDerGrasshalmi/FortniteEndpointsDocumentation/blob/ec6b267bca542a2b8804084622721a4bd8ae7c7f/EpicGames/IPDataService/RegionCheck.md
+	})
 };
