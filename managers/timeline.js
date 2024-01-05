@@ -797,7 +797,42 @@ module.exports = (app) => {
                     activeSince: "2020-11-21T07:00:00.000Z"
                 },
                 {
-                    eventType: "JS03", // Travis Related (Stage)
+                    eventType: "JS01", // Travis Related (Stage Delivery Trucks)
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },
+                {
+                    eventType: "JS02", // Travis Related (Stage Partially Built)
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "9999-11-21T07:00:00.000Z"
+                },
+                {
+                    eventType: "JS03", // Travis Related (Stage Finished Stage)
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },
+                {
+                    eventType: "JCH01", // Travis Related (Countdown)
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },
+                {
+                    eventType: "JP01", // Travis Teaser posters Appear (Stage)
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },
+                {
+                    eventType: "JL1", // Travis LeadUp 2 (Stage)
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },
+                {
+                    eventType: "JL2", // Travis LeadUp 2 (Stage)
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },
+                {
+                    eventType: "JLL", // Travis Load level (Level)
                     activeUntil: "9999-12-01T21:10:00.000Z",
                     activeSince: "2020-11-21T07:00:00.000Z"
                 }                
