@@ -34,7 +34,7 @@ module.exports = (app) => {
                             }
                         }
                     ],
-                    cacheExpire: "9999-12-31T23:59:59.999Z"
+                    cacheExpire: new Date(new Date().getTime() + 1000).toISOString()
                 },
                 "featured-islands": {},
                 "community-votes": {},
