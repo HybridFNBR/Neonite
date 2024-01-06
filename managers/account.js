@@ -21,6 +21,15 @@ module.exports = (app) => {
 		res.send(true);
 	});
 
+	app.put('/profile/privacy_settings', (req, res) => {
+		res.json({
+			"privacySettings":{
+				"playRegion":"PRIVATE",
+				"badges":"PRIVATE",
+				"languages":"PRIVATE"
+			}
+		})
+	})
 
     //stats
     app.get('*/api/statsv2/account/:accountId', (req, res) => {

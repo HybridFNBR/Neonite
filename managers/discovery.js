@@ -120,6 +120,8 @@ module.exports = (app) => {
 				]
 		})
 	});
+
+
 	app.post('/links/api/fn/mnemonic/', (req, res) => {
 	const { season, seasonglobal } = getSeasonInfo(req);
 	if (seasonData[season]) {
@@ -175,8 +177,23 @@ module.exports = (app) => {
 	});
 	
 
-	app.post('/api/v1/links/favorites/*', (req, res) => {
+	app.post('/api/v1/links/favorites/:accountId/check', (req, res) => {
 		res.json({"results":[],"hasMore":false})
+	})
+
+	app.post('/api/v1/links/lock-status/:accountId/check', (req, res) => {
+		res.json({
+			"results": [
+			  {
+				"playerId": req.params.accountId,
+				"linkCode": req.body["linkCodes"][0],
+				"lockStatus": "UNLOCKED",
+				"lockStatusReason": "NONE",
+				"isVisible": true
+			  }
+			],
+			"hasMore": false
+		  })
 	})
 
 	app.get('/links/api/fn/mnemonic/:playlistId', (req, res) => {
