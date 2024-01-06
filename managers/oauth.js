@@ -15,16 +15,6 @@ module.exports = (app) => {
 		var displayName = "";
 		var accountId = "";
 		switch (req.body.grant_type) {
-			case "client_credentials":
-				displayName = undefined;
-				accountId = undefined;
-				break;
-
-			case "refresh_token":
-				displayName = undefined;
-				accountId = undefined;
-				break;
-
 			case "password":
 				if (!req.body.username) {
 					throw new ApiException(errors.com.epicgames.common.oauth.invalid_request).with("username")
@@ -38,105 +28,47 @@ module.exports = (app) => {
 				accountId = displayName.replace(/ /g, "_");
 				break;
 
-			case "authorization_code":
-				if (!req.body.code) {
-					throw new ApiException(errors.com.epicgames.common.oauth.invalid_request).with("code")
-				}
-				displayName = req.body.code;
-				accountId = req.body.code;
-
-				break;
-
-			case "device_auth":
-				if (!req.body.account_id) {
-					throw new ApiException(errors.com.epicgames.common.oauth.invalid_request).with("account_id")
-				}
-				displayName = req.body.account_id;
-				accountId = req.body.account_id;
-				break;
-
-
-			case "exchange_code":
-				if (!req.body.exchange_code) {
-					throw new ApiException(errors.com.epicgames.common.oauth.invalid_request).with("exchange_code")
-				}
-
-				displayName = req.body.exchange_code;
-				accountId = req.body.exchange_code;
-
-				break;
-			
-		}
-		let refresh_token = jsonwebtoken.sign({
-			"sub": displayName,
-			"pfsid": "fn",
-			"iss": "https://api.epicgames.dev/epic/oauth/v1",
-			"dn": displayName,
-			"pfpid": "prod-fn",
-			"aud": "ec684b8c687f479fadea3cb2ad83f5c6",
-			"pfdid": "62a9473a2dca46b29ccf17577fcf42d7",
-			"t": "epic_id",
-			"appid": "fghi4567FNFBKFz3E4TROb0bmPS8h1GW",
-			"scope": "basic_profile friends_list openid presence",
-			"exp": 2147483647,
-			"iat": 1668528139,
-			"jti": "5c2585dd6fc1414784a6bc735085b2c2"
-		  }, "RSAPSSSHA256");
-
-		res.json({
-			access_token: "NEONITE",
+			}
+			res.json({
+				access_token: crypto.randomBytes(32).toString("hex"),
+				expires_in: 28800,
+				expires_at: "9999-12-31T23:59:59.999Z",
+				token_type: "bearer",
+				account_id: accountId,
+				client_id: "NeoniteV2Client",
+				internal_client: true,
+				client_service: "fortnite",
+				refresh_token: "NeoniteV2RefreshToken",
+				refresh_expires: 115200,
+				refresh_expires_at: "9999-12-31T23:59:59.999Z",
+				displayName: displayName,
+				app: "fortnite",
+				in_app_id: accountId,
+				device_id: "5dcab5dbe86a7344b061ba57cdb33c4f"
+			})
+	})
+	
+	//verify token
+	app.get('/account/api/oauth/verify', (req, res) => {
+		let token = req.headers.authorization;
+		const response = {
+			access_token: token,
 			expires_in: 28800,
-			expires_at: "9999-12-31T23:59:59.999Z",
-			token_type: "bearer",
-			account_id: accountId,
-			client_id: "ec684b8c687f479fadea3cb2ad83f5c6",
-			internal_client: true,
-			client_service: "fortnite",
-			refresh_token: refresh_token,
+			expires_at: '9999-12-31T23:59:59.999Z',
+			token_type: 'bearer',
+			refresh_token: 'NeoniteV2PlaceHolder',
 			refresh_expires: 115200,
 			refresh_expires_at: "9999-12-31T23:59:59.999Z",
-			displayName: displayName,
-			app: "fortnite",
-			in_app_id: accountId,
-			device_id: "5dcab5dbe86a7344b061ba57cdb33c4f"
-		})
-
-	});
-
-	//verify
-	app.get('/account/api/oauth/verify', (req, res) => {
-		let refresh_token = jsonwebtoken.sign({
-			"sub": "ninja",
-			"pfsid": "fn",
-			"iss": "https://api.epicgames.dev/epic/oauth/v1",
-			"dn": "ninja",
-			"pfpid": "prod-fn",
-			"aud": "ec684b8c687f479fadea3cb2ad83f5c6",
-			"pfdid": "62a9473a2dca46b29ccf17577fcf42d7",
-			"t": "epic_id",
-			"appid": "fghi4567FNFBKFz3E4TROb0bmPS8h1GW",
-			"scope": "basic_profile friends_list openid presence",
-			"exp": 2147483647,
-			"iat": 1668528139,
-			"jti": "5c2585dd6fc1414784a6bc735085b2c2"
-		  }, "RSAPSSSHA256");
-		res.json({
-			access_token: "NEONITE",
-			expires_in: 2147483647,
-			expires_at: "9999-12-31T23:59:59.999Z",
-			token_type: "bearer",
-			refresh_token: `eg1~${refresh_token}`,
-			refresh_expires: 2147483647,
-			refresh_expires_at: "9999-12-31T23:59:59.999Z",
 			account_id: "ninja",
-			client_id: "ec684b8c687f479fadea3cb2ad83f5c6",
+			client_id: "NeoniteV2Client",
 			internal_client: true,
 			client_service: "fortnite",
 			displayName: req.h,
 			app: "fortnite",
 			in_app_id: "ninja",
 			device_id: "164fb25bb44e42c5a027977d0d5da800"
-		})
+		};
+		res.json(response);
 	});
 
 	//kill token
