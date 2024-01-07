@@ -46,6 +46,7 @@ module.exports = (app) => {
 				in_app_id: accountId,
 				device_id: "5dcab5dbe86a7344b061ba57cdb33c4f"
 			})
+			res.status(200).end();
 	})
 	
 	//verify token
@@ -68,7 +69,8 @@ module.exports = (app) => {
 			in_app_id: "ninja",
 			device_id: "164fb25bb44e42c5a027977d0d5da800"
 		};
-		res.json(response).status(200).end();;
+		res.json(response)
+		res.status(200).end();
 	});
 
 	//kill token
