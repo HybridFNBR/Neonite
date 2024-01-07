@@ -68,7 +68,7 @@ module.exports = (app) => {
 			in_app_id: "ninja",
 			device_id: "164fb25bb44e42c5a027977d0d5da800"
 		};
-		res.json(response);
+		res.json(response).status(200).end();;
 	});
 
 	//kill token

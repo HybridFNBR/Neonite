@@ -340,7 +340,7 @@ module.exports = (app) => {
 
 	//datarouter
 	app.post('/datarouter/api/v1/public/*', (req, res) => {
-		res.status(204)
+		res.status(204).end();
 	});
 
 	//presence ?

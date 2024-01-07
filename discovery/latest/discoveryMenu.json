@@ -442,64 +442,65 @@
         "moderationStatus": "Unmoderated"
     },
     {
-        "namespace": "fn",
-        "accountId": "epic",
-        "creatorName": "Epic",
-        "mnemonic": "playlist_papaya",
-        "linkType": "BR:Playlist",
-        "metadata": {
-            "alt_title": {
-                "de": "Party Royale",
-                "ru": "Королевская вечеринка",
-                "ko": "파티로얄",
-                "pt-BR": "Festa Royale",
-                "it": "Party Reale",
-                "fr": "Fête royale",
-                "zh-CN": "",
-                "es": "Fiesta magistral",
-                "es-MX": "Fiesta campal",
-                "zh": "",
-                "ar": "الحفل الملكي",
-                "zh-Hant": "",
-                "ja": "パーティーロイヤル",
-                "pl": "Królewska Impreza",
-                "es-419": "Fiesta campal",
-                "tr": "Çılgın Parti"
-            },
-            "alt_tagline": {
-                "ar": "أهلًا إلى الحفلة! اترك الأسلحة والمواد الخاصة بك واقض الوقت مع الأصدقاء والعب الألعاب وتمرن حتى الاحتراف على القفز الحر والمزيد غير ذلك. الحفلة قد بدأت للتو!",
-                "de": "Willkommen zur Party! Lass deine Waffen und Materialien zu Hause. Hänge mit Freunden ab, spiele etwas und übe den freien Fall. Erlebe all das und noch mehr. Die Party hat gerade erst begonnen!",
-                "ru": "Добро пожаловать на вечеринку! Отложите оружие и стройматериалы в сторону! Веселитесь с друзьями, играйте, наслаждайтесь свободным падением и не только. Вечеринка только начинается!",
-                "ko": "파티에 오신 것을 환영합니다! 무기와 자원은 잠시 내려놓고, 친구들과 함께 게임을 플레이하고, 스카이다이빙 실력을 다지는 등 다양한 게임플레이를 즐겨보세요! 파티는 이제 시작입니다!",
-                "pt-BR": "Boas-vindas à Festa! Deixe suas armas e materiais para trás e entre com amigos, divirta-se com jogos, aperfeiçoe sua queda livre e mais. A festa está só começando!",
-                "ja": "パーティーへようこそ！ 武器や素材については今は忘れ、フレンドと遊んだり、ゲームをプレイしたり、スカイダイビングを極めたりしよう。パーティーは始まったばかりだ！",
-                "it": "Il nostro benvenuto al party! Lasciati armi e materiali alle spalle e divertiti con gli amici, gioca, perfeziona lo skydiving e tante altre cose ancora. La festa è appena cominciata!",
-                "fr": "Bienvenue à la fête ! Laissez vos armes et votre matos au vestiaire et venez vous éclater entre potes, jouer à des jeux, faire de la chute en planeur et plus encore. La fête ne fait que commencer !",
-                "pl": "Witaj na imprezie! Zostaw broń i materiały i baw się ze znajomymi – graj w gry, ćwicz szybowanie i nie tylko! Impreza dopiero się zaczyna!",
-                "es": "¡Te damos la bienvenida a la fiesta! Deja atrás tus armas y materiales, y queda con tus amigos, juega a modos de juego, perfecciona tu técnica de paracaidismo y mucho más. ¡La fiesta acaba de empezar!",
-                "es-419": "¡Te damos la bienvenida a la fiesta! Deja atrás tus armas y materiales, pasa el rato con amigos, juega partidas, perfecciona tu caída libre y mucho más. ¡La fiesta acaba de empezar!",
-                "tr": "Partiye hoş geldin! Silah ve materyallerini geride bırak; arkadaşlarınla vakit geçir, oyunlar oyna, hava dalışında mükemmelliğe ulaş... Parti daha yeni başlıyor!"
-            },            
-            "image_url": "https://cdn2.unrealengine.com/partyroyale-1920-1920x1080-7001724bc7ab.jpg",
-            "image_urls": {
-                "url_s": "https://cdn2.unrealengine.com/partyroyale-480-480x270-a4ce24699034.jpg",
-                "url_xs": "https://cdn2.unrealengine.com/partyroyale-256-256x144-932b805e9fb7.jpg",
-                "url_m": "https://cdn2.unrealengine.com/partyroyale-640-640x360-983da0123af2.jpg",
-                "url": "https://cdn2.unrealengine.com/partyroyale-1920-1920x1080-7001724bc7ab.jpg"
-            },
-            "matchmaking": {
-                "override_playlist": "playlist_papaya"
-            },
-            "title": "Party Royale"
+    "namespace": "fn",
+    "accountId": "epic",
+    "creatorName": "Epic",
+    "mnemonic": "playlist_papaya",
+    "linkType": "BR:Playlist",
+    "metadata": {
+        "alt_title": {
+        "de": "Party Royale",
+        "ru": "Королевская вечеринка",
+        "ko": "파티로얄",
+        "pt-BR": "Festa Royale",
+        "it": "Party Reale",
+        "fr": "Fête royale",
+        "zh-CN": "",
+        "es": "Fiesta magistral",
+        "es-MX": "Fiesta campal",
+        "zh": "",
+        "ar": "الحفل الملكي",
+        "zh-Hant": "",
+        "ja": "パーティーロイヤル",
+        "pl": "Królewska Impreza",
+        "es-419": "Fiesta campal",
+        "tr": "Çılgın Parti"
         },
-        "version": 95,
-        "active": true,
-        "disabled": false,
-        "created": "2021-10-01T00:56:45.010Z",
-        "published": "2023-11-15T23:18:49.208Z",
-        "descriptionTags": [],
-        "moderationStatus": "Approved",
-        "discoveryIntent": "PUBLIC"
+        "alt_tagline": {
+        "ar": "أهلًا إلى الحفلة! اترك الأسلحة والمواد الخاصة بك واقض الوقت مع الأصدقاء والعب الألعاب وتمرن حتى الاحتراف على القفز الحر والمزيد غير ذلك. الحفلة قد بدأت للتو!",
+        "de": "Willkommen zur Party! Lass deine Waffen und Materialien zu Hause. Hänge mit Freunden ab, spiele etwas und übe den freien Fall. Erlebe all das und noch mehr. Die Party hat gerade erst begonnen!",
+        "ru": "Добро пожаловать на вечеринку! Отложите оружие и стройматериалы в сторону! Веселитесь с друзьями, играйте, наслаждайтесь свободным падением и не только. Вечеринка только начинается!",
+        "ko": "파티에 오신 것을 환영합니다! 무기와 자원은 잠시 내려놓고, 친구들과 함께 게임을 플레이하고, 스카이다이빙 실력을 다지는 등 다양한 게임플레이를 즐겨보세요! 파티는 이제 시작입니다!",
+        "pt-BR": "Boas-vindas à Festa! Deixe suas armas e materiais para trás e entre com amigos, divirta-se com jogos, aperfeiçoe sua queda livre e mais. A festa está só começando!",
+        "ja": "パーティーへようこそ！ 武器や素材については今は忘れ、フレンドと遊んだり、ゲームをプレイしたり、スカイダイビングを極めたりしよう。パーティーは始まったばかりだ！",
+        "it": "Il nostro benvenuto al party! Lasciati armi e materiali alle spalle e divertiti con gli amici, gioca, perfeziona lo skydiving e tante altre cose ancora. La festa è appena cominciata!",
+        "fr": "Bienvenue à la fête ! Laissez vos armes et votre matos au vestiaire et venez vous éclater entre potes, jouer à des jeux, faire de la chute en planeur et plus encore. La fête ne fait que commencer !",
+        "pl": "Witaj na imprezie! Zostaw broń i materiały i baw się ze znajomymi – graj w gry, ćwicz szybowanie i nie tylko! Impreza dopiero się zaczyna!",
+        "es": "¡Te damos la bienvenida a la fiesta! Deja atrás tus armas y materiales, y queda con tus amigos, juega a modos de juego, perfecciona tu técnica de paracaidismo y mucho más. ¡La fiesta acaba de empezar!",
+        "es-419": "¡Te damos la bienvenida a la fiesta! Deja atrás tus armas y materiales, pasa el rato con amigos, juega partidas, perfecciona tu caída libre y mucho más. ¡La fiesta acaba de empezar!",
+        "tr": "Partiye hoş geldin! Silah ve materyallerini geride bırak; arkadaşlarınla vakit geçir, oyunlar oyna, hava dalışında mükemmelliğe ulaş... Parti daha yeni başlıyor!"
+        },
+        "image_url": "https://static-assets-prod.s3.amazonaws.com/fn/static/1p/partyroyale-1920-1920x1080-7001724bc7ab_s.jpg",
+        "image_urls": {
+        "url_s": "https://static-assets-prod.s3.amazonaws.com/fn/static/1p/partyroyale-1920-1920x1080-7001724bc7ab_s.jpg",
+        "url_xs": "https://static-assets-prod.s3.amazonaws.com/fn/static/1p/partyroyale-1920-1920x1080-7001724bc7ab_s.jpg",
+        "url_m": "https://static-assets-prod.s3.amazonaws.com/fn/static/1p/partyroyale-1920-1920x1080-7001724bc7ab_s.jpg",
+        "url": "https://static-assets-prod.s3.amazonaws.com/fn/static/1p/partyroyale-1920-1920x1080-7001724bc7ab_s.jpg"
+        },
+        "tagline": "Welcome to the Party! Leave your weapons and mats behind and hang out with friends, play games, perfect your skydive and more. The party’s just getting started!",
+        "matchmaking": {
+        "override_playlist": "playlist_papaya"
+        },
+        "title": "Party Royale"
+    },
+    "version": 95,
+    "active": true,
+    "disabled": false,
+    "created": "2021-10-01T00:56:45.010Z",
+    "published": "2021-08-03T15:27:20.251Z",
+    "descriptionTags": [],
+    "moderationStatus": "Approved",
+    "discoveryIntent": "PUBLIC"
     },
     {
         "namespace": "fn",
