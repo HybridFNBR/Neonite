@@ -6778,23 +6778,210 @@
   "lastModified": "2023-09-12T17:00:03.449Z",
   "_locale": "en-US",
   "_templateName": "FortniteGameShopSections"
-},
-  "playlistinformation": {
-    "is_tile_hidden": false,
-    "frontend_matchmaking_header_style": "Basic",
-    "conversion_config": {
-        "containerName": "playlist_info",
-        "_type": "Conversion Config",
-        "enableReferences": true,
-        "contentName": "playlists"
+  },
+  "playlistimages": {
+    "playlistimages": {
+      "images": [
+        {
+          "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlisttiles/BR04_LTM_SolidGold-1024x512-36e202c36d3ef3bd151a97c060401d33ac6f549a.png",
+          "_type": "PlaylistImageEntry",
+          "playlistname": "Playlist_50v50SAU"
+        },
+        {
+          "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlisttiles/BR04_LTM_SolidGold-1024x512-36e202c36d3ef3bd151a97c060401d33ac6f549a.png",
+          "_type": "PlaylistImageEntry",
+          "playlistname": "Playlist_SolidGold_Duos"
+        },
+        {
+          "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlisttiles/BR05_LobbyTile_LTM_ScoreRoyale-1024x512-b608aaf7840cdf6b7a702c5cbe1848a2247516d6.jpg",
+          "_type": "PlaylistImageEntry",
+          "playlistname": "Playlist_Score_Squads"
+        },
+        {
+          "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlisttiles/BR05_LobbyTile_LTM_ScoreRoyale-1024x512-b608aaf7840cdf6b7a702c5cbe1848a2247516d6.jpg",
+          "_type": "PlaylistImageEntry",
+          "playlistname": "Playlist_Score_Duos"
+        },
+        {
+          "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlisttiles/BR05_LobbyTile_LTM_ScoreRoyale-1024x512-b608aaf7840cdf6b7a702c5cbe1848a2247516d6.jpg",
+          "_type": "PlaylistImageEntry",
+          "playlistname": "Playlist_Score_Solo"
+        },
+        {
+          "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlisttiles/BR05_LTM_Soaring50s-1024x512-80762dcc260cc959c11dac2ca2f6ae176eb63ef3.jpg",
+          "_type": "PlaylistImageEntry",
+          "playlistname": "Playlist_Soaring_50s"
+        },
+        {
+          "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlisttiles/BR05_LobbyTile_LTM-Steady-Storm-1024x512-f38e603ed9c80b6210a25c4737d3d8b675b8d28e.jpg",
+          "_type": "PlaylistImageEntry",
+          "playlistname": "Playlist_Steady_Squads"
+        },
+        {
+          "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlisttiles/BR05_LobbyTile_LTM-Steady-Storm-1024x512-f38e603ed9c80b6210a25c4737d3d8b675b8d28e.jpg",
+          "_type": "PlaylistImageEntry",
+          "playlistname": "Playlist_Steady_Duos"
+        },
+        {
+          "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlisttiles/BR05_LobbyTile_LTM-Steady-Storm-1024x512-f38e603ed9c80b6210a25c4737d3d8b675b8d28e.jpg",
+          "_type": "PlaylistImageEntry",
+          "playlistname": "Playlist_Steady_Solo"
+        },
+        {
+          "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlisttiles/BR05_LTM_FlyExplosives-1024x512-6283e3392b3aa44794dac64423b22606f8773503.png",
+          "_type": "PlaylistImageEntry",
+          "playlistname": "Playlist_FlyExplosives_Squads"
+        },
+        {
+          "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlisttiles/BR05_LTM_FlyExplosives-1024x512-6283e3392b3aa44794dac64423b22606f8773503.png",
+          "_type": "PlaylistImageEntry",
+          "playlistname": "Playlist_FlyExplosives_Duos"
+        },
+        {
+          "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlisttiles/BR05_LTM_FlyExplosives-1024x512-6283e3392b3aa44794dac64423b22606f8773503.png",
+          "_type": "PlaylistImageEntry",
+          "playlistname": "Playlist_FlyExplosives_Solo"
+        },
+        {
+          "image": "/Fortnite/fortnite-game/playlisttiles/LTM_Tile_FinalFight.jpg",
+          "_type": "PlaylistImageEntry",
+          "playlistname": "Playlist_Final_12"
+        },
+        {
+          "image": "/Fortnite/fortnite-game/playlisttiles/BR_LTM-Tile_Playground.jpg",
+          "_type": "PlaylistImageEntry",
+          "playlistname": "Playlist_Playground"
+        },
+        {
+          "image": "/Fortnite/fortnite-game/playlisttiles/BR_LTM-Tile_Tactics-Showdown.jpg",
+          "_type": "PlaylistImageEntry",
+          "playlistname": "Playlist_Taxes_Squads"
+        },
+        {
+          "image": "/Fortnite/fortnite-game/playlisttiles/BR_LTM-Tile_Tactics-Showdown.jpg",
+          "_type": "PlaylistImageEntry",
+          "playlistname": "Playlist_Taxes_Duos"
+        },
+        {
+          "image": "/Fortnite/fortnite-game/playlisttiles/BR_LTM-Tile_Tactics-Showdown.jpg",
+          "_type": "PlaylistImageEntry",
+          "playlistname": "Playlist_Taxes_Solo"
+        },
+        {
+          "image": "/Fortnite/fortnite-game/playlisttiles/LTM_Tile_FinalFight.jpg",
+          "_type": "PlaylistImageEntry",
+          "playlistname": "Playlist_Final_20"
+        },
+        {
+          "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlisttiles/BR04_LTM_SniperShootout-1024x512-bcaf8004961e4e374d0603813f840f4b575d230b.jpg",
+          "_type": "PlaylistImageEntry",
+          "playlistname": "Playlist_Snipers_Squads"
+        },
+        {
+          "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlisttiles/BR04_LTM_SniperShootout-1024x512-bcaf8004961e4e374d0603813f840f4b575d230b.jpg",
+          "_type": "PlaylistImageEntry",
+          "playlistname": "Playlist_Snipers_Duos"
+        },
+        {
+          "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlisttiles/BR04_LTM_SniperShootout-1024x512-bcaf8004961e4e374d0603813f840f4b575d230b.jpg",
+          "_type": "PlaylistImageEntry",
+          "playlistname": "Playlist_Snipers_Solo"
+        },
+        {
+          "image": "/Fortnite/fortnite-game/playlisttiles/BR04_LTM_BlitzShowdown.png",
+          "_type": "PlaylistImageEntry",
+          "playlistname": "Playlist_Comp_Blitz_Solo"
+        },
+        {
+          "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlisttiles/BR04_LTM_5x20-1024x512-451b402db5751c25a1e7616930c5ae37d8b20710.png",
+          "_type": "PlaylistImageEntry",
+          "playlistname": "Playlist_5x20"
+        },
+        {
+          "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlisttiles/BR04_LTM_Blitz-1024x512-98c63417095442c210177ee9b5f3463d0003cd5a.png",
+          "_type": "PlaylistImageEntry",
+          "playlistname": "Playlist_Blitz_Duos"
+        },
+        {
+          "image": "/Fortnite/fortnite-game/playlisttiles/Blitz.png",
+          "_type": "PlaylistImageEntry",
+          "playlistname": "Playlist_Blitz_Solo"
+        },
+        {
+          "image": "/Fortnite/fortnite-game/playlisttiles/Blitz.png",
+          "_type": "PlaylistImageEntry",
+          "playlistname": "Playlist_Blitz_Squad"
+        },
+        {
+          "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlisttiles/BR04_LTM_CloseEncounters-1024x512-e617b7603adb59353ba81ed392174859c0c6807b.jpg",
+          "_type": "PlaylistImageEntry",
+          "playlistname": "Playlist_Close_Solo"
+        },
+        {
+          "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlisttiles/BR04_LTM_CloseEncounters-1024x512-e617b7603adb59353ba81ed392174859c0c6807b.jpg",
+          "_type": "PlaylistImageEntry",
+          "playlistname": "Playlist_Close_Squad"
+        },
+        {
+          "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlisttiles/BR04_LTM_CloseEncounters-1024x512-e617b7603adb59353ba81ed392174859c0c6807b.jpg",
+          "_type": "PlaylistImageEntry",
+          "playlistname": "Playlist_Close_Duos"
+        },
+        {
+          "image": "/Fortnite/fortnite-game/playlisttiles/BR04_LTM_SoloShowdown.png",
+          "_type": "PlaylistImageEntry",
+          "playlistname": "Playlist_Comp_Solo"
+        },
+        {
+          "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlisttiles/BR04_LTM_SolidGold-1024x512-36e202c36d3ef3bd151a97c060401d33ac6f549a.png",
+          "_type": "PlaylistImageEntry",
+          "playlistname": "Playlist_SolidGold_Solo"
+        },
+        {
+          "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlisttiles/BR04_LTM_SolidGold-1024x512-36e202c36d3ef3bd151a97c060401d33ac6f549a.png",
+          "_type": "PlaylistImageEntry",
+          "playlistname": "Playlist_SolidGold_Squads"
+        },
+        {
+          "image": "/Fortnite/fortnite-game/playlisttiles/LTM_50v50.png",
+          "_type": "PlaylistImageEntry",
+          "playlistname": "Playlist_50v50"
+        },
+        {
+          "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlisttiles/BR04_LTM_Gauntlet-1024x512-a0dca279534a121957275bcdb0b42042d8a010fd.png",
+          "_type": "PlaylistImageEntry",
+          "playlistname": "Playlist_Carmine"
+        },
+        {
+          "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlisttiles/BR_LobbyTileArt_Solo-512x512-24446ea2a54612c5604ecf0e30475b4dec81c3bc.png",
+          "_type": "PlaylistImageEntry",
+          "playlistname": "Playlist_DefaultSolo"
+        },
+        {
+          "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlisttiles/BR_LobbyTileArt_Duo-512x512-5dea8dfae97bddcd4e204dd47bfb245d3f68fc7b.png",
+          "_type": "PlaylistImageEntry",
+          "playlistname": "Playlist_DefaultDuo"
+        },
+        {
+          "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlisttiles/BR_LobbyTileArt_Squad-512x512-5225ec6ca3265611957834c2c549754fe1778449.png",
+          "_type": "PlaylistImageEntry",
+          "playlistname": "Playlist_DefaultSquad"
+        }
+      ],
+      "_type": "PlaylistImageList"
     },
-    "show_ad_violator": false,
+    "_title": "playlistimages",
+    "_activeDate": "2018-08-07T02:14:56.108Z",
+    "lastModified": "2018-08-28T15:50:37.174Z",
+    "_locale": "en-US"
+  },
+  "playlistinformation": {
+    "frontend_matchmaking_header_style": "None",
     "_title": "playlistinformation",
-    "frontend_matchmaking_header_text_description": "",
     "frontend_matchmaking_header_text": "",
     "playlist_info": {
-        "_type": "Playlist Information",
-        "playlists": [
+      "_type": "Playlist Information",
+      "playlists": [
             {
                 "image": "http://cdn2.unrealengine.com/22br-radish-ingame-playlisttile-1920x1080-d85374a7a6f6.jpg",
                 "playlist_name": "Playlist_Radish",

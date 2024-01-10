@@ -160,44 +160,6 @@ module.exports = (app) => {
 		res.status(204).end()
 	})
 
-	app.get('/ias/fortnite/:Hash', async(req, res) => {
-		res.setHeader("content-type", "application/octet-stream")
-		if (!fs.existsSync("ias")) {
-				fs.mkdirSync("ias");
-		}
-		try{
-			axios.get(`https://download.epicgames.com${req.originalUrl}`)
-			.then(response => {
-				fs.writeFile(`ias/${req.params.Hash}`, response.data, err => {
-					if (err) {}
-					else{
-						res.sendFile(path.join(__dirname, `../ias/${req.params.Hash}`));
-					}
-				})
-			})
-		}
-		catch{}
-	})
-
-	/*app.get('/ias/fortnite/chunks/:chunkNum/:chunkFile', async(req, res) => {
-		if (!fs.existsSync("ias/cosmeticStreaming")) {
-				fs.mkdirSync("ias/cosmeticStreaming");
-		}
-		try{
-			axios.get(`https://download.epicgames.com${req.originalUrl}`)
-			.then(response => {
-				fs.writeFile(`ias/cosmeticStreaming/${req.params.chunkFile}`, response.data, err => {
-					if (err) {
-					} else {
-					  res.sendFile(path.join(__dirname, `../ias/cosmeticStreaming/${req.params.chunkFile}`));
-					}
-				})
-			})
-		}
-		catch{}
-	})*/ //doesnt work when sending the chunks to the client due to "IO error" might be a fix as of now i havnt found a solution.
-
-
 	app.get("/launcher/api/public/distributionpoints/", (req, res) => {
 			res.json({
 				"distributions" : [ 

@@ -75,11 +75,11 @@ module.exports = (app) => {
 
 	//kill token
 	app.delete('/account/api/oauth/sessions/kill/*', (req, res) => {
-		res.status(204);
+		res.status(204).end();
 	});
 
-	app.delete('/account/api/oauth/sessions/kill', (req, res) => {
-		res.status(204);
+	app.delete('/account/api/oauth/sessions/kill*', (req, res) => {
+		res.status(204).end();
 	});
 
 	//account info
