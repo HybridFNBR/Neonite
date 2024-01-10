@@ -136,6 +136,9 @@ module.exports = (app) => {
 		})
 	})
 
+	app.get('/ias/fortnite/*', (req, res) => {
+		res.status(404);
+	})
 
 	app.get("/launcher/api/public/assets/:platform/:catalogItemId/:appName", (req, res) => {
 		res.json({
@@ -187,10 +190,6 @@ module.exports = (app) => {
 		});
 
 
-
-	app.get('/api/v1/assets/Fortnite/:version/', (req, res) => {
-		res.json([])
-	});
 
 	app.get("/fortnite/api/game/v2/world/info", (req, res) => res.json({}))
 
