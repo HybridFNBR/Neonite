@@ -71,6 +71,8 @@ module.exports = (app) => {
 	
 	//verify token
 	app.get('/account/api/oauth/verify', (req, res) => {
+		JWT = req.headers.authorization.replace("bearer eg1~", "")
+		const JWTdecode = jsonwebtoken.decode(JWT)
 		res.json({
 			access_token: req.headers.authorization.replace("bearer ", ""),
 			expires_in: 28800,
@@ -79,14 +81,14 @@ module.exports = (app) => {
 			refresh_token: req.headers.authorization.replace("bearer ", ""),
 			refresh_expires: 115200,
 			refresh_expires_at: "9999-12-31T23:59:59.999Z",
-			account_id: "ninja",
+			account_id: JWTdecode["sub"],
 			client_id: "NeoniteV2Client",
 			internal_client: true,
 			client_service: "fortnite",
-			displayName: req.h,
+			displayName: JWTdecode["sub"],
 			app: "fortnite",
-			in_app_id: "ninja",
-			device_id: "164fb25bb44e42c5a027977d0d5da800"
+			in_app_id: JWTdecode["sub"],
+			device_id: "5dcab5dbe86a7344b061ba57cdb33c4f"
 		})
 	});
 
