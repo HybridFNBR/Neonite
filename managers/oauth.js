@@ -71,7 +71,7 @@ module.exports = (app) => {
 	
 	//verify token
 	app.get('/account/api/oauth/verify', (req, res) => {
-		JWT = req.headers.authorization.replace("bearer eg1~", "")
+		const JWT = req.headers.authorization.replace("bearer eg1~", "")
 		const JWTdecode = jsonwebtoken.decode(JWT)
 		res.json({
 			access_token: req.headers.authorization.replace("bearer ", ""),
