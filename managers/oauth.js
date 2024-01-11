@@ -71,27 +71,12 @@ module.exports = (app) => {
 	
 	//verify token
 	app.get('/account/api/oauth/verify', (req, res) => {
-		let refresh_token = jsonwebtoken.sign({
-			"sub": "ninja",
-			"pfsid": "fn",
-			"iss": "https://api.epicgames.dev/epic/oauth/v1",
-			"dn": "ninja",
-			"pfpid": "prod-fn",
-			"aud": "ec684b8c687f479fadea3cb2ad83f5c6",
-			"pfdid": "62a9473a2dca46b29ccf17577fcf42d7",
-			"t": "epic_id",
-			"appid": "fghi4567FNFBKFz3E4TROb0bmPS8h1GW",
-			"scope": "basic_profile friends_list openid presence",
-			"exp": 9668556939,
-			"iat": 1668528139,
-			"jti": "5c2585dd6fc1414784a6bc735085b2c2"
-		  }, "ciao");
 		res.json({
 			access_token: req.headers.authorization.replace("bearer ", ""),
 			expires_in: 28800,
 			expires_at: "9999-12-31T23:59:59.999Z",
 			token_type: "bearer",
-			refresh_token: refresh_token,
+			refresh_token: req.headers.authorization.replace("bearer ", ""),
 			refresh_expires: 115200,
 			refresh_expires_at: "9999-12-31T23:59:59.999Z",
 			account_id: "ninja",
