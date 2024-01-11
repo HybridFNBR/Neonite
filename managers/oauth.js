@@ -106,11 +106,11 @@ module.exports = (app) => {
 	});
 
 	//kill token
-	app.delete('/account/api/oauth/sessions/kill/*', (req, res) => {
+	app.delete('/account/api/oauth/sessions/kill/:token', (req, res) => {
 		res.status(204).end();
 	});
 
-	app.delete('/account/api/oauth/sessions/kill*', (req, res) => {
+	app.delete('/account/api/oauth/sessions/kill', (req, res) => {
 		res.status(204).end();
 	});
 
