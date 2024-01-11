@@ -29,8 +29,29 @@ module.exports = (app) => {
 				break;
 
 			}
+			let token = jsonwebtoken.sign({
+				"app": "prod-fn",
+				"sub": accountId,
+				"dvid": "89776e294d5c27ba1ef4e59fab402ea7",
+				"mver": false,
+				"clid": accountId,
+				"dn": displayName,
+				"am": "exchange_code",
+				"pfpid": "prod-fn",
+				"iai": accountId,
+				"sec": 1,
+				"acr": "urn:epic:loa:aal1",
+				"clsvc": "prod-fn",
+				"t": "s",
+				"auth_time": new Date(new Date().getTime().toString()),
+				"ic": true,
+				"exp": 1704980387,
+				"iat": 1704973187,
+				"jti": "6b74350c915342569b5e73cc1645f391"
+			  }, "PS256");
+			  
 			res.json({
-				access_token: crypto.randomBytes(32).toString("hex"),
+				access_token: `eg1~${token}`,
 				expires_in: 28800,
 				expires_at: "9999-12-31T23:59:59.999Z",
 				token_type: "bearer",
@@ -38,7 +59,7 @@ module.exports = (app) => {
 				client_id: "NeoniteV2Client",
 				internal_client: true,
 				client_service: "fortnite",
-				refresh_token: "NeoniteV2RefreshToken",
+				refresh_token: `eg1~${token}`,
 				refresh_expires: 115200,
 				refresh_expires_at: "9999-12-31T23:59:59.999Z",
 				displayName: displayName,
@@ -46,18 +67,31 @@ module.exports = (app) => {
 				in_app_id: accountId,
 				device_id: "5dcab5dbe86a7344b061ba57cdb33c4f"
 			})
-			res.status(200).end();
-	})
+		})
 	
 	//verify token
 	app.get('/account/api/oauth/verify', (req, res) => {
-		let token = req.headers.authorization;
-		const response = {
-			access_token: token,
+		let refresh_token = jsonwebtoken.sign({
+			"sub": "ninja",
+			"pfsid": "fn",
+			"iss": "https://api.epicgames.dev/epic/oauth/v1",
+			"dn": "ninja",
+			"pfpid": "prod-fn",
+			"aud": "ec684b8c687f479fadea3cb2ad83f5c6",
+			"pfdid": "62a9473a2dca46b29ccf17577fcf42d7",
+			"t": "epic_id",
+			"appid": "fghi4567FNFBKFz3E4TROb0bmPS8h1GW",
+			"scope": "basic_profile friends_list openid presence",
+			"exp": 9668556939,
+			"iat": 1668528139,
+			"jti": "5c2585dd6fc1414784a6bc735085b2c2"
+		  }, "ciao");
+		res.json({
+			access_token: req.headers.authorization.replace("bearer ", ""),
 			expires_in: 28800,
-			expires_at: '9999-12-31T23:59:59.999Z',
-			token_type: 'bearer',
-			refresh_token: 'NeoniteV2PlaceHolder',
+			expires_at: "9999-12-31T23:59:59.999Z",
+			token_type: "bearer",
+			refresh_token: refresh_token,
 			refresh_expires: 115200,
 			refresh_expires_at: "9999-12-31T23:59:59.999Z",
 			account_id: "ninja",
@@ -68,9 +102,7 @@ module.exports = (app) => {
 			app: "fortnite",
 			in_app_id: "ninja",
 			device_id: "164fb25bb44e42c5a027977d0d5da800"
-		};
-		res.json(response)
-		res.status(200).end();
+		})
 	});
 
 	//kill token
