@@ -29,7 +29,9 @@ module.exports = (app) => {
 				break;
 			}
 			let token = jsonwebtoken.sign({
+				"sub": accountId,
 				"p": "eNqtk8lOAzEMht+nQkhlO1iaA0tBnEBC4joyiWdqNeNUiVPo2+NhGShLBxCnbF7+/0vSxKTCSuBCLD5rTNgS5HVW6uCcUEsif5kDij/Y5aexmh7tND9P2x9NK5kSuCgNt9Xe9tK3i5lnPSPPDpX8DaUVpQvsaJeFR4XdLq4DrrdkY9NwYDuDZbkL7GDYGBE2pvtfFc+kZRnyAxZxcyPo472EiB4CrwgmJilHxxhACbsMkqGR6mjHCmGILeQ52h1BbBpK2YI/15nA+Yu20yhKoieFg+9j0blYRAdKz8tq+isImzZeS0YsOgd60Pppck+tsYKEHOpMOXOUWtktSKvD7d16AFQCakK3YBkM2w5lxTYRdebps5u2YPKMks3P10Z7eZQEw7FJvJKwtsgPWCfv6r6M2YB2pOgtEubLun/2Nft6maL/07vfBPiLLzl99yVNxIodsRgTcfQNtAHX3doa97cwpniz495bx0dUELK5",
+				"dn": accountId,
 				"clsvc": "prod-fn",
 				"t": "s",
 				"mver": false,
@@ -71,7 +73,7 @@ module.exports = (app) => {
 			"client_service": "prod-fn",
 			"account_id": JWTdecode["sub"],
 			"expires_in": 2147483647,
-			"expires_at": "2024-01-12T02:20:15.951Z",
+			"expires_at": "9999-12-31T23:59:59.999Z",
 			"auth_method": "exchange_code",
 			"display_name": JWTdecode["sub"],
 			"app": "prod-fn",
