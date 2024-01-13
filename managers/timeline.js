@@ -772,7 +772,117 @@ module.exports = (app) => {
                     eventType: "EventFlag.Winterfest.Tree", // C2S1-related (Winterfest 2019)
                     activeUntil: "9999-12-31T23:59:59.999Z",
                     activeSince: "2019-12-31T23:59:59.999Z"
-                }           
+                },
+                {
+                    eventType: "WSFX3", // C2S1-related (Winterfest 2019)
+                    activeUntil: "9999-12-31T23:59:59.999Z",
+                    activeSince: "2019-12-31T23:59:59.999Z"
+                },
+                {
+                    eventType: "WSFX3F", // C2S1-related (Winterfest 2019)
+                    activeUntil: "9999-12-31T23:59:59.999Z",
+                    activeSince: "2019-12-31T23:59:59.999Z"
+                },
+                {
+                    eventType: "WD5", // C2S1-related (Winterfest 2019)
+                    activeUntil: "9999-12-31T23:59:59.999Z",
+                    activeSince: "2019-12-31T23:59:59.999Z"
+                },
+                {
+                    eventType: "WD4", // C2S1-related (Winterfest 2019)
+                    activeUntil: "9999-12-31T23:59:59.999Z",
+                    activeSince: "2019-12-31T23:59:59.999Z"
+                },
+                {
+                    eventType: "WD3", // C2S1-related (Winterfest 2019)
+                    activeUntil: "9999-12-31T23:59:59.999Z",
+                    activeSince: "2019-12-31T23:59:59.999Z"
+                },
+                {
+                    eventType: "WD2", // C2S1-related (Winterfest 2019)
+                    activeUntil: "9999-12-31T23:59:59.999Z",
+                    activeSince: "2019-12-31T23:59:59.999Z"
+                },
+                {
+                    eventType: "WD1", // C2S1-related (Winterfest 2019)
+                    activeUntil: "9999-12-31T23:59:59.999Z",
+                    activeSince: "2019-12-31T23:59:59.999Z"
+                },
+                {
+                    eventType: "WTR4", // C2S1-related (Winterfest 2019)
+                    activeUntil: "9999-12-31T23:59:59.999Z",
+                    activeSince: "2019-12-31T23:59:59.999Z"
+                },
+                {
+                    eventType: "WTR3", // C2S1-related (Winterfest 2019)
+                    activeUntil: "9999-12-31T23:59:59.999Z",
+                    activeSince: "2019-12-31T23:59:59.999Z"
+                },
+                {
+                    eventType: "WTR2", // C2S1-related (Winterfest 2019)
+                    activeUntil: "9999-12-31T23:59:59.999Z",
+                    activeSince: "2019-12-31T23:59:59.999Z"
+                },
+                {
+                    eventType: "WTR1", // C2S1-related (Winterfest 2019)
+                    activeUntil: "9999-12-31T23:59:59.999Z",
+                    activeSince: "2019-12-31T23:59:59.999Z"
+                },
+                {
+                    eventType: "WSH1", // C2S1-related (Winterfest 2019)
+                    activeUntil: "9999-12-31T23:59:59.999Z",
+                    activeSince: "2019-12-31T23:59:59.999Z"
+                },
+                {
+                    eventType: "WSM1", // C2S1-related (Winterfest 2019)
+                    activeUntil: "9999-12-31T23:59:59.999Z",
+                    activeSince: "2019-12-31T23:59:59.999Z"
+                },
+                {
+                    eventType: "WSM2", // C2S1-related (Winterfest 2019)
+                    activeUntil: "9999-12-31T23:59:59.999Z",
+                    activeSince: "2019-12-31T23:59:59.999Z"
+                },
+                {
+                    eventType: "WSM3", // C2S1-related (Winterfest 2019)
+                    activeUntil: "9999-12-31T23:59:59.999Z",
+                    activeSince: "2019-12-31T23:59:59.999Z"
+                },
+                {
+                    eventType: "WSM4", // C2S1-related (Winterfest 2019)
+                    activeUntil: "9999-12-31T23:59:59.999Z",
+                    activeSince: "2019-12-31T23:59:59.999Z"
+                },
+                {
+                    eventType: "WRRD1", // C2S1-related (Winterfest 2019)
+                    activeUntil: "9999-12-31T23:59:59.999Z",
+                    activeSince: "2019-12-31T23:59:59.999Z"
+                },
+                {
+                    eventType: "WDT1", // C2S1-related (Winterfest 2019)
+                    activeUntil: "9999-12-31T23:59:59.999Z",
+                    activeSince: "2019-12-31T23:59:59.999Z"
+                },
+                {
+                    eventType: "WDT2", // C2S1-related (Winterfest 2019)
+                    activeUntil: "9999-12-31T23:59:59.999Z",
+                    activeSince: "2019-12-31T23:59:59.999Z"
+                },
+                {
+                    eventType: "WDT3", // C2S1-related (Winterfest 2019)
+                    activeUntil: "9999-12-31T23:59:59.999Z",
+                    activeSince: "2019-12-31T23:59:59.999Z"
+                },
+                {
+                    eventType: "WDT4", // C2S1-related (Winterfest 2019)
+                    activeUntil: "9999-12-31T23:59:59.999Z",
+                    activeSince: "2019-12-31T23:59:59.999Z"
+                },
+                {
+                    eventType: "WD1C", // C2S1-related (Winterfest 2019)
+                    activeUntil: "9999-12-31T23:59:59.999Z",
+                    activeSince: "2019-12-31T23:59:59.999Z"
+                },           
             )
         }   
         
