@@ -759,11 +759,6 @@ module.exports = (app) => {
         if(season == 11.30 || season == 11.31){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
-                    eventType: "GALCD", // Star Wars event Countdown
-                    activeUntil: "9999-10-05T00:41:00.000Z",
-                    activeSince: "2020-10-05T00:00:00.000Z"
-                },
-                {
                     eventType: "Gal_Crashes", // Starwars spaceship crashes (season 11)
                     activeUntil: "9999-09-14T07:00:00.000Z",
                     activeSince: "2015-09-14T07:00:00.000Z"
