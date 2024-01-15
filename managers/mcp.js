@@ -941,7 +941,6 @@ module.exports = (app) => {
 			}
 
 			case "PutModularCosmeticLoadout":{
-				const Athena = getOrCreateProfile("athena")
 				var parsedData = JSON.parse(req.body["loadoutData"])
 				if(req.body["loadoutType"] === "CosmeticLoadout:LoadoutSchema_Character"){
 					Profile.changeItemAttribute(profileData, "NEONITECHARACTER", "slots", parsedData.slots, profileChanges)
@@ -963,7 +962,7 @@ module.exports = (app) => {
 				Profile.bumpRvn(athenprofile)
 				Profile.saveProfile(accountId, "athena", athenprofile)
 				
-				break; //"PutModularCosmeticLoadout" command still only requests only once after changing a cosmetic then never again(i dont know why)
+				break;
 			}
 			case "ExchangeGameCurrencyForBattlePassOffer":{
 				checkValidProfileID("athena")
