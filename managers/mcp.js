@@ -413,6 +413,8 @@ module.exports = (app) => {
 						var emoteloadout = athenprofile.items["NEONITEEMOTE"]
 						var platformloadout = athenprofile.items["NEONITEPLATFORM"]
 						var wrapsloadout = athenprofile.items["NEONITEWRAPS"]
+						var jamloadout = athenprofile.items["NEONITEJAM"]
+						var sparksloadout = athenprofile.items["NEONITESPARKS"]
 						if (typeof characterloadout == 'undefined'){
 							Profile.addItem(athenprofile, "NEONITECHARACTER", {
 								"templateId": "CosmeticLoadout:LoadoutSchema_Character",
@@ -564,6 +566,66 @@ module.exports = (app) => {
 								} ]
 							}
 						}
+						if (typeof jamloadout == 'undefined'){
+							Profile.addItem(athenprofile, "NEONITEJAM", {
+								"templateId": "CosmeticLoadout:LoadoutSchema_Jam",
+								"attributes" : {
+									"slots" : [ {
+									  "slot_template" : "CosmeticLoadoutSlotTemplate:LoadoutSlot_JamSong0"
+									}, {
+									  "slot_template" : "CosmeticLoadoutSlotTemplate:LoadoutSlot_JamSong1"
+									}, {
+									  "slot_template" : "CosmeticLoadoutSlotTemplate:LoadoutSlot_JamSong2"
+									}, {
+									  "slot_template" : "CosmeticLoadoutSlotTemplate:LoadoutSlot_JamSong3"
+									}, {
+									  "slot_template" : "CosmeticLoadoutSlotTemplate:LoadoutSlot_JamSong4"
+									}, {
+									  "slot_template" : "CosmeticLoadoutSlotTemplate:LoadoutSlot_JamSong5"
+									}, {
+									  "slot_template" : "CosmeticLoadoutSlotTemplate:LoadoutSlot_JamSong6"
+									}, {
+									  "slot_template" : "CosmeticLoadoutSlotTemplate:LoadoutSlot_JamSong7"
+									} ]
+								  },
+								  "quantity" : 1
+							});
+							response.notifications = {
+								"changeType" : "itemAttrChanged",
+								"itemId" : "NEONITEJAM",
+								"attributeName" : "slots",
+								"attributeValue" : [ {
+									parsedData
+								} ]
+							}
+						}
+						if (typeof sparksloadout == 'undefined'){
+							Profile.addItem(athenprofile, "NEONITESPARKS", {
+								"templateId" : "CosmeticLoadout:LoadoutSchema_Sparks",
+								"attributes" : {
+									"slots" : [ {
+									"slot_template" : "CosmeticLoadoutSlotTemplate:LoadoutSlot_Bass"
+									}, {
+									"slot_template" : "CosmeticLoadoutSlotTemplate:LoadoutSlot_Guitar"
+									}, {
+									"slot_template" : "CosmeticLoadoutSlotTemplate:LoadoutSlot_Drum"
+									}, {
+									"slot_template" : "CosmeticLoadoutSlotTemplate:LoadoutSlot_Keyboard"
+									}, {
+									"slot_template" : "CosmeticLoadoutSlotTemplate:LoadoutSlot_Microphone"
+									} ]
+								},
+								"quantity" : 1
+							});
+							response.notifications = {
+								"changeType" : "itemAttrChanged",
+								"itemId" : "NEONITESPARKS",
+								"attributeName" : "slots",
+								"attributeValue" : [ {
+									parsedData
+								} ]
+							}
+						}
 						Profile.modifyStat(athenprofile, "loadout_presets", {
 							"CosmeticLoadout:LoadoutSchema_Character" : {
 								"0" : "NEONITECHARACTER",
@@ -576,6 +638,12 @@ module.exports = (app) => {
 							},
 							"CosmeticLoadout:LoadoutSchema_Wraps" : {
 								"0" : "NEONITEWRAPS",
+							},
+							"CosmeticLoadout:LoadoutSchema_Jam" : {
+								"0" : "NEONITEJAM",
+							},
+							"CosmeticLoadout:LoadoutSchema_Sparks" : {
+								"0" : "NEONITESPARKS",
 							}
 						})
 						Profile.bumpRvn(athenprofile)
@@ -956,6 +1024,14 @@ module.exports = (app) => {
 				}
 				if(req.body["loadoutType"] === "CosmeticLoadout:LoadoutSchema_Wraps"){
 					Profile.changeItemAttribute(profileData, "NEONITEWRAPS", "slots", parsedData.slots, profileChanges)
+					Profile.saveProfile(accountId, "athena", profileData)
+				}
+				if(req.body["loadoutType"] === "CosmeticLoadout:LoadoutSchema_Jam"){
+					Profile.changeItemAttribute(profileData, "NEONITEJAM", "slots", parsedData.slots, profileChanges)
+					Profile.saveProfile(accountId, "athena", profileData)
+				}
+				if(req.body["loadoutType"] === "CosmeticLoadout:LoadoutSchema_Sparks"){
+					Profile.changeItemAttribute(profileData, "NEONITESPARKS", "slots", parsedData.slots, profileChanges)
 					Profile.saveProfile(accountId, "athena", profileData)
 				}
 
