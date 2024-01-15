@@ -28,7 +28,7 @@ module.exports = (app) => {
         return { season, seasonglobal };
       }
 
-	  
+
 	
 	app.post('/fortnite/api/game/v2/profile/:accountId/client/:command', (req, res, next) => {
 		res.setHeader("Content-Type", "application/json");
@@ -942,7 +942,6 @@ module.exports = (app) => {
 
 			case "PutModularCosmeticLoadout":{
 				var parsedData = JSON.parse(req.body["loadoutData"])
-				console.log(req.body)
 				if(req.body["loadoutType"] === "CosmeticLoadout:LoadoutSchema_Character"){
 					athenprofile.items["NEONITECHARACTER"] = {
 						"templateId": "CosmeticLoadout:LoadoutSchema_Character",
