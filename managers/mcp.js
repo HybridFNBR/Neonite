@@ -28,8 +28,8 @@ module.exports = (app) => {
         return { season, seasonglobal };
       }
 
-
-
+	  
+	
 	app.post('/fortnite/api/game/v2/profile/:accountId/client/:command', (req, res, next) => {
 		res.setHeader("Content-Type", "application/json");
 		var accountId = req.params.accountId;
@@ -60,8 +60,6 @@ module.exports = (app) => {
 
 			}
 
-			// Set some extra attributes only at runtime for 100 seasons to
-			// unlock the final forms of any cosmetic items with super styles.
 			if (profileData.stats) {
 				var pastSeasons = [];
 				for (var i = 1; i <= 100; i++) {
@@ -408,7 +406,183 @@ module.exports = (app) => {
 						}
 					}catch{}
 				}
-					
+				if(season >= 28.00){
+					if(profileId == "athena"){
+						const Athena = getOrCreateProfile("athena")
+						var characterloadout = athenprofile.items["NEONITECHARACTER"]
+						var emoteloadout = athenprofile.items["NEONITEEMOTE"]
+						var platformloadout = athenprofile.items["NEONITEPLATFORM"]
+						var wrapsloadout = athenprofile.items["NEONITEWRAPS"]
+						if (typeof characterloadout == 'undefined'){
+							Profile.addItem(athenprofile, "NEONITECHARACTER", {
+								"templateId": "CosmeticLoadout:LoadoutSchema_Character",
+								"attributes": {
+									"slots": [
+										{
+										  "slot_template": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Character",
+										  "equipped_item": "AthenaCharacter:cid_001_athena_commando_f_default"
+										},
+										{
+										  "slot_template": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Backpack"
+										},
+										{
+										  "slot_template": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Pickaxe",
+										  "equipped_item": "AthenaPickaxe:defaultpickaxe"
+										},
+										{
+										  "slot_template": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Glider",
+										  "equipped_item": "AthenaGlider:defaultglider"
+										},
+										{
+										  "slot_template": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Contrails"
+										},
+										{
+										  "slot_template": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Aura"
+										}
+									]
+								},
+								"quantity" : 1
+							});
+
+							Athena.response.profileChanges = {
+								"changeType" : "itemAttrChanged",
+								"itemId" : "NEONITECHARACTER",
+								"attributeName" : "slots",
+								"attributeValue" : [ {
+									parsedData
+								} ]
+							}
+							response.multiUpdate = [Athena.response]
+							
+						}
+						if (typeof emoteloadout == 'undefined'){
+							Profile.addItem(athenprofile, "NEONITEEMOTES", {
+								"templateId": "CosmeticLoadout:LoadoutSchema_Emotes",
+								"attributes": {
+									"slots": [
+										{
+											"slot_template": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Emote_0",
+											"equipped_item": "AthenaDance:eid_boogiedown"
+										},
+										{
+											"slot_template": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Emote_1"
+										},
+										{
+											"slot_template": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Emote_2"
+										},
+										{
+											"slot_template": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Emote_3"
+										},
+										{
+											"slot_template": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Emote_4"
+										},
+										{
+											"slot_template": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Emote_5"
+										}
+									]
+								},
+								"quantity" : 1
+							});
+							Athena.response.profileChanges = {
+								"changeType" : "itemAttrChanged",
+								"itemId" : "NEONITEEMOTES",
+								"attributeName" : "slots",
+								"attributeValue" : [ {
+									parsedData
+								} ]
+							}
+							response.multiUpdate = [Athena.response]
+							
+						}
+						if (typeof platformloadout == 'undefined'){
+							Profile.addItem(athenprofile, "NEONITEPLATFORM", {
+								"templateId": "CosmeticLoadout:LoadoutSchema_Platform",
+								"attributes": {
+									"slots": [
+										{
+										"slot_template": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Banner_Icon"
+										},
+										{
+										"slot_template": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Banner_Color"
+										},
+										{
+										"slot_template": "CosmeticLoadoutSlotTemplate:LoadoutSlot_LobbyMusic",
+										},
+										{
+										"slot_template": "CosmeticLoadoutSlotTemplate:LoadoutSlot_LoadingScreen"
+										}
+									]
+									},
+								"quantity": 1
+							});
+							Athena.response.profileChanges = {
+								"changeType" : "itemAttrChanged",
+								"itemId" : "NEONITEPLATFORM",
+								"attributeName" : "slots",
+								"attributeValue" : [ {
+									parsedData
+								} ]
+							}
+							response.multiUpdate = [Athena.response]
+						}
+						if (typeof wrapsloadout == 'undefined'){
+							Profile.addItem(athenprofile, "NEONITEWRAPS", {
+								"templateId": "CosmeticLoadout:LoadoutSchema_Wraps",
+								"attributes": {
+									"slots": [
+										{
+										"slot_template": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Wrap_0",
+										},
+										{
+										"slot_template": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Wrap_1"
+										},
+										{
+										"slot_template": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Wrap_2"
+										},
+										{
+										"slot_template": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Wrap_3"
+										},
+										{
+										"slot_template": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Wrap_4"
+										},
+										{
+										"slot_template": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Wrap_5"
+										},
+										{
+										"slot_template": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Wrap_6"
+										}
+									]
+								},
+								"quantity": 1
+							});
+							response.notifications = {
+								"changeType" : "itemAttrChanged",
+								"itemId" : "NEONITEWRAPS",
+								"attributeName" : "slots",
+								"attributeValue" : [ {
+									parsedData
+								} ]
+							}
+						}
+						Profile.modifyStat(athenprofile, "loadout_presets", {
+							"CosmeticLoadout:LoadoutSchema_Character" : {
+								"0" : "NEONITECHARACTER",
+							},
+							"CosmeticLoadout:LoadoutSchema_Emotes" : {
+								"0" : "NEONITEEMOTES",
+							},
+							"CosmeticLoadout:LoadoutSchema_Platform" : {
+								"0" : "NEONITEPLATFORM",
+							},
+							"CosmeticLoadout:LoadoutSchema_Wraps" : {
+								"0" : "NEONITEWRAPS",
+							}
+						})
+						Profile.bumpRvn(athenprofile)
+						Profile.saveProfile(accountId, "athena", athenprofile)
+
+					}
+				}
 				if(season <= 10.40 || season =="Cert" || season == "Live")
 				{
 					try{//athena.items does not exist if there is no profile so just try and catch the error until it exists.
@@ -467,9 +641,7 @@ module.exports = (app) => {
 					break;
 				}
 				else{
-					
 					simpleProfile()
-					
 				}
 				break;
 			}
@@ -769,54 +941,79 @@ module.exports = (app) => {
 			}
 
 			case "PutModularCosmeticLoadout":{
-				const Athena = getOrCreateProfile("athena")
 				var parsedData = JSON.parse(req.body["loadoutData"])
-				var cosmesticloadout = athenprofile.items["NEONITE"]
-				if (typeof cosmesticloadout == 'undefined'){
-					Profile.modifyStat(athenprofile, "loadout_presets", {
-						"CosmeticLoadout:LoadoutSchema_Character" : {
-							"0" : "NEONITE",
-						}
-					})
-					Profile.addItem(athenprofile, "NEONITE", {
+				console.log(req.body)
+				if(req.body["loadoutType"] === "CosmeticLoadout:LoadoutSchema_Character"){
+					athenprofile.items["NEONITECHARACTER"] = {
 						"templateId": "CosmeticLoadout:LoadoutSchema_Character",
-						"attributes": parsedData
-					});
-					
-					Profile.saveProfile(accountId, "athena", athenprofile)
+						"attributes": parsedData,
+						"quantity" : 1
+					}
 					Profile.bumpRvn(athenprofile)
-					Athena.response.profileChanges = {
+					Profile.saveProfile(accountId, "athena", athenprofile)
+					response.notifications = {
 						"changeType" : "itemAttrChanged",
-						"itemId" : "NEONITE",
+						"itemId" : "NEONITECHARACTER",
 						"attributeName" : "slots",
 						"attributeValue" : [ {
 							parsedData
 						} ]
 					}
-					response.multiUpdate = [Athena.response]
 				}
-				else{
-					athenprofile.items["NEONITE"] = {
-						"templateId": "CosmeticLoadout:LoadoutSchema_Character",
-						"attributes": parsedData
+				if(req.body["loadoutType"] === "CosmeticLoadout:LoadoutSchema_Emotes"){
+					athenprofile.items["NEONITEEMOTES"] = {
+						"templateId": "CosmeticLoadout:LoadoutSchema_Emotes",
+						"attributes": parsedData,
+						"quantity" : 1
 					}
-					Profile.saveProfile(accountId, "athena", athenprofile)
 					Profile.bumpRvn(athenprofile)
-					Athena.response.profileChanges = {
+					Profile.saveProfile(accountId, "athena", athenprofile)
+					response.notifications = {
 						"changeType" : "itemAttrChanged",
-						"itemId" : "NEONITE",
+						"itemId" : "NEONITEEMOTES",
 						"attributeName" : "slots",
 						"attributeValue" : [ {
 							parsedData
 						} ]
 					}
-					response.multiUpdate = [Athena.response]
 				}
-
-				break;
-				//for some reason fortnite only requests this the first time changing cosmetic, changing cosmetic after the fact this does not get requested again unless booting up the game *this is not intended and will be fixed
+				if(req.body["loadoutType"] === "CosmeticLoadout:LoadoutSchema_Platform"){
+					athenprofile.items["NEONITEPLATFORM"] = {
+						"templateId": "CosmeticLoadout:LoadoutSchema_Platform",
+						"attributes": parsedData,
+						"quantity" : 1
+					}
+					Profile.bumpRvn(athenprofile)
+					Profile.saveProfile(accountId, "athena", athenprofile)
+					response.notifications = {
+						"changeType" : "itemAttrChanged",
+						"itemId" : "NEONITEPLATFORM",
+						"attributeName" : "slots",
+						"attributeValue" : [ {
+							parsedData
+						} ]
+					}
+				}
+				if(req.body["loadoutType"] === "CosmeticLoadout:LoadoutSchema_Wraps"){
+					athenprofile.items["NEONITEWRAPS"] = {
+						"templateId": "CosmeticLoadout:LoadoutSchema_Wraps",
+						"attributes": parsedData,
+						"quantity" : 1
+					}
+					Profile.bumpRvn(athenprofile)
+					Profile.saveProfile(accountId, "athena", athenprofile)
+					response.notifications = {
+						"changeType" : "itemAttrChanged",
+						"itemId" : "NEONITEWRAPS",
+						"attributeName" : "slots",
+						"attributeValue" : [ {
+							parsedData
+						} ]
+					}
+				}
+				
+				break; //"PutModularCosmeticLoadout" command still only requests only once after changing a cosmetic then never again(i dont know why)
 			}
-
 			case "ExchangeGameCurrencyForBattlePassOffer":{
 				checkValidProfileID("athena")
 				break;
