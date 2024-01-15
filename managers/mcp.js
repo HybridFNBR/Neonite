@@ -626,6 +626,33 @@ module.exports = (app) => {
 								} ]
 							}
 						}
+						if (typeof sparksloadout == 'undefined'){
+							Profile.addItem(athenprofile, "NEONITEVEHICLE", {
+								"templateId" : "CosmeticLoadout:LoadoutSchema_Vehicle",
+								"attributes" : {
+									"slots" : [ {
+										"slot_template" : "CosmeticLoadoutSlotTemplate:LoadoutSlot_Vehicle_Body"
+									  }, {
+										"slot_template" : "CosmeticLoadoutSlotTemplate:LoadoutSlot_Vehicle_Booster"
+									  }, {
+										"slot_template" : "CosmeticLoadoutSlotTemplate:LoadoutSlot_Vehicle_DriftSmoke"
+									  }, {
+										"slot_template" : "CosmeticLoadoutSlotTemplate:LoadoutSlot_Vehicle_Wheel"
+									  }, {
+										"slot_template" : "CosmeticLoadoutSlotTemplate:LoadoutSlot_Vehicle_Skin"
+									  } ]
+									},
+									"quantity" : 1
+							});
+							response.notifications = {
+								"changeType" : "itemAttrChanged",
+								"itemId" : "NEONITEVEHICLE",
+								"attributeName" : "slots",
+								"attributeValue" : [ {
+									parsedData
+								} ]
+							}
+						}
 						Profile.modifyStat(athenprofile, "loadout_presets", {
 							"CosmeticLoadout:LoadoutSchema_Character" : {
 								"0" : "NEONITECHARACTER",
@@ -644,6 +671,9 @@ module.exports = (app) => {
 							},
 							"CosmeticLoadout:LoadoutSchema_Sparks" : {
 								"0" : "NEONITESPARKS",
+							},
+							"CosmeticLoadout:LoadoutSchema_Vehicle" : {
+								"0" : "NEONITEVEHICLE",
 							}
 						})
 						Profile.bumpRvn(athenprofile)
@@ -1032,6 +1062,10 @@ module.exports = (app) => {
 				}
 				if(req.body["loadoutType"] === "CosmeticLoadout:LoadoutSchema_Sparks"){
 					Profile.changeItemAttribute(profileData, "NEONITESPARKS", "slots", parsedData.slots, profileChanges)
+					Profile.saveProfile(accountId, "athena", profileData)
+				}
+				if(req.body["loadoutType"] === "CosmeticLoadout:LoadoutSchema_Vehicle"){
+					Profile.changeItemAttribute(profileData, "NEONITEVEHICLE", "slots", parsedData.slots, profileChanges)
 					Profile.saveProfile(accountId, "athena", profileData)
 				}
 
