@@ -941,75 +941,27 @@ module.exports = (app) => {
 			}
 
 			case "PutModularCosmeticLoadout":{
+				const Athena = getOrCreateProfile("athena")
 				var parsedData = JSON.parse(req.body["loadoutData"])
 				if(req.body["loadoutType"] === "CosmeticLoadout:LoadoutSchema_Character"){
-					athenprofile.items["NEONITECHARACTER"] = {
-						"templateId": "CosmeticLoadout:LoadoutSchema_Character",
-						"attributes": parsedData,
-						"quantity" : 1
-					}
-					Profile.bumpRvn(athenprofile)
-					Profile.saveProfile(accountId, "athena", athenprofile)
-					response.notifications = {
-						"changeType" : "itemAttrChanged",
-						"itemId" : "NEONITECHARACTER",
-						"attributeName" : "slots",
-						"attributeValue" : [ {
-							parsedData
-						} ]
-					}
+					Profile.changeItemAttribute(profileData, "NEONITECHARACTER", "slots", parsedData.slots, profileChanges)
+					Profile.saveProfile(accountId, "athena", profileData)
 				}
 				if(req.body["loadoutType"] === "CosmeticLoadout:LoadoutSchema_Emotes"){
-					athenprofile.items["NEONITEEMOTES"] = {
-						"templateId": "CosmeticLoadout:LoadoutSchema_Emotes",
-						"attributes": parsedData,
-						"quantity" : 1
-					}
-					Profile.bumpRvn(athenprofile)
-					Profile.saveProfile(accountId, "athena", athenprofile)
-					response.notifications = {
-						"changeType" : "itemAttrChanged",
-						"itemId" : "NEONITEEMOTES",
-						"attributeName" : "slots",
-						"attributeValue" : [ {
-							parsedData
-						} ]
-					}
+					Profile.changeItemAttribute(profileData, "NEONITEEMOTES", "slots", parsedData.slots, profileChanges)
+					Profile.saveProfile(accountId, "athena", profileData)
 				}
 				if(req.body["loadoutType"] === "CosmeticLoadout:LoadoutSchema_Platform"){
-					athenprofile.items["NEONITEPLATFORM"] = {
-						"templateId": "CosmeticLoadout:LoadoutSchema_Platform",
-						"attributes": parsedData,
-						"quantity" : 1
-					}
-					Profile.bumpRvn(athenprofile)
-					Profile.saveProfile(accountId, "athena", athenprofile)
-					response.notifications = {
-						"changeType" : "itemAttrChanged",
-						"itemId" : "NEONITEPLATFORM",
-						"attributeName" : "slots",
-						"attributeValue" : [ {
-							parsedData
-						} ]
-					}
+					Profile.changeItemAttribute(profileData, "NEONITEPLATFORM", "slots", parsedData.slots, profileChanges)
+					Profile.saveProfile(accountId, "athena", profileData)
 				}
 				if(req.body["loadoutType"] === "CosmeticLoadout:LoadoutSchema_Wraps"){
-					athenprofile.items["NEONITEWRAPS"] = {
-						"templateId": "CosmeticLoadout:LoadoutSchema_Wraps",
-						"attributes": parsedData,
-						"quantity" : 1
-					}
-					Profile.bumpRvn(athenprofile)
-					Profile.saveProfile(accountId, "athena", athenprofile)
-					response.notifications = {
-						"changeType" : "itemAttrChanged",
-						"itemId" : "NEONITEWRAPS",
-						"attributeName" : "slots",
-						"attributeValue" : [ {
-							parsedData
-						} ]
-					}
+					Profile.changeItemAttribute(profileData, "NEONITEWRAPS", "slots", parsedData.slots, profileChanges)
+					Profile.saveProfile(accountId, "athena", profileData)
 				}
+
+				Profile.bumpRvn(athenprofile)
+				Profile.saveProfile(accountId, "athena", athenprofile)
 				
 				break; //"PutModularCosmeticLoadout" command still only requests only once after changing a cosmetic then never again(i dont know why)
 			}
