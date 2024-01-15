@@ -415,6 +415,7 @@ module.exports = (app) => {
 						var wrapsloadout = athenprofile.items["NEONITEWRAPS"]
 						var jamloadout = athenprofile.items["NEONITEJAM"]
 						var sparksloadout = athenprofile.items["NEONITESPARKS"]
+						var vehicleloadout = athenprofile.items["NEONITEVEHICLE"]
 						if (typeof characterloadout == 'undefined'){
 							Profile.addItem(athenprofile, "NEONITECHARACTER", {
 								"templateId": "CosmeticLoadout:LoadoutSchema_Character",
@@ -626,7 +627,7 @@ module.exports = (app) => {
 								} ]
 							}
 						}
-						if (typeof sparksloadout == 'undefined'){
+						if (typeof vehicleloadout == 'undefined'){
 							Profile.addItem(athenprofile, "NEONITEVEHICLE", {
 								"templateId" : "CosmeticLoadout:LoadoutSchema_Vehicle",
 								"attributes" : {
