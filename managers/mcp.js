@@ -342,6 +342,10 @@ module.exports = (app) => {
 				response.multiUpdate = [athenaProfile.response];
 				break;
 			}
+			
+			case "BulkEquipBattleRoyaleCustomization":{
+				break;
+			}
 
 			case "RefreshExpeditions": {
 				checkValidProfileID("profile0");
