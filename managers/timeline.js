@@ -51,7 +51,7 @@ module.exports = (app) => {
                                 eventType: "RBFI", // IslandScripting (CH1) related
                                 activeUntil: "9999-12-01T21:10:00.000Z",
                                 activeSince: "2020-11-21T07:00:00.000Z"
-                            },
+                            },                                                                                                              
                             {
                                 eventType: `EventFlag.LobbySeason${seasonglobal}`,
                                 activeUntil: "9999-12-31T23:59:59.999Z",
@@ -1151,6 +1151,16 @@ module.exports = (app) => {
             )
         }
 
+        if(season == 28.10){
+            timeline.channels["client-events"]["states"][0]["activeEvents"].push(
+                {
+                    eventType: "EventFlag.Event_LinedNotebook_Teaser", // TMNT Tab countdown (always needed)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                }       
+            )
+        }
+
         if(seasonglobal == 7 || seasonglobal == 11 || seasonglobal == 15 || seasonglobal == 19){
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "TopSecret", //Holiday Bus (S7/S11/S15/S19)
@@ -1188,6 +1198,28 @@ module.exports = (app) => {
                 activeSince: "2000-09-14T07:00:00.000Z"
             },)
         }
+
+        if(config.TMNTStage1 == true){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push({
+                eventType: "EventFlag.Event_LinedNotebook_Teaser1", // TMNT Tab Stage 1 
+                activeUntil: "9999-09-14T07:00:00.000Z",
+                activeSince: "2000-09-14T07:00:00.000Z"
+            },)
+        }
+        if(config.TMNTStage2 == true){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push({
+                eventType: "EventFlag.Event_LinedNotebook_Teaser2", // TMNT Tab Stage 2
+                activeUntil: "9999-09-14T07:00:00.000Z",
+                activeSince: "2000-09-14T07:00:00.000Z"
+            },)
+        }
+        if(config.TMNTStage3 == true){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push({
+                eventType: "EventFlag.Event_LinedNotebook_Teaser3", // TMNT Tab Stage 3
+                activeUntil: "9999-09-14T07:00:00.000Z",
+                activeSince: "2000-09-14T07:00:00.000Z"
+            },)
+        }        
         res.json(timeline)
     })
 }
