@@ -696,6 +696,37 @@ module.exports = (app) => {
             currentTime: new Date().toISOString()
         }
 
+        if(season == 4.5){
+            console.log("season is 4.5")
+            timeline.channels['client-events']['states'][0]['activeEvents'].push(
+                {
+                    eventType: "EventFlag.BR_S4_Geode_Begin", //
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },
+                {
+                    eventType: "EventFlag.BR_S4_Geode_Countdown", //
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },
+            )
+        }
+
+        if(season == 7.20){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push(
+                {
+                    eventType: "EventFlag.LTM_14DaysOfFortnite", //WinterFest
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },
+                {
+                    eventType: "P1", // Ice King Event related
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },
+            )
+        }
+
         if(season == 7.30){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {

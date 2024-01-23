@@ -1079,6 +1079,9 @@ module.exports = (app) => {
 				
 				break;
 			}
+			case "SetLoadoutShuffleEnabled":{
+				break
+			}
 			case "ExchangeGameCurrencyForBattlePassOffer":{
 				checkValidProfileID("athena")
 				break;
