@@ -43,10 +43,16 @@ async function compareAndUpdateKeychain() {
 async function startbackend(){
     sails.lift({
       port: 5595,
+	  environment: "production",
+	  hooks: {
+		session: false,
+	  },
+	  log:{
+	  	level: 'silent'
+	  },
     }, (err) => {
-      console.log(err)
-      NeoLog.Log('Neonite is up and listening on port 5595!');
     });
+	NeoLog.Log('Neonite is up and listening on port 5595!');
   }
 
   async function runfunctions(){
