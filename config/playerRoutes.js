@@ -30,7 +30,7 @@ module.exports.routes = {
         skipAssets: false
     },
     'GET /fortnite/api/receipts/v1/account/:accountId/receipts': 'PlayerController.receipts',
-
+    'GET /friends/api/public/blocklist/:accountId': 'PlayerController.blocklist',
 
 
 

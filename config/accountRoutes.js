@@ -1,5 +1,5 @@
 module.exports.routes = {
-    'POST /fortnite/api/game/v2/tryPlayOnPlatform/account/': 'AccountController.tryPlayOnPlatform',
+    'POST /fortnite/api/game/v2/tryPlayOnPlatform/account/:accountId': 'AccountController.tryPlayOnPlatform',
     'PUT /profile/privacy_settings': 'AccountController.privacySettings',
     'GET /api/v1/leaderboards/Fortnite/:eventId/:eventWindowId/*':{
         action: "leaderboards",

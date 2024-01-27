@@ -78,6 +78,11 @@ module.exports = {
 
     receipts: function(req, res){
         res.json([])
-    }
+    },
     
+    blocklist: function(req, res){
+        res.json({
+			blockedUsers: []
+		})
+    }
 }
