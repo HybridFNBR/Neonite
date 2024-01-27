@@ -77,6 +77,10 @@ module.exports = {
             res.send(index)
         }
     },
+
+	config: function(req, res){
+		res.status(204).end()
+	},
 	
 	defaultEngine: function(req, res){
 		res.setHeader("content-type", "application/octet-stream")

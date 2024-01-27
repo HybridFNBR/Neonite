@@ -30,6 +30,8 @@ module.exports.routes = {
     'GET /fortnite/api/game/v2/creative/*': 'ApiController.creative',
     'GET /affiliate/api/public/affiliates/slug/:affiliateName': 'ApiController.sac',
     'GET /content-controls/:accountId': 'ApiController.contentControls',
+    'GET /content-controls/:accountId/rules/namespaces/fn': 'ApiController.contentControlsRules',
+    'GET /api/v2/interactions/aggregated/Fortnite/:accountId': 'ApiController.interactionsAggregated',
     'POST /fortnite/api/game/v2/profileToken/verify/*':{
         action: "profileToken",
         controller:'ApiController', 

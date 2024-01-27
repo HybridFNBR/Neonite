@@ -1,5 +1,6 @@
 module.exports.routes = {
     'GET /fortnite/api/cloudstorage/system': 'CloudStorageController.cloudstorageSystem',
+    'GET /fortnite/api/cloudstorage/system/config': 'CloudStorageController.config',
     'GET /fortnite/api/cloudstorage/system/DefaultGame.ini': 'CloudStorageController.defaultGame',
     'GET /fortnite/api/cloudstorage/system/DefaultEngine.ini': 'CloudStorageController.defaultEngine',
     'GET /fortnite/api/cloudstorage/system/DefaultRuntimeOptions.ini': 'CloudStorageController.defaultRuntimeOptions',

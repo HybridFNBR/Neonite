@@ -14,7 +14,7 @@ module.exports.routes = {
     'POST /api/v2/discovery/surface/CreativeDiscoverySurface_Frontend': 'DiscoveryController.discoveryv3',
     'POST /links/api/fn/mnemonic/': 'DiscoveryController.mnemonicLinks',
     'GET /links/api/fn/mnemonic/:playlistId/related': 'DiscoveryController.related',
-    'GET /api/v1/links/favorites/:accountId/check': 'DiscoveryController.favoritesCheck',
+    'POST /api/v1/links/favorites/:accountId/check': 'DiscoveryController.favoritesCheck',
     'POST /api/v1/links/lock-status/:accountId/check': 'DiscoveryController.lockStatus',
     'GET /links/api/fn/mnemonic/:playlistId': 'DiscoveryController.mnemonicPlaylist',
 

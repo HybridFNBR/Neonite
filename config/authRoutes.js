@@ -14,7 +14,7 @@ module.exports.routes = {
     'GET /account/api/public/account/:accountId/deviceAuth': 'AuthController.GetdeviceAuth',
     'POST /account/api/public/account/:accountId/deviceAuth': 'AuthController.PostdeviceAuth',
     'DELETE /account/api/public/account/:accountId/deviceAuth/*': 'AuthController.DeletedeviceAuth',
-    'POST /account/api/public/account/:accountId/externalAuths': 'AuthController.externalAuths',
+    'GET /account/api/public/account/:accountId/externalAuths': 'AuthController.externalAuths',
 
 
 }

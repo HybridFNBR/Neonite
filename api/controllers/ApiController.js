@@ -259,6 +259,14 @@ module.exports = {
     })
   },
 
+  contentControlsRules: function(req, res){
+	res.status(204).end();
+  },
+
+  interactionsAggregated: function(req, res){
+	res.status(204).end();
+  },
+
   profileToken: function(req, res){
     res.status(204).end()
   },
@@ -413,14 +421,14 @@ module.exports = {
 			"limit": "Res=656"
 		})
 		//https://github.com/LeleDerGrasshalmi/FortniteEndpointsDocumentation/blob/ec6b267bca542a2b8804084622721a4bd8ae7c7f/EpicGames/IPDataService/RegionCheck.md
-  },
+  	},
 
   playRegion: function(req, res){
     res.status(204).end()
-  },
+  	},
 
   storeAccess: function(req, res){
 	res.status(204).end()
-  }
+  	}
 
 };

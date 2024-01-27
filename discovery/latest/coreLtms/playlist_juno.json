@@ -1,0 +1,67 @@
+{
+    "namespace": "fn",
+    "accountId": "epic",
+    "creatorName": "Epic",
+    "mnemonic": "playlist_juno",
+    "linkType": "BR:Playlist",
+    "metadata": {
+    "lobby_background_image_urls": {
+        "url": "https://cdn2.unrealengine.com/juno-lobby-2560x1440-b8beae672ffb.png"
+    },
+    "frontend_plugin": "JunoFrontendUI",
+    "image_url": "https://cdn2.unrealengine.com/legofn-disco-1920-1920x1080-c5f52d11a179.jpg",
+    "requiresArbitratedWorldId": true,
+    "image_urls": {
+        "url_s": "https://cdn2.unrealengine.com/legofn-disco-480-480x270-c55546b444b3.jpg",
+        "url_xs": "https://cdn2.unrealengine.com/legofn-disco-270-270x152-78c11b5032db.jpg",
+        "url_m": "https://cdn2.unrealengine.com/legofn-disco-640-640x360-75aa197e5b17.jpg",
+        "url": "https://cdn2.unrealengine.com/legofn-disco-1920-1920x1080-c5f52d11a179.jpg"
+    },
+    "matchmaking": {
+        "override_playlist": "playlist_juno"
+    },
+    "title": "LEGO Fortnite",
+    "alt_title": {
+        "ar": "LEGO Fortnite",
+        "de": "LEGO Fortnite",
+        "ru": "LEGO Fortnite",
+        "ko": "\ub808\uace0 \ud3ec\ud2b8\ub098\uc774\ud2b8",
+        "pt-BR": "LEGO Fortnite",
+        "ja": "LEGO Fortnite",
+        "it": "LEGO Fortnite",
+        "fr": "LEGO Fortnite",
+        "pl": "LEGO Fortnite",
+        "es": "LEGO Fortnite",
+        "es-419": "LEGO Fortnite",
+        "tr": "LEGO Fortnite"
+    },
+    "alt_tagline": {
+        "ar": "\u0627\u0633\u062a\u0643\u0634\u0641 \u0639\u0648\u0627\u0644\u0645 \u0645\u0641\u062a\u0648\u062d\u0629 \u0634\u0627\u0633\u0639\u0629 \u062d\u064a\u062b \u064a\u062a\u0644\u0627\u0642\u0649 \u0633\u062d\u0631 \u0628\u0646\u0627\u0621 LEGO\u00ae \u0648Fortnite. \u0627\u0639\u062b\u0631 \u0639\u0644\u0649 \u0623\u0641\u0636\u0644 \u0645\u063a\u0627\u0645\u0631\u0629 LEGO \u0644\u0644\u0646\u062c\u0627\u0629 \u0641\u064a Fortnite!",
+        "de": "Erkunde riesige offene Welten, in denen die Magie des Bauens von LEGO\u00ae und Fortnite aufeinandertreffen. In Fortnite findest du das ultimative LEGO-Abenteuer, in dem sich alles ums \u00dcberleben und Crafting dreht!",
+        "ru": "\u0418\u0441\u0441\u043b\u0435\u0434\u0443\u0439\u0442\u0435 \u043e\u0433\u0440\u043e\u043c\u043d\u044b\u0435 \u043e\u0442\u043a\u0440\u044b\u0442\u044b\u0435 \u043c\u0438\u0440\u044b, \u0433\u0434\u0435 \u0441\u043e\u0435\u0434\u0438\u043d\u044f\u044e\u0442\u0441\u044f \u0447\u0443\u0434\u0435\u0441\u0430 \u0441\u0442\u0440\u043e\u0438\u0442\u0435\u043b\u044c\u0441\u0442\u0432\u0430 LEGO\u00ae \u0438 \u043f\u0440\u0438\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u044f Fortnite. \u041e\u0442\u043f\u0440\u0430\u0432\u044c\u0442\u0435\u0441\u044c \u0432 \u043d\u0435\u0437\u0430\u0431\u044b\u0432\u0430\u0435\u043c\u043e\u0435 \u043f\u0443\u0442\u0435\u0448\u0435\u0441\u0442\u0432\u0438\u0435 \u0441 LEGO\u00ae \u0432 Fortnite \u0438 \u0441\u0434\u0435\u043b\u0430\u0439\u0442\u0435 \u0432\u0441\u0451, \u0447\u0442\u043e\u0431\u044b \u0432\u044b\u0436\u0438\u0442\u044c!",
+        "ko": "\ub808\uace0\u00ae \uc870\ub9bd\uc758 \ub9c8\ubc95\uacfc \ud3ec\ud2b8\ub098\uc774\ud2b8\uac00 \ub9cc\ub098\ub294 \uad11\ub300\ud55c \uc624\ud508 \uc6d4\ub4dc\ub97c \ud0d0\ud5d8\ud574 \ubcf4\uc138\uc694. \ud3ec\ud2b8\ub098\uc774\ud2b8\uc5d0\uc11c \uad81\uadf9\uc758 \uc11c\ubc14\uc774\ubc8c \ud06c\ub798\ud504\ud305 \ub808\uace0 \uc5b4\ub4dc\ubca4\ucc98\ub97c \ub9cc\ub098 \ubcf4\uc138\uc694!",
+        "pt-BR": "Explore vastos mundos abertos onde a magia da constru\u00e7\u00e3o LEGO\u00ae encontra o Fortnite. Descubra a mais completa aventura LEGO\u00ae de cria\u00e7\u00e3o e sobreviv\u00eancia no Fortnite!",
+        "ja": "LEGO\u00ae\u306e\u5efa\u7bc9\u306e\u9b54\u6cd5\u3068\u30d5\u30a9\u30fc\u30c8\u30ca\u30a4\u30c8\u304c\u51fa\u4f1a\u3046\u3001\u5e83\u5927\u306a\u30aa\u30fc\u30d7\u30f3\u30ef\u30fc\u30eb\u30c9\u3092\u63a2\u7d22\u3057\u3088\u3046\u3002 \u7a76\u6975\u306e\u30b5\u30d0\u30a4\u30d0\u30eb\u30fb\u30af\u30e9\u30d5\u30c8LEGO\u30a2\u30c9\u30d9\u30f3\u30c1\u30e3\u30fc\u3092\u30d5\u30a9\u30fc\u30c8\u30ca\u30a4\u30c8\u3067\uff01",
+        "it": "Esplora vasti mondi aperti dove Fortnite incontra la magia delle costruzioni LEGO\u00ae. L'avventura LEGO definitiva ti aspetta in Fortnite!",
+        "fr": "Explorez de vastes mondes ouverts o\u00f9 les univers de Fortnite et LEGO\u00ae s'entrem\u00ealent pour un r\u00e9sultat haut en couleur ! Vivez une formidable exp\u00e9rience de survie et de construction LEGO dans Fortnite !",
+        "pl": "Eksploruj rozleg\u0142e, otwarte \u015bwiaty, w kt\u00f3rych magia budowania LEGO\u00ae \u0142\u0105czy si\u0119 z Fortnite. Odkryj w Fortnite niesamowit\u0105 przygod\u0119 LEGO z elementami przetrwania i wytwarzania!",
+        "es": "Explora gigantescos mundos abiertos en los que la magia de la construcci\u00f3n de LEGO\u00ae se mezcla con Fortnite. \u00a1Descubre la aventura de supervivencia y construcci\u00f3n definitiva de LEGO en Fortnite!",
+        "es-419": "Explora vastos mundos abiertos donde la magia de la construcci\u00f3n de LEGO\u00ae y Fortnite se fusionan. \u00a1Descubre la aventura de supervivencia y fabricaci\u00f3n definitiva de LEGO\u00ae en Fortnite!",
+        "tr": "B\u00fcy\u00fcl\u00fc LEGO\u00ae yap\u0131lar\u0131n\u0131n Fortnite ile bulu\u015ftu\u011fu muazzam a\u00e7\u0131k d\u00fcnyalar\u0131 ke\u015ffet. Hayatta kalma ve \u00fcretim temal\u0131 muhte\u015fem bir LEGO maceras\u0131 \u015fimdi Fortnite'ta!"
+    },
+    "feature_flags": [
+        "has_custom_ui"
+    ],
+    "product_tag": "Product.Juno",
+    "tagline": "Explore vast, open worlds where the magic of LEGO\u00ae building and Fortnite collide. Find the ultimate survival crafting LEGO adventure in Fortnite!"
+    },
+    "version": 1,
+    "active": true,
+    "disabled": false,
+    "created": "2022-08-11T20:17:42.128Z",
+    "published": "2023-11-07T23:01:02.564Z",
+    "descriptionTags": [],
+    "moderationStatus": "Unmoderated",
+    "lastActivatedDate": "2022-08-11T20:17:42.132Z",
+    "discoveryIntent": "PUBLIC"
+}
