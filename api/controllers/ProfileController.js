@@ -1,5 +1,5 @@
-const Profile = require("../profile");
-const errors = require("../structs/errors");
+const Profile = require("../../profile");
+const errors = require("../../structs/errors");
 const { ApiException } = errors;
 const fs = require("fs");
 const { v4: uuidv4 } = require("uuid");
@@ -10,28 +10,20 @@ var ini = require('ini')
 Array.prototype.insert = function ( index, item ) {
 	this.splice( index, 0, item );
 };
-const NeoLog = require("../structs/NeoLog");
-var config = ini.parse(fs.readFileSync(path.join(__dirname, '../config.ini'), 'utf-8'));
-const cosmetics = JSON.parse(JSON.stringify(require("../cosmetics_config.json")));
+const NeoLog = require("../../structs/NeoLog");
+var config = ini.parse(fs.readFileSync(path.join(__dirname, '../../config.ini'), 'utf-8'));
+const cosmetics = JSON.parse(JSON.stringify(require("../../cosmetics_config.json")));
 
+function getSeasonInfo(req) {
+    const userAgent = req.headers['user-agent'];
+    const season = userAgent?.split('-')[1];
+    const seasonglobal = season?.split('.')[0];
+    return { season, seasonglobal };
+  }
 
-
-/**
- * 
- * @param {Express.Application} app 
- */
-module.exports = (app) => {
-	function getSeasonInfo(req) {
-        const userAgent = req.headers['user-agent'];
-        const season = userAgent?.split('-')[1];
-        const seasonglobal = season?.split('.')[0];
-        return { season, seasonglobal };
-      }
-
-
-	
-	app.post('/fortnite/api/game/v2/profile/:accountId/client/:command', (req, res, next) => {
-		res.setHeader("Content-Type", "application/json");
+module.exports = {
+    mcp: function(req, res, next){
+        res.setHeader("Content-Type", "application/json");
 		var accountId = req.params.accountId;
 		var athenprofile = Profile.readProfile(accountId, "athena")
 		const { season, seasonglobal } = getSeasonInfo(req);
@@ -51,7 +43,7 @@ module.exports = (app) => {
 
 				//creating profile if it doesn't exist
 				try {
-					fs.mkdirSync(`./config/${accountId}/profiles`, { recursive: true });
+					fs.mkdirSync(`./profile/${accountId}/profiles`, { recursive: true });
 					Profile.saveProfile(accountId, profileId, profileData);
 				} catch (e) {
 					NeoLog.Error("Failed creating profile.");
@@ -233,10 +225,10 @@ module.exports = (app) => {
 
 				let shop
 				if(season >= 26.30){
-					shop = require("../responses/shopv2.json");
+					shop = require("../../responses/shopv2.json");
 				}
 				else{
-					shop = require("../responses/shopv1.json"); 
+					shop = require("../../responses/shopv1.json"); 
 				}
 				
 				
@@ -919,10 +911,6 @@ module.exports = (app) => {
 					}
 				}
 
-				console.log(req.body.lockerItem)
-
-				
-
 				if (bChanged) {
 					Profile.changeItemAttribute(profileData, req.body.lockerItem, "locker_slots_data", locker_slots_data, profileChanges);
 				}
@@ -1128,7 +1116,7 @@ module.exports = (app) => {
 		}
  
 		res.json(response);
-	});
+	}
 }
 
 function checkValidProfileID0(command, sentProfileId, next, ...validProfileIds) {

@@ -1,28 +1,25 @@
+const Default = require("../../discovery/discoveryMenu.json");
+const {discoveryResponses} = require("../../discovery/events")
 
-const { skipPartiallyEmittedExpressions } = require("typescript");
-const Default = require("../discovery/discoveryMenu.json");
-const {discoveryResponses} = require("../discovery/events")
-const {ApiException} = require('./../structs/errors');
+const seasonData = {
+    "22.40": discoveryResponses.ver2240,
+    "20.40": discoveryResponses.ver2040,
+    "18.40": discoveryResponses.ver1840,
+    "17.50": discoveryResponses.ver1750,
+};
 
-module.exports = (app) => {
-
-	const seasonData = {
-		"22.40": discoveryResponses.ver2240,
-		"20.40": discoveryResponses.ver2040,
-		"18.40": discoveryResponses.ver1840,
-		"17.50": discoveryResponses.ver1750,
-	  };
-	
-	function getSeasonInfo(req) {
+function getSeasonInfo(req) {
 	const userAgent = req.headers["user-agent"];
 	const season = userAgent.split('-')[1];
 	const seasonglobal = season.split('.')[0];
 	return { season, seasonglobal };
-	}
+}
 
-	//first iteration of discovery
-	app.post('/fortnite/api/game/v2/creative/discovery/surface/*', (req, res) => {
-		const { season, seasonglobal } = getSeasonInfo(req);
+module.exports = {
+
+    //first interation of discovery api
+    discoveryv1: function(req, res){
+        const { season, seasonglobal } = getSeasonInfo(req);
 		if (seasonData[season]) {
 			return res.json(seasonData[season]);
 		}
@@ -32,11 +29,11 @@ module.exports = (app) => {
 		else{
 			return res.json(Default);
 		}
-	})
-
-	//second interation
-	app.post('/api/v1/discovery/surface/*', (req, res) => {
-		const { season, seasonglobal } = getSeasonInfo(req);
+    },
+    
+    //second interation of discovery api
+    discoveryv2: function(req, res){
+        const { season, seasonglobal } = getSeasonInfo(req);
 		if (seasonData[season]) {
 			return res.json(seasonData[season]);
 		}
@@ -50,7 +47,7 @@ module.exports = (app) => {
 								"results": [
 									{
 										"lastVisited": null,
-										"linkCode": "set_br_playlists", //there is habanero but why load into a comp playlist anyway.
+										"linkCode": "set_br_playlists",
 										"isFavorite": false,
 										"globalCCU": 1
                             		},
@@ -73,109 +70,107 @@ module.exports = (app) => {
 		else{
 			return res.json(Default);
 		}
-	})
-	
-	//third interation - currently used.
-	app.post('/api/v2/discovery/surface/CreativeDiscoverySurface_Frontend', (req, res) => {
-			return res.json({
-				"panels": [
-					{
-						"PanelName": "ByEpicNoBigBattle6Col",
-						"featureTags": [
-							"col:5"
-						],
-						"firstPage": {
-							"results": [
-								{
-									"lastVisited": null,
-									"linkCode": "set_br_playlists", //there is habanero but why load into a comp playlist anyway.
-									"isFavorite": false,
-									"globalCCU": 1
-								},
-								{
-									"lastVisited": null,
-									"linkCode": "playlist_durian",
-									"isFavorite": false,
-									"globalCCU": 1
-								},
-								{
-									"lastVisited": null,
-									"linkCode": "playlist_papaya",
-									"isFavorite": false,
-									"globalCCU": 1
-								},
-								{
-									"lastVisited": null,
-									"linkCode": "playlist_juno",
-									"isFavorite": false,
-									"globalCCU": 1
-								}
-							   ],
-							"hasMore": true,
-							"panelTargetName": null
-						},
-						"panelType": "AnalyticsList",
-						"playHistoryType": null
-					}
-				]
-		})
-	});
+    },
 
+    //thrid interation of discovery api - currently used
+    discoveryv3: function(req, res){
+        res.json({
+            "panels": [
+                {
+                    "PanelName": "ByEpicNoBigBattle6Col",
+                    "featureTags": [
+                        "col:5"
+                    ],
+                    "firstPage": {
+                        "results": [
+                            {
+                                "lastVisited": null,
+                                "linkCode": "set_br_playlists", //there is habanero but why load into a comp playlist anyway.
+                                "isFavorite": false,
+                                "globalCCU": 1
+                            },
+                            {
+                                "lastVisited": null,
+                                "linkCode": "playlist_durian",
+                                "isFavorite": false,
+                                "globalCCU": 1
+                            },
+                            {
+                                "lastVisited": null,
+                                "linkCode": "playlist_papaya",
+                                "isFavorite": false,
+                                "globalCCU": 1
+                            },
+                            {
+                                "lastVisited": null,
+                                "linkCode": "playlist_juno",
+                                "isFavorite": false,
+                                "globalCCU": 1
+                            }
+                           ],
+                        "hasMore": true,
+                        "panelTargetName": null
+                    },
+                    "panelType": "AnalyticsList",
+                    "playHistoryType": null
+                }
+            ]
+        })
+    },
 
-	app.post('/links/api/fn/mnemonic/', (req, res) => {
-	const { season, seasonglobal } = getSeasonInfo(req);
-	if (seasonData[season]) {
-		const eventBuilds = seasonData[season].Panels[0].Pages[0].results.map(result => result.linkData);
-		return res.json(eventBuilds);
-	}
-	if (seasonglobal === "19") {
-		const s19 = discoveryResponses.ver19.Panels[0].Pages[0].results.map(result => result.linkData);
-		return res.json(s19);
-	}
-	if(season >= 23.50){
-		return res.json(require("../discovery/latest/discoveryMenu.json"))
-	}
-	else{
-		const defaultResponse = Default.Panels[0].Pages[0].results.map(result => result.linkData);
-		return res.json(defaultResponse);
-	}
-	});
+    mnemonicLinks: function(req, res){
+        const { season, seasonglobal } = getSeasonInfo(req);
+        if (seasonData[season]) {
+            const eventBuilds = seasonData[season].Panels[0].Pages[0].results.map(result => result.linkData);
+            return res.json(eventBuilds);
+        }
+        if (seasonglobal === "19") {
+            const s19 = discoveryResponses.ver19.Panels[0].Pages[0].results.map(result => result.linkData);
+            return res.json(s19);
+        }
+        if(season >= 23.50){
+            return res.json(require("../../discovery/latest/discoveryMenu.json"))
+        }
+        else{
+            const defaultResponse = Default.Panels[0].Pages[0].results.map(result => result.linkData);
+            return res.json(defaultResponse);
+        }
+    },
 
-	
-	app.get('/links/api/fn/mnemonic/:playlistId/related', (req, res) => {
-		if(req.params.playlistId == "playlist_juno"){
-			return res.json({
+    related: function(req, res){
+        if(req.params.playlistId == "playlist_juno"){
+			res.json({
 				"parentLinks": [],
 				"links": {
-				  "playlist_juno": {
+					"playlist_juno": {
 					"namespace": "fn",
 					"accountId": "epic",
 					"creatorName": "Epic",
 					"mnemonic": "playlist_juno",
 					"linkType": "BR:Playlist",
 					"metadata": {
-					  "extra_video_vuids": [
+						"extra_video_vuids": [
 						"d73175b8-6c64-4f6b-ac51-f246f8945a8b"
-					  ],
-					  "lobby_background_image_urls": {
+						],
+						"lobby_background_image_urls": {
 						"url": "https://cdn2.unrealengine.com/legofn-launch-lobby-v2-2560x1440-e75ec82dc332.jpg"
-					  },
-					  "blog_category": "lego-fortnite",
-					  "frontend_plugin": "JunoFrontendUI",
-					  "image_url": "https://cdn2.unrealengine.com/legofn-disco-1920-1920x1080-c5f52d11a179.jpg",
-					  "requiresArbitratedWorldId": true,
-					  "image_urls": {
+						},
+						"blog_category": "lego-fortnite",
+						"frontend_plugin": "JunoFrontendUI",
+						"image_url": "https://cdn2.unrealengine.com/legofn-disco-1920-1920x1080-c5f52d11a179.jpg",
+						"requiresArbitratedWorldId": true,
+						"image_urls": {
 						"url_s": "https://cdn2.unrealengine.com/legofn-disco-480-480x270-c55546b444b3.jpg",
 						"url_xs": "https://cdn2.unrealengine.com/legofn-disco-270-270x152-78c11b5032db.jpg",
 						"url_m": "https://cdn2.unrealengine.com/legofn-disco-640-640x360-75aa197e5b17.jpg",
 						"url": "https://cdn2.unrealengine.com/legofn-disco-1920-1920x1080-c5f52d11a179.jpg"
-					  },
-					  "matchmaking": {
+						},
+						"matchmaking": {
 						"override_playlist": "playlist_juno"
-					  },
-					  "title": "LEGO Fortnite",
-					  "video_vuid": "lPAAqsIrORbZBsKCiX",
-					  "alt_title": {
+						},
+						"title": "LEGO Fortnite",
+						"video_vuid": "lPAAqsIrORbZBsKCiX",
+						"alt_title": {
 						"ar": "LEGO Fortnite",
 						"de": "LEGO Fortnite",
 						"ru": "LEGO Fortnite",
@@ -188,8 +183,8 @@ module.exports = (app) => {
 						"es": "LEGO Fortnite",
 						"es-419": "LEGO Fortnite",
 						"tr": "LEGO FORTNITE"
-					  },
-					  "alt_tagline": {
+						},
+						"alt_tagline": {
 						"ar": "استكشف عوالم مفتوحة شاسعة حيث يتلاقى سحر بناء LEGO® وFortnite. اعثر على أفضل مغامرة LEGO للنجاة في Fortnite!",
 						"de": "Erkunde riesige offene Welten, in denen die Magie des Bauens von LEGO® und Fortnite aufeinandertreffen. In Fortnite findest du das ultimative LEGO-Abenteuer, in dem sich alles ums Überleben und Crafting dreht!",
 						"ru": "Исследуйте огромные открытые миры, где соединяются чудеса строительства LEGO® и приключения Fortnite. Отправьтесь в незабываемое путешествие с LEGO® в Fortnite и сделайте всё, чтобы выжить!",
@@ -202,12 +197,12 @@ module.exports = (app) => {
 						"es": "Explora gigantescos mundos abiertos en los que la magia de la construcción de LEGO® se mezcla con Fortnite. ¡Descubre la aventura de supervivencia y construcción definitiva de LEGO en Fortnite!",
 						"es-419": "Explora vastos mundos abiertos donde la magia de la construcción de LEGO® y Fortnite se fusionan. ¡Descubre la aventura de supervivencia y fabricación definitiva de LEGO® en Fortnite!",
 						"tr": "Büyülü LEGO® yapılarının Fortnite ile buluştuğu muazzam açık dünyaları keşfet. Hayatta kalma ve üretim temalı muhteşem bir LEGO macerası şimdi Fortnite'ta!"
-					  },
-					  "feature_flags": [
+						},
+						"feature_flags": [
 						"has_custom_ui"
-					  ],
-					  "product_tag": "Product.Juno",
-					  "tagline": "Explore vast, open worlds where the magic of LEGO® building and Fortnite collide. Find the ultimate survival crafting LEGO adventure in Fortnite!",
+						],
+						"product_tag": "Product.Juno",
+						"tagline": "Explore vast, open worlds where the magic of LEGO® building and Fortnite collide. Find the ultimate survival crafting LEGO adventure in Fortnite!",
 					},
 					"version": 1,
 					"active": true,
@@ -215,17 +210,17 @@ module.exports = (app) => {
 					"created": "2022-08-11T20:17:42.128Z",
 					"published": "2022-08-11T20:17:42.128Z",
 					"descriptionTags": [
-					  "survival",
-					  "co-op",
-					  "open world",
-					  "sandbox"
+						"survival",
+						"co-op",
+						"open world",
+						"sandbox"
 					],
 					"moderationStatus": "Approved",
 					"lastActivatedDate": "2022-08-11T20:17:42.132Z",
 					"discoveryIntent": "PUBLIC"
-				  }
+					}
 				}
-			})
+		}).end()
 		}
 		else{
 		return res.json({
@@ -260,15 +255,14 @@ module.exports = (app) => {
 				}
 			}) //fixes the play button being disabled
 		}
-	});
-	
+    },
 
-	app.post('/api/v1/links/favorites/:accountId/check', (req, res) => {
-		res.json({"results":[],"hasMore":false})
-	})
+    favoritesCheck: function(req, res){
+        res.json({"results":[],"hasMore":false})
+    },
 
-	app.post('/api/v1/links/lock-status/:accountId/check', (req, res) => {
-		res.json({
+    lockStatus: function(req, res){
+        res.json({
 			"results": [
 			  {
 				"playerId": req.params.accountId,
@@ -279,11 +273,11 @@ module.exports = (app) => {
 			  }
 			],
 			"hasMore": false
-		  })
-	})
+        })
+    },
 
-	app.get('/links/api/fn/mnemonic/:playlistId', (req, res) => {
-		const { season, seasonglobal } = getSeasonInfo(req);
+    mnemonicPlaylist: function(req, res){
+        const { season, seasonglobal } = getSeasonInfo(req);
 		const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 		if(seasonglobal <= 15){
 			if(numbers.some(number => req.originalUrl.includes(number))){
@@ -309,11 +303,11 @@ module.exports = (app) => {
 		if(season >= 23.50){
 			if(req.params.playlistId == "set_br_playlists")
 			{
-				return res.json(require("../discovery/latest/setbrplaylist.json"))
+				return res.json(require("../../discovery/latest/setbrplaylist.json"))
 			}
 			else{
 				try{
-					return res.json(require(`../discovery/latest/coreLtms/${req.params.playlistId}.json`))
+					return res.json(require(`../../discovery/latest/coreLtms/${req.params.playlistId}.json`))
 				}
 				catch{}
 			}
@@ -325,6 +319,9 @@ module.exports = (app) => {
 			}
 		  }
 		}
-	  });
+    }
+
+
+
 
 }

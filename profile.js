@@ -151,7 +151,7 @@ module.exports = {
 
     readProfile(accountId, profileId) {
         try {
-            return JSON.parse(fs.readFileSync(path.join(__dirname, `/config/${accountId}/profiles/profile_${profileId}.json`), "utf8"));
+            return JSON.parse(fs.readFileSync(path.join(__dirname, `/profile/${accountId}/profiles/profile_${profileId}.json`), "utf8"));
         } catch (e) {
             return null;
         }
@@ -160,13 +160,13 @@ module.exports = {
     readProfileTemplate(profileId) {
         // console.log(`/config_template/profiles/profile_${profileId}.json`);
         try {
-            return JSON.parse(fs.readFileSync(path.join(__dirname, `/config_template/profiles/profile_${profileId}.json`), "utf8"));
+            return JSON.parse(fs.readFileSync(path.join(__dirname, `/profile_template/profiles/profile_${profileId}.json`), "utf8"));
         } catch (e) {
             return null;
         }
     },
 
     saveProfile(accountId, profileId, data) {
-        fs.writeFileSync(path.join(__dirname, `/config/${accountId}/profiles/profile_${profileId}.json`), JSON.stringify(data, null, 2));
+        fs.writeFileSync(path.join(__dirname, `/profile/${accountId}/profiles/profile_${profileId}.json`), JSON.stringify(data, null, 2));
     }
 };
