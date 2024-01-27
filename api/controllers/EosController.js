@@ -1,14 +1,9 @@
-
 const jsonwebtoken = require('jsonwebtoken');
 
-/**
- * 
- * @param {Express.Application} app 
- */
-module.exports = (app) => {
-	//EOS
-    app.post('/auth/v1/oauth/token', (req, res) => {
-		let access_token = jsonwebtoken.sign({
+
+module.exports = {
+    oauthTokenv1: function(req, res){
+        let access_token = jsonwebtoken.sign({
             "clientId": "ec684b8c687f479fadea3cb2ad83f5c6",
             "role": "GameClient",
             "productId": "prod-fn",
@@ -35,9 +30,9 @@ module.exports = (app) => {
             "deployment_id":"62a9473a2dca46b29ccf17577fcf42d7",
             "expires_in":115200
         });
-	});
+    },
 
-    app.get('/epic/id/v2/sdk/accounts', (req, res) => {
+    eossdkv2: function(req, res){
         res.send([
             {
                 "accountId":req.query.accountId,
@@ -48,24 +43,24 @@ module.exports = (app) => {
                 "empty":false
             }
         ]);
-    });
+    },
 
-    app.get('/epic/friends/v1/:accountId/blocklist', (req, res) => {
-		res.json([]);
-	});
+    blocklist: function(req, res){
+        res.json([])
+    },
 
-    app.patch('/epic/presence/v1/:gameNsIg/:accountId/presence/:presenceUuid', (req, res) => {
-		res.json({
+    presence:function(req, res){
+        res.json({
             "own": {
                 "accountId":req.params.accountId,
                 "status":"online",
                 "perNs":[]
             }
         });
-	});
+    },
 
-    app.get('/sdk/v1/*', (req, res) => {
-		res.json({
+    eossdkv1: function(req, res){
+        res.json({
             "client":{
                "RateLimiter.InventoryClient":{
                   "MessageCount":100,
@@ -722,11 +717,11 @@ module.exports = (app) => {
                }
             },
             "watermark":-934553538
-         });
-	});
+        });
+    },
 
-	app.post('/epic/oauth/v2/token', (req, res) => {
-		let access_token = jsonwebtoken.sign({
+    oauthv2: function(req, res){
+        let access_token = jsonwebtoken.sign({
 			"sub": "ninja",
 			"pfsid": "fn",
 			"iss": "https://api.epicgames.dev/epic/oauth/v1",
@@ -742,39 +737,39 @@ module.exports = (app) => {
 			"exp": 9668536326,
 			"iat": 1668529126,
 			"jti": "6e2ad057f3fa4186a2cac0190954956a"
-		  }, "ciao");
+		}, "ciao");
 
-          let refresh_token = jsonwebtoken.sign({
-            "sub": "ninja",
-            "pfsid": "fn",
-            "iss": "https://api.epicgames.dev/epic/oauth/v1",
-            "dn": "ninja",
-            "pfpid": "prod-fn",
-            "aud": "ec684b8c687f479fadea3cb2ad83f5c6",
-            "pfdid": "62a9473a2dca46b29ccf17577fcf42d7",
-            "t": "epic_id",
-            "appid": "fghi4567FNFBKFz3E4TROb0bmPS8h1GW",
-            "scope": req.params.scope,
-            "exp": 9668557926,
-            "iat": 1668529126,
-            "jti": "5c2585dd6fc1414784a6bc735085b2c2"
-          }, "ciao");
+        let refresh_token = jsonwebtoken.sign({
+        "sub": "ninja",
+        "pfsid": "fn",
+        "iss": "https://api.epicgames.dev/epic/oauth/v1",
+        "dn": "ninja",
+        "pfpid": "prod-fn",
+        "aud": "ec684b8c687f479fadea3cb2ad83f5c6",
+        "pfdid": "62a9473a2dca46b29ccf17577fcf42d7",
+        "t": "epic_id",
+        "appid": "fghi4567FNFBKFz3E4TROb0bmPS8h1GW",
+        "scope": req.params.scope,
+        "exp": 9668557926,
+        "iat": 1668529126,
+        "jti": "5c2585dd6fc1414784a6bc735085b2c2"
+        }, "ciao");
 
-          let id_token = jsonwebtoken.sign({
-            "sub": "ninja",
-            "pfsid": "fn",
-            "iss": "https://api.epicgames.dev/epic/oauth/v1",
-            "dn": "ninja",
-            "nonce": "n-e3Kcqw0hulXkbebFRBL8o5AwL3M=",
-            "pfpid": "prod-fn",
-            "aud": "ec684b8c687f479fadea3cb2ad83f5c6",
-            "pfdid": "62a9473a2dca46b29ccf17577fcf42d7",
-            "t": "id_token",
-            "appid": "fghi4567FNFBKFz3E4TROb0bmPS8h1GW",
-            "exp": 9668536326,
-            "iat": 1668529126,
-            "jti": "d86182adb46341008d49038d87908f7a"
-          }, "ciao");
+        let id_token = jsonwebtoken.sign({
+        "sub": "ninja",
+        "pfsid": "fn",
+        "iss": "https://api.epicgames.dev/epic/oauth/v1",
+        "dn": "ninja",
+        "nonce": "n-e3Kcqw0hulXkbebFRBL8o5AwL3M=",
+        "pfpid": "prod-fn",
+        "aud": "ec684b8c687f479fadea3cb2ad83f5c6",
+        "pfdid": "62a9473a2dca46b29ccf17577fcf42d7",
+        "t": "id_token",
+        "appid": "fghi4567FNFBKFz3E4TROb0bmPS8h1GW",
+        "exp": 9668536326,
+        "iat": 1668529126,
+        "jti": "d86182adb46341008d49038d87908f7a"
+        }, "ciao");
 
 		res.json({
 			"scope":"basic_profile friends_list openid presence",
@@ -792,5 +787,5 @@ module.exports = (app) => {
 			"selected_account_id":"ninja",
 			"merged_accounts": []
 		 })
-	});
+    }
 }

@@ -1,12 +1,11 @@
+const {
+	ApiException
+} = require('../../structs/errors');
 
-/**
- * 
- * @param {Express.Application} app 
- */
-
-module.exports = (app) => {
-    app.all("/fortnite/api/game/v2/matchmakingservice/ticket/player/:accountId", (req, res) => {
-		var ParsedBckt = {
+module.exports = {
+    
+    matchmakingTicket: function(req, res){
+        var ParsedBckt = {
 			NetCL: "",
 			Region: "",
 			Playlist: "",
@@ -28,9 +27,7 @@ module.exports = (app) => {
 				throw new ApiException(errors.com.epicgames.fortnite.invalid_bucket_id).withMessage(`Failed to parse bucketId: '${req.query.bucketId}'`).with(req.query.bucketId)
 			}
 		}
-
 		res.cookie("NetCL", ParsedBckt.NetCL);
-
 		var data = {
 			"playerId": req.params.accountId,
 			"partyPlayerIds": [
@@ -48,39 +45,31 @@ module.exports = (app) => {
 			"expireAt": new Date().addHours(1),
 			"nonce": RandomString(32)
 		}
-
 		Object.entries(req.query).forEach(([key, value]) => {
 			if (key == "player.subregions" && value.includes(',')) {
 				data.attributes["player.preferredSubregion"] = value.split(',')[0];
 			}
-
 			data.attributes[key] = value;
 		});
-
 		var payload = Buffer.from(JSON.stringify(data, null, 0)).toString('base64');
-
 		res.json({
 			"serviceUrl": "ws://localhost:5595",
 			"ticketType": "mms-player",
 			"payload": payload,
 			"signature": undefined
 		});
+    },
 
-	});
-
-	app.get("/fortnite/api/game/v2/matchmaking/account/:accountId/session/:sessionId", (req, res) =>
-		res.json({
+    matchmakingSession: function(req, res){
+        res.json({
 			"accountId": req.params.accountId,
 			"sessionId": req.params.sessionId,
 			"key": "none"
 		})
-	)
+    },
 
-	app.post("/fortnite/api/matchmaking/session/:SessionId/join", (req, res) => res.status(204).end())
-
-	app.get("/fortnite/api/matchmaking/session/:sessionId", (req, res) => {
-		var BuildUniqueId = req.cookies["NetCL"];
-
+    matchmakingSession2: function(req, res){
+        var BuildUniqueId = req.cookies["NetCL"];
 		res.json({
 			"id": req.params.sessionId,
 			"ownerId": "Neonite",
@@ -108,15 +97,15 @@ module.exports = (app) => {
 			"lastUpdated": "2020-11-09T00:40:28.878Z",
 			"started": false
 		});
-	});
+    },
 
-    app.get('/waitingroom/api/waitingroom', (req, res) => {
-		res.status(204).end();
-	});
+    matchmakingSessionJoin: function(req, res){
+        res.status(204).end()
+    },
 
-    app.get("/fortnite/api/matchmaking/session/findPlayer/:id", (req, res) => {
-		res.json([])
-	})
+    waitingRoom: function(req, res){
+        res.status(204).end();
+    }
 }
 
 function RandomString(length) {

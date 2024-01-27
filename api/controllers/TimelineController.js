@@ -1,12 +1,7 @@
+
 const path = require('path');
 var fs = require('fs')
 var ini = require('ini')
-
-/**
- * 
- * @param {Express.Application} app 
- */
-
 
 function getSeasonInfo(req) {
     const userAgent = req.headers["user-agent"];
@@ -15,11 +10,12 @@ function getSeasonInfo(req) {
     return { season, seasonglobal };
 }
 
-module.exports = (app) => {
-    app.get('/fortnite/api/calendar/v1/timeline', (req, res) => {
+
+module.exports = {
+    timeline: function(req, res){
         const { season, seasonglobal } = getSeasonInfo(req);
-        const keychain = require("../responses/keychain.json")
-        var config = ini.parse(fs.readFileSync(path.join(__dirname, '../config.ini'), 'utf-8'));
+        const keychain = require("../../responses/keychain.json")
+        var config = ini.parse(fs.readFileSync(path.join(__dirname, '../../config.ini'), 'utf-8'));
         const timeline = {
             channels: {
                 "standalone-store": {},
@@ -1252,5 +1248,5 @@ module.exports = (app) => {
             },)
         }        
         res.json(timeline)
-    })
+    }
 }

@@ -1,11 +1,7 @@
-/**
- * 
- * @param {Express.Application} app 
- */
 
-module.exports = (app) => {
-    app.post("/api/v1/user/setting", (req, res) => {
-		res.json([
+module.exports = {
+    userSetting: function(req, res){
+        res.json([
 			{
 				"accountId": req.body.accountId,
 				"key": "avatar",
@@ -20,11 +16,12 @@ module.exports = (app) => {
 				"accountId": req.body.accountId,
 				"key": "appInstalled",
 				"value": "init"
-			}])
-	})
+            }
+        ])
+    },
 
-    app.all('/v1/epic-settings/public/users/:accountId/*', (req, res) => {
-		res.json({
+    epicSettings: function(req, res){
+        res.json({
 			"response":{
 			   "settings":[
 				  {
@@ -2125,6 +2122,6 @@ module.exports = (app) => {
 			   "requestId":"40031710-d00d-11ed-9981-498b9f6c7772",
 			   "timestamp":"2023-03-31T21:44:44.545Z"
 			}
-		 })
-	})
+		})
+    }
 }

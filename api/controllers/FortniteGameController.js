@@ -1,27 +1,23 @@
+
 const { default: axios } = require("axios");
 const path = require('path');
 var fs = require('fs')
 var ini = require('ini')
 
-/**
- * 
- * @param {Express.Application} app 
- */
-module.exports = (app) => {
+function getSeasonInfo(req) {
+    const userAgent = req.headers['user-agent'];
+    const season = userAgent?.split('-')[1];
+    const seasonglobal = season?.split('.')[0];
+    return { season, seasonglobal };
+  }
 
-    function getSeasonInfo(req) {
-        const userAgent = req.headers['user-agent'];
-        const season = userAgent?.split('-')[1];
-        const seasonglobal = season?.split('.')[0];
-        return { season, seasonglobal };
-      }
-
-    app.get(["/content/api/pages/fortnite-game", "/content/api/pages/"], async (req, res) => {
+module.exports = {
+    fortniteGame: async function(req, res){
         const content = (await axios.get('https://fortnitecontent-website-prod07.ol.epicgames.com/content/api/pages/fortnite-game').catch(() => {})).data;
         const { season, seasonglobal } = getSeasonInfo(req);
-        const fortnitegame = JSON.parse(JSON.stringify(require("../responses/fortnitegame.json")));
+        const fortnitegame = JSON.parse(JSON.stringify(require("../../responses/fortnitegame.json")));
         const backgrounds = fortnitegame.dynamicbackgrounds.backgrounds.backgrounds;
-        var config = ini.parse(fs.readFileSync(path.join(__dirname, '../config.ini'), 'utf-8'));
+        var config = ini.parse(fs.readFileSync(path.join(__dirname, '../../config.ini'), 'utf-8'));
         if(config.custom_background == true){
             backgrounds[0].stage = "defaultnotris"
             backgrounds[0].backgroundimage = config.image_url
@@ -126,19 +122,6 @@ module.exports = (app) => {
                     backgrounds[0].stage = content.dynamicbackgrounds.backgrounds.backgrounds[0].stage;
             }
             return res.json(fortnitegame);
-        }        
-    
-    });
-    
-        
-    app.get("/content/api/pages/fortnite-game/spark-tracks", async (req, res) => {
-        const data = (await axios.get('https://fortnitecontent-website-prod07.ol.epicgames.com/content/api/pages/fortnite-game/spark-tracks').catch(() => {})).data;
-        res.json(data);
-    })
-       
-    
-    /*app.post("/api/v1/fortnite-br/surfaces/motd/target", (req, res) => {
-        const motdData = require("../responses/news.json")
-        res.json(motdData)
-    })*/
+        }
+    }
 }

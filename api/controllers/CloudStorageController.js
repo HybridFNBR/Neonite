@@ -1,45 +1,38 @@
 const path = require('path');
 const crypto = require("crypto");
 const fs = require('fs');
+const hotfixPath = path.join(__dirname, '../../hotfixes/');
 
-
-
-const hotfixPath = path.join(__dirname, '../hotfixes/');
-
-module.exports = (app) => {
-	/*
-	 * Dynamic Cloudstorage Implementation: @VastBlastt
-	 */
-	app.get('/fortnite/api/cloudstorage/system', async (req, res) => {
-
+module.exports = {
+    cloudstoragesystem: async function (req, res) {
 		const output = [];
 		const dir = await fs.promises.opendir(hotfixPath);
 		for await (const dirent of dir) {
-			const fileName = dirent.name;
-			const filePath = hotfixPath + fileName;
-			const fileData = fs.readFileSync(filePath);
-
-			output.push({
-				"uniqueFilename": fileName,
-				"filename": fileName,
-				"hash": crypto.createHash("sha1").update(fileData).digest("hex"),
-				"hash256": crypto.createHash("sha256").update(fileData).digest("hex"),
-				"length": fileData.length,
-				"contentType": "text/plain",
-				"uploaded": fs.statSync(filePath).mtime,
-				"storageType": "S3",
-				"doNotCache": false
-			});
+		  const fileName = dirent.name;
+		  const filePath = hotfixPath + fileName;
+		  const fileData = fs.readFileSync(filePath);
+	
+		  output.push({
+			"uniqueFilename": fileName,
+			"filename": fileName,
+			"hash": crypto.createHash("sha1").update(fileData).digest("hex"),
+			"hash256": crypto.createHash("sha256").update(fileData).digest("hex"),
+			"length": fileData.length,
+			"contentType": "text/plain",
+			"uploaded": fs.statSync(filePath).mtime,
+			"storageType": "S3",
+			"doNotCache": false
+		  });
 		}
-
+	
 		res.json(output);
-	});
 
-	app.get('/fortnite/api/cloudstorage/system/DefaultGame.ini', (req, res) => {
-		season = req.headers["user-agent"].split('-')[1]
+    },
+
+    defaultGame: function(req, res){
+        season = req.headers["user-agent"].split('-')[1]
 		res.setHeader("content-type", "application/octet-stream")
-		let index = fs.readFileSync(path.join(__dirname, '../hotfixes/DefaultGame.ini'), 'utf-8');
-
+		let index = fs.readFileSync(path.join(__dirname, '../../hotfixes/DefaultGame.ini'), 'utf-8');
 		const replacements = {
 			"7.30": [
 			  "+FrontEndPlaylistData=(PlaylistName=Playlist_Music_Low, PlaylistAccess=(bEnabled=false, CategoryIndex=1, DisplayPriority=-999))",
@@ -73,38 +66,48 @@ module.exports = (app) => {
 			  "+FrontEndPlaylistData=(PlaylistName=Playlist_Fritter_64, PlaylistAccess=(bEnabled=false, CategoryIndex=1, DisplayPriority=-999))",
 			  "+FrontEndPlaylistData=(PlaylistName=Playlist_Fritter_64, PlaylistAccess=(bEnabled=true, CategoryIndex=1, DisplayPriority=-999))"
 			],
-		  };
+        };
 		  
-		  if (replacements[season]) {
-			const [defaultvalue, replacedValue] = replacements[season];
-			index = index.replace(defaultvalue, replacedValue);
-			res.send(index);
-		  }
-		  else{
-			res.send(index)
-		  }
-		});
+        if (replacements[season]) {
+            const [defaultvalue, replacedValue] = replacements[season];
+            index = index.replace(defaultvalue, replacedValue);
+            res.send(index);
+        }
+        else{
+            res.send(index)
+        }
+    },
+	
+	defaultEngine: function(req, res){
+		res.setHeader("content-type", "application/octet-stream")
+		const EnginePath = path.join('hotfixes/DefaultEngine.ini');
+		const fileStream = require('fs').createReadStream(EnginePath);
+		fileStream.pipe(res)
+	},
 
-	app.get('/fortnite/api/cloudstorage/system/:filename', (req, res) => {
-		const fileName = req.params.filename;
-		const filePath = hotfixPath + fileName;
+	defaultRuntimeOptions: function(req, res){
+		res.setHeader("content-type", "application/octet-stream")
+		const RuntimeOptionsPath = path.join('hotfixes/DefaultRuntimeOptions.ini');
+		const fileStream = require('fs').createReadStream(RuntimeOptionsPath);
+		fileStream.pipe(res)
+	},
 
-		if (fs.existsSync(filePath)) {
-			res.sendFile(filePath);
-			return;
-		} else {
-			res.status(404).end();
-			return;
-		}
-	});
+	defaultInput: function(req, res){
+		res.setHeader("content-type", "application/octet-stream")
+		const InputPath = path.join('hotfixes/DefaultInput.ini');
+		const fileStream = require('fs').createReadStream(InputPath);
+		fileStream.pipe(res)
+	},
 
-	app.get('/fortnite/api/cloudstorage/user/:accountId', (req, res) => {
-		res.json([]);
-	});
-	app.get('/fortnite/api/cloudstorage/user/:accountId/:fileName', (req, res) => {
-		res.status(204).send();
-	});
-	app.put('/fortnite/api/cloudstorage/user/:accountId/:fileName', (req, res) => {
-		res.status(204).send();
-	});
-}
+	user: function (req, res) {
+	res.json([]);
+	},
+
+	userFile: function (req, res) {
+	res.status(204).send();
+	},
+
+	userPutFile: function (req, res) {
+	res.status(204).send();
+	},
+};
