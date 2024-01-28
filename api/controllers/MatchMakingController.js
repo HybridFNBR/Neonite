@@ -105,7 +105,11 @@ module.exports = {
 
     waitingRoom: function(req, res){
         res.status(204).end();
-    }
+    },
+
+	findPlayer: function(req, res){
+		res.json([])
+	}
 }
 
 function RandomString(length) {

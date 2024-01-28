@@ -4,5 +4,7 @@ module.exports.routes = {
     'POST /fortnite/api/matchmaking/session/:SessionId/join': 'MatchMakingController.matchmakingSessionJoin',
     'GET /fortnite/api/matchmaking/session/:sessionId': 'MatchMakingController.matchmakingSession2',
     'GET /waitingroom/api/waitingroom': 'MatchMakingController.waitingRoom',
+    'GET /fortnite/api/matchmaking/session/findPlayer/:id': 'MatchMakingController.findPlayer',
+
 
 }

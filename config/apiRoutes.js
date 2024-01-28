@@ -42,6 +42,7 @@ module.exports.routes = {
     'GET /api/v1/namespace/fn/worlds/world/:worldID/session': 'ApiController.legoWorldSession',
     'GET /api/v1/namespace/fn/worlds/world/:worldId/attest/:accountId': 'ApiController.legoMatchMakingToken',
     'GET /fortnite/api/storefront/v2/keychain': 'ApiController.keychain',
+    'GET /fortnite/api/game/v2/world/info': 'ApiController.worldInfo',
     'POST /region/check': 'ApiController.regionCheck',
     'PUT /profile/play_region': 'ApiController.playRegion',
     'POST /fortnite/api/game/v2/profile/:accountId/client/:command': 'ProfileController.mcp',

@@ -386,6 +386,10 @@ module.exports = {
     })
   },
 
+  worldInfo: function(req, res){
+	res.json({})
+  },
+
   legoWorldSession: function(req, res){
     res.status(404).json(
       {
@@ -430,5 +434,6 @@ module.exports = {
   storeAccess: function(req, res){
 	res.status(204).end()
   	}
+
 
 };
