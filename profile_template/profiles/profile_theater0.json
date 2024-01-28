@@ -1,6 +1,5 @@
 {
   "_id": "",
-  "Update": "profile by tim",
   "created": "2022-01-08T22:58:06.983Z",
   "updated": "2022-01-08T22:58:57.261Z",
   "rvn": 24,
@@ -9,7 +8,9 @@
   "profileId": "theater0",
   "version": "no_version",
   "items": {},
-  "stats": {},
-  "profileLockExpiration": "9999-01-01T00:00:00.000Z",
+  "stats": {
+    "attributes": {}
+  },
+  "profileLockExpiration": "0001-01-01T00:00:00.000Z",
   "commandRevision": 0
 }
