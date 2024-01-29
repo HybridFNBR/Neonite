@@ -47,7 +47,12 @@ module.exports = {
                                 eventType: "RBFI", // IslandScripting (CH1) related
                                 activeUntil: "9999-12-01T21:10:00.000Z",
                                 activeSince: "2020-11-21T07:00:00.000Z"
-                            },                                                                                                              
+                            },
+                            {
+                                eventType: `EventFlag.Season${seasonglobal}`,
+                                activeUntil: "9999-12-31T23:59:59.999Z",
+                                activeSince: "2019-12-31T23:59:59.999Z"
+                            },                                                                                                            
                             {
                                 eventType: `EventFlag.LobbySeason${seasonglobal}`,
                                 activeUntil: "9999-12-31T23:59:59.999Z",

@@ -413,6 +413,15 @@ module.exports = {
     res.send("wasp~eyJraWQiOiJhdHRlc3QxIiwidHlwIjoiSldUIiwiYWxnIjoiRWREU0EifQ.eyJhY2NvdW50SWQiOiJlN2MzODg2NjRlNTQ0MmU4OWYzMGIzOTZkOWZhNzE4MyIsIm5hbWVzcGFjZUlkIjoiZm4iLCJ3b3JsZElkIjoiZDVjNzUyMGUyYjUzNDA0NmI3MzljZWUyYTI1YzQwMjIiLCJpc3MiOiJlcGljZ2FtZXMiLCJleHAiOjE3MDE3OTAyMDAsImlhdCI6MTcwMTc4OTkwMH0.ckpiVt4WaUesyICZEJ4A-k51ZxWIlvMdgbRHV5o6xp3m7hAuVt4_Tthcbf5BV0_Y9RCH4iBgv4q1bmQ4eyFyBA")
   },
 
+  salesEvent: function(req, res){
+	return res.status(204).end()
+  },
+
+  gameRating: function(req, res){
+	return res.status(204).end()
+  },
+
+
   keychain: function(req, res){
     res.json(["46159C748694298198A52DC07476FDA3:4CLHOBqSrmS1RkG/SxZYi8Rc0zCmAKxXIBMMUHDl2ag="])
   },
@@ -434,6 +443,7 @@ module.exports = {
   storeAccess: function(req, res){
 	res.status(204).end()
   	}
+
 
 
 };

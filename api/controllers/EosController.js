@@ -721,11 +721,13 @@ module.exports = {
     },
 
     oauthv2: function(req, res){
+      const JWT = req.body.refresh_token.replace("eg1~", "")
+		const JWTdecode = jsonwebtoken.decode(JWT)
         let access_token = jsonwebtoken.sign({
-			"sub": "ninja",
+			"sub": JWTdecode["sub"],
 			"pfsid": "fn",
 			"iss": "https://api.epicgames.dev/epic/oauth/v1",
-			"dn": "ninja",
+			"dn": JWTdecode["sub"],
 			"nonce": "n-01/jkXYh/9P5JimUEpSisDyK3Xw=",
 			"pfpid": "prod-fn",
 			"sec": 1,
@@ -736,14 +738,14 @@ module.exports = {
 			"appid": "fghi4567FNFBKFz3E4TROb0bmPS8h1GW",
 			"exp": 9668536326,
 			"iat": 1668529126,
-			"jti": "6e2ad057f3fa4186a2cac0190954956a"
+			"jti": JWTdecode["jti"]
 		}, "ciao");
 
         let refresh_token = jsonwebtoken.sign({
-        "sub": "ninja",
+        "sub": JWTdecode["sub"],
         "pfsid": "fn",
         "iss": "https://api.epicgames.dev/epic/oauth/v1",
-        "dn": "ninja",
+        "dn": JWTdecode["sub"],
         "pfpid": "prod-fn",
         "aud": "ec684b8c687f479fadea3cb2ad83f5c6",
         "pfdid": "62a9473a2dca46b29ccf17577fcf42d7",
@@ -752,14 +754,14 @@ module.exports = {
         "scope": req.params.scope,
         "exp": 9668557926,
         "iat": 1668529126,
-        "jti": "5c2585dd6fc1414784a6bc735085b2c2"
+        "jti": JWTdecode["jti"]
         }, "ciao");
 
         let id_token = jsonwebtoken.sign({
-        "sub": "ninja",
+        "sub": JWTdecode["sub"],
         "pfsid": "fn",
         "iss": "https://api.epicgames.dev/epic/oauth/v1",
-        "dn": "ninja",
+        "dn": JWTdecode["sub"],
         "nonce": "n-e3Kcqw0hulXkbebFRBL8o5AwL3M=",
         "pfpid": "prod-fn",
         "aud": "ec684b8c687f479fadea3cb2ad83f5c6",
@@ -768,7 +770,7 @@ module.exports = {
         "appid": "fghi4567FNFBKFz3E4TROb0bmPS8h1GW",
         "exp": 9668536326,
         "iat": 1668529126,
-        "jti": "d86182adb46341008d49038d87908f7a"
+        "jti": JWTdecode["jti"]
         }, "ciao");
 
 		res.json({
@@ -781,10 +783,10 @@ module.exports = {
 			"expires_at":"9999-12-31T23:59:59.999Z",
 			"refresh_expires_in":115200,
 			"refresh_expires_at":"9999-12-31T23:59:59.999Z",
-			"account_id":"ninja",
+			"account_id":JWTdecode["sub"],
 			"client_id":"ec684b8c687f479fadea3cb2ad83f5c6",
 			"application_id":"fghi4567FNFBKFz3E4TROb0bmPS8h1GW",
-			"selected_account_id":"ninja",
+			"selected_account_id":JWTdecode["sub"],
 			"merged_accounts": []
 		 })
     }

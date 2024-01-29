@@ -123,5 +123,9 @@ module.exports = {
             }
             return res.json(fortnitegame);
         }
+    },
+
+    motd: function(req, res){
+        res.status(204)
     }
 }

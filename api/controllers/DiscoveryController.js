@@ -74,7 +74,7 @@ module.exports = {
 
     //thrid interation of discovery api - currently used
     discoveryv3: function(req, res){
-        res.json({
+        return res.json({
             "panels": [
                 {
                     "PanelName": "ByEpicNoBigBattle6Col",
@@ -139,7 +139,7 @@ module.exports = {
 
     related: function(req, res){
         if(req.params.playlistId == "playlist_juno"){
-			res.json({
+			return res.json({
 				"parentLinks": [],
 				"links": {
 					"playlist_juno": {
@@ -220,7 +220,7 @@ module.exports = {
 					"discoveryIntent": "PUBLIC"
 					}
 				}
-		}).end()
+		})
 		}
 		else{
 		return res.json({

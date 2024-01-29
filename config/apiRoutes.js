@@ -45,9 +45,20 @@ module.exports.routes = {
     'GET /fortnite/api/game/v2/world/info': 'ApiController.worldInfo',
     'POST /region/check': 'ApiController.regionCheck',
     'PUT /profile/play_region': 'ApiController.playRegion',
+    'GET /salesEvent/salesEvent/*':{ 
+        action: "salesEvent",
+        controller:'ApiController', 
+        skipAssets: false
+    },
+    'GET /gameRating/gameRating/*':{ 
+        action: "gameRating",
+        controller:'ApiController', 
+        skipAssets: false
+    },
     'POST /fortnite/api/game/v2/profile/:accountId/client/:command': 'ProfileController.mcp',
     'GET /fortnite/api/storeaccess/v1/request_access/:accountId': 'ApiController.storeAccess',
     'GET /content/api/pages/fortnite-game': 'FortniteGameController.fortniteGame',
+    'POST /api/v1/fortnite-br/surfaces/motd/target': 'FortniteGameController.motd',
     'POST /api/v1/user/setting': 'UserController.userSetting',
     'ALL /v1/epic-settings/public/users/:accountId/*':{ 
         action: "epicSettings",
