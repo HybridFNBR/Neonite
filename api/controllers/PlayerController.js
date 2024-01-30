@@ -69,7 +69,7 @@ module.exports = {
     },
 
     stats: function(req, res){
-        res.json({})
+        res.status(204)
     },
 
     presence: function(req, res){
