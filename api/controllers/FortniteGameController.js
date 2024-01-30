@@ -127,62 +127,7 @@ module.exports = {
 
     sparks: async function(req, res){
         const data = (await axios.get('https://fortnitecontent-website-prod07.ol.epicgames.com/content/api/pages/fortnite-game/spark-tracks').catch(() => {})).data;
-        res.json({
-            "_title": "spark-tracks",
-            "_noIndex": false,
-            "_activeDate": "2023-10-06T04:15:09.015Z",
-            "lastModified": "2024-01-30T15:37:58.854Z",
-            "_locale": "en-US",
-            "_templateName": "blank",
-            "butterbarnhoedown": {
-              "_title": "butterbarnhoedown",
-              "track": {
-                "tt": "Butter Barn Hoedown",
-                "mm": "Major",
-                "ab": "Fortnite",
-                "siv": "Vocals",
-                "su": "6610181f-8c9f-46a4-82d1-b4a44bad9310",
-                "in": {
-                  "pb": 2,
-                  "pd": 1,
-                  "vl": 4,
-                  "pg": 4,
-                  "_type": "SparkTrackIntensities",
-                  "gr": 4,
-                  "ds": 2,
-                  "ba": 1
-                },
-                "ry": 2021,
-                "mt": 98,
-                "_type": "SparkTrack",
-                "mu": "https://cdn2.unrealengine.com/e8b5sa8csfs8rg38-a90029aed8a1.dat",
-                "dn": 157,
-                "sib": "Bass",
-                "an": "Epic Games",
-                "gt": [
-                  "Jam-LoopIsUnpitched-Beat"
-                ],
-                "sid": "Drum",
-                "sig": "Guitar",
-                "au": "https://cdn2.unrealengine.com/hxgcbghz24dib61d-512x512-285bc45ca663.png",
-                "ti": "SparksSong:sid_placeholder_02",
-                "qi": "{\"sid\":\"3ae05291-4d95-4cba-81b1-348e1879a7d8\",\"pid\":\"41305714-0773-4503-ba8f-19fe724f08ab\",\"title\":\"welcometoparadise\",\"tracks\":[{\"part\":\"ds\",\"channels\":[\"FL\",\"FR\"],\"vols\":[4,4]},{\"part\":\"bs\",\"channels\":[\"FL\",\"FR\"],\"vols\":[4,4]},{\"part\":\"gs\",\"channels\":[\"FL\",\"FR\"],\"vols\":[4,4]},{\"part\":\"vs\",\"channels\":[\"FL\",\"FR\"],\"vols\":[4,4]},{\"part\":\"fs\",\"channels\":[\"FL\",\"FR\"],\"vols\":[4,4]}],\"preview\":{\"starttime\":30.803}}",
-                "ld": "https://cdn2.unrealengine.com/welcometoparadise-8f370a671046.lad",
-                "jc": "2966-7543-4422",
-                "sn": "butterbarnhoedown",
-                "ge": [
-                  "Country"
-                ],
-                "mk": "D"
-              },
-              "_noIndex": false,
-              "_activeDate": "2023-10-09T18:12:20.689Z",
-              "lastModified": "2023-12-05T22:07:18.035Z",
-              "_locale": "en-US",
-              "_templateName": "track"
-            },
-            "_suggestedPrefetch": []
-          });
+        res.json(data);
     },
 
     motd: function(req, res){
