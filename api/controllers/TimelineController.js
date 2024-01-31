@@ -52,7 +52,7 @@ module.exports = {
                                 eventType: `EventFlag.Season${seasonglobal}`,
                                 activeUntil: "9999-12-31T23:59:59.999Z",
                                 activeSince: "2019-12-31T23:59:59.999Z"
-                            },                                                                                                            
+                            },                                                                                                                                           
                             {
                                 eventType: `EventFlag.LobbySeason${seasonglobal}`,
                                 activeUntil: "9999-12-31T23:59:59.999Z",
@@ -1113,6 +1113,16 @@ module.exports = {
             )
         }
 
+        if(season == 21.40){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push(
+                {
+                    eventType: "Event_S21_Stamina", // Dragon Ball tab 
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2021-07-27T06:00:00.000Z"
+                }
+            )
+        }        
+
         if(season == 22.40){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
@@ -1165,6 +1175,36 @@ module.exports = {
                     activeUntil: "9999-09-14T07:00:00.000Z",
                     activeSince: "2021-07-27T06:00:00.000Z"
                 }            
+            )
+        }
+    
+        if(season == 23.50){
+            timeline.channels["client-events"]["states"][0]["activeEvents"].push(
+                {
+                    eventType: "EventFlag.Event_Vaultbreakers", // Most Wanted tab
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2021-07-27T06:00:00.000Z"
+                }          
+            )
+        }
+        
+        if(season == 24.40){
+            timeline.channels["client-events"]["states"][0]["activeEvents"].push(
+                {
+                    eventType: "EventFlag.Event_PlotTwist", // Star Wars 2023 tab 
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2021-07-27T06:00:00.000Z"
+                }    
+            )
+        }
+
+        if(season == 25.30){
+            timeline.channels["client-events"]["states"][0]["activeEvents"].push(
+                {
+                    eventType: "EventFlag.Event_BelongTreaty", // Jujutsu Kaisen tab
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2021-07-27T06:00:00.000Z"
+                }    
             )
         }        
 

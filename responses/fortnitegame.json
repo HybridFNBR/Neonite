@@ -113,6 +113,249 @@
     "lastModified": "2021-02-10T23:57:48.837Z",
     "_locale": "en-US"
 },
+"eventscreens": {
+  "eventScreenGroup": {
+      "_type": "Event Screen Group",
+      "eventScreens": [
+          {
+              "purchasePremiumTrackHeader": "[PH] Purchase Premium Track Header",
+              "resourceHeader": "[PH] Resource Header",
+              "moreInfoHeader": "[PH] More Info Header",
+              "eventCMSId": "LinedNotebookEvent",
+              "eventCTA": "[PH] Call to Action",
+              "inspectSpecialItemUnowned": "[PH] Inspect Special Item Unowned",
+              "premiumUpsellOwnedHeader": "[PH] Premium Upsell Owned Header",
+              "headerCTA": "[PH] Header Call to Action",
+              "inspectSpecialPremiumItemOwned": "[PH] Inspect Special Premium Item Owned",
+              "moreInfoGroups": [
+                  {
+                      "_type": "Event Screen More Info Group",
+                      "header": "[PH] More Info Header 1",
+                      "body": "[PH] More Info Body 1"
+                  },
+                  {
+                      "_type": "Event Screen More Info Group",
+                      "header": "[PH] More Info Header 2",
+                      "body": "[PH] More Info Body 2"
+                  }
+              ],
+              "starterHeader": "[PH] Starter Header",
+              "moreInfoSubHeader": "[PH] More Info Subheader",
+              "purchasePremiumTrackBodyList": [
+                  "[PH] Purchase Premium Track Body 1",
+                  "[PH] Purchase Premium Track Body 2"
+              ],
+              "eventDescription": "[PH] Event Description",
+              "eventName": "[PH] Event Name",
+              "inspectSpecialItemOwned": "[PH] Inspect Special Item Owned",
+              "premiumUpsellUnownedHeader": "[PH] Premium Upsell Unowned Header",
+              "inspectSpecialPremiumItemUnowned": "[PH] Inspect Special Premium Item Unowned",
+              "_type": "Event Screen Data",
+              "rewardTrackLegal": "[PH] Reward Track Legal",
+              "eventCTACompleted": "[PH] Call to Action Completed",
+              "premiumUpsellUnownedBody": "[PH] Premium Upsell Unowned Body",
+              "completionHeader": "[PH] Completion Header",
+              "premiumUpsellOwnedBody": "[PH] Premium Upsell Owned Body",
+              "moreInfoLegal": "[PH] More Info Legal",
+              "purchaseLegal": "[PH] Purchase Legal"
+          },
+          {
+              "purchasePremiumTrackHeader": "BUY PREMIUM REWARD TRACK",
+              "resourceHeader": "FESTIVAL POINTS",
+              "moreInfoHeader": "OPENING NIGHT",
+              "eventCMSId": "SparksPackS01Event",
+              "eventCTA": "Event Call To Action",
+              "inspectSpecialItemUnowned": "",
+              "premiumUpsellOwnedHeader": "TRACK UPGRADED",
+              "headerCTA": "Header Call To ACtion",
+              "inspectSpecialPremiumItemOwned": "",
+              "moreInfoGroups": [
+                  {
+                      "_type": "Event Screen More Info Group",
+                      "icon": "https://cdn2.unrealengine.com/sparkspassmoreinfo-01-256x128-bc4fa249fae3.png",
+                      "header": "THE REWARD TRACK",
+                      "body": "Complete Festival Quests to gain Festival Points. Claim rewards as each section of the track is filled. \n\n\nPurchase the Premium Reward Track at any time during the event for 1,800 V-Bucks. You'll automatically claim the rewards you've earned up to that point.\n\nPlease note that all in-game rewards are not exclusive to Opening Night and may be available later in the Item Shop for purchase at a potentially higher price."
+                  },
+                  {
+                      "_type": "Event Screen More Info Group",
+                      "icon": "https://cdn2.unrealengine.com/sparkspassmoreinfo-02-256x128-7361bf56c84f.png",
+                      "header": "BUYING REWARDS",
+                      "body": "If you’ve purchased the Premium Reward Track, you’ll then have the option to buy rewards from both tracks simultaneously!\n\nThe “Buy Rewards” button appears at the bottom of the screen after you purchase the Premium Reward Track, and from there you can choose how many rewards you would like to buy."
+                  }
+              ],
+              "starterHeader": "Complete quests to earn Festival Points!",
+              "moreInfoSubHeader": "OPENING NIGHT runs through February 22nd, 2024 at 10:00pm ET",
+              "purchasePremiumTrackBodyList": [
+                  "Instantly claim the Rift Rock Aura",
+                  "Access the bottom reward track and earn more rewards",
+                  "If you've earned Festival Points before purchasing the Premium Reward Track, you'll automaticaly claim the upgraded rewards you've earned up to that point.",
+                  "Premium Reward Track items may be available in the Item Shop at a later date."
+              ],
+              "eventDescription": "Take center stage and complete Festival Quests to gain Festival Points during OPENING NIGHT. \n",
+              "eventName": "OPENING NIGHT",
+              "inspectSpecialItemOwned": "Inspect Special Item Owned",
+              "premiumUpsellUnownedHeader": "PREMIUM REWARD TRACK",
+              "inspectSpecialPremiumItemUnowned": "",
+              "_type": "Event Screen Data",
+              "eventCTACompleted": "Event Call To Action Completed",
+              "rewardTrackLegal": "Purchases of the Premium Reward Track are not eligible for returns through Fortnite Cancel Purchase or Return Tickets. Opening Night pass available through February 22nd, 2024. ",
+              "itemShopCallout": "Item Shop Callout",
+              "premiumUpsellUnownedBody": "Includes the Rift Rock Aura and access to the Premium Reward Track for 1,800 V-Bucks",
+              "completionHeader": "Opening Night is complete!",
+              "premiumUpsellOwnedBody": "RIFT ROCK AURA CLAIMED",
+              "moreInfoLegal": "Purchases of the Premium Reward Track are not eligible for returns through Fortnite Cancel Purchase or Return Tickets. Opening Night pass available through February 22nd, 2024. ",
+              "purchaseLegal": "Purchases of the Premium Reward Track are not eligible for returns through Fortnite Cancel Purchase or Return Tickets. Opening Night pass available through February 22nd, 2024. "
+          },
+          {
+              "purchasePremiumTrackHeader": "BUY <text color=\"7E51FF\">PREMIUM REWARD TRACK</>",
+              "resourceHeader": "CURSED ENERGY",
+              "moreInfoHeader": "BREAK THE CURSE!",
+              "eventCMSId": "BelongTreatyEvent",
+              "inspectSpecialItemUnowned": "Collect <text color=\"33DAFF\">SORCERER GRADES</> <img id=\"TokenIcon\"/> by completing the Sorcerer Grade quest bundles. <text color=\"33DAFF\">Claim the NUE Glider when you collect them all!</>",
+              "_type": "Event Screen Data",
+              "premiumUpsellOwnedHeader": "TRACK UPGRADED",
+              "rewardTrackLegal": "Purchases of Premium Reward Track are not eligible for returns through Fortnite Cancel Purchase or Return Tickets. Break the Curse! event available through Aug 25 at 2:00am ET.",
+              "inspectSpecialPremiumItemOwned": "Included with the PREMIUM REWARD TRACK",
+              "moreInfoGroups": [
+                  {
+                      "_type": "Event Screen More Info Group",
+                      "header": "THE REWARD TRACK",
+                      "body": "Complete <text color=\"F9FE49\">quests</> to increase your <text color=\"F9FE49\">CURSED ENERGY</>. Claim rewards when you fill each section on the track!\n\n<img id=\"LockIcon\"/> <text color=\"FFFFFF\">Premium Reward Track</>\nYou can unlock the bottom reward track at any time for <text color=\"F9FE49\">1,000 V–Bucks</>. You'll automatically claim the rewards you've earned up to that point.\n\nPlease note that all in-game rewards are not exclusive to Break the Curse! and may be available later in the Item Shop for purchase at a potentially higher price."
+                  },
+                  {
+                      "_type": "Event Screen More Info Group",
+                      "header": "BONUS GOAL",
+                      "body": "Earn <text color=\"F9FE49\">SORCERER GRADES</> <img id=\"TokenIcon\"/> by completing quests in each Sorcerer Grade quest bundle. <text color=\"F9FE49\">Claim the NUE Glider when you collect them all!</>\n\nPlease note the <text color=\"F9FE49\">NUE Glider</> may be available later in the Item Shop for purchase."
+                  },
+                  {
+                      "_type": "Event Screen More Info Group",
+                      "header": "BUYING REWARDS",
+                      "body": "If you’ve purchased the Premium Reward Track, you’ll then have the <text color=\"F9FE49\">option to buy rewards from both tracks simultaneously</>!\n\nThe <text color=\"F9FE49\">“Buy Rewards” button appears at the bottom of the screen</> after you purchase the Premium Reward Track, and from there you can choose how many rewards you would like to buy."
+                  }
+              ],
+              "starterHeader": "Complete quests to earn CURSED ENERGY!",
+              "moreInfoSubHeader": "BREAK THE CURSE! runs from Aug 8 to Aug 25 at 2:00am ET",
+              "premiumUpsellUnownedBody": "<text color=\"7E51FF\">Includes the</> STREETWEAR YUJI ITADORI Outfit <text color=\"7E51FF\">and access to the bottom track for 1,000 V–Bucks</>",
+              "purchasePremiumTrackBodyList": [
+                  "Instantly <text color=\"7E51FF\">claim the</> STREETWEAR YUJI ITADORI Outfit!",
+                  "<text color=\"7E51FF\">Access the bottom reward track and</> earn more rewards!",
+                  "<text color=\"7E51FF\">If you've earned CURSED ENERGY before purchasing the Premium Reward Track, you'll</> automatically claim <text color=\"7E51FF\">the upgraded rewards you've earned up to that point!</>",
+                  "<text color=\"7E51FF\">Premium Reward Track items may be available in the Item Shop at a later date.</>"
+              ],
+              "completionHeader": "YOUR TRAINING IS COMPLETE!",
+              "premiumUpsellOwnedBody": "STREETWEAR YUJI ITADORI OUTFIT CLAIMED",
+              "eventDescription": "Gain <text color=\"33DAFF\">CURSED ENERGY</> <img id=\"ResourceIcon\"/> and <text color=\"33DAFF\">SORCERER GRADES</> <img id=\"TokenIcon\"/> as you complete quests and fight curses.",
+              "eventName": "BREAK THE CURSE!",
+              "inspectSpecialItemOwned": "NUE Glider obtained!",
+              "premiumUpsellUnownedHeader": "PREMIUM REWARD TRACK",
+              "moreInfoLegal": "Purchases of the Premium Reward Track are not eligible for returns through Fortnite Cancel Purchase or Return Tickets. Break the Curse! event available through Aug 25 at 2:00am ET.",
+              "inspectSpecialPremiumItemUnowned": "<img id=\"LockIcon\"/> Included with the <text color=\"7E51FF\">PREMIUM REWARD TRACK</>",
+              "purchaseLegal": "Buying rewards is optional. Purchases of the Premium Reward Track are not eligible for returns through Fortnite Cancel Purchase or Return Tickets. Break the Curse! event available through Aug 25 at 2:00am ET."
+          },
+          {
+              "purchasePremiumTrackHeader": "BUY <text color=\"FF3A3A\">PREMIUM REWARD TRACK</>",
+              "resourceHeader": "GALACTIC REPUTATION",
+              "moreInfoHeader": "FIND THE FORCE",
+              "eventCMSId": "PlotTwistEvent",
+              "inspectSpecialItemUnowned": "<text color=\"6DCAEE\">Collect all</> 3 SITH HOLOCRONS <img id=\"TokenIcon\"/><text color=\"6DCAEE\"> by</> completing quests <text color=\"6DCAEE\">to get the</> SITH INFILTRATOR <text color=\"6DCAEE\">Glider!</>",
+              "_type": "Event Screen Data",
+              "premiumUpsellOwnedHeader": "TRACK UPGRADED",
+              "rewardTrackLegal": "Purchases of the Premium Reward Track are not eligible for returns through Fortnite Cancel Purchase or Return Tickets. Find the Force event available through May 23 at 9:00am ET.",
+              "inspectSpecialPremiumItemOwned": "Included with the PREMIUM REWARD TRACK",
+              "moreInfoGroups": [
+                  {
+                      "_type": "Event Screen More Info Group",
+                      "header": "THE REWARD TRACK",
+                      "body": "Complete <text color=\"F9FE49\">quests</> to increase your <text color=\"F9FE49\">GALACTIC REPUTATION</>. Claim rewards when you fill each section on the track!\n\n<img id=\"LockIcon\"/> <text color=\"FFFFFF\">Premium Reward Track</>\nYou can unlock the bottom reward track at any time for <text color=\"F9FE49\">1,000 V-Bucks</>. You'll automatically claim the rewards you've earned up to that point.\n\nPlease note that all in-game rewards are not exclusive to Find the Force and may be available later in the Item Shop for purchase at a potentially higher price."
+                  },
+                  {
+                      "_type": "Event Screen More Info Group",
+                      "header": "BONUS GOAL",
+                      "body": "Collect <text color=\"F9FE49\">SITH HOLOCRONS</> <img id=\"TokenIcon\"/> by completing the Find the Force quests. <text color=\"F9FE49\">Claim the SITH INFILTRATOR Glider when you collect them all!</>\n\nPlease note the <text color=\"F9FE49\">SITH INFILTRATOR Glider</> may be available later in the Item Shop for purchase."
+                  },
+                  {
+                      "_type": "Event Screen More Info Group",
+                      "header": "BUYING REWARDS",
+                      "body": "If you’ve purchased the Premium Reward Track, you’ll then have the <text color=\"F9FE49\">option to buy rewards from both tracks simultaneously</>!\n\nThe <text color=\"F9FE49\">“Buy Rewards” button appears at the bottom of the screen</> after you purchase the Premium Reward Track, and from there you can choose how many rewards you would like to buy."
+                  }
+              ],
+              "starterHeader": "Complete quests to earn GALACTIC REPUTATION!",
+              "moreInfoSubHeader": "FIND THE FORCE runs from May 2 to May 23 at 9:00am ET",
+              "premiumUpsellUnownedBody": "<text color=\"FF7070\">Includes the</> CORUSCANT GUARD Outfit <text color=\"FF7070\">and access to the bottom track for 1,000 V–Bucks</>",
+              "purchasePremiumTrackBodyList": [
+                  "Instantly <text color=\"FF7070\">claim the</> CORUSCANT GUARD Outfit!",
+                  "<text color=\"FF7070\">Access the bottom reward track and</> earn more rewards!",
+                  "<text color=\"FF7070\">If you've earned GALACTIC REPUTATION before purchasing the Premium Reward Track, you'll</> automatically claim <text color=\"FF7070\">the upgraded rewards you've earned up to that point!</>",
+                  "<text color=\"FF7070\">Premium Reward Track items may be available in the Item Shop at a later date.</>"
+              ],
+              "completionHeader": "CONGRATULATIONS, YOUR TRAINING IN THE FORCE IS COMPLETE!",
+              "premiumUpsellOwnedBody": "CORUSCANT GUARD OUTFIT CLAIMED",
+              "eventDescription": "Gain <text color=\"FFFFFF\">GALACTIC REPUTATION</> <img id=\"ResourceIcon\"/> and <text color=\"FFFFFF\">SITH HOLOCRONS</> <img id=\"TokenIcon\"/> as you complete quests and learn the ways of the Force.",
+              "eventName": "FIND THE FORCE",
+              "inspectSpecialItemOwned": "SITH INFILTRATOR obtained!",
+              "premiumUpsellUnownedHeader": "PREMIUM REWARD TRACK",
+              "moreInfoLegal": "Purchases of the Premium Reward Track are not eligible for returns through Fortnite Cancel Purchase or Return Tickets. Find the Force event available through May 23 at 9:00am ET.",
+              "inspectSpecialPremiumItemUnowned": "<img id=\"LockIcon\"/> Included with the <text color=\"FF7070\">PREMIUM REWARD TRACK</>",
+              "purchaseLegal": "Buying rewards is optional. Purchases of the Premium Reward Track are not eligible for returns through Fortnite Cancel Purchase or Return Tickets. Find the Force event available through May 23 at 9:00am ET."
+          },
+          {
+              "resourceHeader": "INFAMY",
+              "moreInfoHeader": "MOST WANTED",
+              "eventCMSId": "VaultbreakersEvent",
+              "eventCTA": "Collect all <text color=\"E5B842\">5 COLD BLOODED MEDALLIONS</> to unlock the <text color=\"E5B842\">SOLID SKULL</> Back Bling!",
+              "_type": "Event Screen Data",
+              "eventCTACompleted": "You stole the SOLID SKULL Back Bling!",
+              "rewardTrackLegal": "All INFAMY rewards can be obtained without purchase.",
+              "headerCTA": "SOLID SKULL",
+              "moreInfoGroups": [
+                  {
+                      "_type": "Event Screen More Info Group",
+                      "body": "MOST WANTED is a set of challenges that allow you to increase your <text color=\"F7FF19\">INFAMY</> and earn COLD BLOODED MEDALLIONS.\n\nCompleting MOST WANTED quests will grant you INFAMY, and will advance you along the reward track, unlocking cosmetic in-game rewards at certain intervals.\n\nThe <text color=\"F7FF19\">MOST WANTED</> quests will unlock the SOLID SKULL Back Bling when you collect all <text color=\"F7FF19\">COLD BLOODED MEDALLIONS</>!\n\nPlease note that in-game rewards, including the SOLID SKULL Back Bling, are not exclusive to MOST WANTED and may be available later in the Item Shop for purchase at a potentially higher price."
+                  }
+              ],
+              "starterHeader": "COMPLETE QUESTS TO GAIN INFAMY!",
+              "moreInfoSubHeader": "MOST WANTED runs from 02/14/2023 to 02/28/2023",
+              "completionHeader": "YOU PULLED OFF THE ULTIMATE HEIST... NOW SOLID SKULL AWAITS!",
+              "eventDescription": "The MOST WANTED need your help to pull off heists targeting the COLD BLOODED's loot!\n\nComplete Most Wanted quests to unlock <text color=\"7AFD02\">INFAMY</> <img id=\"ResourceIcon\"/> rewards and earn COLD BLOODED MEDALLIONS!",
+              "eventName": "MOST WANTED",
+              "purchaseLegal": "All Most Wanted rewards can be obtained for free by completing quests. Buying rewards is optional."
+          },
+          {
+              "resourceHeader": "Your Power Level",
+              "moreInfoHeader": "Dragon Ball - Power Unleashed!",
+              "eventCMSId": "StaminaEvent",
+              "eventCTA": "Collect <text color=\"FCE104FF\">Dragon Balls</> to unlock the Shenron glider!",
+              "_type": "Event Screen Data",
+              "eventCTACompleted": "Shenron granted your wish!",
+              "moreInfoGroups": [
+                  {
+                      "_type": "Event Screen More Info Group",
+                      "body": "Dragon Ball - Power Unleashed! is a set of challenges that allow you to increase your Power Level and earn Dragon Balls.\n\nCompleting quests will grant you Power Level and will advance you along the item track, unlocking cosmetic in-game rewards at certain intervals.\n\nComplete three quests from each category to earn Dragon Balls, and unlock the Shenron Glider when you collect all seven!\n\nAll Power Unleashed rewards can be obtained without purchase by completing quests. Buying rewards is optional."
+                  }
+              ],
+              "starterHeader": "Complete Quests to Increase Power Level!",
+              "moreInfoSubHeader": "August 16, 2022 9AM ET to August 30, 2022 2AM ET",
+              "completionHeader": "CONGRATULATIONS! YOUR POWER LEVEL TRAINING IS COMPLETE!",
+              "eventDescription": "Complete quests to increase your <text color=\"FCE104FF\">Power Level</> and earn <text color=\"FCE104FF\">Dragon Balls</> to unlock various in-game rewards.\n\nCollect all 7 Dragon Balls to unlock the <text color=\"FCE104FF\">Shenron Glider</>!\n\nAll Power Unleashed rewards can be obtained without purchase.",
+              "eventName": "DRAGON BALL\nPOWER UNLEASHED!",
+              "resourceGroupOverrides": [
+                  {
+                      "_type": "Event Screen Resource Group",
+                      "resourceValue": 150000000
+                  }
+              ],
+              "moreInfoLegal": "Please note that in-game rewards, including the Shenron Glider, are not exclusive to Dragon Ball - Power Unleashed! and may be available later in the Item Shop for purchase at a potentially higher price.",
+              "purchaseLegal": "All Power Unleashed rewards can be obtained without purchase by completing quests. Buying rewards is optional."
+          }
+      ]
+  },
+  "_title": "EventScreens",
+  "_noIndex": false,
+  "_activeDate": "2023-12-07T16:00:00.000Z",
+  "lastModified": "2023-12-11T20:44:09.126Z",
+  "_locale": "en-US",
+  "_templateName": "FortGameEventScreens"
+},
 "shopCarousel": {
     "jcr:isCheckedOut": true,
     "itemsList": {
