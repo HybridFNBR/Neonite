@@ -3,6 +3,7 @@ const { default: axios } = require("axios");
 const path = require('path');
 var fs = require('fs')
 var ini = require('ini')
+const contentPages = path.join(__dirname, '../../responses/fortnitegame.json');
 
 function getSeasonInfo(req) {
     const userAgent = req.headers['user-agent'];
@@ -13,9 +14,9 @@ function getSeasonInfo(req) {
 
 module.exports = {
     fortniteGame: async function(req, res){
-        const content = (await axios.get('https://fortnitecontent-website-prod07.ol.epicgames.com/content/api/pages/fortnite-game').catch(() => {})).data;
+        const content = (await axios.get('https://fortnitecontent-website-prod07.ol.epicgames.com/content/api/pages/fortnite-game/dynamicbackgrounds').catch(() => {})).data;
         const { season, seasonglobal } = getSeasonInfo(req);
-        const fortnitegame = JSON.parse(JSON.stringify(require("../../responses/fortnitegame.json")));
+        const fortnitegame = JSON.parse(fs.readFileSync(contentPages, 'utf8'));
         const backgrounds = fortnitegame.dynamicbackgrounds.backgrounds.backgrounds;
         var config = ini.parse(fs.readFileSync(path.join(__dirname, '../../config.ini'), 'utf-8'));
         if(config.custom_background == true){
@@ -118,8 +119,8 @@ module.exports = {
                     }
                 break;
                 default:
-                    backgrounds[0].backgroundimage = content.dynamicbackgrounds.backgrounds.backgrounds[0].backgroundimage;
-                    backgrounds[0].stage = content.dynamicbackgrounds.backgrounds.backgrounds[0].stage;
+                    backgrounds[0].backgroundimage = content.backgrounds.backgrounds[0].backgroundimage;
+                    backgrounds[0].stage = content.backgrounds.backgrounds[0].stage;
             }
             return res.json(fortnitegame);
         }
