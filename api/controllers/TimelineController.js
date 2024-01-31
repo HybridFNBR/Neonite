@@ -698,7 +698,6 @@ module.exports = {
         }
 
         if(season == 4.5){
-            console.log("season is 4.5")
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "EventFlag.BR_S4_Geode_Begin", //
