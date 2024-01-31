@@ -6,7 +6,6 @@ const errors = require("../../structs/errors");
 const jsonwebtoken = require('jsonwebtoken');
 const uuid = require('uuid');
 
-
 module.exports = {
     oauthToken: function(req, res){
         var displayName = "";
@@ -39,7 +38,7 @@ module.exports = {
             "iat": 1705018783,
             "jti": "c01f29504dcd42f9b68cf55759392928",
             "pfpid": "prod-fn"
-            }, "PS256", {keyid:uuid.v4()})		  
+            }, "RS256", {keyid: "WMS7EnkIGpcH9DGZsv2WcY9xsuFnZCtxZjj4Ahb-_8E"})		  
         res.json({
             "access_token": `eg1~${token}`,
             "displayName": displayName,
