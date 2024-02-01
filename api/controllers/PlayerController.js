@@ -27,6 +27,12 @@ module.exports = {
         })
     },
 
+    friendsSettings: function(req, res){
+        res.json({
+			acceptInvites: "public"
+		})
+    },
+
     friendsSummary: function(req, res){
         res.json({
 			"friends": [{

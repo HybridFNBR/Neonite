@@ -20,6 +20,7 @@ module.exports.routes = {
         controller:'PlayerController', 
         skipAssets: false
     },
+    'GET /friends/api/v1/:accountId/settings': 'PlayerController.friendsSettings',
     'GET /friends/api/v1/:accountId/summary': 'PlayerController.friendsSummary',
     'GET /friends/api/public/friends/:accountId': 'PlayerController.friends',
     'GET /friends/api/public/list/fortnite/:accountId/recentPlayers/': 'PlayerController.recentPlayers',

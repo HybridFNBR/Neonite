@@ -1,7 +1,5 @@
 const path = require('path');
 
-//testcommit
-
 function getSeasonInfo(req) {
   const userAgent = req.headers["user-agent"];
   const season = userAgent.split('-')[1];
