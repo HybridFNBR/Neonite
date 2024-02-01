@@ -700,11 +700,6 @@ module.exports = {
         if(season == 4.5){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
-                    eventType: "EventFlag.BR_S4_Geode_Begin", //
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                },
-                {
                     eventType: "EventFlag.BR_S4_Geode_Countdown", //
                     activeUntil: "9999-12-01T21:10:00.000Z",
                     activeSince: "2020-11-21T07:00:00.000Z"
