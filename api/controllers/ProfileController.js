@@ -678,7 +678,7 @@ module.exports = {
 
 					}
 				}
-				if(season <= 10.40 || season =="Cert" || season == "Live")
+				if(season <= 10.40 || season =="Cert" || season == "Live" || season == "3.0.0")
 				{
 					try{//athena.items does not exist if there is no profile so just try and catch the error until it exists.
 						Profile.addItem(athenprofile, "AthenaCharacter:CID_001_Athena_Commando_F_Default", {
