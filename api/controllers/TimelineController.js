@@ -68,11 +68,6 @@ module.exports = {
                                 activeSince: "2022-10-10T06:00:00.000Z"
                             },
                             {
-                                eventType: "WL0", //water level 0(season 13)
-                                activeUntil: "9999-09-14T07:00:00.000Z",
-                                activeSince: "2015-09-14T07:00:00.000Z"
-                            },
-                            {
                                 eventType: "WSL0", //Snow Level(season 11)
                                 activeUntil: "9999-09-14T07:00:00.000Z",
                                 activeSince: "9999-09-14T07:00:00.000Z"
@@ -104,6 +99,11 @@ module.exports = {
                             },
                             {
                                 eventType: "TR1",//unhides the rift in the sky in season13(13.40)
+                                activeUntil: "9999-09-14T07:00:00.000Z",
+                                activeSince: "2015-09-14T07:00:00.000Z"
+                            },
+                            {
+                                eventType: "WL0", //water level 0(season 13)
                                 activeUntil: "9999-09-14T07:00:00.000Z",
                                 activeSince: "2015-09-14T07:00:00.000Z"
                             },
