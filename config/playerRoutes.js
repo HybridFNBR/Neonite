@@ -24,7 +24,11 @@ module.exports.routes = {
     'GET /friends/api/v1/:accountId/summary': 'PlayerController.friendsSummary',
     'GET /friends/api/public/friends/:accountId': 'PlayerController.friends',
     'GET /friends/api/public/list/fortnite/:accountId/recentPlayers/': 'PlayerController.recentPlayers',
-    'GET /statsproxy/api/statsv2/account/:accountId': 'PlayerController.stats',
+    'GET */api/statsv2/account/:accountId':{
+        action: "stats",
+        controller:'PlayerController', 
+        skipAssets: false
+    },
     'ALL /presence/api/v1/*':{
         action: "presence",
         controller:'PlayerController', 
