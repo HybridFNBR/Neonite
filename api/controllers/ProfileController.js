@@ -442,17 +442,6 @@ module.exports = {
 								},
 								"quantity" : 1
 							});
-
-							Athena.response.profileChanges = {
-								"changeType" : "itemAttrChanged",
-								"itemId" : "NEONITECHARACTER",
-								"attributeName" : "slots",
-								"attributeValue" : [ {
-									parsedData
-								} ]
-							}
-							response.multiUpdate = [Athena.response]
-							
 						}
 						if (typeof emoteloadout == 'undefined'){
 							Profile.addItem(athenprofile, "NEONITEEMOTES", {
@@ -482,16 +471,6 @@ module.exports = {
 								},
 								"quantity" : 1
 							});
-							Athena.response.profileChanges = {
-								"changeType" : "itemAttrChanged",
-								"itemId" : "NEONITEEMOTES",
-								"attributeName" : "slots",
-								"attributeValue" : [ {
-									parsedData
-								} ]
-							}
-							response.multiUpdate = [Athena.response]
-							
 						}
 						if (typeof platformloadout == 'undefined'){
 							Profile.addItem(athenprofile, "NEONITEPLATFORM", {
@@ -514,15 +493,6 @@ module.exports = {
 									},
 								"quantity": 1
 							});
-							Athena.response.profileChanges = {
-								"changeType" : "itemAttrChanged",
-								"itemId" : "NEONITEPLATFORM",
-								"attributeName" : "slots",
-								"attributeValue" : [ {
-									parsedData
-								} ]
-							}
-							response.multiUpdate = [Athena.response]
 						}
 						if (typeof wrapsloadout == 'undefined'){
 							Profile.addItem(athenprofile, "NEONITEWRAPS", {
@@ -554,14 +524,6 @@ module.exports = {
 								},
 								"quantity": 1
 							});
-							response.notifications = {
-								"changeType" : "itemAttrChanged",
-								"itemId" : "NEONITEWRAPS",
-								"attributeName" : "slots",
-								"attributeValue" : [ {
-									parsedData
-								} ]
-							}
 						}
 						if (typeof jamloadout == 'undefined'){
 							Profile.addItem(athenprofile, "NEONITEJAM", {
@@ -587,14 +549,6 @@ module.exports = {
 								  },
 								  "quantity" : 1
 							});
-							response.notifications = {
-								"changeType" : "itemAttrChanged",
-								"itemId" : "NEONITEJAM",
-								"attributeName" : "slots",
-								"attributeValue" : [ {
-									parsedData
-								} ]
-							}
 						}
 						if (typeof sparksloadout == 'undefined'){
 							Profile.addItem(athenprofile, "NEONITESPARKS", {
@@ -614,14 +568,6 @@ module.exports = {
 								},
 								"quantity" : 1
 							});
-							response.notifications = {
-								"changeType" : "itemAttrChanged",
-								"itemId" : "NEONITESPARKS",
-								"attributeName" : "slots",
-								"attributeValue" : [ {
-									parsedData
-								} ]
-							}
 						}
 						if (typeof vehicleloadout == 'undefined'){
 							Profile.addItem(athenprofile, "NEONITEVEHICLE", {
@@ -641,14 +587,6 @@ module.exports = {
 									},
 									"quantity" : 1
 							});
-							response.notifications = {
-								"changeType" : "itemAttrChanged",
-								"itemId" : "NEONITEVEHICLE",
-								"attributeName" : "slots",
-								"attributeValue" : [ {
-									parsedData
-								} ]
-							}
 						}
 						Profile.modifyStat(athenprofile, "loadout_presets", {
 							"CosmeticLoadout:LoadoutSchema_Character" : {
@@ -1032,43 +970,29 @@ module.exports = {
 			}
 
 			case "PutModularCosmeticLoadout":{
-				var parsedData = JSON.parse(req.body["loadoutData"])
-				if(req.body["loadoutType"] === "CosmeticLoadout:LoadoutSchema_Character"){
-					Profile.changeItemAttribute(profileData, "NEONITECHARACTER", "slots", parsedData.slots, profileChanges)
-					Profile.saveProfile(accountId, "athena", profileData)
-				}
-				if(req.body["loadoutType"] === "CosmeticLoadout:LoadoutSchema_Emotes"){
-					Profile.changeItemAttribute(profileData, "NEONITEEMOTES", "slots", parsedData.slots, profileChanges)
-					Profile.saveProfile(accountId, "athena", profileData)
-				}
-				if(req.body["loadoutType"] === "CosmeticLoadout:LoadoutSchema_Platform"){
-					Profile.changeItemAttribute(profileData, "NEONITEPLATFORM", "slots", parsedData.slots, profileChanges)
-					Profile.saveProfile(accountId, "athena", profileData)
-				}
-				if(req.body["loadoutType"] === "CosmeticLoadout:LoadoutSchema_Wraps"){
-					Profile.changeItemAttribute(profileData, "NEONITEWRAPS", "slots", parsedData.slots, profileChanges)
-					Profile.saveProfile(accountId, "athena", profileData)
-				}
-				if(req.body["loadoutType"] === "CosmeticLoadout:LoadoutSchema_Jam"){
-					Profile.changeItemAttribute(profileData, "NEONITEJAM", "slots", parsedData.slots, profileChanges)
-					Profile.saveProfile(accountId, "athena", profileData)
-				}
-				if(req.body["loadoutType"] === "CosmeticLoadout:LoadoutSchema_Sparks"){
-					Profile.changeItemAttribute(profileData, "NEONITESPARKS", "slots", parsedData.slots, profileChanges)
-					Profile.saveProfile(accountId, "athena", profileData)
-				}
-				if(req.body["loadoutType"] === "CosmeticLoadout:LoadoutSchema_Vehicle"){
-					Profile.changeItemAttribute(profileData, "NEONITEVEHICLE", "slots", parsedData.slots, profileChanges)
-					Profile.saveProfile(accountId, "athena", profileData)
-				}
+				const parsedData = JSON.parse(req.body["loadoutData"]);
+				const loadoutTypeMap = {
+					"CosmeticLoadout:LoadoutSchema_Character": "NEONITECHARACTER",
+					"CosmeticLoadout:LoadoutSchema_Emotes": "NEONITEEMOTES",
+					"CosmeticLoadout:LoadoutSchema_Platform": "NEONITEPLATFORM",
+					"CosmeticLoadout:LoadoutSchema_Wraps": "NEONITEWRAPS",
+					"CosmeticLoadout:LoadoutSchema_Jam": "NEONITEJAM",
+					"CosmeticLoadout:LoadoutSchema_Sparks": "NEONITESPARKS",
+					"CosmeticLoadout:LoadoutSchema_Vehicle": "NEONITEVEHICLE",
+				};
+				const loadoutType = req.body["loadoutType"];
+				const profileAttribute = loadoutTypeMap[loadoutType];
 
-				Profile.bumpRvn(athenprofile)
-				Profile.saveProfile(accountId, "athena", athenprofile)
-				
+				if (profileAttribute) {
+					Profile.changeItemAttribute(profileData, profileAttribute, "slots", parsedData.slots, profileChanges);
+					Profile.bumpRvn(athenprofile)
+				} else {
+					NeoLog.Error("Unknown Loadout Type");
+				}
 				break;
 			}
 			case "SetLoadoutShuffleEnabled":{
-				break
+				break;
 			}
 			case "ExchangeGameCurrencyForBattlePassOffer":{
 				checkValidProfileID("athena")
@@ -1091,8 +1015,6 @@ module.exports = {
 				}
 				break;
 			}
-
-			c
 
 			default: {
 				return next(new ApiException(errors.com.epicgames.fortnite.operation_not_found).with(req.params.command));

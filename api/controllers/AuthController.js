@@ -167,5 +167,9 @@ module.exports = {
 
 	externalAuths: function(req, res){
 		res.json([])
+	},
+
+	tokenInfo: function(req, res){
+		res.status(200)
 	}
 }

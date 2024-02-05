@@ -15,6 +15,7 @@ module.exports.routes = {
     'POST /account/api/public/account/:accountId/deviceAuth': 'AuthController.PostdeviceAuth',
     'DELETE /account/api/public/account/:accountId/deviceAuth/*': 'AuthController.DeletedeviceAuth',
     'GET /account/api/public/account/:accountId/externalAuths': 'AuthController.externalAuths',
+    'GET /epic/oauth/v2/tokenInfo': 'AuthController.tokenInfo'
 
 
 }
