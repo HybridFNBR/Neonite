@@ -14,9 +14,10 @@ function getSeasonInfo(req) {
 
 module.exports = {
     fortniteGame: async function(req, res){
-        const content = (await axios.get('https://fortnitecontent-website-prod07.ol.epicgames.com/content/api/pages/fortnite-game/dynamicbackgrounds').catch(() => {})).data;
+        const content = (await axios.get('https://fortnitecontent-website-prod07.ol.epicgames.com/content/api/pages/fortnite-game').catch(() => {})).data;
         const { season, seasonglobal } = getSeasonInfo(req);
-        const fortnitegame = JSON.parse(fs.readFileSync(contentPages, 'utf8'));
+        var fortnitegame = JSON.parse(fs.readFileSync(contentPages, 'utf8'));
+        fortnitegame = Object.assign({}, fortnitegame, { eventscreens: content.eventscreens });
         const backgrounds = fortnitegame.dynamicbackgrounds.backgrounds.backgrounds;
         var config = ini.parse(fs.readFileSync(path.join(__dirname, '../../config.ini'), 'utf-8'));
         if(config.custom_background == true){
@@ -119,8 +120,8 @@ module.exports = {
                     }
                 break;
                 default:
-                    backgrounds[0].backgroundimage = content.backgrounds.backgrounds[0].backgroundimage;
-                    backgrounds[0].stage = content.backgrounds.backgrounds[0].stage;
+                    backgrounds[0].backgroundimage = content.dynamicbackgrounds.backgrounds.backgrounds[0].backgroundimage;
+                    backgrounds[0].stage = content.dynamicbackgrounds.backgrounds.backgrounds[0].stage;
             }
             return res.json(fortnitegame);
         }
