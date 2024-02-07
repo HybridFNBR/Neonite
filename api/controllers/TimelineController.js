@@ -1227,6 +1227,16 @@ module.exports = {
             )
         }
 
+        if(season == 28.20){
+            timeline.channels["client-events"]["states"][0]["activeEvents"].push(
+                {
+                    eventType: "EventFlag.Event_LinedNotebook", // TMNT mini pass
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                }       
+            )
+        }        
+
         if(seasonglobal == 7 || seasonglobal == 11 || seasonglobal == 15 || seasonglobal == 19){
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "TopSecret", //Holiday Bus (S7/S11/S15/S19)
