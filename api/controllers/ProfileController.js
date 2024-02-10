@@ -695,6 +695,7 @@ module.exports = {
 
 			case "SetAffiliateName": {
 				checkValidProfileID("common_core");
+				Profile.modifyStat(profileData, "mtx_affiliate", req.body.affiliateName, profileChanges);
 				Profile.modifyStat(profileData, "mtx_affiliate_set_time", new Date().toISOString(), profileChanges);
 				break;
 			}
