@@ -52,6 +52,7 @@ Discord Server: [Carbon](https://discord.gg/carbon-897532507048796210) <- *you c
 | ----------- | ----------- |
 | [Kemo](https://github.com/kem0o)  | Original creator and maintainer |
 | [Hybrid](https://github.com/HybridFNBR)   | Current maintainer |
+| [Andre](https://github.com/JustAndr3h)   | Pull requests |
 | [Beat-YT](https://github.com/Beat-YT)   | maintainer |
 | [Amrsatrio](https://github.com/Amrsatrio)  | Write-up of profile.js and API-reversing |
 | [Kyiro](https://github.com/Kyiro)   | Pull requests |
