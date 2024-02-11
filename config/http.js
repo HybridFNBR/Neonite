@@ -13,6 +13,7 @@ module.exports.http = {
           const responseTime = endTime - startTime;
   
           if (req.originalUrl === "/fortnite/api/calendar/v1/timeline" || req.originalUrl.match(/^\/ias\/fortnite\//)) {
+            next();
           } 
           else 
           {
