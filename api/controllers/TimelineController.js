@@ -684,8 +684,8 @@ module.exports = {
                             seasonBegin: "2021-06-05T14:00:00Z",
                             seasonEnd: "9999-12-31T23:59:59.999Z",
                             seasonDisplayedEnd: "2021-09-30T04:00:00Z",
-                            dailyStoreEnd: "9999-12-31T23:59:59.999Z",
-                            weeklyStoreEnd: "9999-12-31T23:59:59.999Z",
+                            dailyStoreEnd: new Date(new Date().getTime() + 30000).toISOString(),
+                            weeklyStoreEnd: new Date(new Date().getTime() + 30000).toISOString(),
                             sectionStoreEnds: {},
                             rmtPromotion: "melody"
                         }

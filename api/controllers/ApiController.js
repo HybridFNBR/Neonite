@@ -387,7 +387,13 @@ module.exports = {
 	},
 
 	worldInfo: function(req, res){
-		res.json({})
+		const {season, seasonglobal} = getSeasonInfo(req);
+		if(season >= 11.00 || seasonglobal >= 11){
+			res.status(404)
+		}
+		else{
+			res.json({})
+		}
 	},
 
 	legoWorldSession: function(req, res){

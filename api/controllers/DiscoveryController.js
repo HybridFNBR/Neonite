@@ -253,7 +253,7 @@ module.exports = {
 					"moderationStatus": "Approved"
 				  }
 				}
-			}) //fixes the play button being disabled
+			})
 		}
     },
 
