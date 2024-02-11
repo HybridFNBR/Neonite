@@ -14,7 +14,6 @@ module.exports.http = {
   
           if (req.originalUrl === "/fortnite/api/calendar/v1/timeline" || req.originalUrl.match(/^\/ias\/fortnite\//)) {
           } 
-          if(req.originalUrl.contains("related/campaign")){res.status(404)}
           else 
           {
             NeoLog.URL(`${req.originalUrl} (${responseTime}ms)`);
