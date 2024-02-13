@@ -85,7 +85,7 @@ module.exports = {
 			"deployment_id": "62a9473a2dca46b29ccf17577fcf42d7",
 			"application_id": "fghi4567FNFBKFz3E4TROb0bmPS8h1GW",
 			"acr": "urn:epic:loa:aal1",
-			"auth_time": new Date(new Date().getTime()).toISOString()
+			"auth_time": "1999-01-12T00:20:15.542Z"
 		  })
 		res.status(200);
     },
