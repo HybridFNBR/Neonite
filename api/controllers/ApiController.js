@@ -1,4 +1,6 @@
 const path = require('path');
+const { default: axios } = require("axios");
+var fs = require('fs')
 
 function getSeasonInfo(req) {
   const userAgent = req.headers["user-agent"];
@@ -77,9 +79,43 @@ module.exports = {
 		fileStream.pipe(res);
 	},
 
-	ias: function (req, res) {
-		res.status(404)
-	},
+	/*ias: function (req, res) {
+		res.setHeader("content-type", "application/octet-stream")
+		if (!fs.existsSync("ias")) {
+				fs.mkdirSync("ias");
+		}
+		axios.get(`https://download.epicgames.com${req.originalUrl}`)
+		.then(response => {
+			fs.writeFile(`ias/${req.params.Hash}`, response.data, err => {
+				if (err) {}
+				else{
+					res.sendFile(path.join(__dirname, `../../ias/${req.params.Hash}`));
+				}
+			})
+		})
+		
+		
+	},*/
+
+	/*iasChunks: function(req, res){
+		if (!fs.existsSync("ias/cosmeticStreaming")) {
+			fs.mkdirSync("ias/cosmeticStreaming");
+		}
+		try{
+			axios.get(`https://download.epicgames.com${req.originalUrl}`)
+			.then(response => {
+				fs.writeFile(`ias/cosmeticStreaming/${req.params.chunkFile}`, response.data, err => {
+					if (err) {
+					} else {
+						const filePath = path.join(`ias/cosmeticStreaming/${req.params.chunkFile}`);
+						res.setHeader("content-type", "application/octet-stream")
+						const fileStream = require('fs').createReadStream(filePath);
+						fileStream.pipe(res);					}
+				})
+			})
+		}
+		catch{}
+	},*/
 
 	lightSwitchbulk: function(req, res){
 		const serviceId = req.query.serviceId ? req.query.serviceId.toLowerCase() : "fortnite";

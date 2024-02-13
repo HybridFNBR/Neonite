@@ -31,23 +31,23 @@ module.exports = {
             "clsvc": "prod-fn",
             "t": "s",
             "mver": false,
-            "clid": "ec684b8c687f479fadea3cb2ad83f5c6",
+            "clid": "3446cd72694c4a4485d81b77adbb2141",
             "ic": true,
             "exp": 2147483647,
-            "am": "client_credentials",
+            "am": "authorization_code",
             "iat": 1705018783,
             "jti": "c01f29504dcd42f9b68cf55759392928",
             "pfpid": "prod-fn"
-            }, "RS256", {keyid: "WMS7EnkIGpcH9DGZsv2WcY9xsuFnZCtxZjj4Ahb-_8E"})		  
+            }, "RS256")		  
         res.json({
-            "access_token": `eg1~${token}`,
+            "access_token": `${token}`,
             "displayName": displayName,
             "account_id": accountId,
             "expires_in": 2147483647,
             "expires_at": "9999-12-31T23:59:59.999Z",
             "token_type": "bearer",
-            "refresh_token":`eg1~${token}`,
-            "client_id": "ec684b8c687f479fadea3cb2ad83f5c6",
+            "refresh_token":`${token}`,
+            "client_id": "3446cd72694c4a4485d81b77adbb2141",
             "internal_client": true,
             "client_service": "prod-fn",
             "product_id": "prod-fn",
@@ -57,22 +57,22 @@ module.exports = {
     },
 
     verifyToken: function(req, res){
-        const JWT = req.headers.authorization.replace("bearer eg1~", "")
+        const JWT = req.headers.authorization.replace("bearer ", "")
 		const JWTdecode = jsonwebtoken.decode(JWT)
 		res.json({
 			"token": req.headers.authorization,
 			"session_id": "NEONITESESSION",
 			"token_type": "bearer",
-			"client_id": "ec684b8c687f479fadea3cb2ad83f5c6",
+			"client_id": "3446cd72694c4a4485d81b77adbb2141",
 			"internal_client": true,
 			"client_service": "prod-fn",
 			"account_id": JWTdecode["sub"],
 			"expires_in": 2147483647,
 			"expires_at": "9999-12-31T23:59:59.999Z",
-			"auth_method": "exchange_code",
+			"auth_method": "authorization_code",
 			"display_name": JWTdecode["sub"],
 			"app": "prod-fn",
-			"in_app_id": "e7c388664e5442e89f30b396d9fa7183",
+			"in_app_id": "3446cd72694c4a4485d81b77adbb2141",
 			"device_id": "89776e294d5c27ba1ef4e59fab402ea7",
 			"scope": [
 			  "basic_profile",
@@ -85,7 +85,7 @@ module.exports = {
 			"deployment_id": "62a9473a2dca46b29ccf17577fcf42d7",
 			"application_id": "fghi4567FNFBKFz3E4TROb0bmPS8h1GW",
 			"acr": "urn:epic:loa:aal1",
-			"auth_time": "1999-01-12T00:20:15.542Z"
+			"auth_time": new Date(new Date().getTime()).toISOString()
 		  })
 		res.status(200);
     },
@@ -148,23 +148,7 @@ module.exports = {
 			externalAuths: {}
 		}])	
 	},
-
-	GetdeviceAuth: function(req, res){
-		res.json([])
-	},
-
-	PostdeviceAuth: function(req, res){
-		res.json({
-			accountId: req.params.accountId,
-			deviceId: "null",
-			secret: "null"
-		})
-	},
-
-	DeletedeviceAuth: function(req, res){
-		res.status(204).end()
-	},
-
+	
 	externalAuths: function(req, res){
 		res.json([])
 	},

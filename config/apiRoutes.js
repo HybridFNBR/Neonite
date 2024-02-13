@@ -4,7 +4,6 @@ module.exports.routes = {
     'GET /Builds/Fortnite/Content/CloudDir/*.manifest': 'ApiController.manifest',
     'GET /Builds/Fortnite/Content/CloudDir/*.ini': 'ApiController.ini',
     'GET /Builds/Fortnite/Content/CloudDir/*.chunk': 'ApiController.chunk',
-    'GET /ias/fortnite/*': 'ApiController.ias',
     'GET /lightswitch/api/service/bulk/status': 'ApiController.lightSwitchbulk',
     'GET /lightswitch/api/service/:serviceId/status': 'ApiController.lightswitch',
     'ALL /api/v1/events/Fortnite/:event/history/:accountId': 'ApiController.eventHistory',
@@ -55,6 +54,16 @@ module.exports.routes = {
         controller:'ApiController', 
         skipAssets: false
     },
+    /*'GET /ias/fortnite/:Hash':{ 
+        action: "ias",
+        controller:'ApiController', 
+        skipAssets: false
+    },
+    'GET /ias/fortnite/chunks/:chunkNum/:chunkFile':{ 
+        action: "iasChunks",
+        controller:'ApiController', 
+        skipAssets: false
+    },*/
     'POST /fortnite/api/game/v2/profile/:accountId/client/:command': 'ProfileController.mcp',
     'GET /fortnite/api/storeaccess/v1/request_access/:accountId': 'ApiController.storeAccess',
     'GET /content/api/pages/fortnite-game': 'FortniteGameController.fortniteGame',
