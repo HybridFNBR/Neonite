@@ -5,7 +5,6 @@ const {
 const errors = require("../../structs/errors");
 const jsonwebtoken = require('jsonwebtoken');
 const uuid = require('uuid');
-const NodeRSA = require('node-rsa');
 
 
 module.exports = {
