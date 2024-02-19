@@ -5,9 +5,11 @@ const {
 const errors = require("../../structs/errors");
 const jsonwebtoken = require('jsonwebtoken');
 const uuid = require('uuid');
+const NodeRSA = require('node-rsa');
+
 
 module.exports = {
-    oauthToken: function(req, res){
+    oauthToken: function(req, res){	
         var displayName = "";
 		var accountId = "";
 		switch (req.body.grant_type) {
@@ -25,69 +27,73 @@ module.exports = {
             break;
         }
         let token = jsonwebtoken.sign({
-            "sub": accountId,
-            "p": "eNqtk8lOAzEMht+nQkhlO1iaA0tBnEBC4joyiWdqNeNUiVPo2+NhGShLBxCnbF7+/0vSxKTCSuBCLD5rTNgS5HVW6uCcUEsif5kDij/Y5aexmh7tND9P2x9NK5kSuCgNt9Xe9tK3i5lnPSPPDpX8DaUVpQvsaJeFR4XdLq4DrrdkY9NwYDuDZbkL7GDYGBE2pvtfFc+kZRnyAxZxcyPo472EiB4CrwgmJilHxxhACbsMkqGR6mjHCmGILeQ52h1BbBpK2YI/15nA+Yu20yhKoieFg+9j0blYRAdKz8tq+isImzZeS0YsOgd60Pppck+tsYKEHOpMOXOUWtktSKvD7d16AFQCakK3YBkM2w5lxTYRdebps5u2YPKMks3P10Z7eZQEw7FJvJKwtsgPWCfv6r6M2YB2pOgtEubLun/2Nft6maL/07vfBPiLLzl99yVNxIodsRgTcfQNtAHX3doa97cwpniz495bx0dUELK5",
-            "dn": accountId,
-            "clsvc": "prod-fn",
-            "t": "s",
-            "mver": false,
-            "clid": "3446cd72694c4a4485d81b77adbb2141",
-            "ic": true,
-            "exp": 2147483647,
-            "am": "authorization_code",
-            "iat": 1705018783,
-            "jti": "c01f29504dcd42f9b68cf55759392928",
-            "pfpid": "prod-fn"
-            }, "RS256")		  
-        res.json({
-            "access_token": `${token}`,
-            "displayName": displayName,
-            "account_id": accountId,
-            "expires_in": 2147483647,
-            "expires_at": "9999-12-31T23:59:59.999Z",
-            "token_type": "bearer",
-            "refresh_token":`${token}`,
-            "client_id": "3446cd72694c4a4485d81b77adbb2141",
-            "internal_client": true,
-            "client_service": "prod-fn",
-            "product_id": "prod-fn",
-            "application_id": "fghi4567FNFBKFz3E4TROb0bmPS8h1GW"
-        })
-        res.status(200);
+			"sub": accountId,
+			"p": "eNqtk8lOAzEMht+nQkhlO1iaA0tBnEBC4joyiWdqNeNUiVPo2+NhGShLBxCnbF7+/0vSxKTCSuBCLD5rTNgS5HVW6uCcUEsif5kDij/Y5aexmh7tND9P2x9NK5kSuCgNt9Xe9tK3i5lnPSPPDpX8DaUVpQvsaJeFR4XdLq4DrrdkY9NwYDuDZbkL7GDYGBE2pvtfFc+kZRnyAxZxcyPo472EiB4CrwgmJilHxxhACbsMkqGR6mjHCmGILeQ52h1BbBpK2YI/15nA+Yu20yhKoieFg+9j0blYRAdKz8tq+isImzZeS0YsOgd60Pppck+tsYKEHOpMOXOUWtktSKvD7d16AFQCakK3YBkM2w5lxTYRdebps5u2YPKMks3P10Z7eZQEw7FJvJKwtsgPWCfv6r6M2YB2pOgtEubLun/2Nft6maL/07vfBPiLLzl99yVNxIodsRgTcfQNtAHX3doa97cwpniz495bx0dUELK5",
+			"dn": accountId,
+			"clsvc": "prod-fn",
+			"t": "s",
+			"mver": false,
+			"clid": "3446cd72694c4a4485d81b77adbb2141",
+			"ic": true,
+			"exp": 2147483647,
+			"am": "authorization_code",
+			"iat": 1705018783,
+			"jti": "c01f29504dcd42f9b68cf55759392928",
+			"pfpid": "prod-fn"
+		  }, "ciao")		  
+		res.json({
+			access_token: "NEONITETOKEN",
+			expires_in: 2147483647,
+			expires_at: "9999-12-31T23:59:59.999Z",
+			token_type: "bearer",
+			account_id: accountId,
+			client_id: "ec684b8c687f479fadea3cb2ad83f5c6",
+			internal_client: true,
+			client_service: "fortnite",
+			refresh_token: `${token}`,
+			refresh_expires: 2147483647,
+			refresh_expires_at: "9999-12-31T23:59:59.999Z",
+			displayName: accountId,
+			app: "fortnite",
+			in_app_id: accountId,
+			device_id: "5dcab5dbe86a7344b061ba57cdb33c4f"
+		})
+		res.status(200);
     },
 
     verifyToken: function(req, res){
-        const JWT = req.headers.authorization.replace("bearer ", "")
-		const JWTdecode = jsonwebtoken.decode(JWT)
+        let refresh_token = jsonwebtoken.sign({
+			"sub": "ninja",
+			"pfsid": "fn",
+			"iss": "https://api.epicgames.dev/epic/oauth/v1",
+			"dn": "ninja",
+			"pfpid": "prod-fn",
+			"aud": "ec684b8c687f479fadea3cb2ad83f5c6",
+			"pfdid": "62a9473a2dca46b29ccf17577fcf42d7",
+			"t": "epic_id",
+			"appid": "fghi4567FNFBKFz3E4TROb0bmPS8h1GW",
+			"scope": "basic_profile friends_list openid presence",
+			"exp": 9668556939,
+			"iat": 1668528139,
+			"jti": "5c2585dd6fc1414784a6bc735085b2c2"
+		  }, "ciao");
 		res.json({
-			"token": req.headers.authorization,
-			"session_id": "NEONITESESSION",
-			"token_type": "bearer",
-			"client_id": "3446cd72694c4a4485d81b77adbb2141",
-			"internal_client": true,
-			"client_service": "prod-fn",
-			"account_id": JWTdecode["sub"],
-			"expires_in": 2147483647,
-			"expires_at": "9999-12-31T23:59:59.999Z",
-			"auth_method": "authorization_code",
-			"display_name": JWTdecode["sub"],
-			"app": "prod-fn",
-			"in_app_id": "3446cd72694c4a4485d81b77adbb2141",
-			"device_id": "89776e294d5c27ba1ef4e59fab402ea7",
-			"scope": [
-			  "basic_profile",
-			  "friends_list",
-			  "openid",
-			  "presence"
-			],
-			"product_id": "prod-fn",
-			"sandbox_id": "fn",
-			"deployment_id": "62a9473a2dca46b29ccf17577fcf42d7",
-			"application_id": "fghi4567FNFBKFz3E4TROb0bmPS8h1GW",
-			"acr": "urn:epic:loa:aal1",
-			"auth_time": "1999-01-12T00:20:15.542Z"
-		  })
-		res.status(200);
+			access_token: req.headers.authorization.replace("bearer eg1~", ""),
+			expires_in: 9668556939,
+			expires_at: "9999-12-31T23:59:59.999Z",
+			token_type: "bearer",
+			refresh_token: refresh_token,
+			refresh_expires: 9668556939,
+			refresh_expires_at: "9999-12-31T23:59:59.999Z",
+			account_id: "ninja",
+			client_id: "3446cd72694c4a4485d81b77adbb2141",
+			internal_client: true,
+			client_service: "fortnite",
+			displayName: req.h,
+			app: "fortnite",
+			in_app_id: "ninja",
+			device_id: "164fb25bb44e42c5a027977d0d5da800"
+		})
     },
 
     killToken: function(req, res){
