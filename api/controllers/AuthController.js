@@ -123,7 +123,7 @@ module.exports = {
 			"minorStatus": "NOT_MINOR",
 			"cabinedMode": false,
 			"hasHashedEmail": false,
-			externalAuths: {},
+			"externalAuths": {},
 
 		})
     },

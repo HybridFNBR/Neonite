@@ -121,20 +121,18 @@ module.exports = {
     mnemonicLinks: function(req, res){
         const { season, seasonglobal } = getSeasonInfo(req);
         if (seasonData[season]) {
-            const eventBuilds = seasonData[season].Panels[0].Pages[0].results.map(result => result.linkData);
-            return res.json(eventBuilds);
-        }
-        if (seasonglobal === "19") {
-            const s19 = discoveryResponses.ver19.Panels[0].Pages[0].results.map(result => result.linkData);
-            return res.json(s19);
-        }
-        if(season >= 23.50){
-            return res.json(require("../../discovery/latest/discoveryMenu.json"))
-        }
-        else{
-            const defaultResponse = Default.Panels[0].Pages[0].results.map(result => result.linkData);
-            return res.json(defaultResponse);
-        }
+			const eventBuilds = seasonData[season].Panels[0].Pages[0].results.map(result => result.linkData);
+			return res.json(eventBuilds);
+		}
+		if (seasonglobal === "19") {
+			const s19 = discoveryResponses.ver19.Panels[0].Pages[0].results.map(result => result.linkData);
+			return res.json(s19);
+		}
+		
+		if (season >= 23.50) {
+			return res.json(require("../../discovery/latest/discoveryMenu.json"));
+		}
+		return res.json(Default.Panels[0].Pages[0].results[0].linkData);
     },
 
     related: function(req, res){
@@ -278,46 +276,58 @@ module.exports = {
 
     mnemonicPlaylist: function(req, res){
         const { season, seasonglobal } = getSeasonInfo(req);
-		const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
-		if(seasonglobal <= 15){
-			if(numbers.some(number => req.originalUrl.includes(number))){
-				res.status(404).end();
-			}
-		}//fixes the season cinamtics not starting on Chapter 1/2 versions.
-
-		if (seasonData[season]) {
-		  for (const result of seasonData[season].Panels[0].Pages[0].results) {
-			if (result.linkData.mnemonic === req.params.playlistId) {
-			  return res.json(result.linkData);
-			}
-		  }
-		}
-
-		if (seasonglobal == "19") {
-		  for (const result of discoveryResponses.ver19.Panels[0].Pages[0].results) {
-			if (result.linkData.mnemonic === req.params.playlistId) {
-			  return res.json(result.linkData);
-			}
-		  }
-		}
-		if(season >= 23.50){
-			if(req.params.playlistId == "set_br_playlists")
-			{
-				return res.json(require("../../discovery/latest/setbrplaylist.json"))
-			}
-			else{
-				try{
-					return res.json(require(`../../discovery/latest/coreLtms/${req.params.playlistId}.json`))
+		const linkData = (results, playlistId) => {
+			for (const result of results) {
+				if (result.linkData.mnemonic === playlistId) {
+					return result.linkData;
 				}
-				catch{}
 			}
-		}
-		 else {
-		  for (const result of Default.Panels[0].Pages[0].results) {
+			return null;
+		};
+		const CinamticIssues = () => {
+			const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+			if (seasonglobal <= 16 && numbers.some(number => req.originalUrl.includes(number))) {
+				res.status(404).end();
+				return true;
+			}
+			return false;
+		};
+		const EventLinkData = () => {
+			if (seasonData[season]) {
+				const result = linkData(seasonData[season].Panels[0].Pages[0].results, req.params.playlistId);
+				if (result) return res.json(result);
+			}
+			return false;
+		};
+		const season19 = () => {
+			if (seasonglobal === "19") {
+				const result = linkData(discoveryResponses.ver19.Panels[0].Pages[0].results, req.params.playlistId);
+				if (result) return res.json(result);
+			}
+			return false;
+		};
+		const links = () => {
+			if (season >= 23.50) {
+				if (req.params.playlistId === "set_br_playlists") {
+					return res.json(require("../../discovery/latest/setbrplaylist.json"));
+				} else {
+					try {
+						return res.json(require(`../../discovery/latest/coreLtms/${req.params.playlistId}.json`));
+					} catch {
+					}
+				}
+			}
+			return false;
+		};
+		if (CinamticIssues()) return;
+		if (EventLinkData()) return;
+		if (season19()) return;
+		if (links()) return;
+		
+		for (const result of Default.Panels[0].Pages[0].results) {
 			if (result.linkData.mnemonic === req.params.playlistId) {
-			  return res.json(result.linkData); 
+				return res.json(result.linkData);
 			}
-		  }
 		}
     }
 

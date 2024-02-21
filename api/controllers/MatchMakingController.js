@@ -1,6 +1,7 @@
 const {
 	ApiException
 } = require('../../structs/errors');
+const NeoLog = require('../../structs/NeoLog')
 
 module.exports = {
     
@@ -52,6 +53,7 @@ module.exports = {
 			data.attributes[key] = value;
 		});
 		var payload = Buffer.from(JSON.stringify(data, null, 0)).toString('base64');
+		NeoLog.Log(`Matchmaking into ${ParsedBckt.Playlist}`)
 		res.json({
 			"serviceUrl": "ws://localhost:5595",
 			"ticketType": "mms-player",

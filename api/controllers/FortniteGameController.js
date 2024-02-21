@@ -118,6 +118,14 @@ module.exports = {
                     else{
                         backgrounds[0].stage = "season2700"
                     }
+                case "28":
+                    if(season === "28.20"){
+                        backgrounds[0].stage = "defaultnotris"
+                        backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/s28-tmnt-lobby-4096x2048-e6c06a310c05.jpg"
+                    }
+                    else{
+                        backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/ch5s1-lobbybg-3640x2048-0974e0c3333c.jpg"
+                    }
                 break;
                 default:
                     backgrounds[0].backgroundimage = content.dynamicbackgrounds.backgrounds.backgrounds[0].backgroundimage;

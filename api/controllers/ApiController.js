@@ -1,6 +1,8 @@
 const path = require('path');
 const { default: axios } = require("axios");
 var fs = require('fs')
+const jsonwebtoken = require('jsonwebtoken');
+
 
 function getSeasonInfo(req) {
   const userAgent = req.headers["user-agent"];
@@ -228,7 +230,7 @@ module.exports = {
 		const {season} = getSeasonInfo(req);
 			if(season >= 26.30)
 				return res.json(require("../../responses/shopv2.json"));
-			if(season == "Cert" || season == "Live" || season <= 3.5 || season == "2870186+++Fortnite+Release"){
+			if(season == "Cert" || season == "Live" || season <= 3.5 || season == "2870186+++Fortnite+Release" || season == "3.0.0"){
 				return res.status(404).end();
 			}
 			else{
@@ -451,8 +453,15 @@ module.exports = {
 	},
 
 	legoMatchMakingToken: function(req, res){
+		let waspToken = jsonwebtoken.sign({
+			"namespaceId": "fn",
+			"worldId": req.params.worldId,
+			"iss": "epicgames",
+			"exp": 1701790200,
+			"iat": 1701789900
+		  }, "ES256");
 		res.set("Content-Type", "application/jwt;charset=utf-8")
-		res.send("wasp~eyJraWQiOiJhdHRlc3QxIiwidHlwIjoiSldUIiwiYWxnIjoiRWREU0EifQ.eyJhY2NvdW50SWQiOiJlN2MzODg2NjRlNTQ0MmU4OWYzMGIzOTZkOWZhNzE4MyIsIm5hbWVzcGFjZUlkIjoiZm4iLCJ3b3JsZElkIjoiZDVjNzUyMGUyYjUzNDA0NmI3MzljZWUyYTI1YzQwMjIiLCJpc3MiOiJlcGljZ2FtZXMiLCJleHAiOjE3MDE3OTAyMDAsImlhdCI6MTcwMTc4OTkwMH0.ckpiVt4WaUesyICZEJ4A-k51ZxWIlvMdgbRHV5o6xp3m7hAuVt4_Tthcbf5BV0_Y9RCH4iBgv4q1bmQ4eyFyBA")
+		res.send(`wasp~${waspToken}`)
 	},
 
 	salesEvent: function(req, res){
@@ -462,7 +471,6 @@ module.exports = {
 	gameRating: function(req, res){
 		return res.status(204).end()
 	},
-
 
 	keychain: function(req, res){
 		res.json(["46159C748694298198A52DC07476FDA3:4CLHOBqSrmS1RkG/SxZYi8Rc0zCmAKxXIBMMUHDl2ag="])
