@@ -39,7 +39,7 @@ module.exports = {
 			"iat": 1705018783,
 			"jti": "c01f29504dcd42f9b68cf55759392928",
 			"pfpid": "prod-fn"
-		  }, "PS256", {keyid:"Neonite"})		  
+		  }, "ciao")		  
 		res.json({
 			"access_token": `eg1~${token}`,
 			"displayName": displayName,
