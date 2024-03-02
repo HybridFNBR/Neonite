@@ -917,6 +917,46 @@ module.exports = {
                 }       
             )
         }
+
+        if(season == 28.30){
+            timeline.channels["client-events"]["states"][0]["activeEvents"].push(
+                /*{
+                    eventType: "CH5S1CPPE", //Pre-Emergence Event(Central Picnic)
+                    activeUntil: "2024-03-03T02:00.000Z",
+                    activeSince: "2024-03-01T00:50:00.000Z"
+                },
+                {
+                    eventType: "CH5S1CPCE", //Crater event - Pre-Emergence Event (Central Picnic)
+                    activeUntil: "2024-03-01T02:00.000Z",
+                    activeSince: "2024-03-01T00:50:00.000Z"
+                },
+                {
+                    eventType: "CH5S1CPTE", //Thump Event - Pre-Emergence Event (Central Picnic)
+                    activeUntil: "2024-03-01T01:40.000Z",
+                    activeSince: "2024-03-01T00:40:00.000Z"
+                },*/
+                /*{
+                    eventType: "CH5S1CPFH", //Final Hour - Pre-Emergence Event (Central Picnic)
+                    activeUntil: "2024-03-03T10:00.000Z",
+                    activeSince: "2024-03-01T00:50:00.000Z"
+                },*/
+                {
+                    eventType: "CH5S1CPFP", //Titan Hand Appears(Central Picnic)
+                    activeUntil: "2024-03-03T02:00.000Z",
+                    activeSince: "2024-03-01T00:50:00.000Z"
+                },
+                {
+                    eventType: "CH5S1CPPP", //Primary Events(Central Picnic)
+                    activeUntil: "2024-03-03T02:00.000Z",
+                    activeSince: "2024-03-01T00:50:00.000Z"
+                },
+                {
+                    eventType: "CH5S1CPEP", //Post-Chain Event(Central Picnic)
+                    activeUntil: "2024-03-03T02:00.000Z",
+                    activeSince: "2024-03-01T00:50:00.000Z"
+                }, //Note: Flags labled "Pre-Emergence Event" need to have the "CH5S1CPPE" flag to work event flags not labled with the "Pre-Emergence Event" need to have "CH5S1CPPE" disabled to work
+            )
+        }
         
         if(season == 29.30){
             timeline.channels["client-events"]["states"][0]["activeEvents"].push(
