@@ -6,7 +6,7 @@ const fs = require("fs");
 
 async function compareAndUpdateKeychain() {
 	try {
-	  const response = await axios.get('https://spush-tracker-v3.up.railway.app/keychain');
+	  const response = await axios.get('https://spushapi.xyz/keychain');
 	  const data = response.data;
 	  const localData = JSON.parse(fs.readFileSync('./responses/keychain.json'));
 	  for (const entry of data) {
@@ -48,7 +48,7 @@ async function startbackend(){
 		session: false,
 	  },
 	  log:{
-	  	level: 'silent'
+	  	level: 'verbose'
 	  },
     }, (err) => {
 		if(err){
