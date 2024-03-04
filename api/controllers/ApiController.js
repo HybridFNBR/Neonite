@@ -2,6 +2,7 @@ const path = require('path');
 const { default: axios } = require("axios");
 var fs = require('fs')
 const jsonwebtoken = require('jsonwebtoken');
+var ini = require('ini')
 
 
 function getSeasonInfo(req) {
@@ -224,6 +225,36 @@ module.exports = {
 
 	FrontendAssets: function(req, res){
 		res.json(require("../../discovery/FrontEndAssets.json"))
+		/*const {season} = getSeasonInfo(req);
+		const FrontendAssetsPath = '../../discovery/FrontEndAssets.json';
+		const FortniteGameConfigPath = '../../FortniteGameConfig.json';
+		const FrontendAssets = require(FrontendAssetsPath);
+		const FortniteGameConfig = require(FortniteGameConfigPath);
+        var config = ini.parse(fs.readFileSync(path.join(__dirname, '../../config.ini'), 'utf-8'));
+		if (config.FortniteGameConfig == true && season >= 28.30) {
+			FrontendAssets.FortPlaylistAthena = {
+				"meta": {
+					"promotion": 9
+				},
+				"assets": {
+					[FortniteGameConfig.playlist_config]: {
+						"meta": {
+							"revision": 2,
+							"headRevision": 2,
+							"revisedAt": "2023-11-27T06:41:57.818Z",
+							"promotion": 3,
+							"promotedAt": "2023-11-27T06:43:00.452Z"
+						},
+						"assetData": FortniteGameConfig.playlist_settings
+					}
+				}
+			};
+			console.log(FrontendAssets.FortPlaylistAthena.assets)
+			res.json(FrontendAssets)
+		}
+		else{
+			res.json(FrontendAssets)
+		}*/
 	},
 
 	catalog: function(req, res){
