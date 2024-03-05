@@ -30,7 +30,6 @@ module.exports = {
     },
 
     defaultGame: function(req, res){
-        season = req.headers["user-agent"].split('-')[1]
 		res.setHeader("content-type", "application/octet-stream")
 		let index = fs.readFileSync(path.join(__dirname, '../../hotfixes/DefaultGame.ini'), 'utf-8');
 		const replacements = {
@@ -90,10 +89,24 @@ module.exports = {
 	},
 
 	defaultRuntimeOptions: function(req, res){
+		season = req.headers["user-agent"].split('-')[1]
 		res.setHeader("content-type", "application/octet-stream")
-		const RuntimeOptionsPath = path.join('hotfixes/DefaultRuntimeOptions.ini');
-		const fileStream = require('fs').createReadStream(RuntimeOptionsPath);
-		fileStream.pipe(res)
+		let index = fs.readFileSync(path.join(__dirname, '../../hotfixes/DefaultRuntimeOptions.ini'), 'utf-8');
+		const eventPlaylists = {
+			"27.11": "Playlist_Durian",
+			"22.40": "Playlist_Radish",
+			"20.40": "Playlist_Armadillo",
+			"18.40": "Playlist_Guava",
+			"17.50": "Playlist_Kiwi",
+		};
+		if(eventPlaylists[season]){
+			index = index.replace(`"+AthenaStarterGameMode='placeholder'"`, `+AthenaStarterGameMode="${eventPlaylists[season]}"`);
+            res.send(index);
+		}
+		else{
+			res.send(index)
+		}
+
 	},
 
 	defaultInput: function(req, res){
