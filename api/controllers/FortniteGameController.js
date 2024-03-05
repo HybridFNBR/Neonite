@@ -125,6 +125,7 @@ module.exports = {
                     }
                     else{
                         backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/ch5s1-lobbybg-3640x2048-0974e0c3333c.jpg"
+                        backgrounds[0].stage = "defaultnotris"
                     }
                 break;
                 default:
