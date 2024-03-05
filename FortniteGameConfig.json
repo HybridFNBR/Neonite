@@ -113,8 +113,6 @@
         "bIgnoreWeatherEvents": false,
         "ItemsToFullyLoad": [],
         "bIsDefaultPlaylist": true,
-        "UIDisplayName": "PlaceHolder",
-        "UIDescription": "PlaceHolder",
         "bUseCustomInGameState": false,
         "GameFeaturePluginURLsToLoad": []
     },

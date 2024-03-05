@@ -30,6 +30,7 @@ module.exports = {
     },
 
     defaultGame: function(req, res){
+		var season = req.headers["user-agent"].split('-')[1]
 		res.setHeader("content-type", "application/octet-stream")
 		let index = fs.readFileSync(path.join(__dirname, '../../hotfixes/DefaultGame.ini'), 'utf-8');
 		const replacements = {
@@ -89,7 +90,7 @@ module.exports = {
 	},
 
 	defaultRuntimeOptions: function(req, res){
-		season = req.headers["user-agent"].split('-')[1]
+		var season = req.headers["user-agent"].split('-')[1]
 		res.setHeader("content-type", "application/octet-stream")
 		let index = fs.readFileSync(path.join(__dirname, '../../hotfixes/DefaultRuntimeOptions.ini'), 'utf-8');
 		const eventPlaylists = {

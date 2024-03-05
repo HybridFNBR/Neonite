@@ -120,7 +120,7 @@ module.exports = {
 
     mnemonicLinks: function(req, res){
         const { season, seasonglobal } = getSeasonInfo(req);
-        if (seasonData[season]) {
+		if (seasonData[season]) {
 			const eventBuilds = seasonData[season].Panels[0].Pages[0].results.map(result => result.linkData);
 			return res.json(eventBuilds);
 		}
@@ -128,11 +128,13 @@ module.exports = {
 			const s19 = discoveryResponses.ver19.Panels[0].Pages[0].results.map(result => result.linkData);
 			return res.json(s19);
 		}
-		
-		if (season >= 23.50) {
-			return res.json(require("../../discovery/latest/discoveryMenu.json"));
+		if(season >= 23.50){
+			return res.json(require("../../discovery/latest/discoveryMenu.json"))
 		}
-		return res.json(Default.Panels[0].Pages[0].results[0].linkData);
+		else{
+			const defaultResponse = Default.Panels[0].Pages[0].results.map(result => result.linkData);
+			return res.json(defaultResponse);
+	}
     },
 
     related: function(req, res){
