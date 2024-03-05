@@ -18,7 +18,7 @@
       "backgrounds": [
         {
           "backgroundimage": "https://cdn2.unrealengine.com/0814-ch4s4-lobby-2048x1024-2048x1024-e3c2cf8d342d.png",
-          "stage": "season2600",
+          "stage": "defaultnotris",
           "_type": "DynamicBackground",
           "key": "lobby"
         },
