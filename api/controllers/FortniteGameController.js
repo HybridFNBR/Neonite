@@ -17,7 +17,7 @@ module.exports = {
         const content = (await axios.get('https://fortnitecontent-website-prod07.ol.epicgames.com/content/api/pages/fortnite-game').catch(() => {})).data;
         const { season, seasonglobal } = getSeasonInfo(req);
         var fortnitegame = JSON.parse(fs.readFileSync(contentPages, 'utf8'));
-        fortnitegame = Object.assign({}, fortnitegame, { eventscreens: content.eventscreens });
+        fortnitegame = Object.assign({}, fortnitegame, { eventscreens: content.eventscreens }, { battlepasspurchase: content.battlepasspurchase }, { crewscreendata: content.crewscreendata });
         const backgrounds = fortnitegame.dynamicbackgrounds.backgrounds.backgrounds;
         var config = ini.parse(fs.readFileSync(path.join(__dirname, '../../config.ini'), 'utf-8'));
         if(config.custom_background == true){
