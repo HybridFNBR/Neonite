@@ -127,6 +127,9 @@ module.exports = {
                         backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/ch5s1-lobbybg-3640x2048-0974e0c3333c.jpg"
                         backgrounds[0].stage = "defaultnotris"
                     }
+                case "29":
+                    backgrounds[0].stage = "defaultnotris"
+                    backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/br-lobby-ch5s2-4096x2304-a0879ccdaafc.jpg"
                 break;
                 default:
                     backgrounds[0].backgroundimage = content.dynamicbackgrounds.backgrounds.backgrounds[0].backgroundimage;
