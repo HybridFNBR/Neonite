@@ -106,7 +106,7 @@ module.exports = {
                 break;
                 case "25":
                     backgrounds[0].stage = "defaultnotris"
-                    backgrounds[0].backgroundimage = "https://static.wikia.nocookie.net/fortnite/images/e/e2/Chapter_5_Season_2_-_Lobby_Background_-_Fortnite.jpg"
+                    backgrounds[0].backgroundimage = "https://static.wikia.nocookie.net/fortnite/images/c/ca/Chapter_4_Season_3_-_Lobby_Background_-_Fortnite.png"
                 break;
                 case "26":
                     if(season === "26.30")
