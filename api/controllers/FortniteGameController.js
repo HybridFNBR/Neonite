@@ -99,6 +99,15 @@ module.exports = {
                     else{
                         backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/t-bp23-lobby-2048x1024-2048x1024-26f2c1b27f63.png"
                     }
+                break;
+                case "24":
+                    backgrounds[0].stage = "defaultnotris"
+                    backgrounds[0].backgroundimage = "https://static.wikia.nocookie.net/fortnite/images/e/e7/Chapter_4_Season_2_-_Lobby_Background_-_Fortnite.png"
+                break;
+                case "25":
+                    backgrounds[0].stage = "defaultnotris"
+                    backgrounds[0].backgroundimage = "https://static.wikia.nocookie.net/fortnite/images/e/e2/Chapter_5_Season_2_-_Lobby_Background_-_Fortnite.jpg"
+                break;
                 case "26":
                     if(season === "26.30")
                     {  
@@ -141,7 +150,7 @@ module.exports = {
 
     trackdata: async function(req, res){
         const data = (await axios.get(`https://cdn.qstv.on.epicgames.com/${req.params.trackdata}`)).data;
-        res.json(data)
+        res.status(200).json(data).end()
     },
 
     sparks: async function(req, res){
