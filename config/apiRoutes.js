@@ -68,6 +68,7 @@ module.exports.routes = {
     'GET /fortnite/api/storeaccess/v1/request_access/:accountId': 'ApiController.storeAccess',
     'GET /content/api/pages/fortnite-game': 'FortniteGameController.fortniteGame',
     'GET /content/api/pages/fortnite-game/spark-tracks': 'FortniteGameController.sparks',
+    'GET /:trackdata': 'FortniteGameController.trackdata',
     'POST /api/v1/fortnite-br/surfaces/motd/target': 'FortniteGameController.motd',
     'POST /api/v1/user/setting': 'UserController.userSetting',
     'ALL /v1/epic-settings/public/users/:accountId/*':{ 
