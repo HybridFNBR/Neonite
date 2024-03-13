@@ -17,7 +17,7 @@ module.exports = {
         const content = (await axios.get('https://fortnitecontent-website-prod07.ol.epicgames.com/content/api/pages/fortnite-game').catch(() => {})).data;
         const { season, seasonglobal } = getSeasonInfo(req);
         var fortnitegame = JSON.parse(fs.readFileSync(contentPages, 'utf8'));
-        fortnitegame = Object.assign({}, fortnitegame, { eventscreens: content.eventscreens });
+        fortnitegame = Object.assign({}, fortnitegame, { eventscreens: content.eventscreens }, { battlepasspurchase: content.battlepasspurchase }, { crewscreendata: content.crewscreendata });
         const backgrounds = fortnitegame.dynamicbackgrounds.backgrounds.backgrounds;
         var config = ini.parse(fs.readFileSync(path.join(__dirname, '../../config.ini'), 'utf-8'));
         if(config.custom_background == true){
@@ -127,6 +127,9 @@ module.exports = {
                         backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/ch5s1-lobbybg-3640x2048-0974e0c3333c.jpg"
                         backgrounds[0].stage = "defaultnotris"
                     }
+                case "29":
+                    backgrounds[0].stage = "defaultnotris"
+                    backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/br-lobby-ch5s2-4096x2304-a0879ccdaafc.jpg"
                 break;
                 default:
                     backgrounds[0].backgroundimage = content.dynamicbackgrounds.backgrounds.backgrounds[0].backgroundimage;
