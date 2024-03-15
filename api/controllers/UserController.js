@@ -50,7 +50,6 @@ module.exports = {
 					"options": [],
 					"restrictiveOrder": "falseRestrictive",
 					"userHidden": false,
-					"userReadOnly": false,
 					"required": false,
 					"dataStorage": "raw",
 					"ageBracket": {
@@ -108,7 +107,6 @@ module.exports = {
 					],
 					"restrictiveOrder": "firstRestrictive",
 					"userHidden": false,
-					"userReadOnly": false,
 					"required": false,
 					"dataStorage": "raw",
 					"ageBracket": {
@@ -144,7 +142,6 @@ module.exports = {
 					"options": [],
 					"restrictiveOrder": "falseRestrictive",
 					"userHidden": false,
-					"userReadOnly": false,
 					"required": false,
 					"dataStorage": "raw",
 					"ageBracket": {
@@ -180,7 +177,6 @@ module.exports = {
 					"options": [],
 					"restrictiveOrder": "falseRestrictive",
 					"userHidden": false,
-					"userReadOnly": false,
 					"required": false,
 					"dataStorage": "raw",
 					"ageBracket": {
@@ -216,7 +212,6 @@ module.exports = {
 					"options": [],
 					"restrictiveOrder": "falseRestrictive",
 					"userHidden": false,
-					"userReadOnly": false,
 					"required": false,
 					"dataStorage": "raw",
 					"ageBracket": {
@@ -230,7 +225,7 @@ module.exports = {
 				  "namespace": "stats",
 				  "settingName": "show-in-leaderboard",
 				  "preferredValue": true,
-				  "preferredValueUpdatedAt": 1704927492931,
+				  "preferredValueUpdatedAt": 1709902140804,
 				  "preferredValueFromOrgLevel": false,
 				  "effectiveValue": true,
 				  "effectiveSource": "preference",
@@ -253,7 +248,6 @@ module.exports = {
 					"options": [],
 					"restrictiveOrder": "falseRestrictive",
 					"userHidden": false,
-					"userReadOnly": false,
 					"required": false,
 					"dataStorage": "raw",
 					"ageBracket": {
@@ -267,7 +261,7 @@ module.exports = {
 				  "namespace": "chat",
 				  "settingName": "filter-out-mature-language",
 				  "preferredValue": true,
-				  "preferredValueUpdatedAt": 1706138900420,
+				  "preferredValueUpdatedAt": 1710543119788,
 				  "preferredValueFromOrgLevel": false,
 				  "parentLimit": false,
 				  "parentLimitFromOrgLevel": true,
@@ -292,7 +286,6 @@ module.exports = {
 					"options": [],
 					"restrictiveOrder": "falsePermissive",
 					"userHidden": false,
-					"userReadOnly": false,
 					"required": false,
 					"dataStorage": "raw",
 					"ageBracket": {
@@ -307,7 +300,7 @@ module.exports = {
 				  "namespace": "chat",
 				  "settingName": "voice",
 				  "preferredValue": "everybody",
-				  "preferredValueUpdatedAt": 1706138900423,
+				  "preferredValueUpdatedAt": 1710543119789,
 				  "preferredValueFromOrgLevel": false,
 				  "parentLimit": "everybody",
 				  "parentLimitFromOrgLevel": true,
@@ -373,7 +366,6 @@ module.exports = {
 					],
 					"restrictiveOrder": "firstRestrictive",
 					"userHidden": false,
-					"userReadOnly": false,
 					"required": false,
 					"dataStorage": "raw",
 					"ageBracket": {
@@ -388,7 +380,7 @@ module.exports = {
 				  "namespace": "chat",
 				  "settingName": "text",
 				  "preferredValue": "everybody",
-				  "preferredValueUpdatedAt": 1706138900421,
+				  "preferredValueUpdatedAt": 1710543119788,
 				  "preferredValueFromOrgLevel": false,
 				  "parentLimit": "everybody",
 				  "parentLimitFromOrgLevel": true,
@@ -454,7 +446,6 @@ module.exports = {
 					],
 					"restrictiveOrder": "firstRestrictive",
 					"userHidden": false,
-					"userReadOnly": false,
 					"required": false,
 					"dataStorage": "raw",
 					"ageBracket": {
@@ -508,7 +499,6 @@ module.exports = {
 					],
 					"restrictiveOrder": "firstRestrictive",
 					"userHidden": false,
-					"userReadOnly": false,
 					"required": false,
 					"dataStorage": "raw",
 					"ageBracket": {
@@ -574,7 +564,6 @@ module.exports = {
 					],
 					"restrictiveOrder": "firstRestrictive",
 					"userHidden": false,
-					"userReadOnly": false,
 					"required": false,
 					"dataStorage": "raw",
 					"ageBracket": {
@@ -749,7 +738,6 @@ module.exports = {
 					],
 					"restrictiveOrder": "firstRestrictive",
 					"userHidden": false,
-					"userReadOnly": true,
 					"required": false,
 					"dataStorage": "readOnly",
 					"ageBracket": {
@@ -765,7 +753,7 @@ module.exports = {
 				  "preferredValueFromOrgLevel": true,
 				  "parentLimit": "ESRB_AGE_T",
 				  "parentLimitFromOrgLevel": false,
-				  "parentLimitUpdatedAt": 1700171862935,
+				  "parentLimitUpdatedAt": 1710541486985,
 				  "effectiveValue": "ESRB_AGE_T",
 				  "effectiveSource": "preference",
 				  "isOrgLevel": false,
@@ -814,7 +802,6 @@ module.exports = {
 					],
 					"restrictiveOrder": "firstRestrictive",
 					"userHidden": true,
-					"userReadOnly": false,
 					"required": false,
 					"dataStorage": "raw",
 					"ageBracket": {
@@ -832,7 +819,7 @@ module.exports = {
 				  "preferredValueFromOrgLevel": true,
 				  "parentLimit": "PEGI_AGE_12",
 				  "parentLimitFromOrgLevel": false,
-				  "parentLimitUpdatedAt": 1700171862936,
+				  "parentLimitUpdatedAt": 1710541486986,
 				  "effectiveValue": "PEGI_AGE_12",
 				  "effectiveSource": "preference",
 				  "isOrgLevel": false,
@@ -881,7 +868,6 @@ module.exports = {
 					],
 					"restrictiveOrder": "firstRestrictive",
 					"userHidden": true,
-					"userReadOnly": false,
 					"required": false,
 					"dataStorage": "raw",
 					"ageBracket": {
@@ -899,7 +885,7 @@ module.exports = {
 				  "preferredValueFromOrgLevel": true,
 				  "parentLimit": "USK_AGE_12",
 				  "parentLimitFromOrgLevel": false,
-				  "parentLimitUpdatedAt": 1700171862938,
+				  "parentLimitUpdatedAt": 1710541486988,
 				  "effectiveValue": "USK_AGE_12",
 				  "effectiveSource": "preference",
 				  "isOrgLevel": false,
@@ -948,7 +934,6 @@ module.exports = {
 					],
 					"restrictiveOrder": "firstRestrictive",
 					"userHidden": true,
-					"userReadOnly": false,
 					"required": false,
 					"dataStorage": "raw",
 					"ageBracket": {
@@ -966,7 +951,7 @@ module.exports = {
 				  "preferredValueFromOrgLevel": true,
 				  "parentLimit": "GRAC_AGE_12",
 				  "parentLimitFromOrgLevel": false,
-				  "parentLimitUpdatedAt": 1700171862939,
+				  "parentLimitUpdatedAt": 1710541486988,
 				  "effectiveValue": "GRAC_AGE_12",
 				  "effectiveSource": "preference",
 				  "isOrgLevel": false,
@@ -1006,7 +991,6 @@ module.exports = {
 					],
 					"restrictiveOrder": "firstRestrictive",
 					"userHidden": true,
-					"userReadOnly": false,
 					"required": false,
 					"dataStorage": "raw",
 					"ageBracket": {
@@ -1024,7 +1008,7 @@ module.exports = {
 				  "preferredValueFromOrgLevel": true,
 				  "parentLimit": "GEN_AGE_12",
 				  "parentLimitFromOrgLevel": false,
-				  "parentLimitUpdatedAt": 1700171862940,
+				  "parentLimitUpdatedAt": 1710541486990,
 				  "effectiveValue": "GEN_AGE_12",
 				  "effectiveSource": "preference",
 				  "isOrgLevel": false,
@@ -1073,7 +1057,6 @@ module.exports = {
 					],
 					"restrictiveOrder": "firstRestrictive",
 					"userHidden": true,
-					"userReadOnly": false,
 					"required": false,
 					"dataStorage": "raw",
 					"ageBracket": {
@@ -1091,7 +1074,7 @@ module.exports = {
 				  "preferredValueFromOrgLevel": true,
 				  "parentLimit": "ACB_AGE_M",
 				  "parentLimitFromOrgLevel": false,
-				  "parentLimitUpdatedAt": 1700171862937,
+				  "parentLimitUpdatedAt": 1710541486987,
 				  "effectiveValue": "ACB_AGE_M",
 				  "effectiveSource": "preference",
 				  "isOrgLevel": false,
@@ -1140,7 +1123,6 @@ module.exports = {
 					],
 					"restrictiveOrder": "firstRestrictive",
 					"userHidden": true,
-					"userReadOnly": false,
 					"required": false,
 					"dataStorage": "raw",
 					"ageBracket": {
@@ -1158,7 +1140,7 @@ module.exports = {
 				  "preferredValueFromOrgLevel": true,
 				  "parentLimit": "CLASSIND_AGE_12",
 				  "parentLimitFromOrgLevel": false,
-				  "parentLimitUpdatedAt": 1700171862937,
+				  "parentLimitUpdatedAt": 1710541486987,
 				  "effectiveValue": "CLASSIND_AGE_12",
 				  "effectiveSource": "preference",
 				  "isOrgLevel": false,
@@ -1207,7 +1189,6 @@ module.exports = {
 					],
 					"restrictiveOrder": "firstRestrictive",
 					"userHidden": true,
-					"userReadOnly": false,
 					"required": false,
 					"dataStorage": "raw",
 					"ageBracket": {
@@ -1225,7 +1206,7 @@ module.exports = {
 				  "preferredValueFromOrgLevel": true,
 				  "parentLimit": "RUSSIA_AGE_12",
 				  "parentLimitFromOrgLevel": false,
-				  "parentLimitUpdatedAt": 1700171862939,
+				  "parentLimitUpdatedAt": 1710541486989,
 				  "effectiveValue": "RUSSIA_AGE_12",
 				  "effectiveSource": "preference",
 				  "isOrgLevel": false,
@@ -1274,7 +1255,6 @@ module.exports = {
 					],
 					"restrictiveOrder": "firstRestrictive",
 					"userHidden": true,
-					"userReadOnly": false,
 					"required": false,
 					"dataStorage": "raw",
 					"ageBracket": {
@@ -1292,7 +1272,7 @@ module.exports = {
 				  "preferredValueFromOrgLevel": true,
 				  "parentLimit": "OFLC_AGE_13",
 				  "parentLimitFromOrgLevel": false,
-				  "parentLimitUpdatedAt": 1700171862940,
+				  "parentLimitUpdatedAt": 1710541486990,
 				  "effectiveValue": "OFLC_AGE_13",
 				  "effectiveSource": "preference",
 				  "isOrgLevel": false,
@@ -1341,7 +1321,6 @@ module.exports = {
 					],
 					"restrictiveOrder": "firstRestrictive",
 					"userHidden": true,
-					"userReadOnly": false,
 					"required": false,
 					"dataStorage": "raw",
 					"ageBracket": {
@@ -1359,7 +1338,7 @@ module.exports = {
 				  "preferredValueFromOrgLevel": true,
 				  "parentLimit": "FPB_AGE_13",
 				  "parentLimitFromOrgLevel": false,
-				  "parentLimitUpdatedAt": 1700171862941,
+				  "parentLimitUpdatedAt": 1710541486991,
 				  "effectiveValue": "FPB_AGE_13",
 				  "effectiveSource": "preference",
 				  "isOrgLevel": false,
@@ -1417,7 +1396,6 @@ module.exports = {
 					],
 					"restrictiveOrder": "firstRestrictive",
 					"userHidden": true,
-					"userReadOnly": false,
 					"required": false,
 					"dataStorage": "raw",
 					"ageBracket": {
@@ -1433,11 +1411,11 @@ module.exports = {
 				  "settingName": "limit-cero",
 				  "preferredValue": "CERO_AGE_15",
 				  "preferredValueFromOrgLevel": true,
-				  "parentLimit": "CERO_AGE_12",
+				  "parentLimit": "CERO_AGE_15",
 				  "parentLimitFromOrgLevel": false,
-				  "parentLimitUpdatedAt": 1700171862942,
-				  "effectiveValue": "CERO_AGE_12",
-				  "effectiveSource": "parentLimit",
+				  "parentLimitUpdatedAt": 1710541486992,
+				  "effectiveValue": "CERO_AGE_15",
+				  "effectiveSource": "preference",
 				  "isOrgLevel": false,
 				  "definition": {
 					"orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
@@ -1484,7 +1462,6 @@ module.exports = {
 					],
 					"restrictiveOrder": "firstRestrictive",
 					"userHidden": true,
-					"userReadOnly": false,
 					"required": false,
 					"dataStorage": "raw",
 					"ageBracket": {
@@ -1502,7 +1479,7 @@ module.exports = {
 				  "preferredValueFromOrgLevel": true,
 				  "parentLimit": "CSRR_AGE_12",
 				  "parentLimitFromOrgLevel": false,
-				  "parentLimitUpdatedAt": 1700171862942,
+				  "parentLimitUpdatedAt": 1710541486992,
 				  "effectiveValue": "CSRR_AGE_12",
 				  "effectiveSource": "preference",
 				  "isOrgLevel": false,
@@ -1551,7 +1528,6 @@ module.exports = {
 					],
 					"restrictiveOrder": "firstRestrictive",
 					"userHidden": true,
-					"userReadOnly": false,
 					"required": false,
 					"dataStorage": "raw",
 					"ageBracket": {
@@ -1569,7 +1545,7 @@ module.exports = {
 				  "preferredValueFromOrgLevel": true,
 				  "parentLimit": "GCAM_AGE_12",
 				  "parentLimitFromOrgLevel": false,
-				  "parentLimitUpdatedAt": 1700171862943,
+				  "parentLimitUpdatedAt": 1710541486993,
 				  "effectiveValue": "GCAM_AGE_12",
 				  "effectiveSource": "preference",
 				  "isOrgLevel": false,
@@ -1618,7 +1594,6 @@ module.exports = {
 					],
 					"restrictiveOrder": "firstRestrictive",
 					"userHidden": true,
-					"userReadOnly": false,
 					"required": false,
 					"dataStorage": "raw",
 					"ageBracket": {
@@ -1636,7 +1611,7 @@ module.exports = {
 				  "preferredValueFromOrgLevel": true,
 				  "parentLimit": "MRO_AGE_12",
 				  "parentLimitFromOrgLevel": false,
-				  "parentLimitUpdatedAt": 1700171862944,
+				  "parentLimitUpdatedAt": 1710541486993,
 				  "effectiveValue": "MRO_AGE_12",
 				  "effectiveSource": "preference",
 				  "isOrgLevel": false,
@@ -1685,7 +1660,6 @@ module.exports = {
 					],
 					"restrictiveOrder": "firstRestrictive",
 					"userHidden": true,
-					"userReadOnly": false,
 					"required": false,
 					"dataStorage": "raw",
 					"ageBracket": {
@@ -1724,7 +1698,6 @@ module.exports = {
 					"options": [],
 					"restrictiveOrder": "falsePermissive",
 					"userHidden": true,
-					"userReadOnly": false,
 					"required": false,
 					"dataStorage": "raw",
 					"ageBracket": {
@@ -1739,7 +1712,7 @@ module.exports = {
 				  "namespace": "profile",
 				  "settingName": "allow-non-squad-users-to-see-my-username",
 				  "preferredValue": true,
-				  "preferredValueUpdatedAt": 1706138900418,
+				  "preferredValueUpdatedAt": 1710543119786,
 				  "preferredValueFromOrgLevel": false,
 				  "effectiveValue": true,
 				  "effectiveSource": "preference",
@@ -1762,7 +1735,6 @@ module.exports = {
 					"options": [],
 					"restrictiveOrder": "falseRestrictive",
 					"userHidden": false,
-					"userReadOnly": false,
 					"required": false,
 					"dataStorage": "raw",
 					"ageBracket": {
@@ -1775,7 +1747,7 @@ module.exports = {
 				  "namespace": "profile",
 				  "settingName": "can-see-player-usernames-from-other-squads",
 				  "preferredValue": true,
-				  "preferredValueUpdatedAt": 1706138900419,
+				  "preferredValueUpdatedAt": 1710543119787,
 				  "preferredValueFromOrgLevel": false,
 				  "effectiveValue": true,
 				  "effectiveSource": "preference",
@@ -1798,7 +1770,6 @@ module.exports = {
 					"options": [],
 					"restrictiveOrder": "falseRestrictive",
 					"userHidden": false,
-					"userReadOnly": false,
 					"required": false,
 					"dataStorage": "raw",
 					"ageBracket": {
@@ -1853,7 +1824,6 @@ module.exports = {
 					],
 					"restrictiveOrder": "firstRestrictive",
 					"userHidden": true,
-					"userReadOnly": false,
 					"required": false,
 					"dataStorage": "raw",
 					"ageBracket": {
@@ -1891,7 +1861,6 @@ module.exports = {
 					"options": [],
 					"restrictiveOrder": "falseRestrictive",
 					"userHidden": false,
-					"userReadOnly": false,
 					"required": false,
 					"dataStorage": "raw",
 					"ageBracket": {
@@ -1928,7 +1897,6 @@ module.exports = {
 					"options": [],
 					"restrictiveOrder": "falseRestrictive",
 					"userHidden": false,
-					"userReadOnly": false,
 					"required": false,
 					"dataStorage": "raw",
 					"ageBracket": {
@@ -1967,7 +1935,6 @@ module.exports = {
 					"options": [],
 					"restrictiveOrder": "falseRestrictive",
 					"userHidden": false,
-					"userReadOnly": false,
 					"required": false,
 					"dataStorage": "raw",
 					"ageBracket": {
@@ -2036,7 +2003,6 @@ module.exports = {
 					],
 					"restrictiveOrder": "firstRestrictive",
 					"userHidden": false,
-					"userReadOnly": false,
 					"required": false,
 					"dataStorage": "raw",
 					"ageBracket": {
@@ -2103,7 +2069,6 @@ module.exports = {
 					],
 					"restrictiveOrder": "firstRestrictive",
 					"userHidden": false,
-					"userReadOnly": false,
 					"required": false,
 					"dataStorage": "raw",
 					"ageBracket": {
@@ -2160,7 +2125,6 @@ module.exports = {
 					],
 					"restrictiveOrder": "firstRestrictive",
 					"userHidden": false,
-					"userReadOnly": false,
 					"required": false,
 					"dataStorage": "raw",
 					"ageBracket": {
@@ -2196,7 +2160,6 @@ module.exports = {
 					"options": [],
 					"restrictiveOrder": "falseRestrictive",
 					"userHidden": false,
-					"userReadOnly": true,
 					"required": false,
 					"dataStorage": "readOnly",
 					"ageBracket": {
@@ -2231,7 +2194,6 @@ module.exports = {
 					"options": [],
 					"restrictiveOrder": "falseRestrictive",
 					"userHidden": true,
-					"userReadOnly": false,
 					"required": false,
 					"dataStorage": "raw",
 					"ageBracket": {
@@ -2266,7 +2228,6 @@ module.exports = {
 					"options": [],
 					"restrictiveOrder": "falseRestrictive",
 					"userHidden": false,
-					"userReadOnly": true,
 					"required": false,
 					"dataStorage": "readOnly",
 					"ageBracket": {
@@ -2276,10 +2237,6 @@ module.exports = {
 				  }
 				}
 			  ]
-			},
-			"meta": {
-			  "requestId": "FN-6h-g6Udoqk_xfnXURWZSzQ",
-			  "timestamp": "2024-02-07T12:15:08.154Z"
 			}
 		  })
     }

@@ -332,6 +332,14 @@ module.exports = {
 		res.status(204).end();
 	},
 
+	verifyPin: function(req, res){
+		res.json({
+			"data":{
+				"pinCorrect":true
+			}
+		})
+	},
+
 	interactionsAggregated: function(req, res){
 		res.status(204).end();
 	},
