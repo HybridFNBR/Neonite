@@ -73,7 +73,7 @@
       "daily_rewards": {
         "nextDefaultReward": 0,
         "totalDaysLoggedIn": 0,
-        "lastClaimDate": "",
+        "lastClaimDate": "2022-01-08T22:58:06.983Z",
         "additionalSchedules": {
           "founderspackdailyrewardtoken": {
             "rewardsClaimed": 0,
