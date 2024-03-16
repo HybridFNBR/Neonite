@@ -181,6 +181,14 @@ module.exports = {
 				break;
 			}
 
+			case "AthenaPinQuest":{
+				break;
+			}
+
+			case "MarkNewQuestNotificationSent":{
+				break;
+			}
+
 			case "MarkItemSeen": {
 				checkValidProfileID("common_core", "campaign", "athena");
 				req.body.itemIds.forEach(itemId => Profile.changeItemAttribute(profileData, itemId, "item_seen", true, profileChanges));
