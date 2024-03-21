@@ -958,7 +958,7 @@ module.exports = {
             )
         }
 
-        if (season == 29.00){
+        if (season == 29.00 || season == 29.01 || season == 29.10){
             timeline.channels["client-events"]["states"][0]["activeEvents"].push(
                 {
                     eventType: "EventFlag.Event_S29_SeasonalActivation", 
