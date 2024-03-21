@@ -22,7 +22,7 @@ module.exports = {
 					displayName = req.body.username;
 				}
 
-            accountId = displayName.replace(/ /g, "_");
+            	accountId = displayName.replace(/ /g, "_");
             break;
         }
         let token = jsonwebtoken.sign({
@@ -39,7 +39,7 @@ module.exports = {
 			"iat": 1705018783,
 			"jti": "c01f29504dcd42f9b68cf55759392928",
 			"pfpid": "prod-fn"
-		  }, "ciao")		  
+		  }, "PS256", {keyid:""})		  
 		res.json({
 			"access_token": `eg1~${token}`,
 			"displayName": displayName,
