@@ -1,6 +1,6 @@
 const Default = require("../../discovery/discoveryMenu.json");
 const {discoveryResponses} = require("../../discovery/events")
-
+const latest = require("../../discovery/latest/discoveryMenu.json")
 const seasonData = {
     "22.40": discoveryResponses.ver2240,
     "20.40": discoveryResponses.ver2040,
@@ -76,11 +76,34 @@ module.exports = {
     discoveryv3: function(req, res){
         return res.json({
             "panels": [
+				{
+					"panelName": "Homebar_V3",
+					"panelDisplayName": "Test_EpicsPicksHomebar",
+					"featureTags": [
+					  "col:5",
+					  "homebar"
+					],
+					"firstPage": {
+						"results": [
+                            {
+                                "lastVisited": null,
+                                "linkCode": "reference_byepicnocompetitive_5",
+                                "isFavorite": false,
+                                "globalCCU": 1
+                            }
+                           ],
+					  "hasMore": false,
+					  "panelTargetName": null
+					},
+					"panelType": "CuratedList",
+					"playHistoryType": null
+				},
                 {
-                    "PanelName": "ByEpicNoBigBattle6Col",
-                    "featureTags": [
-                        "col:5"
-                    ],
+                    "panelName": "ByEpicNoCompetitive",
+					"panelDisplayName": "By Epic",
+					"featureTags": [
+						"col:5"
+					],
                     "firstPage": {
                         "results": [
                             {
@@ -129,7 +152,33 @@ module.exports = {
 			return res.json(s19);
 		}
 		if(season >= 23.50){
-			return res.json(require("../../discovery/latest/discoveryMenu.json"))
+			latest.push(
+				{
+					"namespace": "fn",
+					"accountId": "epic",
+					"creatorName": "Epic",
+					"mnemonic": "reference_byepicnocompetitive_5",
+					"linkType": "Reference",
+					"metadata": {
+					"ref_id": "CreativeDiscoverySurface_Frontend:ByEpicNoCompetitive",
+					"ref_qty": 5,
+					"feature_flags": [
+						"bypass_rating_check"
+					],
+					"ref_type": "CreativeDiscoverySurfacePanel"
+					},
+					"version": 1,
+					"active": true,
+					"disabled": false,
+					"created": "2023-11-28T19:37:59.026Z",
+					"published": "2023-11-28T19:37:59.026Z",
+					"descriptionTags": [],
+					"moderationStatus": "Unmoderated",
+					"lastActivatedDate": "2023-11-28T19:37:59.033Z",
+					"discoveryIntent": "PUBLIC"
+				}
+			)
+			return res.json(latest)
 		}
 		else{
 			const defaultResponse = Default.Panels[0].Pages[0].results.map(result => result.linkData);
@@ -275,6 +324,7 @@ module.exports = {
 			"hasMore": false
         })
     },
+
 
     mnemonicPlaylist: function(req, res){
         const { season, seasonglobal } = getSeasonInfo(req);
