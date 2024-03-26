@@ -1340,7 +1340,29 @@ module.exports = {
                 activeUntil: "9999-09-14T07:00:00.000Z",
                 activeSince: "2000-09-14T07:00:00.000Z"
             },)
-        }        
+        }    
+        
+        if(config.AtlaIceberg1 == true){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push({
+                eventType: "AtlaIceberg1", // Avatar iceberg stage 1 
+                activeUntil: "9999-09-14T07:00:00.000Z",
+                activeSince: "2000-09-14T07:00:00.000Z"
+            },)
+        }  
+        if(config.AtlaIceberg2 == true){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push({
+                eventType: "AtlaIceberg2", // Avatar iceberg stage 2 
+                activeUntil: "9999-09-14T07:00:00.000Z",
+                activeSince: "2000-09-14T07:00:00.000Z"
+            },)
+        }   
+        if(config.AtlaIceberg3 == true){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push({
+                eventType: "AtlaIceberg3", // Avatar iceberg stage 3
+                activeUntil: "9999-09-14T07:00:00.000Z",
+                activeSince: "2000-09-14T07:00:00.000Z"
+            },)
+        }                         
         res.json(timeline)
     }
 }
