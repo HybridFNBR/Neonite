@@ -69,7 +69,17 @@ module.exports.routes = {
     'GET /fortnite/api/storeaccess/v1/request_access/:accountId': 'ApiController.storeAccess',
     'GET /content/api/pages/fortnite-game': 'FortniteGameController.fortniteGame',
     'GET /content/api/pages/fortnite-game/spark-tracks': 'FortniteGameController.sparks',
-    'GET /:trackdata': 'FortniteGameController.trackdata',
+    'GET /:trackdata': 'FortniteGameController.trackData',
+    'GET /:hash/:trackHash/*.mp4':{ 
+        action: "trackSegment",
+        controller:'FortniteGameController', 
+        skipAssets: false
+    },
+    'GET /:hash/:trackHash/*.m4s':{ 
+        action: "trackSegment",
+        controller:'FortniteGameController', 
+        skipAssets: false
+    },
     'POST /api/v1/fortnite-br/surfaces/motd/target': 'FortniteGameController.motd',
     'POST /api/v1/user/setting': 'UserController.userSetting',
     'ALL /v1/epic-settings/public/users/:accountId/*':{ 

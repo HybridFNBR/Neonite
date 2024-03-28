@@ -148,14 +148,24 @@ module.exports = {
         }
     },
 
-    trackdata: async function(req, res){
+    trackData: async function(req, res){
         const data = (await axios.get(`https://cdn.qstv.on.epicgames.com/${req.params.trackdata}`)).data;
-        res.status(200).json(data).end()
+        return res.json(data)
     },
 
     sparks: async function(req, res){
         const data = (await axios.get('https://fortnitecontent-website-prod07.ol.epicgames.com/content/api/pages/fortnite-game/spark-tracks').catch(() => {})).data;
         res.json(data);
+    },
+
+    trackSegment: async function(req, res){
+        const response = await axios.get(`https://pilgrim.qstv.on.epicgames.com${req.originalUrl}`, {
+            responseType: 'stream' 
+        });
+        res.set({
+            'Content-Type': 'video/mp4'
+        });
+        response.data.pipe(res);
     },
 
     motd: function(req, res){
