@@ -55,7 +55,7 @@ module.exports.routes = {
         controller:'ApiController', 
         skipAssets: false
     },
-    /*'GET /ias/fortnite/:Hash':{ 
+    'GET /ias/fortnite/:Hash':{ 
         action: "ias",
         controller:'ApiController', 
         skipAssets: false
@@ -64,7 +64,7 @@ module.exports.routes = {
         action: "iasChunks",
         controller:'ApiController', 
         skipAssets: false
-    },*/
+    },
     'POST /fortnite/api/game/v2/profile/:accountId/client/:command': 'ProfileController.mcp',
     'GET /fortnite/api/storeaccess/v1/request_access/:accountId': 'ApiController.storeAccess',
     'GET /content/api/pages/fortnite-game': 'FortniteGameController.fortniteGame',

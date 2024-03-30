@@ -44,81 +44,59 @@ module.exports = {
 
 	launcherAssets: function(req, res) {
 		res.json({
-		"appName": req.params.appName,
-		"labelName": `${req.query.label}-${req.params.platform}`,
-		"buildVersion": `NEONITE`,
-		"catalogItemId": req.params.catalogItemId,
-		"expires": "9999-12-31T23:59:59.999Z",
-		"items": {
-			"MANIFEST": {
-			"signature": "NEONITE",
-			"distribution": "http://localhost:5595/",
-			"path": `Builds/Fortnite/Content/CloudDir/Neonite.manifest`,
-			"additionalDistributions": []
-			}
-		},
-		"assetId": req.params.appName
-		});
+			"appName": req.params.appName,
+			"labelName": `${req.query.label}-${req.params.platform}`,
+			"buildVersion": `NEONITE`,
+			"catalogItemId": req.params.catalogItemId,
+			"expires": "9999-12-31T23:59:59.999Z",
+			"items": {
+				"MANIFEST": {
+					"signature": "NEONITE",
+					"distribution": "http://localhost:5595/",
+					"path": `Builds/Fortnite/Content/CloudDir/Neonite.manifest`,
+					"additionalDistributions": []
+				}
+			},
+			"assetId": req.params.appName
+		})
 	},
 	
 	manifest: function(req, res) {
-		const filePath = path.join('LauncherAssets/Neonite.manifest');
 		res.setHeader("content-type", "application/octet-stream")
-		const fileStream = require('fs').createReadStream(filePath);
-		fileStream.pipe(res);
+		res.sendFile(path.join(__dirname, '../../LauncherAssets/Neonite.manifest'));
 	},
 
 	ini: function (req, res) {
-		const filePath = path.join('LauncherAssets/Full.ini');
 		res.setHeader("content-type", "application/octet-stream")
-		const fileStream = require('fs').createReadStream(filePath);
-		fileStream.pipe(res);
+		res.sendFile(path.join(__dirname, '../../LauncherAssets/Full.ini'));
 	},
 
 	chunk: function (req, res) {
-		const filePath = path.join('LauncherAssets/Full.ini');
 		res.setHeader("content-type", "application/octet-stream")
-		const fileStream = require('fs').createReadStream(filePath);
-		fileStream.pipe(res);
+		res.sendFile(path.join(__dirname, '../../LauncherAssets/Neonite.chunk'));
 	},
 
-	/*ias: function (req, res) {
-		res.setHeader("content-type", "application/octet-stream")
-		if (!fs.existsSync("ias")) {
-				fs.mkdirSync("ias");
-		}
-		axios.get(`https://download.epicgames.com${req.originalUrl}`)
-		.then(response => {
-			fs.writeFile(`ias/${req.params.Hash}`, response.data, err => {
-				if (err) {}
-				else{
-					res.sendFile(path.join(__dirname, `../../ias/${req.params.Hash}`));
-				}
-			})
-		})
+	ias: function (req, res) {
+		const response = axios.get(`https://epicgames-download1.akamaized.net${req.originalUrl}`, {
+			responseType: 'stream' 
+		});
+        res.set({
+            'Content-Type': response.headers['content-type'],
+        });
+        response.data.pipe(res);
 		
 		
-	},*/
+	},
 
-	/*iasChunks: function(req, res){
-		if (!fs.existsSync("ias/cosmeticStreaming")) {
-			fs.mkdirSync("ias/cosmeticStreaming");
-		}
-		try{
-			axios.get(`https://download.epicgames.com${req.originalUrl}`)
-			.then(response => {
-				fs.writeFile(`ias/cosmeticStreaming/${req.params.chunkFile}`, response.data, err => {
-					if (err) {
-					} else {
-						const filePath = path.join(`ias/cosmeticStreaming/${req.params.chunkFile}`);
-						res.setHeader("content-type", "application/octet-stream")
-						const fileStream = require('fs').createReadStream(filePath);
-						fileStream.pipe(res);					}
-				})
-			})
-		}
-		catch{}
-	},*/
+	iasChunks: function(req, res){
+		const response = axios.get(`https://epicgames-download1.akamaized.net${req.originalUrl}`, {
+			responseType: 'stream' 
+		});
+        res.set({
+            'Content-Type': response.headers['content-type'],
+        });
+       response.data.pipe(res);
+	},
 
 	lightSwitchbulk: function(req, res){
 		const serviceId = req.query.serviceId ? req.query.serviceId.toLowerCase() : "fortnite";
