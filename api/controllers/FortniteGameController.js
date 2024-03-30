@@ -127,6 +127,7 @@ module.exports = {
                     else{
                         backgrounds[0].stage = "season2700"
                     }
+                break;
                 case "28":
                     if(season === "28.20"){
                         backgrounds[0].stage = "defaultnotris"
