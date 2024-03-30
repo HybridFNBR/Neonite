@@ -76,20 +76,21 @@ module.exports = {
 		res.sendFile(path.join(__dirname, '../../LauncherAssets/Neonite.chunk'));
 	},
 
-	ias: function (req, res) {
-		const response = axios.get(`https://epicgames-download1.akamaized.net${req.originalUrl}`, {
+	ias: async function (req, res) {
+		const response = await axios.get(`https://epicgames-download1.akamaized.net${req.originalUrl}`, {
 			responseType: 'stream' 
 		});
         res.set({
             'Content-Type': response.headers['content-type'],
+            'Content-Length': response.headers['content-length']
         });
         response.data.pipe(res);
 		
 		
 	},
 
-	iasChunks: function(req, res){
-		const response = axios.get(`https://epicgames-download1.akamaized.net${req.originalUrl}`, {
+	iasChunks: async function(req, res){
+		const response = await axios.get(`https://epicgames-download1.akamaized.net${req.originalUrl}`, {
 			responseType: 'stream' 
 		});
         res.set({
