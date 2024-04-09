@@ -214,8 +214,7 @@ module.exports = {
 	},
 
 	FrontendAssets: function(req, res){
-		res.json(require("../../discovery/FrontEndAssets.json"))
-		/*const {season} = getSeasonInfo(req);
+		const {season} = getSeasonInfo(req);
 		const FrontendAssetsPath = '../../discovery/FrontEndAssets.json';
 		const FortniteGameConfigPath = '../../FortniteGameConfig.json';
 		const FrontendAssets = require(FrontendAssetsPath);
@@ -239,12 +238,11 @@ module.exports = {
 					}
 				}
 			};
-			console.log(FrontendAssets.FortPlaylistAthena.assets)
 			res.json(FrontendAssets)
 		}
 		else{
 			res.json(FrontendAssets)
-		}*/
+		}
 	},
 
 	catalog: function(req, res){
