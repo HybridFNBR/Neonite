@@ -721,7 +721,7 @@ module.exports = {
     },
 
     oauthv2: function(req, res){
-      const JWT = req.body.refresh_token.replace("eg1", "")
+      const JWT = req.body.refresh_token.replace("eg1~", "")
 		const JWTdecode = jsonwebtoken.decode(JWT)
         let access_token = jsonwebtoken.sign({
 			"sub": JWTdecode["sub"],
