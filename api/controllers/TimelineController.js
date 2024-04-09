@@ -973,7 +973,7 @@ module.exports = {
             )
         }
         
-        if(season == 29.30){
+        if(season == 29.20){
             timeline.channels["client-events"]["states"][0]["activeEvents"].push(
                 {
                     eventType: "EventFlag.Event_ColdDay", // Avatar mini pass
