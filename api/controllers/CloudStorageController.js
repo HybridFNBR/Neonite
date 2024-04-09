@@ -3,6 +3,13 @@ const crypto = require("crypto");
 const fs = require('fs');
 const hotfixPath = path.join(__dirname, '../../hotfixes/');
 
+function getSeasonInfo(req) {
+	const userAgent = req.headers["user-agent"];
+	const season = userAgent.split('-')[1];
+	const seasonglobal = season.split('.')[0];
+	return { season, seasonglobal };
+  }
+
 module.exports = {
     cloudstoragesystem: async function (req, res) {
 		const output = [];
@@ -30,9 +37,15 @@ module.exports = {
     },
 
     defaultGame: function(req, res){
-        const season = req.headers["user-agent"].split('-')[1]
+		const {seasonglobal, season} = getSeasonInfo(req);
 		res.setHeader("content-type", "application/octet-stream")
 		let index = fs.readFileSync(path.join(__dirname, '../../hotfixes/DefaultGame.ini'), 'utf-8');
+		if (seasonglobal >= 20) {
+			index = index.replace(
+				";+CurveTable=/TacticalSprintGame/DataTables/TacticalSprintGameData;RowUpdate;Default.TacticalSprint.Sprint.Energy.CostPerSecond;0.0;0.0",
+				"+CurveTable=/TacticalSprintGame/DataTables/TacticalSprintGameData;RowUpdate;Default.TacticalSprint.Sprint.Energy.CostPerSecond;0.0;0.0"
+			);
+		}
 		const replacements = {
 			"7.30": [
 			  "+FrontEndPlaylistData=(PlaylistName=Playlist_Music_Low, PlaylistAccess=(bEnabled=false, CategoryIndex=1, DisplayPriority=-999))",
@@ -79,7 +92,7 @@ module.exports = {
     },
 
 	config: function(req, res){
-		res.status(204).end()
+		return res.status(204).end()
 	},
 	
 	defaultEngine: function(req, res){
@@ -104,14 +117,29 @@ module.exports = {
 	},
 
 	user: function (req, res) {
-	res.json([]);
+		const {seasonglobal} = getSeasonInfo(req);
+		return res.status(204).send()
+		/*return res.json({
+			"uniqueFilename": "ClientSettings.Sav",
+			"filename": "ClientSettings.Sav",
+			"hash": crypto.createHash("sha1").update(fs.readFileSync(path.join(__dirname, `../../ClientSettings/s${seasonglobal}/ClientSettings.sav`))).digest("hex"),
+			"hash256": crypto.createHash("sha256").update(fs.readFileSync(path.join(__dirname, `../../ClientSettings/s${seasonglobal}/ClientSettings.sav`))).digest("hex"),
+			"length": path.join(__dirname, `../../ClientSettings/s${seasonglobal}/ClientSettings.sav`).length,
+			"contentType": "text/plain",
+			"uploaded": fs.statSync(path.join(__dirname, `../../ClientSettings/s${seasonglobal}/ClientSettings.sav`)).mtime,
+			"storageType": "S3",
+			"doNotCache": false
+		})*/
 	},
 
-	userFile: function (req, res) {
-	res.status(204).send();
+	userFile: function (req, res, next) {
+		return res.status(204).send()
+		/*const {seasonglobal} = getSeasonInfo(req);
+		const ReadClientSettings = fs.readFileSync(path.join(__dirname, `../../ClientSettings/s${seasonglobal}/ClientSettings.sav`));
+		res.send(ReadClientSettings).status(200)*/
 	},
 
-	userPutFile: function (req, res) {
-	res.status(204).send();
+	userPutFile:function (req, res, next) {
+		return res.status(204).end()
 	},
 };
