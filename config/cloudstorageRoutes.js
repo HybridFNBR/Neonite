@@ -6,7 +6,11 @@ module.exports.routes = {
     'GET /fortnite/api/cloudstorage/system/DefaultRuntimeOptions.ini': 'CloudStorageController.defaultRuntimeOptions',
     'GET /fortnite/api/cloudstorage/system/DefaultInput.ini': 'CloudStorageController.defaultInput',
     'GET /fortnite/api/cloudstorage/user/:accountId': 'CloudStorageController.user',
-    'GET /fortnite/api/cloudstorage/user/:accountId/:fileName': 'CloudStorageController.userFile',
+    'GET /fortnite/api/cloudstorage/user/:accountId/:fileName':{ 
+        action: "userFile",
+        controller:'CloudStorageController', 
+        skipAssets: false
+    },
     'PUT /fortnite/api/cloudstorage/user/:accountId/:fileName': 'CloudStorageController.userPutFile',
 
 }

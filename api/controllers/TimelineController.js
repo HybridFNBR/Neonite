@@ -58,6 +58,11 @@ module.exports = {
                                 activeUntil: "9999-12-31T23:59:59.999Z",
                                 activeSince: "2021-06-05T14:00:00.000Z"
                             },
+                            {
+                                eventType: "Gal_Crashes", // Starwars spaceship crashes (season 11)
+                                activeUntil: "9999-09-14T07:00:00.000Z",
+                                activeSince: "2015-09-14T07:00:00.000Z"
+                            },
                             /*
                             {
                                 eventType: "WL0", //water level 0(season 13)
@@ -339,13 +344,8 @@ module.exports = {
             )
         }   
         
-        if(season == 11.30 || season == 11.31){
+        if(season == 11.31){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
-                {
-                    eventType: "Gal_Crashes", // Starwars spaceship crashes (season 11)
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2015-09-14T07:00:00.000Z"
-                },
                 {
                     eventType: "EventFlag.LTE_WinterFest", // C2S1-related (Winterfest 2019)
                     activeUntil: "9999-12-31T23:59:59.999Z",
@@ -973,10 +973,10 @@ module.exports = {
             )
         }
         
-        if(season == 29.30){
+        if(season == 29.20){
             timeline.channels["client-events"]["states"][0]["activeEvents"].push(
                 {
-                    eventType: "EventFlag.Event_ColdDay", // Avatar mini pass
+                    eventType: "EventFlag.Event_S29_ColdDay", // Avatar mini pass
                     activeUntil: "9999-09-14T07:00:00.000Z",
                     activeSince: "2020-09-09T07:00:00.000Z"
                 }       

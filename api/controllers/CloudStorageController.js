@@ -118,8 +118,7 @@ module.exports = {
 
 	user: function (req, res) {
 		const {seasonglobal} = getSeasonInfo(req);
-		return res.status(204).send()
-		/*return res.json({
+		return res.json({
 			"uniqueFilename": "ClientSettings.Sav",
 			"filename": "ClientSettings.Sav",
 			"hash": crypto.createHash("sha1").update(fs.readFileSync(path.join(__dirname, `../../ClientSettings/s${seasonglobal}/ClientSettings.sav`))).digest("hex"),
@@ -129,17 +128,17 @@ module.exports = {
 			"uploaded": fs.statSync(path.join(__dirname, `../../ClientSettings/s${seasonglobal}/ClientSettings.sav`)).mtime,
 			"storageType": "S3",
 			"doNotCache": false
-		})*/
+		})
 	},
 
 	userFile: function (req, res, next) {
-		return res.status(204).send()
-		/*const {seasonglobal} = getSeasonInfo(req);
+		const {seasonglobal} = getSeasonInfo(req);
 		const ReadClientSettings = fs.readFileSync(path.join(__dirname, `../../ClientSettings/s${seasonglobal}/ClientSettings.sav`));
-		res.send(ReadClientSettings).status(200)*/
-	},
+		const timestamp = Date.now();
+		res.send(ReadClientSettings + `?v=${timestamp}`
+		//dont ask why or how, this just fixes a crashing issue when client settings arnt indexed properly when they dont exist on first launch.
+	)},
 
 	userPutFile:function (req, res, next) {
-		return res.status(204).end()
 	},
 };

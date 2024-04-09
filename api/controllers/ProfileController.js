@@ -983,9 +983,11 @@ module.exports = {
 				}
 				break;
 			}
+
 			case "SetLoadoutShuffleEnabled":{
 				break;
 			}
+			
 			case "ExchangeGameCurrencyForBattlePassOffer":{
 				checkValidProfileID("athena")
 				break;

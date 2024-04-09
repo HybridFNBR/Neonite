@@ -4,6 +4,11 @@ module.exports.routes = {
     'GET /Builds/Fortnite/Content/CloudDir/*.manifest': 'ApiController.manifest',
     'GET /Builds/Fortnite/Content/CloudDir/*.ini': 'ApiController.ini',
     'GET /Builds/Fortnite/Content/CloudDir/*.chunk': 'ApiController.chunk',
+    'GET /Builds/Fortnite/Content/CloudDir/ChunksV4/:chunknum/*.chunk':{ 
+        action: "ChunksV4",
+        controller:'ApiController', 
+        skipAssets: false
+    },
     'GET /lightswitch/api/service/bulk/status': 'ApiController.lightSwitchbulk',
     'GET /lightswitch/api/service/:serviceId/status': 'ApiController.lightswitch',
     'ALL /api/v1/events/Fortnite/:event/history/:accountId': 'ApiController.eventHistory',
@@ -65,21 +70,22 @@ module.exports.routes = {
         controller:'ApiController', 
         skipAssets: false
     },
-    'POST /fortnite/api/game/v2/profile/:accountId/client/:command': 'ProfileController.mcp',
-    'GET /fortnite/api/storeaccess/v1/request_access/:accountId': 'ApiController.storeAccess',
-    'GET /content/api/pages/fortnite-game': 'FortniteGameController.fortniteGame',
-    'GET /content/api/pages/fortnite-game/spark-tracks': 'FortniteGameController.sparks',
-    'GET /:trackdata': 'FortniteGameController.trackData',
     'GET /:hash/:trackHash/*.mp4':{ 
         action: "trackSegment",
-        controller:'FortniteGameController', 
+        controller:'ApiController', 
         skipAssets: false
     },
     'GET /:hash/:trackHash/*.m4s':{ 
         action: "trackSegment",
-        controller:'FortniteGameController', 
+        controller:'ApiController', 
         skipAssets: false
     },
+    'GET /api/v2/interactions/latest/Fortnite/:accountId': 'ApiController.interactions',
+    'POST /fortnite/api/game/v2/profile/:accountId/client/:command': 'ProfileController.mcp',
+    'GET /fortnite/api/storeaccess/v1/request_access/:accountId': 'ApiController.storeAccess',
+    'GET /content/api/pages/fortnite-game': 'FortniteGameController.fortniteGame',
+    'GET /content/api/pages/fortnite-game/spark-tracks': 'FortniteGameController.sparks',
+    'GET /:trackdata': 'ApiController.trackData',
     'POST /api/v1/fortnite-br/surfaces/motd/target': 'FortniteGameController.motd',
     'POST /api/v1/user/setting': 'UserController.userSetting',
     'ALL /v1/epic-settings/public/users/:accountId/*':{ 
@@ -87,6 +93,8 @@ module.exports.routes = {
         controller:'UserController', 
         skipAssets: false
     },
+    'PUT /profile/play_region': 'UserController.playRegion',
+    'PUT /profile/languages': 'UserController.languages',
     'GET /fortnite/api/calendar/v1/timeline': 'TimelineController.timeline',
     // Add more routes as needed
 };

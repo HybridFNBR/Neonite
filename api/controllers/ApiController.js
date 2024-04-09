@@ -76,6 +76,17 @@ module.exports = {
 		res.sendFile(path.join(__dirname, '../../LauncherAssets/Neonite.chunk'));
 	},
 
+	ChunksV4: async function(req, res){
+		const response = await axios.get(`https://epicgames-download1.akamaized.net${req.originalUrl}`, {
+			responseType: 'stream' 
+		});
+        res.set({
+            'Content-Type': response.headers['content-type'],
+            'Content-Length': response.headers['content-length']
+        });
+        response.data.pipe(res);
+	},
+
 	ias: async function (req, res) {
 		const response = await axios.get(`https://epicgames-download1.akamaized.net${req.originalUrl}`, {
 			responseType: 'stream' 
@@ -502,15 +513,36 @@ module.exports = {
 				"limit": "Res=656"
 			})
 			//https://github.com/LeleDerGrasshalmi/FortniteEndpointsDocumentation/blob/ec6b267bca542a2b8804084622721a4bd8ae7c7f/EpicGames/IPDataService/RegionCheck.md
-		},
+	},
+
+	interactions: function(req, res){
+		res.status(204).end()
+	},
 
 	playRegion: function(req, res){
 		res.status(204).end()
-		},
+	},
 
 	storeAccess: function(req, res){
 		res.status(204).end()
-		}
+	},
+
+	trackData: async function(req, res){
+        const data = (await axios.get(`https://cdn.qstv.on.epicgames.com/${req.params.trackdata}`)).data;
+        return res.json(data)
+    },
+
+    trackSegment: async function(req, res){
+        const response = await axios.get(`https://pilgrim.qstv.on.epicgames.com${req.originalUrl}`, {
+            responseType: 'stream' 
+        });
+        res.set({
+            'Content-Type': 'video/mp4'
+        });
+        response.data.pipe(res);
+    },
+
+	
 
 
 

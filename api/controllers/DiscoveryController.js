@@ -152,32 +152,6 @@ module.exports = {
 			return res.json(s19);
 		}
 		if(season >= 23.50){
-			latest.push(
-				{
-					"namespace": "fn",
-					"accountId": "epic",
-					"creatorName": "Epic",
-					"mnemonic": "reference_byepicnocompetitive_5",
-					"linkType": "Reference",
-					"metadata": {
-					"ref_id": "CreativeDiscoverySurface_Frontend:ByEpicNoCompetitive",
-					"ref_qty": 5,
-					"feature_flags": [
-						"bypass_rating_check"
-					],
-					"ref_type": "CreativeDiscoverySurfacePanel"
-					},
-					"version": 1,
-					"active": true,
-					"disabled": false,
-					"created": "2023-11-28T19:37:59.026Z",
-					"published": "2023-11-28T19:37:59.026Z",
-					"descriptionTags": [],
-					"moderationStatus": "Unmoderated",
-					"lastActivatedDate": "2023-11-28T19:37:59.033Z",
-					"discoveryIntent": "PUBLIC"
-				}
-			)
 			return res.json(latest)
 		}
 		else{

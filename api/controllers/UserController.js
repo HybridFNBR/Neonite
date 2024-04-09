@@ -1,5 +1,14 @@
 
 module.exports = {
+
+	playRegion: function(req, res){
+		res.status(200).end()
+	},
+
+	languages: function(req, res){
+		res.status(200).end()
+	},
+
     userSetting: function(req, res){
         res.json([
 			{
