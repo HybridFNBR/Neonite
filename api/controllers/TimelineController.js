@@ -976,7 +976,7 @@ module.exports = {
         if(season == 29.20){
             timeline.channels["client-events"]["states"][0]["activeEvents"].push(
                 {
-                    eventType: "EventFlag.Event_ColdDay", // Avatar mini pass
+                    eventType: "EventFlag.Event_S29_ColdDay", // Avatar mini pass
                     activeUntil: "9999-09-14T07:00:00.000Z",
                     activeSince: "2020-09-09T07:00:00.000Z"
                 }       
