@@ -19,7 +19,7 @@ module.exports.http = {
       LogURL: function (req, res, next) {
         try{
           const {seasonglobal} = getSeasonInfo(req);
-            if(seasonglobal && /^\d+$/.test(seasonglobal)){
+            if(seasonglobal && /^\d+$/.test(seasonglobal) || seasonglobal == "Cert" || seasonglobal == "Live"){
               const directoryPath = path.join(__dirname, `../ClientSettings/s${seasonglobal}`);
               if(!fs.existsSync(directoryPath)) {
                 fs.mkdirSync(directoryPath, { recursive: true }); 
