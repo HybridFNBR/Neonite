@@ -246,10 +246,10 @@ module.exports = {
 	},
 
 	catalog: function(req, res){
-		const {season} = getSeasonInfo(req);
+		const {season, seasonglobal} = getSeasonInfo(req);
 			if(season >= 26.30)
 				return res.json(require("../../responses/shopv2.json"));
-			if(season == "Cert" || season == "Live" || season <= 3.5 || season == "2870186+++Fortnite+Release" || season == "3.0.0"){
+			if(seasonglobal == "Cert" || seasonglobal == "Live" || season <= 3.5 || season == "2870186+++Fortnite+Release" || season == "3.0.0" || seasonglobal == "Next"){
 				return res.status(404).end();
 			}
 			else{
