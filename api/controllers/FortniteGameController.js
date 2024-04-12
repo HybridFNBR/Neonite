@@ -154,6 +154,11 @@ module.exports = {
         res.json(data);
     },
 
+    eventScreen: async function(req, res){
+        const data = (await axios.get('https://fortnitecontent-website-prod07.ol.epicgames.com/content/api/pages/fortnite-game/eventscreens').catch(() => {})).data;
+        res.json(data);
+    },
+
     motd: function(req, res){
         res.status(204)
     }
