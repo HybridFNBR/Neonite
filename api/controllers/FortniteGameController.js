@@ -218,7 +218,7 @@ module.exports = {
                     ],
                     "_type": "TeaserBackground"
                   },
-                  "TeaserTitle": "Neonite V2",
+                  "TeaserTitle": " Neonite V2",
                   "VerticalTextLayout": false
                 },
                 "contentSchemaName": "DynamicMotd",
