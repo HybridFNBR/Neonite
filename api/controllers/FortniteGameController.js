@@ -160,6 +160,64 @@ module.exports = {
     },
 
     motd: function(req, res){
-        res.status(204)
+        res.json({
+            "contentType": "collection",
+            "contentId": "fortnite-br-br-motd-collection",
+            "tcId": "8784961a-44e7-4fd5-82a6-8ef11e8c211d",
+            "contentMeta": "{\"c93adbc7a8a9f94a916de62aa443e2d6\":[\"93eff180-1465-496e-9be4-c02ef810ad82\"]}",
+            "contentItems": [
+              {
+                "contentType": "content-item",
+                "contentId": "93eff180-1465-496e-9be4-c02ef810ad82",
+                "tcId": "5085a6fa-108c-4f0c-abdd-3259c6406890",
+                "contentFields": {
+                  "Buttons": [
+                    {
+                      "Action": {
+                        "_type": "MotdDiscoveryAction",
+                        "category": "set_br_playlists",
+                        "islandCode": "set_br_playlists",
+                        "shouldOpen": true
+                      },
+                      "Style": "0",
+                      "Text": "Play Now",
+                      "_type": "Button"
+                    }
+                  ],
+                  "FullScreenBackground": {
+                    "Image": [
+                      {
+                        "width": 1920,
+                        "height": 1080,
+                        "url": "https://raw.githubusercontent.com/NeoniteDev/NeoniteV2/main/public/Neonite1024.png"
+                      },
+                      {
+                        "width": 960,
+                        "height": 540,
+                        "url": "https://raw.githubusercontent.com/NeoniteDev/NeoniteV2/main/public/Neonite1024.png"
+                      }
+                    ],
+                    "_type": "FullScreenBackground"
+                  },
+                  "FullScreenBody": "Made by kemo (@xkem0x)\nMaintained by Hybrid (@unrealhybrid).\nDiscord: https://discord.gg/carbon",
+                  "FullScreenTitle": "Neonite V2",
+                  "TeaserBackground": {
+                    "Image": [
+                      {
+                        "width": 1024,
+                        "height": 512,
+                        "url": "https://raw.githubusercontent.com/NeoniteDev/NeoniteV2/main/public/Neonite1024.png"
+                      }
+                    ],
+                    "_type": "TeaserBackground"
+                  },
+                  "TeaserTitle": "Neonite V2",
+                  "VerticalTextLayout": false
+                },
+                "contentSchemaName": "DynamicMotd",
+                "contentHash": "c93adbc7a8a9f94a916de62aa443e2d6"
+              }
+            ]
+          })
     }
 }
