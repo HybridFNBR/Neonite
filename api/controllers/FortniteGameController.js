@@ -137,9 +137,16 @@ module.exports = {
                         backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/ch5s1-lobbybg-3640x2048-0974e0c3333c.jpg"
                         backgrounds[0].stage = "defaultnotris"
                     }
+                break;
                 case "29":
-                    backgrounds[0].stage = "defaultnotris"
-                    backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/br-lobby-ch5s2-4096x2304-a0879ccdaafc.jpg"
+                    if(season === "29.20"){
+                        backgrounds[0].stage = "defaultnotris"
+                        backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/iceberg-lobby-3840x2160-217bb6ea8af9.jpg"                        
+                    }
+                    else{
+                        backgrounds[0].stage = "defaultnotris"
+                        backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/br-lobby-ch5s2-4096x2304-a0879ccdaafc.jpg"
+                    }
                 break;
                 default:
                     backgrounds[0].backgroundimage = content.dynamicbackgrounds.backgrounds.backgrounds[0].backgroundimage;
