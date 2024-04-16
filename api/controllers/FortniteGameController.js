@@ -76,6 +76,7 @@ module.exports = {
                     } 
                     else {
                         backgrounds[0].stage = "season20";
+                        backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/s20-landscapev4-2048x1024-2494a103ae6c.png"
                     }
                 break;
                 case "21":
