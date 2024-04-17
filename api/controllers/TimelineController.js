@@ -16,17 +16,6 @@ module.exports = {
         const { season, seasonglobal } = getSeasonInfo(req);
         const keychain = require("../../responses/keychain.json")
         var config = ini.parse(fs.readFileSync(path.join(__dirname, '../../config.ini'), 'utf-8'));
-        let eventsTimeOffsetHrs
-        let currentTime
-        if(season <= 10.40 || seasonglobal <= 10){
-            eventsTimeOffsetHrs = 0.1
-            currentTime = new Date(new Date().getTime() +6000000000)
-
-        }
-        else{
-            currentTime = new Date().toISOString()
-            eventsTimeOffsetHrs = 99.9
-        }
         const timeline = {
             channels: {
                 "standalone-store": {},
@@ -266,10 +255,10 @@ module.exports = {
                     cacheExpire: new Date(new Date().getTime() + 1000).toISOString() //refresh every second(might be a bit over kill)
                 }
             },
-            eventsTimeOffsetHrs: eventsTimeOffsetHrs,
             cacheIntervalMins: 0.1,
-            currentTime: currentTime
+            currentTime: new Date().toISOString()
         }
+
         if(season == 4.5){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
