@@ -70,7 +70,7 @@ module.exports = {
                                 activeSince: "2021-06-05T14:00:00.000Z"
                             },
                             {
-                                eventType: "ColdDayEvent", // Starwars spaceship crashes (season 11)
+                                eventType: "Gal_Crashes", // Starwars spaceship crashes (season 11)
                                 activeUntil: "9999-09-14T07:00:00.000Z",
                                 activeSince: "2015-09-14T07:00:00.000Z"
                             },
