@@ -525,7 +525,7 @@ module.exports = {
 		res.status(204).end()
 	},
 
-	/*trackData: async function(req, res){
+	trackData: async function(req, res){
         const data = (await axios.get(`https://cdn.qstv.on.epicgames.com/${req.params.trackdata}`)).data;
         return res.json(data)
     },
@@ -538,7 +538,7 @@ module.exports = {
             'Content-Type': 'video/mp4'
         });
         response.data.pipe(res);
-    },*/
+    },
 
 	
 
