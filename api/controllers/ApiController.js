@@ -71,11 +71,6 @@ module.exports = {
 		res.sendFile(path.join(__dirname, '../../LauncherAssets/Full.ini'));
 	},
 
-	chunk: function (req, res) {
-		res.setHeader("content-type", "application/octet-stream")
-		res.sendFile(path.join(__dirname, '../../LauncherAssets/Neonite.chunk'));
-	},
-
 	ChunksV4: async function(req, res){
 		const response = await axios.get(`https://epicgames-download1.akamaized.net${req.originalUrl}`, {
 			responseType: 'stream' 
@@ -100,14 +95,15 @@ module.exports = {
 		
 	},
 
-	iasChunks: async function(req, res){
+	iasChunks: async function(req, res){  
 		const response = await axios.get(`https://epicgames-download1.akamaized.net${req.originalUrl}`, {
 			responseType: 'stream' 
 		});
         res.set({
             'Content-Type': response.headers['content-type'],
+            'Content-Length': response.headers['content-length']
         });
-       response.data.pipe(res);
+        response.data.pipe(res);
 	},
 
 	lightSwitchbulk: function(req, res){

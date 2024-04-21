@@ -1,9 +1,12 @@
 module.exports.routes = {
     'GET /launcher/api/public/distributionpoints': 'ApiController.distributionpoints',
     'GET /launcher/api/public/assets/:platform/:catalogItemId/:appName': 'ApiController.launcherAssets',
-    'GET /Builds/Fortnite/Content/CloudDir/*.manifest': 'ApiController.manifest',
+    'GET /Builds/Fortnite/Content/CloudDir/*.manifest':{ 
+        action: "manifest",
+        controller:'ApiController', 
+        skipAssets: false
+    },
     'GET /Builds/Fortnite/Content/CloudDir/*.ini': 'ApiController.ini',
-    'GET /Builds/Fortnite/Content/CloudDir/*.chunk': 'ApiController.chunk',
     'GET /Builds/Fortnite/Content/CloudDir/ChunksV4/:chunknum/*.chunk':{ 
         action: "ChunksV4",
         controller:'ApiController', 
