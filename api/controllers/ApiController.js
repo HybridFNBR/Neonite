@@ -5,11 +5,11 @@ const jsonwebtoken = require('jsonwebtoken');
 var ini = require('ini')
 
 
-function getSeasonInfo(req) {
-  const userAgent = req.headers["user-agent"];
-  const season = userAgent.split('-')[1];
-  const seasonglobal = season.split('.')[0];
-  return { season, seasonglobal };
+function getVersionInfo(req) {
+    const userAgent = req.headers["user-agent"];
+    const version = userAgent.split('-')[1];
+    const versionGlobal = version.split('.')[0];
+    return { version, versionGlobal };
 }
 
 Date.prototype.addHours = function (h) {
@@ -210,13 +210,13 @@ module.exports = {
 	},
 
 	FrontendAssets: function(req, res){
-		const {season} = getSeasonInfo(req);
+		const {version} = getVersionInfo(req);
 		const FrontendAssetsPath = '../../discovery/FrontEndAssets.json';
 		const FortniteGameConfigPath = '../../FortniteGameConfig.json';
 		const FrontendAssets = require(FrontendAssetsPath);
 		const FortniteGameConfig = require(FortniteGameConfigPath);
         var config = ini.parse(fs.readFileSync(path.join(__dirname, '../../config.ini'), 'utf-8'));
-		if (config.FortniteGameConfig == true && season >= 28.30) {
+		if (config.FortniteGameConfig == true && version >= 28.00) {
 			FrontendAssets.FortPlaylistAthena = {
 				"meta": {
 					"promotion": 9
@@ -242,10 +242,10 @@ module.exports = {
 	},
 
 	catalog: function(req, res){
-		const {season, seasonglobal} = getSeasonInfo(req);
-			if(season >= 26.30)
+		const {version, versionGlobal} = getVersionInfo(req);
+			if(version >= 26.30)
 				return res.json(require("../../responses/shopv2.json"));
-			if(seasonglobal == "Cert" || seasonglobal == "Live" || season <= 3.5 || season == "2870186+++Fortnite+Release" || season == "3.0.0" || seasonglobal == "Next"){
+			if(versionGlobal == "Cert" || versionGlobal == "Live" || version <= 3.5 || version == "2870186+++Fortnite+Release" || version == "3.0.0" || versionGlobal == "Next"){
 				return res.status(404).end();
 			}
 			else{
@@ -448,8 +448,8 @@ module.exports = {
 	},
 
 	worldInfo: function(req, res){
-		const {season, seasonglobal} = getSeasonInfo(req);
-		if(season >= 11.00 || seasonglobal >= 11){
+		const {version, versionGlobal} = getVersionInfo(req);
+		if(version >= 11.00 || versionGlobal >= 11){
 			res.status(404)
 		}
 		else{

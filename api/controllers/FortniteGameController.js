@@ -5,17 +5,17 @@ var fs = require('fs')
 var ini = require('ini')
 const contentPages = path.join(__dirname, '../../responses/fortnitegame.json');
 
-function getSeasonInfo(req) {
-    const userAgent = req.headers['user-agent'];
-    const season = userAgent?.split('-')[1];
-    const seasonglobal = season?.split('.')[0];
-    return { season, seasonglobal };
-  }
+function getVersionInfo(req) {
+    const userAgent = req.headers["user-agent"];
+    const version = userAgent.split('-')[1];
+    const versionGlobal = version.split('.')[0];
+    return { version, versionGlobal };
+}
 
 module.exports = {
     fortniteGame: async function(req, res){
         const content = (await axios.get('https://fortnitecontent-website-prod07.ol.epicgames.com/content/api/pages/fortnite-game').catch(() => {})).data;
-        const { season, seasonglobal } = getSeasonInfo(req);
+        const { version, versionGlobal } = getVersionInfo(req);
         var fortnitegame = JSON.parse(fs.readFileSync(contentPages, 'utf8'));
         fortnitegame = Object.assign({}, fortnitegame, { eventscreens: content.eventscreens }, { battlepasspurchase: content.battlepasspurchase }, { crewscreendata: content.crewscreendata }, { emergencynotice: {"news":{"platform_messages":[],"_type":"Battle Royale News","messages":[{"hidden":false,"_type":"CommonUI Simple Message Base","subgame":"br","body":"Made by kemo (@xkem0x)\nMaintained by Hybrid (@unrealhybrid).\nDiscord: https://discord.gg/carbon-897532507048796210","title":"Neonite V2","spotlight":false}]},"jcr:isCheckedOut":true,"_title":"emergencynotice","_noIndex":false,"alwaysShow":true,"jcr:baseVersion":"a7ca237317f1e761d4ee60-7c40-45a8-aa3e-bb0a2ffa9bb5","_activeDate":"2018-08-06T19:00:26.217Z","lastModified":"2020-10-30T04:50:59.198Z","_locale":"en-US"}}, {emergencynoticev2: {"jcr:isCheckedOut":true,"_title":"emergencynoticev2","_noIndex":false,"emergencynotices":{"_type":"Emergency Notices","emergencynotices":[{"hidden":false,"_type":"CommonUI Emergency Notice Base","title":"Neonite V2","body":"Made by kemo (@xkem0x)\nMaintained by Hybrid (@unrealhybrid).\nDiscord: https://discord.gg/carbon-897532507048796210"}]},"_activeDate":"2018-08-06T19:00:26.217Z","lastModified":"2021-03-17T15:07:27.924Z","_locale":"en-US"}});
         const backgrounds = fortnitegame.dynamicbackgrounds.backgrounds.backgrounds;
@@ -27,12 +27,12 @@ module.exports = {
         }
         if(config.custom_background == false)
         {
-            switch (seasonglobal) {
+            switch (versionGlobal) {
                 case "10":
                     backgrounds[0].stage = "seasonx";
                 break;
                 case "11":
-                    if (season === "11.31" || season === "11.40") {
+                    if (version === "11.31" || version === "11.40") {
                         backgrounds[0].stage = "Winter19";
                     } 
                     else {
@@ -61,7 +61,7 @@ module.exports = {
                     backgrounds[0].stage = "season18";
                 break;
                 case "19":
-                    if (season === "19.01") /*if it doesnt work i didnt get chance to test it cause the build has not been uploaded - unrealhybrid*/ {
+                    if (version === "19.01") /*if it doesnt work i didnt get chance to test it cause the build has not been uploaded - unrealhybrid*/ {
                         backgrounds[0].stage = "winter2021";
                         backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/t-bp19-lobby-xmas-2048x1024-f85d2684b4af.png";
                     } 
@@ -70,7 +70,7 @@ module.exports = {
                     }
                 break;
                 case "20":
-                    if (season === "20.40") {
+                    if (version === "20.40") {
                         backgrounds[0].stage = "season20";
                         backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/t-bp20-40-armadillo-glowup-lobby-2048x2048-2048x2048-3b83b887cc7f.jpg";
                     } 
@@ -80,7 +80,7 @@ module.exports = {
                     }
                 break;
                 case "21":
-                    if (season === "21.30") {
+                    if (version === "21.30") {
                         backgrounds[0].stage = "season2130";
                         backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/nss-lobbybackground-2048x1024-f74a14565061.jpg";
                     } 
@@ -93,7 +93,7 @@ module.exports = {
                     backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/t-bp22-lobby-square-2048x2048-2048x2048-e4e90c6e8018.jpg";
                 break;
                 case "23":
-                    if(season === "23.10")
+                    if(version === "23.10")
                     {   
                         backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/t-bp23-winterfest-lobby-square-2048x2048-2048x2048-277a476e5ca6.png"
                     }
@@ -110,7 +110,7 @@ module.exports = {
                     backgrounds[0].backgroundimage = "https://static.wikia.nocookie.net/fortnite/images/c/ca/Chapter_4_Season_3_-_Lobby_Background_-_Fortnite.png"
                 break;
                 case "26":
-                    if(season === "26.30")
+                    if(version === "26.30")
                     {  
                         backgrounds[0].stage = "season2630"
                         backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/s26-lobby-timemachine-final-2560x1440-a3ce0018e3fa.jpg"
@@ -121,7 +121,7 @@ module.exports = {
                     }
                 break;
                 case "27":
-                    if(season === "27.11"){
+                    if(version === "27.11"){
                         backgrounds[0].stage = "defaultnotris"
                         backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/durianlobby2-4096x2048-242a51b6a8ee.jpg"
                     }
@@ -130,7 +130,7 @@ module.exports = {
                     }
                 break;
                 case "28":
-                    if(season === "28.20"){
+                    if(version === "28.20"){
                         backgrounds[0].stage = "defaultnotris"
                         backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/s28-tmnt-lobby-4096x2048-e6c06a310c05.jpg"
                     }
@@ -140,7 +140,7 @@ module.exports = {
                     }
                 break;
                 case "29":
-                    if(season === "29.20"){
+                    if(version === "29.20"){
                         backgrounds[0].stage = "defaultnotris"
                         backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/iceberg-lobby-3840x2160-217bb6ea8af9.jpg"                        
                     }

@@ -8,22 +8,22 @@ const seasonData = {
     "17.50": discoveryResponses.ver1750,
 };
 
-function getSeasonInfo(req) {
-	const userAgent = req.headers["user-agent"];
-	const season = userAgent.split('-')[1];
-	const seasonglobal = season.split('.')[0];
-	return { season, seasonglobal };
+function getVersionInfo(req) {
+    const userAgent = req.headers["user-agent"];
+    const version = userAgent.split('-')[1];
+    const versionGlobal = version.split('.')[0];
+    return { version, versionGlobal };
 }
 
 module.exports = {
 
     //first interation of discovery api
     discoveryv1: function(req, res){
-        const { season, seasonglobal } = getSeasonInfo(req);
-		if (seasonData[season]) {
-			return res.json(seasonData[season]);
+        const { version, versionGlobal } = getVersionInfo(req);
+		if (seasonData[version]) {
+			return res.json(seasonData[version]);
 		}
-		if (seasonglobal === "19") {
+		if (versionGlobal === "19") {
 			return res.json(discoveryResponses.ver19);
 		}
 		else{
@@ -33,11 +33,11 @@ module.exports = {
     
     //second interation of discovery api
     discoveryv2: function(req, res){
-        const { season, seasonglobal } = getSeasonInfo(req);
-		if (seasonData[season]) {
-			return res.json(seasonData[season]);
+        const { version, versionGlobal } = getVersionInfo(req);
+		if (seasonData[version]) {
+			return res.json(seasonData[version]);
 		}
-		if(season >= 23.50){
+		if(version >= 23.50){
 			return res.json({
 				"panels": [
 					{
@@ -120,7 +120,7 @@ module.exports = {
                             },
                             {
                                 "lastVisited": null,
-                                "linkCode": "playlist_papaya",
+                                "linkCode": "playlist_mash_squads_legacy",
                                 "isFavorite": false,
                                 "globalCCU": 1
                             },
@@ -142,16 +142,16 @@ module.exports = {
     },
 
     mnemonicLinks: function(req, res){
-        const { season, seasonglobal } = getSeasonInfo(req);
-		if (seasonData[season]) {
-			const eventBuilds = seasonData[season].Panels[0].Pages[0].results.map(result => result.linkData);
+        const { version, versionGlobal } = getVersionInfo(req);
+		if (seasonData[version]) {
+			const eventBuilds = seasonData[version].Panels[0].Pages[0].results.map(result => result.linkData);
 			return res.json(eventBuilds);
 		}
-		if (seasonglobal === "19") {
+		if (versionGlobal === "19") {
 			const s19 = discoveryResponses.ver19.Panels[0].Pages[0].results.map(result => result.linkData);
 			return res.json(s19);
 		}
-		if(season >= 23.50){
+		if(version >= 23.50){
 			return res.json(latest)
 		}
 		else{
@@ -301,7 +301,7 @@ module.exports = {
 
 
     mnemonicPlaylist: function(req, res){
-        const { season, seasonglobal } = getSeasonInfo(req);
+        const { version, versionGlobal } = getVersionInfo(req);
 		const linkData = (results, playlistId) => {
 			for (const result of results) {
 				if (result.linkData.mnemonic === playlistId) {
@@ -312,28 +312,28 @@ module.exports = {
 		};
 		const CinamticIssues = () => {
 			const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-			if (seasonglobal <= 16 && numbers.some(number => req.originalUrl.includes(number))) {
+			if (versionGlobal <= 16 && numbers.some(number => req.originalUrl.includes(number))) {
 				res.status(404).end();
 				return true;
 			}
 			return false;
 		};
 		const EventLinkData = () => {
-			if (seasonData[season]) {
-				const result = linkData(seasonData[season].Panels[0].Pages[0].results, req.params.playlistId);
+			if (seasonData[version]) {
+				const result = linkData(seasonData[version].Panels[0].Pages[0].results, req.params.playlistId);
 				if (result) return res.json(result);
 			}
 			return false;
 		};
 		const season19 = () => {
-			if (seasonglobal === "19") {
+			if (versionGlobal === "19") {
 				const result = linkData(discoveryResponses.ver19.Panels[0].Pages[0].results, req.params.playlistId);
 				if (result) return res.json(result);
 			}
 			return false;
 		};
 		const links = () => {
-			if (season >= 23.50) {
+			if (version >= 23.50) {
 				if (req.params.playlistId === "set_br_playlists") {
 					return res.json(require("../../discovery/latest/setbrplaylist.json"));
 				} else {

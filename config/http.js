@@ -2,11 +2,11 @@ const NeoLog = require("../structs/NeoLog");
 const fs = require('fs');
 const path = require('path');
 
-function getSeasonInfo(req) {
+function getVersionInfo(req) {
   const userAgent = req.headers["user-agent"];
-  const season = userAgent.split('-')[1];
-  const seasonglobal = season.split('.')[0];
-  return { season, seasonglobal };
+  const version = userAgent.split('-')[1];
+  const versionGlobal = version.split('.')[0];
+  return { version, versionGlobal };
 }
 
 
@@ -18,9 +18,9 @@ module.exports.http = {
       ],
       LogURL: function (req, res, next) {
         try{
-          const {seasonglobal} = getSeasonInfo(req);
-            if(seasonglobal && /^\d+$/.test(seasonglobal) || seasonglobal == "Cert" || seasonglobal == "Live" || seasonglobal == "Next"){
-              const directoryPath = path.join(__dirname, `../ClientSettings/s${seasonglobal}`);
+          const {versionGlobal} = getVersionInfo(req);
+            if(versionGlobal && /^\d+$/.test(versionGlobal) || versionGlobal == "Cert" || versionGlobal == "Live" || versionGlobal == "Next"){
+              const directoryPath = path.join(__dirname, `../ClientSettings/s${versionGlobal}`);
               if(!fs.existsSync(directoryPath)) {
                 fs.mkdirSync(directoryPath, { recursive: true }); 
               }
@@ -39,7 +39,7 @@ module.exports.http = {
                   req.rawBody += chunk
                 });
                 req.on("end", () => {
-                  fs.writeFileSync(path.join(__dirname, `../ClientSettings/s${seasonglobal}/ClientSettings.sav`), req.rawBody, 'latin1');
+                  fs.writeFileSync(path.join(__dirname, `../ClientSettings/s${versionGlobal}/ClientSettings.sav`), req.rawBody, 'latin1');
               });
               });
             return res.status(204).end()

@@ -3,17 +3,17 @@ const path = require('path');
 var fs = require('fs')
 var ini = require('ini')
 
-function getSeasonInfo(req) {
+function getVersionInfo(req) {
     const userAgent = req.headers["user-agent"];
-    const season = userAgent.split('-')[1];
-    const seasonglobal = season.split('.')[0];
-    return { season, seasonglobal };
+    const version = userAgent.split('-')[1];
+    const versionGlobal = version.split('.')[0];
+    return { version, versionGlobal };
 }
 
 
 module.exports = {
     timeline: function(req, res){
-        const { season, seasonglobal } = getSeasonInfo(req);
+        const { version, versionGlobal } = getVersionInfo(req);
         const keychain = require("../../responses/keychain.json")
         var config = ini.parse(fs.readFileSync(path.join(__dirname, '../../config.ini'), 'utf-8'));
         const timeline = {
@@ -49,12 +49,12 @@ module.exports = {
                                 activeSince: "2020-11-21T07:00:00.000Z"
                             },
                             {
-                                eventType: `EventFlag.Season${seasonglobal}`,
+                                eventType: `EventFlag.Season${versionGlobal}`,
                                 activeUntil: "9999-12-31T23:59:59.999Z",
                                 activeSince: "2019-12-31T23:59:59.999Z"
                             },                                                                                                                                           
                             {
-                                eventType: `EventFlag.LobbySeason${seasonglobal}`,
+                                eventType: `EventFlag.LobbySeason${versionGlobal}`,
                                 activeUntil: "9999-12-31T23:59:59.999Z",
                                 activeSince: "2021-06-05T14:00:00.000Z"
                             },
@@ -239,8 +239,8 @@ module.exports = {
                             activeStorefronts: [],
                             eventNamedWeights: {},
                             activeEvents: [],
-                            seasonNumber: seasonglobal,
-                            seasonTemplateId: `AthenaSeason:athenaseason${seasonglobal}`,
+                            seasonNumber: versionGlobal,
+                            seasonTemplateId: `AthenaSeason:athenaseason${versionGlobal}`,
                             matchXpBonusPoints: 0,
                             eventPunchCardTemplateId: "",
                             seasonBegin: "2021-06-05T14:00:00Z",
@@ -259,7 +259,7 @@ module.exports = {
             currentTime: new Date().toISOString()
         }
 
-        if(season == 4.5){
+        if(version == 4.5){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "EventFlag.BR_S4_Geode_Countdown", //
@@ -269,7 +269,7 @@ module.exports = {
             )
         }
 
-        if(season == 7.20){
+        if(version == 7.20){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "EventFlag.LTM_14DaysOfFortnite", //WinterFest
@@ -284,7 +284,7 @@ module.exports = {
             )
         }
 
-        if(season == 7.30){
+        if(version == 7.30){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "F0", // Marshmello Event countdown (idk if this works, havent tried it)
@@ -299,7 +299,7 @@ module.exports = {
             )
         }           
 
-        if(season == 8.51){
+        if(version == 8.51){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "EventFlag.UnvaultingCountdown", // Unvaulting Event countdown (idk if this works, havent tried it)
@@ -314,7 +314,7 @@ module.exports = {
             )
         }   
 
-        if(season == 9.40 || season == 9.41){
+        if(version == 9.40 || version == 9.41){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "CDTime", // Final Showdown countdown (idk if this works, havent tried it)
@@ -329,7 +329,7 @@ module.exports = {
             )
         }   
         
-        if(season == 10.40){
+        if(version == 10.40){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "NN1", // The End Countdown
@@ -344,7 +344,7 @@ module.exports = {
             )
         }   
         
-        if(season == 11.31){
+        if(version == 11.31){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "EventFlag.LTE_WinterFest", // C2S1-related (Winterfest 2019)
@@ -469,7 +469,7 @@ module.exports = {
             )
         }   
         
-        if(season == 12.41){
+        if(version == 12.41){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "JCD01", // Travis Related (Countdown)
@@ -524,7 +524,7 @@ module.exports = {
             )
         }           
 
-        if(season == 12.61){
+        if(version == 12.61){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "FLA01", // C2S2-related (Timers)
@@ -544,7 +544,7 @@ module.exports = {
             )
         }
         
-        if(season == 13.40){
+        if(version == 13.40){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {      
                     eventType: "SM1",//scorch marks
@@ -564,7 +564,7 @@ module.exports = {
             )
         }    
 
-        if(season == 14.60){
+        if(version == 14.60){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "FLA01", // C2S4-related (Timers)
@@ -594,7 +594,7 @@ module.exports = {
             )
         }        
 
-        if(season == 17.30){
+        if(version == 17.30){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "BEL01", // Rift Tour-related (Countdown)
@@ -639,7 +639,7 @@ module.exports = {
             )
         }
 
-        if(season == 17.50){
+        if(version == 17.50){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "KEL01", // Operation Sky Fire Event-related
@@ -654,7 +654,7 @@ module.exports = {
             )
         }
 
-        if(season == 18.40 || seasonglobal == 18){
+        if(version == 18.40 || versionGlobal == 18){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "GGL01", // Chapter 2 Finale Event-related (Countdown)
@@ -763,7 +763,7 @@ module.exports = {
             )
         }
 
-        if(season == 20.40){
+        if(version == 20.40){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "AL01", // Collision Event-related (Countdown)
@@ -788,7 +788,7 @@ module.exports = {
             )
         }
 
-        if(season == 21.40){
+        if(version == 21.40){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "Event_S21_Stamina", // Dragon Ball tab 
@@ -798,7 +798,7 @@ module.exports = {
             )
         }        
 
-        if(season == 22.40){
+        if(version == 22.40){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "RL01", // Fracture Event-related (Countdown)
@@ -838,7 +838,7 @@ module.exports = {
             )
         }
 
-        if(season == 23.10){
+        if(version == 23.10){
             timeline.channels["client-events"]["states"][0]["activeEvents"].push(
                 {
                     eventType: "CalendarEvent_Season23_Winterfest", // Winterfest 2022
@@ -853,7 +853,7 @@ module.exports = {
             )
         }
     
-        if(season == 23.50){
+        if(version == 23.50){
             timeline.channels["client-events"]["states"][0]["activeEvents"].push(
                 {
                     eventType: "EventFlag.Event_Vaultbreakers", // Most Wanted tab
@@ -863,7 +863,7 @@ module.exports = {
             )
         }
         
-        if(season == 24.40){
+        if(version == 24.40){
             timeline.channels["client-events"]["states"][0]["activeEvents"].push(
                 {
                     eventType: "EventFlag.Event_PlotTwist", // Star Wars 2023 tab 
@@ -873,7 +873,7 @@ module.exports = {
             )
         }
 
-        if(season == 25.30){
+        if(version == 25.30){
             timeline.channels["client-events"]["states"][0]["activeEvents"].push(
                 {
                     eventType: "EventFlag.Event_BelongTreaty", // Jujutsu Kaisen tab
@@ -883,7 +883,7 @@ module.exports = {
             )
         }        
 
-        if(season == 27.11){
+        if(version == 27.11){
             timeline.channels["client-events"]["states"][0]["activeEvents"].push(
                 {
                     eventType: "DL01", // Durian Event-related (Countdown)
@@ -898,7 +898,7 @@ module.exports = {
             )
         }
 
-        if(season == 28.10){
+        if(version == 28.10){
             timeline.channels["client-events"]["states"][0]["activeEvents"].push(
                 {
                     eventType: "EventFlag.Event_LinedNotebook_Teaser", // TMNT Tab countdown (always needed)
@@ -908,7 +908,7 @@ module.exports = {
             )
         }
 
-        if(season == 28.20 || season == 28.30){
+        if(version == 28.20 || version == 28.30){
             timeline.channels["client-events"]["states"][0]["activeEvents"].push(
                 {
                     eventType: "EventFlag.Event_LinedNotebook", // TMNT mini pass
@@ -918,7 +918,7 @@ module.exports = {
             )
         }
 
-        if(season == 28.30){
+        if(version == 28.30){
             timeline.channels["client-events"]["states"][0]["activeEvents"].push(
                 /*{
                     eventType: "CH5S1CPPE", //Pre-Emergence Event(Central Picnic)
@@ -958,7 +958,7 @@ module.exports = {
             )
         }
 
-        if (season == 29.00 || season == 29.01 || season == 29.10){
+        if (version == 29.00 || version == 29.01 || version == 29.10){
             timeline.channels["client-events"]["states"][0]["activeEvents"].push(
                 {
                     eventType: "EventFlag.Event_S29_SeasonalActivation", 
@@ -973,7 +973,7 @@ module.exports = {
             )
         }
         
-        if(season == 29.20){
+        if(version == 29.20){
             timeline.channels["client-events"]["states"][0]["activeEvents"].push(
                 {
                     eventType: "EventFlag.Event_S29_ColdDay", // Avatar mini pass + cabbages
@@ -998,7 +998,7 @@ module.exports = {
             )
         }   
 
-        if(seasonglobal == 11 || seasonglobal == 15){
+        if(versionGlobal == 11 || versionGlobal == 15){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "WSL0", //Snow Level(season 11)
@@ -1023,7 +1023,7 @@ module.exports = {
             )
         }
 
-        if(seasonglobal == 15){
+        if(versionGlobal == 15){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "WPICK02", //Wombat Complete Portal(Ch2S5 Portal related)
@@ -1068,7 +1068,7 @@ module.exports = {
             )
         }
 
-        if(seasonglobal == 16){
+        if(versionGlobal == 16){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "RPFS1", //Dino Egg Cracking(Ch2S6 related)
@@ -1113,7 +1113,7 @@ module.exports = {
             )
         }
 
-        if(seasonglobal == 17){
+        if(versionGlobal == 17){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "WLCM1", //Welcome Party full-swing(Ch2S7 related)
@@ -1228,7 +1228,7 @@ module.exports = {
             )
         }
 
-        if(seasonglobal == 19){
+        if(versionGlobal == 19){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "2021_SM01", //Snow Stage 01(Ch3S1 related)
@@ -1277,7 +1277,7 @@ module.exports = {
                 },
             )
         }
-        if(seasonglobal == 22){
+        if(versionGlobal == 22){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "FNBD05", //Fortnite Birthday Map Changes(Ch3S4 related)
@@ -1297,7 +1297,7 @@ module.exports = {
             )
         }
 
-        if(seasonglobal == 7 || seasonglobal == 11 || seasonglobal == 15 || seasonglobal == 19){
+        if(versionGlobal == 7 || versionGlobal == 11 || versionGlobal == 15 || versionGlobal == 19){
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "TopSecret", //Holiday Bus (S7/S11/S15/S19)
                 activeUntil: "9999-09-14T07:00:00.000Z",
@@ -1305,7 +1305,7 @@ module.exports = {
             })
         }
 
-        if(seasonglobal == 14 || seasonglobal == 18 || seasonglobal == 22){
+        if(versionGlobal == 14 || versionGlobal == 18 || versionGlobal == 22){
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "EventFlag.HalloweenBattleBus", //Halloween Bus (S14/S18/S22)
                 activeUntil: "9999-09-14T07:00:00.000Z",

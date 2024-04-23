@@ -14,11 +14,11 @@ const NeoLog = require("../../structs/NeoLog");
 var config = ini.parse(fs.readFileSync(path.join(__dirname, '../../config.ini'), 'utf-8'));
 const cosmetics = JSON.parse(JSON.stringify(require("../../cosmetics_config.json")));
 
-function getSeasonInfo(req) {
-    const userAgent = req.headers['user-agent'];
-    const season = userAgent?.split('-')[1];
-    const seasonglobal = season?.split('.')[0];
-    return { season, seasonglobal };
+function getVersionInfo(req) {
+	const userAgent = req.headers["user-agent"];
+	const version = userAgent.split('-')[1];
+	const versionGlobal = version.split('.')[0];
+	return { version, versionGlobal };
   }
 
 module.exports = {
@@ -26,7 +26,7 @@ module.exports = {
         res.setHeader("Content-Type", "application/json");
 		var accountId = req.params.accountId;
 		var athenprofile = Profile.readProfile(accountId, "athena")
-		const { season, seasonglobal } = getSeasonInfo(req);
+		const { version, versionGlobal } = getVersionInfo(req);
 		const getOrCreateProfile = profileId => {
 			var profileData = Profile.readProfile(accountId, profileId);
 
@@ -83,8 +83,9 @@ module.exports = {
 				let item;
 
 				if (req.body.sourceIndex == 0) {
+					const last_applied_loadout = profileData.stats.attributes["last_applied_loadout"]
 					item = profileData.items[`neoset${req.body.targetIndex}_loadout`];
-					profileData.items[`neoset${req.body.targetIndex}_loadout`] = profileData.items["sandbox_loadout"];
+					profileData.items[`neoset${req.body.targetIndex}_loadout`] = profileData.items[last_applied_loadout];
 					profileData.items[`neoset${req.body.targetIndex}_loadout`].attributes["locker_name"] = req.body.optNewNameForTarget;
 					profileData.stats.attributes.loadouts[req.body.targetIndex] = `neoset${req.body.targetIndex}_loadout`;
 				} else {
@@ -215,7 +216,7 @@ module.exports = {
 				Profile.saveProfile(accountId, "common_core", commoncore)
 
 				let shop
-				if(season >= 26.30){
+				if(version >= 26.30){
 					shop = require("../../responses/shopv2.json");
 				}
 				else{
@@ -393,7 +394,7 @@ module.exports = {
 						}
 					}catch{}
 				}
-				if(season >= 28.00){
+				if(version >= 28.00){
 					if(profileId == "athena"){
 						const Athena = getOrCreateProfile("athena")
 						var characterloadout = athenprofile.items["NEONITECHARACTER"]
@@ -607,7 +608,7 @@ module.exports = {
 
 					}
 				}
-				if(season <= 10.40 || season =="Cert" || season == "Live" || season == "3.0.0")
+				if(version <= 10.40 || version =="Cert" || version == "Live" || version == "3.0.0")
 				{
 					try{//athena.items does not exist if there is no profile so just try and catch the error until it exists.
 						Profile.addItem(athenprofile, "AthenaCharacter:CID_001_Athena_Commando_F_Default", {
@@ -715,23 +716,17 @@ module.exports = {
 				const item = profileData.items[req.body.lockerItem];
 
 				if (!item) {
-					throw next(new ApiException(errors.com.epicgames.fortnite.item_not_found).withMessage("Locker item {0} not found", req.body.lockerItem));
+					console.error("[Error] Item not found.");
+					return;
 				}
 
 				const locker_slots_data = item.attributes.locker_slots_data;
 				let lockerSlot = locker_slots_data.slots[req.body.category];
-				var expectedCapacity;
-				switch (req.body.category) {
-					case "Dance":
-						expectedCapacity = 6;
-						break;
-					case "ItemWrap":
-						expectedCapacity = 7;
-						break;
-					default:
-						expectedCapacity = 1;
-						break;
-				}
+
+				const expectedCapacity = {
+					"Dance": 6,
+					"ItemWrap": 7,
+				}[req.body.category] || 1;
 
 				if (!lockerSlot) {
 					lockerSlot = locker_slots_data.slots[req.body.category] = {
@@ -743,33 +738,16 @@ module.exports = {
 				const itemsArray = lockerSlot.items;
 				let bChanged = false;
 
-				// If the slot index is lower than zero, we should iterate over
-				// the entire range `[0 ..< expectedCapacity]`, otherwise use a single
-				// value range `[slotIndex ..< slotIndex + 1]`.
-				const startIndex = req.body.slotIndex < 0 ? 0 : req.body.slotIndex;
-				const endIndex = req.body.slotIndex < 0 ? expectedCapacity : (startIndex + 1);
+				const startIndex = Math.max(0, req.body.slotIndex);
+				const endIndex = Math.min(expectedCapacity, startIndex + 1);
 
 				for (let index = startIndex; index < endIndex; index++) {
-					// The inner loop makes sure that missing intermediate elements 
-					// will be prefilled, because otherwise it will fail if the request 
-					// tries to set at an out of bounds index.
-					for (let i = itemsArray.length; i < index; i++) {
+					if (index >= itemsArray.length) {
 						itemsArray.push("");
 					}
-					// If the index points to the array's last index, then the array
-					// isn't big enough yet, so we have to append it.
-					if (index === itemsArray.length) {
-						itemsArray.push(req.body.itemToSlot);
+					if (itemsArray[index] !== req.body.itemToSlot) {
+						itemsArray[index] = req.body.itemToSlot;
 						bChanged = true;
-					} else if (index < itemsArray.length) {
-						// Check if the value for a given value has changed at all,
-						// otherwise we can skip it.
-						if (itemsArray[index] != req.body.itemToSlot) {
-							itemsArray[index] = req.body.itemToSlot;
-							bChanged = true;
-						}
-					} else {
-						console.log("[Error] Unexpected slot index & capacity configuration.");
 					}
 				}
 
@@ -791,7 +769,8 @@ module.exports = {
 			}
 
 			case "SetCosmeticLockerSlots": {
-				const item = profileData.items[req.body.lockerItem];
+				break;
+				/*const item = profileData.items[req.body.lockerItem];
 
 				if (!item) {
 					throw next(new ApiException(errors.com.epicgames.fortnite.item_not_found).withMessage("Locker item {0} not found", req.body.lockerItem));
@@ -844,7 +823,7 @@ module.exports = {
 				if (bChanged) {
 					Profile.changeItemAttribute(profileData, req.body.lockerItem, "locker_slots_data", locker_slots_data, profileChanges);
 				}
-				break;
+				break;*/
 			}
 
 			case "EquipBattleRoyaleCustomization": {
@@ -962,7 +941,7 @@ module.exports = {
 			}
 
 			case "PutModularCosmeticLoadout":{
-				const parsedData = JSON.parse(req.body["loadoutData"]);
+				const loadoutData = JSON.parse(req.body["loadoutData"]);
 				const loadoutTypeMap = {
 					"CosmeticLoadout:LoadoutSchema_Character": "NEONITECHARACTER",
 					"CosmeticLoadout:LoadoutSchema_Emotes": "NEONITEEMOTES",
@@ -976,7 +955,7 @@ module.exports = {
 				const profileAttribute = loadoutTypeMap[loadoutType];
 
 				if (profileAttribute) {
-					Profile.changeItemAttribute(profileData, profileAttribute, "slots", parsedData.slots, profileChanges);
+					Profile.changeItemAttribute(profileData, profileAttribute, "slots", loadoutData.slots, profileChanges);
 					Profile.bumpRvn(athenprofile)
 				} else {
 					NeoLog.Error("Unknown Loadout Type");

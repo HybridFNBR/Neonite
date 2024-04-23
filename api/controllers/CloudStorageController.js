@@ -3,12 +3,12 @@ const crypto = require("crypto");
 const fs = require('fs');
 const hotfixPath = path.join(__dirname, '../../hotfixes/');
 
-function getSeasonInfo(req) {
-	const userAgent = req.headers["user-agent"];
-	const season = userAgent.split('-')[1];
-	const seasonglobal = season.split('.')[0];
-	return { season, seasonglobal };
-  }
+function getVersionInfo(req) {
+    const userAgent = req.headers["user-agent"];
+    const version = userAgent.split('-')[1];
+    const versionGlobal = version.split('.')[0];
+    return { version, versionGlobal };
+}
 
 module.exports = {
     cloudstoragesystem: async function (req, res) {
@@ -37,10 +37,10 @@ module.exports = {
     },
 
     defaultGame: function(req, res){
-		const {seasonglobal, season} = getSeasonInfo(req);
+		const {version, versionGlobal} = getVersionInfo(req);
 		res.setHeader("content-type", "application/octet-stream")
 		let index = fs.readFileSync(path.join(__dirname, '../../hotfixes/DefaultGame.ini'), 'utf-8');
-		if (seasonglobal >= 20) {
+		if (versionGlobal >= 20) {
 			index = index.replace(
 				";+CurveTable=/TacticalSprintGame/DataTables/TacticalSprintGameData;RowUpdate;Default.TacticalSprint.Sprint.Energy.CostPerSecond;0.0;0.0",
 				"+CurveTable=/TacticalSprintGame/DataTables/TacticalSprintGameData;RowUpdate;Default.TacticalSprint.Sprint.Energy.CostPerSecond;0.0;0.0"
@@ -81,8 +81,8 @@ module.exports = {
 			],
         };
 		  
-        if (replacements[season]) {
-            const [defaultvalue, replacedValue] = replacements[season];
+        if (replacements[version]) {
+            const [defaultvalue, replacedValue] = replacements[version];
             index = index.replace(defaultvalue, replacedValue);
             res.send(index);
         }
@@ -117,23 +117,23 @@ module.exports = {
 	},
 
 	user: function (req, res) {
-		const {seasonglobal} = getSeasonInfo(req);
+		const {versionGlobal} = getVersionInfo(req);
 		return res.json({
 			"uniqueFilename": "ClientSettings.Sav",
 			"filename": "ClientSettings.Sav",
-			"hash": crypto.createHash("sha1").update(fs.readFileSync(path.join(__dirname, `../../ClientSettings/s${seasonglobal}/ClientSettings.sav`))).digest("hex"),
-			"hash256": crypto.createHash("sha256").update(fs.readFileSync(path.join(__dirname, `../../ClientSettings/s${seasonglobal}/ClientSettings.sav`))).digest("hex"),
-			"length": path.join(__dirname, `../../ClientSettings/s${seasonglobal}/ClientSettings.sav`).length,
+			"hash": crypto.createHash("sha1").update(fs.readFileSync(path.join(__dirname, `../../ClientSettings/s${versionGlobal}/ClientSettings.sav`))).digest("hex"),
+			"hash256": crypto.createHash("sha256").update(fs.readFileSync(path.join(__dirname, `../../ClientSettings/s${versionGlobal}/ClientSettings.sav`))).digest("hex"),
+			"length": path.join(__dirname, `../../ClientSettings/s${versionGlobal}/ClientSettings.sav`).length,
 			"contentType": "text/plain",
-			"uploaded": fs.statSync(path.join(__dirname, `../../ClientSettings/s${seasonglobal}/ClientSettings.sav`)).mtime,
+			"uploaded": fs.statSync(path.join(__dirname, `../../ClientSettings/s${versionGlobal}/ClientSettings.sav`)).mtime,
 			"storageType": "S3",
 			"doNotCache": false
 		})
 	},
 
 	userFile: function (req, res, next) {
-		const {seasonglobal} = getSeasonInfo(req);
-		const ReadClientSettings = fs.readFileSync(path.join(__dirname, `../../ClientSettings/s${seasonglobal}/ClientSettings.sav`));
+		const {versionGlobal} = getVersionInfo(req);
+		const ReadClientSettings = fs.readFileSync(path.join(__dirname, `../../ClientSettings/s${versionGlobal}/ClientSettings.sav`));
 		const timestamp = Date.now();
 		res.send(ReadClientSettings + `?v=${timestamp}`
 		//dont ask why or how, this just fixes a crashing issue when client settings arnt indexed properly when they dont exist on first launch.
