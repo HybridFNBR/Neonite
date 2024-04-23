@@ -120,7 +120,7 @@ module.exports = {
                             },
                             {
                                 "lastVisited": null,
-                                "linkCode": "playlist_mash_squads_legacy",
+                                "linkCode": "playlist_papaya",
                                 "isFavorite": false,
                                 "globalCCU": 1
                             },
