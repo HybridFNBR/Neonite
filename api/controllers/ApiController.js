@@ -72,36 +72,33 @@ module.exports = {
 	},
 
 	ChunksV4: async function(req, res){
-		const response = await axios.get(`https://epicgames-download1.akamaized.net${req.originalUrl}`, {
+		const response = await axios.get(`https://fastly-download.epicgames.com${req.originalUrl}`, {
 			responseType: 'stream' 
 		});
         res.set({
-            'Content-Type': response.headers['content-type'],
-            'Content-Length': response.headers['content-length']
+            'Content-Type': "application/octet-stream"
         });
         response.data.pipe(res);
 	},
 
 	ias: async function (req, res) {
-		const response = await axios.get(`https://epicgames-download1.akamaized.net${req.originalUrl}`, {
+		const response = await axios.get(`https://fastly-download.epicgames.com${req.originalUrl}`, {
 			responseType: 'stream' 
 		});
         res.set({
-            'Content-Type': response.headers['content-type'],
-            'Content-Length': response.headers['content-length']
+            'Content-Type': "application/octet-stream"
         });
         response.data.pipe(res);
 		
 		
 	},
 
-	iasChunks: async function(req, res){  
-		const response = await axios.get(`https://epicgames-download1.akamaized.net${req.originalUrl}`, {
+	iasChunks: async function(req, res){
+		const response = await axios.get(`https://fastly-download.epicgames.com${req.originalUrl}`, {
 			responseType: 'stream' 
 		});
         res.set({
-            'Content-Type': response.headers['content-type'],
-            'Content-Length': response.headers['content-length']
+            'Content-Type': "application/octet-stream"
         });
         response.data.pipe(res);
 	},
