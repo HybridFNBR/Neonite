@@ -105,81 +105,6 @@ module.exports = {
                                 activeSince: "9999-09-14T07:00:00.000Z"
                             },
                             {
-                                eventType: "RLS0", //Rift Landmark Sphere 0(Ch2S4 related)
-                                activeUntil: "9999-09-14T07:00:00.000Z",
-                                activeSince: "9999-09-14T07:00:00.000Z"
-                            },
-                            {
-                                eventType: "RLS1", //Rift Landmark Sphere 1(Ch2S4 related)
-                                activeUntil: "9999-09-14T07:00:00.000Z",
-                                activeSince: "9999-09-14T07:00:00.000Z"
-                            },
-                            {
-                                eventType: "RLS2", //Rift Landmark Sphere 2(Ch2S4 related)
-                                activeUntil: "9999-09-14T07:00:00.000Z",
-                                activeSince: "9999-09-14T07:00:00.000Z"
-                            },
-                            {
-                                eventType: "RLS3", //Rift Landmark Sphere 3(Ch2S4 related)
-                                activeUntil: "9999-09-14T07:00:00.000Z",
-                                activeSince: "9999-09-14T07:00:00.000Z"
-                            },
-                            {
-                                eventType: "SL_01", //Stark Lab - SL_01(Ch2S4 related)
-                                activeUntil: "9999-09-14T07:00:00.000Z",
-                                activeSince: "9999-09-14T07:00:00.000Z"
-                            },
-                            {
-                                eventType: "SL_02", //Stark Lab - SL_02(Ch2S4 related)
-                                activeUntil: "9999-09-14T07:00:00.000Z",
-                                activeSince: "9999-09-14T07:00:00.000Z"
-                            },
-                            {
-                                eventType: "HSS0", //Hightower Sphere Stage 0(Ch2S4 related)
-                                activeUntil: "9999-09-14T07:00:00.000Z",
-                                activeSince: "9999-09-14T07:00:00.000Z"
-                            },
-                            {
-                                eventType: "HSS1", //Hightower Sphere Stage 1(Ch2S4 related)
-                                activeUntil: "9999-09-14T07:00:00.000Z",
-                                activeSince: "9999-09-14T07:00:00.000Z"
-                            },
-                            {
-                                eventType: "HSS2", //Hightower Sphere Stage 2(Ch2S4 related)
-                                activeUntil: "9999-09-14T07:00:00.000Z",
-                                activeSince: "9999-09-14T07:00:00.000Z"
-                            },
-                            {
-                                eventType: "HSS3", //Hightower Sphere Stage 3(Ch2S4 related)
-                                activeUntil: "9999-09-14T07:00:00.000Z",
-                                activeSince: "9999-09-14T07:00:00.000Z"
-                            },
-                            {
-                                eventType: "HC_01", //Hellicarrier - Bus Mod(Ch2S4 related)
-                                activeUntil: "9999-09-14T07:00:00.000Z",
-                                activeSince: "9999-09-14T07:00:00.000Z"
-                            },
-                            {
-                                eventType: "HC_02", //Hellicarrier - Mod Stage1(Ch2S4 related)
-                                activeUntil: "9999-09-14T07:00:00.000Z",
-                                activeSince: "9999-09-14T07:00:00.000Z"
-                            },
-                            {
-                                eventType: "SH01", //Stark Hangar(Ch2S4 related)
-                                activeUntil: "9999-09-14T07:00:00.000Z",
-                                activeSince: "9999-09-14T07:00:00.000Z"
-                            },
-                            {
-                                eventType: "SH02", //Stark Hangar(Ch2S4 related)
-                                activeUntil: "9999-09-14T07:00:00.000Z",
-                                activeSince: "9999-09-14T07:00:00.000Z"
-                            },
-                            {
-                                eventType: "BVJ01", //Make Galactus visable in the skybox(Ch2S4 related)
-                                activeUntil: "9999-09-09T07:00:00.000Z",
-                                activeSince: "2020-09-14T07:00:00.000Z"
-                            },
-                            {
                                 eventType: "RGCONSTUCTION02", //Rift Gate Construction Stage 2(Ch4S1 related)
                                 activeUntil: "9999-09-09T07:00:00.000Z",
                                 activeSince: "9999-09-09T07:00:00.000Z"
@@ -562,7 +487,7 @@ module.exports = {
                     activeSince: "2015-09-14T07:00:00.000Z"
                 },                      
             )
-        }    
+        }
 
         if(version == 14.60){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
@@ -1019,6 +944,96 @@ module.exports = {
                     eventType: "WSL3", //Snow Level(season 11)
                     activeUntil: "9999-09-14T07:00:00.000Z",
                     activeSince: "2015-09-14T07:00:00.000Z"
+                },
+            )
+        }
+
+        if(versionGlobal == 14){
+            timeline.channels["client-events"]["states"][0]["activeEvents"].push(
+                {
+                    eventType: "RLS0", //Rift Landmark Sphere 0(Ch2S4 related)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-14T07:00:00.000Z"
+                },
+                {
+                    eventType: "RLS1", //Rift Landmark Sphere 1(Ch2S4 related)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-14T07:00:00.000Z"
+                },
+                {
+                    eventType: "RLS2", //Rift Landmark Sphere 2(Ch2S4 related)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-14T07:00:00.000Z"
+                },
+                {
+                    eventType: "RLS3", //Rift Landmark Sphere 3(Ch2S4 related)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-14T07:00:00.000Z"
+                },
+                {
+                    eventType: "SL_01", //Stark Lab - SL_01(Ch2S4 related)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-14T07:00:00.000Z"
+                },
+                {
+                    eventType: "SL_02", //Stark Lab - SL_02(Ch2S4 related)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-14T07:00:00.000Z"
+                },
+                {
+                    eventType: "HSS0", //Hightower Sphere Stage 0(Ch2S4 related)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-14T07:00:00.000Z"
+                },
+                {
+                    eventType: "HSS1", //Hightower Sphere Stage 1(Ch2S4 related)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-14T07:00:00.000Z"
+                },
+                {
+                    eventType: "HSS2", //Hightower Sphere Stage 2(Ch2S4 related)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-14T07:00:00.000Z"
+                },
+                {
+                    eventType: "HSS3", //Hightower Sphere Stage 3(Ch2S4 related)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-14T07:00:00.000Z"
+                },
+                {
+                    eventType: "HC_01", //Hellicarrier - Bus Mod(Ch2S4 related)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-14T07:00:00.000Z"
+                },
+                {
+                    eventType: "HC_02", //Hellicarrier - Mod Stage1(Ch2S4 related)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-14T07:00:00.000Z"
+                },
+                {
+                    eventType: "SH01", //Stark Hangar(Ch2S4 related)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-14T07:00:00.000Z"
+                },
+                {
+                    eventType: "SH02", //Stark Hangar(Ch2S4 related)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-14T07:00:00.000Z"
+                },
+                {
+                    eventType: "BVJ01", //Make Galactus visable in the skybox(Ch2S4 related)
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "2020-09-14T07:00:00.000Z"
+                },
+                {
+                    eventType: "GALCD", //Hightower Sphere Stage 2(Ch2S4 related)
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "2020-09-14T07:00:00.000Z"
+                },
+                {
+                    eventType: "SPJ01", //Hightower Sphere Stage 2(Ch2S4 related)
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "2020-09-14T07:00:00.000Z"
                 },
             )
         }
