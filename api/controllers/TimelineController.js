@@ -1026,12 +1026,12 @@ module.exports = {
                     activeSince: "2020-09-14T07:00:00.000Z"
                 },
                 {
-                    eventType: "GALCD", //Hightower Sphere Stage 2(Ch2S4 related)
+                    eventType: "GALCD", //Galactus Countdown(Ch2S4 related)
                     activeUntil: "9999-09-09T07:00:00.000Z",
                     activeSince: "2020-09-14T07:00:00.000Z"
                 },
                 {
-                    eventType: "SPJ01", //Hightower Sphere Stage 2(Ch2S4 related)
+                    eventType: "SPJ01", //Sky Distant Object(Ch2S4 related)
                     activeUntil: "9999-09-09T07:00:00.000Z",
                     activeSince: "2020-09-14T07:00:00.000Z"
                 },
