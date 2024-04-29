@@ -78,7 +78,7 @@ module.exports = {
         res.set({
             'Content-Type': "application/octet-stream"
         });
-        response.data.pipe(res);
+        response.data.pipe(res).status(200).end();
 	},
 
 	ias: async function (req, res) {
@@ -88,7 +88,7 @@ module.exports = {
         res.set({
             'Content-Type': "application/octet-stream"
         });
-        response.data.pipe(res);
+        response.data.pipe(res).status(200).end();
 		
 		
 	},
@@ -100,7 +100,7 @@ module.exports = {
         res.set({
             'Content-Type': "application/octet-stream"
         });
-        response.data.pipe(res);
+        response.data.pipe(res).status(200).end();
 	},
 
 	lightSwitchbulk: function(req, res){

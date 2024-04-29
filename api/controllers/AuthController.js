@@ -155,6 +155,10 @@ module.exports = {
 	},
 
 	tokenInfo: function(req, res){
-		res.status(200)
+		res.status(204)
+	},
+
+	publicKey: function(req, res){
+		res.status(204)
 	}
 }

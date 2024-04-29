@@ -50,7 +50,7 @@ module.exports.http = {
         res.on('finish', () => {
           const endTime = new Date();
           const responseTime = endTime - startTime;
-          if (req.originalUrl === "/fortnite/api/calendar/v1/timeline") {
+            if (req.originalUrl === "/fortnite/api/calendar/v1/timeline") {
           } 
           else 
           {

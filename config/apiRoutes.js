@@ -91,6 +91,7 @@ module.exports.routes = {
     'GET /content/api/pages/fortnite-game/eventscreens': 'FortniteGameController.eventScreen',
     'GET /:trackdata': 'ApiController.trackData',
     'POST /api/v1/fortnite-br/surfaces/:gameMode/target': 'FortniteGameController.motd',
+    'POST /api/v1/fortnite-br/interactions/contentHash': 'FortniteGameController.contentHash',
     'POST /api/v1/user/setting': 'UserController.userSetting',
     'ALL /v1/epic-settings/public/users/:accountId/*':{ 
         action: "epicSettings",

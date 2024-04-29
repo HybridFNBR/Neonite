@@ -171,6 +171,30 @@ module.exports = {
         res.json(data);
     },
 
+    contentHash: function(req, res){
+        res.json({
+            "sessionId": req.body.sessionId,
+            "sessionStartTimestamp": req.body.sessionStartTimestamp,
+            "surfaces": [
+              {
+                "surfaceId": "br-motd",
+                "contentMeta": [
+                  "{\"c93adbc7a8a9f94a916de62aa443e2d6\":[\"93eff180-1465-496e-9be4-c02ef810ad82\"]}"
+                ],
+                "events": [
+                  {
+                    "contentHash": "c93adbc7a8a9f94a916de62aa443e2d6",
+                    "type": "impression",
+                    "count": 1,
+                    "timestamp": "2023-12-03T10:17:41.387Z",
+                    "lastTimestamp": "2023-12-03T10:17:41.387Z"
+                  }
+                ]
+              }
+            ]
+        })
+    },
+
     motd: function(req, res){
         res.json({
             "contentType": "collection",
