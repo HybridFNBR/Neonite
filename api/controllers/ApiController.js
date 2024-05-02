@@ -126,7 +126,6 @@ module.exports = {
 		},
 		
 		lightswitch: function(req, res){
-			console.log("requested lightswitch")
 			const serviceId = req.params.serviceId.toLowerCase();
 			res.json({
 				"serviceInstanceId": serviceId,
@@ -485,11 +484,11 @@ module.exports = {
 	},
 
 	salesEvent: function(req, res){
-		return res.status(204).end()
+		return res.status(404).end()
 	},
 
 	gameRating: function(req, res){
-		return res.status(204).end()
+		return res.status(404).end()
 	},
 
 	keychain: function(req, res){

@@ -396,7 +396,6 @@ module.exports = {
 				}
 				if(version >= 28.00){
 					if(profileId == "athena"){
-						const Athena = getOrCreateProfile("athena")
 						var characterloadout = athenprofile.items["NEONITECHARACTER"]
 						var emoteloadout = athenprofile.items["NEONITEEMOTE"]
 						var platformloadout = athenprofile.items["NEONITEPLATFORM"]

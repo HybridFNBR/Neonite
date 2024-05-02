@@ -21,7 +21,6 @@ module.exports = {
 				} else {
 					displayName = req.body.username;
 				}
-
             	accountId = displayName.replace(/ /g, "_");
             break;
         }
@@ -53,8 +52,7 @@ module.exports = {
 			"client_service": "prod-fn",
 			"product_id": "prod-fn",
 			"application_id": "fghi4567FNFBKFz3E4TROb0bmPS8h1GW"
-		})
-		res.status(200);
+		}).status(200).end();
     },
 
     verifyToken: function(req, res){
@@ -87,8 +85,7 @@ module.exports = {
 			"application_id": "fghi4567FNFBKFz3E4TROb0bmPS8h1GW",
 			"acr": "urn:epic:loa:aal1",
 			"auth_time": "1999-01-12T00:20:15.542Z"
-		  })
-		res.status(200);
+		}).status(200).end()
     },
 
     killToken: function(req, res){

@@ -23,7 +23,7 @@ module.exports = {
 			"eventWindowId": req.params.eventWindowId,
 			"page": 0,
 			"totalPages": 1,
-			"updatedTime": "2023-10-15T15:18:46.668Z",
+			"updatedTime": new Date(new Date().getTime()).toISOString(),
 			"entries": [
 			{
 				"gameId": "Fortnite",
@@ -278,7 +278,7 @@ module.exports = {
     brInventory: function(req, res){
         res.json({
 			"stash": {
-				"globalcash": 69
+				"globalcash": 0
 			},
 		})
     }
