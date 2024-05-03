@@ -132,12 +132,12 @@ module.exports = {
 	},
 
 	userFile: function (req, res, next) {
+		console.log(1)
 		const {versionGlobal} = getVersionInfo(req);
 		const ReadClientSettings = fs.readFileSync(path.join(__dirname, `../../ClientSettings/s${versionGlobal}/ClientSettings.sav`));
 		const timestamp = Date.now();
-		res.send(ReadClientSettings + `?v=${timestamp}`
-		//dont ask why or how, this just fixes a crashing issue when client settings arnt indexed properly when they dont exist on first launch.
-	)},
+		res.send(ReadClientSettings)
+	},
 
 	userPutFile:function (req, res, next) {
 	},
