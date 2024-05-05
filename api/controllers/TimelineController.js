@@ -898,7 +898,7 @@ module.exports = {
             )
         }
         
-        if(version == 29.20){
+        if(version == 29.20 || version == 29.30){
             timeline.channels["client-events"]["states"][0]["activeEvents"].push(
                 {
                     eventType: "EventFlag.Event_S29_ColdDay", // Avatar mini pass + cabbages
