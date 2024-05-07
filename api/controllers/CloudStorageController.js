@@ -131,12 +131,11 @@ module.exports = {
 		})
 	},
 
-	userFile: function (req, res, next) {
-		console.log(1)
-		const {versionGlobal} = getVersionInfo(req);
+	userFile: function async(req, res, next) {
+		const {version, versionGlobal} = getVersionInfo(req);
+		res.setHeader("Content-Type", "application/octet-stream")
 		const ReadClientSettings = fs.readFileSync(path.join(__dirname, `../../ClientSettings/s${versionGlobal}/ClientSettings.sav`));
-		const timestamp = Date.now();
-		res.send(ReadClientSettings)
+		res.send(ReadClientSettings).status(200).end();
 	},
 
 	userPutFile:function (req, res, next) {

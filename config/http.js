@@ -42,7 +42,6 @@ module.exports.http = {
                   fs.writeFileSync(path.join(__dirname, `../ClientSettings/s${versionGlobal}/ClientSettings.sav`), req.rawBody, 'latin1');
               });
               });
-            return res.status(204).end()
           }
         }
         catch{}
