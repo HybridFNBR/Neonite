@@ -148,6 +148,10 @@ module.exports = {
                         backgrounds[0].stage = "defaultnotris"
                         backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/iceberg-lobby-3840x2160-217bb6ea8af9.jpg"                        
                     }
+                    if(version === "29.40"){
+                        backgrounds[0].stage = "defaultnotris"
+                        backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/mkart-2940-sw-fnbr-lobby-3840x2160-4f1f1486a54a.jpg"                        
+                    }                    
                     else{
                         backgrounds[0].stage = "defaultnotris"
                         backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/br-lobby-ch5s2-4096x2304-a0879ccdaafc.jpg"
