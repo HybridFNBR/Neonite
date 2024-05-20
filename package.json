@@ -20,6 +20,6 @@
     "axios": "^1.7.0",
     "jsonwebtoken": "^9.0.2",
     "sails": "^1.5.11",
-    "sails-hook-autoreload": "^0.11.2"
+    "sails-hook-autoreload": "^1.1.0"
   }
 }
