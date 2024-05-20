@@ -4,9 +4,10 @@ const fs = require("fs");
 const path = require('path');
 var config = ini.parse(fs.readFileSync(path.join(__dirname, '../config.ini'), 'utf-8'));
 const cosmetics = JSON.parse(JSON.stringify(require("../cosmetics_config.json")));
+const {discoveryResponses} = require("../discovery/events")
 
-module.exports = {
-    MPLockerLoadout(accountId, athenprofile){
+    const MPLockerLoadout = (accountId, athenprofile) => {
+    try{
         var characterloadout = athenprofile.items["NEONITECHARACTER"]
         var emoteloadout = athenprofile.items["NEONITEEMOTE"]
         var platformloadout = athenprofile.items["NEONITEPLATFORM"]
@@ -14,7 +15,6 @@ module.exports = {
         var jamloadout = athenprofile.items["NEONITEJAM"]
         var sparksloadout = athenprofile.items["NEONITESPARKS"]
         var vehicleloadout = athenprofile.items["NEONITEVEHICLE"]
-        try{
             if (typeof characterloadout == 'undefined'){
                 Profile.addItem(athenprofile, "NEONITECHARACTER", {
                     "templateId": "CosmeticLoadout:LoadoutSchema_Character",
@@ -219,18 +219,18 @@ module.exports = {
         }
         catch{}
 
-    },
+    };
 
-    getVersionInfo(req) {
+    const getVersionInfo = (req) => {
         const userAgent = req.headers["user-agent"];
         const version = userAgent.split('-')[1];
         const versionGlobal = version.split('.')[0];
         return { version, versionGlobal };
-    },
-
-    simpleProfile(accountId, athenprofile){
-        try{
-            if(config.simpleProfile == true){
+    };
+    
+    const simpleProfile = (accountId, athenprofile) => {
+        try {
+            if (config.simpleProfile == true) {
                 const cosmeticArrays = [
                     cosmetics.Characters,
                     cosmetics.Emotes,
@@ -241,9 +241,8 @@ module.exports = {
                     cosmetics.Gliders,
                     cosmetics.MusicPacks,
                     cosmetics.Contrails
-
                 ];
-            
+    
                 cosmeticArrays.forEach(cosmeticArray => {
                     cosmeticArray.forEach(cosmeticItem => {
                         Profile.addItem(athenprofile, cosmeticItem, {
@@ -258,23 +257,23 @@ module.exports = {
                             "templateId": cosmeticItem
                         });
                     });
-                })
-                Profile.bumpRvn(athenprofile)
-                Profile.saveProfile(accountId, "athena", athenprofile)
+                });
+                Profile.bumpRvn(athenprofile);
+                Profile.saveProfile(accountId, "athena", athenprofile);
                 grantDefaultItems.response.profileChanges = [
                     {
                         changeType: "fullProfileUpdate",
                         profile: athenprofile
                     }
-                ]
-                response.multiUpdate = [grantDefaultItems.response]
+                ];
+                response.multiUpdate = [grantDefaultItems.response];
             }
+        } catch{} {
         }
-        catch{}
-    },
-
-    CH1Fix(accountId, athenprofile){
-        try{
+    };
+    
+    const CH1Fix = (accountId, athenprofile) => {
+        try {
             Profile.addItem(athenprofile, "AthenaCharacter:CID_001_Athena_Commando_F_Default", {
                 attributes: {
                     "max_level_bonus": 0,
@@ -285,8 +284,7 @@ module.exports = {
                     "favorite": false
                 },
                 "templateId": "AthenaCharacter:CID_001_Athena_Commando_F_Default"
-                
-            })
+            });
             Profile.addItem(athenprofile, "AthenaPickaxe:DefaultPickaxe", {
                 attributes: {
                     "max_level_bonus": 0,
@@ -297,8 +295,7 @@ module.exports = {
                     "favorite": false
                 },
                 "templateId": "AthenaPickaxe:DefaultPickaxe"
-                
-            })
+            });
             Profile.addItem(athenprofile, "AthenaGlider:DefaultGlider", {
                 attributes: {
                     "max_level_bonus": 0,
@@ -309,15 +306,45 @@ module.exports = {
                     "favorite": false
                 },
                 "templateId": "AthenaGlider:DefaultGlider"
-                
-            })
-            athenprofile.stats["attributes"]["favorite_character"] = "AthenaCharacter:CID_001_Athena_Commando_F_Default"
-            athenprofile.stats["attributes"]["favorite_pickaxe"] = "AthenaPickaxe:DefaultPickaxe"
-            athenprofile.stats["attributes"]["favorite_glider"] = "AthenaGlider:DefaultGlider"				
-            
-            Profile.saveProfile(accountId, "athena", athenprofile)
-            Profile.bumpRvn(athenprofile)
+            });
+            athenprofile.stats["attributes"]["favorite_character"] = "AthenaCharacter:CID_001_Athena_Commando_F_Default";
+            athenprofile.stats["attributes"]["favorite_pickaxe"] = "AthenaPickaxe:DefaultPickaxe";
+            athenprofile.stats["attributes"]["favorite_glider"] = "AthenaGlider:DefaultGlider";
+    
+            Profile.saveProfile(accountId, "athena", athenprofile);
+            Profile.bumpRvn(athenprofile);
+        } catch (error) {
+            console.error(error);
         }
-        catch{}
-    }
-}
+    };
+    
+    const loadJSON = (dirPath) => {
+        const fullPath = path.join(__dirname, dirPath);
+        const jsonData = fs.readFileSync(fullPath, 'utf-8');
+        return JSON.parse(jsonData);
+    };
+    
+    const VersionFilter = [
+        "Cert",
+        "Live",
+        "2870186+++Fortnite+Release",
+        "3.0.0",
+        "Next"
+    ];
+    
+    const seasonData = {
+        "22.40": discoveryResponses.ver2240,
+        "20.40": discoveryResponses.ver2040,
+        "18.40": discoveryResponses.ver1840,
+        "17.50": discoveryResponses.ver1750
+    };
+    
+    module.exports = {
+        MPLockerLoadout,
+        getVersionInfo,
+        simpleProfile,
+        CH1Fix,
+        loadJSON,
+        VersionFilter,
+        seasonData
+    };
