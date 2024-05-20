@@ -32,9 +32,9 @@ module.exports.http = {
                 req.on("data", (chunk) => {
                   req.rawBody += chunk
                 });
-                req.on("end", () => {
-                  fs.writeFileSync(path.join(__dirname, `../ClientSettings/s${versionGlobal}/ClientSettings.sav`), req.rawBody, 'latin1');
-              });
+                req.on("end", () => next());
+                fs.writeFileSync(path.join(__dirname, `../ClientSettings/s${versionGlobal}/ClientSettings.sav`), req.rawBody, 'latin1');
+                res.status(204).end();
               });
           }
         }
