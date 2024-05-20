@@ -1,13 +1,7 @@
 const NeoLog = require("../structs/NeoLog");
 const fs = require('fs');
 const path = require('path');
-
-function getVersionInfo(req) {
-  const userAgent = req.headers["user-agent"];
-  const version = userAgent.split('-')[1];
-  const versionGlobal = version.split('.')[0];
-  return { version, versionGlobal };
-}
+const {getVersionInfo} = require("../config/defs")
 
 
 module.exports.http = {

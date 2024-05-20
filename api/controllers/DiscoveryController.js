@@ -1,19 +1,8 @@
-const Default = require("../../discovery/discoveryMenu.json");
-const {discoveryResponses} = require("../../discovery/events")
-const latest = require("../../discovery/latest/discoveryMenu.json")
-const seasonData = {
-    "22.40": discoveryResponses.ver2240,
-    "20.40": discoveryResponses.ver2040,
-    "18.40": discoveryResponses.ver1840,
-    "17.50": discoveryResponses.ver1750,
-};
+const { getVersionInfo, seasonData, loadJSON } =  require("../../config/defs")
 
-function getVersionInfo(req) {
-    const userAgent = req.headers["user-agent"];
-    const version = userAgent.split('-')[1];
-    const versionGlobal = version.split('.')[0];
-    return { version, versionGlobal };
-}
+const Default = loadJSON("../discovery/discoveryMenu.json");
+const {discoveryResponses} = require("../../discovery/events")
+const latest = loadJSON("../discovery/latest/discoveryMenu.json")
 
 module.exports = {
 
@@ -33,7 +22,7 @@ module.exports = {
     
     //second interation of discovery api
     discoveryv2: function(req, res){
-        const { version, versionGlobal } = getVersionInfo(req);
+        const { version} = getVersionInfo(req);
 		if (seasonData[version]) {
 			return res.json(seasonData[version]);
 		}
@@ -335,10 +324,10 @@ module.exports = {
 		const links = () => {
 			if (version >= 23.50) {
 				if (req.params.playlistId === "set_br_playlists") {
-					return res.json(require("../../discovery/latest/setbrplaylist.json"));
+					return res.json(loadJSON("../discovery/latest/setbrplaylist.json"));
 				} else {
 					try {
-						return res.json(require(`../../discovery/latest/coreLtms/${req.params.playlistId}.json`));
+						return res.json(require(`../discovery/latest/coreLtms/${req.params.playlistId}.json`));
 					} catch {
 					}
 				}

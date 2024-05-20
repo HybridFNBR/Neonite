@@ -5,21 +5,14 @@ const fs = require("fs");
 const { v4: uuidv4 } = require("uuid");
 const path = require('path');
 var ini = require('ini')
-
+const { getVersionInfo, MPLockerLoadout, simpleProfile, CH1Fix, VersionFilter, loadJSON} = require("../../config/defs")
 
 Array.prototype.insert = function ( index, item ) {
 	this.splice( index, 0, item );
 };
 const NeoLog = require("../../structs/NeoLog");
 var config = ini.parse(fs.readFileSync(path.join(__dirname, '../../config.ini'), 'utf-8'));
-const cosmetics = JSON.parse(JSON.stringify(require("../../cosmetics_config.json")));
 
-function getVersionInfo(req) {
-	const userAgent = req.headers["user-agent"];
-	const version = userAgent.split('-')[1];
-	const versionGlobal = version.split('.')[0];
-	return { version, versionGlobal };
-  }
 
 module.exports = {
     mcp: function(req, res, next){
@@ -217,10 +210,10 @@ module.exports = {
 
 				let shop
 				if(version >= 26.30){
-					shop = require("../../responses/shopv2.json");
+					shop = loadJSON("../responses/shopv2.json");
 				}
 				else{
-					shop = require("../../responses/shopv1.json"); 
+					shop = loadJSON("../responses/shopv1.json"); 
 				}
 				
 				
@@ -350,322 +343,15 @@ module.exports = {
 			}
 
 			case "QueryProfile": {
-				const grantDefaultItems = getOrCreateProfile("athena");
-				function simpleProfile(){
-					try{
-						if(config.simpleProfile == true){
-							const cosmeticArrays = [
-								cosmetics.Characters,
-								cosmetics.Emotes,
-								cosmetics.BackBlings,
-								cosmetics.LoadingScreens,
-								cosmetics.WeaponWraps,
-								cosmetics.Pickaxes,
-								cosmetics.Gliders,
-								cosmetics.MusicPacks,
-								cosmetics.Contrails
-		
-							];
-						
-							cosmeticArrays.forEach(cosmeticArray => {
-								cosmeticArray.forEach(cosmeticItem => {
-									Profile.addItem(athenprofile, cosmeticItem, {
-										attributes: {
-											"max_level_bonus": 0,
-											"level": 1,
-											"item_seen": true,
-											"xp": 0,
-											"variants": [],
-											"favorite": false
-										},
-										"templateId": cosmeticItem
-									});
-								});
-							})
-							Profile.bumpRvn(athenprofile)
-							Profile.saveProfile(accountId, "athena", athenprofile)
-							grantDefaultItems.response.profileChanges = [
-								{
-									changeType: "fullProfileUpdate",
-									profile: athenprofile
-								}
-							]
-							response.multiUpdate = [grantDefaultItems.response]
-						}
-					}catch{}
-				}
+				if(config.simpleProfile == true){simpleProfile(accountId, athenprofile)}
 				if(version >= 28.00){
 					if(profileId == "athena"){
-						var characterloadout = athenprofile.items["NEONITECHARACTER"]
-						var emoteloadout = athenprofile.items["NEONITEEMOTE"]
-						var platformloadout = athenprofile.items["NEONITEPLATFORM"]
-						var wrapsloadout = athenprofile.items["NEONITEWRAPS"]
-						var jamloadout = athenprofile.items["NEONITEJAM"]
-						var sparksloadout = athenprofile.items["NEONITESPARKS"]
-						var vehicleloadout = athenprofile.items["NEONITEVEHICLE"]
-						if (typeof characterloadout == 'undefined'){
-							Profile.addItem(athenprofile, "NEONITECHARACTER", {
-								"templateId": "CosmeticLoadout:LoadoutSchema_Character",
-								"attributes": {
-									"slots": [
-										{
-										  "slot_template": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Character",
-										  "equipped_item": "AthenaCharacter:cid_001_athena_commando_f_default"
-										},
-										{
-										  "slot_template": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Backpack"
-										},
-										{
-										  "slot_template": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Pickaxe",
-										  "equipped_item": "AthenaPickaxe:defaultpickaxe"
-										},
-										{
-										  "slot_template": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Glider",
-										  "equipped_item": "AthenaGlider:defaultglider"
-										},
-										{
-										  "slot_template": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Contrails"
-										},
-										{
-										  "slot_template": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Aura"
-										}
-									]
-								},
-								"quantity" : 1
-							});
-						}
-						if (typeof emoteloadout == 'undefined'){
-							Profile.addItem(athenprofile, "NEONITEEMOTES", {
-								"templateId": "CosmeticLoadout:LoadoutSchema_Emotes",
-								"attributes": {
-									"slots": [
-										{
-											"slot_template": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Emote_0",
-											"equipped_item": "AthenaDance:eid_boogiedown"
-										},
-										{
-											"slot_template": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Emote_1"
-										},
-										{
-											"slot_template": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Emote_2"
-										},
-										{
-											"slot_template": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Emote_3"
-										},
-										{
-											"slot_template": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Emote_4"
-										},
-										{
-											"slot_template": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Emote_5"
-										}
-									]
-								},
-								"quantity" : 1
-							});
-						}
-						if (typeof platformloadout == 'undefined'){
-							Profile.addItem(athenprofile, "NEONITEPLATFORM", {
-								"templateId": "CosmeticLoadout:LoadoutSchema_Platform",
-								"attributes": {
-									"slots": [
-										{
-										"slot_template": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Banner_Icon"
-										},
-										{
-										"slot_template": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Banner_Color"
-										},
-										{
-										"slot_template": "CosmeticLoadoutSlotTemplate:LoadoutSlot_LobbyMusic",
-										},
-										{
-										"slot_template": "CosmeticLoadoutSlotTemplate:LoadoutSlot_LoadingScreen"
-										}
-									]
-									},
-								"quantity": 1
-							});
-						}
-						if (typeof wrapsloadout == 'undefined'){
-							Profile.addItem(athenprofile, "NEONITEWRAPS", {
-								"templateId": "CosmeticLoadout:LoadoutSchema_Wraps",
-								"attributes": {
-									"slots": [
-										{
-										"slot_template": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Wrap_0",
-										},
-										{
-										"slot_template": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Wrap_1"
-										},
-										{
-										"slot_template": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Wrap_2"
-										},
-										{
-										"slot_template": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Wrap_3"
-										},
-										{
-										"slot_template": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Wrap_4"
-										},
-										{
-										"slot_template": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Wrap_5"
-										},
-										{
-										"slot_template": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Wrap_6"
-										}
-									]
-								},
-								"quantity": 1
-							});
-						}
-						if (typeof jamloadout == 'undefined'){
-							Profile.addItem(athenprofile, "NEONITEJAM", {
-								"templateId": "CosmeticLoadout:LoadoutSchema_Jam",
-								"attributes" : {
-									"slots" : [ {
-									  "slot_template" : "CosmeticLoadoutSlotTemplate:LoadoutSlot_JamSong0"
-									}, {
-									  "slot_template" : "CosmeticLoadoutSlotTemplate:LoadoutSlot_JamSong1"
-									}, {
-									  "slot_template" : "CosmeticLoadoutSlotTemplate:LoadoutSlot_JamSong2"
-									}, {
-									  "slot_template" : "CosmeticLoadoutSlotTemplate:LoadoutSlot_JamSong3"
-									}, {
-									  "slot_template" : "CosmeticLoadoutSlotTemplate:LoadoutSlot_JamSong4"
-									}, {
-									  "slot_template" : "CosmeticLoadoutSlotTemplate:LoadoutSlot_JamSong5"
-									}, {
-									  "slot_template" : "CosmeticLoadoutSlotTemplate:LoadoutSlot_JamSong6"
-									}, {
-									  "slot_template" : "CosmeticLoadoutSlotTemplate:LoadoutSlot_JamSong7"
-									} ]
-								  },
-								  "quantity" : 1
-							});
-						}
-						if (typeof sparksloadout == 'undefined'){
-							Profile.addItem(athenprofile, "NEONITESPARKS", {
-								"templateId" : "CosmeticLoadout:LoadoutSchema_Sparks",
-								"attributes" : {
-									"slots" : [ {
-									"slot_template" : "CosmeticLoadoutSlotTemplate:LoadoutSlot_Bass"
-									}, {
-									"slot_template" : "CosmeticLoadoutSlotTemplate:LoadoutSlot_Guitar"
-									}, {
-									"slot_template" : "CosmeticLoadoutSlotTemplate:LoadoutSlot_Drum"
-									}, {
-									"slot_template" : "CosmeticLoadoutSlotTemplate:LoadoutSlot_Keyboard"
-									}, {
-									"slot_template" : "CosmeticLoadoutSlotTemplate:LoadoutSlot_Microphone"
-									} ]
-								},
-								"quantity" : 1
-							});
-						}
-						if (typeof vehicleloadout == 'undefined'){
-							Profile.addItem(athenprofile, "NEONITEVEHICLE", {
-								"templateId" : "CosmeticLoadout:LoadoutSchema_Vehicle",
-								"attributes" : {
-									"slots" : [ {
-										"slot_template" : "CosmeticLoadoutSlotTemplate:LoadoutSlot_Vehicle_Body"
-									  }, {
-										"slot_template" : "CosmeticLoadoutSlotTemplate:LoadoutSlot_Vehicle_Booster"
-									  }, {
-										"slot_template" : "CosmeticLoadoutSlotTemplate:LoadoutSlot_Vehicle_DriftSmoke"
-									  }, {
-										"slot_template" : "CosmeticLoadoutSlotTemplate:LoadoutSlot_Vehicle_Wheel"
-									  }, {
-										"slot_template" : "CosmeticLoadoutSlotTemplate:LoadoutSlot_Vehicle_Skin"
-									  } ]
-									},
-									"quantity" : 1
-							});
-						}
-						Profile.modifyStat(athenprofile, "loadout_presets", {
-							"CosmeticLoadout:LoadoutSchema_Character" : {
-								"0" : "NEONITECHARACTER",
-							},
-							"CosmeticLoadout:LoadoutSchema_Emotes" : {
-								"0" : "NEONITEEMOTES",
-							},
-							"CosmeticLoadout:LoadoutSchema_Platform" : {
-								"0" : "NEONITEPLATFORM",
-							},
-							"CosmeticLoadout:LoadoutSchema_Wraps" : {
-								"0" : "NEONITEWRAPS",
-							},
-							"CosmeticLoadout:LoadoutSchema_Jam" : {
-								"0" : "NEONITEJAM",
-							},
-							"CosmeticLoadout:LoadoutSchema_Sparks" : {
-								"0" : "NEONITESPARKS",
-							},
-							"CosmeticLoadout:LoadoutSchema_Vehicle" : {
-								"0" : "NEONITEVEHICLE",
-							}
-						})
-						Profile.bumpRvn(athenprofile)
-						Profile.saveProfile(accountId, "athena", athenprofile)
-
+						MPLockerLoadout(accountId, athenprofile)
 					}
 				}
-				if(version <= 10.40 || version =="Cert" || version == "Live" || version == "3.0.0")
+				if(version <= 10.40 || VersionFilter.includes(versionGlobal))
 				{
-					try{//athena.items does not exist if there is no profile so just try and catch the error until it exists.
-						Profile.addItem(athenprofile, "AthenaCharacter:CID_001_Athena_Commando_F_Default", {
-							attributes: {
-								"max_level_bonus": 0,
-								"level": 1,
-								"item_seen": true,
-								"xp": 0,
-								"variants": [],
-								"favorite": false
-							},
-							"templateId": "AthenaCharacter:CID_001_Athena_Commando_F_Default"
-							
-						})
-						Profile.addItem(athenprofile, "AthenaPickaxe:DefaultPickaxe", {
-							attributes: {
-								"max_level_bonus": 0,
-								"level": 1,
-								"item_seen": true,
-								"xp": 0,
-								"variants": [],
-								"favorite": false
-							},
-							"templateId": "AthenaPickaxe:DefaultPickaxe"
-							
-						})
-						Profile.addItem(athenprofile, "AthenaGlider:DefaultGlider", {
-							attributes: {
-								"max_level_bonus": 0,
-								"level": 1,
-								"item_seen": true,
-								"xp": 0,
-								"variants": [],
-								"favorite": false
-							},
-							"templateId": "AthenaGlider:DefaultGlider"
-							
-						})
-						simpleProfile()
-						athenprofile.stats["attributes"]["favorite_character"] = "AthenaCharacter:CID_001_Athena_Commando_F_Default"
-						athenprofile.stats["attributes"]["favorite_pickaxe"] = "AthenaPickaxe:DefaultPickaxe"
-						athenprofile.stats["attributes"]["favorite_glider"] = "AthenaGlider:DefaultGlider"				
-						
-						Profile.saveProfile(accountId, "athena", athenprofile)
-						Profile.bumpRvn(athenprofile)
-						grantDefaultItems.response.profileChanges = [
-							{
-								changeType: "fullProfileUpdate",
-								profile: athenprofile
-							}
-						]
-						response.multiUpdate = [grantDefaultItems.response]
-					}
-					catch{}
-					break;
-				}
-				else{
-					simpleProfile()
+					CH1Fix(accountId, athenprofile)
 				}
 				break;
 			}

@@ -2,19 +2,14 @@
 const path = require('path');
 var fs = require('fs')
 var ini = require('ini')
+const {getVersionInfo, loadJSON} = require("../../config/defs")
 
-function getVersionInfo(req) {
-    const userAgent = req.headers["user-agent"];
-    const version = userAgent.split('-')[1];
-    const versionGlobal = version.split('.')[0];
-    return { version, versionGlobal };
-}
 
 
 module.exports = {
     timeline: function(req, res){
         const { version, versionGlobal } = getVersionInfo(req);
-        const keychain = require("../../responses/keychain.json")
+        const keychain = loadJSON("../responses/keychain.json")
         var config = ini.parse(fs.readFileSync(path.join(__dirname, '../../config.ini'), 'utf-8'));
         const timeline = {
             channels: {

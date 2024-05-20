@@ -313,8 +313,7 @@ const {discoveryResponses} = require("../discovery/events")
     
             Profile.saveProfile(accountId, "athena", athenprofile);
             Profile.bumpRvn(athenprofile);
-        } catch (error) {
-            console.error(error);
+        } catch {
         }
     };
     

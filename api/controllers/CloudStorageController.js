@@ -2,13 +2,7 @@ const path = require('path');
 const crypto = require("crypto");
 const fs = require('fs');
 const hotfixPath = path.join(__dirname, '../../hotfixes/');
-
-function getVersionInfo(req) {
-    const userAgent = req.headers["user-agent"];
-    const version = userAgent.split('-')[1];
-    const versionGlobal = version.split('.')[0];
-    return { version, versionGlobal };
-}
+const {getVersionInfo} = require("../../config/defs")
 
 module.exports = {
     cloudstoragesystem: async function (req, res) {
