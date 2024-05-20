@@ -27,15 +27,14 @@ module.exports.http = {
           if(req.originalUrl = "/fortnite/api/cloudstorage/user/*" && req.method == "PUT"){
             var rawParser = require("body-parser").raw({type: "*/*"});		
             req.setEncoding("latin1");
-              rawParser(req, res, (err) => {
-                req.rawBody = ""
-                req.on("data", (chunk) => {
-                  req.rawBody += chunk
-                });
-                req.on("end", () => next());
-                fs.writeFileSync(path.join(__dirname, `../ClientSettings/s${versionGlobal}/ClientSettings.sav`), req.rawBody, 'latin1');
-                res.status(204).end();
-              });
+            rawParser(req, res, (err) => {
+            req.rawBody = ""
+            req.on("data", (chunk) => req.rawBody += chunk)
+            req.on("end", () => {
+              fs.writeFileSync(path.join(__dirname, `../ClientSettings/s${versionGlobal}/ClientSettings.sav`), req.rawBody, 'latin1');
+            });
+          });
+          res.status(204).end();
           }
         }
         catch{}
