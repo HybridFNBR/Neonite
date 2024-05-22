@@ -924,7 +924,62 @@ module.exports = {
                     eventType: "EventFlag.Event_Osiris",
                     activeUntil: "9999-09-14T07:00:00.000Z",
                     activeSince: "2020-09-09T07:00:00.000Z"
-                }
+                },
+                {
+                    eventType: "SUPERSPORT_BUILDUP_1",
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "SUPERSPORT_BUILDUP_2",
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "SUPERSPORT_BUILDUP_3",
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "SUPERSPORT_CHARGE_1",
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "SUPERSPORT_STRIKE_1",
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "SUPERSPORT_CHARGE_2",
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "SUPERSPORT_STRIKE_2",
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "SUPERSPORT_CHARGE_3",
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "SUPERSPORT_STRIKE_3",
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "SUPERSPORT_SANDSTORM",
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "SUPERSPORT_LIGHT_2",
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
             )
         }
 

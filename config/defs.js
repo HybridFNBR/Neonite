@@ -258,15 +258,8 @@ const {discoveryResponses} = require("../discovery/events")
                         });
                     });
                 });
-                Profile.bumpRvn(athenprofile);
                 Profile.saveProfile(accountId, "athena", athenprofile);
-                grantDefaultItems.response.profileChanges = [
-                    {
-                        changeType: "fullProfileUpdate",
-                        profile: athenprofile
-                    }
-                ];
-                response.multiUpdate = [grantDefaultItems.response];
+                Profile.bumpRvn(athenprofile);
             }
         } catch{} {
         }
