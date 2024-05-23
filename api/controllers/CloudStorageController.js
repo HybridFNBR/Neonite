@@ -128,7 +128,7 @@ module.exports = {
 	userFile: function async(req, res, next) {
 		const {versionGlobal} = getVersionInfo(req);
 		const ReadClientSettings = fs.readFileSync(path.join(__dirname, `../../ClientSettings/s${versionGlobal}/ClientSettings.sav`));
-		res.send(ReadClientSettings).status(200).end();
+		res.send(ReadClientSettings + `?v=64`).status(200).end();
 	},
 
 	userPutFile:function (req, res, next) {

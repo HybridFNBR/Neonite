@@ -315,6 +315,14 @@ const {discoveryResponses} = require("../discovery/events")
         const jsonData = fs.readFileSync(fullPath, 'utf-8');
         return JSON.parse(jsonData);
     };
+
+    const fileversionBuffer = (version, filePath) => {
+        const buffer = Buffer.alloc(64);
+        buffer.writeUInt32LE(version, 0);
+        buffer.fill(0, 4);
+        fs.writeFileSync(filePath, buffer);
+    }
+    //scuffed fix but it works.
     
     const VersionFilter = [
         "Cert",
@@ -338,5 +346,6 @@ const {discoveryResponses} = require("../discovery/events")
         CH1Fix,
         loadJSON,
         VersionFilter,
-        seasonData
+        seasonData,
+        fileversionBuffer
     };

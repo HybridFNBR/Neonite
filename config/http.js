@@ -1,7 +1,7 @@
 const NeoLog = require("../structs/NeoLog");
 const fs = require('fs');
 const path = require('path');
-const {getVersionInfo} = require("../config/defs")
+const {getVersionInfo, fileversionBuffer} = require("../config/defs")
 
 
 module.exports.http = {
@@ -13,17 +13,16 @@ module.exports.http = {
       LogURL: function (req, res, next) {
         try{
           const {versionGlobal} = getVersionInfo(req);
-            if(versionGlobal && /^\d+$/.test(versionGlobal) || versionGlobal == "Cert" || versionGlobal == "Live" || versionGlobal == "Next"){
-              const directoryPath = path.join(__dirname, `../ClientSettings/s${versionGlobal}`);
-              if(!fs.existsSync(directoryPath)) {
-                fs.mkdirSync(directoryPath, { recursive: true }); 
+          if (versionGlobal && (/^\d+$/.test(versionGlobal) || versionGlobal === "Cert" || versionGlobal === "Live" || versionGlobal === "Next")) {
+            const directoryPath = path.join(__dirname, `../ClientSettings/s${versionGlobal}`);
+            if (!fs.existsSync(directoryPath)) {
+                fs.mkdirSync(directoryPath, { recursive: true });
+            }
+            const filePath = path.join(directoryPath, 'ClientSettings.sav');
+            if (!fs.existsSync(filePath)) {
+                fileversionBuffer(64, filePath);
               }
-              
-              const filePath = path.join(directoryPath, 'ClientSettings.sav');
-              if(!fs.existsSync(filePath)) {
-                fs.writeFileSync(filePath, '');            
-              }
-          }   
+          }
           if(req.originalUrl = "/fortnite/api/cloudstorage/user/*" && req.method == "PUT"){
             var rawParser = require("body-parser").raw({type: "*/*"});		
             req.setEncoding("latin1");
