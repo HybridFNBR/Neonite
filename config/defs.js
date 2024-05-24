@@ -15,6 +15,7 @@ const {discoveryResponses} = require("../discovery/events")
         var jamloadout = athenprofile.items["NEONITEJAM"]
         var sparksloadout = athenprofile.items["NEONITESPARKS"]
         var vehicleloadout = athenprofile.items["NEONITEVEHICLE"]
+        var vehiclesuvloadout = athenprofile.items["NEONITESUV"]
             if (typeof characterloadout == 'undefined'){
                 Profile.addItem(athenprofile, "NEONITECHARACTER", {
                     "templateId": "CosmeticLoadout:LoadoutSchema_Character",
@@ -191,6 +192,30 @@ const {discoveryResponses} = require("../discovery/events")
                         "quantity" : 1
                 });
             }
+            if (typeof vehiclesuvloadout == 'undefined'){
+                Profile.addItem(athenprofile, "NEONITESUV", {
+                    "templateId" : "CosmeticLoadout:LoadoutSchema_Vehicle_SUV",
+                    "attributes" : {
+                        slots: [
+                            {
+                              slot_template: 'CosmeticLoadoutSlotTemplate:LoadoutSlot_Vehicle_Body_SUV'       
+                            },
+                            {
+                              slot_template: 'CosmeticLoadoutSlotTemplate:LoadoutSlot_Vehicle_Skin_SUV'       
+                            },
+                            {
+                              slot_template: 'CosmeticLoadoutSlotTemplate:LoadoutSlot_Vehicle_Wheel_SUV',     
+                            },
+                            {
+                              slot_template: 'CosmeticLoadoutSlotTemplate:LoadoutSlot_Vehicle_DriftSmoke_SUV',
+                            },
+                            {
+                              slot_template: 'CosmeticLoadoutSlotTemplate:LoadoutSlot_Vehicle_Booster_SUV',
+                            }]
+                        },
+                        "quantity" : 1
+                });
+            }
             Profile.modifyStat(athenprofile, "loadout_presets", {
                 "CosmeticLoadout:LoadoutSchema_Character" : {
                     "0" : "NEONITECHARACTER",
@@ -212,6 +237,9 @@ const {discoveryResponses} = require("../discovery/events")
                 },
                 "CosmeticLoadout:LoadoutSchema_Vehicle" : {
                     "0" : "NEONITEVEHICLE",
+                },
+                "CosmeticLoadout:LoadoutSchema_Vehicle_SUV":{
+                    "0": "NEONITESUV"
                 }
             })
             Profile.bumpRvn(athenprofile)

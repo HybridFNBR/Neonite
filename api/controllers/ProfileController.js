@@ -635,8 +635,10 @@ module.exports = {
 					"CosmeticLoadout:LoadoutSchema_Jam": "NEONITEJAM",
 					"CosmeticLoadout:LoadoutSchema_Sparks": "NEONITESPARKS",
 					"CosmeticLoadout:LoadoutSchema_Vehicle": "NEONITEVEHICLE",
+					"CosmeticLoadout:LoadoutSchema_Vehicle_SUV": "NEONITESUV",
 				};
 				const loadoutType = req.body["loadoutType"];
+				console.log(loadoutData)
 				const profileAttribute = loadoutTypeMap[loadoutType];
 
 				if (profileAttribute) {
