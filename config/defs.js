@@ -345,7 +345,7 @@ const {discoveryResponses} = require("../discovery/events")
     };
 
     const fileversionBuffer = (version, filePath) => {
-        const buffer = Buffer.alloc(64);
+        const buffer = Buffer.alloc(5);
         buffer.writeUInt32LE(version, 0);
         buffer.fill(0, 4);
         fs.writeFileSync(filePath, buffer);
@@ -366,14 +366,338 @@ const {discoveryResponses} = require("../discovery/events")
         "18.40": discoveryResponses.ver1840,
         "17.50": discoveryResponses.ver1750
     };
-    
-    module.exports = {
-        MPLockerLoadout,
-        getVersionInfo,
-        simpleProfile,
-        CH1Fix,
-        loadJSON,
-        VersionFilter,
-        seasonData,
-        fileversionBuffer
+
+
+    /**
+ * Adds a billboard shop section to mpItemShop section data response before sending it to the Client(Fortnite)
+ * 
+ * @param {string} sectionID example: "sectionID.offerGoupsectionID.stackRankValue"
+ * @param {string} offerGoupsectionID offer group section ID example: "sectionID.offerGoupsectionID.stackRankValue"
+ * @param {string} stackRankValue the number at the end of the layoutId example: "sectionID.offerGoupsectionID.stackRankValue"
+ * @param {string} foregroundUrl image displayed on top of the background
+ * @param {string} backgroundUrl image url of the background
+ * @param {string} titleColorA color of the title, has to be a hex value
+ * @param {string} titleColorB color of the subtitle, text below the title, has to be a hex value
+ * @param {string} title title
+ * @param {string} subtitle subtitle, text displayed under the title
+ * @param {string} buttonText button text
+ * @param {string} SectiondisplayName display name of the shop section
+ */
+const billboard = (sectionID, offerGoupsectionID, stackRankValue, foregroundUrl, backgroundUrl, titleColorA, titleColorB, title, subtitle, buttonText, SectiondisplayName) => {
+    return {
+        "metadata": {
+            "offerGroups": [
+              {
+                "bUseWidePreview": true,
+                "metadata": {
+                  "_type": "MP Item Shop - Offer Group Metadata"
+                },
+                "_type": "MP Item Shop - Row",
+                "offerGroupId": stackRankValue,
+                "stackRanks": [
+                  {
+                    "stackRankValue": stackRankValue,
+                    "productTag": "Product_BR",
+                    "_type": "MP Item Shop - Stack Rank",
+                    "context": "battleRoyale",
+                    "startDate": "2023-01-01T00:00:00.000Z"
+                  }
+                ]
+              }
+            ],
+            "subsections": [      
+              {
+                "metadata": {
+                  "offerGroups": [
+                    {
+                      "bUseWidePreview": true,
+                      "displayType": "billboard",
+                      "metadata": {
+                        "textureMetadata": [
+                          {
+                            "_type": "MP Item Shop - Offer Group Texture Metadata",
+                            "value": foregroundUrl,
+                            "key": "foreground"
+                          },
+                          {
+                            "_type": "MP Item Shop - Offer Group Texture Metadata",
+                            "value": backgroundUrl,
+                            "key": "background"
+                          }
+                        ],
+                        "_type": "MP Item Shop - Offer Group Metadata",
+                        "stringMetadata": [
+                          {
+                            "_type": "MP Item Shop - Offer Group String Metadata",
+                            "value": "left",
+                            "key": "alignment"
+                          },
+                          {
+                            "_type": "MP Item Shop - Offer Group String Metadata",
+                            "value": titleColorA,
+                            "key": "titleColorA"
+                          },
+                          {
+                            "_type": "MP Item Shop - Offer Group String Metadata",
+                            "value": titleColorB,
+                            "key": "titleColorB"
+                          }
+                        ],
+                        "textMetadata": [
+                          {
+                            "_type": "MP Item Shop - Offer Group Text Metadata",
+                            "value": title,
+                            "key": "title"
+                          },
+                          {
+                            "_type": "MP Item Shop - Offer Group Text Metadata",
+                            "value": subtitle,
+                            "key": "subtitle"
+                          },
+                          {
+                            "_type": "MP Item Shop - Offer Group Text Metadata",
+                            "value": buttonText,
+                            "key": "cta"
+                          }
+                        ]
+                      },
+                      "_type": "MP Item Shop - Row",
+                      "offerGroupId": stackRankValue,
+                      "stackRanks": [
+                        {
+                          "stackRankValue": stackRankValue,
+                          "productTag": "Product_BR",
+                          "_type": "MP Item Shop - Stack Rank",
+                          "context": "battleRoyale",
+                          "startDate": "2023-01-01T00:00:00.000Z"
+                        }
+                      ]
+                    }
+                  ],
+                  "background": [
+                    {
+                      "_type": "MP Item Shop - Background"
+                    }
+                  ],
+                  "_type": "MP Item Shop - Subsection Metadata",
+                  "stackRanks": [
+                    {
+                      "stackRankValue": stackRankValue,
+                      "productTag": "Product_BR",
+                      "_type": "MP Item Shop - Stack Rank",
+                      "context": "battleRoyale",
+                      "startDate": "2023-01-01T00:00:00.000Z"
+                    }
+                  ]
+                },
+                "displayName": SectiondisplayName,
+                "_type": "MP Item Shop - Subsection",
+                "sectionID": offerGoupsectionID
+              }
+            ],
+            "background": {
+              "_type": "MP Item Shop - Background"
+            },
+            "_type": "MP Item Shop - Section Metadata",
+            "showIneligibleOffers": "Always",
+            "stackRanks": [
+              {
+                "stackRankValue": 98,
+                "productTag": "Product_BR",
+                "_type": "MP Item Shop - Stack Rank",
+                "context": "battleRoyale",
+                "startDate": "2024-05-23T23:00:00.000Z"
+              },
+              {
+                "stackRankValue": 9,
+                "productTag": "Product_Juno",
+                "_type": "MP Item Shop - Stack Rank",
+                "context": "juno",
+                "startDate": "2024-05-23T23:00:00.000Z"
+              },
+              {
+                "stackRankValue": 98,
+                "productTag": "Product_DelMar",
+                "_type": "MP Item Shop - Stack Rank",
+                "context": "delMar",
+                "startDate": "2024-05-23T23:00:00.000Z"
+              },
+              {
+                "stackRankValue": 50,
+                "productTag": "Product_Sparks",
+                "_type": "MP Item Shop - Stack Rank",
+                "context": "sparks",
+                "startDate": "2024-05-23T23:00:00.000Z"
+              },
+              {
+                "stackRankValue": 50,
+                "productTag": "Product_BR",
+                "_type": "MP Item Shop - Stack Rank",
+                "context": "battleRoyale",
+                "startDate": "2024-05-26T23:00:00.000Z"
+              }
+            ]
+          },
+          "displayName": SectiondisplayName,
+          "_type": "MP Item Shop - Section",
+          "sectionID": sectionID
+        
+        }
     };
+
+const CustomBackground = (version, versionGlobal, backgrounds, content) =>{
+    if(config.custom_background == true){
+        backgrounds[0].stage = "defaultnotris"
+        backgrounds[0].backgroundimage = config.image_url
+    }
+    if(config.custom_background == false)
+    {
+        switch (versionGlobal) {
+            case "10":
+                backgrounds[0].stage = "seasonx";
+            break;
+            case "11":
+                if (version === "11.31" || version === "11.40") {
+                    backgrounds[0].stage = "Winter19";
+                } 
+                else {
+                    backgrounds[0].stage = "season11";
+                }
+            break;
+            case "12":
+                backgrounds[0].stage = "season12";
+            break;
+            case "13":
+                backgrounds[0].stage = "season13";
+            break;
+            case "14":
+                backgrounds[0].stage = "season14";
+            break;
+            case "15":
+                backgrounds[0].stage = "season15";
+                if(version === "15.10"){
+                    backgrounds[0].stage = "season15xmas"
+                    backgrounds[1].stage = "XmasStore2020"
+                }
+            break;
+            case "16":
+                backgrounds[0].stage = "season16";
+            break;
+            case "17":
+                backgrounds[0].stage = "season17";
+            break;
+            case "18":
+                backgrounds[0].stage = "season18";
+            break;
+            case "19":
+                if (version === "19.01") /*if it doesnt work i didnt get chance to test it cause the build has not been uploaded - unrealhybrid*/ {
+                    backgrounds[0].stage = "winter2021";
+                    backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/t-bp19-lobby-xmas-2048x1024-f85d2684b4af.png";
+                } 
+                else {
+                    backgrounds[0].stage = "season19";
+                }
+            break;
+            case "20":
+                if (version === "20.40") {
+                    backgrounds[0].stage = "season20";
+                    backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/t-bp20-40-armadillo-glowup-lobby-2048x2048-2048x2048-3b83b887cc7f.jpg";
+                } 
+                else {
+                    backgrounds[0].stage = "season20";
+                    backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/s20-landscapev4-2048x1024-2494a103ae6c.png"
+                }
+            break;
+            case "21":
+                if (version === "21.30") {
+                    backgrounds[0].stage = "season2130";
+                    backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/nss-lobbybackground-2048x1024-f74a14565061.jpg";
+                } 
+                else {
+                    backgrounds[0].stage = "season2100";
+                    backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/s21-lobby-background-2048x1024-2e7112b25dc3.jpg";
+                }
+            break;
+            case "22":
+                backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/t-bp22-lobby-square-2048x2048-2048x2048-e4e90c6e8018.jpg";
+            break;
+            case "23":
+                if(version === "23.10")
+                {   
+                    backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/t-bp23-winterfest-lobby-square-2048x2048-2048x2048-277a476e5ca6.png"
+                }
+                else{
+                    backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/t-bp23-lobby-2048x1024-2048x1024-26f2c1b27f63.png"
+                }
+            break;
+            case "24":
+                backgrounds[0].stage = "defaultnotris"
+                backgrounds[0].backgroundimage = "https://static.wikia.nocookie.net/fortnite/images/e/e7/Chapter_4_Season_2_-_Lobby_Background_-_Fortnite.png"
+            break;
+            case "25":
+                backgrounds[0].stage = "defaultnotris"
+                backgrounds[0].backgroundimage = "https://static.wikia.nocookie.net/fortnite/images/c/ca/Chapter_4_Season_3_-_Lobby_Background_-_Fortnite.png"
+            break;
+            case "26":
+                if(version === "26.30")
+                {  
+                    backgrounds[0].stage = "season2630"
+                    backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/s26-lobby-timemachine-final-2560x1440-a3ce0018e3fa.jpg"
+                }
+                else{
+                    backgrounds[0].stage = "season2600"
+                    backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/0814-ch4s4-lobby-2048x1024-2048x1024-e3c2cf8d342d.png"
+                }
+            break;
+            case "27":
+                if(version === "27.11"){
+                    backgrounds[0].stage = "defaultnotris"
+                    backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/durianlobby2-4096x2048-242a51b6a8ee.jpg"
+                }
+                else{
+                    backgrounds[0].stage = "season2700"
+                }
+            break;
+            case "28":
+                if(version === "28.20"){
+                    backgrounds[0].stage = "defaultnotris"
+                    backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/s28-tmnt-lobby-4096x2048-e6c06a310c05.jpg"
+                }
+                else{
+                    backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/ch5s1-lobbybg-3640x2048-0974e0c3333c.jpg"
+                    backgrounds[0].stage = "defaultnotris"
+                }
+            break;
+            case "29":
+                if(version === "29.20"){
+                    backgrounds[0].stage = "defaultnotris"
+                    backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/iceberg-lobby-3840x2160-217bb6ea8af9.jpg"                        
+                }
+                if(version === "29.40"){
+                    backgrounds[0].stage = "defaultnotris"
+                    backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/mkart-2940-sw-fnbr-lobby-3840x2160-4f1f1486a54a.jpg"                        
+                }                    
+                else{
+                    backgrounds[0].stage = "defaultnotris"
+                    backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/br-lobby-ch5s2-4096x2304-a0879ccdaafc.jpg"
+                }
+            break;
+            default:
+                backgrounds[0].backgroundimage = content.dynamicbackgrounds.backgrounds.backgrounds[0].backgroundimage;
+                backgrounds[0].stage = content.dynamicbackgrounds.backgrounds.backgrounds[0].stage;
+        }
+    }
+}
+    
+module.exports = {
+    MPLockerLoadout,
+    getVersionInfo,
+    simpleProfile,
+    CH1Fix,
+    loadJSON,
+    VersionFilter,
+    seasonData,
+    fileversionBuffer,
+    billboard,
+    CustomBackground
+};
