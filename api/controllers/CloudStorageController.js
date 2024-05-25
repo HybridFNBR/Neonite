@@ -112,25 +112,14 @@ module.exports = {
 
 	user: function (req, res) {
 		const {versionGlobal} = getVersionInfo(req);
-		return res.json({
-			"uniqueFilename": "ClientSettings.Sav",
-			"filename": "ClientSettings.Sav",
-			"hash": crypto.createHash("sha1").update(fs.readFileSync(path.join(__dirname, `../../ClientSettings/s${versionGlobal}/ClientSettings.sav`))).digest("hex"),
-			"hash256": crypto.createHash("sha256").update(fs.readFileSync(path.join(__dirname, `../../ClientSettings/s${versionGlobal}/ClientSettings.sav`))).digest("hex"),
-			"length": path.join(__dirname, `../../ClientSettings/s${versionGlobal}/ClientSettings.sav`).length,
-			"contentType": "text/plain",
-			"uploaded": fs.statSync(path.join(__dirname, `../../ClientSettings/s${versionGlobal}/ClientSettings.sav`)).mtime,
-			"storageType": "S3",
-			"doNotCache": false
-		})
+		return res.json({})
 	},
 
 	userFile: function async(req, res, next) {
-		const {versionGlobal} = getVersionInfo(req);
-		const ReadClientSettings = fs.readFileSync(path.join(__dirname, `../../ClientSettings/s${versionGlobal}/ClientSettings.sav`));
-		res.send(ReadClientSettings + `?v=64`).status(200).end();
+		res.status(200).send()
 	},
 
 	userPutFile:function (req, res, next) {
+		res.status(200).send()
 	},
 };

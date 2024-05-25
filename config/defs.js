@@ -344,14 +344,6 @@ const {discoveryResponses} = require("../discovery/events")
         return JSON.parse(jsonData);
     };
 
-    const fileversionBuffer = (version, filePath) => {
-        const buffer = Buffer.alloc(5);
-        buffer.writeUInt32LE(version, 0);
-        buffer.fill(0, 4);
-        fs.writeFileSync(filePath, buffer);
-    }
-    //scuffed fix but it works.
-    
     const VersionFilter = [
         "Cert",
         "Live",
@@ -697,7 +689,6 @@ module.exports = {
     loadJSON,
     VersionFilter,
     seasonData,
-    fileversionBuffer,
     billboard,
     CustomBackground
 };
