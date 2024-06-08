@@ -674,6 +674,9 @@ const CustomBackground = (version, versionGlobal, backgrounds, content) =>{
                     backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/br-lobby-ch5s2-4096x2304-a0879ccdaafc.jpg"
                 }
             break;
+            case "30":
+                backgrounds[0].stage = "season3000"
+                backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/lobby-br-c5s3-4096x2048-7a9c78cb7b9a.jpg"
             default:
                 backgrounds[0].backgroundimage = content.dynamicbackgrounds.backgrounds.backgrounds[0].backgroundimage;
                 backgrounds[0].stage = content.dynamicbackgrounds.backgrounds.backgrounds[0].stage;
