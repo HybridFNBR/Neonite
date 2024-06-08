@@ -34,7 +34,7 @@ _In acquiescence to Epic Games Inc. - Please note that access to all cosmetics f
    * Neonite V2 is a locally-hosted project, meaning it has no party or friends functionality.
  * Why don't I see any cosmetics in my locker?
    * We removed cosmetics because Epic Games made it clear it does not like services that offer cosmetics for free. If you wish for skins you're welcome to add them yourself.
-
+   
 <!-- CONTACT -->
 ## Support
 Discord Server: [Carbon](https://discord.gg/carbon-897532507048796210) <- *you can get the launcher + backend alternatively from here since there is a possibility this repo wont be updated*
