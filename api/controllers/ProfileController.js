@@ -570,8 +570,10 @@ module.exports = {
 				}
 				bChanged = false
 				if (req.body.variantUpdates.length != 0) {
-					for(var variant in item.attributes.variants){
-						item.attributes.variants[variant].active = req.body.variantUpdates[variant].active
+					for (var variant in item.attributes.variants) {
+						if (item.attributes.variants.hasOwnProperty(variant) && req.body.variantUpdates.hasOwnProperty(variant) && item.attributes.variants[variant].channel === req.body.variantUpdates[variant].channel) {
+							item.attributes.variants[variant].active = req.body.variantUpdates[variant].active;
+						}
 					}
 					response.profileChanges[0] = [{
 						changeType: "itemAttrChanged",
