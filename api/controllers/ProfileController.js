@@ -513,7 +513,7 @@ module.exports = {
 
 			case "EquipBattleRoyaleCustomization": {
 				let statName, itemToSlot
-
+				const item = profileData.items[req.body.itemToSlot];
 				switch (req.body.slotName) {
 					case "Character":
 						statName = "favorite_character"
@@ -568,7 +568,20 @@ module.exports = {
 						itemToSlot = arr;
 						break
 				}
-
+				bChanged = false
+				if (req.body.variantUpdates.length != 0) {
+					for(var variant in item.attributes.variants){
+						item.attributes.variants[variant].active = req.body.variantUpdates[variant].active
+					}
+					response.profileChanges[0] = [{
+						changeType: "itemAttrChanged",
+						itemId: req.body.itemToSlot,
+						attributeName: "variants",
+						attributeValue: item.attributes.variants
+					}]
+					Profile.bumpRvn(athenprofile)
+					bChanged = true
+				}
 				if (statName != null && itemToSlot != null) {
 					Profile.modifyStat(profileData, statName, itemToSlot, response.profileChanges);
 					Profile.bumpRvn(athenprofile)
