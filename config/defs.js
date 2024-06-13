@@ -680,8 +680,22 @@ const CustomBackground = (version, versionGlobal, backgrounds, content) =>{
         }
     }
 }
+
+//mainly for carbon so its easy for me to update playlist data, - hybrid
+const Playlists = (fortnitegame, version) =>{
+    const playlistData = fortnitegame.playlistinformation.playlist_info.playlists
+    if(version == 7.40){
+        playlistData[6].image = "https://i.imgur.com/3xoXe4R.png"
+        playlistData[6].description = "Fan-made Fortnite Live Event. Not endorsed by Epic Games. Drop into the water planet and enjoy the show.\nEvent Made by bigboitaj2005tajypoo(@jalzod), sizzyleaks & Era Dev Team(@ProjectEraFN)"
+        playlistData[6].display_name = "ERA FESTIVAL"
+    }
+    playlistData[3].image = "https://i.imgur.com/Itx0SsX.png"
+
+
+}
     
 module.exports = {
+    Playlists,
     MPLockerLoadout,
     getVersionInfo,
     simpleProfile,
