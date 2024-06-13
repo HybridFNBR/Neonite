@@ -233,14 +233,18 @@ module.exports = {
 
 	catalog: function(req, res){
 		const {version, versionGlobal} = getVersionInfo(req);
-			if(version >= 26.30)
-				return res.json(loadJSON("../responses/shopv2.json"));
-			if (VersionFilter.includes(versionGlobal) || version <= 3.5) {
-				return res.status(404).end();
-			}
-			else{
-				return res.json(loadJSON("../responses/shopv1.json"))
-			}
+		if(version >= 30.10){
+			return res.json(loadJSON("../responses/shopv3.json"));
+		}
+		if(version >= 26.30){
+			return res.json(loadJSON("../responses/shopv2.json"));
+		}
+		if (VersionFilter.includes(versionGlobal) || version <= 3.5) {
+			return res.status(404).end();
+		}
+		else{
+			return res.json(loadJSON("../responses/shopv1.json"))
+		}
 	},
 
 	catalogBulk: function(req, res){
