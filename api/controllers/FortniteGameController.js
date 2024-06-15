@@ -29,7 +29,7 @@ module.exports = {
             "Cool Section Name"
         )
         fortnitegame.mpItemShop.shopData["sections"].push(CustomBillBoardSection)
-        //Custom BillBoard Section example^ in this example the "LayoutID" would be "StartYourEngines.Behemoth.99", you would need to modifu the data in shopv2 accordingly to utilize your custom section*/
+        //Custom BillBoard Section example^ in this example the "LayoutID" would be "StartYourEngines.Behemoth.99", you would need to modify the data in shopv2/shopv3.json accordingly to utilize your custom section*/
 
         return res.json(fortnitegame);
     },
