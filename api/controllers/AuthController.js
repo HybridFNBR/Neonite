@@ -22,6 +22,7 @@ module.exports = {
 					displayName = req.body.username;
 				}
             	accountId = displayName.replace(/ /g, "_");
+			break;
 			case "exchange_code":
 				if (!req.body.exchange_code) {
 					throw new ApiException(errors.com.epicgames.common.oauth.invalid_request).with("exchange_code")
