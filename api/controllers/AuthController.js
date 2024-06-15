@@ -22,6 +22,13 @@ module.exports = {
 					displayName = req.body.username;
 				}
             	accountId = displayName.replace(/ /g, "_");
+			case "exchange_code":
+				if (!req.body.exchange_code) {
+					throw new ApiException(errors.com.epicgames.common.oauth.invalid_request).with("exchange_code")
+				}
+
+				displayName = req.body.exchange_code;
+				accountId = req.body.exchange_code;
             break;
         }
         let token = jsonwebtoken.sign({
