@@ -12,7 +12,7 @@ module.exports = {
 		if (seasonData[version]) {
 			return res.json(seasonData[version]);
 		}
-		if (versionGlobal === "19") {
+		if (versionGlobal === 19) {
 			return res.json(discoveryResponses.ver19);
 		}
 		else{
@@ -136,7 +136,7 @@ module.exports = {
 			const eventBuilds = seasonData[version].Panels[0].Pages[0].results.map(result => result.linkData);
 			return res.json(eventBuilds);
 		}
-		if (versionGlobal === "19") {
+		if (versionGlobal === 19) {
 			const s19 = discoveryResponses.ver19.Panels[0].Pages[0].results.map(result => result.linkData);
 			return res.json(s19);
 		}
@@ -315,7 +315,7 @@ module.exports = {
 			return false;
 		};
 		const season19 = () => {
-			if (versionGlobal === "19") {
+			if (versionGlobal === 19) {
 				const result = linkData(discoveryResponses.ver19.Panels[0].Pages[0].results, req.params.playlistId);
 				if (result) return res.json(result);
 			}

@@ -347,25 +347,27 @@ module.exports = {
 			}
 
 			case "QueryProfile": {
-				if(athenprofile.stats){
-					var pastSeasons = [];
-					for (var i = 1; i <= 100; i++) {
-						pastSeasons.push({
-							"seasonNumber": i,
-							"numWins": 10000,
-							"seasonXp": 1000000,
-							"seasonLevel": 500,
-							"level": 200,
-							"bookXp": 1000000,
-							"bookLevel": 500,
-							"purchasedVIP": true
-						});
-					}
-					Profile.modifyStat(athenprofile, "book_level", 200)
-					Profile.modifyStat(athenprofile, "level", 200)
-					Profile.modifyStat(athenprofile, "season_num", versionGlobal)
-					Profile.modifyStat(athenprofile, "past_seasons", pastSeasons)
+				
+				var pastSeasons = [];
+				for (var i = 1; i <= 100; i++) {
+					pastSeasons.push({
+						"seasonNumber": i,
+						"numWins": 10000,
+						"seasonXp": 1000000,
+						"seasonLevel": 500,
+						"level": 200,
+						"bookXp": 1000000,
+						"bookLevel": 500,
+						"purchasedVIP": true
+					});
 				}
+				Profile.modifyStat(athenprofile, "book_level", 200)
+				Profile.modifyStat(athenprofile, "level", 200)
+				Profile.modifyStat(athenprofile, "accountLevel", 200)
+				Profile.modifyStat(athenprofile, "season_num", versionGlobal)
+				Profile.modifyStat(athenprofile, "past_seasons", pastSeasons)	
+				Profile.saveProfile(accountId, "athena", athenprofile);
+            	Profile.bumpRvn(athenprofile);			
 				
 				if(config.simpleProfile == true){simpleProfile(accountId, athenprofile)}
 				if(version >= 28.00){
