@@ -21,6 +21,7 @@ module.exports = {
             "99",
             "https://cdn2.unrealengine.com/30-00-wasteland---br-shop---hero-billboard-character-suv---1920-x-1080-1920x1080-2a274bda65d6.png",
             "https://cdn2.unrealengine.com/30-0-wasteland---br-shop-backround-vfinal-1920x1080-8169569b15bd.jpg",
+            "",
             "FFFFFF",
             "FFFFFF",
             "Cool Title",

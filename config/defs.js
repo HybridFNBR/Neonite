@@ -368,6 +368,7 @@ const {discoveryResponses} = require("../discovery/events")
  * @param {string} stackRankValue the number at the end of the layoutId example: "sectionID.offerGoupsectionID.stackRankValue"
  * @param {string} foregroundUrl image displayed on top of the background
  * @param {string} backgroundUrl image url of the background
+ * @param {string} bodyImage apeaers alongside the text
  * @param {string} titleColorA color of the title, has to be a hex value
  * @param {string} titleColorB color of the subtitle, text below the title, has to be a hex value
  * @param {string} title title
@@ -375,7 +376,7 @@ const {discoveryResponses} = require("../discovery/events")
  * @param {string} buttonText button text
  * @param {string} SectiondisplayName display name of the shop section
  */
-const billboard = (sectionID, offerGoupsectionID, stackRankValue, foregroundUrl, backgroundUrl, titleColorA, titleColorB, title, subtitle, buttonText, SectiondisplayName) => {
+const billboard = (sectionID, offerGoupsectionID, stackRankValue, foregroundUrl, backgroundUrl, bodyImage, titleColorA, titleColorB, title, subtitle, buttonText, SectiondisplayName) => {
     return {
         "metadata": {
             "offerGroups": [
@@ -415,6 +416,11 @@ const billboard = (sectionID, offerGoupsectionID, stackRankValue, foregroundUrl,
                             "_type": "MP Item Shop - Offer Group Texture Metadata",
                             "value": backgroundUrl,
                             "key": "background"
+                          },
+                          {
+                            "_type": "MP Item Shop - Offer Group Texture Metadata",
+                            "value": bodyImage,
+                            "key": "bodyImage"
                           }
                         ],
                         "_type": "MP Item Shop - Offer Group Metadata",
