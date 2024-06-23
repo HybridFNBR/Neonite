@@ -348,7 +348,7 @@ module.exports = {
 
 			case "QueryProfile": {
 				
-				if(profileId == "athena"){
+				try{
 					var pastSeasons = [];
 					for (var i = 1; i <= 100; i++) {
 						pastSeasons.push({
@@ -370,6 +370,7 @@ module.exports = {
 					Profile.saveProfile(accountId, "athena", athenprofile);
 					Profile.bumpRvn(athenprofile);			
 				}
+				catch{}
 				if(config.simpleProfile == true){simpleProfile(accountId, athenprofile)}
 				if(version >= 28.00){
 					if(profileId == "athena"){
