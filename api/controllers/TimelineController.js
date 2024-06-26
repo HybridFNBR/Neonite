@@ -983,6 +983,15 @@ module.exports = {
             )
         }
 
+        if(version == 30.20){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push(
+            {
+                eventType: "EventFlag.Event_Greenhouse", //Pirates Of the Caribbean Mini Pass(season 11)
+                activeUntil: "9999-09-14T07:00:00.000Z",
+                activeSince: "2020-09-09T07:00:00.000Z"
+            },
+        )}
+
         if(versionGlobal == 11 || versionGlobal == 15){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
