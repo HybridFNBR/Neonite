@@ -5,7 +5,7 @@ const fs = require("fs");
 const { v4: uuidv4 } = require("uuid");
 const path = require('path');
 var ini = require('ini')
-const { getVersionInfo, MPLockerLoadout, simpleProfile, CH1Fix, VersionFilter, loadJSON} = require("../../config/defs")
+const { getVersionInfo, MPLockerLoadout, simpleProfile, CH1Fix, VersionFilter, loadJSON, MiniPass} = require("../../config/defs")
 
 Array.prototype.insert = function ( index, item ) {
 	this.splice( index, 0, item );
@@ -138,6 +138,10 @@ module.exports = {
 			}
 
 			case "RequestRestedStateIncrease":{
+				var xpValue = profileData.stats.attributes["book_xp"] + req.body.restedXpGenAccumulated
+				Profile.modifyStat(athenprofile, "book_xp", xpValue)
+				Profile.bumpRvn(profileData)
+				console.log(req.body)
 				break;
 			}
 
@@ -177,6 +181,9 @@ module.exports = {
 			}
 
 			case "AthenaPinQuest":{
+				Profile.modifyStat(athenprofile, "pinned_quest", req.body.pinnedQuest)
+				Profile.saveProfile(accountId, "athena", athenprofile)
+				Profile.bumpRvn("athena")
 				break;
 			}
 
@@ -347,8 +354,11 @@ module.exports = {
 			}
 
 			case "QueryProfile": {
-				
 				try{
+					let miniPassData = loadJSON("../config/MiniPass.json")
+					for (const [questId, quest] of Object.entries(miniPassData)) {
+						Profile.addItem(athenprofile, questId, quest);
+					}
 					var pastSeasons = [];
 					for (var i = 1; i <= 100; i++) {
 						pastSeasons.push({

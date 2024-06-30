@@ -783,7 +783,7 @@ module.exports = {
             )
         }
         
-        if(version == 24.40){
+        if(version == 24.30 || version == 24.40){
             timeline.channels["client-events"]["states"][0]["activeEvents"].push(
                 {
                     eventType: "EventFlag.Event_PlotTwist", // Star Wars 2023 tab 
@@ -986,7 +986,7 @@ module.exports = {
         if(version == 30.20){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
             {
-                eventType: "EventFlag.Event_Greenhouse", //Pirates Of the Caribbean Mini Pass(season 11)
+                eventType: "EventFlag.Event_Greenhouse", //Pirates Of the Caribbean Mini Pass
                 activeUntil: "9999-09-14T07:00:00.000Z",
                 activeSince: "2020-09-09T07:00:00.000Z"
             },
