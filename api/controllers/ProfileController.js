@@ -607,21 +607,24 @@ module.exports = {
 						break
 				}
 				bChanged = false
-				if (req.body.variantUpdates.length != 0) {
-					for (var variant in item.attributes.variants) {
-						if (item.attributes.variants.hasOwnProperty(variant) && req.body.variantUpdates.hasOwnProperty(variant) && item.attributes.variants[variant].channel === req.body.variantUpdates[variant].channel) {
-							item.attributes.variants[variant].active = req.body.variantUpdates[variant].active;
+				try{
+					if (req.body.variantUpdates.length != 0) {
+						for (var variant in item.attributes.variants) {
+							if (item.attributes.variants.hasOwnProperty(variant) && req.body.variantUpdates.hasOwnProperty(variant) && item.attributes.variants[variant].channel === req.body.variantUpdates[variant].channel) {
+								item.attributes.variants[variant].active = req.body.variantUpdates[variant].active;
+							}
 						}
+						response.profileChanges[0] = [{
+							changeType: "itemAttrChanged",
+							itemId: req.body.itemToSlot,
+							attributeName: "variants",
+							attributeValue: item.attributes.variants
+						}]
+						Profile.bumpRvn(athenprofile)
+						bChanged = true
 					}
-					response.profileChanges[0] = [{
-						changeType: "itemAttrChanged",
-						itemId: req.body.itemToSlot,
-						attributeName: "variants",
-						attributeValue: item.attributes.variants
-					}]
-					Profile.bumpRvn(athenprofile)
-					bChanged = true
 				}
+				catch{}
 				if (statName != null && itemToSlot != null) {
 					Profile.modifyStat(profileData, statName, itemToSlot, response.profileChanges);
 					Profile.bumpRvn(athenprofile)
