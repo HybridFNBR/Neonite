@@ -8,7 +8,7 @@ module.exports.routes = {
     },
     'GET /Builds/Fortnite/Content/CloudDir/*.ini': 'ApiController.ini',
     'GET /Builds/Fortnite/Content/CloudDir/ChunksV4/:chunknum/*.chunk':{ 
-        action: "ChunksV4",
+        action: "CosmeticStreaming",
         controller:'ApiController', 
         skipAssets: false
     },
@@ -63,13 +63,13 @@ module.exports.routes = {
         controller:'ApiController', 
         skipAssets: false
     },
-    'GET /ias/fortnite/:Hash':{ 
+    'HEAD /ias/fortnite/:Hash':{ 
         action: "ias",
         controller:'ApiController', 
         skipAssets: false
     },
     'GET /ias/fortnite/chunks/:chunkNum/:chunkFile':{ 
-        action: "iasChunks",
+        action: "CosmeticStreaming",
         controller:'ApiController', 
         skipAssets: false
     },

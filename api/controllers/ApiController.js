@@ -67,16 +67,6 @@ module.exports = {
 		res.sendFile(path.join(__dirname, '../../LauncherAssets/Full.ini'));
 	},
 
-	ChunksV4: async function(req, res){
-		const response = await axios.get(`https://fastly-download.epicgames.com${req.originalUrl}`, {
-			responseType: 'stream' 
-		});
-        res.set({
-            'Content-Type': "application/octet-stream"
-        });
-        response.data.pipe(res).status(200).end();
-	},
-
 	ias: async function (req, res) {
 		const response = await axios.get(`https://fastly-download.epicgames.com${req.originalUrl}`, {
 			responseType: 'stream' 
@@ -89,7 +79,7 @@ module.exports = {
 		
 	},
 
-	iasChunks: async function(req, res){
+	CosmeticStreaming: async function(req, res){
 		const response = await axios.get(`https://fastly-download.epicgames.com${req.originalUrl}`, {
 			responseType: 'stream' 
 		});
