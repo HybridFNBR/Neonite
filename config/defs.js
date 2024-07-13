@@ -653,7 +653,7 @@ const CustomBackground = (version, versionGlobal, backgrounds, content) =>{
                     backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/durianlobby2-4096x2048-242a51b6a8ee.jpg"
                 }
                 else{
-                    backgrounds[0].stage = "season2700"
+                    backgrounds[0].stage = "rufus"
                 }
             break;
             case 28:
