@@ -134,28 +134,28 @@ module.exports = {
 
 	habaneroTracks: function(req, res){
 		res.json([
-				{
+			{
 				"gameId": "fortnite",
 				"trackguid": "OiK9k9",
 				"rankingType": "ranked-br",
 				"beginTime": "2023-11-02T07:00:18Z",
 				"endTime": "2025-01-01T07:00:17Z",
 				"divisionCount": 18
-				},
-				{
+			},
+			{
 				"gameId": "fortnite",
 				"trackguid": "hEKWqj",
 				"rankingType": "ranked-zb",
 				"beginTime": "2023-11-02T07:00:18Z",
 				"endTime": "2025-01-01T07:00:17Z",
 				"divisionCount": 18
-				}
+			}
 		])
 	},
 
 	habaneroProgress: function(req, res){
 		res.json([
-				{
+			{
 				"gameId": "fortnite",
 				"trackguid": "hEKWqj",
 				"accountId": req.params.accountId,
@@ -165,8 +165,8 @@ module.exports = {
 				"highestDivision": 0,
 				"promotionProgress": 0,
 				"currentPlayerRanking": null
-				},
-				{
+			},
+			{
 				"gameId": "fortnite",
 				"trackguid": "OiK9k9",
 				"accountId": req.params.accountId,
@@ -176,7 +176,7 @@ module.exports = {
 				"highestDivision": 18,
 				"promotionProgress": 0.88,
 				"currentPlayerRanking": null
-				}
+			}
 		])
 	},
 
@@ -223,13 +223,15 @@ module.exports = {
 
 	catalog: function(req, res){
 		const {version, versionGlobal} = getVersionInfo(req);
+		console.log(version)
+		console.log(versionGlobal)
 		if(version >= 30.10){
 			return res.json(loadJSON("../responses/shopv3.json"));
 		}
 		if(version >= 26.30){
 			return res.json(loadJSON("../responses/shopv2.json"));
 		}
-		if (VersionFilter.includes(versionGlobal) || version <= 3.5) {
+		if (VersionFilter.includes(version) || version <= 3.5) {
 			return res.status(404).end();
 		}
 		else{
