@@ -223,8 +223,6 @@ module.exports = {
 
 	catalog: function(req, res){
 		const {version, versionGlobal} = getVersionInfo(req);
-		console.log(version)
-		console.log(versionGlobal)
 		if(version >= 30.10){
 			return res.json(loadJSON("../responses/shopv3.json"));
 		}
