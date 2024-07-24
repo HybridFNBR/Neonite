@@ -983,10 +983,44 @@ module.exports = {
             )
         }
 
-        if(version == 30.20){
+        if(version == 30.20 || version == 30.30){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
             {
                 eventType: "EventFlag.Event_Greenhouse", //Pirates Of the Caribbean Mini Pass
+                activeUntil: "9999-09-14T07:00:00.000Z",
+                activeSince: "2020-09-09T07:00:00.000Z"
+            },
+        )}
+
+        if(version == 30.30){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push(
+            {
+                eventType: "RE_01_Cutout",
+                activeUntil: "9999-09-14T07:00:00.000Z",
+                activeSince: "2020-09-09T07:00:00.000Z"
+            },
+            {
+                eventType: "RE_02_Cutout",
+                activeUntil: "9999-09-14T07:00:00.000Z",
+                activeSince: "2020-09-09T07:00:00.000Z"
+            },
+            {
+                eventType: "RE_03_Cutout",
+                activeUntil: "9999-09-14T07:00:00.000Z",
+                activeSince: "2020-09-09T07:00:00.000Z"
+            },
+            {
+                eventType: "RE_01", //Nitro Pipeline Stage 1
+                activeUntil: "9999-09-14T07:00:00.000Z",
+                activeSince: "2020-09-09T07:00:00.000Z"
+            },
+            {
+                eventType: "RE_02", //Nitro Pipeline Stage 2
+                activeUntil: "9999-09-14T07:00:00.000Z",
+                activeSince: "2020-09-09T07:00:00.000Z"
+            },
+            {
+                eventType: "RE_03", //Nitro Pipeline Stage 3
                 activeUntil: "9999-09-14T07:00:00.000Z",
                 activeSince: "2020-09-09T07:00:00.000Z"
             },
