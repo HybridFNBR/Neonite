@@ -555,6 +555,9 @@ const CustomBackground = (version, versionGlobal, backgrounds, content) =>{
                 backgrounds[0].stage = "seasonx";
             break;
             case 11:
+                if(version === "11.10"){
+                    background[0].stage = "Galileo"
+                }
                 if (version === "11.31" || version === "11.40") {
                     backgrounds[0].stage = "Winter19";
                 } 
@@ -572,17 +575,27 @@ const CustomBackground = (version, versionGlobal, backgrounds, content) =>{
                 backgrounds[0].stage = "season14";
             break;
             case 15:
-                backgrounds[0].stage = "season15";
                 if(version === "15.10"){
                     backgrounds[0].stage = "season15xmas"
                     backgrounds[1].stage = "XmasStore2020"
+                }
+                else{
+                    backgrounds[0].stage = "season15";
                 }
             break;
             case 16:
                 backgrounds[0].stage = "season16";
             break;
             case 17:
-                backgrounds[0].stage = "season17";
+                if(version === "17.10"){
+                    background[0].stage = "defaultnotris"
+                    background[0].backgroundimage = "https://cdn2.unrealengine.com/t-bp-17-lobby-summer-2048x1024-709fa99e6be0.png"
+                }
+                else{
+                    const backgroundStages = ["season17d", "season17c", "season17b", "season17"];
+                    const randombackground = backgroundStages[Math.floor(Math.random() * backgroundStages.length)];
+                    backgrounds[0].stage = `${randombackground}`;
+                }
             break;
             case 18:
                 backgrounds[0].stage = "season18";
@@ -617,14 +630,17 @@ const CustomBackground = (version, versionGlobal, backgrounds, content) =>{
                 }
             break;
             case 22:
+                backgrounds[0].stage = "defaultnotris"
                 backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/t-bp22-lobby-square-2048x2048-2048x2048-e4e90c6e8018.jpg";
             break;
             case 23:
                 if(version === "23.10")
                 {   
+                    backgrounds[0].stage = "season2310"
                     backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/t-bp23-winterfest-lobby-square-2048x2048-2048x2048-277a476e5ca6.png"
                 }
                 else{
+                    backgrounds[0].stage = "season2300"
                     backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/t-bp23-lobby-2048x1024-2048x1024-26f2c1b27f63.png"
                 }
             break;
@@ -633,7 +649,7 @@ const CustomBackground = (version, versionGlobal, backgrounds, content) =>{
                 backgrounds[0].backgroundimage = "https://static.wikia.nocookie.net/fortnite/images/e/e7/Chapter_4_Season_2_-_Lobby_Background_-_Fortnite.png"
             break;
             case 25:
-                backgrounds[0].stage = "defaultnotris"
+                backgrounds[0].stage = "season2500"
                 backgrounds[0].backgroundimage = "https://static.wikia.nocookie.net/fortnite/images/c/ca/Chapter_4_Season_3_-_Lobby_Background_-_Fortnite.png"
             break;
             case 26:
@@ -668,7 +684,7 @@ const CustomBackground = (version, versionGlobal, backgrounds, content) =>{
             break;
             case 29:
                 if(version === "29.20"){
-                    backgrounds[0].stage = "defaultnotris"
+                    backgrounds[0].stage = "season2920"
                     backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/iceberg-lobby-3840x2160-217bb6ea8af9.jpg"                        
                 }
                 if(version === "29.40"){
@@ -680,6 +696,15 @@ const CustomBackground = (version, versionGlobal, backgrounds, content) =>{
                     backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/br-lobby-ch5s2-4096x2304-a0879ccdaafc.jpg"
                 }
             break;
+            case 30:
+                if(version === "30.20" || version === "30.30"){
+                    background[0].stage = "season3020"
+                    background[0].backgroundimage = "https://cdn2.unrealengine.com/mkart-c5s3-msee-lobby-bg-2560x1440-9c8aa7721e41.jpg"
+                }
+                else{
+                    background[0].stage = "season3000"
+                    background[0].backgroundimage = "https://cdn2.unrealengine.com/lobby-br-c5s3-4096x2048-7a9c78cb7b9a.jpg"
+                }
             default:
                 backgrounds[0].backgroundimage = content.dynamicbackgrounds.backgrounds.backgrounds[0].backgroundimage;
                 backgrounds[0].stage = content.dynamicbackgrounds.backgrounds.backgrounds[0].stage;
@@ -695,7 +720,10 @@ const Playlists = (fortnitegame, version) =>{
         playlistData[6].description = "Fan-made Fortnite Live Event. Not endorsed by Epic Games. Drop into the water planet and enjoy the show.\nEvent Made by bigboitaj2005tajypoo(@jalzod), sizzyleaks & Era Dev Team(@ProjectEraFN)"
         playlistData[6].display_name = "ERA FESTIVAL"
     }
+    playlistData[2].image = "https://i.imgur.com/tm6gOaE.png"
     playlistData[3].image = "https://i.imgur.com/Itx0SsX.png"
+    playlistData[4].image = "https://i.imgur.com/2wzonis.png"
+    
 
 
 }
