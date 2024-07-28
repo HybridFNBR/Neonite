@@ -990,10 +990,6 @@ module.exports = {
                 activeUntil: "9999-09-14T07:00:00.000Z",
                 activeSince: "2020-09-09T07:00:00.000Z"
             },
-        )}
-
-        if(version == 30.30){
-            timeline.channels['client-events']['states'][0]['activeEvents'].push(
             {
                 eventType: "RE_01_Cutout",
                 activeUntil: "9999-09-14T07:00:00.000Z",
@@ -1025,7 +1021,6 @@ module.exports = {
                 activeSince: "2020-09-09T07:00:00.000Z"
             },
         )}
-
         if(versionGlobal == 11 || versionGlobal == 15){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
@@ -1390,6 +1385,51 @@ module.exports = {
                 },
                 {
                     eventType: "2021_SM09", //Snow Stage 09(Ch3S1 related)
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "9999-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "c_2021_SM01", //Client Snow Stage 01(Ch3S1 related)
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "c_2021_SM02", //Client Snow Stage 02(Ch3S1 related)
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "9999-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "c_2021_SM03", //Client Snow Stage 03(Ch3S1 related)
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "9999-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "c_2021_SM04", //Client Snow Stage 04(Ch3S1 related)
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "9999-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "c_2021_SM05", //Client Snow Stage 05(Ch3S1 related)
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "9999-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "c_2021_SM06", //Client Snow Stage 06(Ch3S1 related)
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "9999-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "c_2021_SM07", //Client Snow Stage 07(Ch3S1 related)
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "9999-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "c_2021_SM08", //Client Snow Stage 08(Ch3S1 related)
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "9999-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "c_2021_SM09", //Client Snow Stage 09(Ch3S1 related)
                     activeUntil: "9999-09-09T07:00:00.000Z",
                     activeSince: "9999-09-09T07:00:00.000Z"
                 },
