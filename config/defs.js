@@ -555,7 +555,7 @@ const CustomBackground = (version, versionGlobal, backgrounds, content) =>{
                 backgrounds[0].stage = "seasonx";
             break;
             case 11:
-                if(version === "11.10"){
+                if(version === "11.30"){
                     background[0].stage = "Galileo"
                 }
                 if (version === "11.31" || version === "11.40") {
@@ -723,7 +723,7 @@ const Playlists = (fortnitegame, version) =>{
     playlistData[2].image = "https://i.imgur.com/tm6gOaE.png"
     playlistData[3].image = "https://i.imgur.com/Itx0SsX.png"
     playlistData[4].image = "https://i.imgur.com/2wzonis.png"
-    
+
 
 
 }
