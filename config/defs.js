@@ -595,7 +595,6 @@ const CustomBackground = (version, versionGlobal, backgrounds, content) =>{
                     const backgroundStages = ["season17d", "season17c", "season17b", "season17"];
                     const randombackground = backgroundStages[Math.floor(Math.random() * backgroundStages.length)];
                     backgrounds[0].stage = `${randombackground}`;
-                    console.log(randombackground)
                 }
             break;
             case 18:
