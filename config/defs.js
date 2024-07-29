@@ -595,6 +595,7 @@ const CustomBackground = (version, versionGlobal, backgrounds, content) =>{
                     const backgroundStages = ["season17d", "season17c", "season17b", "season17"];
                     const randombackground = backgroundStages[Math.floor(Math.random() * backgroundStages.length)];
                     backgrounds[0].stage = `${randombackground}`;
+                    console.log(randombackground)
                 }
             break;
             case 18:
@@ -698,13 +699,14 @@ const CustomBackground = (version, versionGlobal, backgrounds, content) =>{
             break;
             case 30:
                 if(version === "30.20" || version === "30.30"){
-                    background[0].stage = "season3020"
-                    background[0].backgroundimage = "https://cdn2.unrealengine.com/mkart-c5s3-msee-lobby-bg-2560x1440-9c8aa7721e41.jpg"
+                    backgrounds[0].stage = "season3020"
+                    backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/mkart-c5s3-msee-lobby-bg-2560x1440-9c8aa7721e41.jpg"
                 }
                 else{
-                    background[0].stage = "season3000"
-                    background[0].backgroundimage = "https://cdn2.unrealengine.com/lobby-br-c5s3-4096x2048-7a9c78cb7b9a.jpg"
+                    backgrounds[0].stage = "season3000"
+                    backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/lobby-br-c5s3-4096x2048-7a9c78cb7b9a.jpg"
                 }
+            break;
             default:
                 backgrounds[0].backgroundimage = content.dynamicbackgrounds.backgrounds.backgrounds[0].backgroundimage;
                 backgrounds[0].stage = content.dynamicbackgrounds.backgrounds.backgrounds[0].stage;

@@ -222,7 +222,7 @@ module.exports = {
 	},
 
 	catalog: function(req, res){
-		const {version, versionGlobal} = getVersionInfo(req);
+		const {version} = getVersionInfo(req);
 		if(version >= 30.10){
 			return res.json(loadJSON("../responses/shopv3.json"));
 		}
