@@ -480,6 +480,11 @@ module.exports = {
                     eventType: "TR1",//unhides the rift in the sky in season13(13.40)
                     activeUntil: "9999-09-14T07:00:00.000Z",
                     activeSince: "2015-09-14T07:00:00.000Z"
+                },
+                {
+                    eventType: "CBS1",//Coral buddies stage 1
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2015-09-14T07:00:00.000Z"
                 },                      
             )
         }
