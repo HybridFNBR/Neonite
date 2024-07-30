@@ -77,6 +77,10 @@ module.exports = {
 			  "+FrontEndPlaylistData=(PlaylistName=Playlist_Fritter_64, PlaylistAccess=(bEnabled=false, CategoryIndex=1, DisplayPriority=-999))",
 			  "+FrontEndPlaylistData=(PlaylistName=Playlist_Fritter_64, PlaylistAccess=(bEnabled=true, CategoryIndex=1, DisplayPriority=-999))"
 			],
+			"14.60": [
+			  "+FrontEndPlaylistData=(PlaylistName=Playlist_Junior_32, PlaylistAccess=(bEnabled=false, CategoryIndex=1, DisplayPriority=-999))",
+			  "+FrontEndPlaylistData=(PlaylistName=Playlist_Junior_32, PlaylistAccess=(bEnabled=true, CategoryIndex=1, DisplayPriority=-999))"
+			],
         };
 		  
         if (replacements[version]) {
