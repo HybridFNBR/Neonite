@@ -105,26 +105,6 @@ module.exports = {
                                 activeSince: "9999-09-09T07:00:00.000Z"
                             },
                             {
-                                eventType: "RG01", //RiftGate_Stage_01(Ch4S1 related)
-                                activeUntil: "9999-09-09T07:00:00.000Z",
-                                activeSince: "9999-09-09T07:00:00.000Z"
-                            },
-                            {
-                                eventType: "RG02", //RiftGate_Stage_02(Ch4S1 related)
-                                activeUntil: "9999-09-09T07:00:00.000Z",
-                                activeSince: "9999-09-09T07:00:00.000Z"
-                            },
-                            {
-                                eventType: "ST01", //ST_Stage_01(Ch4S1 related)
-                                activeUntil: "9999-09-09T07:00:00.000Z",
-                                activeSince: "9999-09-09T07:00:00.000Z"
-                            },
-                            {
-                                eventType: "ST02", //ST_Stage_02(Ch4S1 related)
-                                activeUntil: "9999-09-09T07:00:00.000Z",
-                                activeSince: "9999-09-09T07:00:00.000Z"
-                            },
-                            {
                                 eventType: "MLQ24", 
                                 activeUntil: "9999-09-09T07:00:00.000Z",
                                 activeSince: "9999-09-09T07:00:00.000Z"
@@ -387,9 +367,24 @@ module.exports = {
                     activeSince: "2019-12-31T23:59:59.999Z"
                 },           
             )
-        }   
+        }
+
+        if(version == 12.30){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push(
+                {
+                    eventType: "DPY01", // Deadpool Yacht
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },
+                {
+                    eventType: "EventFlag.DonutBattleBus", // Deadpool Battle Bus
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },
+            )
+        }
         
-        if(version == 12.41){
+        if(version == 12.40 || version == 12.41){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "JCD01", // Travis Related (Countdown)
@@ -517,12 +512,22 @@ module.exports = {
                     activeSince: "2020-12-01T21:16:00.000Z"
                 }
             )
-        }        
-
-        if(version == 17.30){
+        }
+        
+        if(version == 17.10){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
-                    eventType: "BEL01", // Rift Tour-related (Countdown)
+                    eventType: "WLCM1", //Welcome Party full-swing
+                    activeUntil: "9999-09-14T07:00:00.000Z", 
+                    activeSince: "2021-07-27T06:00:00.000Z"
+                },
+            )
+        }
+
+        if(version == 17.30 || version == 17.20){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push(
+                {
+                    eventType: "BEL01", // Leadup In-game/Leadup In-Lobby
                     activeUntil: "9999-09-14T07:00:00.000Z", // #1 2021-08-06T22:05:00.000Z // #2 2021-08-07T18:05:00.000Z // #3 2021-08-08T04:05:00.000Z // #4 2021-08-08T14:05:00.000Z // #5 2021-08-08T22:05:00.000Z
                     activeSince: "2021-07-27T06:00:00.000Z" // #1 2021-07-27T06:00:00.000Z // #2 2021-08-06T23:15:00.000Z // #3 2021-08-07T19:15:00.000Z // #4 2021-08-08T05:15:00.000Z // #5 2021-08-08T15:15:00.000Z
                 },
@@ -532,32 +537,32 @@ module.exports = {
                     activeSince: "2021-07-27T06:00:00.000Z" // #1 2021-07-27T06:00:00.000Z // #2 2021-08-06T23:15:00.000Z // #3 2021-08-07T19:15:00.000Z // #4 2021-08-08T05:15:00.000Z // #5 2021-08-08T15:15:00.000Z
                 },
                 {
-                    eventType: "BEL02", // Rift Tour-related (Countdown)
+                    eventType: "BEL02", // Leadup In-game/Leadup In-Lobby
                     activeUntil: "9999-09-14T07:00:00.000Z", // #1 2021-08-06T22:05:00.000Z // #2 2021-08-07T18:05:00.000Z // #3 2021-08-08T04:05:00.000Z // #4 2021-08-08T14:05:00.000Z // #5 2021-08-08T22:05:00.000Z
                     activeSince: "2021-07-27T06:00:00.000Z" // #1 2021-07-27T06:00:00.000Z // #2 2021-08-06T23:15:00.000Z // #3 2021-08-07T19:15:00.000Z // #4 2021-08-08T05:15:00.000Z // #5 2021-08-08T15:15:00.000Z
                 },
                 {
-                    eventType: "BEP02", // Rift Tour-related (Buffet Enable Pads?)
+                    eventType: "BEP02", // Rift Tour Enable Pads?
                     activeUntil: "2021-09-14T07:00:00.000Z", 
                     activeSince: "2021-07-27T06:00:00.000Z"
                 },
                 {
-                    eventType: "BPLS", // Rift Tour-related (Buffet Party Landingship)
+                    eventType: "BPLS", // Rift Tour Party Landingship
                     activeUntil: "9999-09-14T07:00:00.000Z",
                     activeSince: "2021-07-27T06:00:00.000Z"
                 },
                 {
-                    eventType: "BTP", // Rift Tour-related (Buffet Teaser Poster)
+                    eventType: "BTP", // Rift Tour Teaser Poster
                     activeUntil: "9999-09-14T07:00:00.000Z",
                     activeSince: "2021-07-27T06:00:00.000Z"
                 },
                 {
-                    eventType: "BAP", // Rift Tour-related (Buffet Announce Poster)
+                    eventType: "BAP", // Rift Tour Announce Poster
                     activeUntil: "9999-09-14T07:00:00.000Z",
                     activeSince: "2021-07-27T06:00:00.000Z"
                 },
                 {
-                    eventType: "BTL01", // Rift Tour-related (Buffet TOD Leadup 1)
+                    eventType: "BTL01", // Rift Tour TOD Leadup 1)
                     activeUntil: "9999-09-14T07:00:00.000Z",
                     activeSince: "2021-07-27T06:00:00.000Z"
                 }
@@ -576,115 +581,6 @@ module.exports = {
                     activeUntil: "9999-09-14T07:00:00.000Z",
                     activeSince: "2021-07-27T06:00:00.000Z"
                 }
-            )
-        }
-
-        if(version == 18.40 || versionGlobal == 18){
-            timeline.channels['client-events']['states'][0]['activeEvents'].push(
-                {
-                    eventType: "GGL01", // Chapter 2 Finale Event-related (Countdown)
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2021-07-27T06:00:00.000Z"
-                },
-                {
-                    eventType: "GGL02", // Chapter 2 Finale Event-related (Countdown)
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2021-07-27T06:00:00.000Z"
-                },
-                {
-                    eventType: "LCCS02", // S18 Corruption
-                    activeUntil: "2023-10-18T07:00:00.000Z",
-                    activeSince: "2022-10-10T06:00:00.000Z"
-                },
-                {   eventType: "LCCS01", // S18 Corruption?
-                    activeUntil: "2023-10-18T07:00:00.000Z",
-                    activeSince: "2022-10-10T06:00:00.000Z"
-                },
-                {
-                    eventType: "LCCSP01", //Lobby Corruption Spread Paused(Ch2S8 related)
-                    activeUntil: "9999-09-09T07:00:00.000Z",
-                    activeSince: "9999-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "CTCS01", //Cube Town Corruption Spread(Ch2S8 related)
-                    activeUntil: "9999-09-09T07:00:00.000Z",
-                    activeSince: "9999-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "GCFP01", //Golden Cube Final Placement(Ch2S8 related)
-                    activeUntil: "9999-09-09T07:00:00.000Z",
-                    activeSince: "9999-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "GCMFP01", //Golden Cube Move Final Placement(Ch2S8 related)
-                    activeUntil: "9999-09-09T07:00:00.000Z",
-                    activeSince: "9999-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "CSAWS01", //Crash Site 1 AwakenedState(Ch2S8 related)
-                    activeUntil: "9999-09-09T07:00:00.000Z",
-                    activeSince: "9999-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "CSAWS02", //Crash Site 2 AwakenedState(Ch2S8 related)
-                    activeUntil: "9999-09-09T07:00:00.000Z",
-                    activeSince: "9999-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "CSAWS03", //Crash Site 3 AwakenedState(Ch2S8 related)
-                    activeUntil: "9999-09-09T07:00:00.000Z",
-                    activeSince: "9999-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "CSAWS04", //Crash Site 4 AwakenedState(Ch2S8 related)
-                    activeUntil: "9999-09-09T07:00:00.000Z",
-                    activeSince: "9999-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "CSAWS05", //Crash Site 5 AwakenedState(Ch2S8 related)
-                    activeUntil: "9999-09-09T07:00:00.000Z",
-                    activeSince: "9999-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "GCA01", //Golden Cube Awaken 1(Ch2S8 related)
-                    activeUntil: "9999-09-09T07:00:00.000Z",
-                    activeSince: "9999-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "GCA02", //Golden Cube Awaken 2(Ch2S8 related)
-                    activeUntil: "9999-09-09T07:00:00.000Z",
-                    activeSince: "9999-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "GCA03", //Golden Cube Awaken 3(Ch2S8 related)
-                    activeUntil: "9999-09-09T07:00:00.000Z",
-                    activeSince: "9999-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "GCA04", //Golden Cube Awaken 4(Ch2S8 related)
-                    activeUntil: "9999-09-09T07:00:00.000Z",
-                    activeSince: "9999-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "GCA05", //Golden Cube Awaken 5(Ch2S8 related)
-                    activeUntil: "9999-09-09T07:00:00.000Z",
-                    activeSince: "9999-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "CT01", //Cube Town Phase 1(Ch2S8 related)
-                    activeUntil: "9999-09-09T07:00:00.000Z",
-                    activeSince: "9999-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "CT02", //Cube Town Phase 2(Ch2S8 related)
-                    activeUntil: "9999-09-09T07:00:00.000Z",
-                    activeSince: "9999-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "CT03", //Cube Town Phase 3(Ch2S8 related)
-                    activeUntil: "9999-09-09T07:00:00.000Z",
-                    activeSince: "9999-09-09T07:00:00.000Z"
-                },
             )
         }
 
@@ -713,10 +609,25 @@ module.exports = {
             )
         }
 
-        if(version == 21.40){
+        if(version == 21.30 || version == 21.40){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
-                    eventType: "Event_S21_Stamina", // Dragon Ball tab 
+                    eventType: "STMN_PH", // Dragon Ball Collab Preheat(21.30)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2021-07-27T06:00:00.000Z"
+                },
+                {
+                    eventType: "Event_S21_Stamina", // Dragon Ball tab(21.40)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2021-07-27T06:00:00.000Z"
+                },
+                {
+                    eventType: "RBB01", // Bugle Bloom (Closed)(21.30)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2021-07-27T06:00:00.000Z"
+                },
+                {
+                    eventType: "NSSC02", // No Sweat Summer Concert (Constructed)(21.30)
                     activeUntil: "9999-09-14T07:00:00.000Z",
                     activeSince: "2021-07-27T06:00:00.000Z"
                 }
@@ -726,37 +637,92 @@ module.exports = {
         if(version == 22.40){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
-                    eventType: "RL01", // Fracture Event-related (Countdown)
+                    eventType: "RL01", // Fracture In-Game Leadup
                     activeUntil: "9999-09-14T07:00:00.000Z",
                     activeSince: "2021-07-27T06:00:00.000Z"
                 },
                 {
-                    eventType: "RL02", // Fracture Event-related (Countdown)
+                    eventType: "RL02", // Fracture Radish Lobby Leadup
                     activeUntil: "9999-09-14T07:00:00.000Z",
                     activeSince: "2021-07-27T06:00:00.000Z"
                 },
                 {
-                    eventType: "RL12", // Fracture Event-related (Countdown)
+                    eventType: "RL12", // Fracture Lobby Leadup 2
                     activeUntil: "9999-09-14T07:00:00.000Z",
                     activeSince: "2021-07-27T06:00:00.000Z"
                 },
                 {
-                    eventType: "RL13", // Fracture Event-related (Countdown)
+                    eventType: "RL13", // Fracture Lobby Leadup 3
                     activeUntil: "9999-09-14T07:00:00.000Z",
                     activeSince: "2021-07-27T06:00:00.000Z"
                 },
                 {
-                    eventType: "RL14", // Fracture Event-related (Countdown)
+                    eventType: "RL14", // Fracture Lobby Leadup 4
                     activeUntil: "9999-09-14T07:00:00.000Z",
                     activeSince: "2021-07-27T06:00:00.000Z"
                 },
                 {
-                    eventType: "RL15", // Fracture Event-related (Countdown)
+                    eventType: "RL15", // Fracture Lobby Leadup 5
                     activeUntil: "9999-09-14T07:00:00.000Z",
                     activeSince: "2021-07-27T06:00:00.000Z"
                 },
                 {
-                    eventType: "RL16", // Fracture Event-related (Countdown)
+                    eventType: "RL16", // Fracture Lobby Leadup 6
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2021-07-27T06:00:00.000Z"
+                },
+                {
+                    eventType: "RL22", // Fracture In-Game Leadup 2
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2021-07-27T06:00:00.000Z"
+                },
+                {
+                    eventType: "RL23", // Fracture In-Game Leadup 3
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2021-07-27T06:00:00.000Z"
+                },
+                {
+                    eventType: "RL24", // Fracture In-Game Leadup 4
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2021-07-27T06:00:00.000Z"
+                },
+                {
+                    eventType: "RL25", // Fracture In-Game Leadup 5
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2021-07-27T06:00:00.000Z"
+                },
+                {
+                    eventType: "RL26", // Fracture In-Game Leadup 6
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2021-07-27T06:00:00.000Z"
+                },
+                {
+                    eventType: "RC01", // Fracture Core
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2021-07-27T06:00:00.000Z"
+                },
+                {
+                    eventType: "RC02", // Fracture Core 2
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2021-07-27T06:00:00.000Z"
+                },
+                {
+                    eventType: "RC03", // Fracture Core 3
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2021-07-27T06:00:00.000Z"
+                },
+                {
+                    eventType: "RC04", // Fracture Core 4
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2021-07-27T06:00:00.000Z"
+                },
+                {
+                    eventType: "RC05", // Fracture Core 5
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2021-07-27T06:00:00.000Z"
+                },
+                {
+                    eventType: "RC06", // Fracture Core 6
                     activeUntil: "9999-09-14T07:00:00.000Z",
                     activeSince: "2021-07-27T06:00:00.000Z"
                 }
@@ -784,7 +750,57 @@ module.exports = {
                     eventType: "EventFlag.Event_Vaultbreakers", // Most Wanted tab
                     activeUntil: "9999-09-14T07:00:00.000Z",
                     activeSince: "2021-07-27T06:00:00.000Z"
-                }          
+                },
+                {
+                    eventType: "EventFlag.Event_S23_FindIt", // Event_S23_FindIt
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2021-07-27T06:00:00.000Z"
+                },
+                {
+                    eventType: "RG01", // RiftGate Stage 1
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "9999-09-14T07:00:00.000Z"
+                },
+                {
+                    eventType: "RG02", // RiftGate Stage 2
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2021-07-27T06:00:00.000Z"
+                },
+                {
+                    eventType: "ST01", // Skytear Stage 1
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "9999-09-14T07:00:00.000Z"
+                },
+                {
+                    eventType: "ST02", // Skytear Stage 2
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2021-07-27T06:00:00.000Z"
+                }             
+            )
+        }
+
+        if(version == 24.00 || version == 24.10){
+            timeline.channels["client-events"]["states"][0]["activeEvents"].push(
+                {
+                    eventType: "EventFlag.Event_S24_LanternFest", // Latern Fest 2023 
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2021-07-27T06:00:00.000Z"
+                },
+                {
+                    eventType: "Lanternfest", // Latern Fest 2023 
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2021-07-27T06:00:00.000Z"
+                },
+                {
+                    eventType: "EventFlag.Event_S24_SunBurst", // Sunburst 
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2021-07-27T06:00:00.000Z"
+                },
+                {
+                    eventType: "EventFlag.Event_S24_SpringFling", // Springfling 
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2021-07-27T06:00:00.000Z"
+                }    
             )
         }
         
@@ -1029,24 +1045,44 @@ module.exports = {
         if(versionGlobal == 11 || versionGlobal == 15){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
-                    eventType: "WSL0", //Snow Level(season 11)
+                    eventType: "WSL0", //Snow Level
                     activeUntil: "9999-09-14T07:00:00.000Z",
                     activeSince: "9999-09-14T07:00:00.000Z"
                 },
                 {
-                    eventType: "WSL1", //Snow Level(season 11)
+                    eventType: "WSL1", //Snow Level
                     activeUntil: "9999-09-14T07:00:00.000Z",
                     activeSince: "9999-09-14T07:00:00.000Z"
                 },
                 {
-                    eventType: "WSL2", //Snow Level(season 11)
+                    eventType: "WSL2", //Snow Level
                     activeUntil: "9999-09-14T07:00:00.000Z",
                     activeSince: "9999-09-14T07:00:00.000Z"
                 },
                 {
-                    eventType: "WSL3", //Snow Level(season 11)
+                    eventType: "WSL3", //Snow Level
                     activeUntil: "9999-09-14T07:00:00.000Z",
                     activeSince: "2015-09-14T07:00:00.000Z"
+                },
+            )
+        }
+
+        if(versionGlobal == 12){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push(
+                {
+                    eventType: "FEC01", //FE Cables Stage 1
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-14T07:00:00.000Z"
+                },
+                {
+                    eventType: "FEC02", //FE Cables Stage 2
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-14T07:00:00.000Z"
+                },
+                {
+                    eventType: "FEC03", //Snow Level 3
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-14T07:00:00.000Z"
                 },
             )
         }
@@ -1342,6 +1378,115 @@ module.exports = {
                     eventType: "BPAQ", //Bomb Parts Assembling(Ch2S7 related)
                     activeUntil: "9999-09-09T07:00:00.000Z",
                     activeSince: "2020-09-09T07:00:00.000Z"
+                },
+            )
+        }
+
+        if(versionGlobal == 18){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push(
+                {
+                    eventType: "GGL01", // Chapter 2 Finale Event-related (Countdown)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2021-07-27T06:00:00.000Z"
+                },
+                {
+                    eventType: "GGL02", // Chapter 2 Finale Event-related (Countdown)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2021-07-27T06:00:00.000Z"
+                },
+                {
+                    eventType: "LCCS02", // S18 Corruption
+                    activeUntil: "2023-10-18T07:00:00.000Z",
+                    activeSince: "2022-10-10T06:00:00.000Z"
+                },
+                {   eventType: "LCCS01", // S18 Corruption?
+                    activeUntil: "2023-10-18T07:00:00.000Z",
+                    activeSince: "2022-10-10T06:00:00.000Z"
+                },
+                {
+                    eventType: "LCCSP01", //Lobby Corruption Spread Paused(Ch2S8 related)
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "9999-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "CTCS01", //Cube Town Corruption Spread(Ch2S8 related)
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "9999-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "GCFP01", //Golden Cube Final Placement(Ch2S8 related)
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "2021-07-27T06:00:00.000Z"
+                },
+                {
+                    eventType: "GCMFP01", //Golden Cube Move Final Placement(Ch2S8 related)
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "2021-07-27T06:00:00.000Z"
+                },
+                {
+                    eventType: "CSAWS01", //Crash Site 1 AwakenedState(Ch2S8 related)
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "2021-07-27T06:00:00.000Z"
+                },
+                {
+                    eventType: "CSAWS02", //Crash Site 2 AwakenedState(Ch2S8 related)
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "2021-07-27T06:00:00.000Z"
+                },
+                {
+                    eventType: "CSAWS03", //Crash Site 3 AwakenedState(Ch2S8 related)
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "2021-07-27T06:00:00.000Z"
+                },
+                {
+                    eventType: "CSAWS04", //Crash Site 4 AwakenedState(Ch2S8 related)
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "2021-07-27T06:00:00.000Z"
+                },
+                {
+                    eventType: "CSAWS05", //Crash Site 5 AwakenedState(Ch2S8 related)
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "2021-07-27T06:00:00.000Z"
+                },
+                {
+                    eventType: "GCA01", //Golden Cube Awaken 1(Ch2S8 related)
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "2021-07-27T06:00:00.000Z"
+                },
+                {
+                    eventType: "GCA02", //Golden Cube Awaken 2(Ch2S8 related)
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "2021-07-27T06:00:00.000Z"
+                },
+                {
+                    eventType: "GCA03", //Golden Cube Awaken 3(Ch2S8 related)
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "2021-07-27T06:00:00.000Z"
+                },
+                {
+                    eventType: "GCA04", //Golden Cube Awaken 4(Ch2S8 related)
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "2021-07-27T06:00:00.000Z"
+                },
+                {
+                    eventType: "GCA05", //Golden Cube Awaken 5(Ch2S8 related)
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "2021-07-27T06:00:00.000Z"
+                },
+                {
+                    eventType: "CT01", //Cube Town Phase 1(Ch2S8 related)
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "9999-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "CT02", //Cube Town Phase 2(Ch2S8 related)
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "9999-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "CT03", //Cube Town Phase 3(Ch2S8 related)
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "2021-07-27T06:00:00.000Z"
                 },
             )
         }
