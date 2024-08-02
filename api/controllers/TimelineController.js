@@ -110,11 +110,6 @@ module.exports = {
                                 activeSince: "9999-09-09T07:00:00.000Z"
                             },
                             {
-                                eventType: "EventFlag.LTE_Festivus", // Fetivus Event(Ch1S7 Related)
-                                activeUntil: "9999-09-09T07:00:00.000Z",
-                                activeSince: "2020-10-29T00:00:00.000Z"
-                            },
-                            {
                                 eventType: "EventFlag.BR_S5_Cube_TurnOn", // Cube Lightning(Ch1S5 Related)
                                 activeUntil: "9999-09-09T07:00:00.000Z",
                                 activeSince: "2020-10-29T00:00:00.000Z"
@@ -155,14 +150,34 @@ module.exports = {
                     cacheExpire: new Date(new Date().getTime() + 1000).toISOString() //refresh every second(might be a bit over kill)
                 }
             },
+            eventsTimeOffsetHrs: 0.1,
             cacheIntervalMins: 0.1,
-            currentTime: new Date().toISOString()
         }
 
         if(version == 4.5){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
-                    eventType: "EventFlag.BR_S4_Geode_Countdown", //
+                    eventType: "EventFlag.BR_S4_Geode_Countdown", //Rocket Launch Event Countdown
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },
+                {
+                    eventType: "EventFlag.BR_S4_Oddity_02_Event", //Oddity 02 Event
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },
+                {
+                    eventType: "EventFlag.BR_S4_Oddity_03_Event", //Oddity 03 Event
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },
+                {
+                    eventType: "EventFlag.BR_S4_Oddity_04_Event", //Oddity 04 Event
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },
+                {
+                    eventType: "EventFlag.BR_S5_Oddity_Tomato_Event",//Oddity 05 Event
                     activeUntil: "9999-12-01T21:10:00.000Z",
                     activeSince: "2020-11-21T07:00:00.000Z"
                 },
@@ -177,9 +192,34 @@ module.exports = {
                     activeSince: "2020-11-21T07:00:00.000Z"
                 },
                 {
+                    eventType: "warning", //TV Warning
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },
+                {
+                    eventType: "Countdown", //TV Countdown
+                    activeUntil: "2024-08-02T02:38:00.000Z",
+                    activeSince: "2024-08-02T02:33:00.000Z"
+                },
+                {
                     eventType: "P1", // Ice King Event related
                     activeUntil: "9999-12-01T21:10:00.000Z",
                     activeSince: "2020-11-21T07:00:00.000Z"
+                },
+                {
+                    eventType: "WDK", // Ice King Apeaars
+                    activeUntil: new Date(Date.now() + 4 * 24 * 60 * 60 * 1000).toISOString(),
+                    activeSince: new Date(Date.now() - 4 * 24 * 60 * 60 * 1000).toISOString()
+                },
+                {
+                    eventType: "WD0", // Winter Deimos Lead up - phase 1
+                    activeUntil: new Date(Date.now() + 4 * 24 * 60 * 60 * 1000).toISOString(),
+                    activeSince: new Date(Date.now() - 4 * 24 * 60 * 60 * 1000).toISOString()
+                },
+                {
+                    eventType: "WD1", // Winter Deimos Lead up - phase 2
+                    activeUntil: new Date(Date.now() + 4 * 24 * 60 * 60 * 1000).toISOString(),
+                    activeSince: new Date(Date.now() - 4 * 24 * 60 * 60 * 1000).toISOString()
                 },
             )
         }
@@ -187,7 +227,17 @@ module.exports = {
         if(version == 7.30){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
-                    eventType: "F0", // Marshmello Event countdown (idk if this works, havent tried it)
+                    eventType: "F0", // Marshmello Event countdown
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },
+                {
+                    eventType: "F1", // Marshmello Event countdown
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },
+                {
+                    eventType: "FLevel", // Marshmello Event Level
                     activeUntil: "9999-12-01T21:10:00.000Z",
                     activeSince: "2020-11-21T07:00:00.000Z"
                 },
@@ -195,9 +245,35 @@ module.exports = {
                     eventType: "FEST_POSTER", // Marshmello event posters
                     activeUntil: "9999-12-01T21:10:00.000Z",
                     activeSince: "2020-11-21T07:00:00.000Z"
-                },                
+                },
+                {
+                    eventType: "roadie_0", // ?
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },
+                {
+                    eventType: "EventFlag.LTE_Festivus", // Marshmello event
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },
+                {
+                    eventType: "S7_B", // ?
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },
+                {
+                    eventType: "S7_C", // ?
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },
+                {
+                    eventType: "HP", // ?
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },              
             )
-        }           
+        }
+        
 
         if(version == 8.51){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
@@ -210,7 +286,7 @@ module.exports = {
                     eventType: "GWS1", // Unvaulting Event countdown (idk if this works, havent tried it)
                     activeUntil: "9999-12-01T21:10:00.000Z",
                     activeSince: "2020-11-21T07:00:00.000Z"
-                },                
+                },               
             )
         }   
 
@@ -513,16 +589,6 @@ module.exports = {
                 }
             )
         }
-        
-        if(version == 17.10){
-            timeline.channels['client-events']['states'][0]['activeEvents'].push(
-                {
-                    eventType: "WLCM1", //Welcome Party full-swing
-                    activeUntil: "9999-09-14T07:00:00.000Z", 
-                    activeSince: "2021-07-27T06:00:00.000Z"
-                },
-            )
-        }
 
         if(version == 17.30 || version == 17.20){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
@@ -565,7 +631,12 @@ module.exports = {
                     eventType: "BTL01", // Rift Tour TOD Leadup 1)
                     activeUntil: "9999-09-14T07:00:00.000Z",
                     activeSince: "2021-07-27T06:00:00.000Z"
-                }
+                },
+                {
+                    eventType: "ABDSLP", //Slurpy: Abduction(Ch2S7 related)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2021-07-27T06:00:00.000Z"
+                },
             )
         }
 
@@ -580,7 +651,12 @@ module.exports = {
                     eventType: "KEL02", // Operation Sky Fire Event-related
                     activeUntil: "9999-09-14T07:00:00.000Z",
                     activeSince: "2021-07-27T06:00:00.000Z"
-                }
+                },
+                {
+                    eventType: "ABDFRM", //Farm: Abduction(Ch2S7 related)
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "2021-07-27T06:00:00.000Z"
+                },
             )
         }
 
@@ -1315,6 +1391,11 @@ module.exports = {
                     activeSince: "2020-09-09T07:00:00.000Z"
                 },
                 {
+                    eventType: "BPAQ", //Bomb Parts Assembling(Ch2S7 related)
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },/*
+                {
                     eventType: "SWRMDUP", //Slurpy Warm Up Event: Beam Turning On(Ch2S7 related)
                     activeUntil: "9999-09-09T07:00:00.000Z",
                     activeSince: "9999-09-09T07:00:00.000Z"
@@ -1326,11 +1407,6 @@ module.exports = {
                 },
                 {
                     eventType: "SMVE", //Mothership Move To: Slurpy(Ch2S7 related)
-                    activeUntil: "9999-09-09T07:00:00.000Z",
-                    activeSince: "9999-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "ABDSLP", //Slurpy: Abduction(Ch2S7 related)
                     activeUntil: "9999-09-09T07:00:00.000Z",
                     activeSince: "9999-09-09T07:00:00.000Z"
                 },
@@ -1373,12 +1449,7 @@ module.exports = {
                     eventType: "FDOPN", //Farm Warm Up Event: Doors Opening(Ch2S7 related)
                     activeUntil: "9999-09-09T07:00:00.000Z",
                     activeSince: "9999-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "BPAQ", //Bomb Parts Assembling(Ch2S7 related)
-                    activeUntil: "9999-09-09T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
+                },*/
             )
         }
 
