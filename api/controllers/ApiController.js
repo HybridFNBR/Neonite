@@ -69,12 +69,12 @@ module.exports = {
 
 	ChunksV4: async function(req, res){
 		const response = await axios.get(`https://epicgames-download1.akamaized.net${req.originalUrl}`, {
-			responseType: 'stream' 
-		});
+            responseType: 'stream' 
+        });
         res.set({
             'Content-Type': "application/octet-stream"
         });
-        response.data.pipe(res).status(200).end();
+        response.data.pipe(res);
 	},
 
 	ias: async function (req, res) {
@@ -82,8 +82,7 @@ module.exports = {
 			responseType: 'stream' 
 		});
         res.set({
-            'Content-Type': response.headers['content-type'],
-            'Content-Length': response.headers['content-length']
+            'Content-Type': "application/octet-stream"
         });
         response.data.pipe(res);
 		
@@ -94,8 +93,8 @@ module.exports = {
 		const response = await axios.get(`https://epicgames-download1.akamaized.net${req.originalUrl}`, {
 			responseType: 'stream' 
 		});
-        res.set({
-            'Content-Type': response.headers['content-type'],
+		res.set({
+            'Content-Type': "application/octet-stream"
         });
        response.data.pipe(res);
 	},
