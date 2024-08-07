@@ -482,13 +482,7 @@
                 "tr": "Savaşa tek başına gir ve hayatta kalan son kişi ol."
             },
             "product_tag": "Product.BR.Build",
-            "fallback_links": {
-                "graceful": "playlist_respawn_24_alt"
-            },
             "tagline": "The battle is building! \r\n Drop into the Battle Royale. Loot, build, explore, and fight in a game of 100 players competing to be the last one standing.",
-            "corresponding_sets": {
-                "ranked": "set_habanero_playlists"
-            },
             "default_sub_link_code": "playlist_defaultsquad"
         },
         "version": 1,

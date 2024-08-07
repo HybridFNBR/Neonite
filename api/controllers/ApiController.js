@@ -67,26 +67,37 @@ module.exports = {
 		res.sendFile(path.join(__dirname, '../../LauncherAssets/Full.ini'));
 	},
 
-	ias: async function (req, res) {
-		const response = await axios.get(`https://fastly-download.epicgames.com${req.originalUrl}`, {
+	ChunksV4: async function(req, res){
+		const response = await axios.get(`https://epicgames-download1.akamaized.net${req.originalUrl}`, {
 			responseType: 'stream' 
 		});
         res.set({
             'Content-Type': "application/octet-stream"
         });
         response.data.pipe(res).status(200).end();
+	},
+
+	ias: async function (req, res) {
+		const response = await axios.get(`https://epicgames-download1.akamaized.net${req.originalUrl}`, {
+			responseType: 'stream' 
+		});
+        res.set({
+            'Content-Type': response.headers['content-type'],
+            'Content-Length': response.headers['content-length']
+        });
+        response.data.pipe(res);
 		
 		
 	},
 
-	CosmeticStreaming: async function(req, res){
-		const response = await axios.get(`https://fastly-download.epicgames.com${req.originalUrl}`, {
+	iasChunks: async function(req, res){
+		const response = await axios.get(`https://epicgames-download1.akamaized.net${req.originalUrl}`, {
 			responseType: 'stream' 
 		});
         res.set({
-            'Content-Type': "application/octet-stream"
+            'Content-Type': response.headers['content-type'],
         });
-        response.data.pipe(res).status(200).end();
+       response.data.pipe(res);
 	},
 
 	lightSwitchbulk: function(req, res){
