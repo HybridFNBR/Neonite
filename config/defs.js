@@ -701,6 +701,10 @@ const CustomBackground = (version, versionGlobal, backgrounds, content) =>{
                     backgrounds[0].stage = "season3020"
                     backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/mkart-c5s3-msee-lobby-bg-2560x1440-9c8aa7721e41.jpg"
                 }
+                if(version == "30.40"){
+                    backgrounds[0].stage = "season3030"
+                    backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/ch5s3-lobby-3030-4096x2048-eecf04243faa.jpg"
+                }
                 else{
                     backgrounds[0].stage = "season3000"
                     backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/lobby-br-c5s3-4096x2048-7a9c78cb7b9a.jpg"
