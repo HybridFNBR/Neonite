@@ -58,6 +58,16 @@ module.exports = {
                                 activeUntil: "9999-09-14T07:00:00.000Z",
                                 activeSince: "2015-09-14T07:00:00.000Z"
                             },
+                            {
+                                eventType: "Papaya_Stage", //Party Royale Stage
+                                activeUntil: "9999-12-31T23:59:59.999Z",
+                                activeSince: "2021-06-05T14:00:00.000Z"
+                            },
+                            {
+                                eventType: "Papaya_Theater", //Party Royale Theater
+                                activeUntil: "9999-12-31T23:59:59.999Z",
+                                activeSince: "2021-06-05T14:00:00.000Z"
+                            },
                             /*
                             {
                                 eventType: "WL0", //water level 0(season 13)
@@ -199,7 +209,7 @@ module.exports = {
                 {
                     eventType: "Countdown", //TV Countdown
                     activeUntil: "2024-08-02T02:38:00.000Z",
-                    activeSince: "2024-08-02T02:33:00.000Z"
+                    activeSince: "9999-12-01T21:10:00.000Z"
                 },
                 {
                     eventType: "P1", // Ice King Event related
@@ -208,18 +218,8 @@ module.exports = {
                 },
                 {
                     eventType: "WDK", // Ice King Apeaars
-                    activeUntil: new Date(Date.now() + 4 * 24 * 60 * 60 * 1000).toISOString(),
-                    activeSince: new Date(Date.now() - 4 * 24 * 60 * 60 * 1000).toISOString()
-                },
-                {
-                    eventType: "WD0", // Winter Deimos Lead up - phase 1
-                    activeUntil: new Date(Date.now() + 4 * 24 * 60 * 60 * 1000).toISOString(),
-                    activeSince: new Date(Date.now() - 4 * 24 * 60 * 60 * 1000).toISOString()
-                },
-                {
-                    eventType: "WD1", // Winter Deimos Lead up - phase 2
-                    activeUntil: new Date(Date.now() + 4 * 24 * 60 * 60 * 1000).toISOString(),
-                    activeSince: new Date(Date.now() - 4 * 24 * 60 * 60 * 1000).toISOString()
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
                 },
             )
         }
