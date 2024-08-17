@@ -372,15 +372,16 @@ module.exports = {
 							"purchasedVIP": true
 						});
 					}
-					Profile.modifyStat(athenprofile, "book_level", 200)
-					Profile.modifyStat(athenprofile, "level", 200)
-					Profile.modifyStat(athenprofile, "accountLevel", 200)
+					Profile.modifyStat(athenprofile, "book_level", parseInt(config.Level))
+					Profile.modifyStat(athenprofile, "level", parseInt(config.Level))
+					Profile.modifyStat(athenprofile, "accountLevel", parseInt(config.Level))
 					Profile.modifyStat(athenprofile, "season_num", versionGlobal)
-					Profile.modifyStat(athenprofile, "past_seasons", pastSeasons)	
+					Profile.modifyStat(athenprofile, "past_seasons", pastSeasons)
 					Profile.saveProfile(accountId, "athena", athenprofile);
 					Profile.bumpRvn(athenprofile);			
 				}
 				catch{}
+			
 				if(config.simpleProfile == true){simpleProfile(accountId, athenprofile)}
 				if(version >= 28.00){
 					if(profileId == "athena"){
@@ -391,8 +392,9 @@ module.exports = {
 				{
 					CH1Fix(accountId, athenprofile)
 				}
-				break;
 			}
+			break;
+			
 			case "RemoveGiftBox": {
 				checkValidProfileID("common_core", "campaign", "athena");
 

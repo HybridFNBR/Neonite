@@ -4,7 +4,8 @@ module.exports.autoreload = {
     dirs: [
       "api/controllers",
       "responses",
-      "discovery"
+      "discovery",
+      "config.ini"
     ],
     ignored: [
       "**.ts"
