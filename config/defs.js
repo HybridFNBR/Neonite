@@ -352,7 +352,7 @@ const {discoveryResponses} = require("../discovery/events")
         "Next"
     ];
     
-    const seasonData = {
+    const discoveryEventData = {
         "22.40": discoveryResponses.ver2240,
         "20.40": discoveryResponses.ver2040,
         "18.40": discoveryResponses.ver1840,
@@ -741,7 +741,7 @@ module.exports = {
     CH1Fix,
     loadJSON,
     VersionFilter,
-    seasonData,
+    discoveryEventData,
     billboard,
     CustomBackground
 };
