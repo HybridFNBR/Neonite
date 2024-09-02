@@ -33,9 +33,9 @@ module.exports = {
     defaultGame: function(req, res){
 		const {version, versionGlobal} = getVersionInfo(req);
 		res.setHeader("content-type", "application/octet-stream")
-		let index = fs.readFileSync(path.join(__dirname, '../../hotfixes/DefaultGame.ini'), 'utf-8');
+		let DefaultGame = fs.readFileSync(path.join(__dirname, '../../hotfixes/DefaultGame.ini'), 'utf-8');
 		if (versionGlobal >= 20) {
-			index = index.replace(
+			DefaultGame = DefaultGame.replace(
 				";+CurveTable=/TacticalSprintGame/DataTables/TacticalSprintGameData;RowUpdate;Default.TacticalSprint.Sprint.Energy.CostPerSecond;0.0;0.0",
 				"+CurveTable=/TacticalSprintGame/DataTables/TacticalSprintGameData;RowUpdate;Default.TacticalSprint.Sprint.Energy.CostPerSecond;0.0;0.0"
 			);
@@ -85,11 +85,11 @@ module.exports = {
 		  
         if (replacements[version]) {
             const [defaultvalue, replacedValue] = replacements[version];
-            index = index.replace(defaultvalue, replacedValue);
-            res.send(index);
+            DefaultGame = DefaultGame.replace(defaultvalue, replacedValue);
+            res.send(DefaultGame);
         }
         else{
-            res.send(index)
+            res.send(DefaultGame)
         }
     },
 
@@ -106,9 +106,15 @@ module.exports = {
 
 	defaultRuntimeOptions: function(req, res){
 		res.setHeader("content-type", "application/octet-stream")
-		const RuntimeOptionsPath = path.join('hotfixes/DefaultRuntimeOptions.ini');
-		const fileStream = require('fs').createReadStream(RuntimeOptionsPath);
-		fileStream.pipe(res)
+		const {version} = getVersionInfo(req);
+		let DefaultRuntimeOptions = fs.readFileSync(path.join(__dirname, '../../hotfixes/DefaultRuntimeOptions.ini'), 'utf-8');
+		if (version >= 26.20) {
+			DefaultRuntimeOptions = DefaultRuntimeOptions.replace(
+				';+ExperimentalBucketPercentList=(ExperimentNum=27,Name="ShowMultiProductItemShop",BucketPercents=(100,0,0),WinningBucketIndex=-1)',
+				'+ExperimentalBucketPercentList=(ExperimentNum=27,Name="ShowMultiProductItemShop",BucketPercents=(100,0,0),WinningBucketIndex=-1)'
+			);
+		}
+		res.send(DefaultRuntimeOptions)
 	},
 
 	defaultInput: function(req, res){

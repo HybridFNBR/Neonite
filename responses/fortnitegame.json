@@ -356,28 +356,6 @@
   "_locale": "en-US",
   "_templateName": "FortGameEventScreens"
 },
-"shopCarousel": {
-    "jcr:isCheckedOut": true,
-    "itemsList": {
-        "_type": "ShopCarouselItemList",
-        "items": [{
-            "tileImage": "",
-            "fullTitle": "Neonite",
-            "hidden": false,
-            "_type": "ShopCarouselItem",
-            "landingPriority": 100,
-            "action": "ShowOfferDetails",
-            "offerId": null,
-            "title": "Neonite"
-        }]
-    },
-    "_title": "shop-carousel",
-    "_noIndex": false,
-    "jcr:baseVersion": "a7ca237317f1e765be23f9-d0fd-4067-ae00-ef29af2376cc",
-    "_activeDate": "2020-09-25T12:00:00.000Z",
-    "lastModified": "2020-12-05T23:52:44.269Z",
-    "_locale": "en-US"
-  },
   "tournamentinformation": {
     "conversion_config": {
       "containerName": "tournament_info",

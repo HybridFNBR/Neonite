@@ -198,7 +198,7 @@ module.exports = {
 
 
     mnemonicPlaylist: function(req, res){
-        const { version, versionGlobal } = getSeasonInfo(req);
+        const { version, versionGlobal } = getVersionInfo(req);
 		const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 		if(versionGlobal <= 15){
 			if(numbers.some(number => req.originalUrl.includes(number))){
@@ -223,10 +223,10 @@ module.exports = {
 		if(version >= 23.50){
 			if(req.params.playlistId == "set_br_playlists")
 			{
-				return res.json(require("../discovery/latest/setbrplaylist.json"))
+				return res.json(loadJSON("../discovery/latest/setbrplaylist.json"))
 			}
 			else{
-				return res.json(require(`../discovery/latest/coreLtms/${req.params.playlistId}.json`))
+				return res.json(loadJSON(`../discovery/latest/coreLtms/${req.params.playlistId}.json`))
 			}
 		}
 		else {
