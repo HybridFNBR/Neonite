@@ -12,7 +12,7 @@ module.exports.routes = {
         skipAssets: false
     },
     'POST /api/v2/discovery/surface/CreativeDiscoverySurface_Frontend': 'DiscoveryController.discoveryv3',
-    'POST /links/api/fn/mnemonic': 'DiscoveryController.mnemonicLinks',
+    'POST /links/api/fn/mnemonic/': 'DiscoveryController.mnemonicLinks',
     'GET /links/api/fn/mnemonic/:playlistId/related': 'DiscoveryController.related',
     'POST /api/v1/links/favorites/:accountId/check': 'DiscoveryController.favoritesCheck',
     'POST /api/v1/links/lock-status/:accountId/check': 'DiscoveryController.lockStatus',

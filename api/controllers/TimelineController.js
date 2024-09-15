@@ -25,7 +25,7 @@ module.exports = {
                             }
                         }
                     ],
-                    cacheExpire: new Date(new Date().getTime() + 1000).toISOString()
+                    cacheExpire: new Date(Date.now() - new Date().getTimezoneOffset() * 60000 + 1000).toISOString()
                 },
                 "featured-islands": {},
                 "community-votes": {},
@@ -70,46 +70,6 @@ module.exports = {
                             },
                             /*
                             {
-                                eventType: "WL0", //water level 0(season 13)
-                                activeUntil: "9999-09-14T07:00:00.000Z",
-                                activeSince: "2015-09-14T07:00:00.000Z"
-                            },
-                            {
-                                eventType: "WL1", //water level 1(season 13)
-                                activeUntil: "9999-09-14T07:00:00.000Z",
-                                activeSince: "9999-09-14T07:00:00.000Z"
-                            },
-                            {
-                                eventType: "WL2", //water level 2(season 13)
-                                activeUntil: "9999-09-14T07:00:00.000Z",
-                                activeSince: "9999-09-14T07:00:00.000Z"
-                            },
-                            {
-                                eventType: "WL3", //water level 3(season 13)
-                                activeUntil: "9999-09-14T07:00:00.000Z",
-                                activeSince: "9999-09-14T07:00:00.000Z"
-                            },
-                            {
-                                eventType: "WL4", //water level 4(season 13)
-                                activeUntil: "9999-09-14T07:00:00.000Z",
-                                activeSince: "9999-09-14T07:00:00.000Z"
-                            },
-                            {
-                                eventType: "WL5", //water level 5(season 13)
-                                activeUntil: "9999-09-14T07:00:00.000Z",
-                                activeSince: "9999-09-14T07:00:00.000Z"
-                            },
-                            {
-                                eventType: "WL6", //water level 6(season 13)
-                                activeUntil: "9999-09-14T07:00:00.000Z",
-                                activeSince: "9999-09-14T07:00:00.000Z"
-                            },
-                            {
-                                eventType: "WL7", //water level 7(season 13)
-                                activeUntil: "9999-09-14T07:00:00.000Z",
-                                activeSince: "9999-09-14T07:00:00.000Z"
-                            },
-                            {
                                 eventType: "RGCONSTUCTION02", //Rift Gate Construction Stage 2(Ch4S1 related)
                                 activeUntil: "9999-09-09T07:00:00.000Z",
                                 activeSince: "9999-09-09T07:00:00.000Z"
@@ -138,7 +98,7 @@ module.exports = {
                                 eventType: "EventFlag.BR_S6_Island_Drain", //IslandRune1(Ch1S6 Related)
                                 activeUntil: "9999-09-09T07:00:00.000Z",
                                 activeSince: "2020-10-29T00:00:00.000Z"
-                            },*/ //having this many event flags active at once causes other ones to break.
+                            },*/
                         ],
                         state: {
                             activeStorefronts: [],
@@ -157,11 +117,12 @@ module.exports = {
                             rmtPromotion: "melody"
                         }
                     }],
-                    cacheExpire: new Date(new Date().getTime() + 1000).toISOString() //refresh every second(might be a bit over kill)
+                    cacheExpire: new Date(Date.now() - new Date().getTimezoneOffset() * 60000 + 1000).toISOString() //refresh every second(might be a bit over kill)
                 }
             },
-            eventsTimeOffsetHrs: 0.1,
+            currentTime: new Date(Date.now() - new Date().getTimezoneOffset() * 60000).toISOString(),
             cacheIntervalMins: 0.1,
+            eventsTimeOffsetHrs: 0.1
         }
 
         if(version == 4.5){
@@ -1692,26 +1653,28 @@ module.exports = {
             })
         }
 
+
+        //Configurable Flags
         if(config.RufusWeek2 == true){
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "RufusWeek2", // Rufus Week 2(Chapter 4 Season OG)
                 activeUntil: "9999-09-14T07:00:00.000Z",
                 activeSince: "2000-09-14T07:00:00.000Z"
-            },)
+            })
         }
         if(config.RufusWeek3 == true){
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "RufusWeek3", // Rufus Week 3(Chapter 4 Season OG)
                 activeUntil: "9999-09-14T07:00:00.000Z",
                 activeSince: "2000-09-14T07:00:00.000Z"
-            },)
+            })
         }
         if(config.RufusWeek4 == true){
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "RufusWeek4", // Rufus Week 4(Chapter 4 Season OG)
                 activeUntil: "9999-09-14T07:00:00.000Z",
                 activeSince: "2000-09-14T07:00:00.000Z"
-            },)
+            })
         }
 
         if(config.TMNTStage1 == true){
@@ -1719,21 +1682,21 @@ module.exports = {
                 eventType: "EventFlag.Event_LinedNotebook_Teaser1", // TMNT Tab Stage 1 
                 activeUntil: "9999-09-14T07:00:00.000Z",
                 activeSince: "2000-09-14T07:00:00.000Z"
-            },)
+            })
         }
         if(config.TMNTStage2 == true){
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "EventFlag.Event_LinedNotebook_Teaser2", // TMNT Tab Stage 2
                 activeUntil: "9999-09-14T07:00:00.000Z",
                 activeSince: "2000-09-14T07:00:00.000Z"
-            },)
+            })
         }
         if(config.TMNTStage3 == true){
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "EventFlag.Event_LinedNotebook_Teaser3", // TMNT Tab Stage 3
                 activeUntil: "9999-09-14T07:00:00.000Z",
                 activeSince: "2000-09-14T07:00:00.000Z"
-            },)
+            })
         }    
         
         if(config.AtlaIceberg1 == true){
@@ -1741,7 +1704,7 @@ module.exports = {
                 eventType: "AtlaIceberg1", // Avatar iceberg stage 1 
                 activeUntil: "9999-09-14T07:00:00.000Z",
                 activeSince: "2000-09-14T07:00:00.000Z"
-            },)
+            })
         }  
         if(config.AtlaIceberg2 == true){
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
@@ -1755,8 +1718,66 @@ module.exports = {
                 eventType: "AtlaIceberg3", // Avatar iceberg stage 3
                 activeUntil: "9999-09-14T07:00:00.000Z",
                 activeSince: "2000-09-14T07:00:00.000Z"
-            },)
-        }                         
+            })
+        }
+
+        if(config.WaterLevel_0 == true && versionGlobal == 13){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push({
+                eventType: "WL0", // Water Level 0
+                activeUntil: "9999-09-14T07:00:00.000Z",
+                activeSince: "2000-09-14T07:00:00.000Z"
+            })
+        }
+        if(config.WaterLevel_1 == true && versionGlobal == 13){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push({
+                eventType: "WL1", // Water Level 1
+                activeUntil: "9999-09-14T07:00:00.000Z",
+                activeSince: "2000-09-14T07:00:00.000Z"
+            })
+        }
+        if(config.WaterLevel_2 == true && versionGlobal == 13){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push({
+                eventType: "WL2", // Water Level 2
+                activeUntil: "9999-09-14T07:00:00.000Z",
+                activeSince: "2000-09-14T07:00:00.000Z"
+            })
+        }
+        if(config.WaterLevel_3 == true && versionGlobal == 13){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push({
+                eventType: "WL3", // Water Level 3
+                activeUntil: "9999-09-14T07:00:00.000Z",
+                activeSince: "2000-09-14T07:00:00.000Z"
+            })
+        }
+        if(config.WaterLevel_4 == true && versionGlobal == 13){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push({
+                eventType: "WL4", // Water Level 4
+                activeUntil: "9999-09-14T07:00:00.000Z",
+                activeSince: "2000-09-14T07:00:00.000Z"
+            })
+        }
+        if(config.WaterLevel_5 == true && versionGlobal == 13){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push({
+                eventType: "WL5", // Water Level 5
+                activeUntil: "9999-09-14T07:00:00.000Z",
+                activeSince: "2000-09-14T07:00:00.000Z"
+            })
+        }
+        if(config.WaterLevel_6 == true && versionGlobal == 13){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push({
+                eventType: "WL6", // Water Level 6
+                activeUntil: "9999-09-14T07:00:00.000Z",
+                activeSince: "2000-09-14T07:00:00.000Z"
+            })
+        }
+        if(config.WaterLevel_7 == true && versionGlobal == 13){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push({
+                eventType: "WL7", // Water Level 7
+                activeUntil: "9999-09-14T07:00:00.000Z",
+                activeSince: "2000-09-14T07:00:00.000Z"
+            })
+        }
         res.json(timeline)
     }
+    
 }

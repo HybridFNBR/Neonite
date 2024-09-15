@@ -86,11 +86,8 @@ module.exports = {
         if (replacements[version]) {
             const [defaultvalue, replacedValue] = replacements[version];
             DefaultGame = DefaultGame.replace(defaultvalue, replacedValue);
-            res.send(DefaultGame);
-        }
-        else{
-            res.send(DefaultGame)
-        }
+		}
+		res.send(DefaultGame)
     },
 
 	config: function(req, res){
@@ -108,7 +105,7 @@ module.exports = {
 		res.setHeader("content-type", "application/octet-stream")
 		const {version} = getVersionInfo(req);
 		let DefaultRuntimeOptions = fs.readFileSync(path.join(__dirname, '../../hotfixes/DefaultRuntimeOptions.ini'), 'utf-8');
-		if (version >= 26.20) {
+		if (version == 26.20) {
 			DefaultRuntimeOptions = DefaultRuntimeOptions.replace(
 				';+ExperimentalBucketPercentList=(ExperimentNum=27,Name="ShowMultiProductItemShop",BucketPercents=(100,0,0),WinningBucketIndex=-1)',
 				'+ExperimentalBucketPercentList=(ExperimentNum=27,Name="ShowMultiProductItemShop",BucketPercents=(100,0,0),WinningBucketIndex=-1)'

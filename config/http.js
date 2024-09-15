@@ -1,8 +1,4 @@
 const NeoLog = require("../structs/NeoLog");
-const fs = require('fs');
-const path = require('path');
-const {getVersionInfo} = require("../config/defs")
-
 
 module.exports.http = {
     middleware: {
