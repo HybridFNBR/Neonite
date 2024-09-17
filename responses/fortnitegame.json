@@ -7064,32 +7064,32 @@
           "playlistname": "Playlist_FlyExplosives_Solo"
         },
         {
-          "image": "/Fortnite/fortnite-game/playlisttiles/LTM_Tile_FinalFight.jpg",
+          "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlisttiles/LTM_Tile_FinalFight-1024x576-5af82788940faeef422ad204aaa241e36e7c9c56.jpg",
           "_type": "PlaylistImageEntry",
           "playlistname": "Playlist_Final_12"
         },
         {
-          "image": "/Fortnite/fortnite-game/playlisttiles/BR_LTM-Tile_Playground.jpg",
+          "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlisttiles/BR_LTM-Tile_Playground-1024x512-53db8a4b5fb41251af279eaf923bc00ecbc17792.jpg",
           "_type": "PlaylistImageEntry",
           "playlistname": "Playlist_Playground"
         },
         {
-          "image": "/Fortnite/fortnite-game/playlisttiles/BR_LTM-Tile_Tactics-Showdown.jpg",
+          "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistimages/BR_LTM-Tile_Tactics-Showdown-1024x512-a84753f49eb70d8751a99b4db83cdb5eb8290166.jpg",
           "_type": "PlaylistImageEntry",
           "playlistname": "Playlist_Taxes_Squads"
         },
         {
-          "image": "/Fortnite/fortnite-game/playlisttiles/BR_LTM-Tile_Tactics-Showdown.jpg",
+          "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistimages/BR_LTM-Tile_Tactics-Showdown-1024x512-a84753f49eb70d8751a99b4db83cdb5eb8290166.jpg",
           "_type": "PlaylistImageEntry",
           "playlistname": "Playlist_Taxes_Duos"
         },
         {
-          "image": "/Fortnite/fortnite-game/playlisttiles/BR_LTM-Tile_Tactics-Showdown.jpg",
+          "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistimages/BR_LTM-Tile_Tactics-Showdown-1024x512-a84753f49eb70d8751a99b4db83cdb5eb8290166.jpg",
           "_type": "PlaylistImageEntry",
           "playlistname": "Playlist_Taxes_Solo"
         },
         {
-          "image": "/Fortnite/fortnite-game/playlisttiles/LTM_Tile_FinalFight.jpg",
+          "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlisttiles/LTM_Tile_FinalFight-1024x576-5af82788940faeef422ad204aaa241e36e7c9c56.jpg",
           "_type": "PlaylistImageEntry",
           "playlistname": "Playlist_Final_20"
         },
@@ -7109,7 +7109,7 @@
           "playlistname": "Playlist_Snipers_Solo"
         },
         {
-          "image": "/Fortnite/fortnite-game/playlisttiles/BR04_LTM_BlitzShowdown.png",
+          "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlisttiles/BR04_LTM_BlitzShowdown-1024x512-7eccbc505214ac522cc5dde7b3ceaa3a5f99e754.png",
           "_type": "PlaylistImageEntry",
           "playlistname": "Playlist_Comp_Blitz_Solo"
         },
@@ -7124,12 +7124,12 @@
           "playlistname": "Playlist_Blitz_Duos"
         },
         {
-          "image": "/Fortnite/fortnite-game/playlisttiles/Blitz.png",
+          "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistinformation/BR04_LTM_Blitz-1024x512-98c63417095442c210177ee9b5f3463d0003cd5a.png",
           "_type": "PlaylistImageEntry",
           "playlistname": "Playlist_Blitz_Solo"
         },
         {
-          "image": "/Fortnite/fortnite-game/playlisttiles/Blitz.png",
+          "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistinformation/BR04_LTM_Blitz-1024x512-98c63417095442c210177ee9b5f3463d0003cd5a.png",
           "_type": "PlaylistImageEntry",
           "playlistname": "Playlist_Blitz_Squad"
         },
@@ -7149,7 +7149,7 @@
           "playlistname": "Playlist_Close_Duos"
         },
         {
-          "image": "/Fortnite/fortnite-game/playlisttiles/BR04_LTM_SoloShowdown.png",
+          "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlisttiles/BR04_LTM_SoloShowdown-1024x512-0f522b0881adebfe241c6527f03c9140f70b88a7.png",
           "_type": "PlaylistImageEntry",
           "playlistname": "Playlist_Comp_Solo"
         },
@@ -7164,7 +7164,7 @@
           "playlistname": "Playlist_SolidGold_Squads"
         },
         {
-          "image": "/Fortnite/fortnite-game/playlisttiles/LTM_50v50.png",
+          "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlisttiles/LTM_50v50-1024x512-788bf1a67426f54307c4296123ac2d3ff8cc0d6c.png",
           "_type": "PlaylistImageEntry",
           "playlistname": "Playlist_50v50"
         },
@@ -7221,7 +7221,7 @@
                 "display_name": "Showtime"                            
             },
             {
-                "image": "https://cdn.discordapp.com/attachments/1026187180885950498/1128339024294199368/T_LS_S8_Cumulative_10.png",
+                "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistinformation/08BR_LTM_TheUnvaulting_ModeTile-1024x512-f7115ab8ad4c7ae37c76653d04ae17cc57a664a3.jpg",
                 "playlist_name": "Playlist_Music_Med",
                 "violator": "LIVE EVENT",
                 "hidden": false,
@@ -7230,7 +7230,7 @@
                 "display_name": "The Unvaulting"                            
             },
             {
-                "image": "https://cdn.discordapp.com/attachments/1026187180885950498/1128339380210258061/T_LS_S9_Doggus.png",
+                "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistinformation/v94/09BR_RobotFight_ModeTile-1024x512-2a5383ab45d733d276100a14092da01c5db66fb7.jpg",
                 "playlist_name": "Playlist_Music_Higher",
                 "violator": "LIVE EVENT",
                 "hidden": false,
@@ -7239,7 +7239,7 @@
                 "display_name": "The Final Showdown"
             },
             {
-                "image": "https://cdn.discordapp.com/attachments/1026187180885950498/1128340131036807209/T_LS_S10_Cumulative_10.png",
+                "image": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistinformation/v94/10BR_In-Game_Farewell_ModeTile-1024x512-3c6326529cb23dbe465594a4266f2054ba52e4ad.jpg",
                 "playlist_name": "Playlist_Music_Highest",
                 "violator": "LIVE EVENT",
                 "hidden": false,
