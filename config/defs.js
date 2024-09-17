@@ -620,9 +620,6 @@ const CustomBackground = (version, versionGlobal, backgrounds, content) =>{
                 }
             break;
             case 21:
-                if (version === "21.10") {
-                    backgrounds[0].stage = "season2100";
-                } 
                 if (version === "21.30") {
                     backgrounds[0].stage = "season2130";
                     backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/nss-lobbybackground-2048x1024-f74a14565061.jpg";
