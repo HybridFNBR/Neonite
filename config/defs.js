@@ -620,6 +620,9 @@ const CustomBackground = (version, versionGlobal, backgrounds, content) =>{
                 }
             break;
             case 21:
+                if (version === "21.10") {
+                    backgrounds[0].stage = "season2100";
+                } 
                 if (version === "21.30") {
                     backgrounds[0].stage = "season2130";
                     backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/nss-lobbybackground-2048x1024-f74a14565061.jpg";
@@ -646,11 +649,18 @@ const CustomBackground = (version, versionGlobal, backgrounds, content) =>{
             break;
             case 24:
                 backgrounds[0].stage = "defaultnotris"
-                backgrounds[0].backgroundimage = "https://static.wikia.nocookie.net/fortnite/images/e/e7/Chapter_4_Season_2_-_Lobby_Background_-_Fortnite.png"
+                backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/t-ch4s2-bp-lobby-4096x2048-edde08d15f7e.jpg"
             break;
             case 25:
+                if(version === "25.11")
+                {   
+                    backgrounds[0].stage = "defaultnotris"
+                    backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/t-s25-14dos-lobby-4096x2048-2be24969eee3.jpg"
+                }
+                else{
                 backgrounds[0].stage = "season2500"
-                backgrounds[0].backgroundimage = "https://static.wikia.nocookie.net/fortnite/images/c/ca/Chapter_4_Season_3_-_Lobby_Background_-_Fortnite.png"
+                backgrounds[0].backgroundimage = "https://cdn2.unrealengine.com/s25-lobby-4k-4096x2048-4a832928e11f.jpg"
+                }
             break;
             case 26:
                 if(version === "26.30")
