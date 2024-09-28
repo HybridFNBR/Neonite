@@ -315,188 +315,172 @@ var config = ini.parse(fs.readFileSync(path.join(__dirname, '../config.ini'), 'u
         "Next"
     ];
     
-    /**
- * Adds a billboard shop section to mpItemShop section data response before sending it to the Client(Fortnite)
- * 
- * @param {string} sectionID example: "sectionID.offerGoupsectionID.stackRankValue"
- * @param {string} offerGoupsectionID offer group section ID example: "sectionID.offerGoupsectionID.stackRankValue"
- * @param {string} stackRankValue the number at the end of the layoutId example: "sectionID.offerGoupsectionID.stackRankValue"
- * @param {string} foregroundUrl image displayed on top of the background
- * @param {string} backgroundUrl image url of the background
- * @param {string} bodyImage apeaers alongside the text
- * @param {string} titleColorA color of the title, has to be a hex value
- * @param {string} titleColorB color of the subtitle, text below the title, has to be a hex value
- * @param {string} title title
- * @param {string} subtitle subtitle, text displayed under the title
- * @param {string} buttonText button text
- * @param {string} SectiondisplayName display name of the shop section
- */
-    const billboard = (sectionID, offerGoupsectionID, stackRankValue, foregroundUrl, backgroundUrl, bodyImage, titleColorA, titleColorB, title, subtitle, buttonText, SectiondisplayName) => {
-        return {
-            "metadata": {
-                "offerGroups": [
-                  {
-                    "bUseWidePreview": true,
-                    "metadata": {
-                      "_type": "MP Item Shop - Offer Group Metadata"
-                    },
-                    "_type": "MP Item Shop - Row",
-                    "offerGroupId": stackRankValue,
+const billboard = (sectionID, offerGoupsectionID, stackRankValue, foregroundUrl, backgroundUrl, bodyImage, titleColorA, titleColorB, title, subtitle, buttonText, SectiondisplayName) => {
+    return {
+        "metadata": {
+            "offerGroups": [
+                {
+                "bUseWidePreview": true,
+                "metadata": {
+                    "_type": "MP Item Shop - Offer Group Metadata"
+                },
+                "_type": "MP Item Shop - Row",
+                "offerGroupId": stackRankValue,
+                "stackRanks": [
+                    {
+                    "stackRankValue": stackRankValue,
+                    "productTag": "Product_BR",
+                    "_type": "MP Item Shop - Stack Rank",
+                    "context": "battleRoyale",
+                    "startDate": "2023-01-01T00:00:00.000Z"
+                    }
+                ]
+                }
+            ],
+            "subsections": [      
+                {
+                "metadata": {
+                    "offerGroups": [
+                    {
+                        "bUseWidePreview": true,
+                        "displayType": "billboard",
+                        "metadata": {
+                        "textureMetadata": [
+                            {
+                            "_type": "MP Item Shop - Offer Group Texture Metadata",
+                            "value": foregroundUrl,
+                            "key": "foreground"
+                            },
+                            {
+                            "_type": "MP Item Shop - Offer Group Texture Metadata",
+                            "value": backgroundUrl,
+                            "key": "background"
+                            },
+                            {
+                            "_type": "MP Item Shop - Offer Group Texture Metadata",
+                            "value": bodyImage,
+                            "key": "bodyImage"
+                            }
+                        ],
+                        "_type": "MP Item Shop - Offer Group Metadata",
+                        "stringMetadata": [
+                            {
+                            "_type": "MP Item Shop - Offer Group String Metadata",
+                            "value": "left",
+                            "key": "alignment"
+                            },
+                            {
+                            "_type": "MP Item Shop - Offer Group String Metadata",
+                            "value": titleColorA,
+                            "key": "titleColorA"
+                            },
+                            {
+                            "_type": "MP Item Shop - Offer Group String Metadata",
+                            "value": titleColorB,
+                            "key": "titleColorB"
+                            }
+                        ],
+                        "textMetadata": [
+                            {
+                            "_type": "MP Item Shop - Offer Group Text Metadata",
+                            "value": title,
+                            "key": "title"
+                            },
+                            {
+                            "_type": "MP Item Shop - Offer Group Text Metadata",
+                            "value": subtitle,
+                            "key": "subtitle"
+                            },
+                            {
+                            "_type": "MP Item Shop - Offer Group Text Metadata",
+                            "value": buttonText,
+                            "key": "cta"
+                            }
+                        ]
+                        },
+                        "_type": "MP Item Shop - Row",
+                        "offerGroupId": stackRankValue,
+                        "stackRanks": [
+                        {
+                            "stackRankValue": stackRankValue,
+                            "productTag": "Product_BR",
+                            "_type": "MP Item Shop - Stack Rank",
+                            "context": "battleRoyale",
+                            "startDate": "2023-01-01T00:00:00.000Z"
+                        }
+                        ]
+                    }
+                    ],
+                    "background": [
+                    {
+                        "_type": "MP Item Shop - Background"
+                    }
+                    ],
+                    "_type": "MP Item Shop - Subsection Metadata",
                     "stackRanks": [
-                      {
+                    {
                         "stackRankValue": stackRankValue,
                         "productTag": "Product_BR",
                         "_type": "MP Item Shop - Stack Rank",
                         "context": "battleRoyale",
                         "startDate": "2023-01-01T00:00:00.000Z"
-                      }
+                    }
                     ]
-                  }
-                ],
-                "subsections": [      
-                  {
-                    "metadata": {
-                      "offerGroups": [
-                        {
-                          "bUseWidePreview": true,
-                          "displayType": "billboard",
-                          "metadata": {
-                            "textureMetadata": [
-                              {
-                                "_type": "MP Item Shop - Offer Group Texture Metadata",
-                                "value": foregroundUrl,
-                                "key": "foreground"
-                              },
-                              {
-                                "_type": "MP Item Shop - Offer Group Texture Metadata",
-                                "value": backgroundUrl,
-                                "key": "background"
-                              },
-                              {
-                                "_type": "MP Item Shop - Offer Group Texture Metadata",
-                                "value": bodyImage,
-                                "key": "bodyImage"
-                              }
-                            ],
-                            "_type": "MP Item Shop - Offer Group Metadata",
-                            "stringMetadata": [
-                              {
-                                "_type": "MP Item Shop - Offer Group String Metadata",
-                                "value": "left",
-                                "key": "alignment"
-                              },
-                              {
-                                "_type": "MP Item Shop - Offer Group String Metadata",
-                                "value": titleColorA,
-                                "key": "titleColorA"
-                              },
-                              {
-                                "_type": "MP Item Shop - Offer Group String Metadata",
-                                "value": titleColorB,
-                                "key": "titleColorB"
-                              }
-                            ],
-                            "textMetadata": [
-                              {
-                                "_type": "MP Item Shop - Offer Group Text Metadata",
-                                "value": title,
-                                "key": "title"
-                              },
-                              {
-                                "_type": "MP Item Shop - Offer Group Text Metadata",
-                                "value": subtitle,
-                                "key": "subtitle"
-                              },
-                              {
-                                "_type": "MP Item Shop - Offer Group Text Metadata",
-                                "value": buttonText,
-                                "key": "cta"
-                              }
-                            ]
-                          },
-                          "_type": "MP Item Shop - Row",
-                          "offerGroupId": stackRankValue,
-                          "stackRanks": [
-                            {
-                              "stackRankValue": stackRankValue,
-                              "productTag": "Product_BR",
-                              "_type": "MP Item Shop - Stack Rank",
-                              "context": "battleRoyale",
-                              "startDate": "2023-01-01T00:00:00.000Z"
-                            }
-                          ]
-                        }
-                      ],
-                      "background": [
-                        {
-                          "_type": "MP Item Shop - Background"
-                        }
-                      ],
-                      "_type": "MP Item Shop - Subsection Metadata",
-                      "stackRanks": [
-                        {
-                          "stackRankValue": stackRankValue,
-                          "productTag": "Product_BR",
-                          "_type": "MP Item Shop - Stack Rank",
-                          "context": "battleRoyale",
-                          "startDate": "2023-01-01T00:00:00.000Z"
-                        }
-                      ]
-                    },
-                    "displayName": SectiondisplayName,
-                    "_type": "MP Item Shop - Subsection",
-                    "sectionID": offerGoupsectionID
-                  }
-                ],
-                "background": {
-                  "_type": "MP Item Shop - Background"
                 },
-                "_type": "MP Item Shop - Section Metadata",
-                "showIneligibleOffers": "Always",
-                "stackRanks": [
-                  {
-                    "stackRankValue": 98,
-                    "productTag": "Product_BR",
-                    "_type": "MP Item Shop - Stack Rank",
-                    "context": "battleRoyale",
-                    "startDate": "2024-05-23T23:00:00.000Z"
-                  },
-                  {
-                    "stackRankValue": 9,
-                    "productTag": "Product_Juno",
-                    "_type": "MP Item Shop - Stack Rank",
-                    "context": "juno",
-                    "startDate": "2024-05-23T23:00:00.000Z"
-                  },
-                  {
-                    "stackRankValue": 98,
-                    "productTag": "Product_DelMar",
-                    "_type": "MP Item Shop - Stack Rank",
-                    "context": "delMar",
-                    "startDate": "2024-05-23T23:00:00.000Z"
-                  },
-                  {
-                    "stackRankValue": 50,
-                    "productTag": "Product_Sparks",
-                    "_type": "MP Item Shop - Stack Rank",
-                    "context": "sparks",
-                    "startDate": "2024-05-23T23:00:00.000Z"
-                  },
-                  {
-                    "stackRankValue": 50,
-                    "productTag": "Product_BR",
-                    "_type": "MP Item Shop - Stack Rank",
-                    "context": "battleRoyale",
-                    "startDate": "2024-05-26T23:00:00.000Z"
-                  }
-                ]
-              },
-              "displayName": SectiondisplayName,
-              "_type": "MP Item Shop - Section",
-              "sectionID": sectionID
-            
-            }
-        };
+                "displayName": SectiondisplayName,
+                "_type": "MP Item Shop - Subsection",
+                "sectionID": offerGoupsectionID
+                }
+            ],
+            "background": {
+                "_type": "MP Item Shop - Background"
+            },
+            "_type": "MP Item Shop - Section Metadata",
+            "showIneligibleOffers": "Always",
+            "stackRanks": [
+                {
+                "stackRankValue": 98,
+                "productTag": "Product_BR",
+                "_type": "MP Item Shop - Stack Rank",
+                "context": "battleRoyale",
+                "startDate": "2024-05-23T23:00:00.000Z"
+                },
+                {
+                "stackRankValue": 9,
+                "productTag": "Product_Juno",
+                "_type": "MP Item Shop - Stack Rank",
+                "context": "juno",
+                "startDate": "2024-05-23T23:00:00.000Z"
+                },
+                {
+                "stackRankValue": 98,
+                "productTag": "Product_DelMar",
+                "_type": "MP Item Shop - Stack Rank",
+                "context": "delMar",
+                "startDate": "2024-05-23T23:00:00.000Z"
+                },
+                {
+                "stackRankValue": 50,
+                "productTag": "Product_Sparks",
+                "_type": "MP Item Shop - Stack Rank",
+                "context": "sparks",
+                "startDate": "2024-05-23T23:00:00.000Z"
+                },
+                {
+                "stackRankValue": 50,
+                "productTag": "Product_BR",
+                "_type": "MP Item Shop - Stack Rank",
+                "context": "battleRoyale",
+                "startDate": "2024-05-26T23:00:00.000Z"
+                }
+            ]
+            },
+            "displayName": SectiondisplayName,
+            "_type": "MP Item Shop - Section",
+            "sectionID": sectionID
+        
+        }
+    };
 
 
 const Backgrounds = (version, versionGlobal, backgrounds, content) =>{
