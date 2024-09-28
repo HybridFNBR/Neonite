@@ -5,8 +5,7 @@
   "_locale": "en-US",
   "_templateName": "blank",
   "lobby": {
-    "backgroundimage": "https://cdn2.unrealengine.com/Fortnite/fortnite-game/lobby/T_Lobby_SeasonX-2048x1024-24e02780ed533da8001016f4e6fb14dd15e2f860.png",
-    "stage": "seasonx",
+    "stage": "",
     "_title": "lobby",
     "_activeDate": "2019-05-31T21:24:39.892Z",
     "lastModified": "2019-07-31T21:24:17.119Z",
@@ -17,14 +16,7 @@
     "backgrounds": {
       "backgrounds": [
         {
-          "backgroundimage": "https://cdn2.unrealengine.com/0814-ch4s4-lobby-2048x1024-2048x1024-e3c2cf8d342d.png",
-          "stage": "defaultnotris",
-          "_type": "DynamicBackground",
-          "key": "lobby"
-        },
-        {
-          "backgroundimage": "https://cdn2.unrealengine.com/emeraldglass-shopbg-blue-1920x1080-6a6af3566d6d.png",
-          "stage": "defaultnotris",
+          "stage": "default",
           "_type": "DynamicBackground",
           "key": "vault"
         }
@@ -7339,6 +7331,33 @@
                 "_type": "FortPlaylistInfo",
                 "description": "Go at it alone in a battle to be the last one standing.\n\n",
                 "display_name": "Solo"                            
+            },
+            {
+              "image": "https://cdn2.unrealengine.com/18br-guava-playlisttile-1920x1080-1920x1080-e66a6a0a08cf.jpg",
+              "playlist_name": "Playlist_Guava",
+              "hidden": false,
+              "special_border": "None",
+              "_type": "FortPlaylistInfo",
+              "description": "The Chapter 2 Finale. Locked, loaded, and ready for the final showdown!",
+              "display_name": "The End"                            
+            },
+            {
+              "image": "https://cdn2.unrealengine.com/17br-kiwi-keyart-motd-1920x1080-1920x1080-50ccef17c86f.jpg",
+              "playlist_name": "Playlist_Kiwi",
+              "hidden": false,
+              "special_border": "None",
+              "_type": "FortPlaylistInfo",
+              "description": "Your mission is a GO. Look sharp",
+              "display_name": "OPERATION: SKY FIRE"                            
+            },
+            {
+              "image": "https://i.imgur.com/IhUmLNI.jpeg",
+              "playlist_name": "Playlist_Pumpkin",
+              "hidden": false,
+              "special_border": "None",
+              "_type": "FortPlaylistInfo",
+              "description": "Welcome To Your New Reality",
+              "display_name": "A NEW DAY"                            
             },
             {
                 "image": "https://cdn2.unrealengine.com/21br-launch-modetiles-duos-1920x1080-1920x1080-7bd1ca269cfd.jpg",

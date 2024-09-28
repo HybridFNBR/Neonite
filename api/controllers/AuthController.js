@@ -176,4 +176,8 @@ module.exports = {
 	externalAuths: function(req, res){
 		res.json([])
 	},
+
+	publicKey: function(req, res){
+		res.status(204)
+	}
 }

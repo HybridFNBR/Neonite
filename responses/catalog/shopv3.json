@@ -913,15 +913,15 @@
       "prices" : [ {
         "currencyType" : "MtxCurrency",
         "currencySubType" : "",
-        "regularPrice" : 500,
-        "dynamicRegularPrice" : 500,
-        "finalPrice" : 500,
+        "regularPrice" : 0,
+        "dynamicRegularPrice" : 0,
+        "finalPrice" : 0,
         "saleExpiration" : "9999-12-31T23:59:59.999Z",
-        "basePrice" : 500
+        "basePrice" : 0
       } ],
       "meta" : {
         "NewDisplayAssetPath" : "/Game/Catalog/NewDisplayAssets/S31/DAv2_Wrap_ElegantLily.DAv2_Wrap_ElegantLily",
-        "LayoutId" : "KarolG.98",
+        "LayoutId" : "StartYourEngines.Behemoth.99",
         "TileSize" : "Size_1_x_1",
         "AnalyticOfferGroupId" : "KarolG",
         "templateId" : "AthenaItemWrap:wrap_elegantlily",
@@ -955,7 +955,7 @@
         "value" : "/Game/Catalog/NewDisplayAssets/S31/DAv2_Wrap_ElegantLily.DAv2_Wrap_ElegantLily"
       }, {
         "key" : "LayoutId",
-        "value" : "KarolG.98"
+        "value" : "StartYourEngines.Behemoth.99"
       }, {
         "key" : "TileSize",
         "value" : "Size_1_x_1"
@@ -2837,15 +2837,15 @@
       "prices" : [ {
         "currencyType" : "MtxCurrency",
         "currencySubType" : "",
-        "regularPrice" : 1000,
-        "dynamicRegularPrice" : 1000,
-        "finalPrice" : 1000,
+        "regularPrice" : 0,
+        "dynamicRegularPrice" : 0,
+        "finalPrice" : 0,
         "saleExpiration" : "9999-12-31T23:59:59.999Z",
-        "basePrice" : 1000
+        "basePrice" : 0
       } ],
       "meta" : {
         "NewDisplayAssetPath" : "/Game/Catalog/NewDisplayAssets/S31/DAv2_Sparks_Guitar_MiddleSock.DAv2_Sparks_Guitar_MiddleSock",
-        "LayoutId" : "IronSpider.98",
+        "LayoutId" : "StartYourEngines.Behemoth.99",
         "TileSize" : "Size_1_x_1",
         "AnalyticOfferGroupId" : "IronSpider",
         "templateId" : "SparksGuitar:sparks_guitar_middlesock",
@@ -2879,7 +2879,7 @@
         "value" : "/Game/Catalog/NewDisplayAssets/S31/DAv2_Sparks_Guitar_MiddleSock.DAv2_Sparks_Guitar_MiddleSock"
       }, {
         "key" : "LayoutId",
-        "value" : "IronSpider.98"
+        "value" : "StartYourEngines.Behemoth.99"
       }, {
         "key" : "TileSize",
         "value" : "Size_1_x_1"

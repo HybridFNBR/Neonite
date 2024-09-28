@@ -53,7 +53,9 @@
                                   "PanelLinkCodeBlacklist": [],
                                   "CountryCodeAllowlist": [],
                                   "PanelLinkCodeWhitelist": [],
-                                  "FeatureTags": [],
+                                  "FeatureTags": [
+                                    "col:5"
+                                ],
                                   "MMRegionAllowlist": [],
                                   "MetricName": ""
                               },

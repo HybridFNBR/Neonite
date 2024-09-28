@@ -5,7 +5,7 @@ const fs = require("fs");
 const { v4: uuidv4 } = require("uuid");
 const path = require('path');
 var ini = require('ini')
-const { getVersionInfo, MPLockerLoadout, simpleProfile, CH1Fix, VersionFilter, loadJSON, MiniPass} = require("../../config/defs")
+const { getVersionInfo, MPLockerLoadout, simpleProfile, CH1Fix, VersionFilter, loadJSON, MiniPass} = require("../../structs/defs")
 
 Array.prototype.insert = function ( index, item ) {
 	this.splice( index, 0, item );
@@ -218,13 +218,13 @@ module.exports = {
 
 				let shop
 				if(version >= 30.10){
-					shop = loadJSON("../responses/shopv3.json");
+					shop = loadJSON("../responses/catalog/shopv3.json");
 				}
 				if(version >= 26.30){
-					shop = loadJSON("../responses/shopv2.json");
+					shop = loadJSON("../responses/catalog/shopv2.json");
 				}
 				else{
-					shop = loadJSON("../responses/shopv1.json"); 
+					shop = loadJSON("../responses/catalog/shopv1.json"); 
 				}
 				
 				

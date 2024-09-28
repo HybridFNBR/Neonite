@@ -2,7 +2,7 @@
 const path = require('path');
 var fs = require('fs')
 var ini = require('ini')
-const {getVersionInfo, loadJSON} = require("../../config/defs")
+const {getVersionInfo, loadJSON} = require("../../structs/defs")
 
 
 
@@ -68,6 +68,54 @@ module.exports = {
                                 activeUntil: "9999-12-31T23:59:59.999Z",
                                 activeSince: "2021-06-05T14:00:00.000Z"
                             },
+                            {
+                                eventType: "EventFlag.LobbyWinterDecor",
+                                activeUntil: "9999-12-31T23:59:59.999Z",
+                                activeSince: "2021-06-05T14:00:00.000Z"
+                            },
+                            {
+                                eventType: "EventFlag.WinterBattleBus",
+                                activeUntil: "9999-12-31T23:59:59.999Z",
+                                activeSince: "2021-06-05T14:00:00.000Z"
+                            },
+                            {
+                                eventType: "HW_01",
+                                activeUntil: "9999-12-31T23:59:59.999Z",
+                                activeSince: "2021-06-05T14:00:00.000Z"
+                            },
+                            {
+                                eventType: "HW_02",
+                                activeUntil: "9999-12-31T23:59:59.999Z",
+                                activeSince: "2021-06-05T14:00:00.000Z"
+                            },
+                            {
+                                eventType: "HW_03",
+                                activeUntil: "9999-12-31T23:59:59.999Z",
+                                activeSince: "2021-06-05T14:00:00.000Z"
+                            },
+                            {
+                                eventType: "HW_04",
+                                activeUntil: "9999-12-31T23:59:59.999Z",
+                                activeSince: "2021-06-05T14:00:00.000Z"
+                            },
+                            {
+                                eventType: "HW_05",
+                                activeUntil: "9999-12-31T23:59:59.999Z",
+                                activeSince: "2021-06-05T14:00:00.000Z"
+                            },
+                            {
+                                eventType: "HW_06",
+                                activeUntil: "9999-12-31T23:59:59.999Z",
+                                activeSince: "2021-06-05T14:00:00.000Z"
+                            },
+                            {
+                                eventType: "HW_07",
+                                activeUntil: "9999-12-31T23:59:59.999Z",
+                                activeSince: "2021-06-05T14:00:00.000Z"
+                            },
+                            {
+                                
+                            }
                             /*
                             {
                                 eventType: "RGCONSTUCTION02", //Rift Gate Construction Stage 2(Ch4S1 related)
@@ -152,6 +200,16 @@ module.exports = {
                     activeUntil: "9999-12-01T21:10:00.000Z",
                     activeSince: "2020-11-21T07:00:00.000Z"
                 },
+            )
+        }
+
+        if(version == 6.21){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push(
+                {
+                    eventType: "EventFlag.LobbySeason6Halloween",
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                }
             )
         }
 
@@ -279,7 +337,22 @@ module.exports = {
                     activeSince: "9999-09-14T07:00:00.000Z"
                 }                
             )
-        }   
+        }
+        
+        if(version == 11.10){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push(
+                {
+                    eventType: "HW2019", // FortniteMares 2019
+                    activeUntil: "9999-10-05T00:41:00.000Z",
+                    activeSince: "2020-10-05T00:00:00.000Z"
+                },
+                {  
+                    eventType: "HW2019Leadup", // FortniteMares 2019 Leadup
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-10-05T00:00:00.000Z"
+                }             
+            )
+        } 
         
         if(version == 11.31){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(

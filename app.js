@@ -2,7 +2,6 @@ const sails = require('sails');
 const NeoLog = require('./structs/NeoLog')
 const { default: axios } = require('axios');
 const fs = require("fs");
-const {keychain} = require("./config/defs")
 
 
 async function compareAndUpdateKeychain() {

@@ -10,7 +10,13 @@ module.exports = {
             "iss": "eos",
             "env": "prod",
             "organizationId": "o-aa83a0a9bc45e98c80c1b1c9d92e9e",
-            "features": [],
+            "features": [
+               "AntiCheat",
+               "Connect",
+               "Ecom",
+               "Inventories",
+               "LockerService"
+            ],
             "deploymentId": "62a9473a2dca46b29ccf17577fcf42d7",
             "sandboxId": "fn",
             "tokenType": "clientToken",
@@ -23,7 +29,13 @@ module.exports = {
             "access_token":access_token,
             "token_type":"bearer",
 			   "expires_at":"9999-12-31T23:59:59.999Z",
-            "features":[],
+            "features":[
+               "AntiCheat",
+               "Connect",
+               "Ecom",
+               "Inventories",
+               "LockerService"
+            ],
             "organization_id":"o-aa83a0a9bc45e98c80c1b1c9d92e9e",
             "product_id":"prod-fn",
             "sandbox_id":"fn",
