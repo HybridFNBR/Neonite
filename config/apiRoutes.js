@@ -93,7 +93,12 @@ module.exports.routes = {
     'POST /api/v1/fortnite-br/surfaces/:gameMode/target': 'FortniteGameController.motd',
     'POST /api/v1/fortnite-br/interactions/contentHash': 'FortniteGameController.contentHash',
     'POST /api/v1/user/setting': 'UserController.userSetting',
-    'ALL /v1/epic-settings/public/users/:accountId/*':{ 
+    'PATCH /v1/epic-settings/public/users/:accountId/*':{ 
+        action: "epicSettings",
+        controller:'UserController', 
+        skipAssets: false
+    },
+    'GET /v1/epic-settings/public/users/:accountId/*':{ 
         action: "epicSettings",
         controller:'UserController', 
         skipAssets: false
@@ -101,5 +106,6 @@ module.exports.routes = {
     'PUT /profile/play_region': 'UserController.playRegion',
     'PUT /profile/languages': 'UserController.languages',
     'GET /fortnite/api/calendar/v1/timeline': 'TimelineController.timeline',
+    'GET /api/locker/v3/:deploymentId/account/:accountId/items': 'ApiController.locker'
     // Add more routes as needed
 };

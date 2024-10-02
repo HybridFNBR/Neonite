@@ -61,9 +61,13 @@ module.exports = {
 					"userHidden": false,
 					"required": false,
 					"dataStorage": "raw",
+					"maximumScheduleWindowsPerDay": 0,
 					"ageBracket": {
 					  "consentTypeRequired": "none",
+					  "consentType": "none",
+					  "applyConsentToEnforcedUsersOnly": false,
 					  "defaultValue": true,
+					  "defaultPreference": true,
 					  "enforcedLimit": true
 					}
 				  }
@@ -118,9 +122,13 @@ module.exports = {
 					"userHidden": false,
 					"required": false,
 					"dataStorage": "raw",
+					"maximumScheduleWindowsPerDay": 0,
 					"ageBracket": {
 					  "consentTypeRequired": "none",
+					  "consentType": "none",
+					  "applyConsentToEnforcedUsersOnly": false,
 					  "defaultValue": "Public",
+					  "defaultPreference": "Public",
 					  "enforcedLimit": "Public"
 					}
 				  }
@@ -153,9 +161,13 @@ module.exports = {
 					"userHidden": false,
 					"required": false,
 					"dataStorage": "raw",
+					"maximumScheduleWindowsPerDay": 0,
 					"ageBracket": {
 					  "consentTypeRequired": "none",
+					  "consentType": "none",
+					  "applyConsentToEnforcedUsersOnly": false,
 					  "defaultValue": true,
+					  "defaultPreference": true,
 					  "enforcedLimit": true
 					}
 				  }
@@ -188,9 +200,13 @@ module.exports = {
 					"userHidden": false,
 					"required": false,
 					"dataStorage": "raw",
+					"maximumScheduleWindowsPerDay": 0,
 					"ageBracket": {
 					  "consentTypeRequired": "none",
+					  "consentType": "none",
+					  "applyConsentToEnforcedUsersOnly": false,
 					  "defaultValue": true,
+					  "defaultPreference": true,
 					  "enforcedLimit": true
 					}
 				  }
@@ -223,9 +239,13 @@ module.exports = {
 					"userHidden": false,
 					"required": false,
 					"dataStorage": "raw",
+					"maximumScheduleWindowsPerDay": 0,
 					"ageBracket": {
 					  "consentTypeRequired": "none",
+					  "consentType": "none",
+					  "applyConsentToEnforcedUsersOnly": false,
 					  "defaultValue": true,
+					  "defaultPreference": true,
 					  "enforcedLimit": true
 					}
 				  }
@@ -234,7 +254,7 @@ module.exports = {
 				  "namespace": "stats",
 				  "settingName": "show-in-leaderboard",
 				  "preferredValue": true,
-				  "preferredValueUpdatedAt": 1709902140804,
+				  "preferredValueUpdatedAt": 1712945737022,
 				  "preferredValueFromOrgLevel": false,
 				  "effectiveValue": true,
 				  "effectiveSource": "preference",
@@ -259,325 +279,14 @@ module.exports = {
 					"userHidden": false,
 					"required": false,
 					"dataStorage": "raw",
+					"maximumScheduleWindowsPerDay": 0,
 					"ageBracket": {
 					  "consentTypeRequired": "none",
+					  "consentType": "none",
+					  "applyConsentToEnforcedUsersOnly": false,
 					  "defaultValue": true,
+					  "defaultPreference": true,
 					  "enforcedLimit": true
-					}
-				  }
-				},
-				{
-				  "namespace": "chat",
-				  "settingName": "filter-out-mature-language",
-				  "preferredValue": true,
-				  "preferredValueUpdatedAt": 1710543119788,
-				  "preferredValueFromOrgLevel": false,
-				  "parentLimit": false,
-				  "parentLimitFromOrgLevel": true,
-				  "effectiveValue": true,
-				  "effectiveSource": "preference",
-				  "isOrgLevel": false,
-				  "definition": {
-					"orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
-					"productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
-					"namespace": "chat",
-					"settingName": "filter-out-mature-language",
-					"valueType": "boolean",
-					"allowProductOverrides": "ageBrackets",
-					"inheritFromOrg": true,
-					"translations": {
-					  "en": {
-						"label": "Filter out mature language in Epic text chat",
-						"userNotice": "Mature language in text chat will be filtered and replaced with heart symbols",
-						"parentNotice": "<b>On:</b> Mature language in text chat will be filtered and replaced with heart symbols."
-					  }
-					},
-					"options": [],
-					"restrictiveOrder": "falsePermissive",
-					"userHidden": false,
-					"required": false,
-					"dataStorage": "raw",
-					"ageBracket": {
-					  "consentTypeRequired": "none",
-					  "consentTypeUnderParentalControl": "opt-in-unverified",
-					  "defaultValue": false,
-					  "defaultParentLimit": false
-					}
-				  }
-				},
-				{
-				  "namespace": "chat",
-				  "settingName": "voice",
-				  "preferredValue": "everybody",
-				  "preferredValueUpdatedAt": 1710543119789,
-				  "preferredValueFromOrgLevel": false,
-				  "parentLimit": "everybody",
-				  "parentLimitFromOrgLevel": true,
-				  "effectiveValue": "everybody",
-				  "effectiveSource": "preference",
-				  "isOrgLevel": false,
-				  "definition": {
-					"orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
-					"productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
-					"namespace": "chat",
-					"settingName": "voice",
-					"valueType": "option",
-					"allowProductOverrides": "ageBrackets",
-					"inheritFromOrg": true,
-					"translations": {
-					  "en": {
-						"label": "Voice chat",
-						"userNotice": "Determines with whom you can use the voice chat feature",
-						"parentNotice": "Who can your child speak with using Epic voice chat?"
-					  }
-					},
-					"options": [
-					  {
-						"value": "nobody",
-						"translations": {
-						  "en": {
-							"label": "Nobody",
-							"userNotice": "Epic voice chat is disabled.",
-							"parentNotice": "Epic voice chat is disabled for your child."
-						  }
-						}
-					  },
-					  {
-						"value": "friends",
-						"translations": {
-						  "en": {
-							"label": "Friends Only",
-							"userNotice": "You can voice chat only with players in their Epic friends list and platform friends list.",
-							"parentNotice": "Your child can voice chat only with players in their Epic friends list and platform friends list."
-						  }
-						}
-					  },
-					  {
-						"value": "friends-and-teammates",
-						"translations": {
-						  "en": {
-							"label": "Friends & Teammates",
-							"userNotice": "You can voice chat with players in their Epic friends list and platform friends list, and those on their team.",
-							"parentNotice": "Your child can voice chat with players in their Epic friends list and platform friends list, and those on their team."
-						  }
-						}
-					  },
-					  {
-						"value": "everybody",
-						"translations": {
-						  "en": {
-							"label": "Everybody",
-							"userNotice": "You can voice chat with any player.",
-							"parentNotice": "Your child can voice chat with any player."
-						  }
-						}
-					  }
-					],
-					"restrictiveOrder": "firstRestrictive",
-					"userHidden": false,
-					"required": false,
-					"dataStorage": "raw",
-					"ageBracket": {
-					  "consentTypeRequired": "none",
-					  "consentTypeUnderParentalControl": "opt-in-unverified",
-					  "defaultValue": "everybody",
-					  "defaultParentLimit": "everybody"
-					}
-				  }
-				},
-				{
-				  "namespace": "chat",
-				  "settingName": "text",
-				  "preferredValue": "everybody",
-				  "preferredValueUpdatedAt": 1710543119788,
-				  "preferredValueFromOrgLevel": false,
-				  "parentLimit": "everybody",
-				  "parentLimitFromOrgLevel": true,
-				  "effectiveValue": "everybody",
-				  "effectiveSource": "preference",
-				  "isOrgLevel": false,
-				  "definition": {
-					"orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
-					"productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
-					"namespace": "chat",
-					"settingName": "text",
-					"valueType": "option",
-					"allowProductOverrides": "ageBrackets",
-					"inheritFromOrg": true,
-					"translations": {
-					  "en": {
-						"label": "Voice chat",
-						"userNotice": "Determines with whom you can use the text chat feature",
-						"parentNotice": "Who can your child message with using Epic text chat?"
-					  }
-					},
-					"options": [
-					  {
-						"value": "nobody",
-						"translations": {
-						  "en": {
-							"label": "Nobody",
-							"userNotice": "You cannot use text chat with anybody",
-							"parentNotice": "Epic text chat is disabled for your child."
-						  }
-						}
-					  },
-					  {
-						"value": "friends",
-						"translations": {
-						  "en": {
-							"label": "Friends Only",
-							"userNotice": "You can use text chat with friends only",
-							"parentNotice": "Your child can text chat only with players in their Epic friends list and platform friends list."
-						  }
-						}
-					  },
-					  {
-						"value": "friends-and-teammates",
-						"translations": {
-						  "en": {
-							"label": "Friends & Teammates",
-							"userNotice": "You can use text chat with friends and teammates",
-							"parentNotice": "Your child can text chat with players in their Epic friends list and platform friends list, and those on their team."
-						  }
-						}
-					  },
-					  {
-						"value": "everybody",
-						"translations": {
-						  "en": {
-							"label": "Everybody",
-							"userNotice": "You can use text chat with everybody",
-							"parentNotice": "Your child can text chat with any player."
-						  }
-						}
-					  }
-					],
-					"restrictiveOrder": "firstRestrictive",
-					"userHidden": false,
-					"required": false,
-					"dataStorage": "raw",
-					"ageBracket": {
-					  "consentTypeRequired": "none",
-					  "consentTypeUnderParentalControl": "opt-in-unverified",
-					  "defaultValue": "everybody",
-					  "defaultParentLimit": "everybody"
-					}
-				  }
-				},
-				{
-				  "namespace": "chat",
-				  "settingName": "enhanced-voice-reporting",
-				  "preferredValue": "prefer-not-recording",
-				  "preferredValueFromOrgLevel": true,
-				  "effectiveValue": "prefer-not-recording",
-				  "effectiveSource": "default",
-				  "isOrgLevel": true,
-				  "definition": {
-					"orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
-					"productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
-					"namespace": "chat",
-					"settingName": "enhanced-voice-reporting",
-					"valueType": "option",
-					"allowProductOverrides": "ageBrackets",
-					"inheritFromOrg": true,
-					"translations": {
-					  "en": {
-						"label": "Enhanced voice chat recording",
-						"userNotice": "Determines enhanced voice chat recording setting",
-						"parentNotice": "Determines enhanced voice chat recording setting"
-					  }
-					},
-					"options": [
-					  {
-						"value": "recording",
-						"translations": {
-						  "en": {
-							"label": "Always On"
-						  }
-						}
-					  },
-					  {
-						"value": "prefer-not-recording",
-						"translations": {
-						  "en": {
-							"label": "Off When Possible"
-						  }
-						}
-					  }
-					],
-					"restrictiveOrder": "firstRestrictive",
-					"userHidden": false,
-					"required": false,
-					"dataStorage": "raw",
-					"ageBracket": {
-					  "consentTypeRequired": "none",
-					  "defaultValue": "prefer-not-recording"
-					}
-				  }
-				},
-				{
-				  "namespace": "chat",
-				  "settingName": "voice-chat-recording",
-				  "preferredValue": "prefer-not-recording-and-auto-mute",
-				  "preferredValueFromOrgLevel": true,
-				  "effectiveValue": "prefer-not-recording-and-auto-mute",
-				  "effectiveSource": "default",
-				  "isOrgLevel": true,
-				  "definition": {
-					"orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
-					"productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
-					"namespace": "chat",
-					"settingName": "voice-chat-recording",
-					"valueType": "option",
-					"allowProductOverrides": "ageBrackets",
-					"inheritFromOrg": true,
-					"translations": {
-					  "en": {
-						"label": "Enhanced voice chat recording",
-						"userNotice": "Determines enhanced voice chat recording setting",
-						"parentNotice": "Determines enhanced voice chat recording setting"
-					  }
-					},
-					"options": [
-					  {
-						"value": "recording",
-						"translations": {
-						  "en": {
-							"label": "ON",
-							"userNotice": "When Enhanced Voice Chat Reporting is turned ON, it is available in all voice chats.",
-							"parentNotice": "When Enhanced Voice Chat Reporting is turned ON, it is available in all voice chats."
-						  }
-						}
-					  },
-					  {
-						"value": "prefer-not-recording",
-						"translations": {
-						  "en": {
-							"label": "PREFER OFF",
-							"userNotice": "When Enhanced Voice Chat Reporting is turned to PREFER OFF, it is disabled when all players in the party channel have set enhanced voice reporting to PREFER OFF.",
-							"parentNotice": "When Enhanced Voice Chat Reporting is turned to PREFER OFF, it is disabled when all players in the party channel have set enhanced voice reporting to PREFER OFF."
-						  }
-						}
-					  },
-					  {
-						"value": "prefer-not-recording-and-auto-mute",
-						"translations": {
-						  "en": {
-							"label": "PREFER OFF & AUTOMUTE",
-							"userNotice": "Same behaviour as PREFER OFF. Additionally, you will be auto-muted if reporting is available in your voice chat due to the preferences of other players. Note that enhanced voice chat reporting is always enabled, regardless of your settings, in game chat, proximity chat, looking for party chat, or when a party includes at least one player who has Enhanced Voice Chat Reporting turned ON. You will be notified in-game if the status of reporting changes. Only players aged 18 and older can change this setting to PREFER OFF or PREFER OFF & AUTO MUTE.",
-							"parentNotice": "Same behaviour as PREFER OFF. Additionally, you will be auto-muted if reporting is available in your voice chat due to the preferences of other players. Note that enhanced voice chat reporting is always enabled, regardless of your settings, in game chat, proximity chat, looking for party chat, or when a party includes at least one player who has Enhanced Voice Chat Reporting turned ON. You will be notified in-game if the status of reporting changes. Only players aged 18 and older can change this setting to PREFER OFF or PREFER OFF & AUTO MUTE."
-						  }
-						}
-					  }
-					],
-					"restrictiveOrder": "firstRestrictive",
-					"userHidden": false,
-					"required": false,
-					"dataStorage": "raw",
-					"ageBracket": {
-					  "consentTypeRequired": "none",
-					  "defaultValue": "prefer-not-recording-and-auto-mute"
 					}
 				  }
 				},
@@ -749,9 +458,13 @@ module.exports = {
 					"userHidden": false,
 					"required": false,
 					"dataStorage": "readOnly",
+					"maximumScheduleWindowsPerDay": 0,
 					"ageBracket": {
 					  "consentTypeRequired": "none",
-					  "defaultValue": "PEGI"
+					  "consentType": "none",
+					  "applyConsentToEnforcedUsersOnly": false,
+					  "defaultValue": "PEGI",
+					  "defaultPreference": "PEGI"
 					}
 				  }
 				},
@@ -762,9 +475,9 @@ module.exports = {
 				  "preferredValueFromOrgLevel": true,
 				  "parentLimit": "ESRB_AGE_T",
 				  "parentLimitFromOrgLevel": false,
-				  "parentLimitUpdatedAt": 1710541486985,
+				  "parentLimitUpdatedAt": 1721737772452,
 				  "effectiveValue": "ESRB_AGE_T",
-				  "effectiveSource": "preference",
+				  "effectiveSource": "default",
 				  "isOrgLevel": false,
 				  "definition": {
 					"orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
@@ -813,10 +526,14 @@ module.exports = {
 					"userHidden": true,
 					"required": false,
 					"dataStorage": "raw",
+					"maximumScheduleWindowsPerDay": 0,
 					"ageBracket": {
 					  "consentTypeRequired": "none",
 					  "consentTypeUnderParentalControl": "opt-in-unverified",
+					  "consentType": "opt-in-unverified",
+					  "applyConsentToEnforcedUsersOnly": true,
 					  "defaultValue": "Unrated",
+					  "defaultPreference": "Unrated",
 					  "defaultParentLimit": "Unrated"
 					}
 				  }
@@ -828,9 +545,9 @@ module.exports = {
 				  "preferredValueFromOrgLevel": true,
 				  "parentLimit": "PEGI_AGE_12",
 				  "parentLimitFromOrgLevel": false,
-				  "parentLimitUpdatedAt": 1710541486986,
+				  "parentLimitUpdatedAt": 1721737772452,
 				  "effectiveValue": "PEGI_AGE_12",
-				  "effectiveSource": "preference",
+				  "effectiveSource": "default",
 				  "isOrgLevel": false,
 				  "definition": {
 					"orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
@@ -879,10 +596,14 @@ module.exports = {
 					"userHidden": true,
 					"required": false,
 					"dataStorage": "raw",
+					"maximumScheduleWindowsPerDay": 0,
 					"ageBracket": {
 					  "consentTypeRequired": "none",
 					  "consentTypeUnderParentalControl": "opt-in-unverified",
+					  "consentType": "opt-in-unverified",
+					  "applyConsentToEnforcedUsersOnly": true,
 					  "defaultValue": "Unrated",
+					  "defaultPreference": "Unrated",
 					  "defaultParentLimit": "Unrated"
 					}
 				  }
@@ -890,13 +611,13 @@ module.exports = {
 				{
 				  "namespace": "ratings",
 				  "settingName": "limit-usk",
-				  "preferredValue": "USK_AGE_12",
+				  "preferredValue": "USK_AGE_16",
 				  "preferredValueFromOrgLevel": true,
-				  "parentLimit": "USK_AGE_12",
+				  "parentLimit": "USK_AGE_16",
 				  "parentLimitFromOrgLevel": false,
-				  "parentLimitUpdatedAt": 1710541486988,
-				  "effectiveValue": "USK_AGE_12",
-				  "effectiveSource": "preference",
+				  "parentLimitUpdatedAt": 1721737772452,
+				  "effectiveValue": "USK_AGE_16",
+				  "effectiveSource": "default",
 				  "isOrgLevel": false,
 				  "definition": {
 					"orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
@@ -939,16 +660,29 @@ module.exports = {
 							"parentNotice": "TBD"
 						  }
 						}
+					  },
+					  {
+						"value": "USK_AGE_16",
+						"translations": {
+						  "en": {
+							"label": "16+",
+							"parentNotice": "TBD"
+						  }
+						}
 					  }
 					],
 					"restrictiveOrder": "firstRestrictive",
 					"userHidden": true,
 					"required": false,
 					"dataStorage": "raw",
+					"maximumScheduleWindowsPerDay": 0,
 					"ageBracket": {
 					  "consentTypeRequired": "none",
 					  "consentTypeUnderParentalControl": "opt-in-unverified",
+					  "consentType": "opt-in-unverified",
+					  "applyConsentToEnforcedUsersOnly": true,
 					  "defaultValue": "Unrated",
+					  "defaultPreference": "Unrated",
 					  "defaultParentLimit": "Unrated"
 					}
 				  }
@@ -960,9 +694,9 @@ module.exports = {
 				  "preferredValueFromOrgLevel": true,
 				  "parentLimit": "GRAC_AGE_12",
 				  "parentLimitFromOrgLevel": false,
-				  "parentLimitUpdatedAt": 1710541486988,
+				  "parentLimitUpdatedAt": 1721737772453,
 				  "effectiveValue": "GRAC_AGE_12",
-				  "effectiveSource": "preference",
+				  "effectiveSource": "default",
 				  "isOrgLevel": false,
 				  "definition": {
 					"orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
@@ -1002,11 +736,16 @@ module.exports = {
 					"userHidden": true,
 					"required": false,
 					"dataStorage": "raw",
+					"maximumScheduleWindowsPerDay": 0,
 					"ageBracket": {
 					  "consentTypeRequired": "none",
 					  "consentTypeUnderParentalControl": "opt-in-unverified",
-					  "defaultValue": "GRAC_AGE_18",
-					  "defaultParentLimit": "GRAC_AGE_18"
+					  "consentType": "opt-in-unverified",
+					  "applyConsentToEnforcedUsersOnly": true,
+					  "defaultValue": "GRAC_AGE_ADULT",
+					  "defaultPreference": "GRAC_AGE_ADULT",
+					  "defaultParentLimit": "GRAC_AGE_15",
+					  "enforcedLimit": "GRAC_AGE_15"
 					}
 				  }
 				},
@@ -1017,9 +756,9 @@ module.exports = {
 				  "preferredValueFromOrgLevel": true,
 				  "parentLimit": "GEN_AGE_12",
 				  "parentLimitFromOrgLevel": false,
-				  "parentLimitUpdatedAt": 1710541486990,
+				  "parentLimitUpdatedAt": 1721737772452,
 				  "effectiveValue": "GEN_AGE_12",
-				  "effectiveSource": "preference",
+				  "effectiveSource": "default",
 				  "isOrgLevel": false,
 				  "definition": {
 					"orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
@@ -1068,10 +807,14 @@ module.exports = {
 					"userHidden": true,
 					"required": false,
 					"dataStorage": "raw",
+					"maximumScheduleWindowsPerDay": 0,
 					"ageBracket": {
 					  "consentTypeRequired": "none",
 					  "consentTypeUnderParentalControl": "opt-in-unverified",
+					  "consentType": "opt-in-unverified",
+					  "applyConsentToEnforcedUsersOnly": true,
 					  "defaultValue": "Unrated",
+					  "defaultPreference": "Unrated",
 					  "defaultParentLimit": "Unrated"
 					}
 				  }
@@ -1083,9 +826,9 @@ module.exports = {
 				  "preferredValueFromOrgLevel": true,
 				  "parentLimit": "ACB_AGE_M",
 				  "parentLimitFromOrgLevel": false,
-				  "parentLimitUpdatedAt": 1710541486987,
+				  "parentLimitUpdatedAt": 1721737772452,
 				  "effectiveValue": "ACB_AGE_M",
-				  "effectiveSource": "preference",
+				  "effectiveSource": "default",
 				  "isOrgLevel": false,
 				  "definition": {
 					"orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
@@ -1134,10 +877,14 @@ module.exports = {
 					"userHidden": true,
 					"required": false,
 					"dataStorage": "raw",
+					"maximumScheduleWindowsPerDay": 0,
 					"ageBracket": {
 					  "consentTypeRequired": "none",
 					  "consentTypeUnderParentalControl": "opt-in-unverified",
+					  "consentType": "opt-in-unverified",
+					  "applyConsentToEnforcedUsersOnly": true,
 					  "defaultValue": "ACB_AGE_R18",
+					  "defaultPreference": "ACB_AGE_R18",
 					  "defaultParentLimit": "ACB_AGE_R18"
 					}
 				  }
@@ -1149,9 +896,9 @@ module.exports = {
 				  "preferredValueFromOrgLevel": true,
 				  "parentLimit": "CLASSIND_AGE_12",
 				  "parentLimitFromOrgLevel": false,
-				  "parentLimitUpdatedAt": 1710541486987,
+				  "parentLimitUpdatedAt": 1721737772452,
 				  "effectiveValue": "CLASSIND_AGE_12",
-				  "effectiveSource": "preference",
+				  "effectiveSource": "default",
 				  "isOrgLevel": false,
 				  "definition": {
 					"orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
@@ -1200,10 +947,14 @@ module.exports = {
 					"userHidden": true,
 					"required": false,
 					"dataStorage": "raw",
+					"maximumScheduleWindowsPerDay": 0,
 					"ageBracket": {
 					  "consentTypeRequired": "none",
 					  "consentTypeUnderParentalControl": "opt-in-unverified",
+					  "consentType": "opt-in-unverified",
+					  "applyConsentToEnforcedUsersOnly": true,
 					  "defaultValue": "CLASSIND_AGE_18",
+					  "defaultPreference": "CLASSIND_AGE_18",
 					  "defaultParentLimit": "CLASSIND_AGE_18"
 					}
 				  }
@@ -1215,9 +966,9 @@ module.exports = {
 				  "preferredValueFromOrgLevel": true,
 				  "parentLimit": "RUSSIA_AGE_12",
 				  "parentLimitFromOrgLevel": false,
-				  "parentLimitUpdatedAt": 1710541486989,
+				  "parentLimitUpdatedAt": 1721737772452,
 				  "effectiveValue": "RUSSIA_AGE_12",
-				  "effectiveSource": "preference",
+				  "effectiveSource": "default",
 				  "isOrgLevel": false,
 				  "definition": {
 					"orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
@@ -1266,10 +1017,14 @@ module.exports = {
 					"userHidden": true,
 					"required": false,
 					"dataStorage": "raw",
+					"maximumScheduleWindowsPerDay": 0,
 					"ageBracket": {
 					  "consentTypeRequired": "none",
 					  "consentTypeUnderParentalControl": "opt-in-unverified",
+					  "consentType": "opt-in-unverified",
+					  "applyConsentToEnforcedUsersOnly": true,
 					  "defaultValue": "RUSSIA_AGE_18",
+					  "defaultPreference": "RUSSIA_AGE_18",
 					  "defaultParentLimit": "RUSSIA_AGE_18"
 					}
 				  }
@@ -1281,9 +1036,9 @@ module.exports = {
 				  "preferredValueFromOrgLevel": true,
 				  "parentLimit": "OFLC_AGE_13",
 				  "parentLimitFromOrgLevel": false,
-				  "parentLimitUpdatedAt": 1710541486990,
+				  "parentLimitUpdatedAt": 1721737772452,
 				  "effectiveValue": "OFLC_AGE_13",
-				  "effectiveSource": "preference",
+				  "effectiveSource": "default",
 				  "isOrgLevel": false,
 				  "definition": {
 					"orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
@@ -1332,10 +1087,14 @@ module.exports = {
 					"userHidden": true,
 					"required": false,
 					"dataStorage": "raw",
+					"maximumScheduleWindowsPerDay": 0,
 					"ageBracket": {
 					  "consentTypeRequired": "none",
 					  "consentTypeUnderParentalControl": "opt-in-unverified",
+					  "consentType": "opt-in-unverified",
+					  "applyConsentToEnforcedUsersOnly": true,
 					  "defaultValue": "Unrated",
+					  "defaultPreference": "Unrated",
 					  "defaultParentLimit": "Unrated"
 					}
 				  }
@@ -1347,9 +1106,9 @@ module.exports = {
 				  "preferredValueFromOrgLevel": true,
 				  "parentLimit": "FPB_AGE_13",
 				  "parentLimitFromOrgLevel": false,
-				  "parentLimitUpdatedAt": 1710541486991,
+				  "parentLimitUpdatedAt": 1721737772453,
 				  "effectiveValue": "FPB_AGE_13",
-				  "effectiveSource": "preference",
+				  "effectiveSource": "default",
 				  "isOrgLevel": false,
 				  "definition": {
 					"orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
@@ -1407,10 +1166,14 @@ module.exports = {
 					"userHidden": true,
 					"required": false,
 					"dataStorage": "raw",
+					"maximumScheduleWindowsPerDay": 0,
 					"ageBracket": {
 					  "consentTypeRequired": "none",
 					  "consentTypeUnderParentalControl": "opt-in-unverified",
+					  "consentType": "opt-in-unverified",
+					  "applyConsentToEnforcedUsersOnly": true,
 					  "defaultValue": "Unrated",
+					  "defaultPreference": "Unrated",
 					  "defaultParentLimit": "Unrated"
 					}
 				  }
@@ -1422,9 +1185,9 @@ module.exports = {
 				  "preferredValueFromOrgLevel": true,
 				  "parentLimit": "CERO_AGE_15",
 				  "parentLimitFromOrgLevel": false,
-				  "parentLimitUpdatedAt": 1710541486992,
+				  "parentLimitUpdatedAt": 1721737772453,
 				  "effectiveValue": "CERO_AGE_15",
-				  "effectiveSource": "preference",
+				  "effectiveSource": "default",
 				  "isOrgLevel": false,
 				  "definition": {
 					"orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
@@ -1473,10 +1236,14 @@ module.exports = {
 					"userHidden": true,
 					"required": false,
 					"dataStorage": "raw",
+					"maximumScheduleWindowsPerDay": 0,
 					"ageBracket": {
 					  "consentTypeRequired": "none",
 					  "consentTypeUnderParentalControl": "opt-in-unverified",
+					  "consentType": "opt-in-unverified",
+					  "applyConsentToEnforcedUsersOnly": true,
 					  "defaultValue": "Unrated",
+					  "defaultPreference": "Unrated",
 					  "defaultParentLimit": "Unrated"
 					}
 				  }
@@ -1488,9 +1255,9 @@ module.exports = {
 				  "preferredValueFromOrgLevel": true,
 				  "parentLimit": "CSRR_AGE_12",
 				  "parentLimitFromOrgLevel": false,
-				  "parentLimitUpdatedAt": 1710541486992,
+				  "parentLimitUpdatedAt": 1721737772453,
 				  "effectiveValue": "CSRR_AGE_12",
-				  "effectiveSource": "preference",
+				  "effectiveSource": "default",
 				  "isOrgLevel": false,
 				  "definition": {
 					"orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
@@ -1539,10 +1306,14 @@ module.exports = {
 					"userHidden": true,
 					"required": false,
 					"dataStorage": "raw",
+					"maximumScheduleWindowsPerDay": 0,
 					"ageBracket": {
 					  "consentTypeRequired": "none",
 					  "consentTypeUnderParentalControl": "opt-in-unverified",
+					  "consentType": "opt-in-unverified",
+					  "applyConsentToEnforcedUsersOnly": true,
 					  "defaultValue": "Unrated",
+					  "defaultPreference": "Unrated",
 					  "defaultParentLimit": "Unrated"
 					}
 				  }
@@ -1554,9 +1325,9 @@ module.exports = {
 				  "preferredValueFromOrgLevel": true,
 				  "parentLimit": "GCAM_AGE_12",
 				  "parentLimitFromOrgLevel": false,
-				  "parentLimitUpdatedAt": 1710541486993,
+				  "parentLimitUpdatedAt": 1721737772453,
 				  "effectiveValue": "GCAM_AGE_12",
-				  "effectiveSource": "preference",
+				  "effectiveSource": "default",
 				  "isOrgLevel": false,
 				  "definition": {
 					"orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
@@ -1605,10 +1376,14 @@ module.exports = {
 					"userHidden": true,
 					"required": false,
 					"dataStorage": "raw",
+					"maximumScheduleWindowsPerDay": 0,
 					"ageBracket": {
 					  "consentTypeRequired": "none",
 					  "consentTypeUnderParentalControl": "opt-in-unverified",
+					  "consentType": "opt-in-unverified",
+					  "applyConsentToEnforcedUsersOnly": true,
 					  "defaultValue": "Unrated",
+					  "defaultPreference": "Unrated",
 					  "defaultParentLimit": "Unrated"
 					}
 				  }
@@ -1620,9 +1395,9 @@ module.exports = {
 				  "preferredValueFromOrgLevel": true,
 				  "parentLimit": "MRO_AGE_12",
 				  "parentLimitFromOrgLevel": false,
-				  "parentLimitUpdatedAt": 1710541486993,
+				  "parentLimitUpdatedAt": 1721737772453,
 				  "effectiveValue": "MRO_AGE_12",
-				  "effectiveSource": "preference",
+				  "effectiveSource": "default",
 				  "isOrgLevel": false,
 				  "definition": {
 					"orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
@@ -1671,10 +1446,14 @@ module.exports = {
 					"userHidden": true,
 					"required": false,
 					"dataStorage": "raw",
+					"maximumScheduleWindowsPerDay": 0,
 					"ageBracket": {
 					  "consentTypeRequired": "none",
 					  "consentTypeUnderParentalControl": "opt-in-unverified",
+					  "consentType": "opt-in-unverified",
+					  "applyConsentToEnforcedUsersOnly": true,
 					  "defaultValue": "Unrated",
+					  "defaultPreference": "Unrated",
 					  "defaultParentLimit": "Unrated"
 					}
 				  }
@@ -1709,10 +1488,14 @@ module.exports = {
 					"userHidden": true,
 					"required": false,
 					"dataStorage": "raw",
+					"maximumScheduleWindowsPerDay": 0,
 					"ageBracket": {
 					  "consentTypeRequired": "none",
 					  "consentTypeUnderParentalControl": "opt-in-unverified",
+					  "consentType": "opt-in-unverified",
+					  "applyConsentToEnforcedUsersOnly": true,
 					  "defaultValue": false,
+					  "defaultPreference": false,
 					  "defaultParentLimit": false
 					}
 				  }
@@ -1721,7 +1504,7 @@ module.exports = {
 				  "namespace": "profile",
 				  "settingName": "allow-non-squad-users-to-see-my-username",
 				  "preferredValue": true,
-				  "preferredValueUpdatedAt": 1710543119786,
+				  "preferredValueUpdatedAt": 1726747423214,
 				  "preferredValueFromOrgLevel": false,
 				  "effectiveValue": true,
 				  "effectiveSource": "preference",
@@ -1746,9 +1529,13 @@ module.exports = {
 					"userHidden": false,
 					"required": false,
 					"dataStorage": "raw",
+					"maximumScheduleWindowsPerDay": 0,
 					"ageBracket": {
 					  "consentTypeRequired": "none",
-					  "defaultValue": true
+					  "consentType": "none",
+					  "applyConsentToEnforcedUsersOnly": false,
+					  "defaultValue": true,
+					  "defaultPreference": true
 					}
 				  }
 				},
@@ -1756,7 +1543,7 @@ module.exports = {
 				  "namespace": "profile",
 				  "settingName": "can-see-player-usernames-from-other-squads",
 				  "preferredValue": true,
-				  "preferredValueUpdatedAt": 1710543119787,
+				  "preferredValueUpdatedAt": 1726747423214,
 				  "preferredValueFromOrgLevel": false,
 				  "effectiveValue": true,
 				  "effectiveSource": "preference",
@@ -1781,9 +1568,13 @@ module.exports = {
 					"userHidden": false,
 					"required": false,
 					"dataStorage": "raw",
+					"maximumScheduleWindowsPerDay": 0,
 					"ageBracket": {
 					  "consentTypeRequired": "none",
-					  "defaultValue": true
+					  "consentType": "none",
+					  "applyConsentToEnforcedUsersOnly": false,
+					  "defaultValue": true,
+					  "defaultPreference": true
 					}
 				  }
 				},
@@ -1835,10 +1626,14 @@ module.exports = {
 					"userHidden": true,
 					"required": false,
 					"dataStorage": "raw",
+					"maximumScheduleWindowsPerDay": 0,
 					"ageBracket": {
 					  "consentTypeRequired": "none",
 					  "consentTypeUnderParentalControl": "opt-in-unverified",
+					  "consentType": "opt-in-unverified",
+					  "applyConsentToEnforcedUsersOnly": true,
 					  "defaultValue": "never",
+					  "defaultPreference": "never",
 					  "defaultParentLimit": "never"
 					}
 				  }
@@ -1872,9 +1667,13 @@ module.exports = {
 					"userHidden": false,
 					"required": false,
 					"dataStorage": "raw",
+					"maximumScheduleWindowsPerDay": 0,
 					"ageBracket": {
 					  "consentTypeRequired": "none",
+					  "consentType": "none",
+					  "applyConsentToEnforcedUsersOnly": false,
 					  "defaultValue": true,
+					  "defaultPreference": true,
 					  "enforcedLimit": true
 					}
 				  }
@@ -1908,9 +1707,13 @@ module.exports = {
 					"userHidden": false,
 					"required": false,
 					"dataStorage": "raw",
+					"maximumScheduleWindowsPerDay": 0,
 					"ageBracket": {
 					  "consentTypeRequired": "none",
+					  "consentType": "none",
+					  "applyConsentToEnforcedUsersOnly": false,
 					  "defaultValue": true,
+					  "defaultPreference": true,
 					  "enforcedLimit": true
 					}
 				  }
@@ -1946,10 +1749,14 @@ module.exports = {
 					"userHidden": false,
 					"required": false,
 					"dataStorage": "raw",
+					"maximumScheduleWindowsPerDay": 0,
 					"ageBracket": {
 					  "consentTypeRequired": "none",
 					  "consentTypeUnderParentalControl": "opt-in-unverified",
+					  "consentType": "opt-in-unverified",
+					  "applyConsentToEnforcedUsersOnly": true,
 					  "defaultValue": true,
+					  "defaultPreference": true,
 					  "defaultParentLimit": true,
 					  "enforcedLimit": true
 					}
@@ -2014,9 +1821,13 @@ module.exports = {
 					"userHidden": false,
 					"required": false,
 					"dataStorage": "raw",
+					"maximumScheduleWindowsPerDay": 0,
 					"ageBracket": {
 					  "consentTypeRequired": "none",
+					  "consentType": "none",
+					  "applyConsentToEnforcedUsersOnly": false,
 					  "defaultValue": "public",
+					  "defaultPreference": "public",
 					  "enforcedLimit": "public"
 					}
 				  }
@@ -2080,9 +1891,13 @@ module.exports = {
 					"userHidden": false,
 					"required": false,
 					"dataStorage": "raw",
+					"maximumScheduleWindowsPerDay": 0,
 					"ageBracket": {
 					  "consentTypeRequired": "none",
+					  "consentType": "none",
+					  "applyConsentToEnforcedUsersOnly": false,
 					  "defaultValue": "public",
+					  "defaultPreference": "public",
 					  "enforcedLimit": "public"
 					}
 				  }
@@ -2136,9 +1951,13 @@ module.exports = {
 					"userHidden": false,
 					"required": false,
 					"dataStorage": "raw",
+					"maximumScheduleWindowsPerDay": 0,
 					"ageBracket": {
 					  "consentTypeRequired": "none",
+					  "consentType": "none",
+					  "applyConsentToEnforcedUsersOnly": false,
 					  "defaultValue": "friends-only",
+					  "defaultPreference": "friends-only",
 					  "enforcedLimit": "friends-only"
 					}
 				  }
@@ -2171,9 +1990,13 @@ module.exports = {
 					"userHidden": false,
 					"required": false,
 					"dataStorage": "readOnly",
+					"maximumScheduleWindowsPerDay": 0,
 					"ageBracket": {
 					  "consentTypeRequired": "none",
-					  "defaultValue": true
+					  "consentType": "none",
+					  "applyConsentToEnforcedUsersOnly": false,
+					  "defaultValue": true,
+					  "defaultPreference": true
 					}
 				  }
 				},
@@ -2205,10 +2028,14 @@ module.exports = {
 					"userHidden": true,
 					"required": false,
 					"dataStorage": "raw",
+					"maximumScheduleWindowsPerDay": 0,
 					"ageBracket": {
 					  "consentTypeRequired": "none",
 					  "consentTypeUnderParentalControl": "opt-in-unverified",
+					  "consentType": "opt-in-unverified",
+					  "applyConsentToEnforcedUsersOnly": true,
 					  "defaultValue": true,
+					  "defaultPreference": true,
 					  "defaultParentLimit": true
 					}
 				  }
@@ -2239,13 +2066,660 @@ module.exports = {
 					"userHidden": false,
 					"required": false,
 					"dataStorage": "readOnly",
+					"maximumScheduleWindowsPerDay": 0,
 					"ageBracket": {
 					  "consentTypeRequired": "none",
-					  "defaultValue": true
+					  "consentType": "none",
+					  "applyConsentToEnforcedUsersOnly": false,
+					  "defaultValue": true,
+					  "defaultPreference": true
+					}
+				  }
+				},
+				{
+				  "namespace": "profile",
+				  "settingName": "share-play-activity",
+				  "preferredValue": false,
+				  "preferredValueFromOrgLevel": false,
+				  "effectiveValue": false,
+				  "effectiveSource": "default",
+				  "isOrgLevel": false,
+				  "definition": {
+					"orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+					"productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
+					"namespace": "profile",
+					"settingName": "share-play-activity",
+					"valueType": "boolean",
+					"translations": {
+					  "en": {
+						"label": "TBD",
+						"userNotice": "TBD",
+						"parentNotice": "TBD"
+					  }
+					},
+					"options": [],
+					"restrictiveOrder": "falseRestrictive",
+					"userHidden": false,
+					"required": false,
+					"dataStorage": "raw",
+					"maximumScheduleWindowsPerDay": 0,
+					"ageBracket": {
+					  "consentTypeRequired": "none",
+					  "consentType": "none",
+					  "applyConsentToEnforcedUsersOnly": false,
+					  "defaultValue": false,
+					  "defaultPreference": false,
+					  "enforcedLimit": true
+					}
+				  }
+				},
+				{
+				  "namespace": "chat",
+				  "settingName": "filter-out-mature-language",
+				  "preferredValue": true,
+				  "preferredValueUpdatedAt": 1726747423216,
+				  "preferredValueFromOrgLevel": false,
+				  "parentLimit": false,
+				  "parentLimitFromOrgLevel": true,
+				  "effectiveValue": true,
+				  "effectiveSource": "preference",
+				  "isOrgLevel": false,
+				  "definition": {
+					"orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+					"productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
+					"namespace": "chat",
+					"settingName": "filter-out-mature-language",
+					"valueType": "boolean",
+					"allowProductOverrides": "ageBrackets",
+					"inheritFromOrg": true,
+					"translations": {
+					  "en": {
+						"label": "Filter out mature language in Epic text chat",
+						"userNotice": "Mature language in text chat will be filtered and replaced with heart symbols",
+						"parentNotice": "<b>On:</b> Mature language in text chat will be filtered and replaced with heart symbols."
+					  }
+					},
+					"options": [],
+					"restrictiveOrder": "falsePermissive",
+					"userHidden": false,
+					"required": false,
+					"dataStorage": "raw",
+					"maximumScheduleWindowsPerDay": 0,
+					"ageBracket": {
+					  "consentTypeRequired": "none",
+					  "consentTypeUnderParentalControl": "opt-in-unverified",
+					  "consentType": "opt-in-unverified",
+					  "applyConsentToEnforcedUsersOnly": true,
+					  "defaultValue": false,
+					  "defaultPreference": false,
+					  "defaultParentLimit": false
+					}
+				  }
+				},
+				{
+				  "namespace": "chat",
+				  "settingName": "voice",
+				  "preferredValue": "everybody",
+				  "preferredValueUpdatedAt": 1726747423222,
+				  "preferredValueFromOrgLevel": false,
+				  "parentLimit": "everybody",
+				  "parentLimitFromOrgLevel": true,
+				  "effectiveValue": "everybody",
+				  "effectiveSource": "preference",
+				  "isOrgLevel": false,
+				  "definition": {
+					"orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+					"productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
+					"namespace": "chat",
+					"settingName": "voice",
+					"valueType": "option",
+					"allowProductOverrides": "ageBrackets",
+					"inheritFromOrg": true,
+					"translations": {
+					  "en": {
+						"label": "Voice chat",
+						"userNotice": "Determines with whom you can use the voice chat feature",
+						"parentNotice": "Who can your child speak with using Epic voice chat?"
+					  }
+					},
+					"options": [
+					  {
+						"value": "nobody",
+						"translations": {
+						  "en": {
+							"label": "Nobody",
+							"userNotice": "Epic voice chat is disabled.",
+							"parentNotice": "Epic voice chat is disabled for your child."
+						  }
+						}
+					  },
+					  {
+						"value": "friends",
+						"translations": {
+						  "en": {
+							"label": "Friends Only",
+							"userNotice": "You can voice chat only with players in their Epic friends list and platform friends list.",
+							"parentNotice": "Your child can voice chat only with players in their Epic friends list and platform friends list."
+						  }
+						}
+					  },
+					  {
+						"value": "friends-and-teammates",
+						"translations": {
+						  "en": {
+							"label": "Friends & Teammates",
+							"userNotice": "You can voice chat with players in their Epic friends list and platform friends list, and those on their team.",
+							"parentNotice": "Your child can voice chat with players in their Epic friends list and platform friends list, and those on their team."
+						  }
+						}
+					  },
+					  {
+						"value": "everybody",
+						"translations": {
+						  "en": {
+							"label": "Everybody",
+							"userNotice": "You can voice chat with any player.",
+							"parentNotice": "Your child can voice chat with any player."
+						  }
+						}
+					  }
+					],
+					"restrictiveOrder": "firstRestrictive",
+					"userHidden": false,
+					"required": false,
+					"dataStorage": "raw",
+					"maximumScheduleWindowsPerDay": 0,
+					"ageBracket": {
+					  "consentTypeRequired": "none",
+					  "consentTypeUnderParentalControl": "opt-in-unverified",
+					  "consentType": "opt-in-unverified",
+					  "applyConsentToEnforcedUsersOnly": true,
+					  "defaultValue": "everybody",
+					  "defaultPreference": "everybody",
+					  "defaultParentLimit": "everybody"
+					}
+				  }
+				},
+				{
+				  "namespace": "chat",
+				  "settingName": "text",
+				  "preferredValue": "everybody",
+				  "preferredValueUpdatedAt": 1726747423222,
+				  "preferredValueFromOrgLevel": false,
+				  "parentLimit": "everybody",
+				  "parentLimitFromOrgLevel": true,
+				  "effectiveValue": "everybody",
+				  "effectiveSource": "preference",
+				  "isOrgLevel": false,
+				  "definition": {
+					"orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+					"productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
+					"namespace": "chat",
+					"settingName": "text",
+					"valueType": "option",
+					"allowProductOverrides": "ageBrackets",
+					"inheritFromOrg": true,
+					"translations": {
+					  "en": {
+						"label": "Voice chat",
+						"userNotice": "Determines with whom you can use the text chat feature",
+						"parentNotice": "Who can your child message with using Epic text chat?"
+					  }
+					},
+					"options": [
+					  {
+						"value": "nobody",
+						"translations": {
+						  "en": {
+							"label": "Nobody",
+							"userNotice": "You cannot use text chat with anybody",
+							"parentNotice": "Epic text chat is disabled for your child."
+						  }
+						}
+					  },
+					  {
+						"value": "friends",
+						"translations": {
+						  "en": {
+							"label": "Friends Only",
+							"userNotice": "You can use text chat with friends only",
+							"parentNotice": "Your child can text chat only with players in their Epic friends list and platform friends list."
+						  }
+						}
+					  },
+					  {
+						"value": "friends-and-teammates",
+						"translations": {
+						  "en": {
+							"label": "Friends & Teammates",
+							"userNotice": "You can use text chat with friends and teammates",
+							"parentNotice": "Your child can text chat with players in their Epic friends list and platform friends list, and those on their team."
+						  }
+						}
+					  },
+					  {
+						"value": "everybody",
+						"translations": {
+						  "en": {
+							"label": "Everybody",
+							"userNotice": "You can use text chat with everybody",
+							"parentNotice": "Your child can text chat with any player."
+						  }
+						}
+					  }
+					],
+					"restrictiveOrder": "firstRestrictive",
+					"userHidden": false,
+					"required": false,
+					"dataStorage": "raw",
+					"maximumScheduleWindowsPerDay": 0,
+					"ageBracket": {
+					  "consentTypeRequired": "none",
+					  "consentTypeUnderParentalControl": "opt-in-unverified",
+					  "consentType": "opt-in-unverified",
+					  "applyConsentToEnforcedUsersOnly": true,
+					  "defaultValue": "everybody",
+					  "defaultPreference": "everybody",
+					  "defaultParentLimit": "everybody"
+					}
+				  }
+				},
+				{
+				  "namespace": "chat",
+				  "settingName": "enhanced-voice-reporting",
+				  "preferredValue": "prefer-not-recording",
+				  "preferredValueFromOrgLevel": true,
+				  "effectiveValue": "prefer-not-recording",
+				  "effectiveSource": "default",
+				  "isOrgLevel": true,
+				  "definition": {
+					"orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+					"productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
+					"namespace": "chat",
+					"settingName": "enhanced-voice-reporting",
+					"valueType": "option",
+					"allowProductOverrides": "ageBrackets",
+					"inheritFromOrg": true,
+					"translations": {
+					  "en": {
+						"label": "Enhanced voice chat recording",
+						"parentNotice": "Determines enhanced voice chat recording setting"
+					  }
+					},
+					"options": [
+					  {
+						"value": "recording",
+						"translations": {
+						  "en": {
+							"label": "Always On"
+						  }
+						}
+					  },
+					  {
+						"value": "prefer-not-recording",
+						"translations": {
+						  "en": {
+							"label": "Off When Possible"
+						  }
+						}
+					  }
+					],
+					"restrictiveOrder": "firstRestrictive",
+					"userHidden": false,
+					"required": false,
+					"dataStorage": "raw",
+					"maximumScheduleWindowsPerDay": 0,
+					"ageBracket": {
+					  "consentTypeRequired": "none",
+					  "consentType": "none",
+					  "applyConsentToEnforcedUsersOnly": false,
+					  "defaultValue": "prefer-not-recording",
+					  "defaultPreference": "prefer-not-recording"
+					}
+				  }
+				},
+				{
+				  "namespace": "chat",
+				  "settingName": "enhanced-text-reporting",
+				  "preferredValue": "prefer-not-recording",
+				  "preferredValueFromOrgLevel": true,
+				  "effectiveValue": "prefer-not-recording",
+				  "effectiveSource": "default",
+				  "isOrgLevel": true,
+				  "definition": {
+					"orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+					"productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
+					"namespace": "chat",
+					"settingName": "enhanced-text-reporting",
+					"valueType": "option",
+					"allowProductOverrides": "ageBrackets",
+					"inheritFromOrg": true,
+					"translations": {
+					  "en": {
+						"label": "Enhanced text chat recording",
+						"parentNotice": "Determines enhanced text chat recording setting"
+					  }
+					},
+					"options": [
+					  {
+						"value": "recording",
+						"translations": {
+						  "en": {
+							"label": "Always On"
+						  }
+						}
+					  },
+					  {
+						"value": "prefer-not-recording",
+						"translations": {
+						  "en": {
+							"label": "Off When Possible"
+						  }
+						}
+					  }
+					],
+					"restrictiveOrder": "firstRestrictive",
+					"userHidden": false,
+					"required": false,
+					"dataStorage": "raw",
+					"maximumScheduleWindowsPerDay": 0,
+					"ageBracket": {
+					  "consentTypeRequired": "none",
+					  "consentType": "none",
+					  "applyConsentToEnforcedUsersOnly": false,
+					  "defaultValue": "prefer-not-recording",
+					  "defaultPreference": "prefer-not-recording"
+					}
+				  }
+				},
+				{
+				  "namespace": "chat",
+				  "settingName": "voice-chat-recording",
+				  "preferredValue": "prefer-not-recording-and-auto-mute",
+				  "preferredValueFromOrgLevel": true,
+				  "effectiveValue": "prefer-not-recording-and-auto-mute",
+				  "effectiveSource": "default",
+				  "isOrgLevel": true,
+				  "definition": {
+					"orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+					"productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
+					"namespace": "chat",
+					"settingName": "voice-chat-recording",
+					"valueType": "option",
+					"allowProductOverrides": "ageBrackets",
+					"inheritFromOrg": true,
+					"translations": {
+					  "en": {
+						"label": "Enhanced voice chat recording",
+						"parentNotice": "Determines enhanced voice chat recording setting"
+					  }
+					},
+					"options": [
+					  {
+						"value": "recording",
+						"translations": {
+						  "en": {
+							"label": "ON",
+							"parentNotice": "When Enhanced Voice Chat Reporting is turned ON, it is available in all voice chats."
+						  }
+						}
+					  },
+					  {
+						"value": "prefer-not-recording",
+						"translations": {
+						  "en": {
+							"label": "PREFER OFF",
+							"parentNotice": "When Enhanced Voice Chat Reporting is turned to PREFER OFF, it is disabled when all players in the party channel have set enhanced voice reporting to PREFER OFF."
+						  }
+						}
+					  },
+					  {
+						"value": "prefer-not-recording-and-auto-mute",
+						"translations": {
+						  "en": {
+							"label": "PREFER OFF & AUTOMUTE",
+							"parentNotice": "Same behaviour as PREFER OFF. Additionally, you will be auto-muted if reporting is available in your voice chat due to the preferences of other players. Note that enhanced voice chat reporting is always enabled, regardless of your settings, in game chat, proximity chat, looking for party chat, or when a party includes at least one player who has Enhanced Voice Chat Reporting turned ON. You will be notified in-game if the status of reporting changes. Only players aged 18 and older can change this setting to PREFER OFF or PREFER OFF & AUTO MUTE."
+						  }
+						}
+					  }
+					],
+					"restrictiveOrder": "firstRestrictive",
+					"userHidden": false,
+					"required": false,
+					"dataStorage": "raw",
+					"maximumScheduleWindowsPerDay": 0,
+					"ageBracket": {
+					  "consentTypeRequired": "none",
+					  "consentType": "none",
+					  "applyConsentToEnforcedUsersOnly": false,
+					  "defaultValue": "prefer-not-recording-and-auto-mute",
+					  "defaultPreference": "prefer-not-recording-and-auto-mute"
+					}
+				  }
+				},
+				{
+				  "namespace": "time",
+				  "settingName": "play-limits-enabled",
+				  "preferredValue": false,
+				  "preferredValueFromOrgLevel": true,
+				  "parentLimit": false,
+				  "parentLimitFromOrgLevel": true,
+				  "effectiveValue": false,
+				  "effectiveSource": "default",
+				  "isOrgLevel": true,
+				  "definition": {
+					"orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+					"productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
+					"namespace": "time",
+					"settingName": "play-limits-enabled",
+					"valueType": "boolean",
+					"allowProductOverrides": "ageBrackets",
+					"inheritFromOrg": true,
+					"translations": {
+					  "en": {
+						"label": "TBD",
+						"userNotice": "TBD",
+						"parentNotice": "TBD"
+					  }
+					},
+					"options": [],
+					"restrictiveOrder": "falsePermissive",
+					"userHidden": true,
+					"required": false,
+					"dataStorage": "raw",
+					"maximumScheduleWindowsPerDay": 0,
+					"ageBracket": {
+					  "consentTypeRequired": "none",
+					  "consentTypeUnderParentalControl": "opt-in-unverified",
+					  "consentType": "opt-in-unverified",
+					  "applyConsentToEnforcedUsersOnly": true,
+					  "defaultValue": false,
+					  "defaultPreference": false,
+					  "defaultParentLimit": false
+					}
+				  }
+				},
+				{
+				  "namespace": "time",
+				  "settingName": "play-schedule",
+				  "preferredValue": true,
+				  "preferredValueFromOrgLevel": true,
+				  "parentLimit": true,
+				  "parentLimitFromOrgLevel": true,
+				  "parentLimitScheduleEnabled": false,
+				  "effectiveValue": true,
+				  "effectiveSource": "default",
+				  "isOrgLevel": true,
+				  "definition": {
+					"orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+					"productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
+					"namespace": "time",
+					"settingName": "play-schedule",
+					"valueType": "boolean",
+					"allowProductOverrides": "ageBrackets",
+					"inheritFromOrg": true,
+					"translations": {
+					  "en": {
+						"label": "TBD",
+						"userNotice": "TBD",
+						"parentNotice": "TBD"
+					  }
+					},
+					"options": [],
+					"restrictiveOrder": "falseRestrictive",
+					"userHidden": true,
+					"required": false,
+					"dataStorage": "raw",
+					"maximumScheduleWindowsPerDay": 5,
+					"schedulePeriod": "5m",
+					"ageBracket": {
+					  "consentTypeRequired": "none",
+					  "consentTypeUnderParentalControl": "opt-in-unverified",
+					  "consentType": "opt-in-unverified",
+					  "applyConsentToEnforcedUsersOnly": true,
+					  "defaultValue": true,
+					  "defaultPreference": true,
+					  "defaultParentLimit": true
+					}
+				  }
+				},
+				{
+				  "namespace": "time",
+				  "settingName": "play-minutes-allowed",
+				  "preferredValue": 1440,
+				  "preferredValueFromOrgLevel": true,
+				  "parentLimit": 1440,
+				  "parentLimitFromOrgLevel": true,
+				  "parentLimitScheduleEnabled": false,
+				  "effectiveValue": 1440,
+				  "effectiveSource": "default",
+				  "isOrgLevel": true,
+				  "definition": {
+					"orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+					"productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
+					"namespace": "time",
+					"settingName": "play-minutes-allowed",
+					"valueType": "numeric",
+					"numericValueFormat": "integer",
+					"numberOfDecimals": 0,
+					"min": 0,
+					"max": 1440,
+					"incrementOrDecrementBy": 1,
+					"allowProductOverrides": "ageBrackets",
+					"inheritFromOrg": true,
+					"translations": {
+					  "en": {
+						"label": "TBD",
+						"userNotice": "TBD",
+						"parentNotice": "TBD"
+					  }
+					},
+					"options": [],
+					"restrictiveOrder": "lowRestrictive",
+					"userHidden": true,
+					"required": false,
+					"dataStorage": "raw",
+					"maximumScheduleWindowsPerDay": 1,
+					"schedulePeriod": "1d",
+					"ageBracket": {
+					  "consentTypeRequired": "none",
+					  "consentTypeUnderParentalControl": "opt-in-unverified",
+					  "consentType": "opt-in-unverified",
+					  "applyConsentToEnforcedUsersOnly": true,
+					  "defaultValue": 1440,
+					  "defaultPreference": 1440,
+					  "defaultParentLimit": 1440
+					}
+				  }
+				},
+				{
+				  "namespace": "time",
+				  "settingName": "request-additional-time",
+				  "preferredValue": true,
+				  "preferredValueFromOrgLevel": true,
+				  "parentLimit": true,
+				  "parentLimitFromOrgLevel": true,
+				  "effectiveValue": true,
+				  "effectiveSource": "default",
+				  "isOrgLevel": true,
+				  "definition": {
+					"orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+					"productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
+					"namespace": "time",
+					"settingName": "request-additional-time",
+					"valueType": "boolean",
+					"allowProductOverrides": "ageBrackets",
+					"inheritFromOrg": true,
+					"translations": {
+					  "en": {
+						"label": "TBD",
+						"parentNotice": "TBD"
+					  }
+					},
+					"options": [],
+					"restrictiveOrder": "falseRestrictive",
+					"userHidden": true,
+					"required": false,
+					"dataStorage": "raw",
+					"maximumScheduleWindowsPerDay": 0,
+					"ageBracket": {
+					  "consentTypeRequired": "none",
+					  "consentTypeUnderParentalControl": "opt-in-unverified",
+					  "consentType": "opt-in-unverified",
+					  "applyConsentToEnforcedUsersOnly": true,
+					  "defaultValue": true,
+					  "defaultPreference": true,
+					  "defaultParentLimit": true
+					}
+				  }
+				},
+				{
+				  "namespace": "time",
+				  "settingName": "playtime-reporting-enabled",
+				  "preferredValue": false,
+				  "preferredValueFromOrgLevel": true,
+				  "parentLimit": false,
+				  "parentLimitFromOrgLevel": true,
+				  "effectiveValue": false,
+				  "effectiveSource": "default",
+				  "isOrgLevel": true,
+				  "definition": {
+					"orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+					"productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
+					"namespace": "time",
+					"settingName": "playtime-reporting-enabled",
+					"valueType": "boolean",
+					"allowProductOverrides": "ageBrackets",
+					"inheritFromOrg": true,
+					"translations": {
+					  "en": {
+						"label": "TBD",
+						"userNotice": "TBD",
+						"parentNotice": "TBD"
+					  }
+					},
+					"options": [],
+					"restrictiveOrder": "falsePermissive",
+					"userHidden": true,
+					"required": false,
+					"dataStorage": "raw",
+					"maximumScheduleWindowsPerDay": 0,
+					"ageBracket": {
+					  "consentTypeRequired": "none",
+					  "consentTypeUnderParentalControl": "opt-in-unverified",
+					  "consentType": "opt-in-unverified",
+					  "applyConsentToEnforcedUsersOnly": true,
+					  "defaultValue": false,
+					  "defaultPreference": false,
+					  "defaultParentLimit": false
 					}
 				  }
 				}
 			  ]
+			},
+			"meta": {
+			  "requestId": "EOS-Mlnds_5Kekufkn5F1YcNAw-bkoAK5E0GECzJKAAsprzSQ",
+			  "timestamp": "2024-10-01T20:11:48.807Z"
 			}
 		  })
     }

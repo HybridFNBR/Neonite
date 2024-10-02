@@ -297,12 +297,12 @@ module.exports = {
 
 	contentControls: function(req, res){
 		res.json({
-				'data': {
-					'ageGate': 0,
-					'controlsEnabled': false,
-					'maxEpicProfilePrivacy': 'none',
-					'principalId': req.params.accountId
-				}
+			"data": {
+			  "principalId": req.params.accountId,
+			  "controlsEnabled": true,
+			  "ageGate": 0,
+			  "maxEpicProfilePrivacy": "none"
+			}
 		})
 	},
 
@@ -530,8 +530,12 @@ module.exports = {
         response.data.pipe(res);
     },
 
-	
-
-
+	locker: async function(req, res){
+		res.json({
+			"activeLoadouts": [],
+			"loadoutPresets": []
+		})
+	}
+	//no logic behind this yet will work on it in the near future
 
 };
