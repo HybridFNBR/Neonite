@@ -530,12 +530,4 @@ module.exports = {
         response.data.pipe(res);
     },
 
-	locker: async function(req, res){
-		res.json({
-			"activeLoadouts": [],
-			"loadoutPresets": []
-		})
-	}
-	//no logic behind this yet will work on it in the near future
-
 };

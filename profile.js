@@ -156,9 +156,7 @@ module.exports = {
             return null;
         }
     },
-
     readProfileTemplate(profileId) {
-        // console.log(`/config_template/profiles/profile_${profileId}.json`);
         try {
             return JSON.parse(fs.readFileSync(path.join(__dirname, `/profile_template/profiles/profile_${profileId}.json`), "utf8"));
         } catch (e) {
@@ -168,5 +166,25 @@ module.exports = {
 
     saveProfile(accountId, profileId, data) {
         fs.writeFileSync(path.join(__dirname, `/profile/${accountId}/profiles/profile_${profileId}.json`), JSON.stringify(data, null, 2));
-    }
+    },
+
+    readLockerProfile(accountId) {
+        try {
+            return JSON.parse(fs.readFileSync(path.join(__dirname, `/profile/${accountId}/profiles/locker.json`), "utf8"));
+        } catch (e) {
+            return null;
+        }
+    },
+
+    readLockerTemplate() {
+        try {
+            return JSON.parse(fs.readFileSync(path.join(__dirname, `/profile_template/profiles/locker.json`), "utf8"));
+        } catch (e) {
+            return null;
+        }
+    },
+
+    saveLocker(accountId, data) {
+        fs.writeFileSync(path.join(__dirname, `/profile/${accountId}/profiles/locker.json`), JSON.stringify(data, null, 2));
+    },
 };

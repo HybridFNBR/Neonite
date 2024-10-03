@@ -106,6 +106,11 @@ module.exports.routes = {
     'PUT /profile/play_region': 'UserController.playRegion',
     'PUT /profile/languages': 'UserController.languages',
     'GET /fortnite/api/calendar/v1/timeline': 'TimelineController.timeline',
-    'GET /api/locker/v3/:deploymentId/account/:accountId/items': 'ApiController.locker'
+    'GET /api/locker/v3/:deploymentId/account/:accountId/items': 'LockerController.locker',
+    'PUT /api/locker/v3/:deploymentId/loadout/:loadoutType/account/:accountId/:loadout':{ 
+        action: "lockerLoadout",
+        controller:'LockerController', 
+        skipAssets: false
+    },
     // Add more routes as needed
 };

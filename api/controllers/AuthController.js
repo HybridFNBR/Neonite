@@ -88,7 +88,7 @@ module.exports = {
     },
 
     verifyToken: function(req, res){
-        const JWT = req.headers.authorization.replace("bearer ", "")
+        const JWT = req.headers.authorization.replace("bearer eg1~", "")
 		const JWTdecode = jsonwebtoken.decode(JWT)
 		res.json({
 		"token": JWT,
