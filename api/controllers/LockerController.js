@@ -45,7 +45,7 @@ module.exports = {
 		const activeLoadout = lockerData["activeLoadouts"].find(loadout => loadout.loadoutType === req.params.loadoutType);
 
 		if (!activeLoadout) {
-			return res.status(404).json({ error: "Loadout type not found" });
+			NeoLog.Error(`Invalid Loadout: ${req.params.loadoutType}`)
 		}
 		switch(req.params.loadout) {
 			case "active-loadout":
