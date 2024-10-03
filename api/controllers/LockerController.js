@@ -21,7 +21,7 @@ module.exports = {
 				});
 
 				if (!lockerData) {
-					throw next(new ApiException(errors.com.epicgames.modules.profiles.operation_forbidden).with(profileId));
+					NeoLog.Error("An Error Occured Trying To Read Locker Data")
 				}
 				try {
 					fs.mkdirSync(`./profile/${accountId}/profiles`, { recursive: true });
