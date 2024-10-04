@@ -5,6 +5,11 @@ const {
 const errors = require("../../structs/errors");
 const jsonwebtoken = require('jsonwebtoken');
 const { v4: uuidv4 } = require('uuid')
+var ini = require('ini')
+var fs = require('fs')
+const path = require("path");
+var config = ini.parse(fs.readFileSync(path.join(__dirname, '../../config.ini'), 'utf-8'));
+
 
 
 module.exports = {
@@ -32,6 +37,11 @@ module.exports = {
 				accountId = req.body.exchange_code;
             break;
         }
+		if(config.bEnableOverride == true){
+			displayName = config.username
+			accountId = config.username
+		}
+
         let access_token = jsonwebtoken.sign({
 			"app": "prod-fn",
 			"sub": accountId,
