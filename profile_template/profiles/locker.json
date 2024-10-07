@@ -1,0 +1,208 @@
+{
+    "activeLoadouts": [
+      {
+        "deploymentId": "62a9473a2dca46b29ccf17577fcf42d7",
+        "accountId": "",
+        "loadoutType": "CosmeticLoadout:LoadoutSchema_Character",
+        "loadoutShuffleType": "DISABLED",
+        "athenaItemId": "9f8b0158-cd20-45de-89ec-b13ebdbe673e",
+        "creationTime": "2024-09-28T18:51:50.625635849Z",
+        "updatedTime": "2024-10-01T18:40:37.919880958Z",
+        "loadoutSlots": [
+          {
+            "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Character"
+          },
+          {
+            "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Backpack"
+          },
+          {
+            "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Pickaxe"
+          },
+          {
+            "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Glider"
+          },
+          {
+            "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Contrails"
+          },
+          {
+            "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Aura"
+          }
+        ]
+      },
+      {
+        "deploymentId": "62a9473a2dca46b29ccf17577fcf42d7",
+        "accountId": "",
+        "loadoutType": "CosmeticLoadout:LoadoutSchema_Emotes",
+        "loadoutShuffleType": "DISABLED",
+        "athenaItemId": "445776d5-443d-4c68-b2bc-c954ae8d89bd",
+        "creationTime": "2024-09-06T01:20:31.897950673Z",
+        "updatedTime": "2024-09-06T01:20:31.897948266Z",
+        "loadoutSlots": [
+          {
+            "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Emote_0"
+          },
+          {
+            "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Emote_1"
+          },
+          {
+            "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Emote_2"
+          },
+          {
+            "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Emote_3"
+          },
+          {
+            "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Emote_4"
+          },
+          {
+            "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Emote_5"
+          }
+        ]
+      },
+      {
+        "deploymentId": "62a9473a2dca46b29ccf17577fcf42d7",
+        "accountId": "",
+        "loadoutType": "CosmeticLoadout:LoadoutSchema_Jam",
+        "loadoutShuffleType": "DISABLED",
+        "athenaItemId": "90d5cb1b-193e-4826-8d86-8dc610e6210b",
+        "creationTime": "2024-08-25T08:23:22.258337756Z",
+        "updatedTime": "2024-08-25T08:23:22.258337756Z",
+        "loadoutSlots": [
+          {
+            "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_JamSong0"
+          },
+          {
+            "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_JamSong1"
+          },
+          {
+            "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_JamSong2"
+          },
+          {
+            "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_JamSong3"
+          },
+          {
+            "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_JamSong4"
+          },
+          {
+            "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_JamSong5"
+          },
+          {
+            "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_JamSong6"
+          },
+          {
+            "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_JamSong7"
+          }
+        ]
+      },
+      {
+        "deploymentId": "62a9473a2dca46b29ccf17577fcf42d7",
+        "accountId": "",
+        "loadoutType": "CosmeticLoadout:LoadoutSchema_Platform",
+        "loadoutShuffleType": "DISABLED",
+        "athenaItemId": "c91a76e2-d253-4430-967e-c6f85e789504",
+        "creationTime": "2024-09-20T12:08:48.330010155Z",
+        "updatedTime": "2024-09-20T12:08:48.330006572Z",
+        "loadoutSlots": [
+          {
+            "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Banner_Icon"
+          },
+          {
+            "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Banner_Color",
+            "equippedItemId": "HomebaseBannerColor:defaultcolor16"
+          },
+          {
+            "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_LobbyMusic",
+            "equippedItemId": "AthenaMusicPack:musicpack_217_anglepatch"
+          },
+          {
+            "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_LoadingScreen"
+          }
+        ]
+      },
+      {
+        "deploymentId": "62a9473a2dca46b29ccf17577fcf42d7",
+        "accountId": "",
+        "loadoutType": "CosmeticLoadout:LoadoutSchema_Sparks",
+        "loadoutShuffleType": "DISABLED",
+        "athenaItemId": "1f799b1c-94fb-45a0-b973-3762c5f3d604",
+        "creationTime": "2024-08-25T08:23:22.258345161Z",
+        "updatedTime": "2024-08-25T08:23:22.258345161Z",
+        "loadoutSlots": [
+          {
+            "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Bass"
+          },
+          {
+            "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Guitar"
+          },
+          {
+            "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Drum"
+          },
+          {
+            "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Keyboard"
+          },
+          {
+            "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Microphone"
+          }
+        ]
+      },
+      {
+        "deploymentId": "62a9473a2dca46b29ccf17577fcf42d7",
+        "accountId": "",
+        "loadoutType": "CosmeticLoadout:LoadoutSchema_Vehicle",
+        "loadoutShuffleType": "DISABLED",
+        "athenaItemId": "accff498-a285-4112-b4a0-6301dd93f3fb",
+        "creationTime": "2024-08-25T08:23:22.258354190Z",
+        "updatedTime": "2024-08-25T08:23:22.258354190Z",
+        "loadoutSlots": [
+          {
+            "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Vehicle_Body"
+            
+          },
+          {
+            "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Vehicle_Booster"
+          },
+          {
+            "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Vehicle_DriftSmoke"
+          },
+          {
+            "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Vehicle_Wheel"
+          },
+          {
+            "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Vehicle_Skin"
+          }
+        ]
+      },
+      {
+        "deploymentId": "62a9473a2dca46b29ccf17577fcf42d7",
+        "accountId": "",
+        "loadoutType": "CosmeticLoadout:LoadoutSchema_Wraps",
+        "loadoutShuffleType": "DISABLED",
+        "athenaItemId": "162ce736-450d-49c9-8cb7-a8772a84a0ce",
+        "creationTime": "2024-08-25T08:23:22.258323263Z",
+        "updatedTime": "2024-08-25T08:23:22.258323263Z",
+        "loadoutSlots": [
+          {
+            "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Wrap_0"
+          },
+          {
+            "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Wrap_1"
+          },
+          {
+            "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Wrap_2"
+          },
+          {
+            "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Wrap_3"
+          },
+          {
+            "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Wrap_4"
+          },
+          {
+            "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Wrap_5"
+          },
+          {
+            "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Wrap_6"
+          }
+        ]
+      }
+    ],
+    "loadoutPresets": []
+  }

@@ -96,12 +96,12 @@ module.exports.routes = {
     'GET /fortnite/api/game/v2/br-inventory/account/': 'ApiController.brInventory',
     'GET /fortnite/api/storeaccess/v1/request_access/:accountId': 'ApiController.storeAccess',
     'POST /api/v1/user/setting': 'ApiController.userSetting',
-    'GET /v1/epic-settings/public/users/:accountId/*':{ 
+    'PATCH /v1/epic-settings/public/users/:accountId/*':{ 
         action: "epicSettings",
         controller:'ApiController', 
         skipAssets: false
     },
-    'PUT /v1/epic-settings/public/users/:accountId/*':{ 
+    'GET /v1/epic-settings/public/users/:accountId/*':{ 
         action: "epicSettings",
         controller:'ApiController', 
         skipAssets: false

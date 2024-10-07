@@ -58,7 +58,7 @@ module.exports = {
 				return NeoLog.Error("Invalid Loadout");
 		}
 
-		const response = ({
+		return res.json({
 			"accountId": accountId,
 			"athenaItemId": req.body["athenaItemId"],
 			"creationTime": activeLoadout["creationTime"],
@@ -68,8 +68,6 @@ module.exports = {
 			"loadoutType": req.params.loadoutType,
 			"updatedTime": activeLoadout["updatedTime"]
 		})
-		console.log(response)
-		res.json(response)
 
 	}
 }
