@@ -96,7 +96,12 @@ module.exports.routes = {
     'GET /fortnite/api/game/v2/br-inventory/account/': 'ApiController.brInventory',
     'GET /fortnite/api/storeaccess/v1/request_access/:accountId': 'ApiController.storeAccess',
     'POST /api/v1/user/setting': 'ApiController.userSetting',
-    'ALL /v1/epic-settings/public/users/:accountId/*':{ 
+    'GET /v1/epic-settings/public/users/:accountId/*':{ 
+        action: "epicSettings",
+        controller:'ApiController', 
+        skipAssets: false
+    },
+    'PUT /v1/epic-settings/public/users/:accountId/*':{ 
         action: "epicSettings",
         controller:'ApiController', 
         skipAssets: false
@@ -125,4 +130,10 @@ module.exports.routes = {
     'POST /api/v1/fortnite-br/surfaces/:gameMode/target': 'FortniteGameController.motd',
     'POST /api/v1/fortnite-br/interactions/contentHash': 'FortniteGameController.contentHash',
     'GET /fortnite/api/calendar/v1/timeline': 'TimelineController.timeline',
+    'GET /api/locker/v3/:deploymentId/account/:accountId/items': 'LockerController.locker',
+    'PUT /api/locker/v3/:deploymentId/loadout/:loadoutType/account/:accountId/:loadout':{ 
+        action: "lockerLoadout",
+        controller:'LockerController', 
+        skipAssets: false
+    },
 };
