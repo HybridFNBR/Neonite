@@ -217,14 +217,14 @@ module.exports = {
 				Profile.saveProfile(accountId, "common_core", commoncore)
 
 				let shop
-				if(version >= 30.10){
+				if (version >= 30.10) {
 					shop = loadJSON("../responses/shopv3.json");
-				}
-				if(version >= 26.30){
+				} 
+				else if (version >= 26.30) {
 					shop = loadJSON("../responses/shopv2.json");
-				}
-				else{
-					shop = loadJSON("../responses/shopv1.json"); 
+				} 
+				else {
+					shop = loadJSON("../responses/shopv1.json");
 				}
 				
 				
