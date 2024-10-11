@@ -82,7 +82,7 @@ module.exports = {
 			  "openid",
 			  "presence"
 			],
-			"displayName": "HybridFNBR",
+			"displayName": displayName,
 			"app": "prod-fn",
 			"in_app_id": accountId,
 			"product_id": "prod-fn",
@@ -109,7 +109,7 @@ module.exports = {
 			"display_name": JWTdecode["sub"],
 			"app": "prod-fn",
 			"in_app_id": JWTdecode["sub"],
-			"device_id": "89776e294d5c27ba1ef4e59fab402ea7",
+			"device_id": uuidv4(),
 			"scope": [
 			  "basic_profile",
 			  "friends_list",
