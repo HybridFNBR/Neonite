@@ -80,13 +80,7 @@ module.exports = {
 	},
 
 	ias: async function (req, res) {
-		const response = await axios.get(`https://epicgames-download1.akamaized.net${req.originalUrl}`, {
-			responseType: 'stream' 
-		});
-        res.set({
-            'Content-Type': "application/octet-stream"
-		})
-        response.data.pipe(res);
+		res.status(200)
 	},
 
 	iasChunks: async function(req, res){

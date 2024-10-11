@@ -165,7 +165,7 @@ module.exports = {
     		links: {}
 		}
 		for (const result of discoveryv2) {
-			if (result.mnemonic === "set_br_playlists") {
+			if (req.params.playlistId && result.mnemonic === "set_br_playlists") {
 				relatedResponse.parentLinks = [result]; 
 				relatedResponse.links = result.metadata["sub_link_codes"].reduce((links, code) => {
 					const matchingResult = discoveryv2.find(i => i.mnemonic === code);
@@ -176,6 +176,19 @@ module.exports = {
 			}
 			if (result.mnemonic === req.params.playlistId) {
 				relatedResponse.links[req.params.playlistId] = result;
+				if (result.metadata.parent_set) {
+					const parentSet = discoveryv2.find(i => i.mnemonic === result.metadata.parent_set);
+					if (parentSet) {
+						relatedResponse.parentLinks.push(parentSet)
+						const existingLinks = new Set(Object.keys(relatedResponse.links));
+						parentSet.metadata["sub_link_codes"].forEach(code => {
+							const matchingResult = discoveryv2.find(i => i.mnemonic === code);
+							if (matchingResult && !existingLinks.has(code)) {
+								relatedResponse.links[code] = matchingResult; 
+							}
+						});
+					}
+				}
 				return res.json(relatedResponse);
 			}
 		}

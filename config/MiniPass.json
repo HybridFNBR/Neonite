@@ -1,5 +1,180 @@
 {
-    "Rewardtrack_S30_Greenhouse_01": {
+    "Quest_JunoButtercakeQuests_RewardTrack_01": {
+            "templateId": "Quest:Quest_JunoButtercakeQuests_RewardTrack_01",
+            "attributes": {
+                "creation_time": "2024-06-13T09:10:41.871Z",
+                "quest_state": "Active",
+                "last_state_change_time": "2024-06-13T09:10:41.871Z",
+                "level": -1,
+                "challenge_bundle_id": "QuestBundle_JunoButtercakeQuests_RewardTrack",
+                "quest_rarity": "unattainable",
+                "xp_reward_scalar": 1
+            },
+            "quantity": 1
+        },
+        "Quest_JunoButtercakeQuests_RewardTrack_02": {
+            "templateId": "Quest:Quest_JunoButtercakeQuests_RewardTrack_02",
+            "attributes": {
+                "creation_time": "2024-06-13T09:10:41.871Z",
+                "quest_state": "Active",
+                "last_state_change_time": "2024-06-13T09:10:41.871Z",
+                "level": -1,
+                "challenge_bundle_id": "QuestBundle_JunoButtercakeQuests_RewardTrack",
+                "quest_rarity": "unattainable",
+                "xp_reward_scalar": 1
+            },
+            "quantity": 1
+        },
+        "Quest_JunoButtercakeQuests_RewardTrack_03": {
+            "templateId": "Quest:Quest_JunoButtercakeQuests_RewardTrack_03",
+            "attributes": {
+                "creation_time": "2024-06-13T09:10:41.871Z",
+                "quest_state": "Active",
+                "last_state_change_time": "2024-06-13T09:10:41.871Z",
+                "level": -1,
+                "challenge_bundle_id": "QuestBundle_JunoButtercakeQuests_RewardTrack",
+                "quest_rarity": "unattainable",
+                "xp_reward_scalar": 1
+            },
+            "quantity": 1
+        },
+        "Quest_JunoButtercakeQuests_RewardTrack_04": {
+            "templateId": "Quest:Quest_JunoButtercakeQuests_RewardTrack_04",
+            "attributes": {
+                "creation_time": "2024-06-13T09:10:41.871Z",
+                "quest_state": "Active",
+                "last_state_change_time": "2024-06-13T09:10:41.871Z",
+                "level": -1,
+                "challenge_bundle_id": "QuestBundle_JunoButtercakeQuests_RewardTrack",
+                "quest_rarity": "unattainable",
+                "xp_reward_scalar": 1
+            },
+            "quantity": 1
+        },
+        "Quest_JunoButtercakeQuests_RewardTrack_05": {
+            "templateId": "Quest:Quest_JunoButtercakeQuests_RewardTrack_05",
+            "attributes": {
+                "creation_time": "2024-06-13T09:10:41.871Z",
+                "quest_state": "Active",
+                "last_state_change_time": "2024-06-13T09:10:41.871Z",
+                "level": -1,
+                "challenge_bundle_id": "QuestBundle_JunoButtercakeQuests_RewardTrack",
+                "quest_rarity": "unattainable",
+                "xp_reward_scalar": 1
+            },
+            "quantity": 1
+        },
+        "Quest_JunoButtercakeQuests_RewardTrack_06": {
+            "templateId": "Quest:Quest_JunoButtercakeQuests_RewardTrack_06",
+            "attributes": {
+                "creation_time": "2024-06-13T09:10:41.871Z",
+                "quest_state": "Active",
+                "last_state_change_time": "2024-06-13T09:10:41.871Z",
+                "level": -1,
+                "challenge_bundle_id": "QuestBundle_JunoButtercakeQuests_RewardTrack",
+                "quest_rarity": "unattainable",
+                "xp_reward_scalar": 1
+            },
+            "quantity": 1
+        },
+        "Quest_JunoButtercakeQuests_RewardTrack_07": {
+            "templateId": "Quest:Quest_JunoButtercakeQuests_RewardTrack_07",
+            "attributes": {
+                "creation_time": "2024-06-13T09:10:41.871Z",
+                "quest_state": "Active",
+                "last_state_change_time": "2024-06-13T09:10:41.871Z",
+                "level": -1,
+                "challenge_bundle_id": "QuestBundle_JunoButtercakeQuests_RewardTrack",
+                "quest_rarity": "unattainable",
+                "xp_reward_scalar": 1
+            },
+            "quantity": 1
+        },
+        "Quest_JunoButtercakeQuests_RewardTrack_08": {
+            "templateId": "Quest:Quest_JunoButtercakeQuests_RewardTrack_08",
+            "attributes": {
+                "creation_time": "2024-06-13T09:10:41.871Z",
+                "quest_state": "Active",
+                "last_state_change_time": "2024-06-13T09:10:41.871Z",
+                "level": -1,
+                "challenge_bundle_id": "QuestBundle_JunoButtercakeQuests_RewardTrack",
+                "quest_rarity": "unattainable",
+                "xp_reward_scalar": 1
+            },
+            "quantity": 1
+        },
+        "Quest_JunoButtercakeQuests_RewardTrack_09": {
+            "templateId": "Quest:Quest_JunoButtercakeQuests_RewardTrack_09",
+            "attributes": {
+                "creation_time": "2024-06-13T09:10:41.871Z",
+                "quest_state": "Active",
+                "last_state_change_time": "2024-06-13T09:10:41.871Z",
+                "level": -1,
+                "challenge_bundle_id": "QuestBundle_JunoButtercakeQuests_RewardTrack",
+                "quest_rarity": "unattainable",
+                "xp_reward_scalar": 1
+            },
+            "quantity": 1
+        },
+        "Quest_JunoButtercakeQuests_RewardTrack_10": {
+            "templateId": "Quest:Quest_JunoButtercakeQuests_RewardTrack_10",
+            "attributes": {
+                "creation_time": "2024-06-13T09:10:41.871Z",
+                "quest_state": "Active",
+                "last_state_change_time": "2024-06-13T09:10:41.871Z",
+                "level": -1,
+                "challenge_bundle_id": "QuestBundle_JunoButtercakeQuests_RewardTrack",
+                "quest_rarity": "unattainable",
+                "xp_reward_scalar": 1
+            },
+            "quantity": 1
+        },
+        "Quest_JunoButtercakeQuests_RewardTrack_11": {
+            "templateId": "Quest:Quest_JunoButtercakeQuests_RewardTrack_11",
+            "attributes": {
+                "creation_time": "2024-06-13T09:10:41.871Z",
+                "quest_state": "Active",
+                "last_state_change_time": "2024-06-13T09:10:41.871Z",
+                "level": -1,
+                "challenge_bundle_id": "QuestBundle_JunoButtercakeQuests_RewardTrack",
+                "quest_rarity": "unattainable",
+                "xp_reward_scalar": 1
+            },
+            "quantity": 1
+        },
+        "QuestBundle_JunoButtercakeQuests_RewardTrack": {
+            "templateId": "ChallengeBundle:QuestBundle_JunoButtercakeQuests_RewardTrack",
+            "attributes": {
+                "num_granted_bundle_quests": 5,
+                "challenge_bundle_schedule_id": "JunoButtercakeQuests_QuestSchedule",
+                "grantedquestinstanceids": [
+                    "Quest_JunoButtercakeQuests_RewardTrack_01",
+                    "Quest_JunoButtercakeQuests_RewardTrack_02",
+                    "Quest_JunoButtercakeQuests_RewardTrack_03",
+                    "Quest_JunoButtercakeQuests_RewardTrack_04",
+                    "Quest_JunoButtercakeQuests_RewardTrack_05",
+                    "Quest_JunoButtercakeQuests_RewardTrack_06",
+                    "Quest_JunoButtercakeQuests_RewardTrack_07",
+                    "Quest_JunoButtercakeQuests_RewardTrack_08",
+                    "Quest_JunoButtercakeQuests_RewardTrack_09",
+                    "Quest_JunoButtercakeQuests_RewardTrack_10",
+                    "Quest_JunoButtercakeQuests_RewardTrack_11"
+                ]
+            },
+            "quantity": 1
+        },
+        "JunoButtercakeQuests_QuestSchedule": {
+            "templateId": "ChallengeBundleSchedule:JunoButtercakeQuests_QuestSchedule",
+            "attributes": {
+                "unlock_epoch": "2024-06-13T08:00:00.000Z",
+                "level": 1,
+                "granted_bundles": [
+                    "QuestBundle_JunoButtercakeQuests_RewardTrack"
+                ]
+            },
+            "quantity": 1
+        },
+        "Rewardtrack_S30_Greenhouse_01": {
             "templateId": "Quest:Rewardtrack_S30_Greenhouse_01",
             "attributes": {
                 "creation_time": "2024-06-13T09:10:41.871Z",
@@ -173,7 +348,7 @@
                 ]
             },
             "quantity": 1
-        },
+        },        
 
         "rewardtrack_s29_coldday_q01": {
             "templateId": "Quest:rewardtrack_s29_coldday_q01",
@@ -877,5 +1052,4 @@
             },
             "quantity": 1
         }
-
 }
