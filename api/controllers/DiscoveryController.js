@@ -100,6 +100,12 @@ module.exports = {
                                 "isFavorite": false,
                                 "globalCCU": 1
                             },
+							{
+                                "lastVisited": null,
+                                "linkCode": "playlist_kiln",
+                                "isFavorite": false,
+                                "globalCCU": 1
+                            },
                             {
                                 "lastVisited": null,
                                 "linkCode": "set_br_playlists", //there is habanero but why load into a comp playlist anyway.

@@ -27,6 +27,28 @@
       "namespace": "fn",
       "accountId": "epic",
       "creatorName": "Epic",
+      "mnemonic": "playlist_kiln",
+      "linkType": "BR:Playlist",
+      "metadata": {
+        "matchmaking": {
+          "override_playlist": "playlist_kiln"
+        }
+      },
+      "version": 1,
+      "active": true,
+      "disabled": false,
+      "created": "2024-10-17T04:12:12.670Z",
+      "published": "2024-10-17T04:12:12.670Z",
+      "descriptionTags": [],
+      "moderationStatus": "Unmoderated",
+      "lastActivatedDate": "2024-10-17T04:12:12.511Z",
+      "discoveryIntent": "PUBLIC",
+      "linkState": "LIVE"
+    },
+    {
+      "namespace": "fn",
+      "accountId": "epic",
+      "creatorName": "Epic",
       "mnemonic": "playlist_defaultsolo",
       "linkType": "BR:Playlist",
       "metadata": {
