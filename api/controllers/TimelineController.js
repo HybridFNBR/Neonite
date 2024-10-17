@@ -68,7 +68,7 @@ module.exports = {
                                 activeUntil: "9999-12-31T23:59:59.999Z",
                                 activeSince: "2021-06-05T14:00:00.000Z"
                             },
-                            {
+                            /*{
                                 eventType: "EventFlag.LobbyWinterDecor",
                                 activeUntil: "9999-12-31T23:59:59.999Z",
                                 activeSince: "2021-06-05T14:00:00.000Z"
@@ -113,10 +113,6 @@ module.exports = {
                                 activeUntil: "9999-12-31T23:59:59.999Z",
                                 activeSince: "2021-06-05T14:00:00.000Z"
                             },
-                            {
-                                
-                            }
-                            /*
                             {
                                 eventType: "RGCONSTUCTION02", //Rift Gate Construction Stage 2(Ch4S1 related)
                                 activeUntil: "9999-09-09T07:00:00.000Z",
@@ -169,8 +165,8 @@ module.exports = {
                 }
             },
             currentTime: new Date(Date.now() - new Date().getTimezoneOffset() * 60000).toISOString(),
-            cacheIntervalMins: 0.1,
-            eventsTimeOffsetHrs: 0.1
+            cacheIntervalMins: 0,
+            eventsTimeOffsetHrs: 0
         }
 
         if(version == 4.5){
@@ -328,7 +324,7 @@ module.exports = {
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "NN1", // The End Countdown
-                    activeUntil: "9999-10-05T00:41:00.000Z",
+                    activeUntil: "2024-10-11T14:48:00.000Z",
                     activeSince: "2020-10-05T00:00:00.000Z"
                 },
                 {  

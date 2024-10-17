@@ -294,6 +294,92 @@ module.exports = {
 			
 				break;
 			}
+
+			case "EquipBattleRoyaleCustomization": {
+				let statName, itemToSlot
+				const item = profileData.items[req.body.itemToSlot];
+				switch (req.body.slotName) {
+					case "Character":
+						statName = "favorite_character"
+						itemToSlot = req.body.itemToSlot
+						break
+					case "Backpack":
+						statName = "favorite_backpack"
+						itemToSlot = req.body.itemToSlot
+						break
+					case "Pickaxe":
+						statName = "favorite_pickaxe"
+						itemToSlot = req.body.itemToSlot
+						break
+					case "Glider":
+						statName = "favorite_glider"
+						itemToSlot = req.body.itemToSlot
+						break
+					case "SkyDiveContrail":
+						statName = "favorite_skydivecontrail"
+						itemToSlot = req.body.itemToSlot
+						break
+					case "MusicPack":
+						statName = "favorite_musicpack"
+						itemToSlot = req.body.itemToSlot
+						break
+					case "LoadingScreen":
+						statName = "favorite_loadingscreen"
+						itemToSlot = req.body.itemToSlot
+						break
+					case "Dance":
+					case "ItemWrap":
+						var bIsDance = req.body.slotName == "Dance";
+						statName = bIsDance ? "favorite_dance" : "favorite_itemwraps";
+						var arr = profileData.stats.attributes[statName] || [];
+						if (req.body.indexWithinSlot === -1) {
+							// handle wrap "Apply To All"
+							arr = [];
+
+							for (var i = 0; i < (bIsDance ? 6 : 7); ++i) {
+								arr[i] = req.body.itemToSlot;
+							}
+						} else {
+							arr[req.body.indexWithinSlot || 0] = req.body.itemToSlot;
+						}
+
+						for (var i = 0; i < arr.length; ++i) {
+							if (arr[i] == null) {
+								arr[i] = "";
+							}
+						}
+
+						itemToSlot = arr;
+						break
+				}
+				bChanged = false
+				try{
+					if (req.body.variantUpdates.length != 0) {
+						for (var variant in item.attributes.variants) {
+							if (item.attributes.variants.hasOwnProperty(variant) && req.body.variantUpdates.hasOwnProperty(variant) && item.attributes.variants[variant].channel === req.body.variantUpdates[variant].channel) {
+								item.attributes.variants[variant].active = req.body.variantUpdates[variant].active;
+							}
+						}
+						response.profileChanges = [{
+							changeType: "itemAttrChanged",
+							itemId: req.body.itemToSlot,
+							attributeName: "variants",
+							attributeValue: item.attributes.variants
+						}]
+						bChanged = true
+					}
+				}
+				catch{}
+				if (statName != null && itemToSlot != null) {
+					Profile.modifyStat(profileData, statName, itemToSlot, response.profileChanges);
+				}
+
+				Profile.bumpRvn(profileData);
+				response.profileRevision = profileData.rvn || 1;
+				response.profileCommandRevision = profileData.commandRevision || 1
+				Profile.saveProfile(accountId, profileId, profileData)
+				break;
+			}
 		}
 		console.log(response)
 		res.json(response)
