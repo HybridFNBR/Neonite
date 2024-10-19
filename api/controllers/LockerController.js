@@ -1,10 +1,7 @@
-const profile = require("../../profile");
 const Profile = require("../../profile");
-const errors = require("../../structs/errors");
-const { ApiException } = errors;
+const { v4: uuidv4 } = require("uuid");
 const NeoLog = require("../../structs/NeoLog");
 const fs = require("fs");
-const path = require('path');
 
 module.exports = {
     locker: async function(req, res){
@@ -68,6 +65,69 @@ module.exports = {
 			"loadoutType": req.params.loadoutType,
 			"updatedTime": activeLoadout["updatedTime"]
 		})
+
+	},
+
+	lockerPreset: async function(req, res){
+		var accountId = req.params.accountId;
+		var lockerData = Profile.readLockerProfile(accountId);
+		let displayName = req.body["displayName"]
+		let existingPreset = lockerData["loadoutPresets"].find(preset => 
+			preset.presetIndex === parseInt(req.params.presetIndex)
+		);
+		if (displayName) {
+			displayName = displayName;  //display name doesnt exist in the first request but most of the time does in the second request
+		}
+		
+		if (existingPreset) {
+			existingPreset.athenaItemId = req.body.athenaItemId;
+			existingPreset.loadoutSlots = req.body.loadoutSlots;
+			existingPreset.updatedTime = new Date().toISOString();
+			Profile.saveLocker(accountId, lockerData);
+			res.json({
+				"deploymentId": req.params.deploymentId,
+				"accountId": accountId,
+				"loadoutType": req.params.loadoutType,
+				"presetId": existingPreset.presetId,
+				"presetIndex": existingPreset.presetIndex,
+				"athenaItemId": req.body.athenaItemId,
+				"creationTime": existingPreset.creationTime,
+				"updatedTime": existingPreset.updatedTime,
+				"loadoutSlots": req.body.loadoutSlots,
+				"displayName": displayName,
+				"presetFavoriteStatus": "EMPTY"
+			});
+		} 
+		else {
+			const presetId = uuidv4();
+			lockerData["loadoutPresets"].push({
+				"deploymentId": req.params.deploymentId,
+				"accountId": accountId,
+				"loadoutType": req.params.loadoutType,
+				"presetId": presetId, 
+				"presetIndex": parseInt(req.params.presetIndex),
+				"athenaItemId": req.body.athenaItemId,
+				"creationTime": new Date().toISOString(),
+				"updatedTime": new Date().toISOString(),
+				"loadoutSlots": req.body.loadoutSlots,
+				"displayName": displayName,
+				"presetFavoriteStatus": "EMPTY"
+			});
+			Profile.saveLocker(accountId, lockerData);
+			return res.json({
+				"deploymentId": req.params.deploymentId,
+				"accountId": accountId,
+				"loadoutType": req.params.loadoutType,
+				"presetId": presetId,
+				"presetIndex": parseInt(req.params.presetIndex),
+				"athenaItemId": req.body.athenaItemId,
+				"creationTime": new Date().toISOString(),
+				"updatedTime": new Date().toISOString(),
+				"loadoutSlots": req.body.loadoutSlots,
+				"displayName": displayName,
+				"presetFavoriteStatus": "EMPTY"
+			});
+		}
 
 	}
 }

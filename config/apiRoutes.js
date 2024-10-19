@@ -112,5 +112,14 @@ module.exports.routes = {
         controller:'LockerController', 
         skipAssets: false
     },
-    // Add more routes as needed
+    'PUT /api/locker/v3/:deploymentId/loadout/:loadoutType/account/:accountId/loadout-preset/index/:presetIndex': { 
+        action: "lockerPreset",
+        controller:'LockerController', 
+        skipAssets: false
+    },
+    'DELETE /api/locker/v3/:deploymentId/loadout/:loadoutType/account/:accountId/loadout-preset/index/:presetIndex': { 
+        action: "deletePreset",
+        controller:'LockerController', 
+        skipAssets: false
+    },
 };
