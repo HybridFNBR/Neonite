@@ -71,18 +71,19 @@ module.exports = {
 	lockerPreset: async function(req, res){
 		var accountId = req.params.accountId;
 		var lockerData = Profile.readLockerProfile(accountId);
-		let displayName = req.body["displayName"]
+		let displayName = req.body["displayName"] || "";
+		
 		let existingPreset = lockerData["loadoutPresets"].find(preset => 
 			preset.presetIndex === parseInt(req.params.presetIndex)
 		);
-		if (displayName) {
-			displayName = displayName;  //display name doesnt exist in the first request but most of the time does in the second request
-		}
 		
 		if (existingPreset) {
 			existingPreset.athenaItemId = req.body.athenaItemId;
 			existingPreset.loadoutSlots = req.body.loadoutSlots;
 			existingPreset.updatedTime = new Date().toISOString();
+			if (displayName) {
+				existingPreset.displayName = displayName;  //display name doesnt exist in the first request but most of the time does in the second request
+			}
 			Profile.saveLocker(accountId, lockerData);
 			res.json({
 				"deploymentId": req.params.deploymentId,
