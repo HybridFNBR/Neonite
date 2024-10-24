@@ -2,3 +2,5 @@ node_modules/
 profile/
 NodeMonRun.cmd
 ClientSettings/
+testing.js
+testing2.js

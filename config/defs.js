@@ -491,14 +491,6 @@ const Backgrounds = (version, versionGlobal, backgrounds, content) =>{
     if(config.custom_background == false)
     {
         switch (versionGlobal) {
-            case 9:
-                if(version === "9.30"){
-                    backgrounds[1].stage = "summer"
-                }
-                if(version === "9.40"){
-                    backgrounds[1].stage = "worldcup"
-                }
-            break;
             case 10:
                 if(version === "10.31"){
                     backgrounds[1].stage = "blackmonday"
@@ -511,10 +503,10 @@ const Backgrounds = (version, versionGlobal, backgrounds, content) =>{
                 if(version === "11.10"){
                     backgrounds[1].stage = "fortnitemares"
                 }
-                if(version === "11.30"){
+                else if(version === "11.30"){
                     backgrounds[1].stage = "Galileo"
                 }
-                if (version === "11.31" || version === "11.40") {
+                else if (version === "11.31" || version === "11.40") {
                     backgrounds[1].stage = "Winter19";
                 } 
                 else {
@@ -552,6 +544,18 @@ const Backgrounds = (version, versionGlobal, backgrounds, content) =>{
                     backgrounds[1].stage = "defaultnotris"
                     backgrounds[1].backgroundimage = "https://cdn2.unrealengine.com/t-bp-17-lobby-summer-2048x1024-709fa99e6be0.png"
                 }
+                else if(version === "17.21"){
+                    backgrounds[1].stage = "defaultnotris"
+                    backgrounds[1].backgroundimage = "https://cdn2.unrealengine.com/t-bp17-21-lobby-2048x1024-f6027bf109de.png"
+                }
+                else if(version === "17.40"){
+                    backgrounds[1].stage = "defaultnotris"
+                    backgrounds[1].backgroundimage = "https://cdn2.unrealengine.com/t-bp17-40-lobby-2048x1024-f742fc604aae.png"
+                }
+                else if(version === "17.50"){
+                    backgrounds[1].stage = "defaultnotris"
+                    backgrounds[1].backgroundimage = "https://cdn2.unrealengine.com/s17-50-lobby-2048x1024-f00569ea4991.png"
+                }
                 else{
                     const backgroundStages = ["season17d", "season17c", "season17b", "season17"];
                     const randombackground = backgroundStages[Math.floor(Math.random() * backgroundStages.length)];
@@ -575,7 +579,11 @@ const Backgrounds = (version, versionGlobal, backgrounds, content) =>{
                 }
             break;
             case 20:
-                if (version === "20.40") {
+                if (version === "20.10") {
+                    backgrounds[1].stage = "season20";
+                    backgrounds[1].backgroundimage = "https://cdn2.unrealengine.com/t-bp20-lobby-2048x1024-d89eb522746c.png";
+                } 
+                else if (version === "20.40") {
                     backgrounds[1].stage = "season20";
                     backgrounds[1].backgroundimage = "https://cdn2.unrealengine.com/t-bp20-40-armadillo-glowup-lobby-2048x2048-2048x2048-3b83b887cc7f.jpg";
                 } 
@@ -627,12 +635,18 @@ const Backgrounds = (version, versionGlobal, backgrounds, content) =>{
                 }
                 else{
                     backgrounds[1].stage = "defaultnotris"
-                    backgrounds[1].backgroundimage = "https://static.wikia.nocookie.net/fortnite/images/e/e7/Chapter_4_Season_2_-_Lobby_Background_-_Fortnite.png"
+                    backgrounds[1].backgroundimage = "https://cdn2.unrealengine.com/t-ch4s2-bp-lobby-4096x2048-edde08d15f7e.jpg"
                 }
             break;
             case 25:
-                backgrounds[1].stage = "season2500"
-                backgrounds[1].backgroundimage = "https://static.wikia.nocookie.net/fortnite/images/c/ca/Chapter_4_Season_3_-_Lobby_Background_-_Fortnite.png"
+                if(version === "25.11"){
+                    backgrounds[1].stage = "season2500"
+                    backgrounds[1].backgroundimage = "https://cdn2.unrealengine.com/t-s25-14dos-lobby-4096x2048-2be24969eee3.jpg"
+                }
+                else{
+                    backgrounds[1].stage = "season2500"
+                    backgrounds[1].backgroundimage = "https://cdn2.unrealengine.com/s25-lobby-4k-4096x2048-4a832928e11f.jpg"
+                }
             break;
             case 26:
                 if(version === "26.30")
@@ -655,7 +669,11 @@ const Backgrounds = (version, versionGlobal, backgrounds, content) =>{
                 }
             break;
             case 28:
-                if(version === "28.20"){
+                if(version === "28.01"){
+                    backgrounds[1].stage = "defaultnotris"
+                    backgrounds[1].backgroundimage = "https://cdn2.unrealengine.com/winterfest2023-lobby-2048x1024-a8853c3a6f59.jpg"
+                }
+                else if(version === "28.20"){
                     backgrounds[1].stage = "defaultnotris"
                     backgrounds[1].backgroundimage = "https://cdn2.unrealengine.com/s28-tmnt-lobby-4096x2048-e6c06a310c05.jpg"
                 }
@@ -698,7 +716,7 @@ const Backgrounds = (version, versionGlobal, backgrounds, content) =>{
         }
     }
 }
-//mainly for carbon so its easy for me to update playlist data, - hybrid
+//mainly for carbon
 const Playlists = (fortnitegame, version) =>{
     const playlistData = fortnitegame.playlistinformation.playlist_info.playlists
     if(version == 7.40){

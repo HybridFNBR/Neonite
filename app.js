@@ -60,7 +60,7 @@ async function startbackend(){
 		session: false,
 	  },
 	  log:{
-	  	level: 'silent'
+	  	level: 'silly'
 	  },
     }, (err) => {
 		if(err){

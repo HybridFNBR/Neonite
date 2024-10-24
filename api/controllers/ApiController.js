@@ -3,7 +3,7 @@ const { default: axios } = require("axios");
 var fs = require('fs')
 const jsonwebtoken = require('jsonwebtoken');
 var ini = require('ini')
-const { getVersionInfo, loadJSON, VersionFilter} = require("../../structs/defs")
+const { getVersionInfo, loadJSON, VersionFilter} = require("../../config/defs")
 var config = ini.parse(fs.readFileSync(path.join(__dirname, '../../config.ini'), 'utf-8'));
 
 

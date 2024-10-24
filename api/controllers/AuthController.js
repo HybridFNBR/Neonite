@@ -163,7 +163,7 @@ module.exports = {
 			"id": req.params.displayName,
 			"displayName": req.params.displayName,
 			"externalAuths": {}
-		})
+		});
     },
 
 	discoveryToken: function(req, res){

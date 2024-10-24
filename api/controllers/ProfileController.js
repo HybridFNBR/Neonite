@@ -5,7 +5,7 @@ const fs = require("fs");
 const { v4: uuidv4 } = require("uuid");
 const path = require('path');
 var ini = require('ini')
-const { getVersionInfo, MPLockerLoadout, CH1Fix, VersionFilter, loadJSON} = require("../../structs/defs")
+const { getVersionInfo, MPLockerLoadout, CH1Fix, VersionFilter, loadJSON} = require("../../config/defs")
 
 Array.prototype.insert = function ( index, item ) {
 	this.splice( index, 0, item );
@@ -65,7 +65,7 @@ module.exports = {
 		var profileId = req.query.profileId || "common_core";
 		const { profileData, response } = getOrCreateProfile(profileId);
 		const { profileChanges } = response;
-		const checkValidProfileID = (...validProfileIds) => checkValidProfileID0(command, profileId, next, ...validProfileIds);
+		//const checkValidProfileID = (...validProfileIds) => checkValidProfileID0(command, profileId, next, ...validProfileIds); //not sure if ill need it but ill keep it just incase
 
 		switch(command){
 			case "ClientQuestLogin": {
@@ -73,11 +73,15 @@ module.exports = {
 			}
 
 			case "ClaimMfaEnabled": {
-				profileData.stats.attributes["mfa_reward_claimed"] = true;
+				profileData.stats.attributes["mfa_reward_claimed"] = false;
 				response.profileChanges = [{
 					"changeType": "fullProfileUpdate",
 					"profile": profileData
 				}];
+				break;
+			}
+
+			case "SetHardcoreModifier":{
 				break;
 			}
 

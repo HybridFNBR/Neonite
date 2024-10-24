@@ -68,6 +68,11 @@ module.exports = {
                                 activeUntil: "9999-12-31T23:59:59.999Z",
                                 activeSince: "2021-06-05T14:00:00.000Z"
                             },
+                            {
+                                eventType: "skip loading", // Durian Event-related (Countdown)
+                                activeUntil: "9999-09-14T07:00:00.000Z",
+                                activeSince: "2020-09-09T07:00:00.000Z"
+                            }
                             /*{
                                 eventType: "EventFlag.LobbyWinterDecor",
                                 activeUntil: "9999-12-31T23:59:59.999Z",
@@ -298,14 +303,69 @@ module.exports = {
                     activeSince: "2020-11-21T07:00:00.000Z"
                 },
                 {
-                    eventType: "GWS1", // Unvaulting Event countdown (idk if this works, havent tried it)
+                    eventType: "GWS0", // Unvaulting Event related
                     activeUntil: "9999-12-01T21:10:00.000Z",
                     activeSince: "2020-11-21T07:00:00.000Z"
-                },               
+                },
+                {
+                    eventType: "GWS1", //  Unvaulting Event related
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },
+                {
+                    eventType: "GW1", //  Unvaulting Event related
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },
+                {
+                    eventType: "GW2", //  Unvaulting Event related
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },
+                {
+                    eventType: "GW3", // Unvaulting Event related
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },
+                {
+                    eventType: "GWW1", //  Unvaulting Event related
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },
+                {
+                    eventType: "GWW2", //  Unvaulting Event related
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },
+                {
+                    eventType: "GWW3", //  Unvaulting Event related
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },
+                {
+                    eventType: "GWW4", //  Unvaulting Event related
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },
+                {
+                    eventType: "GWW5", //  Unvaulting Event related
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },         
             )
-        }   
+        }
 
-        if(version == 9.40 || version == 9.41){
+        if(version == 9.20){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push(
+                {
+                    eventType: "CatSpot1", // Cattus Spotting Ocean
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },            
+            )
+        }
+
+        if(version == 9.30 || version == 9.40 || version == 9.41){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "CDTime", // Final Showdown countdown (idk if this works, havent tried it)
@@ -313,18 +373,34 @@ module.exports = {
                     activeSince: "2020-11-21T07:00:00.000Z"
                 },
                 {
+                    eventType: "DoggusProp", //Doggus Propaganda Posters
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },
+                {
                     eventType: "CVD1", // Final Showdown countdown (idk if this works, havent tried it)
                     activeUntil: "9999-12-01T21:10:00.000Z",
                     activeSince: "2020-11-21T07:00:00.000Z"
-                }              
+                },
+                {
+                    eventType: "CatSpot2", // Cattus Spotting 2
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },
+                {
+                    eventType: "STP", // Stranger Things Portals(Mega Mall)
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },           
             )
-        }   
+        }  
+        
         
         if(version == 10.40){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "NN1", // The End Countdown
-                    activeUntil: "2024-10-11T14:48:00.000Z",
+                    activeUntil: "9999-09-14T07:00:00.000Z",
                     activeSince: "2020-10-05T00:00:00.000Z"
                 },
                 {  
@@ -348,7 +424,37 @@ module.exports = {
                     activeSince: "2020-10-05T00:00:00.000Z"
                 }             
             )
-        } 
+        }
+        
+        if(version == 11.10){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push(
+                {
+                    eventType: "HW2019", // FortniteMares 2019
+                    activeUntil: "9999-10-05T00:41:00.000Z",
+                    activeSince: "2020-10-05T00:00:00.000Z"
+                },
+                {  
+                    eventType: "HW2019Leadup", // FortniteMares 2019 Leadup
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-10-05T00:00:00.000Z"
+                }             
+            )
+        }
+
+        if(version == 11.30){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push(
+                {
+                    eventType: "GALCD", // C2S1-related (Winterfest 2019)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2019-12-31T23:59:59.999Z"
+                },
+                {
+                    eventType: "GALP", // C2S1-related (Winterfest 2019)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2019-12-31T23:59:59.999Z"
+                },
+            )
+        }
         
         if(version == 11.31){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
@@ -572,6 +678,11 @@ module.exports = {
                     activeUntil: "9999-09-14T07:00:00.000Z",
                     activeSince: "2015-09-14T07:00:00.000Z"
                 },
+                {      
+                    eventType: "LS_PRE",
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2015-09-14T07:00:00.000Z"
+                },
                 {
                     eventType: "TC1",//thorhammer 'poi'
                     activeUntil: "9999-09-14T07:00:00.000Z",
@@ -587,6 +698,31 @@ module.exports = {
                     activeUntil: "9999-09-14T07:00:00.000Z",
                     activeSince: "2015-09-14T07:00:00.000Z"
                 },                      
+            )
+        }
+
+        if(version == 14.00){
+            timeline.channels["client-events"]["states"][0]["activeEvents"].push(
+                {
+                    eventType: "LS2", //Galactus Countdown(Ch2S4 related)
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "2020-09-14T07:00:00.000Z"
+                },
+                {
+                    eventType: "HSS2", //Sky Distant Object(Ch2S4 related)
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "2020-09-14T07:00:00.000Z"
+                },
+            )
+        }
+
+        if(version == 14.30){
+            timeline.channels["client-events"]["states"][0]["activeEvents"].push(
+                {
+                    eventType: "SPJ02", //Sky Card for Junior(Ch2S4 related)
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "2020-09-14T07:00:00.000Z"
+                }
             )
         }
 
@@ -614,6 +750,11 @@ module.exports = {
                 },
                 {
                     eventType: "JFE01", // C2S4-related (Countdown)
+                    activeUntil: "9999-12-02T09:00:00.000Z",
+                    activeSince: "2020-12-01T21:16:00.000Z"
+                },
+                {
+                    eventType: "SPJ03", // C2S4-related (Countdown)
                     activeUntil: "9999-12-02T09:00:00.000Z",
                     activeSince: "2020-12-01T21:16:00.000Z"
                 }
@@ -1148,6 +1289,32 @@ module.exports = {
                 activeSince: "2020-09-09T07:00:00.000Z"
             },
         )}
+
+        if(versionGlobal == 10){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push(
+                {
+                    eventType: "RBPFI", //Snow Level
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "RBBFI", //Snow Level
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "RBPRH", //Snow Level
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "RBBRH", //Snow Level
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+            )
+        }
+
         if(versionGlobal == 11 || versionGlobal == 15){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
@@ -1194,91 +1361,81 @@ module.exports = {
         }
 
         if(versionGlobal == 14){
-            timeline.channels["client-events"]["states"][0]["activeEvents"].push(
+            timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
-                    eventType: "RLS0", //Rift Landmark Sphere 0(Ch2S4 related)
+                    eventType: "SPJ01", //Sky Sparkle for Junior
+                    activeUntil: timeline.channels['client-events'].cacheExpire,
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "RLS0", //Sky Sparkle for Junior
                     activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-14T07:00:00.000Z"
+                    activeSince: "2020-09-09T07:00:00.000Z"
                 },
                 {
-                    eventType: "RLS1", //Rift Landmark Sphere 1(Ch2S4 related)
+                    eventType: "RLS1", //Sky Sparkle for Junior
                     activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-14T07:00:00.000Z"
+                    activeSince: "2020-09-09T07:00:00.000Z"
                 },
                 {
-                    eventType: "RLS2", //Rift Landmark Sphere 2(Ch2S4 related)
+                    eventType: "RLS2", //Sky Sparkle for Junior
                     activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-14T07:00:00.000Z"
+                    activeSince: "2020-09-09T07:00:00.000Z"
                 },
                 {
-                    eventType: "RLS3", //Rift Landmark Sphere 3(Ch2S4 related)
+                    eventType: "RLS3", //Sky Sparkle for Junior
                     activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-14T07:00:00.000Z"
+                    activeSince: "2020-09-09T07:00:00.000Z"
                 },
                 {
-                    eventType: "SL_01", //Stark Lab - SL_01(Ch2S4 related)
+                    eventType: "LS0", //Sky Sparkle for Junior
                     activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-14T07:00:00.000Z"
+                    activeSince: "2020-09-09T07:00:00.000Z"
                 },
                 {
-                    eventType: "SL_02", //Stark Lab - SL_02(Ch2S4 related)
+                    eventType: "LS1", //Sky Sparkle for Junior
                     activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-14T07:00:00.000Z"
+                    activeSince: "2020-09-09T07:00:00.000Z"
                 },
                 {
-                    eventType: "HSS0", //Hightower Sphere Stage 0(Ch2S4 related)
+                    eventType: "LS2", //Sky Sparkle for Junior
                     activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-14T07:00:00.000Z"
+                    activeSince: "2020-09-09T07:00:00.000Z"
                 },
                 {
-                    eventType: "HSS1", //Hightower Sphere Stage 1(Ch2S4 related)
+                    eventType: "LS3", //Sky Sparkle for Junior
                     activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-14T07:00:00.000Z"
+                    activeSince: "2020-09-09T07:00:00.000Z"
                 },
                 {
-                    eventType: "HSS2", //Hightower Sphere Stage 2(Ch2S4 related)
+                    eventType: "LS_PRE", //Sky Sparkle for Junior
                     activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-14T07:00:00.000Z"
+                    activeSince: "2020-09-09T07:00:00.000Z"
                 },
                 {
-                    eventType: "HSS3", //Hightower Sphere Stage 3(Ch2S4 related)
+                    eventType: "LS_POST", //Sky Sparkle for Junior
                     activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-14T07:00:00.000Z"
+                    activeSince: "2020-09-09T07:00:00.000Z"
                 },
                 {
-                    eventType: "HC_01", //Hellicarrier - Bus Mod(Ch2S4 related)
+                    eventType: "HSS0", //Sky Sparkle for Junior
                     activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-14T07:00:00.000Z"
+                    activeSince: "2020-09-09T07:00:00.000Z"
                 },
                 {
-                    eventType: "HC_02", //Hellicarrier - Mod Stage1(Ch2S4 related)
+                    eventType: "HSS1", //Sky Sparkle for Junior
                     activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-14T07:00:00.000Z"
+                    activeSince: "2020-09-09T07:00:00.000Z"
                 },
                 {
-                    eventType: "SH01", //Stark Hangar(Ch2S4 related)
+                    eventType: "HSS2", //Sky Sparkle for Junior
                     activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-14T07:00:00.000Z"
+                    activeSince: "2020-09-09T07:00:00.000Z"
                 },
                 {
-                    eventType: "SH02", //Stark Hangar(Ch2S4 related)
+                    eventType: "HSS3", //Sky Sparkle for Junior
                     activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-14T07:00:00.000Z"
-                },
-                {
-                    eventType: "BVJ01", //Make Galactus visable in the skybox(Ch2S4 related)
-                    activeUntil: "9999-09-09T07:00:00.000Z",
-                    activeSince: "2020-09-14T07:00:00.000Z"
-                },
-                {
-                    eventType: "GALCD", //Galactus Countdown(Ch2S4 related)
-                    activeUntil: "9999-09-09T07:00:00.000Z",
-                    activeSince: "2020-09-14T07:00:00.000Z"
-                },
-                {
-                    eventType: "SPJ01", //Sky Distant Object(Ch2S4 related)
-                    activeUntil: "9999-09-09T07:00:00.000Z",
-                    activeSince: "2020-09-14T07:00:00.000Z"
+                    activeSince: "2020-09-09T07:00:00.000Z"
                 },
             )
         }

@@ -1,4 +1,4 @@
-const { getVersionInfo, loadJSON } =  require("../../structs/defs")
+const { getVersionInfo, loadJSON } =  require("../../config/defs")
 const discoveryv1 = loadJSON("../discovery/discoveryMenuV1.json");
 const discoveryv2 = loadJSON("../discovery/discoveryMenuV2.json")
 module.exports = {
