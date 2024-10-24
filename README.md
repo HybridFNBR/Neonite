@@ -20,7 +20,7 @@ _In acquiescence to Epic Games Inc. - Please note that access to all cosmetics f
 ## Installation
 
 - Install the latest version of **[Node.js](https://nodejs.org/en/download/current/)**. 
-- Open `run.bat`, it should say `[Neonite]: v2.* is listening on port 5595!` (Do not close this while running Neonite V2!)	
+- Open `Start Neonite.bat`, it should say `[Neonite]: v2.* is listening on port 5595!` (Do not close this while running Neonite V2!)	
 <!-- FAQs -->
 ## FAQs
 
