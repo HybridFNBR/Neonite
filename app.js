@@ -9,26 +9,19 @@ async function compareAndUpdateKeychain() {
 	if(response.status = 200){
 		const data = response.data;
 		const keychain = JSON.parse(fs.readFileSync('./responses/keychain.json'));
-		let count = 0
+		let count = 0;
+		const newEntries = [];
 		for (const entry of data["dynamicKeys"]) {
 			if (!keychain.includes(entry["keychain"])) {
-				count++
-				keychain.push(entry["keychain"]);
+				count++;
+				newEntries.push(entry["keychain"]);
 			}
-			fs.writeFileSync('./responses/keychain.json', JSON.stringify(keychain));
 		}
-		fs.readFile('./responses/keychain.json', 'utf8', (err, data) => {
-			if (err) throw err;
-			const updated = data.replace(/,/g, ',\n');
-			fs.writeFile('./responses/keychain.json', updated, 'utf8', (err) => {
-					if (err) throw err;
-			});
-		})
-		NeoLog.Debug(`Fetched ${count} New Keychains From Fortnite Central`)
+		keychain.push(...newEntries);
+		fs.writeFileSync('./responses/keychain.json', JSON.stringify(keychain, null, 2));
 	}
-	else if(response.status = 503){
+	else if(response.status == 503 || response.status == 403){
 		NeoLog.Error("Fortnite Central is down falling back to Nitestats for the keychain")
-		
 		const response = await axios.get('https://api.nitestats.com/v1/epic/keychain');
 	  	const data = response.data;
 		const localData = JSON.parse(fs.readFileSync('./responses/keychain.json'));
