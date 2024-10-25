@@ -19,6 +19,7 @@ async function compareAndUpdateKeychain() {
 		}
 		keychain.push(...newEntries);
 		fs.writeFileSync('./responses/keychain.json', JSON.stringify(keychain, null, 2));
+		NeoLog.Debug(`Fetched ${count} New Keychains From Fortnite Central`)
 	}
 	else if(response.status == 503 || response.status == 403){
 		NeoLog.Error("Fortnite Central is down falling back to Nitestats for the keychain")
