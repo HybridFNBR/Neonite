@@ -11,7 +11,7 @@ module.exports.http = {
       res.on('finish', () => {
         const endTime = new Date();
         const responseTime = endTime - startTime;
-        if (req.originalUrl === "/fortnite/api/calendar/v1/timeline") {
+        if (req.originalUrl === "/fortnite/api/calendar/v1/timeline" || req.originalUrl === "/account/api/public/account/token") {
         } else {
           NeoLog.URL(`${req.originalUrl} (${responseTime}ms)`);
         }

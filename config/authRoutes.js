@@ -11,6 +11,7 @@ module.exports.routes = {
         skipAssets: false
     },
     'GET /account/api/public/account/': 'AuthController.publicAccount',
+    'GET /account/api/public/account/token': 'ApiController.token',
     'GET /account/api/public/account/:accountId/externalAuths': 'AuthController.externalAuths',
     'POST /publickey/v2/publickey': 'AuthController.publicKey'
 

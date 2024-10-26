@@ -61,7 +61,6 @@ async function startbackend(){
 			console.log(err)
 		}
     });
-	NeoLog.Log('Neonite is up and listening on port 5595!');
   }
 
   async function runfunctions(){
