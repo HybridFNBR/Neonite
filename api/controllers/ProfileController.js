@@ -751,7 +751,6 @@ module.exports = {
 				return next(new ApiException(errors.com.epicgames.fortnite.operation_not_found).with(req.params.command));
 			}
 		}
-		console.log(response)
 		res.json(response)
 
 	}

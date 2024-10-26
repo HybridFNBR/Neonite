@@ -54,7 +54,7 @@ async function startbackend(){
 		session: false,
 	  },
 	  log:{
-	  	level: 'silly'
+	  	level: 'silent'
 	  },
     }, (err) => {
 		if(err){
