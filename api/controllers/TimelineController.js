@@ -864,12 +864,12 @@ module.exports = {
         if(version == 27.11 || version == 31.41){
             timeline.channels["client-events"]["states"][0]["activeEvents"].push(
                 {
-                    eventType: "DL01", // Durian Event-related (Countdown)
+                    eventType: "DL01", // Durian & Kiln Event-related (Countdown)
                     activeUntil: "9999-09-14T07:00:00.000Z",
                     activeSince: "2020-09-09T07:00:00.000Z"
                 },
                 {
-                    eventType: "DL02", // Durian Event-related (Countdown)
+                    eventType: "DL02", //  Durian & Kiln Event-related (Countdown)
                     activeUntil: "9999-09-14T07:00:00.000Z",
                     activeSince: "2020-09-09T07:00:00.000Z"
                 }           
