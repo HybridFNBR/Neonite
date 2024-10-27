@@ -481,7 +481,7 @@ module.exports = {
 	},
 
 	keychain: function(req, res){
-        res.json(loadJSON("../responses/keychain.json"))
+		res.json(["46159C748694298198A52DC07476FDA3:4CLHOBqSrmS1RkG/SxZYi8Rc0zCmAKxXIBMMUHDl2ag="])
 	},
 
 	regionCheck: function(req, res){

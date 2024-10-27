@@ -20,7 +20,9 @@ module.exports = {
                         {
                             validFrom: "2019-12-31T23:59:59.999Z",
                             activeEvents: [],
-                            state:[]
+                            state: {
+                                k: keychain,
+                            }
                         }
                     ],
                     cacheExpire: new Date(Date.now() - new Date().getTimezoneOffset() * 60000 + 1000).toISOString()
