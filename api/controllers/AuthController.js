@@ -109,7 +109,7 @@ module.exports = {
 			"display_name": JWTdecode["sub"],
 			"app": "prod-fn",
 			"in_app_id": JWTdecode["sub"],
-			"device_id": uuidv4(),
+			"device_id": "89776e294d5c27ba1ef4e59fab402ea7",
 			"scope": [
 			  "basic_profile",
 			  "friends_list",
@@ -163,7 +163,7 @@ module.exports = {
 			"id": req.params.displayName,
 			"displayName": req.params.displayName,
 			"externalAuths": {}
-		})
+		});
     },
 
 	discoveryToken: function(req, res){

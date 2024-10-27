@@ -5,7 +5,7 @@ const fs = require("fs");
 const { v4: uuidv4 } = require("uuid");
 const path = require('path');
 var ini = require('ini')
-const { getVersionInfo, MPLockerLoadout, simpleProfile, CH1Fix, VersionFilter, loadJSON, MiniPass} = require("../../config/defs")
+const { getVersionInfo, MPLockerLoadout, CH1Fix, VersionFilter, loadJSON} = require("../../config/defs")
 
 Array.prototype.insert = function ( index, item ) {
 	this.splice( index, 0, item );
@@ -60,20 +60,18 @@ module.exports = {
 			
 
 		};
-		//var grantitems = getOrCreateProfile("athena")
+		getOrCreateProfile("athena") //make sure athena exists before query
 		var command = req.params.command;
 		var profileId = req.query.profileId || "common_core";
 		const { profileData, response } = getOrCreateProfile(profileId);
 		const { profileChanges } = response;
-		const checkValidProfileID = (...validProfileIds) => checkValidProfileID0(command, profileId, next, ...validProfileIds);
+		//const checkValidProfileID = (...validProfileIds) => checkValidProfileID0(command, profileId, next, ...validProfileIds); //not sure if ill need it but ill keep it just incase
 
-		switch (command) {
+		switch(command){
 
-			// Presets by iDrDoge
 			case "CopyCosmeticLoadout": {
 				//sourceIndex = 0 (Save)
 				//sourceIndex > 0 (Load)
-				checkValidProfileID("athena");
 				let item;
 
 				if (req.body.sourceIndex == 0) {
@@ -93,34 +91,31 @@ module.exports = {
 					profileData.stats.attributes["last_applied_loadout"] = `neoset${req.body.sourceIndex}_loadout`;
 					profileData.items["sandbox_loadout"].attributes["locker_slots_data"] = item.attributes["locker_slots_data"];
 				}
+				Profile.bumpRvn(profileData);
+				response.profileRevision = profileData.rvn || 1;
+				response.profileCommandRevision = profileData.commandRevision || 1
+				Profile.saveProfile(accountId, profileId, profileData)
+				response.profileChanges = [{
+					"changeType": "fullProfileUpdate",
+					"profile": profileData
+				}];
+				break;
+			}
 
-				Profile.saveProfile(accountId, profileId, profileData);
-				Profile.bumpRvn(profileData);
-				response.profileRevision = profileData.rvn || 1;
-				response.profileCommandRevision = profileData.commandRevision || 1;
-				response.profileChanges = [{
-					"changeType": "fullProfileUpdate",
-					"profile": profileData
-				}];
-				Profile.saveProfile(accountId, profileId, profileData);
-				break;
-			}
 			case "DeleteCosmeticLoadout": {
-				checkValidProfileID("athena");
 				profileData.stats.attributes.loadouts[req.body.index] = "";
-				Profile.saveProfile(accountId, profileId, profileData);
 				Profile.bumpRvn(profileData);
 				response.profileRevision = profileData.rvn || 1;
-				response.profileCommandRevision = profileData.commandRevision || 1;
+				response.profileCommandRevision = profileData.commandRevision || 1
+				Profile.saveProfile(accountId, profileId, profileData)
 				response.profileChanges = [{
 					"changeType": "fullProfileUpdate",
 					"profile": profileData
 				}];
-				Profile.saveProfile(accountId, profileId, profileData);
 				break;
 			}
+
 			case "SetCosmeticLockerName": {
-				checkValidProfileID("athena");
 				const item = profileData.items[req.body.lockerItem];
 
 				if (!item) {
@@ -132,16 +127,23 @@ module.exports = {
 				}
 				break;
 			}
+
 			case "SetRandomCosmeticLoadoutFlag": {
-				checkValidProfileID("athena");
 				break;
 			}
 
 			case "RequestRestedStateIncrease":{
 				var xpValue = profileData.stats.attributes["book_xp"] + req.body.restedXpGenAccumulated
-				Profile.modifyStat(athenprofile, "book_xp", xpValue)
-				Profile.bumpRvn(profileData)
-				console.log(req.body)
+				Profile.modifyStat(profileData, "book_xp", xpValue)
+				
+				Profile.bumpRvn(profileData);
+				response.profileRevision = profileData.rvn || 1;
+				response.profileCommandRevision = profileData.commandRevision || 1
+				Profile.saveProfile(accountId, profileId, profileData)
+				response.profileChanges = [{
+					"changeType": "fullProfileUpdate",
+					"profile": profileData
+				}];
 				break;
 			}
 
@@ -151,25 +153,6 @@ module.exports = {
 
 			case "IncrementNamedCounterStat":{
 				break
-			}
-
-			case "ClaimMfaEnabled": {
-				profileData.stats.attributes["mfa_reward_claimed"] = true;
-				profileData.commandRevision++;
-				profileData.rvn++;
-				response.profileChanges = [{
-					"changeType": "fullProfileUpdate",
-					"profile": profileData
-				}];
-				break;
-			}
-
-			case "RedeemRealMoneyPurchases": {
-				break;
-			}
-
-			case "SetHardcoreModifier": {
-				break;
 			}
 
 			case "ClientQuestLogin": {
@@ -182,8 +165,15 @@ module.exports = {
 
 			case "AthenaPinQuest":{
 				Profile.modifyStat(athenprofile, "pinned_quest", req.body.pinnedQuest)
-				Profile.saveProfile(accountId, "athena", athenprofile)
-				Profile.bumpRvn("athena")
+				Profile.bumpRvn(profileData);
+				response.profileRevision = profileData.rvn || 1;
+				response.profileCommandRevision = profileData.commandRevision || 1
+				response.profileChanges = [{
+					"changeType" : "statModified",
+					"name" : "pinned_quest",
+					"value" : req.body.pinnedQuest
+
+				}]
 				break;
 			}
 
@@ -192,39 +182,24 @@ module.exports = {
 			}
 
 			case "MarkItemSeen": {
-				checkValidProfileID("common_core", "campaign", "athena");
 				req.body.itemIds.forEach(itemId => Profile.changeItemAttribute(profileData, itemId, "item_seen", true, profileChanges));
 				break;
 			}
 
 			case "PopulatePrerolledOffers": {
-				checkValidProfileID("campaign");
 				break;
 			}
 
 			case "PurchaseCatalogEntry": {
-				checkValidProfileID("common_core")
-				const commoncore = Profile.readProfile(accountId, "common_core");
-				const finalValue = commoncore.items["Currency:MtxPurchased"]["quantity"] - req.body["expectedTotalPrice"]
-				commoncore.items["Currency:MtxPurchased"] = {
-						"attributes": {
-						  "platform": "EpicPC"
-						},
-						"quantity": finalValue,
-						"templateId": "Currency:MtxPurchased"
-					  
-					}
-				Profile.saveProfile(accountId, "common_core", commoncore)
-
 				let shop
 				if (version >= 30.10) {
-					shop = loadJSON("../responses/shopv3.json");
+					shop = loadJSON("../responses/catalog/shopv3.json");
 				} 
 				else if (version >= 26.30) {
-					shop = loadJSON("../responses/shopv2.json");
+					shop = loadJSON("../responses/catalog/shopv2.json");
 				} 
 				else {
-					shop = loadJSON("../responses/shopv1.json");
+					shop = loadJSON("../responses/catalog/shopv1.json");
 				}
 				
 				
@@ -327,22 +302,18 @@ module.exports = {
 					}
 				]
 
-				response.multiUpdate = [athenaProfile.response];
 				break;
 			}
-			
+
 			case "BulkEquipBattleRoyaleCustomization":{
 				break;
 			}
 
 			case "RefreshExpeditions": {
-				checkValidProfileID("profile0");
 				break;
 			}
 
 			case "SetItemArchivedStatusBatch": {
-				checkValidProfileID("campaign", "athena");
-
 				req.body.itemIds.forEach(itemId => {
 					if (typeof itemId === "string" && typeof req.body.archived === "boolean") {
 						Profile.changeItemAttribute(profileData, itemId, "archived", req.body.archived, profileChanges);
@@ -353,7 +324,20 @@ module.exports = {
 				break;
 			}
 
-			case "QueryProfile": {
+			case "ClaimMfaEnabled": {
+				profileData.stats.attributes["mfa_reward_claimed"] = true;
+				response.profileChanges = [{
+					"changeType": "fullProfileUpdate",
+					"profile": profileData
+				}];
+				break;
+			}
+
+			case "SetHardcoreModifier":{
+				break;
+			}
+
+			case "QueryProfile":{
 				try{
 					let miniPassData = loadJSON("../config/MiniPass.json")
 					for (const [questId, quest] of Object.entries(miniPassData)) {
@@ -378,47 +362,44 @@ module.exports = {
 					Profile.modifyStat(athenprofile, "season_num", versionGlobal)
 					Profile.modifyStat(athenprofile, "past_seasons", pastSeasons)
 					Profile.saveProfile(accountId, "athena", athenprofile);
-					Profile.bumpRvn(athenprofile);			
 				}
 				catch{}
-			
-				if(config.simpleProfile == true){simpleProfile(accountId, athenprofile)}
 				if(version >= 28.00){
-					if(profileId == "athena"){
-						MPLockerLoadout(accountId, athenprofile)
-					}
+					MPLockerLoadout(accountId, athenprofile)
+					Profile.saveProfile(accountId, "athena", athenprofile)
+					
 				}
 				if(version <= 10.40 || VersionFilter.includes(versionGlobal))
 				{
 					CH1Fix(accountId, athenprofile)
 				}
+				
+				response.profileChanges = [{
+					"changeType": "fullProfileUpdate",
+					"profile": profileData
+				}];
+				break;
 			}
-			break;
-			
-			case "RemoveGiftBox": {
-				checkValidProfileID("common_core", "campaign", "athena");
 
+			case "RemoveGiftBox": {
 				profileData.commandRevision = req.query.rvn || -1;
 				profileData.rvn = req.query.rvn || -1;
 
 				req.body.giftBoxItemIds.forEach(item => {
 					Profile.removeItem(profileData, item, profileChanges);
 				})
-
 				profileData.commandRevision++;
 				profileData.rvn++;
 				break;
 			}
 
 			case "SetAffiliateName": {
-				checkValidProfileID("common_core");
 				Profile.modifyStat(profileData, "mtx_affiliate", req.body.affiliateName, profileChanges);
 				Profile.modifyStat(profileData, "mtx_affiliate_set_time", new Date().toISOString(), profileChanges);
 				break;
 			}
 				
 			case "SetCosmeticLockerBanner": {
-				checkValidProfileID("campaign", "athena");
 				const item = profileData.items[req.body.lockerItem];
 
 				if (!item) {
@@ -436,36 +417,63 @@ module.exports = {
 				break;
 			}
 
-			case "SetCosmeticLockerSlot": {
-				checkValidProfileID("campaign", "athena");
-				const item = profileData.items[req.body.lockerItem];
+			case "RedeemRealMoneyPurchases": {
+				response.profileChanges = [ {
+					"changeType" : "statModified",
+					"name" : "in_app_purchases",
+					"value" : {
+					  "receipts" : [],
+					  "ignoredReceipts" : [],
+					  "fulfillmentCounts" : {},
+					  "refreshTimers" : {
+						"MicrosoftStore" : {
+						  "nextEntitlementRefresh" : "9999-12-01T21:10:00.000Z"
+						},
+						"SamsungGalaxyAppStore" : {},
+						"EpicPurchasingService" : {
+						  "nextEntitlementRefresh" : "9999-12-01T21:10:00.000Z"
+						}
+					  },
+					  "version" : 1
+					}
+				  }, 
+				  {
+					"changeType" : "statModified",
+					"name" : "subscriptions",
+					"value" : []
+				}]
+				break;
+			}
 
+			case "SetCosmeticLockerSlot": {
+				const item = profileData.items[req.body.lockerItem];
+			
 				if (!item) {
 					console.error("[Error] Item not found.");
 					return;
 				}
-
-				const locker_slots_data = item.attributes.locker_slots_data;
+			
+				const locker_slots_data = item.attributes.locker_slots_data ;
 				let lockerSlot = locker_slots_data.slots[req.body.category];
-
+			
 				const expectedCapacity = {
 					"Dance": 6,
 					"ItemWrap": 7,
 				}[req.body.category] || 1;
-
+			
 				if (!lockerSlot) {
 					lockerSlot = locker_slots_data.slots[req.body.category] = {
 						items: new Array(expectedCapacity),
 						activeVariants: new Array(expectedCapacity)
 					};
 				}
-
+			
 				const itemsArray = lockerSlot.items;
 				let bChanged = false;
-
+			
 				const startIndex = Math.max(0, req.body.slotIndex);
 				const endIndex = Math.min(expectedCapacity, startIndex + 1);
-
+			
 				for (let index = startIndex; index < endIndex; index++) {
 					if (index >= itemsArray.length) {
 						itemsArray.push("");
@@ -475,7 +483,7 @@ module.exports = {
 						bChanged = true;
 					}
 				}
-
+			
 				if (req.body.variantUpdates.length != 0) {
 					lockerSlot.activeVariants = [{
 						"variants": []
@@ -487,68 +495,99 @@ module.exports = {
 				}
 
 				if (bChanged) {
+					Profile.bumpRvn(profileData);
+					response.profileRevision = profileData.rvn || 1;
+					response.profileCommandRevision = profileData.commandRevision || 1
+					Profile.saveProfile(accountId, profileId, profileData)					
 					Profile.changeItemAttribute(profileData, req.body.lockerItem, "locker_slots_data", locker_slots_data, profileChanges);
+			
 				}
-
 				break;
 			}
 
 			case "SetCosmeticLockerSlots": {
 				break;
-				/*const item = profileData.items[req.body.lockerItem];
+			}
 
-				if (!item) {
-					throw next(new ApiException(errors.com.epicgames.fortnite.item_not_found).withMessage("Locker item {0} not found", req.body.lockerItem));
-				}
-
-				const locker_slots_data = item.attributes.locker_slots_data;
-				let lockerSlot = locker_slots_data.slots[req.body.category];
-
-				var expectedCapacity;
-				switch (req.body.category) {
-					case "Dance":
-						expectedCapacity = 6;
-						break;
-					case "ItemWrap":
-						expectedCapacity = 7;
-						break;
-					default:
-						expectedCapacity = 1;
-						break;
-				}
-				if (!lockerSlot) {
-					lockerSlot = locker_slots_data.slots[req.body.category] = {
-						items: new Array(expectedCapacity),
-						activeVariants: new Array(expectedCapacity)
-					};
-				}
-
-				const itemsArray = lockerSlot.items;
-				let bChanged = false;
-				const startIndex = req.body.slotIndex < 0 ? 0 : req.body.slotIndex;
-				const endIndex = req.body.slotIndex < 0 ? expectedCapacity : (startIndex + 1);
-
-				for (let index = startIndex; index < endIndex; index++) {
-					for (let i = itemsArray.length; i < index; i++) {
-						itemsArray.push("");
-					}
-					if (index === itemsArray.length) {
-						itemsArray.push(req.body.itemToSlot);
-						bChanged = true;
-					} else if (index < itemsArray.length) {
-						if (itemsArray[index] != req.body.itemToSlot) {
-							itemsArray[index] = req.body.itemToSlot;
-							bChanged = true;
+			case "PutModularCosmeticLoadout": {
+				const loadoutData = JSON.parse(req.body["loadoutData"]);
+				const loadoutType = req.body.loadoutType;
+				const presetId = req.body.presetId;
+				const loadoutPresets = profileData.stats.attributes["loadout_presets"][loadoutType];
+				let loadout = loadoutPresets[presetId];
+				if (!loadout) {
+					const newPresetId = uuidv4();
+					loadoutPresets[presetId] = newPresetId;
+					Profile.addItem(profileData, newPresetId, {
+						"templateId": loadoutType,
+						"attributes": loadoutData,
+						"quantity": 1
+					});
+					Profile.saveProfile(accountId, profileId, profileData);
+					response.profileChanges = [
+						{
+						  "changeType": "itemAdded",
+						  "itemId": newPresetId,
+						  "item": {
+							"templateId": loadoutType,
+							"attributes": loadoutData,
+							"quantity": 1
+						  }
+						},
+						{
+						  "changeType": "statModified",
+						  "name": "loadout_presets",
+						  "value": profileData.stats.attributes["loadout_presets"]
+						},
+						{
+						  "changeType": "statModified",
+						  "name": "locker_two_phase_commit",
+						  "value": "COMMITTED"
 						}
-					} else {
-						console.log("[Error] Unexpected slot index & capacity configuration.");
-					}
+					]
+					
+				} 
+				else if(presetId > 0 && loadout){
+					Profile.changeItemAttribute(profileData, loadout, "slots", loadoutData.slots);
+					response.profileChanges =
+					[{
+						"changeType": "itemAttrChanged",
+						"itemId": loadout,
+						"attributeName": "slots",
+						"attributeValue": loadoutData.slots
+					  },
+					  {
+						"changeType": "itemAttrChanged",
+						"itemId": loadout,
+						"attributeName": "user_tags",
+						"attributeValue": []
+					  },
+					  {
+						"changeType": "itemAttrChanged",
+						"itemId": loadout,
+						"attributeName": "display_name",
+						"attributeValue": loadoutData["display_name"]
+					  },
+					  {
+						"changeType": "statModified",
+						"name": "locker_two_phase_commit",
+						"value": "COMMITTED"
+					}]
 				}
-
-				if (bChanged) {
-					Profile.changeItemAttribute(profileData, req.body.lockerItem, "locker_slots_data", locker_slots_data, profileChanges);
+				else{
+					Profile.changeItemAttribute(profileData, loadout, "slots", loadoutData.slots);
+					response.profileChanges.push({
+						"changeType": "itemAttrChanged",
+						"itemId": loadout,
+						"attributeName": "slots",
+						"attributeValue": profileData.items[loadout].attributes.slots
+					});
 				}
-				break;*/
+				Profile.bumpRvn(profileData);
+				response.profileRevision = profileData.rvn || 1;
+				response.profileCommandRevision = profileData.commandRevision || 1;
+				Profile.saveProfile(accountId, profileId, profileData);
+				break;
 			}
 
 			case "EquipBattleRoyaleCustomization": {
@@ -589,7 +628,6 @@ module.exports = {
 						statName = bIsDance ? "favorite_dance" : "favorite_itemwraps";
 						var arr = profileData.stats.attributes[statName] || [];
 						if (req.body.indexWithinSlot === -1) {
-							// handle wrap "Apply To All"
 							arr = [];
 
 							for (var i = 0; i < (bIsDance ? 6 : 7); ++i) {
@@ -616,21 +654,24 @@ module.exports = {
 								item.attributes.variants[variant].active = req.body.variantUpdates[variant].active;
 							}
 						}
-						response.profileChanges[0] = [{
+						response.profileChanges = [{
 							changeType: "itemAttrChanged",
 							itemId: req.body.itemToSlot,
 							attributeName: "variants",
 							attributeValue: item.attributes.variants
 						}]
-						Profile.bumpRvn(athenprofile)
 						bChanged = true
 					}
 				}
 				catch{}
 				if (statName != null && itemToSlot != null) {
 					Profile.modifyStat(profileData, statName, itemToSlot, response.profileChanges);
-					Profile.bumpRvn(athenprofile)
 				}
+
+				Profile.bumpRvn(profileData);
+				response.profileRevision = profileData.rvn || 1;
+				response.profileCommandRevision = profileData.commandRevision || 1
+				Profile.saveProfile(accountId, profileId, profileData)
 				break;
 			}
 
@@ -683,42 +724,15 @@ module.exports = {
 				break;
 			}
 
-			case "PutModularCosmeticLoadout":{
-				const loadoutData = JSON.parse(req.body["loadoutData"]);
-				const loadoutTypeMap = {
-					"CosmeticLoadout:LoadoutSchema_Character": "NEONITECHARACTER",
-					"CosmeticLoadout:LoadoutSchema_Emotes": "NEONITEEMOTES",
-					"CosmeticLoadout:LoadoutSchema_Platform": "NEONITEPLATFORM",
-					"CosmeticLoadout:LoadoutSchema_Wraps": "NEONITEWRAPS",
-					"CosmeticLoadout:LoadoutSchema_Jam": "NEONITEJAM",
-					"CosmeticLoadout:LoadoutSchema_Sparks": "NEONITESPARKS",
-					"CosmeticLoadout:LoadoutSchema_Vehicle": "NEONITEVEHICLE",
-					"CosmeticLoadout:LoadoutSchema_Vehicle_SUV": "NEONITESUV",
-				};
-				const loadoutType = req.body["loadoutType"];
-				const profileAttribute = loadoutTypeMap[loadoutType];
-
-				if (profileAttribute) {
-					Profile.changeItemAttribute(profileData, profileAttribute, "slots", loadoutData.slots, profileChanges);
-					Profile.bumpRvn(athenprofile)
-				} else {
-					NeoLog.Error("Unknown Loadout Type");
-				}
-				break;
-			}
-
 			case "SetLoadoutShuffleEnabled":{
 				break;
 			}
 			
 			case "ExchangeGameCurrencyForBattlePassOffer":{
-				checkValidProfileID("athena")
 				break;
 			}
 
 			case "RefundMtxPurchase": {
-				checkValidProfileID("common_core");
-
 				response.profileChanges[0] = {
 					"changeType": "itemAdded",
 					"itemId": uuidv4(),
@@ -737,35 +751,8 @@ module.exports = {
 				return next(new ApiException(errors.com.epicgames.fortnite.operation_not_found).with(req.params.command));
 			}
 		}
+		res.json(response)
 
-		if (profileChanges.length > 0) {
-			Profile.bumpRvn(profileData);
-			response.profileRevision = profileData.rvn || 1;
-			response.profileCommandRevision = profileData.commandRevision || 1;
-			Profile.saveProfile(accountId, profileId, profileData);
-		}
-
-		var rvn = req.query.rvn || -1;
-
-		if (rvn != response.profileChangesBaseRevision) {
-			response.profileChanges = [{
-				"changeType": "fullProfileUpdate",
-				"profile": profileData
-			}];
-		}
- 
-		res.json(response);
 	}
 }
-
-function checkValidProfileID0(command, sentProfileId, next, ...validProfileIds) {
-	if (command && sentProfileId) {
-		if (validProfileIds.indexOf(sentProfileId) == -1) {
-			throw next(new ApiException(errors.com.epicgames.modules.profiles.invalid_command).with(command, `player:profile_${sentProfileId}`, sentProfileId));
-		} else {
-			return true;
-		}
-	}
-
-	return true;
-}
+        

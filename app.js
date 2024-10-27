@@ -2,7 +2,6 @@ const sails = require('sails');
 const NeoLog = require('./structs/NeoLog')
 const { default: axios } = require('axios');
 const fs = require("fs");
-const {keychain} = require("./config/defs")
 
 
 async function compareAndUpdateKeychain() {
@@ -11,20 +10,19 @@ async function compareAndUpdateKeychain() {
 		const data = response.data;
 		const keychain = JSON.parse(fs.readFileSync('./responses/keychain.json'));
 		let count = 0;
-		const keychainArray = [];
+		const newEntries = [];
 		for (const entry of data["dynamicKeys"]) {
 			if (!keychain.includes(entry["keychain"])) {
 				count++;
-				keychainArray.push(entry["keychain"]);
+				newEntries.push(entry["keychain"]);
 			}
 		}
-		keychain.push(...keychainArray);
+		keychain.push(...newEntries);
 		fs.writeFileSync('./responses/keychain.json', JSON.stringify(keychain, null, 2));
 		NeoLog.Debug(`Fetched ${count} New Keychains From Fortnite Central`)
 	}
 	else if(response.status == 503 || response.status == 403){
 		NeoLog.Error("Fortnite Central is down falling back to Nitestats for the keychain")
-		
 		const response = await axios.get('https://api.nitestats.com/v1/epic/keychain');
 	  	const data = response.data;
 		const localData = JSON.parse(fs.readFileSync('./responses/keychain.json'));
@@ -63,7 +61,6 @@ async function startbackend(){
 			console.log(err)
 		}
     });
-	NeoLog.Log('Neonite is up and listening on port 5595!');
   }
 
   async function runfunctions(){

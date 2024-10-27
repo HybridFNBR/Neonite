@@ -20,9 +20,7 @@ module.exports = {
                         {
                             validFrom: "2019-12-31T23:59:59.999Z",
                             activeEvents: [],
-                            state: {
-                                k: keychain,
-                            }
+                            state:[]
                         }
                     ],
                     cacheExpire: new Date(Date.now() - new Date().getTimezoneOffset() * 60000 + 1000).toISOString()
@@ -68,7 +66,56 @@ module.exports = {
                                 activeUntil: "9999-12-31T23:59:59.999Z",
                                 activeSince: "2021-06-05T14:00:00.000Z"
                             },
-                            /*
+                            {
+                                eventType: "skip loading", // Durian Event-related (Countdown)
+                                activeUntil: "9999-09-14T07:00:00.000Z",
+                                activeSince: "2020-09-09T07:00:00.000Z"
+                            }
+                            /*{
+                                eventType: "EventFlag.LobbyWinterDecor",
+                                activeUntil: "9999-12-31T23:59:59.999Z",
+                                activeSince: "2021-06-05T14:00:00.000Z"
+                            },
+                            {
+                                eventType: "EventFlag.WinterBattleBus",
+                                activeUntil: "9999-12-31T23:59:59.999Z",
+                                activeSince: "2021-06-05T14:00:00.000Z"
+                            },
+                            {
+                                eventType: "HW_01",
+                                activeUntil: "9999-12-31T23:59:59.999Z",
+                                activeSince: "2021-06-05T14:00:00.000Z"
+                            },
+                            {
+                                eventType: "HW_02",
+                                activeUntil: "9999-12-31T23:59:59.999Z",
+                                activeSince: "2021-06-05T14:00:00.000Z"
+                            },
+                            {
+                                eventType: "HW_03",
+                                activeUntil: "9999-12-31T23:59:59.999Z",
+                                activeSince: "2021-06-05T14:00:00.000Z"
+                            },
+                            {
+                                eventType: "HW_04",
+                                activeUntil: "9999-12-31T23:59:59.999Z",
+                                activeSince: "2021-06-05T14:00:00.000Z"
+                            },
+                            {
+                                eventType: "HW_05",
+                                activeUntil: "9999-12-31T23:59:59.999Z",
+                                activeSince: "2021-06-05T14:00:00.000Z"
+                            },
+                            {
+                                eventType: "HW_06",
+                                activeUntil: "9999-12-31T23:59:59.999Z",
+                                activeSince: "2021-06-05T14:00:00.000Z"
+                            },
+                            {
+                                eventType: "HW_07",
+                                activeUntil: "9999-12-31T23:59:59.999Z",
+                                activeSince: "2021-06-05T14:00:00.000Z"
+                            },
                             {
                                 eventType: "RGCONSTUCTION02", //Rift Gate Construction Stage 2(Ch4S1 related)
                                 activeUntil: "9999-09-09T07:00:00.000Z",
@@ -121,8 +168,8 @@ module.exports = {
                 }
             },
             currentTime: new Date(Date.now() - new Date().getTimezoneOffset() * 60000).toISOString(),
-            cacheIntervalMins: 0.1,
-            eventsTimeOffsetHrs: 0.1
+            cacheIntervalMins: 0,
+            eventsTimeOffsetHrs: 0
         }
 
         if(version == 4.5){
@@ -152,6 +199,16 @@ module.exports = {
                     activeUntil: "9999-12-01T21:10:00.000Z",
                     activeSince: "2020-11-21T07:00:00.000Z"
                 },
+            )
+        }
+
+        if(version == 6.21){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push(
+                {
+                    eventType: "EventFlag.LobbySeason6Halloween",
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                }
             )
         }
 
@@ -244,14 +301,69 @@ module.exports = {
                     activeSince: "2020-11-21T07:00:00.000Z"
                 },
                 {
-                    eventType: "GWS1", // Unvaulting Event countdown (idk if this works, havent tried it)
+                    eventType: "GWS0", // Unvaulting Event related
                     activeUntil: "9999-12-01T21:10:00.000Z",
                     activeSince: "2020-11-21T07:00:00.000Z"
-                },               
+                },
+                {
+                    eventType: "GWS1", //  Unvaulting Event related
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },
+                {
+                    eventType: "GW1", //  Unvaulting Event related
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },
+                {
+                    eventType: "GW2", //  Unvaulting Event related
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },
+                {
+                    eventType: "GW3", // Unvaulting Event related
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },
+                {
+                    eventType: "GWW1", //  Unvaulting Event related
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },
+                {
+                    eventType: "GWW2", //  Unvaulting Event related
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },
+                {
+                    eventType: "GWW3", //  Unvaulting Event related
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },
+                {
+                    eventType: "GWW4", //  Unvaulting Event related
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },
+                {
+                    eventType: "GWW5", //  Unvaulting Event related
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },         
             )
-        }   
+        }
 
-        if(version == 9.40 || version == 9.41){
+        if(version == 9.20){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push(
+                {
+                    eventType: "CatSpot1", // Cattus Spotting Ocean
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },            
+            )
+        }
+
+        if(version == 9.30 || version == 9.40 || version == 9.41){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "CDTime", // Final Showdown countdown (idk if this works, havent tried it)
@@ -259,18 +371,34 @@ module.exports = {
                     activeSince: "2020-11-21T07:00:00.000Z"
                 },
                 {
+                    eventType: "DoggusProp", //Doggus Propaganda Posters
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },
+                {
                     eventType: "CVD1", // Final Showdown countdown (idk if this works, havent tried it)
                     activeUntil: "9999-12-01T21:10:00.000Z",
                     activeSince: "2020-11-21T07:00:00.000Z"
-                }              
+                },
+                {
+                    eventType: "CatSpot2", // Cattus Spotting 2
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },
+                {
+                    eventType: "STP", // Stranger Things Portals(Mega Mall)
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },           
             )
-        }   
+        }  
+        
         
         if(version == 10.40){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "NN1", // The End Countdown
-                    activeUntil: "9999-10-05T00:41:00.000Z",
+                    activeUntil: "9999-09-14T07:00:00.000Z",
                     activeSince: "2020-10-05T00:00:00.000Z"
                 },
                 {  
@@ -279,7 +407,52 @@ module.exports = {
                     activeSince: "9999-09-14T07:00:00.000Z"
                 }                
             )
-        }   
+        }
+        
+        if(version == 11.10){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push(
+                {
+                    eventType: "HW2019", // FortniteMares 2019
+                    activeUntil: "9999-10-05T00:41:00.000Z",
+                    activeSince: "2020-10-05T00:00:00.000Z"
+                },
+                {  
+                    eventType: "HW2019Leadup", // FortniteMares 2019 Leadup
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-10-05T00:00:00.000Z"
+                }             
+            )
+        }
+        
+        if(version == 11.10){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push(
+                {
+                    eventType: "HW2019", // FortniteMares 2019
+                    activeUntil: "9999-10-05T00:41:00.000Z",
+                    activeSince: "2020-10-05T00:00:00.000Z"
+                },
+                {  
+                    eventType: "HW2019Leadup", // FortniteMares 2019 Leadup
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-10-05T00:00:00.000Z"
+                }             
+            )
+        }
+
+        if(version == 11.30){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push(
+                {
+                    eventType: "GALCD", // C2S1-related (Winterfest 2019)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2019-12-31T23:59:59.999Z"
+                },
+                {
+                    eventType: "GALP", // C2S1-related (Winterfest 2019)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2019-12-31T23:59:59.999Z"
+                },
+            )
+        }
         
         if(version == 11.31){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
@@ -503,6 +676,11 @@ module.exports = {
                     activeUntil: "9999-09-14T07:00:00.000Z",
                     activeSince: "2015-09-14T07:00:00.000Z"
                 },
+                {      
+                    eventType: "LS_PRE",
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2015-09-14T07:00:00.000Z"
+                },
                 {
                     eventType: "TC1",//thorhammer 'poi'
                     activeUntil: "9999-09-14T07:00:00.000Z",
@@ -518,6 +696,31 @@ module.exports = {
                     activeUntil: "9999-09-14T07:00:00.000Z",
                     activeSince: "2015-09-14T07:00:00.000Z"
                 },                      
+            )
+        }
+
+        if(version == 14.00){
+            timeline.channels["client-events"]["states"][0]["activeEvents"].push(
+                {
+                    eventType: "LS2", //Galactus Countdown(Ch2S4 related)
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "2020-09-14T07:00:00.000Z"
+                },
+                {
+                    eventType: "HSS2", //Sky Distant Object(Ch2S4 related)
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "2020-09-14T07:00:00.000Z"
+                },
+            )
+        }
+
+        if(version == 14.30){
+            timeline.channels["client-events"]["states"][0]["activeEvents"].push(
+                {
+                    eventType: "SPJ02", //Sky Card for Junior(Ch2S4 related)
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "2020-09-14T07:00:00.000Z"
+                }
             )
         }
 
@@ -545,6 +748,11 @@ module.exports = {
                 },
                 {
                     eventType: "JFE01", // C2S4-related (Countdown)
+                    activeUntil: "9999-12-02T09:00:00.000Z",
+                    activeSince: "2020-12-01T21:16:00.000Z"
+                },
+                {
+                    eventType: "SPJ03", // C2S4-related (Countdown)
                     activeUntil: "9999-12-02T09:00:00.000Z",
                     activeSince: "2020-12-01T21:16:00.000Z"
                 }
@@ -869,7 +1077,7 @@ module.exports = {
                     activeSince: "2020-09-09T07:00:00.000Z"
                 },
                 {
-                    eventType: "DL02", //  Durian & Kiln Event-related (Countdown)
+                    eventType: "DL02", // Durian & Kiln Event-related (Countdown)
                     activeUntil: "9999-09-14T07:00:00.000Z",
                     activeSince: "2020-09-09T07:00:00.000Z"
                 }           

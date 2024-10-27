@@ -122,7 +122,6 @@ module.exports = {
 	},
 
 	user: function (req, res) {
-		const {versionGlobal} = getVersionInfo(req);
 		return res.json([])
 	},
 

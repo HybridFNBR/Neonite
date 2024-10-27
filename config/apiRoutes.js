@@ -26,7 +26,7 @@ module.exports.routes = {
     'GET /catalog/api/shared/bulk/offers': 'ApiController.catalogBulk',
     'POST /fortnite/api/game/v2/grant_access/:accountId': 'ApiController.grantAccess',
     'GET /fortnite/api/game/v2/enabled_features': 'ApiController.enabledFeatures',
-    'POST /datarouter/api/v1/public/*':{
+    'POST */datarouter/api/v1/public/*':{
         action: "dataRouter",
         controller:'ApiController', 
         skipAssets: false
@@ -45,7 +45,7 @@ module.exports.routes = {
         controller:'ApiController', 
         skipAssets: false
     },
-    'GET /api/v1/namespace/fn/worlds/accessibleTo/:accountID': 'ApiController.fetchLegoWorlds',
+    'GET /api/v1/namespace/fn/worlds/accessibleTo/:accountId': 'ApiController.fetchLegoWorlds',
     'POST /api/v1/namespace/fn/worlds/account/:accountId': 'ApiController.makeLegoWorlds',
     'GET /api/v1/namespace/fn/worlds/world/:worldID/session': 'ApiController.legoWorldSession',
     'GET /api/v1/namespace/fn/worlds/world/:worldId/attest/:accountId': 'ApiController.legoMatchMakingToken',
@@ -84,27 +84,52 @@ module.exports.routes = {
         skipAssets: false
     },
     'GET /api/v2/interactions/latest/Fortnite/:accountId': 'ApiController.interactions',
-    'POST /fortnite/api/game/v2/profile/:accountId/client/:command': 'ProfileController.mcp',
+    'POST /fortnite/api/game/v2/tryPlayOnPlatform/account/:accountId': 'ApiController.tryPlayOnPlatform',
+    'PUT /profile/privacy_settings': 'ApiController.privacySettings',
+    'GET /api/v1/leaderboards/Fortnite/:eventId/:eventWindowId/*':{
+        action: "leaderboards",
+        controller:'ApiController', 
+        skipAssets: false
+    },
+    'GET /api/v1/events/Fortnite/download/:accountId': 'ApiController.eventsDownload',
+    'GET /region': 'ApiController.region',
+    'GET /fortnite/api/game/v2/br-inventory/account/': 'ApiController.brInventory',
     'GET /fortnite/api/storeaccess/v1/request_access/:accountId': 'ApiController.storeAccess',
+    'POST /api/v1/user/setting': 'ApiController.userSetting',
+    'PATCH /v1/epic-settings/public/users/:accountId/*':{ 
+        action: "epicSettings",
+        controller:'ApiController', 
+        skipAssets: false
+    },
+    'GET /v1/epic-settings/public/users/:accountId/*':{ 
+        action: "epicSettings",
+        controller:'ApiController', 
+        skipAssets: false
+    },
+    'PUT /profile/languages': 'ApiController.languages',
+    'GET /api/content/v2/search/artifact/:artifactId/*':{
+        action: "searchArtifact",
+        controller:'ApiController', 
+        skipAssets: false
+    },
+    'GET /api/content/v2/artifact/:artifactId/*':{
+        action: "artifact",
+        controller:'ApiController', 
+        skipAssets: false
+    },
+    'GET /api/v1/redirect/fortnite/valkyrie/cooked-content/*':{
+        action: "valkyrie",
+        controller:'ApiController', 
+        skipAssets: false
+    },
+    'POST /fortnite/api/game/v2/profile/:accountId/client/:command': 'ProfileController.mcp',
     'GET /content/api/pages/fortnite-game': 'FortniteGameController.fortniteGame',
     'GET /content/api/pages/fortnite-game/spark-tracks': 'FortniteGameController.sparks',
     'GET /content/api/pages/fortnite-game/eventscreens': 'FortniteGameController.eventScreen',
     'GET /:trackdata': 'ApiController.trackData',
     'POST /api/v1/fortnite-br/surfaces/:gameMode/target': 'FortniteGameController.motd',
+    'POST /api/v1/fortnite-br/channel/motd/target': 'FortniteGameController.motdTarget',
     'POST /api/v1/fortnite-br/interactions/contentHash': 'FortniteGameController.contentHash',
-    'POST /api/v1/user/setting': 'UserController.userSetting',
-    'PATCH /v1/epic-settings/public/users/:accountId/*':{ 
-        action: "epicSettings",
-        controller:'UserController', 
-        skipAssets: false
-    },
-    'GET /v1/epic-settings/public/users/:accountId/*':{ 
-        action: "epicSettings",
-        controller:'UserController', 
-        skipAssets: false
-    },
-    'PUT /profile/play_region': 'UserController.playRegion',
-    'PUT /profile/languages': 'UserController.languages',
     'GET /fortnite/api/calendar/v1/timeline': 'TimelineController.timeline',
     'GET /api/locker/v3/:deploymentId/account/:accountId/items': 'LockerController.locker',
     'PUT /api/locker/v3/:deploymentId/loadout/:loadoutType/account/:accountId/:loadout':{ 
