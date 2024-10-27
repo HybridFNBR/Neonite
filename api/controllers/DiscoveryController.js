@@ -88,7 +88,7 @@ module.exports = {
 					"results": [
 						{
 							"linkCode": "playlist_durian",
-							"isFavorite": true,
+							"isFavorite": false,
 							"globalCCU": 1,
 							"lockStatus": "UNLOCKED",
 							"lockStatusReason": "NONE",
@@ -96,7 +96,7 @@ module.exports = {
 						},
 						{
 							"linkCode": "playlist_kiln",
-							"isFavorite": true,
+							"isFavorite": false,
 							"globalCCU": 1,
 							"lockStatus": "UNLOCKED",
 							"lockStatusReason": "NONE",
@@ -104,7 +104,7 @@ module.exports = {
 						},
 						{
 							"linkCode": "set_br_playlists",
-							"isFavorite": true,
+							"isFavorite": false,
 							"globalCCU": 1,
 							"lockStatus": "UNLOCKED",
 							"lockStatusReason": "NONE",
@@ -112,7 +112,7 @@ module.exports = {
 						},
 						{
 							"linkCode": "playlist_beanstalk",
-							"isFavorite": true,
+							"isFavorite": false,
 							"globalCCU": 1,
 							"lockStatus": "UNLOCKED",
 							"lockStatusReason": "NONE",
