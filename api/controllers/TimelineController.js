@@ -65,17 +65,8 @@ module.exports = {
                                 eventType: "Papaya_Theater", //Party Royale Theater
                                 activeUntil: "9999-12-31T23:59:59.999Z",
                                 activeSince: "2021-06-05T14:00:00.000Z"
-                            },
-                            {
-                                eventType: "skip loading", // Durian Event-related (Countdown)
-                                activeUntil: "9999-09-14T07:00:00.000Z",
-                                activeSince: "2020-09-09T07:00:00.000Z"
                             }
-                            /*{
-                                eventType: "EventFlag.LobbyWinterDecor",
-                                activeUntil: "9999-12-31T23:59:59.999Z",
-                                activeSince: "2021-06-05T14:00:00.000Z"
-                            },
+                            /*
                             {
                                 eventType: "EventFlag.WinterBattleBus",
                                 activeUntil: "9999-12-31T23:59:59.999Z",
@@ -170,6 +161,16 @@ module.exports = {
             currentTime: new Date(Date.now() - new Date().getTimezoneOffset() * 60000).toISOString(),
             cacheIntervalMins: 0,
             eventsTimeOffsetHrs: 0
+        }
+
+        if(version == "Cert"){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push(
+                {
+                    eventType: "EventFlag.LobbyWinterDecor", //Winter Lobby
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },
+            )
         }
 
         if(version == 4.5){
@@ -406,21 +407,6 @@ module.exports = {
                     activeUntil: "9999-09-14T07:00:00.000Z",
                     activeSince: "9999-09-14T07:00:00.000Z"
                 }                
-            )
-        }
-        
-        if(version == 11.10){
-            timeline.channels['client-events']['states'][0]['activeEvents'].push(
-                {
-                    eventType: "HW2019", // FortniteMares 2019
-                    activeUntil: "9999-10-05T00:41:00.000Z",
-                    activeSince: "2020-10-05T00:00:00.000Z"
-                },
-                {  
-                    eventType: "HW2019Leadup", // FortniteMares 2019 Leadup
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-10-05T00:00:00.000Z"
-                }             
             )
         }
         
