@@ -227,11 +227,11 @@ module.exports = {
 		if(version >= 30.10){
 			return res.json(loadJSON("../responses/catalog/shopv3.json"));
 		}
-		if(version >= 26.30){
+		else if(version >= 26.30){
 			return res.json(loadJSON("../responses/catalog/shopv2.json"));
 		}
-		if (VersionFilter.includes(version) || version <= 3.5) {
-			return res.status(404);
+		else if (VersionFilter.includes(version) || version <= 3.5) {
+			return res.status(404).end();
 		}
 		else{
 			return res.json(loadJSON("../responses/catalog/shopv1.json"))

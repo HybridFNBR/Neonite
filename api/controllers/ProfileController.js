@@ -148,6 +148,10 @@ module.exports = {
 			}
 
 			case "GetMcpTimeForLogin":{
+				response.profileChanges = [{
+					"changeType": "fullProfileUpdate",
+					"profile": profileData
+				}];
 				break
 			}
 
@@ -310,6 +314,10 @@ module.exports = {
 			}
 
 			case "RefreshExpeditions": {
+				response.profileChanges = [{
+					"changeType": "fullProfileUpdate",
+					"profile": profileData
+				}];
 				break;
 			}
 
