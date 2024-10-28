@@ -1298,6 +1298,16 @@ module.exports = {
             )
         }
 
+        if (version >= 31.40 || version <= 33.10) { // one UPlugin is set to end on 33.00 while the other on 33.10 so using 33.10 just in case
+            timeline.channels["client-events"]["states"][0]["activeEvents"].push(
+                {
+                    eventType: "EventFlag.Event_SpooktacularPass", // Brick or Treat LEGO pass 
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2024-03-01T00:50:00.000Z"
+                }                           
+            )
+        }
+
         if(versionGlobal == 11 || versionGlobal == 15){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
