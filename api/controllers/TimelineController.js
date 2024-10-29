@@ -1296,6 +1296,31 @@ module.exports = {
             )
         }
 
+        if (version == 31.41) {
+            timeline.channels["client-events"]["states"][0]["activeEvents"].push(
+                {
+                    eventType: "StageA", //Kiln Buildup Stage 1
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                },
+                {
+                    eventType: "StageB", //Kiln Buildup Stage 2
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                },
+                {
+                    eventType: "StageC", //Kiln Buildup Stage 3
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                },
+                {
+                    eventType: "StageD", //Kiln Buildup Stage 4
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                }                           
+            )
+        }
+
         if(versionGlobal == 11 || versionGlobal == 15){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
