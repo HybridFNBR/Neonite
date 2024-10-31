@@ -472,12 +472,12 @@
           "es-419": "¡Te damos la bienvenida a la fiesta! Deja atrás tus armas y materiales, pasa el rato con amigos, juega partidas, perfecciona tu caída libre y mucho más. ¡La fiesta acaba de empezar!",
           "tr": "Partiye hoş geldin! Silah ve materyallerini geride bırak; arkadaşlarınla vakit geçir, oyunlar oyna, hava dalışında mükemmelliğe ulaş... Parti daha yeni başlıyor!"
         },
-        "image_url": "https://static-assets-prod.s3.amazonaws.com/fn/static/1p/partyroyale-1920-1920x1080-7001724bc7ab_s.jpg",
+        "image_url": "https://cdn2.unrealengine.com/partyroyalelogo-1920-1920x1080-199a4b893ba3.jpg",
         "image_urls": {
-          "url_s": "https://static-assets-prod.s3.amazonaws.com/fn/static/1p/partyroyale-1920-1920x1080-7001724bc7ab_s.jpg",
-          "url_xs": "https://static-assets-prod.s3.amazonaws.com/fn/static/1p/partyroyale-1920-1920x1080-7001724bc7ab_s.jpg",
-          "url_m": "https://static-assets-prod.s3.amazonaws.com/fn/static/1p/partyroyale-1920-1920x1080-7001724bc7ab_s.jpg",
-          "url": "https://static-assets-prod.s3.amazonaws.com/fn/static/1p/partyroyale-1920-1920x1080-7001724bc7ab_s.jpg"
+            "url_s": "https://cdn2.unrealengine.com/partyroyalelogo-480-480x270-d148a8a84907.jpg",
+            "url_xs": "https://cdn2.unrealengine.com/partyroyalelogo-256-256x144-99ab08561e68.jpg",
+            "url_m": "https://cdn2.unrealengine.com/partyroyalelogo-640-640x360-afb9a7354760.jpg",
+            "url": "https://cdn2.unrealengine.com/partyroyalelogo-1920-1920x1080-199a4b893ba3.jpg"
         },
         "tagline": "Welcome to the Party! Leave your weapons and mats behind and hang out with friends, play games, perfect your skydive and more. The party’s just getting started!",
         "matchmaking": {
@@ -574,12 +574,12 @@
       "mnemonic": "set_br_playlists",
       "linkType": "ModeSet",
       "metadata": {
-        "image_url": "https://static-assets-prod.s3.amazonaws.com/fn/static/1p/28BR_Launch1920_v2.jpg",
+        "image_url": "https://cdn2.unrealengine.com/fnbr-32-00-c5s5-kiln-discoverplaylist-tiles-br-1920x1080-1920x1080-cd1887394e2c.jpg",
         "image_urls": {
-          "url_s": "https://static-assets-prod.s3.amazonaws.com/fn/static/1p/28BR_Launch480_v2_s.jpg",
-          "url_xs": "https://static-assets-prod.s3.amazonaws.com/fn/static/1p/28BR_Launch256_v2_s.jpg",
-          "url_m": "https://static-assets-prod.s3.amazonaws.com/fn/static/1p/28BR_Launch640_v2_s.jpg",
-          "url": "https://static-assets-prod.s3.amazonaws.com/fn/static/1p/28BR_Launch1920_v2.jpg"
+          "url_s": "https://cdn2.unrealengine.com/fnbr-32-00-c5s5-kiln-discoverplaylist-tiles-br-480x270-480x270-5ea86e9c4723.jpg",
+          "url_xs": "https://cdn2.unrealengine.com/fnbr-32-00-c5s5-kiln-discoverplaylist-tiles-br-256x144-256x144-5b05765266e0.jpg",
+          "url_m": "https://cdn2.unrealengine.com/fnbr-32-00-c5s5-kiln-discoverplaylist-tiles-br--640x360-640x360-5eca3596f397.jpg",
+          "url": "https://cdn2.unrealengine.com/fnbr-32-00-c5s5-kiln-discoverplaylist-tiles-br-1920x1080-1920x1080-cd1887394e2c.jpg"
         },
         "title": "Battle Royale",
         "locale": "en",
