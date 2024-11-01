@@ -488,7 +488,7 @@ const Backgrounds = (version, versionGlobal, backgrounds, content) =>{
         backgrounds[1].stage = "defaultnotris"
         backgrounds[1].backgroundimage = config.image_url
     }
-    if(config.custom_background == false)
+    else(config.custom_background == false)
     {
         switch (versionGlobal) {
             case 10:
@@ -570,7 +570,7 @@ const Backgrounds = (version, versionGlobal, backgrounds, content) =>{
                     backgrounds[1].stage = "winter2021";
                     backgrounds[1].backgroundimage = "https://cdn2.unrealengine.com/t-bp19-lobby-xmas-2048x1024-f85d2684b4af.png";
                 }
-                if (version === "19.10") {
+                else if(version === "19.10") {
                     backgrounds[1].stage = "defaultnotris";
                     backgrounds[1].backgroundimage = "https://cdn2.unrealengine.com/fortnite-tilted-towers-1920x1080-ad94e5f0b016.jpg";
                 }
@@ -618,7 +618,7 @@ const Backgrounds = (version, versionGlobal, backgrounds, content) =>{
                     backgrounds[1].stage = "season2310"
                     backgrounds[1].backgroundimage = "https://cdn2.unrealengine.com/t-bp23-winterfest-lobby-square-2048x2048-2048x2048-277a476e5ca6.png"
                 }
-                if(version === "23.40")
+                else if(version === "23.40")
                 {   
                     backgrounds[1].stage = "defaultnotris"
                     backgrounds[1].backgroundimage = "https://cdn2.unrealengine.com/mostwanted-final-v2-2048x2048-2048x2048-39f2b5041a40.jpg"
@@ -687,7 +687,7 @@ const Backgrounds = (version, versionGlobal, backgrounds, content) =>{
                     backgrounds[1].stage = "season2920"
                     backgrounds[1].backgroundimage = "https://cdn2.unrealengine.com/iceberg-lobby-3840x2160-217bb6ea8af9.jpg"                        
                 }
-                if(version === "29.40"){
+                else if(version === "29.40"){
                     backgrounds[1].stage = "defaultnotris"
                     backgrounds[1].backgroundimage = "https://cdn2.unrealengine.com/mkart-2940-sw-fnbr-lobby-3840x2160-4f1f1486a54a.jpg"                        
                 }                    
@@ -701,13 +701,22 @@ const Backgrounds = (version, versionGlobal, backgrounds, content) =>{
                     backgrounds[1].stage = "season3020"
                     backgrounds[1].backgroundimage = "https://cdn2.unrealengine.com/mkart-c5s3-msee-lobby-bg-2560x1440-9c8aa7721e41.jpg"
                 }
-                if(version === "30.40"){
+                else if(version === "30.40"){
                     backgrounds[1].stage = "season3030"
                     backgrounds[1].backgroundimage = "https://cdn2.unrealengine.com/ch5s3-lobby-3030-4096x2048-eecf04243faa.jpg"
                 }
                 else{
                     backgrounds[1].stage = "season3000"
                     backgrounds[1].backgroundimage = "https://cdn2.unrealengine.com/lobby-br-c5s3-4096x2048-7a9c78cb7b9a.jpg"
+                }
+            case 31:
+                if(version === "31.40" || version === "31.41"){
+                    backgrounds[1].stage = "season3140"
+                    backgrounds[1].backgroundimage = "https://cdn2.unrealengine.com/mkart-fnbr-fortnitemares2024-lobby-final-4096x2048-d17d51ae76a0.jpg"
+                }
+                else{
+                    backgrounds[1].stage = "season3100"
+                    backgrounds[1].backgroundimage = "https://cdn2.unrealengine.com/ch5s4-lobbybg-final-2136x1202-e5885322faf1.jpg"
                 }
             break;
             default:

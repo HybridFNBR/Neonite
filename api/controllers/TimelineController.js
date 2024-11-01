@@ -1317,6 +1317,26 @@ module.exports = {
                     eventType: "StageD", //Kiln Buildup Stage 4
                     activeUntil: "9999-09-14T07:00:00.000Z",
                     activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "KilnB", //Kiln Buildup
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "Kiln_TOD", //Kiln Time Of Day
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "Kiln_Event", //Kiln Event
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "Kiln_Preload_Event", //Kiln Preload Event
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
                 }                           
             )
         }
