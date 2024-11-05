@@ -167,23 +167,23 @@ module.exports = {
         fs.writeFileSync(path.join(__dirname, `/profile/${accountId}/profiles/profile_${profileId}.json`), JSON.stringify(data, null, 2));
     },
 
-    readLockerProfile(accountId) {
+    readLockerProfile(accountId, version) {
         try {
-            return JSON.parse(fs.readFileSync(path.join(__dirname, `/profile/${accountId}/profiles/locker.json`), "utf8"));
+            return JSON.parse(fs.readFileSync(path.join(__dirname, `/profile/${accountId}/profiles/lockerv${version}.json`), "utf8"));
         } catch (e) {
             return null;
         }
     },
 
-    readLockerTemplate() {
+    readLockerTemplate(version) {
         try {
-            return JSON.parse(fs.readFileSync(path.join(__dirname, `/profile_template/profiles/locker.json`), "utf8"));
+            return JSON.parse(fs.readFileSync(path.join(__dirname, `/profile_template/profiles/lockerv${version}.json`), "utf8"));
         } catch (e) {
             return null;
         }
     },
 
-    saveLocker(accountId, data) {
-        fs.writeFileSync(path.join(__dirname, `/profile/${accountId}/profiles/locker.json`), JSON.stringify(data, null, 2));
+    saveLocker(accountId, version, data) {
+        fs.writeFileSync(path.join(__dirname, `/profile/${accountId}/profiles/lockerv${version}.json`), JSON.stringify(data, null, 2));
     },
 };

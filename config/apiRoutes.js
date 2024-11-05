@@ -131,19 +131,30 @@ module.exports.routes = {
     'POST /api/v1/fortnite-br/channel/motd/target': 'FortniteGameController.motdTarget',
     'POST /api/v1/fortnite-br/interactions/contentHash': 'FortniteGameController.contentHash',
     'GET /fortnite/api/calendar/v1/timeline': 'TimelineController.timeline',
-    'GET /api/locker/v3/:deploymentId/account/:accountId/items': 'LockerController.locker',
+    'GET /api/locker/v3/:deploymentId/account/:accountId/items': 'LockerController.lockerv3',
     'PUT /api/locker/v3/:deploymentId/loadout/:loadoutType/account/:accountId/:loadout':{ 
-        action: "lockerLoadout",
+        action: "lockerLoadoutV3",
         controller:'LockerController', 
         skipAssets: false
     },
     'PUT /api/locker/v3/:deploymentId/loadout/:loadoutType/account/:accountId/loadout-preset/index/:presetIndex': { 
-        action: "lockerPreset",
+        action: "lockerPresetV3",
         controller:'LockerController', 
         skipAssets: false
     },
-    'DELETE /api/locker/v3/:deploymentId/loadout/:loadoutType/account/:accountId/loadout-preset/index/:presetIndex': { 
-        action: "deletePreset",
+    'GET /api/locker/v4/:deploymentId/account/:accountId/items': 'LockerController.lockerv4',
+    'PUT /api/locker/v4/:deploymentId/account/:accountId/active-loadout-group':{ 
+        action: "lockerLoadoutV4",
+        controller:'LockerController', 
+        skipAssets: false
+    },
+    'PUT /api/locker/v4/:deploymentId/account/:accountId/loadout-group-preset/index/:presetIndex': { 
+        action: "lockerGroupPresetV4",
+        controller:'LockerController', 
+        skipAssets: false
+    },
+    'PUT /api/locker/v4/:deploymentId/loadout/:loadoutType/account/:accountId/loadout-preset/index/:presetIndex': { 
+        action: "lockerPresetV4",
         controller:'LockerController', 
         skipAssets: false
     },

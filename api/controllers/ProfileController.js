@@ -195,6 +195,7 @@ module.exports = {
 			}
 
 			case "PurchaseCatalogEntry": {
+				const commoncore = Profile.readProfile(accountId, "common_core");
 				let shop
 				if (version >= 30.10) {
 					shop = loadJSON("../responses/catalog/shopv3.json");
