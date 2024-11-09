@@ -95,14 +95,6 @@ module.exports = {
 							"isVisible": true
 						},
 						{
-							"linkCode": "playlist_kiln",
-							"isFavorite": false,
-							"globalCCU": 1,
-							"lockStatus": "UNLOCKED",
-							"lockStatusReason": "NONE",
-							"isVisible": true
-						},
-						{
 							"linkCode": "set_br_playlists",
 							"isFavorite": false,
 							"globalCCU": 1,

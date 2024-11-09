@@ -307,6 +307,7 @@ module.exports = {
 					}
 				]
 
+				response.multiUpdate = [athenaProfile.response]
 				break;
 			}
 
