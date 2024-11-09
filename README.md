@@ -23,11 +23,9 @@ _In acquiescence to Epic Games Inc. - Please note that access to all cosmetics f
 - Open `Start Neonite.bat`, it should say `[Neonite]: v2.* is listening on port 5595!` (Do not close this while running Neonite V2!)	
 <!-- FAQs -->
 ## FAQs
-
- * How do I access Neonite V2?
-   * You can access Neonite V2's dashboard at http://localhost:5595/.
  * Can I go in-game?
-   * Yes on most past versions of fortnite, however with the latest version of fortnite it can vary, Check it out [here](https://discord.gg/carbon-897532507048796210).
+   * Yes on most past versions upto version 30.00 of fortnite, however with the latest version of fortnite(30.10+) epic added new protections to stop you from launching
+   directly with the shipping exe and only lobby is supported through a proxy method, check it out [here](https://discord.gg/carbon-897532507048796210).
  * Will I get banned?
    * No, you won't get banned because Neonite V2 doesn't connect to any Epic Games related services.
  * How do I play with my friends?
