@@ -35,7 +35,7 @@ _In acquiescence to Epic Games Inc. - Please note that access to all cosmetics f
 
 <!-- CONTACT -->
 ## Support
-Discord Server: [Carbon](https://discord.gg/carbon-897532507048796210) <- *you can get the launcher + backend alternatively from here since there is a possibility this repo wont be updated*
+Discord Server: [Carbon](https://discord.gg/carbon-897532507048796210) <- *you can get the launcher + backend alternatively from here*
 
 
 <!-- CREDITS -->
