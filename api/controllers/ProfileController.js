@@ -132,6 +132,14 @@ module.exports = {
 				break;
 			}
 
+			case "SetForcedIntroPlayed":{
+				//{ forcedIntroName: 'Coconut' }
+				response.profileChanges = [{
+					"changeType": "fullProfileUpdate",
+					"profile": profileData
+				}];
+			}
+
 			case "RequestRestedStateIncrease":{
 				var xpValue = profileData.stats.attributes["book_xp"] + req.body.restedXpGenAccumulated
 				Profile.modifyStat(profileData, "book_xp", xpValue)
