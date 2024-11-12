@@ -221,13 +221,13 @@ module.exports = {
 
 
 	//will be implemented sometime in the future
-	/*lockerPresetV4: async function(req, res){
+	lockerPresetV4: async function(req, res){
 		var accountId = req.params.accountId;
 		var lockerData = Profile.readLockerProfile(accountId, 4);
 		let displayName = req.body["displayName"] || "";
 		
 		let existingPreset = lockerData["loadoutPresets"].find(preset => 
-			preset.presetIndex === parseInt(req.params.presetIndex) && preset.presetId === req.body.presetId && preset.loadoutType == req.params.loadoutType
+			preset.presetIndex === parseInt(req.params.presetIndex) && preset.loadoutType == req.params.loadoutType
 		);
 		
 		if (existingPreset) {
@@ -283,5 +283,5 @@ module.exports = {
 			});
 		}
 
-	},*/
+	},
 }
