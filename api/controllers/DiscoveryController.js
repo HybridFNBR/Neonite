@@ -223,14 +223,10 @@ module.exports = {
 				res.status(404).end();
 			}
 		}
-		if(version >= 23.50){
-			const relatedResponse = {
-				links: {}
-			}
+		else if(version >= 23.50){
 			for (const result of discoveryv2) {
 				if (result.mnemonic === req.params.playlistId) {
-					relatedResponse.links[req.params.playlistId] = result;
-					return res.json(relatedResponse);
+					return res.json(result);
 				}
 			}
 		}
