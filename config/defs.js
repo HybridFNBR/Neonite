@@ -315,7 +315,7 @@ var config = ini.parse(fs.readFileSync(path.join(__dirname, '../config.ini'), 'u
         "Next"
     ];
     
-const billboard = (sectionID, offerGoupsectionID, stackRankValue, foregroundUrl, backgroundUrl, bodyImage, titleColorA, titleColorB, title, subtitle, buttonText, SectiondisplayName) => {
+const billboard = (sectionID, offerGoupsectionID, stackRankValue, foregroundUrl, backgroundUrl, bodyImage, titleImage, titleColorA, titleColorB, title, subtitle, buttonText, SectiondisplayName) => {
     return {
         "metadata": {
             "offerGroups": [
@@ -347,19 +347,24 @@ const billboard = (sectionID, offerGoupsectionID, stackRankValue, foregroundUrl,
                         "metadata": {
                         "textureMetadata": [
                             {
-                            "_type": "MP Item Shop - Offer Group Texture Metadata",
-                            "value": foregroundUrl,
-                            "key": "foreground"
+                                "_type": "MP Item Shop - Offer Group Texture Metadata",
+                                "value": foregroundUrl,
+                                "key": "foreground"
                             },
                             {
-                            "_type": "MP Item Shop - Offer Group Texture Metadata",
-                            "value": backgroundUrl,
-                            "key": "background"
+                                "_type": "MP Item Shop - Offer Group Texture Metadata",
+                                "value": backgroundUrl,
+                                "key": "background"
                             },
                             {
-                            "_type": "MP Item Shop - Offer Group Texture Metadata",
-                            "value": bodyImage,
-                            "key": "bodyImage"
+                                "_type": "MP Item Shop - Offer Group Texture Metadata",
+                                "value": bodyImage,
+                                "key": "bodyImage"
+                            },
+                            {
+                                "_type": "MP Item Shop - Offer Group Texture Metadata",
+                                "value": titleImage,
+                                "key": "titleImage"
                             }
                         ],
                         "_type": "MP Item Shop - Offer Group Metadata",
