@@ -137,51 +137,11 @@ module.exports = {
 	}, 
 
 	habaneroTracks: function(req, res){
-		res.json([
-			{
-				"gameId": "fortnite",
-				"trackguid": "OiK9k9",
-				"rankingType": "ranked-br",
-				"beginTime": "2023-11-02T07:00:18Z",
-				"endTime": "2025-01-01T07:00:17Z",
-				"divisionCount": 18
-			},
-			{
-				"gameId": "fortnite",
-				"trackguid": "hEKWqj",
-				"rankingType": "ranked-zb",
-				"beginTime": "2023-11-02T07:00:18Z",
-				"endTime": "2025-01-01T07:00:17Z",
-				"divisionCount": 18
-			}
-		])
+		res.status(204)
 	},
 
 	habaneroProgress: function(req, res){
-		res.json([
-			{
-				"gameId": "fortnite",
-				"trackguid": "hEKWqj",
-				"accountId": req.params.accountId,
-				"rankingType": "ranked-zb",
-				"lastUpdated": "1970-01-01T00:00:00Z",
-				"currentDivision": 0,
-				"highestDivision": 0,
-				"promotionProgress": 0,
-				"currentPlayerRanking": null
-			},
-			{
-				"gameId": "fortnite",
-				"trackguid": "OiK9k9",
-				"accountId": req.params.accountId,
-				"rankingType": "ranked-br",
-				"lastUpdated": "2023-11-05T19:51:28.002Z",
-				"currentDivision": 9,
-				"highestDivision": 18,
-				"promotionProgress": 0.88,
-				"currentPlayerRanking": null
-			}
-		])
+		res.status(204)
 	},
 
 	versionCheck: function(req, res){
