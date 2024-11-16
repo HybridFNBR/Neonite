@@ -210,7 +210,7 @@ module.exports = {
 			"key": req.body.key,
 			"expiration": "9999-12-31T23:59:59.999Z",
 			"type": "legacy"
-		},"EdDSA",  {keyid:""})
+		},"EdDSA",  {keyid:"20230621"})
 		res.json({
 			"key": req.body.key,
 			"account_id": account.accountId,

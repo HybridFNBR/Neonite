@@ -518,7 +518,7 @@ module.exports = {
             "Messaging.Stomp": {
               "ClientHeartbeatIntervalMs": 30000,
               "RequestedServerHeartbeatIntervalMs": 0,
-              "Url": "wss://api.epicgames.dev/notifications/v1/`deploymentid`/connect",
+              "Url": "",
               "BlocklistMessageTypeFilters": [
                 "lobbyinvite"
               ]
@@ -1302,7 +1302,7 @@ module.exports = {
           "Messaging.Stomp": {
             "ClientHeartbeatIntervalMs": 30000,
             "RequestedServerHeartbeatIntervalMs": 0,
-            "Url": "wss://api.epicgames.dev/notifications/v1/`deploymentid`/connect",
+            "Url": "",
             "BlocklistMessageTypeFilters": [
               "lobbyinvite"
             ]
