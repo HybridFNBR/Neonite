@@ -199,5 +199,27 @@ module.exports = {
 		  })
 
 
+	},
+
+	publicKey: function(req, res){
+		let jwt = jsonwebtoken.sign({
+			"account_id": account.accountId,
+			"generated": 1731795408,
+			"key_guid": "2e57bba7-4a7a-423c-b4b4-853acfcf019c",
+			"kid": "20230621",
+			"key": req.body.key,
+			"expiration": "9999-12-31T23:59:59.999Z",
+			"type": "legacy"
+		},"EdDSA",  {keyid:""})
+		res.json({
+			"key": req.body.key,
+			"account_id": account.accountId,
+			"key_guid": "2e57bba7-4a7a-423c-b4b4-853acfcf019c",
+			"kid": "20230621",
+			"expiration": "9999-12-31T23:59:59.999Z",
+			"jwt": jwt,
+			"type": "legacy"
+		})
+		
 	}
 }
