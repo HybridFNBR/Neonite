@@ -13,7 +13,8 @@ module.exports.routes = {
     'GET /account/api/public/account/': 'AuthController.publicAccount',
     'GET /account/api/public/account/token': 'ApiController.token',
     'GET /account/api/public/account/:accountId/externalAuths': 'AuthController.externalAuths',
-    'POST /publickey/v2/publickey': 'AuthController.publicKey'
+    'POST /publickey/v2/publickey': 'AuthController.publicKey',
+    'POST /epic/oauth/v2/tokenInfo': 'AuthController.tokenInfo'
 
 
 }
