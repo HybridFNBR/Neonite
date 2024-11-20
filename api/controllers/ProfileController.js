@@ -142,16 +142,18 @@ module.exports = {
 
 			case "RequestRestedStateIncrease":{
 				var xpValue = profileData.stats.attributes["book_xp"] + req.body.restedXpGenAccumulated
-				Profile.modifyStat(profileData, "book_xp", xpValue)
-				
+
 				Profile.bumpRvn(profileData);
 				response.profileRevision = profileData.rvn || 1;
 				response.profileCommandRevision = profileData.commandRevision || 1
-				Profile.saveProfile(accountId, profileId, profileData)
+				Profile.modifyStat(profileData, "book_xp", xpValue)
+
 				response.profileChanges = [{
-					"changeType": "fullProfileUpdate",
-					"profile": profileData
-				}];
+					"changeType" : "statModified",
+					"name" : "book_xp",
+					"value" : xpValue
+
+				}]
 				break;
 			}
 
@@ -361,18 +363,9 @@ module.exports = {
 					for (const [questId, quest] of Object.entries(miniPassData)) {
 						Profile.addItem(athenprofile, questId, quest);
 					}
-					var pastSeasons = [];
-					for (var i = 1; i <= 100; i++) {
-						pastSeasons.push({
-							"seasonNumber": i,
-							"numWins": 10000,
-							"seasonXp": 1000000,
-							"seasonLevel": 500,
-							"level": 200,
-							"bookXp": 1000000,
-							"bookLevel": 500,
-							"purchasedVIP": true
-						});
+					if(athenprofile.stats.attributes["favorite_character"] = "" || !athenprofile.stats.attributes["favorite_character"]){
+						athenprofile.stats["attributes"]["favorite_character"] = "AthenaCharacter:CID_001_Athena_Commando_F_Default"
+						Profile.saveProfile(accountId, "athena", athenprofile, profileChanges)
 					}
 					Profile.modifyStat(athenprofile, "book_level", parseInt(config.Level))
 					Profile.modifyStat(athenprofile, "level", parseInt(config.Level))
@@ -391,7 +384,7 @@ module.exports = {
 				{
 					CH1Fix(accountId, athenprofile)
 				}
-				
+				Profile.bumpRvn(profileId)
 				response.profileChanges = [{
 					"changeType": "fullProfileUpdate",
 					"profile": profileData
@@ -769,6 +762,7 @@ module.exports = {
 				return next(new ApiException(errors.com.epicgames.fortnite.operation_not_found).with(req.params.command));
 			}
 		}
+		console.log(response)
 		res.json(response)
 
 	}
