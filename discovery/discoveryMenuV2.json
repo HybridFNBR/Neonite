@@ -476,6 +476,218 @@
       "namespace": "fn",
       "accountId": "epic",
       "creatorName": "Epic",
+      "mnemonic": "playlist_pilgrimquickplay",
+      "linkType": "BR:Playlist",
+      "metadata": {
+        "lobby_background_image_urls": {
+          "url": "https://cdn2.unrealengine.com/mainstage-s6-lobbybg-4096x2048-f8b07170cd6f.jpg"
+        },
+        "internal_description_tags": [
+          "guitar_peripheral_enabled"
+        ],
+        "blog_category": "fortnite-festival",
+        "frontend_plugin": "SparksFrontend",
+        "image_url": "https://cdn2.unrealengine.com/en-fnsp-06-discoverytile-mainstage-1920x1080-1920x1080-1262fa4ea6b9.jpg",
+        "image_urls": {
+          "url_s": "https://cdn2.unrealengine.com/en-fnsp-06-discoverytile-mainstage-480x270-480x270-70777ca36c23.jpg",
+          "url_xs": "https://cdn2.unrealengine.com/en-fnsp-06-discoverytile-mainstage-256x144-256x144-8e7610b597e2.jpg",
+          "url_m": "https://cdn2.unrealengine.com/en-fnsp-06-discoverytile-mainstage-640x360-640x360-69482281a597.jpg",
+          "url": "https://cdn2.unrealengine.com/en-fnsp-06-discoverytile-mainstage-1920x1080-1920x1080-1262fa4ea6b9.jpg"
+        },
+        "matchmaking": {
+          "override_playlist": "playlist_pilgrimquickplay"
+        },
+        "title": "Festival Main Stage",
+        "video_vuid": "TmspZBuurWGUxdzbkg",
+        "alt_square_image_urls": {
+          "de": {
+            "url": "https://cdn2.unrealengine.com/de-fnsp-06-discoverytile-mainstage-480x480-480x480-bb86c450d70e.jpg"
+          },
+          "ru": {
+            "url": "https://cdn2.unrealengine.com/ru-fnsp-06-discoverytile-mainstage-480x480-480x480-9cc46c4cfd85.jpg"
+          },
+          "ko": {
+            "url": "https://cdn2.unrealengine.com/kr-fnsp-06-discoverytile-mainstage-480x480-480x480-68ece020d9b7.jpg"
+          },
+          "pt-BR": {
+            "url": "https://cdn2.unrealengine.com/pt-br-fnsp-06-discoverytile-mainstage-480x480-480x480-83e889a649d6.jpg"
+          },
+          "zh-hans": {
+            "url": "https://cdn2.unrealengine.com/zhcn-fnsp-06-discoverytile-mainstage-480x480-480x480-cb5ebd034203.jpg"
+          },
+          "it": {
+            "url": "https://cdn2.unrealengine.com/it-fnsp-06-discoverytile-mainstage-480x480-480x480-2e2709159675.jpg"
+          },
+          "fr": {
+            "url": "https://cdn2.unrealengine.com/fr-fnsp-06-discoverytile-mainstage-480x480-480x480-cd4ffa9fbd7c.jpg"
+          },
+          "es": {
+            "url": "https://cdn2.unrealengine.com/es-es-fnsp-06-discoverytile-mainstage-480x480-480x480-c2e97c818c7f.jpg"
+          },
+          "ar": {
+            "url": "https://cdn2.unrealengine.com/ar-fnsp-06-discoverytile-mainstage-480x480-480x480-1e9de0e8cd43.jpg"
+          },
+          "ja": {
+            "url": "https://cdn2.unrealengine.com/jp-fnsp-06-discoverytile-mainstage-480x480-480x480-829df83815df.jpg"
+          },
+          "pl": {
+            "url": "https://cdn2.unrealengine.com/pl-fnsp-06-discoverytile-mainstage-480x480-480x480-2c2aaaf3dcf1.jpg"
+          },
+          "es-419": {
+            "url": "https://cdn2.unrealengine.com/es-mx-fnsp-06-discoverytile-mainstage-480x480-480x480-3f2064a64772.jpg"
+          },
+          "tr": {
+            "url": "https://cdn2.unrealengine.com/tr-fnsp-06-discoverytile-mainstage-480x480-480x480-8b2f984dca89.jpg"
+          }
+        },
+        "matchmakingV2": {
+          "allowSquadFillOption": true,
+          "allowJoinInProgress": false,
+          "crossplayRequired": true,
+          "maxPlayers": 4,
+          "maxSocialPartySize": 4,
+          "isRanked": false,
+          "maxTeamCount": 1,
+          "allowPrivateMatches": false,
+          "maxTeamSize": 4
+        },
+        "alt_image_urls": {
+          "de": {
+            "url_s": "https://cdn2.unrealengine.com/de-fnsp-06-discoverytile-mainstage-480x270-480x270-8cd1859e8c05.jpg",
+            "url_m": "https://cdn2.unrealengine.com/de-fnsp-06-discoverytile-mainstage-640x360-640x360-414504a2c85a.jpg",
+            "url": "https://cdn2.unrealengine.com/de-fnsp-06-discoverytile-mainstage-1920x1080-1920x1080-9faef70179d3.jpg"
+          },
+          "ru": {
+            "url_s": "https://cdn2.unrealengine.com/ru-fnsp-06-discoverytile-mainstage-480x270-480x270-d62709e483e6.jpg",
+            "url_m": "https://cdn2.unrealengine.com/ru-fnsp-06-discoverytile-mainstage-640x360-640x360-d42db9c66c00.jpg",
+            "url": "https://cdn2.unrealengine.com/ru-fnsp-06-discoverytile-mainstage-1920x1080-1920x1080-306a581ef736.jpg"
+          },
+          "ko": {
+            "url_s": "https://cdn2.unrealengine.com/kr-fnsp-06-discoverytile-mainstage-480x270-480x270-2b14733086d1.jpg",
+            "url_m": "https://cdn2.unrealengine.com/kr-fnsp-06-discoverytile-mainstage-640x360-640x360-aff8216c0847.jpg",
+            "url": "https://cdn2.unrealengine.com/kr-fnsp-06-discoverytile-mainstage-1920x1080-1920x1080-004029e3ab25.jpg"
+          },
+          "pt-BR": {
+            "url_s": "https://cdn2.unrealengine.com/pt-br-fnsp-06-discoverytile-mainstage-480x270-480x270-88811a65f702.jpg",
+            "url_m": "https://cdn2.unrealengine.com/pt-br-fnsp-06-discoverytile-mainstage-640x360-640x360-5836032624a2.jpg",
+            "url": "https://cdn2.unrealengine.com/pt-br-fnsp-06-discoverytile-mainstage-1920x1080-1920x1080-596441cd762d.jpg"
+          },
+          "zh-hans": {
+            "url_s": "https://cdn2.unrealengine.com/zhcn-fnsp-06-discoverytile-mainstage-480x270-480x270-4aa2d7dfda10.jpg",
+            "url_m": "https://cdn2.unrealengine.com/zhcn-fnsp-06-discoverytile-mainstage-640x360-640x360-9ca730984518.jpg",
+            "url": "https://cdn2.unrealengine.com/zhcn-fnsp-06-discoverytile-mainstage-1920x1080-1920x1080-3ecb83b12108.jpg"
+          },
+          "it": {
+            "url_s": "https://cdn2.unrealengine.com/it-fnsp-06-discoverytile-mainstage-480x270-480x270-b4bc2fc4b84d.jpg",
+            "url_m": "https://cdn2.unrealengine.com/it-fnsp-06-discoverytile-mainstage-640x360-640x360-89d2f1ab5385.jpg",
+            "url": "https://cdn2.unrealengine.com/it-fnsp-06-discoverytile-mainstage-1920x1080-1920x1080-53c4cdcee04a.jpg"
+          },
+          "fr": {
+            "url_s": "https://cdn2.unrealengine.com/fr-fnsp-06-discoverytile-mainstage-480x270-480x270-4b740599c7d4.jpg",
+            "url_m": "https://cdn2.unrealengine.com/fr-fnsp-06-discoverytile-mainstage-640x360-640x360-8da0e3671028.jpg",
+            "url": "https://cdn2.unrealengine.com/fr-fnsp-06-discoverytile-mainstage-1920x1080-1920x1080-1f97ed882d13.jpg"
+          },
+          "es": {
+            "url_s": "https://cdn2.unrealengine.com/es-es-fnsp-06-discoverytile-mainstage-480x270-480x270-c628bafb8df1.jpg",
+            "url_m": "https://cdn2.unrealengine.com/es-es-fnsp-06-discoverytile-mainstage-640x360-640x360-04eab800dd5f.jpg",
+            "url": "https://cdn2.unrealengine.com/es-es-fnsp-06-discoverytile-mainstage-1920x1080-1920x1080-73904c975f47.jpg"
+          },
+          "ar": {
+            "url_s": "https://cdn2.unrealengine.com/ar-fnsp-06-discoverytile-mainstage-480x270-480x270-e513a6fe7a8f.jpg",
+            "url_m": "https://cdn2.unrealengine.com/ar-fnsp-06-discoverytile-mainstage-640x360-640x360-21b99aaab56d.jpg",
+            "url": "https://cdn2.unrealengine.com/ar-fnsp-06-discoverytile-mainstage-1920x1080-1920x1080-48af91ee4280.jpg"
+          },
+          "ja": {
+            "url_s": "https://cdn2.unrealengine.com/jp-fnsp-06-discoverytile-mainstage-480x270-480x270-fbb70c16ee7f.jpg",
+            "url_m": "https://cdn2.unrealengine.com/jp-fnsp-06-discoverytile-mainstage-640x360-640x360-37cea047423d.jpg",
+            "url": "https://cdn2.unrealengine.com/jp-fnsp-06-discoverytile-mainstage-1920x1080-1920x1080-9b02c9b83f48.jpg"
+          },
+          "pl": {
+            "url_s": "https://cdn2.unrealengine.com/pl-fnsp-06-discoverytile-mainstage-480x270-480x270-67935dae8373.jpg",
+            "url_m": "https://cdn2.unrealengine.com/pl-fnsp-06-discoverytile-mainstage-640x360-640x360-e71410cff5e6.jpg",
+            "url": "https://cdn2.unrealengine.com/pl-fnsp-06-discoverytile-mainstage-1920x1080-1920x1080-93f0c8a28f23.jpg"
+          },
+          "es-419": {
+            "url_s": "https://cdn2.unrealengine.com/es-mx-fnsp-06-discoverytile-mainstage-480x270-480x270-b5e91324e6c3.jpg",
+            "url_m": "https://cdn2.unrealengine.com/es-mx-fnsp-06-discoverytile-mainstage-640x360-640x360-9562719ed450.jpg",
+            "url": "https://cdn2.unrealengine.com/es-mx-fnsp-06-discoverytile-mainstage-1920x1080-1920x1080-cca2730bfdc4.jpg"
+          },
+          "tr": {
+            "url_s": "https://cdn2.unrealengine.com/tr-fnsp-06-discoverytile-mainstage-480x270-480x270-ea7ed3398486.jpg",
+            "url_m": "https://cdn2.unrealengine.com/tr-fnsp-06-discoverytile-mainstage-640x360-640x360-87f0502425a6.jpg",
+            "url": "https://cdn2.unrealengine.com/tr-fnsp-06-discoverytile-mainstage-1920x1080-1920x1080-ac2d79c72d70.jpg"
+          }
+        },
+        "alt_title": {
+          "de": "Festival: Hauptb\u00fchne",
+          "ru": "\u0413\u043b\u0430\u0432\u043d\u0430\u044f \u0441\u0446\u0435\u043d\u0430 Fortnite Festival",
+          "ko": "\ud398\uc2a4\ud2f0\ubc8c \uba54\uc778 \uc2a4\ud14c\uc774\uc9c0",
+          "pt-BR": "Palco Principal do Festival",
+          "zh-hans": "\u97f3\u4e50\u8282\u4e3b\u821e\u53f0",
+          "it": "Palco principale del Festival",
+          "fr": "Sc\u00e8ne principale de Fortnite Festival",
+          "es": "Escenario principal de Festival",
+          "ar": "\u0645\u0633\u0631\u062d Festival \u0627\u0644\u0631\u0626\u064a\u0633\u064a",
+          "ja": "Festival \u30e1\u30a4\u30f3\u30b9\u30c6\u30fc\u30b8",
+          "pl": "Scena G\u0142\u00f3wna w Fortnite Festival",
+          "es-419": "Escenario principal de Festival",
+          "tr": "Festival Ana Sahnesi"
+        },
+        "alt_tagline": {
+          "de": "Spiele mit Freunden in einer Band oder tritt solo auf der B\u00fchne auf mit Hits von deinen Lieblingsk\u00fcnstlern in Fortnite Festival! Spiele vorgestellte wechselnde Jam-Songs auf der Hauptb\u00fchne. Tritt gegen Freunde an und schaue, wer die beste Performance bietet, oder schlie\u00dft euch zusammen und erklimmt die Bestenlisten. Das Festival f\u00e4ngt gerade erst an und schon bald werden weitere Jam-Songs, Musikikonen, Konzerte und B\u00fchnen erscheinen. Betritt die B\u00fchne in Fortnite Festival!",
+          "ru": "\u0412\u044b\u0441\u0442\u0443\u043f\u0430\u0439\u0442\u0435 \u0432 \u0433\u0440\u0443\u043f\u043f\u0435 \u0441 \u0434\u0440\u0443\u0437\u044c\u044f\u043c\u0438 \u0438\u043b\u0438 \u0438\u0441\u043f\u043e\u043b\u043d\u044f\u0439\u0442\u0435 \u043b\u044e\u0431\u0438\u043c\u044b\u0435 \u043a\u043e\u043c\u043f\u043e\u0437\u0438\u0446\u0438\u0438 \u0441\u043e\u043b\u043e \u0438 \u043f\u043e\u043a\u043e\u0440\u0438\u0442\u0435 \u0441\u0446\u0435\u043d\u0443 \u0432 Fortnite Festival! \u0418\u0433\u0440\u0430\u0439\u0442\u0435 \u043d\u0430 \u0413\u043b\u0430\u0432\u043d\u043e\u0439 \u0441\u0446\u0435\u043d\u0435 \u0445\u0438\u0442\u044b \u0438\u0437 \u0440\u0435\u0433\u0443\u043b\u044f\u0440\u043d\u043e \u043e\u0431\u043d\u043e\u0432\u043b\u044f\u044e\u0449\u0435\u0439\u0441\u044f \u043f\u043e\u0434\u0431\u043e\u0440\u043a\u0438. \u0421\u043e\u0440\u0435\u0432\u043d\u0443\u0439\u0442\u0435\u0441\u044c \u0441 \u0434\u0440\u0443\u0437\u044c\u044f\u043c\u0438 \u0437\u0430 \u0437\u0432\u0430\u043d\u0438\u0435 \u043b\u0443\u0447\u0448\u0435\u0433\u043e \u0438\u0441\u043f\u043e\u043b\u043d\u0438\u0442\u0435\u043b\u044f \u0438\u043b\u0438 \u043f\u043e\u043a\u043e\u0440\u044f\u0439\u0442\u0435 \u043c\u0438\u0440\u043e\u0432\u044b\u0435 \u0441\u043f\u0438\u0441\u043a\u0438 \u043b\u0438\u0434\u0435\u0440\u043e\u0432 \u043e\u0434\u043d\u043e\u0439 \u0433\u0440\u0443\u043f\u043f\u043e\u0439. \u0424\u0435\u0441\u0442\u0438\u0432\u0430\u043b\u044c \u0442\u043e\u043b\u044c\u043a\u043e \u043d\u0430\u0447\u0438\u043d\u0430\u0435\u0442\u0441\u044f! \u0412\u043f\u0435\u0440\u0435\u0434\u0438 \u043c\u043d\u043e\u0433\u043e \u043d\u043e\u0432\u044b\u0445 \u043f\u0435\u0441\u0435\u043d, \u0437\u0432\u0451\u0437\u0434, \u043a\u043e\u043d\u0446\u0435\u0440\u0442\u043e\u0432 \u0438 \u043f\u043b\u043e\u0449\u0430\u0434\u043e\u043a. \u0421\u0446\u0435\u043d\u0430 \u0436\u0434\u0451\u0442 \u0432 Fortnite Festival!",
+          "ko": "\uce5c\uad6c\uc640 \ud568\uaed8 \ubc34\ub4dc\ub97c \uacb0\uc131\ud558\uc5ec \uc5f0\uc8fc\ud558\uac70\ub098, \ud3ec\ud2b8\ub098\uc774\ud2b8 \ud398\uc2a4\ud2f0\ubc8c\uc5d0\uc11c \ubb34\ub300\uc5d0 \uc62c\ub77c\uac00 \uc88b\uc544\ud558\ub294 \uc544\ud2f0\uc2a4\ud2b8\uac00 \uc791\uace1\ud55c \ud788\ud2b8\uace1\uc744 \uc194\ub85c\ub85c \uc5f0\uc8fc\ud558\uc138\uc694! \uba54\uc778 \uc2a4\ud14c\uc774\uc9c0\uc5d0\uc11c \uc7bc \ud2b8\ub799 \ucd94\ucc9c \ub85c\ud14c\uc774\uc158\uc744 \uc5f0\uc8fc\ud574 \ubcf4\uc138\uc694. \ucd5c\uace0\uc758 \uacf5\uc5f0\uc744 \uc704\ud574 \uce5c\uad6c\ub4e4\uacfc \ud568\uaed8 \uacbd\uc7c1\ud558\uac70\ub098, \ud300\uc744 \uc774\ub904 \uc21c\uc704\ub97c \uc62c\ub824\ubcf4\uc138\uc694. \ud398\uc2a4\ud2f0\ubc8c\uc740 \uc774\uc81c \uc2dc\uc791\uc785\ub2c8\ub2e4. \uc870\ub9cc\uac04 \uc7bc \ud2b8\ub799\uacfc \uc74c\uc545\uacc4\uc758 \uc544\uc774\ucf58, \ucf58\uc11c\ud2b8, \uc2a4\ud14c\uc774\uc9c0\uac00 \ub354 \ucd94\uac00\ub429\ub2c8\ub2e4! \ud3ec\ud2b8\ub098\uc774\ud2b8 \ud398\uc2a4\ud2f0\ubc8c\uc5d0\uc11c \ub098\ub9cc\uc758 \ubb34\ub300\uc5d0 \uc624\ub974\uc138\uc694!",
+          "pt-BR": "Suba ao palco e toque numa banda com a galera ou solo, interpretando sucessos dos seus artistas favoritos no Fortnite Festival! Toque uma sele\u00e7\u00e3o rotativa de M\u00fasicas no Palco Principal. Dispute com outras pessoas ou forme sua banda para alcan\u00e7ar o topo da tabela de lideran\u00e7a. O festival est\u00e1 s\u00f3 come\u00e7ando: muitas M\u00fasicas, \u00edcones musicais, shows e palcos ainda est\u00e3o por vir. Suba no palco no Fortnite Festival!",
+          "zh-hans": "\u53c2\u52a0\u300aFortnite \u97f3\u4e50\u8282\u300b\uff0c\u5728\u821e\u53f0\u4e0a\u72ec\u594f\u6216\u4e0e\u597d\u53cb\u7ec4\u961f\u6f14\u594f\u81ea\u5df1\u6700\u7231\u97f3\u4e50\u5bb6\u7684\u70ed\u95e8\u66f2\u76ee\uff01\u5728\u4e3b\u821e\u53f0\u4e0a\u8f6e\u6362\u6f14\u594f\u7cbe\u9009\u5373\u5174\u66f2\u76ee\u3002\u4e0e\u597d\u53cb\u540c\u53f0\u7ade\u6f14\uff0c\u5b9e\u73b0\u6700\u4f73\u8868\u73b0\uff0c\u6216\u7ec4\u961f\u51b2\u51fb\u6392\u884c\u699c\u699c\u9996\u3002\u97f3\u4e50\u8282\u624d\u521a\u521a\u62c9\u5f00\u5e37\u5e55\uff0c\u63a5\u4e0b\u6765\u4f1a\u5f88\u5feb\u63a8\u51fa\u66f4\u591a\u5373\u5174\u66f2\u76ee\u3001\u97f3\u4e50\u5076\u50cf\u3001\u97f3\u4e50\u4f1a\u548c\u821e\u53f0\u3002\u5728\u300aFortnite \u97f3\u4e50\u8282\u300b\u4e2d\u767b\u53f0\u6f14\u51fa\u5427\uff01",
+          "it": "Suona in una band con gli amici o esibisciti da solista sul palco con i grandi successi dei tuoi artisti preferiti in Fortnite Festival! Una selezione di tracce Jam in evidenza ti aspetta sul Palco principale. Competi a colpi di performance contro gli amici o unisciti a loro per scalare le classifiche. Il Festival \u00e8 solo all'inizio, con tante nuove tracce Jam, icone musicali, concerti e palchi presto in arrivo. Sali sul palco in Fortnite Festival!",
+          "fr": "Jouez en groupe avec des amis ou en solo sur les chansons de vos artistes pr\u00e9f\u00e9r\u00e9s dans Fortnite Festival ! Montez sur la sc\u00e8ne principale en choisissant parmi une rotation de pistes musicales \u00e0 la une. Faites une meilleure performance que vos amis ou montez un groupe et hissez-vous en haut du classement. Ce n'est que le d\u00e9but. De nouveaux concerts, pistes musicales, ic\u00f4nes de la musique et concerts arriveront prochainement. Faites votre entr\u00e9e sur sc\u00e8ne dans Fortnite Festival !",
+          "es": "\u00a1S\u00fabete al escenario con una banda de amigos o en solitario y toca los temazos de tus artistas favoritos en Fortnite Festival! En el escenario principal podr\u00e1s tocar una rotaci\u00f3n de temas de improvisaci\u00f3n. Compite contra amigos para ver qui\u00e9n act\u00faa mejor o forma equipo para subir en los marcadores. El festival acaba de comenzar y pronto habr\u00e1 m\u00e1s temas de improvisaci\u00f3n, \u00eddolos musicales, conciertos y escenarios. \u00a1Sube al escenario en Fortnite Festival!",
+          "ar": "\u0627\u0639\u0632\u0641 \u0641\u064a \u0641\u0631\u0642\u0629 \u0645\u0639 \u0627\u0644\u0623\u0635\u062f\u0642\u0627\u0621 \u0623\u0648 \u0642\u0645 \u0628\u0623\u062f\u0627\u0621 \u0645\u0646\u0641\u0631\u062f \u0639\u0644\u0649 \u0627\u0644\u0645\u0633\u0631\u062d \u0645\u0639 \u0623\u063a\u0627\u0646\u064d \u0631\u0627\u0626\u062c\u0629 \u0644\u0644\u0641\u0646\u0627\u0646\u064a\u0646 \u0627\u0644\u0645\u0641\u0636\u0644\u064a\u0646 \u0644\u062f\u064a\u0643 \u0641\u064a Fortnite Festival! \u0627\u0639\u0632\u0641 \u0645\u0642\u0637\u0648\u0639\u0627\u062a \u0627\u0644\u0639\u0632\u0641 \u0627\u0644\u0645\u0645\u064a\u0632\u0629 \u0627\u0644\u0645\u062a\u0646\u0627\u0648\u0628\u0629 \u0639\u0644\u0649 \u0627\u0644\u0645\u0633\u0631\u062d \u0627\u0644\u0631\u0626\u064a\u0633\u064a. \u062a\u0646\u0627\u0641\u0633 \u0645\u0639 \u0627\u0644\u0623\u0635\u062f\u0642\u0627\u0621 \u0639\u0644\u0649 \u0623\u0641\u0636\u0644 \u0623\u062f\u0627\u0621 \u0623\u0648 \u0627\u0646\u0636\u0645 \u0625\u0644\u0649 \u0641\u0631\u064a\u0642 \u0644\u0644\u0627\u0631\u062a\u0642\u0627\u0621 \u0641\u064a \u0644\u0648\u062d\u0627\u062a \u0627\u0644\u0645\u062a\u0635\u062f\u0631\u064a\u0646. \u0628\u062f\u0623 \u0627\u0644\u0645\u0647\u0631\u062c\u0627\u0646 \u0644\u0644\u062a\u0648 \u0645\u0639 \u0627\u0644\u0645\u0632\u064a\u062f \u0645\u0646 \u0645\u0642\u0637\u0648\u0639\u0627\u062a \u0627\u0644\u0639\u0632\u0641 \u0648\u0623\u064a\u0642\u0648\u0646\u0627\u062a \u0627\u0644\u0645\u0648\u0633\u064a\u0642\u0649 \u0648\u062d\u0641\u0644\u0627\u062a \u0648\u0645\u0633\u0627\u0631\u062d \u0642\u0627\u062f\u0645\u0629 \u0642\u0631\u064a\u0628\u064b\u0627. \u0647\u064a\u0645\u0646 \u0639\u0644\u0649 \u0627\u0644\u0645\u0633\u0631\u062d \u0641\u064a Fortnite Festival!",
+          "ja": "\u304a\u6c17\u306b\u5165\u308a\u306e\u30a2\u30fc\u30c6\u30a3\u30b9\u30c8\u306e\u30d2\u30c3\u30c8\u30ca\u30f3\u30d0\u30fc\u3092\u30b9\u30c6\u30fc\u30b8\u3067\u6f14\u594f\u3057\u3088\u3046\u3002\u300cFortnite Festival\u300d\u3067\u306f\u30d5\u30ec\u30f3\u30c9\u3068\u30d0\u30f3\u30c9\u3092\u7d44\u3093\u3067\u3082\u3044\u3044\u3057\u3001\u30bd\u30ed\u3067\u3082\u697d\u3057\u3081\u308b\u305e\uff01 \u30e1\u30a4\u30f3\u30b9\u30c6\u30fc\u30b8\u3067\u3001\u30ed\u30fc\u30c6\u30fc\u30b7\u30e7\u30f3\u3055\u308c\u308b\u304a\u3059\u3059\u3081\u306e\u30b8\u30e3\u30e0\u30c8\u30e9\u30c3\u30af\u3092\u6f14\u594f\u3057\u3088\u3046\u3002\u30d5\u30ec\u30f3\u30c9\u3068\u6700\u9ad8\u306e\u30d1\u30d5\u30a9\u30fc\u30de\u30f3\u30b9\u3092\u76ee\u6307\u3057\u3066\u7af6\u3044\u5408\u3063\u305f\u308a\u3001\u30c1\u30fc\u30e0\u3092\u7d44\u3093\u3067\u30e9\u30f3\u30ad\u30f3\u30b0\u3092\u99c6\u3051\u4e0a\u308d\u3046\u3002\u30d5\u30a7\u30b9\u30c6\u30a3\u30d0\u30eb\u306f\u307e\u3060\u59cb\u307e\u3063\u305f\u3070\u304b\u308a\u3002\u4eca\u5f8c\u3082\u30b8\u30e3\u30e0\u30c8\u30e9\u30c3\u30af\u3001\u30df\u30e5\u30fc\u30b8\u30c3\u30af\u306e\u30a2\u30a4\u30b3\u30f3\u3001\u30b3\u30f3\u30b5\u30fc\u30c8\u3001\u30b9\u30c6\u30fc\u30b8\u304c\u8ffd\u52a0\u3055\u308c\u308b\u4e88\u5b9a\u3060\u3002\u300cFortnite Festival\u300d\u3067\u30b9\u30c6\u30fc\u30b8\u306b\u7acb\u3068\u3046\uff01",
+          "pl": "Graj ze znajomymi w zespole lub wyst\u0119puj solo, wykonuj\u0105c popularne utwory swoich ulubionych artyst\u00f3w w Fortnite Festival! Na Scenie G\u0142\u00f3wnej mo\u017cna wykonywa\u0107 wyr\u00f3\u017cnion\u0105 rotacj\u0119 \u015bcie\u017cek jamowych. Rywalizuj ze znajomymi o najlepszy wyst\u0119p lub po\u0142\u0105czcie si\u0142y i wspinajcie si\u0119 po szczeblach tablic wynik\u00f3w. Festiwal dopiero si\u0119 zaczyna: wkr\u00f3tce do gry trafi\u0105 nowe \u015bcie\u017cki jamowe, ikony muzyczne, koncerty i sceny. Wejd\u017a na scen\u0119 w Fortnite Festival!",
+          "es-419": "\u00a1Toca en una banda con amigos o interpreta las mejores canciones de tus artistas favoritos en solitario sobre el escenario de Fortnite Festival! Toca una selecci\u00f3n variada de pistas en el Escenario principal. Compite contra tus amigos para ver qui\u00e9n da la mejor actuaci\u00f3n o forma un equipo para ascender en los marcadores. El festival acaba de empezar y habr\u00e1 m\u00e1s pistas, \u00edconos musicales, conciertos y escenarios pr\u00f3ximamente. \u00a1Sube al escenario en Fortnite Festival!",
+          "tr": "Fortnite Festival'de en sevdi\u011fin sanat\u00e7\u0131lar\u0131n en be\u011fenilen \u015fark\u0131lar\u0131n\u0131 ister arkada\u015flar\u0131nla grup olarak \u00e7al ister tek ba\u015f\u0131na sergile! Ana Sahne'de \u00f6ne \u00e7\u0131kan m\u00fczik par\u00e7alar\u0131ndan olu\u015fan bir listeyi \u00e7al. En iyi performans\u0131 kimin sergileyece\u011fini g\u00f6rmek i\u00e7in arkada\u015flar\u0131nla yar\u0131\u015f ya da s\u0131ralamalarda y\u00fckselmek i\u00e7in onlarla birlik ol. Yak\u0131nda gelecek daha fazla m\u00fczik par\u00e7as\u0131, m\u00fczik ikonu, konser ve sahneyle as\u0131l festival daha yeni ba\u015fl\u0131yor. Fortnite Festival sahnesinde yerini al!"
+        },
+        "product_tag": "Product.Sparks.PilgrimQuickplay",
+        "tagline": "Play in a band with friends or perform solo on stage with hit music by your favorite artists in Fortnite Festival! On the Main Stage, play a featured rotation of Jam Tracks. Compete against friends for the best performance or team up to climb the leaderboards. The festival is just beginning with more Jam Tracks, Music Icons, concerts, and stages coming soon. Take your stage in Fortnite Festival!",
+        "extra_image_urls": [
+          {
+            "url_s": "https://cdn2.unrealengine.com/fnsp-06-lemoncart-gameplaytrailer-1-motd-1920x1080-1920x1080-ff316f24d9e4.jpg",
+            "url_m": "https://cdn2.unrealengine.com/fnsp-06-lemoncart-gameplaytrailer-1-motd-1920x1080-1920x1080-ff316f24d9e4.jpg",
+            "url": "https://cdn2.unrealengine.com/fnsp-06-lemoncart-gameplaytrailer-1-motd-1920x1080-1920x1080-ff316f24d9e4.jpg"
+          },
+          {
+            "url_s": "https://cdn2.unrealengine.com/fnsp-06-lemoncart-gameplaytrailer-2-motd-1920x1080-1920x1080-6d33ca143e25.jpg",
+            "url_m": "https://cdn2.unrealengine.com/fnsp-06-lemoncart-gameplaytrailer-2-motd-1920x1080-1920x1080-6d33ca143e25.jpg",
+            "url": "https://cdn2.unrealengine.com/fnsp-06-lemoncart-gameplaytrailer-2-motd-1920x1080-1920x1080-6d33ca143e25.jpg"
+          },
+          {
+            "url_s": "https://cdn2.unrealengine.com/fnsp-06-lemoncart-mainstage-motd-1920x1080-1920x1080-bedb3fa222ba.jpg",
+            "url_m": "https://cdn2.unrealengine.com/fnsp-06-lemoncart-mainstage-motd-1920x1080-1920x1080-bedb3fa222ba.jpg",
+            "url": "https://cdn2.unrealengine.com/fnsp-06-lemoncart-mainstage-motd-1920x1080-1920x1080-bedb3fa222ba.jpg"
+          }
+        ],
+        "square_image_urls": {
+          "url": "https://cdn2.unrealengine.com/en-fnsp-06-discoverytile-mainstage-480x480-480x480-026b31508ebd.jpg"
+        }
+      },
+      "version": 1,
+      "active": true,
+      "disabled": false,
+      "created": "2022-09-12T15:11:15.045Z",
+      "published": "2024-11-02T11:18:52.509Z",
+      "descriptionTags": [
+        "music",
+        "party game"
+      ],
+      "moderationStatus": "Approved",
+      "lastActivatedDate": "2022-09-12T15:11:15.048Z",
+      "discoveryIntent": "PUBLIC"
+    },
+    {
+      "namespace": "fn",
+      "accountId": "epic",
+      "creatorName": "Epic",
       "mnemonic": "playlist_playgroundv2",
       "linkType": "BR:Playlist",
       "metadata": {

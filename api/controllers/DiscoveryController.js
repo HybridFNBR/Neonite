@@ -111,6 +111,14 @@ module.exports = {
 							"isVisible": true
 						},
 						{
+							"linkCode": "playlist_pilgrimquickplay",
+							"isFavorite": false,
+							"globalCCU": 1,
+							"lockStatus": "UNLOCKED",
+							"lockStatusReason": "NONE",
+							"isVisible": true
+						},
+						{
 							"linkCode": "playlist_juno",
 							"isFavorite": false,
 							"globalCCU": 1,
@@ -134,7 +142,7 @@ module.exports = {
 							"globalCCU": 1,
 							"lockStatus": "UNLOCKED",
 							"lockStatusReason": "NONE",
-							"isVisible": false
+							"isVisible": true
 						}
 					],
 					"hasMore": true,
