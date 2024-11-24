@@ -1900,7 +1900,6 @@ module.exports = {
         }
 
         if(versionGlobal == 32){
-            console.log(1)
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "Week1",
