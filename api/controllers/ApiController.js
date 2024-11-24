@@ -477,14 +477,25 @@ module.exports = {
         return res.json(data)
     },
 
-    trackSegment: async function(req, res){
-        const response = await axios.get(`https://pilgrim.qstv.on.epicgames.com${req.originalUrl}`, {
-            responseType: 'stream' 
-        });
-        res.set({
-            'Content-Type': 'video/mp4'
-        });
-        response.data.pipe(res);
+	trackSegment: async function(req, res){
+		try{
+			const response = await axios.get(`https://pilgrim.qstv.on.epicgames.com${req.originalUrl}`, {
+				responseType: 'stream' 
+			});
+			res.set({
+				'Content-Type': 'video/mp4'
+			});
+			response.data.pipe(res);
+		}
+		catch{
+			const response = await axios.get(`https://cdn-0001.qstv.on.epicgames.com${req.originalUrl}`, {
+				responseType: 'stream',
+			});
+			res.set({
+				'Content-Type': 'video/mp4',
+			});
+			response.data.pipe(res);
+		}
     },
 
 	languages: function(req, res){
@@ -796,5 +807,15 @@ module.exports = {
 			},
 		})
     },
+
+	blurl: async function(req, res){
+		const response = await axios.get(`https://cdn-0001.qstv.on.epicgames.com/${req.params.resourceId}/master.blurl`, {
+            responseType: 'stream' 
+        });
+        res.set({
+            'Content-Type': "application/octet-stream"
+        });
+        response.data.pipe(res);
+	}
 
 };

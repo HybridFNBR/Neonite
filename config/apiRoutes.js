@@ -122,10 +122,12 @@ module.exports.routes = {
         controller:'ApiController', 
         skipAssets: false
     },
+    'GET /:resourceId/master.blurl': 'ApiController.blurl',
     'POST /fortnite/api/game/v2/profile/:accountId/client/:command': 'ProfileController.mcp',
     'GET /content/api/pages/fortnite-game': 'FortniteGameController.fortniteGame',
     'GET /content/api/pages/fortnite-game/spark-tracks': 'FortniteGameController.sparks',
     'GET /content/api/pages/fortnite-game/eventscreens': 'FortniteGameController.eventScreen',
+    'GET /content/api/pages/fortnite-game/radio-stations': 'FortniteGameController.stations',
     'GET /:trackdata': 'ApiController.trackData',
     'POST /api/v1/fortnite-br/surfaces/:gameMode/target': 'FortniteGameController.motd',
     'POST /api/v1/fortnite-br/channel/motd/target': 'FortniteGameController.motdTarget',

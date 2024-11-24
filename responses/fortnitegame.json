@@ -7421,6 +7421,61 @@
     "_locale": "en-US",
     "_templateName": "PlaylistImages"
   },
+  "radioStations": {
+    "_title": "Radio Stations",
+    "radioStationList": {
+      "_type": "RadioStationList",
+      "stations": [
+        {
+          "resourceID": "rdWxjjhVHWyqWozyMU",
+          "stationImage": "https://cdn2.unrealengine.com/s15-radio-rl-rockroyale-256x256-256x256-c2b19d746f09.png",
+          "_type": "RadioStationItem",
+          "title": "Rock & Royale"
+        },
+        {
+          "resourceID": "AxraiOXbAdcOPnthxV",
+          "stationImage": "https://cdn2.unrealengine.com/s13-radio-underground-radio-256x256-256x256-12ec3d7367c5.png",
+          "_type": "RadioStationItem",
+          "title": "Radio Underground"
+        },
+        {
+          "resourceID": "QWGQAynCdixzoLIdJl",
+          "stationImage": "https://cdn2.unrealengine.com/s13-radio-party-royale-256x256-256x256-41b6d427e012.png",
+          "_type": "RadioStationItem",
+          "title": "Party Royale"
+        },
+        {
+          "resourceID": "liZWCXyJDbxNMHWlyk",
+          "stationImage": "https://cdn2.unrealengine.com/s13-radio-radio-yonder-256x256-256x256-f9a05292b87c.png",
+          "_type": "RadioStationItem",
+          "title": "Radio Yonder"
+        },
+        {
+          "resourceID": "SesARghrQNsflAozoD",
+          "stationImage": "https://cdn2.unrealengine.com/s13-radio-beat-box-256x256-256x256-19277d48c502.png",
+          "_type": "RadioStationItem",
+          "title": "Beat Box"
+        },
+        {
+          "resourceID": "dWkLynOluUUuCAPJHA",
+          "stationImage": "https://cdn2.unrealengine.com/s13-radio-power-play-256x256-256x256-2f3bacc8ecbf.png",
+          "_type": "RadioStationItem",
+          "title": "Power Play"
+        },
+        {
+          "resourceID": "lYBIdANIhjdJRndiNy",
+          "stationImage": "https://cdn2.unrealengine.com/s25-icon-transmission-600x600-6ecf26e75236.png",
+          "_type": "RadioStationItem",
+          "title": "Mysterious Transmission"
+        }
+      ]
+    },
+    "_noIndex": false,
+    "_activeDate": "2024-05-24T10:00:00.000Z",
+    "lastModified": "2024-05-23T20:28:49.533Z",
+    "_locale": "en-US",
+    "_templateName": "FortniteGameRadioStations"
+  },
   "mpItemShop": {
     "shopData": {
       "_type": "MP Item Shop - Data Root",
