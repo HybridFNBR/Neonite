@@ -27,6 +27,71 @@
       "namespace": "fn",
       "accountId": "epic",
       "creatorName": "Epic",
+      "mnemonic": "playlist_quail",
+      "linkType": "BR:Playlist",
+      "metadata": {
+        "alt_title": {
+          "ar": "ريميكس: النهائي",
+          "de": "Remix: Das Finale",
+          "ru": "«Ремикс: финал»",
+          "ko": "리믹스: 피날레",
+          "pt-BR": "Remix: o Ato Final",
+          "ja": "リミックス: ザ・フィナーレ",
+          "it": "Remix: Il Finale",
+          "fr": "Remix : la conclusion",
+          "pl": "Remiks: Wielki finał",
+          "es": "Remix: El gran final",
+          "es-419": "Remix: El gran final",
+          "tr": "REMİKS: FİNAL"
+        },
+        "alt_tagline": {
+          "ar": "ينتهي الفصل 2 ريميكس بشكل خاص مع ريميكس: الخاتمة في 30 نوفمبر. تفتح الأبواب الساعة 9:20 مساءً بتوقيت الرياض ويبدأ العرض الساعة 10 مساءً بتوقيت الرياض.",
+          "de": "Kapitel 2: Remix endet atemberaubend mit Remix: Das Finale am 30. November. Einlass ist ab 19:20 Uhr MEZ und die Show beginnt um 20:00 Uhr MEZ.",
+          "ru": "Глава 2: «Ремикс» завершится грандиозным шоу «Ремикс: финал». Двери откроются в 21.20 МСК, шоу начнётся в 22:00 МСК 30 ноября.",
+          "ko": "챕터 2 리믹스가 12월 1일 리믹스: 피날레로 대단원의 막을 내립니다. 한국 시간 오전 3시 20분부터 입장 가능하며, 공연은 오전 4시에 시작합니다.",
+          "pt-BR": "O Capítulo 2 Remix chega ao fim de uma forma especial com Remix: o Ato Final no dia 30 de novembro. Os portões serão abertos às 15h20 BRT, e o show começará às 16h BRT.",
+          "ja": "チャプター2 リミックスは、日本時間の12月1日の「リミックス: ザ・フィナーレ」での特別な音色で締めくくられるぞ！ 日本時間の午前3時20分に開場し午前4時にショーが始まるぞ。",
+          "it": "Il Capitolo 2 Remix si chiuderà su una nota speciale con Remix: Il Finale il 30 novembre. Le porte si apriranno alle 19:20 ora italiana, e lo spettacolo avrà inizio alle 20:00 ora italiana.",
+          "fr": "Le Chapitre 2 : Remix se termine sur une note spéciale avec Remix : la conclusion le 30 novembre. Les portes ouvriront à 19h20 (CET) et le spectacle commencera à 20h.",
+          "pl": "30 listopada Remiks Rozdział 2 zakończy się specjalnym wydarzeniem Remiks: Finał. Wejście będzie możliwe o godz. 19:20, a pokaz rozpocznie się o godz. 20:00 czasu polskiego.",
+          "es": "El Capítulo 2: Remix se cerrará por todo lo alto el 30 de noviembre con Remix: El gran final. Las puertas se abren a las 19:20 CET, y el show empieza a las 20:00 CET.",
+          "es-419": "El Capítulo 2: Remix cerrará con broche de oro con Remix: El gran final el 30 de noviembre. Las puertas abren a las 15:20 AR y 12:20 MX, y el show comienza a las 16:00 AR y 13:00 MX.",
+          "tr": "2. Bölüm Remiks, 30 Kasım'daki Remiks: Final gösterisiyle çok özel bir kapanış yapıyor. Kapılar TSİ 21.20'de açılacak ve gösteri TSİ 22.00'de başlayacak."
+        },
+        "pop_out_image_urls": {
+          "url": "https://cdn2.unrealengine.com/quail-fg-1048x375-77ac7e5c267c.png"
+        },
+        "background_image_urls": {
+          "url": "https://cdn2.unrealengine.com/quail-bg-taller-1760x358-5c0fea7b2cc7.png"
+        },
+        "image_url": "https://cdn2.unrealengine.com/en-fnbr-32-00-c5s5-quail-discoverplaylist-tiles-in-game-1920x1080-1920x1080-8d04173cad2a.jpg",
+        "image_urls": {
+          "url_s": "https://cdn2.unrealengine.com/en-fnbr-32-00-c5s5-quail-discoverplaylist-tiles-in-game-480x270-480x270-83c8cab67ead.jpg",
+          "url_xs": "https://cdn2.unrealengine.com/en-fnbr-32-00-c5s5-quail-discoverplaylist-tiles-in-game-256x144-256x144-ea0767fdacca.jpg",
+          "url_m": "https://cdn2.unrealengine.com/en-fnbr-32-00-c5s5-quail-discoverplaylist-tiles-in-game--640x360-640x360-471ad745fdf8.jpg",
+          "url": "https://cdn2.unrealengine.com/en-fnbr-32-00-c5s5-quail-discoverplaylist-tiles-in-game-1920x1080-1920x1080-8d04173cad2a.jpg"
+        },
+        "tagline": "Chapter 2 Remix concludes on a special note with Remix: The Finale on November 30. Doors open at 1:20 PM ET, and the show begins at 2:00 PM ET.",
+        "matchmaking": {
+          "override_playlist": "playlist_quail"
+        },
+        "title": "Remix: The Finale"
+      },
+      "version": 1,
+      "active": true,
+      "disabled": false,
+      "created": "2024-05-17T22:15:18.598Z",
+      "published": "2024-05-17T22:15:18.598Z",
+      "descriptionTags": [],
+      "moderationStatus": "Unmoderated",
+      "lastActivatedDate": "2024-05-17T22:15:18.606Z",
+      "discoveryIntent": "PUBLIC",
+      "linkState": "LIVE"
+    },
+    {
+      "namespace": "fn",
+      "accountId": "epic",
+      "creatorName": "Epic",
       "mnemonic": "playlist_defaultsolo",
       "linkType": "BR:Playlist",
       "metadata": {

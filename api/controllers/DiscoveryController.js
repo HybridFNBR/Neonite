@@ -151,7 +151,35 @@ module.exports = {
 				},
 				"panelType": "AnalyticsList",
 				"playHistoryType": null
-				}
+				},
+				{
+					"panelName": "A-Spot",
+					"panelDisplayName": "Remix: The Finale",
+					"panelSubtitle": "Remix: The Finale",
+					"featureTags": [
+					  "bannerItemRow"
+					],
+					"firstPage": {
+					  "results": [
+						{
+						  "lastVisited": null,
+						  "linkCode": "playlist_quail",
+						  "isFavorite": false,
+						  "globalCCU": -1,
+						  "lockStatus": "UNLOCKED",
+						  "lockStatusReason": "RATING_THRESHOLD",
+						  "isVisible": true,
+						  "favoriteStatus": "NONE"
+						}
+					  ],
+					  "hasMore": false,
+					  "panelTargetName": null,
+					  "pageMarker": null
+					},
+					"panelType": "CuratedList",
+					"playHistoryType": null,
+					"panelContexts": {}
+				},
   			]
 		})
     },
