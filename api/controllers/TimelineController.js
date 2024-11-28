@@ -637,7 +637,7 @@ module.exports = {
             )
         }           
 
-        if(version == 12.61){
+        if(version == 12.60 || version == 12.61){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "FLA01", // C2S2-related (Timers)
@@ -651,6 +651,16 @@ module.exports = {
                 },  
                 {
                     eventType: "FCD01", // C2S2-related (Timers)
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },
+                {
+                    eventType: "FHS01", // Fritter Hatches Stage 1
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },
+                {
+                    eventType: "FHS02", // Fritter Hatches STage 2
                     activeUntil: "9999-12-01T21:10:00.000Z",
                     activeSince: "2020-11-21T07:00:00.000Z"
                 }                          
@@ -1341,6 +1351,16 @@ module.exports = {
             )
         }
 
+        if(versionGlobal == 10){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push(
+                {
+                    eventType: "ITB", //IT Balloon 
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                }
+            )
+        }
+
         if(versionGlobal == 11 || versionGlobal == 15){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
@@ -1379,7 +1399,7 @@ module.exports = {
                     activeSince: "2020-09-14T07:00:00.000Z"
                 },
                 {
-                    eventType: "FEC03", //Snow Level 3
+                    eventType: "FEC03", //FE Cables Stage 3
                     activeUntil: "9999-09-14T07:00:00.000Z",
                     activeSince: "2020-09-14T07:00:00.000Z"
                 },
@@ -1977,21 +1997,162 @@ module.exports = {
 
 
         //Configurable Flags
-        if(config.RufusWeek2 == true){
+
+
+        if(config.bEnableRuinHouseBeacon == true && versionGlobal == 10){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push(
+                {
+                    eventType: "RBPRH", // Ruined House Beacon Loaded(Chapter 1 Season 10)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2000-09-14T07:00:00.000Z"
+                },
+                {
+                    eventType: "RBBRH", // Ruined House Beacon Activated(Chapter 1 Season 10)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2000-09-14T07:00:00.000Z"
+                }
+            )
+
+        }
+
+        if(config.bEnableGothemCityBeacon == true && version == 10.31){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push(
+                {
+                    eventType: "RBBMP", // Gothem City Beacon Loaded(Chapter 1 Season 10)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2000-09-14T07:00:00.000Z"
+                },
+                {
+                    eventType: "RBBM", // Gothem City Beacon Activated(Chapter 1 Season 10)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2000-09-14T07:00:00.000Z"
+                }
+            )
+
+        }
+
+        if(config.bEnableGreasyGroveBeacon == true && versionGlobal == 10){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push(
+                {
+                    eventType: "RBPGG", // Greasy Grove Beacon Loaded(Chapter 1 Season 10)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2000-09-14T07:00:00.000Z"
+                },
+                {
+                    eventType: "RBBGG", // Greasy Grove Beacon Activated(Chapter 1 Season 10)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2000-09-14T07:00:00.000Z"
+                }
+            )
+
+        }
+
+        if(config.bEnableMoistyPalmsBeacon == true && versionGlobal == 10){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push(
+                {
+                    eventType: "RBPMP", // Moisty Palms Beacon Loaded(Chapter 1 Season 10)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2000-09-14T07:00:00.000Z"
+                },
+                {
+                    eventType: "RBBMP", // Moisty Palms Beacon Activated(Chapter 1 Season 10)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2000-09-14T07:00:00.000Z"
+                }
+            )
+
+        }
+
+        if(config.bEnableFrenzyFieldsBeacon == true && versionGlobal == 10){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push(
+                {
+                    eventType: "RBPFI", // Frenzy Fields Beacon Loaded(Chapter 1 Season 10)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2000-09-14T07:00:00.000Z"
+                },
+                {
+                    eventType: "RBBFI", // Frenzy Fields Beacon Activated(Chapter 1 Season 10)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2000-09-14T07:00:00.000Z"
+                }
+            )
+
+        }
+
+        if(config.bEnableOakBeacon == true && versionGlobal == 10){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push(
+                {
+                    eventType: "RBPBO", // Oak Beacon Loaded(Chapter 1 Season 10)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2000-09-14T07:00:00.000Z"
+                },
+                {
+                    eventType: "RBBO", // Oak Beacon Activated(Chapter 1 Season 10)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2000-09-14T07:00:00.000Z"
+                }
+            )
+
+        }
+
+        if(config.bEnableVoidBeacon == true && versionGlobal == 10){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push(
+                {
+                    eventType: "RBPVA", // Void Beacon Loaded(Chapter 1 Season 10)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2000-09-14T07:00:00.000Z"
+                },
+                {
+                    eventType: "RBBVA", // Void Beacon Activated(Chapter 1 Season 10)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2000-09-14T07:00:00.000Z"
+                }
+            )
+
+        }
+
+        if(config.bEnableRetailRowBeacon == true && versionGlobal == 10){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push(
+                {
+                    eventType: "RBPRR", // Retail Row Beacon Loaded(Chapter 1 Season 10)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2000-09-14T07:00:00.000Z"
+                },
+                {
+                    eventType: "RBBRR", // Retail Row Beacon Activated(Chapter 1 Season 10)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2000-09-14T07:00:00.000Z"
+                }
+            )
+
+        }
+
+        if(config.bEnableFloatingCubeIsland == true && versionGlobal == 10){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push(
+                {
+                    eventType: "RBFI", // Floating Cube Island(Chapter 1 Season 10)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2000-09-14T07:00:00.000Z"
+                }
+            )
+
+        }
+
+        if(config.RufusWeek2 == true && versionGlobal == 27){
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "RufusWeek2", // Rufus Week 2(Chapter 4 Season OG)
                 activeUntil: "9999-09-14T07:00:00.000Z",
                 activeSince: "2000-09-14T07:00:00.000Z"
             })
         }
-        if(config.RufusWeek3 == true){
+        if(config.RufusWeek3 == true && versionGlobal == 27){
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "RufusWeek3", // Rufus Week 3(Chapter 4 Season OG)
                 activeUntil: "9999-09-14T07:00:00.000Z",
                 activeSince: "2000-09-14T07:00:00.000Z"
             })
         }
-        if(config.RufusWeek4 == true){
+        if(config.RufusWeek4 == true && versionGlobal == 27){
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "RufusWeek4", // Rufus Week 4(Chapter 4 Season OG)
                 activeUntil: "9999-09-14T07:00:00.000Z",
