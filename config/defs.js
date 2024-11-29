@@ -713,6 +713,7 @@ const Backgrounds = (version, versionGlobal, backgrounds, content) =>{
                 backgrounds[1].stage = "season3000"
                 backgrounds[1].backgroundimage = "https://cdn2.unrealengine.com/lobby-br-c5s3-4096x2048-7a9c78cb7b9a.jpg"
             }
+        break;
         case 31:
             if(version === "31.40" || version === "31.41"){
                 backgrounds[1].stage = "season3140"
@@ -721,6 +722,16 @@ const Backgrounds = (version, versionGlobal, backgrounds, content) =>{
             else{
                 backgrounds[1].stage = "season3100"
                 backgrounds[1].backgroundimage = "https://cdn2.unrealengine.com/ch5s4-lobbybg-final-2136x1202-e5885322faf1.jpg"
+            }
+        break;
+        case 32:
+            if(version === "32.11"){
+                backgrounds[1].stage = "defaultnotris"
+                backgrounds[1].backgroundimage = "https://cdn2.unrealengine.com/mkart-fnbr-quail-lobby-3264x1836-b157b2252db6.jpg"
+            }
+            else{
+                backgrounds[1].stage = "defaultnotris"
+                backgrounds[1].backgroundimage = "https://cdn2.unrealengine.com/mkart-fnbr-32-00-lobby-3840x2160-f18b699506a4.jpg"
             }
         break;
         default:
