@@ -1067,7 +1067,7 @@ module.exports = {
             )
         }        
 
-        if(version == 27.11 || version == 31.41){
+        if(version == 27.11 || version == 31.41 || version == 32.11){
             timeline.channels["client-events"]["states"][0]["activeEvents"].push(
                 {
                     eventType: "DL01", // Durian & Kiln Event-related (Countdown)
