@@ -99,10 +99,15 @@ module.exports = {
 	},
 	
 	defaultEngine: function(req, res){
-		res.setHeader("content-type", "application/octet-stream")
-		const EnginePath = path.join('hotfixes/DefaultEngine.ini');
-		const fileStream = require('fs').createReadStream(EnginePath);
-		fileStream.pipe(res)
+		const {version} = getVersionInfo(req);
+		let DefaultEngine = fs.readFileSync(path.join(__dirname, '../../hotfixes/DefaultEngine.ini'), 'utf-8');
+		if (version == 32.11) {
+			DefaultEngine = DefaultEngine.replace(
+				';Fort.Event.bForceOffLoadingScreen=1',
+				'Fort.Event.bForceOffLoadingScreen=1'
+			);
+		}
+		res.send(DefaultEngine)
 	},
 
 	defaultRuntimeOptions: function(req, res){
