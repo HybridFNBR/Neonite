@@ -252,6 +252,17 @@ const MPLockerLoadout = (accountId, athenprofile) => {
         catch{}
 };
 
+const stats = (accountId, athenprofile, config, versionGlobal) => {
+    if(athenprofile.stats.attributes["favorite_character"] = "" || !athenprofile.stats.attributes["favorite_character"]){
+        athenprofile.stats["attributes"]["favorite_character"] = "AthenaCharacter:CID_001_Athena_Commando_F_Default"
+    }
+    Profile.modifyStat(athenprofile, "book_level", parseInt(config.Level))
+    Profile.modifyStat(athenprofile, "level", parseInt(config.Level))
+    Profile.modifyStat(athenprofile, "accountLevel", parseInt(config.Level))
+    Profile.modifyStat(athenprofile, "season_num", versionGlobal)
+    Profile.saveProfile(accountId, "athena", athenprofile)
+};
+
 const getVersionInfo = (req) => {
     try{
         const userAgent = req.headers["user-agent"];
@@ -753,8 +764,8 @@ const Playlists = (fortnitegame, version) =>{
     playlistData[4].image = "https://i.imgur.com/2wzonis.png"
 
 }
-    
 module.exports = {
+    stats,
     account,
     Playlists,
     MPLockerLoadout,

@@ -5,7 +5,7 @@ const fs = require("fs");
 const { v4: uuidv4 } = require("uuid");
 const path = require('path');
 var ini = require('ini')
-const { getVersionInfo, MPLockerLoadout, CH1Fix, VersionFilter, loadJSON} = require("../../config/defs")
+const { getVersionInfo, MPLockerLoadout, CH1Fix, VersionFilter, loadJSON, stats} = require("../../config/defs")
 
 Array.prototype.insert = function ( index, item ) {
 	this.splice( index, 0, item );
@@ -60,7 +60,7 @@ module.exports = {
 			
 
 		};
-		getOrCreateProfile("athena") //make sure athena exists before query
+		getOrCreateProfile("athena")
 		var command = req.params.command;
 		var profileId = req.query.profileId || "common_core";
 		const { profileData, response } = getOrCreateProfile(profileId);
@@ -359,6 +359,11 @@ module.exports = {
 
 			case "QueryProfile":{
 				try{
+					stats(accountId, athenprofile, config, versionGlobal)
+					let miniPassData = loadJSON("../config/MiniPass.json")
+					for (const [questId, quest] of Object.entries(miniPassData)) {
+						Profile.addItem(athenprofile, questId, quest);
+					}
 					Profile.addItem(athenprofile, `AthenaSeason:athenaseason${versionGlobal}`, {
 						"templateId": `AthenaSeason:athenaseason${versionGlobal}`,
 						"attributes": {
@@ -367,7 +372,7 @@ module.exports = {
 							"purchase_context": "None"
 						},
 						"quantity": 1
-					}, profileChanges,)
+					})
 					Profile.addItem(athenprofile, `AthenaSeason:figmentpass_s01`, {
 						"templateId": `AthenaSeason:figmentpass_s01`,
 						"attributes": {
@@ -376,37 +381,53 @@ module.exports = {
 							"purchase_context": "None"
 						},
 						"quantity": 1
-					}, profileChanges,)
-					let miniPassData = loadJSON("../config/MiniPass.json")
-					for (const [questId, quest] of Object.entries(miniPassData)) {
-						Profile.addItem(athenprofile, questId, quest);
-					}
-					if(athenprofile.stats.attributes["favorite_character"] = "" || !athenprofile.stats.attributes["favorite_character"]){
-						athenprofile.stats["attributes"]["favorite_character"] = "AthenaCharacter:CID_001_Athena_Commando_F_Default"
-						Profile.saveProfile(accountId, "athena", athenprofile, profileChanges)
-					}
-					Profile.modifyStat(athenprofile, "book_level", parseInt(config.Level))
-					Profile.modifyStat(athenprofile, "level", parseInt(config.Level))
-					Profile.modifyStat(athenprofile, "accountLevel", parseInt(config.Level))
-					Profile.modifyStat(athenprofile, "season_num", versionGlobal)
-					Profile.modifyStat(athenprofile, "past_seasons", pastSeasons)
-					Profile.saveProfile(accountId, "athena", athenprofile);
+					})
+					Profile.saveProfile(accountId, "athena", profileData)
+				}
+				catch{}
+				
 				if(version >= 28.00){
 					MPLockerLoadout(accountId, athenprofile)
 					Profile.saveProfile(accountId, "athena", athenprofile)
 					
 				}
-			}
-			catch{}
 				if(version <= 10.40 || VersionFilter.includes(versionGlobal))
 				{
 					CH1Fix(accountId, athenprofile)
 				}
 				Profile.bumpRvn(profileId)
-				response.profileChanges = [{
-					"changeType": "fullProfileUpdate",
-					"profile": profileData
-				}];
+				response.profileChanges = [
+					{
+						"changeType": "fullProfileUpdate",
+						"profile": profileData
+					},
+					{
+						"changeType" : "itemAdded",
+						"itemId" : `AthenaSeason:athenaseason${versionGlobal}`,
+						"item" : {
+							"templateId" : `AthenaSeason:athenaseason${versionGlobal}`,
+							"attributes": {
+								"level": 1,
+								"purchase_date": "min",
+								"purchase_context": "None"
+							},
+							"quantity": 1
+						}
+					},
+					{
+						"changeType" : "itemAdded",
+						"itemId" : "AthenaSeason:figmentpass_s01",
+						"item" : {
+							"templateId" : "AthenaSeason:figmentpass_s01",
+							"attributes": {
+								"level": 1,
+								"purchase_date": "min",
+								"purchase_context": "None"
+							},
+							"quantity": 1
+						}
+					}
+				];
 				break;
 			}
 
