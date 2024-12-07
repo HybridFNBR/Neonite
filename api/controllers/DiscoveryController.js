@@ -185,8 +185,16 @@ module.exports = {
     },
 
     mnemonicLinks: function(req, res){
-        const { version} = getVersionInfo(req);
+        const {version} = getVersionInfo(req);
 		if(version >= 23.50){
+			if (version > 27.11) {
+				const durianIndex = discoveryv2.findIndex(i => i.mnemonic === "playlist_durian");
+				discoveryv2[durianIndex].active = false;
+			}
+			if (version > 32.11) {
+				const quailIndex = discoveryv2.findIndex(i => i.mnemonic === "playlist_quail");
+				discoveryv2[quailIndex].active = false;
+			}
 			return res.json(discoveryv2)
 		}
 		else{
