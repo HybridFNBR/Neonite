@@ -382,7 +382,7 @@ module.exports = {
 						},
 						"quantity": 1
 					})
-					Profile.saveProfile(accountId, "athena", profileData)
+					Profile.saveProfile(accountId, "athena", athenprofile)
 				}
 				catch{}
 				
