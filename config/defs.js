@@ -263,6 +263,40 @@ const stats = (accountId, athenprofile, config, versionGlobal) => {
     Profile.saveProfile(accountId, "athena", athenprofile)
 };
 
+const seasonPass = (accountId, athenprofile, versionGlobal) => {
+    //Battle Pass
+    Profile.addItem(athenprofile, `AthenaSeason:athenaseason${versionGlobal}`, {
+        "templateId": `AthenaSeason:athenaseason${versionGlobal}`,
+        "attributes": {
+            "level": 1,
+            "purchase_date": "min",
+            "purchase_context": "None"
+        },
+        "quantity": 1
+    })
+    //Fortnite OGS1 Pass
+    Profile.addItem(athenprofile, `AthenaSeason:figmentpass_s01`, {
+        "templateId": `AthenaSeason:figmentpass_s01`,
+        "attributes": {
+            "level": 1,
+            "purchase_date": "min",
+            "purchase_context": "None"
+        },
+        "quantity": 1
+    })
+    //Lego Season 1 Pass
+    Profile.addItem(athenprofile, `AthenaSeason:junoseason1pass`, {
+        "templateId": `AthenaSeason:junoseason1pass`,
+        "attributes": {
+            "level": 1,
+            "purchase_date": "min",
+            "purchase_context": "None"
+        },
+        "quantity": 1
+    })
+    Profile.saveProfile(accountId, "athena", athenprofile)
+}
+
 const getVersionInfo = (req) => {
     try{
         const userAgent = req.headers["user-agent"];
@@ -765,6 +799,7 @@ const Playlists = (fortnitegame, version) =>{
 
 }
 module.exports = {
+    seasonPass,
     stats,
     account,
     Playlists,

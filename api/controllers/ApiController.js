@@ -184,18 +184,21 @@ module.exports = {
 
 	catalog: function(req, res){
 		const {version} = getVersionInfo(req);
+		let shop
 		if(version >= 30.10){
-			return res.json(loadJSON("../responses/catalog/shopv3.json"));
+			shop = loadJSON("../responses/catalog/shopv3.json");
 		}
 		else if(version >= 26.30){
-			return res.json(loadJSON("../responses/catalog/shopv2.json"));
+			shop = (loadJSON("../responses/catalog/shopv2.json"));
 		}
 		else if (VersionFilter.includes(version) || version <= 3.5) {
 			return res.status(404).end();
 		}
 		else{
-			return res.json(loadJSON("../responses/catalog/shopv1.json"))
+			shop = loadJSON("../responses/catalog/shopv1.json")
 		}
+		shop.expiration = new Date(Date.now() - new Date().getTimezoneOffset() * 60000 + 30000).toISOString()
+		return res.json(shop)
 	},
 
 	catalogBulk: function(req, res){

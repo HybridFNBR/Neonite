@@ -5,7 +5,8 @@ const fs = require("fs");
 const { v4: uuidv4 } = require("uuid");
 const path = require('path');
 var ini = require('ini')
-const { getVersionInfo, MPLockerLoadout, CH1Fix, VersionFilter, loadJSON, stats} = require("../../config/defs")
+const { getVersionInfo, MPLockerLoadout, CH1Fix, VersionFilter, loadJSON, stats, seasonPass} = require("../../config/defs")
+let miniPassData = loadJSON("../config/MiniPass.json")
 
 Array.prototype.insert = function ( index, item ) {
 	this.splice( index, 0, item );
@@ -360,36 +361,13 @@ module.exports = {
 			case "QueryProfile":{
 				try{
 					stats(accountId, athenprofile, config, versionGlobal)
-					let miniPassData = loadJSON("../config/MiniPass.json")
-					for (const [questId, quest] of Object.entries(miniPassData)) {
-						Profile.addItem(athenprofile, questId, quest);
-					}
-					Profile.addItem(athenprofile, `AthenaSeason:athenaseason${versionGlobal}`, {
-						"templateId": `AthenaSeason:athenaseason${versionGlobal}`,
-						"attributes": {
-							"level": 1,
-							"purchase_date": "min",
-							"purchase_context": "None"
-						},
-						"quantity": 1
-					})
-					Profile.addItem(athenprofile, `AthenaSeason:figmentpass_s01`, {
-						"templateId": `AthenaSeason:figmentpass_s01`,
-						"attributes": {
-							"level": 1,
-							"purchase_date": "min",
-							"purchase_context": "None"
-						},
-						"quantity": 1
-					})
-					Profile.saveProfile(accountId, "athena", athenprofile)
+					seasonPass(accountId, athenprofile, versionGlobal)
+					for (const [questId, quest] of Object.entries(miniPassData)){Profile.addItem(athenprofile, questId, quest);}
 				}
 				catch{}
 				
 				if(version >= 28.00){
-					MPLockerLoadout(accountId, athenprofile)
-					Profile.saveProfile(accountId, "athena", athenprofile)
-					
+					MPLockerLoadout(accountId, athenprofile)					
 				}
 				if(version <= 10.40 || VersionFilter.includes(versionGlobal))
 				{
@@ -419,6 +397,19 @@ module.exports = {
 						"itemId" : "AthenaSeason:figmentpass_s01",
 						"item" : {
 							"templateId" : "AthenaSeason:figmentpass_s01",
+							"attributes": {
+								"level": 1,
+								"purchase_date": "min",
+								"purchase_context": "None"
+							},
+							"quantity": 1
+						}
+					},
+					{
+						"changeType" : "itemAdded",
+						"itemId" : "AthenaSeason:junoseason1pass",
+						"item" : {
+							"templateId" : "AthenaSeason:junoseason1pass",
 							"attributes": {
 								"level": 1,
 								"purchase_date": "min",
