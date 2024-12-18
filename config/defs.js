@@ -295,7 +295,30 @@ const seasonPass = (accountId, athenprofile, versionGlobal) => {
         "quantity": 1
     })
     Profile.saveProfile(accountId, "athena", athenprofile)
-}
+};
+
+const Winterfest = (accountId, athenprofile, versionGlobal) => {
+    //Winterfest
+    Profile.addItem(athenprofile, `AthenaRewardGraph:s${versionGlobal}_winterfest`, {
+        "templateId": `AthenaRewardGraph:s${versionGlobal}_winterfest`,
+        "attributes": {
+            "level": 1,
+            "purchase_date": "min",
+            "purchase_context": "None"
+        },
+        "quantity": 1
+    })
+    Profile.addItem(athenprofile, `Token:athena_s${versionGlobal}_winterfest_keyt`, {
+        "templateId": `Token:athena_s${versionGlobal}_winterfest_key`,
+        "attributes": {
+            "level": 1,
+            "purchase_date": "min",
+            "purchase_context": "None"
+        },
+        "quantity": 13
+    })
+    Profile.saveProfile(accountId, "athena", athenprofile)
+};
 
 const getVersionInfo = (req) => {
     try{
@@ -801,6 +824,7 @@ const Playlists = (fortnitegame, version) =>{
 module.exports = {
     seasonPass,
     stats,
+    Winterfest,
     account,
     Playlists,
     MPLockerLoadout,

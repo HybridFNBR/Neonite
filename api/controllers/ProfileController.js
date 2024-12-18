@@ -5,7 +5,7 @@ const fs = require("fs");
 const { v4: uuidv4 } = require("uuid");
 const path = require('path');
 var ini = require('ini')
-const { getVersionInfo, MPLockerLoadout, CH1Fix, VersionFilter, loadJSON, stats, seasonPass} = require("../../config/defs")
+const { getVersionInfo, MPLockerLoadout, CH1Fix, VersionFilter, loadJSON, stats, seasonPass, Winterfest} = require("../../config/defs")
 let miniPassData = loadJSON("../config/MiniPass.json")
 
 Array.prototype.insert = function ( index, item ) {
@@ -362,6 +362,7 @@ module.exports = {
 				try{
 					stats(accountId, athenprofile, config, versionGlobal)
 					seasonPass(accountId, athenprofile, versionGlobal)
+					Winterfest(accountId, athenprofile, versionGlobal)
 					for (const [questId, quest] of Object.entries(miniPassData)){Profile.addItem(athenprofile, questId, quest);}
 				}
 				catch{}
