@@ -25,7 +25,7 @@ _In acquiescence to Epic Games Inc. - Please note that access to all cosmetics f
 ## FAQs
  * Can I go in-game?
    * Yes with Carbon on most past versions upto version 30.00 of fortnite, however with the latest version of fortnite(30.10+) Epic Games added new protections to stop you from launching
-   directly with the shipping exe and only lobby is supported through a proxy method, check it out [here](https://discord.gg/carbon-897532507048796210).
+   directly with the shipping exe and only lobby is supported through a proxy method, check it out [here](https://discord.com/invite/X525zyJtaU).
  * Will I get banned?
    * No, you won't get banned because Neonite V2 doesn't connect to any Epic Games related services.
  * How do I play with my friends?
@@ -35,7 +35,7 @@ _In acquiescence to Epic Games Inc. - Please note that access to all cosmetics f
 
 <!-- CONTACT -->
 ## Support
-Discord Server: [Carbon](https://discord.gg/carbon-897532507048796210) <- *you can get the launcher + backend alternatively from here*
+Discord Server: [Carbon](https://discord.com/invite/X525zyJtaU) <- *you can get the launcher + backend alternatively from here*
 
 
 <!-- CREDITS -->
