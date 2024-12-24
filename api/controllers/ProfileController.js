@@ -5,9 +5,8 @@ const fs = require("fs");
 const { v4: uuidv4 } = require("uuid");
 const path = require('path');
 var ini = require('ini')
-const { getVersionInfo, MPLockerLoadout, CH1Fix, VersionFilter, loadJSON, stats, seasonPass, Winterfest} = require("../../config/defs")
+const { getVersionInfo, MPLockerLoadout, CH1Fix, VersionFilter, loadJSON, stats, seasonPass, Winterfest, winterFestPresents} = require("../../config/defs")
 let miniPassData = loadJSON("../config/MiniPass.json")
-
 Array.prototype.insert = function ( index, item ) {
 	this.splice( index, 0, item );
 };
@@ -361,19 +360,13 @@ module.exports = {
 			case "QueryProfile":{
 				try{
 					stats(accountId, athenprofile, config, versionGlobal)
-					seasonPass(accountId, athenprofile, versionGlobal)
+					if(versionGlobal >= 33){seasonPass(accountId, athenprofile, versionGlobal)}
 					Winterfest(accountId, athenprofile, versionGlobal)
 					for (const [questId, quest] of Object.entries(miniPassData)){Profile.addItem(athenprofile, questId, quest);}
 				}
 				catch{}
-				
-				if(version >= 28.00){
-					MPLockerLoadout(accountId, athenprofile)					
-				}
-				if(version <= 10.40 || VersionFilter.includes(versionGlobal))
-				{
-					CH1Fix(accountId, athenprofile)
-				}
+				if(version >= 28.00){MPLockerLoadout(accountId, athenprofile)}
+				if(version <= 10.40 || VersionFilter.includes(versionGlobal)){CH1Fix(accountId, athenprofile)}
 				Profile.bumpRvn(profileId)
 				response.profileChanges = [
 					{
@@ -767,6 +760,106 @@ module.exports = {
 			}
 
 			case "SetLoadoutShuffleEnabled":{
+				break;
+			}
+
+			case "UnlockRewardNode":{
+				const lootList = []
+				const rewards = winterFestPresents[version][req.body.nodeId];
+				if (Array.isArray(rewards)) {
+					rewards.forEach(cosmetic => {
+						response.profileChanges.push({
+							"changeType": "itemAdded",
+							"itemId": cosmetic,
+							"item": {
+								"templateId": cosmetic,
+								"attributes": {
+								"creation_time": new Date().toISOString(),
+								"level": 1
+								},
+								"quantity": 1
+							}
+						})
+
+						lootList.push({
+							"itemType": cosmetic,
+							"itemGuid": cosmetic,
+							"itemProfile": "athena",
+							"quantity": 1
+						});
+
+						Profile.addItem(profileData, cosmetic, {
+							templateId: cosmetic,
+							attributes: {
+								"max_level_bonus": 0,
+								"level": 1,
+								"item_seen": false,
+								"xp": 0,
+								"variants": [],
+								"creation_time": new Date().toISOString(),
+								"favorite": false
+							},
+							quantity: 1
+						})
+					});
+
+				}
+				else {
+					response.profileChanges.push({
+						"changeType": "itemAdded",
+						"itemId": rewards,
+						"item": {
+							"templateId": rewards,
+							"attributes": {
+							"creation_time": new Date().toISOString(),
+							"level": 1
+							},
+							"quantity": 1
+						}
+					})
+					lootList.push({
+						"itemType": rewards,
+						"itemGuid": rewards,
+						"itemProfile": "athena",
+						"quantity": 1
+					});
+					Profile.addItem(profileData, rewards, {
+						templateId: rewards,
+						attributes: {
+							"max_level_bonus": 0,
+							"level": 1,
+							"item_seen": false,
+							"xp": 0,
+							"variants": [],
+							"creation_time": new Date().toISOString(),
+							"favorite": false
+						},
+						quantity: 1
+					})
+				}
+				response.profileChanges.push(
+					{
+						"changeType": "itemAdded",
+						"itemId":  uuidv4(),
+						"item": {
+							"templateId": "GiftBox:gb_winterfestreward",
+							"attributes": {
+							"lootList": lootList,
+							"level": 1,
+							"giftedOn": new Date().toISOString(),
+							"params": {
+								"SubGame": "Athena",
+								"winterfestGift": "true"
+							}
+							},
+							"quantity": 1
+						}
+					}
+				)
+				Profile.bumpRvn(profileData);
+				response.profileRevision = profileData.rvn || 1;
+				response.profileCommandRevision = profileData.commandRevision || 1;
+				Profile.saveProfile(accountId, profileId, profileData);
 				break;
 			}
 			

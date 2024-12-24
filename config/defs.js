@@ -298,7 +298,6 @@ const seasonPass = (accountId, athenprofile, versionGlobal) => {
 };
 
 const Winterfest = (accountId, athenprofile, versionGlobal) => {
-    //Winterfest
     Profile.addItem(athenprofile, `AthenaRewardGraph:s${versionGlobal}_winterfest`, {
         "templateId": `AthenaRewardGraph:s${versionGlobal}_winterfest`,
         "attributes": {
@@ -308,7 +307,7 @@ const Winterfest = (accountId, athenprofile, versionGlobal) => {
         },
         "quantity": 1
     })
-    Profile.addItem(athenprofile, `Token:athena_s${versionGlobal}_winterfest_keyt`, {
+    Profile.addItem(athenprofile, `Token:athena_s${versionGlobal}_winterfest_key`, {
         "templateId": `Token:athena_s${versionGlobal}_winterfest_key`,
         "attributes": {
             "level": 1,
@@ -559,6 +558,54 @@ const billboard = (sectionID, offerGoupsectionID, stackRankValue, foregroundUrl,
         
         }
 };
+
+const winterFestPresents = {
+    "33.11":{
+        "ERG.Node.A.1": "AthenaCharacter:Character_BlowWire",
+        "ERG.Node.A.2": "SparksBass:Sparks_Bass_AlmondSplash",
+        "ERG.Node.A.3": "SparksGuitar:Sparks_Guitar_IceWater",
+        "ERG.Node.A.4": [
+            "AthenaDance:Spray_S33Winterfest", 
+            "AthenaDance:Spray_S33Winterfest2", 
+            "AthenaDance:Spray_MusicPassWinterfestS32"
+        ],
+        "ERG.Node.A.5": "AthenaDance:Emoji_S33_Winterfest",
+        "ERG.Node.A.6": "SparksSong:SID_Placeholder_437",
+        "ERG.Node.A.7": "AthenaItemWrap:Wrap_BlowWire",
+        "ERG.Node.A.8": "AthenaPickaxe:Pickaxe_BlowWire",
+        "ERG.Node.A.9": "AthenaGlider:Glider_BlowWire",
+        "ERG.Node.A.10": "AthenaBackpack:Backpack_BlowWire",
+        "ERG.Node.A.11": "AthenaBackpack:Backpack_AlmondSplash",
+        "ERG.Node.A.12": "AthenaSkyDiveContrail:Contrail_FrostedGlass",
+        "ERG.Node.A.13": "AthenaPickaxe:Pickaxe_AlmondSplash",
+        "ERG.Node.B.1":  "AthenaCharacter:Character_AlmondSplash"
+        
+    },
+    "23.10":{
+        "ERG.Node.A.1": "AthenaCharacter:Character_SportsFashion_Winter",
+        "ERG.Node.A.2": "AthenaGlider:Glider_Default_Jolly",
+        "ERG.Node.A.3": "AthenaDance:EID_Dashing",
+        "ERG.Node.A.4": [
+            "AthenaDance:Spray_GuffHolidayTree_Winterfest2022", 
+            "AthenaDance:Spray_WinterReindeer_Winterfest2022", 
+            "AthenaDance:Spray_DefacedSnowman_Winterfest2022"
+        ],
+        "ERG.Node.A.5": "AthenaDance:Emoji_S23_Winterfest_2022",
+        "ERG.Node.A.6": "AthenaMusicPack:MusicPack_164_RedPepper_Winterfest",
+        "ERG.Node.A.7": "AthenaItemWrap:Wrap_Winter_Pal",
+        "ERG.Node.A.8": "AthenaPickaxe:Pickaxe_JollyTroll",
+        "ERG.Node.A.9": "AthenaGlider:Glider_JollyTroll",
+        "ERG.Node.A.10": "AthenaBackpack:MusicPack_163_Winterfest_2022",
+        "ERG.Node.A.11": [
+            "AthenaMusicPack:MusicPack_163_Winterfest_2022",
+            "AthenaMusicPack:MusicPack_157_Radish_NightNight"
+        ],
+        "ERG.Node.A.12": "AthenaItemWrap:Wrap_CometWinter",
+        "ERG.Node.A.13": "AthenaSkyDiveContrail:Contrail_JollyTroll",
+        "ERG.Node.B.1":  "AthenaCharacter:Character_CometDeer"
+        
+    }
+}
 
 
 const Backgrounds = (version, versionGlobal, backgrounds, content) =>{
@@ -822,6 +869,7 @@ const Playlists = (fortnitegame, version) =>{
 
 }
 module.exports = {
+    winterFestPresents,
     seasonPass,
     stats,
     Winterfest,
