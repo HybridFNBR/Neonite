@@ -186,18 +186,19 @@ module.exports = {
     },
 
 	page: async function(req, res){
-		const resultList = [];
+		/*const resultList = [];
 		const results = (await axios.post('http://localhost:5595/api/v2/discovery/surface/CreativeDiscoverySurface_Frontend').catch(() => {})).data;
 		results.panels.forEach(panel => {
 			resultList.push(...panel.firstPage.results); 
 		});
+		resultList.length = 0
+		*/
 		res.json({
 			"results": [],
 			"hasMore": false,
 			"panelTargetName": null,
 			"pageMarker": null
 		})
-		resultList.length = 0
 		//after implementing i realised its only ever good if you have a ton of ltms on one row where pages are needed, but for base neonite its not really an issue.
 	},
 
