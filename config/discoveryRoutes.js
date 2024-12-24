@@ -12,6 +12,11 @@ module.exports.routes = {
         skipAssets: false
     },
     'POST /api/v2/discovery/surface/CreativeDiscoverySurface_Frontend': 'DiscoveryController.discoveryv3',
+    'POST /api/v2/discovery/surface/:surface/page':{
+        action: "page",
+        controller:'DiscoveryController', 
+        skipAssets: false
+    },
     'POST /links/api/fn/mnemonic': 'DiscoveryController.mnemonicLinks',
     'GET /links/api/fn/mnemonic/:playlistId/related': 'DiscoveryController.related',
     'POST /api/v1/links/favorites/:accountId/check': 'DiscoveryController.favoritesCheck',
