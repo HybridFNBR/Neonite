@@ -429,8 +429,26 @@ module.exports = {
 			}
 
 			case "SetAffiliateName": {
-				Profile.modifyStat(profileData, "mtx_affiliate", req.body.affiliateName, profileChanges);
-				Profile.modifyStat(profileData, "mtx_affiliate_set_time", new Date().toISOString(), profileChanges);
+				profileData.stats.attributes["mtx_affiliate"] = req.body.affiliateName
+				profileData.stats.attributes["mtx_affiliate_set_time"] = new Date().toISOString()
+				response.profileChanges = [
+					{
+						"changeType" : "statModified",
+						"name" : "mtx_affiliate",
+						"value" : req.body.affiliateName
+
+					},
+					{
+						"changeType" : "statModified",
+						"name" : "mtx_affiliate_set_time",
+						"value" : new Date().toISOString()
+					}
+				]
+				Profile.bumpRvn(profileData);
+				response.profileRevision = profileData.rvn || 1;
+				response.profileCommandRevision = profileData.commandRevision || 1
+				Profile.saveProfile(accountId, "common_core", profileData)		
+				
 				break;
 			}
 				
