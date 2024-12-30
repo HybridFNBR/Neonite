@@ -5,7 +5,7 @@ const fs = require("fs");
 const { v4: uuidv4 } = require("uuid");
 const path = require('path');
 var ini = require('ini')
-const { getVersionInfo, MPLockerLoadout, CH1Fix, VersionFilter, loadJSON, stats, seasonPass, Winterfest, winterFestPresents} = require("../../config/defs")
+const { getVersionInfo, MPLockerLoadout, CH1Fix, VersionFilter, loadJSON, stats, seasonPass, winterFest, winterFestPresents} = require("../../config/defs")
 let miniPassData = loadJSON("../config/MiniPass.json")
 Array.prototype.insert = function ( index, item ) {
 	this.splice( index, 0, item );
@@ -19,6 +19,7 @@ module.exports = {
         res.setHeader("Content-Type", "application/json");
 		var accountId = req.params.accountId;
 		var athenprofile = Profile.readProfile(accountId, "athena")
+		var commoncore = Profile.readProfile(accountId, "common_core")
 		const { version, versionGlobal } = getVersionInfo(req);
 		const getOrCreateProfile = profileId => {
 			var profileData = Profile.readProfile(accountId, profileId);
@@ -361,7 +362,7 @@ module.exports = {
 				try{
 					stats(accountId, athenprofile, config, versionGlobal)
 					if(versionGlobal >= 33){seasonPass(accountId, athenprofile, versionGlobal)}
-					Winterfest(accountId, athenprofile, versionGlobal)
+					winterFest(accountId, athenprofile)
 					for (const [questId, quest] of Object.entries(miniPassData)){Profile.addItem(athenprofile, questId, quest);}
 				}
 				catch{}
@@ -372,59 +373,35 @@ module.exports = {
 					{
 						"changeType": "fullProfileUpdate",
 						"profile": profileData
-					},
-					{
-						"changeType" : "itemAdded",
-						"itemId" : `AthenaSeason:athenaseason${versionGlobal}`,
-						"item" : {
-							"templateId" : `AthenaSeason:athenaseason${versionGlobal}`,
-							"attributes": {
-								"level": 1,
-								"purchase_date": "min",
-								"purchase_context": "None"
-							},
-							"quantity": 1
-						}
-					},
-					{
-						"changeType" : "itemAdded",
-						"itemId" : "AthenaSeason:figmentpass_s01",
-						"item" : {
-							"templateId" : "AthenaSeason:figmentpass_s01",
-							"attributes": {
-								"level": 1,
-								"purchase_date": "min",
-								"purchase_context": "None"
-							},
-							"quantity": 1
-						}
-					},
-					{
-						"changeType" : "itemAdded",
-						"itemId" : "AthenaSeason:junoseason1pass",
-						"item" : {
-							"templateId" : "AthenaSeason:junoseason1pass",
-							"attributes": {
-								"level": 1,
-								"purchase_date": "min",
-								"purchase_context": "None"
-							},
-							"quantity": 1
-						}
 					}
 				];
 				break;
 			}
 
+			//had to be slighly redone to have a check if there is actually a giftbox or not mainly due to the fact on 11.31(maybe more i didnt test) it will just constantly spam RemoveGiftBox
 			case "RemoveGiftBox": {
-				profileData.commandRevision = req.query.rvn || -1;
-				profileData.rvn = req.query.rvn || -1;
-
-				req.body.giftBoxItemIds.forEach(item => {
-					Profile.removeItem(profileData, item, profileChanges);
-				})
-				profileData.commandRevision++;
-				profileData.rvn++;
+				if (req.body.giftBoxItemIds) {
+					req.body.giftBoxItemIds.forEach(item => {
+						!profileData.items[item]
+							? response.profileChanges = [{
+								changeType: "fullProfileUpdate",
+								profile: profileData
+							}]
+						: Profile.removeItem(profileData, item, profileChanges);
+					});
+				}
+				if (req.body.giftBoxItemId) {
+					!profileData.items[req.body.giftBoxItemId]
+						? response.profileChanges = [{
+							changeType: "fullProfileUpdate",
+							profile: profileData
+						}]
+					: Profile.removeItem(profileData, profileData.items[req.body.giftBoxItemId]);
+				}
+				Profile.bumpRvn(profileData);
+				response.profileRevision = profileData.rvn || 1;
+				response.profileCommandRevision = profileData.commandRevision || 1;
+				Profile.saveProfile(accountId, profileId, profileData)
 				break;
 			}
 
@@ -781,105 +758,78 @@ module.exports = {
 				break;
 			}
 
-			case "UnlockRewardNode":{
-				const lootList = []
-				const rewards = winterFestPresents[version][req.body.nodeId];
-				if (Array.isArray(rewards)) {
-					rewards.forEach(cosmetic => {
-						response.profileChanges.push({
-							"changeType": "itemAdded",
-							"itemId": cosmetic,
-							"item": {
-								"templateId": cosmetic,
-								"attributes": {
-								"creation_time": new Date().toISOString(),
-								"level": 1
-								},
-								"quantity": 1
-							}
-						})
-
-						lootList.push({
-							"itemType": cosmetic,
-							"itemGuid": cosmetic,
-							"itemProfile": "athena",
-							"quantity": 1
-						});
-
-						Profile.addItem(profileData, cosmetic, {
+			case "UnlockRewardNode": {
+				const lootList = [];
+				const rewards = Array.isArray(winterFestPresents[version][req.body.nodeId]) 
+				? winterFestPresents[version][req.body.nodeId]
+				: [winterFestPresents[version][req.body.nodeId]]
+			
+				rewards.forEach(cosmetic => {
+					response.profileChanges.push({
+						changeType: "itemAdded",
+						itemId: cosmetic,
+						item: {
 							templateId: cosmetic,
 							attributes: {
-								"max_level_bonus": 0,
-								"level": 1,
-								"item_seen": false,
-								"xp": 0,
-								"variants": [],
-								"creation_time": new Date().toISOString(),
-								"favorite": false
+								creation_time: new Date().toISOString(),
+								level: 1
 							},
 							quantity: 1
-						})
+						}
 					});
 
-				}
-				else {
-					response.profileChanges.push({
-						"changeType": "itemAdded",
-						"itemId": rewards,
-						"item": {
-							"templateId": rewards,
-							"attributes": {
-							"creation_time": new Date().toISOString(),
-							"level": 1
-							},
-							"quantity": 1
-						}
-					})
 					lootList.push({
-						"itemType": rewards,
-						"itemGuid": rewards,
-						"itemProfile": "athena",
-						"quantity": 1
+						itemType: cosmetic,
+						itemGuid: cosmetic,
+						itemProfile: "athena",
+						quantity: 1
 					});
-					Profile.addItem(profileData, rewards, {
-						templateId: rewards,
+					cosmetic.includes("HomebaseBannerIcon")
+					? (Profile.addItem(commoncore, cosmetic, {
+							templateId: cosmetic,
+							attributes: { item_seen: true },
+							quantity: 1
+						}),
+						Profile.saveProfile(accountId, "common_core", commoncore))
+						
+					: Profile.addItem(profileData, cosmetic, {
+						templateId: cosmetic,
 						attributes: {
-							"max_level_bonus": 0,
-							"level": 1,
-							"item_seen": false,
-							"xp": 0,
-							"variants": [],
-							"creation_time": new Date().toISOString(),
-							"favorite": false
+							max_level_bonus: 0,
+							level: 1,
+							item_seen: false,
+							xp: 0,
+							variants: [],
+							creation_time: new Date().toISOString(),
+							favorite: false
 						},
 						quantity: 1
-					})
-				}
-				response.profileChanges.push(
-					{
-						"changeType": "itemAdded",
-						"itemId":  uuidv4(),
-						"item": {
-							"templateId": "GiftBox:gb_winterfestreward",
-							"attributes": {
-							"lootList": lootList,
-							"level": 1,
-							"giftedOn": new Date().toISOString(),
-							"params": {
-								"SubGame": "Athena",
-								"winterfestGift": "true"
+					});
+				});
+				response.profileChanges.push({
+					changeType: "itemAdded",
+					itemId: uuidv4(),
+					item: {
+						templateId: "GiftBox:gb_winterfestreward",
+						attributes: {
+							lootList,
+							level: 1,
+							giftedOn: new Date().toISOString(),
+							params: {
+								SubGame: "Athena",
+								winterfestGift: "true"
 							}
-							},
-							"quantity": 1
-						}
+						},
+						quantity: 1
 					}
-				)
+				});
 				Profile.bumpRvn(profileData);
 				response.profileRevision = profileData.rvn || 1;
 				response.profileCommandRevision = profileData.commandRevision || 1;
 				Profile.saveProfile(accountId, profileId, profileData);
 				break;
 			}
+			
 			
 			case "ExchangeGameCurrencyForBattlePassOffer":{
 				break;

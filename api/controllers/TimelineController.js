@@ -827,6 +827,21 @@ module.exports = {
             )
         }
 
+        if(version == 19.01){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push(
+                {
+                    eventType: "EventFlag.LTE_WinterFest", // WinterFest 2021
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "2023-10-29T00:00:00.000Z"
+                },
+                {
+                    eventType: "WF_IG_Avail", // WinterFest 2021
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "2023-10-29T00:00:00.000Z"
+                }
+            )
+        }
+
         if(version == 20.40){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
@@ -1356,7 +1371,12 @@ module.exports = {
                 {
                     eventType: "EventFlag.S33_WinterFestTab", //2024 winterfest
                     activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2024-03-01T00:50:00.000Z"
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "WF_IG_Avail", //2024 winterfest
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
                 }                         
             )
         }
