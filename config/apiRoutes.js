@@ -34,7 +34,11 @@ module.exports.routes = {
     'GET /presence/api/v1/_/:accountId/settings/subscriptions': 'ApiController.presence',
     'GET /socialban/api/public/v1/:accountId': 'ApiController.socialban',
     'GET /eulatracking/api/public/agreements/fn/account/:accountId': 'ApiController.eula',
-    'GET /fortnite/api/game/v2/creative/*': 'ApiController.creative',
+    'GET /fortnite/api/game/v2/creative/*':{
+        action: "creative",
+        controller:'ApiController', 
+        skipAssets: false
+    },
     'GET /affiliate/api/public/affiliates/slug/:affiliateName': 'ApiController.sac',
     'GET /content-controls/:accountId': 'ApiController.contentControls',
     'GET /content-controls/:accountId/rules/namespaces/fn': 'ApiController.contentControlsRules',
@@ -107,7 +111,7 @@ module.exports.routes = {
         skipAssets: false
     },
     'PUT /profile/languages': 'ApiController.languages',
-    'GET /api/content/v2/search/artifact/:artifactId/*':{
+    /*'GET /api/content/v2/search/artifact/:artifactId/*':{
         action: "searchArtifact",
         controller:'ApiController', 
         skipAssets: false
@@ -121,7 +125,7 @@ module.exports.routes = {
         action: "valkyrie",
         controller:'ApiController', 
         skipAssets: false
-    },
+    },*/
     'GET /:resourceId/master.blurl': 'ApiController.blurl',
     'POST /fortnite/api/game/v2/profile/:accountId/client/:command': 'ProfileController.mcp',
     'GET /content/api/pages/fortnite-game': 'FortniteGameController.fortniteGame',
