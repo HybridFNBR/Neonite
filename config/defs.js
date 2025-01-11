@@ -253,6 +253,23 @@ const MPLockerLoadout = (accountId, athenprofile) => {
 };
 
 const stats = (accountId, athenprofile, config, versionGlobal) => {
+    if (athenprofile.stats) {
+        var pastSeasons = [];
+        for (var i = 1; i <= 100; i++) {
+            pastSeasons.push({
+                "seasonNumber": i,
+                "numWins": 10000,
+                "seasonXp": 1000000,
+                "seasonLevel": 500,
+                "bookXp": 1000000,
+                "bookLevel": 500,
+                "purchasedVIP": true
+            });
+        }
+
+        athenprofile.stats["attributes"]["past_seasons"] = pastSeasons;
+    }
+
     if(athenprofile.stats.attributes["favorite_character"] = "" || !athenprofile.stats.attributes["favorite_character"]){
         athenprofile.stats["attributes"]["favorite_character"] = "AthenaCharacter:CID_001_Athena_Commando_F_Default"
     }
