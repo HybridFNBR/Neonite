@@ -232,6 +232,10 @@ module.exports = {
 		res.status(204).end()
 	},
 
+	eulaPrivacy: function(req, res){
+		res.status(204).end()
+	},
+
 	creative: function(req, res){
 		res.json({
 				"results": [],

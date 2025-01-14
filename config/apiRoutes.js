@@ -34,6 +34,7 @@ module.exports.routes = {
     'GET /presence/api/v1/_/:accountId/settings/subscriptions': 'ApiController.presence',
     'GET /socialban/api/public/v1/:accountId': 'ApiController.socialban',
     'GET /eulatracking/api/public/agreements/fn/account/:accountId': 'ApiController.eula',
+    'GET /eulatracking/api/public/agreements/epicgames_privacy_policy_no_table/account/:accountId':'ApiController.eulaPrivacy',
     'GET /fortnite/api/game/v2/creative/*':{
         action: "creative",
         controller:'ApiController', 
