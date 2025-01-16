@@ -828,6 +828,16 @@ module.exports = {
             'Content-Type': "application/octet-stream"
         });
         response.data.pipe(res);
-	}
+	},
+
+	sparks: async function(req, res){
+		const data = (await axios.get('https://fortnitecontent-website-prod07.ol.epicgames.com/content/api/pages/fortnite-game/spark-tracks').catch(() => {})).data;
+		res.json(data);
+	},
+
+	eventScreen: async function(req, res){
+		const data = (await axios.get('https://fortnitecontent-website-prod07.ol.epicgames.com/content/api/pages/fortnite-game/eventscreens').catch(() => {})).data;
+		res.json(data);
+	},
 
 };
