@@ -485,8 +485,43 @@ module.exports = {
 	},
 
 	trackData: async function(req, res){
-        const data = (await axios.get(`https://cdn.qstv.on.epicgames.com/${req.params.trackdata}`)).data;
-        return res.json(data)
+		const auth = await axios.post('https://account-public-service-prod.ol.epicgames.com/account/api/oauth/token', 
+		new URLSearchParams({
+			"grant_type": "client_credentials",
+			"token_type": "eg1"
+		}), 
+		{
+			headers: {
+				'Content-Type': 'application/x-www-form-urlencoded',
+				'Authorization': 'basic ZWM2ODRiOGM2ODdmNDc5ZmFkZWEzY2IyYWQ4M2Y1YzY6ZTFmMzFjMjExZjI4NDEzMTg2MjYyZDM3YTEzZmM4NGQ=',
+			}
+		});
+		const trackData = (await axios.get(`https://cdn.qstv.on.epicgames.com/${req.params.trackdata}`, {
+			headers: {
+				"Authorization": `bearer ${auth.data.access_token}`
+			},
+		})).data;
+		return res.json(trackData)
+    },
+
+	sparksTrack: async function(req, res){
+        const response = await axios.get(`https://cdn2.unrealengine.com/${req.params.sparksTrack}.dat`, {
+			responseType: 'stream' 
+		});
+		res.set({
+			'Content-Type': 'video/mp4'
+		});
+		response.data.pipe(res);
+    },
+
+	sparksLipSyncData: async function(req, res){
+		const response = await axios.get(`https://cdn2.unrealengine.com/${req.params.sparksLipSyncData}.lad`, {
+			responseType: 'stream' 
+		});
+		res.set({
+			'Content-Type': 'video/mp4'
+		});
+		response.data.pipe(res);
     },
 
 	trackSegment: async function(req, res){

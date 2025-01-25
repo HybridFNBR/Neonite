@@ -134,6 +134,16 @@ module.exports.routes = {
     'GET /content/api/pages/fortnite-game': 'FortniteGameController.fortniteGame',
     'GET /content/api/pages/fortnite-game/radio-stations': 'FortniteGameController.stations',
     'GET /:trackdata': 'ApiController.trackData',
+    'GET /:sparksTrack.dat': { 
+        action: "sparksTrack",
+        controller:'ApiController', 
+        skipAssets: false
+    },
+    'GET /:sparksLipSyncData.lad': { 
+        action: "sparksLipSyncData",
+        controller:'ApiController', 
+        skipAssets: false
+    },
     'POST /api/v1/fortnite-br/surfaces/:gameMode/target': 'FortniteGameController.motd',
     'POST /api/v1/fortnite-br/channel/motd/target': 'FortniteGameController.motdTarget',
     'POST /api/v1/fortnite-br/interactions/contentHash': 'FortniteGameController.contentHash',
