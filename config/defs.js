@@ -281,35 +281,22 @@ const stats = (accountId, athenprofile, config, versionGlobal) => {
 };
 
 const seasonPass = (accountId, athenprofile, versionGlobal) => {
-    //Battle Pass
-    Profile.addItem(athenprofile, `AthenaSeason:athenaseason${versionGlobal}`, {
-        "templateId": `AthenaSeason:athenaseason${versionGlobal}`,
-        "attributes": {
-            "level": 1,
-            "purchase_date": "min",
-            "purchase_context": "None"
-        },
-        "quantity": 1
-    })
-    //Fortnite OGS1 Pass
-    Profile.addItem(athenprofile, `AthenaSeason:figmentpass_s01`, {
-        "templateId": `AthenaSeason:figmentpass_s01`,
-        "attributes": {
-            "level": 1,
-            "purchase_date": "min",
-            "purchase_context": "None"
-        },
-        "quantity": 1
-    })
-    //Lego Season 1 Pass
-    Profile.addItem(athenprofile, `AthenaSeason:junoseason1pass`, {
-        "templateId": `AthenaSeason:junoseason1pass`,
-        "attributes": {
-            "level": 1,
-            "purchase_date": "min",
-            "purchase_context": "None"
-        },
-        "quantity": 1
+    var passArray = [
+        "figmentpass_s01",
+        "figmentpass_s02",
+        `athenaseason${versionGlobal}`,
+        "junoseason1pass"
+    ]
+    passArray.forEach(seasonPass => {
+        Profile.addItem(athenprofile, `AthenaSeason:${seasonPass}`, {
+            "templateId": `AthenaSeason:${seasonPass}`,
+            "attributes": {
+                "level": 1,
+                "purchase_date": "min",
+                "purchase_context": "None"
+            },
+            "quantity": 1
+        })
     })
     Profile.saveProfile(accountId, "athena", athenprofile)
 };
