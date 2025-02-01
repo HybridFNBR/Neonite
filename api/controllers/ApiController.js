@@ -865,6 +865,15 @@ module.exports = {
         response.data.pipe(res);
 	},
 
+	postPartyInstallStatus: function(req, res){
+		const JWT = req.headers["authorization"].replace("Bearer ", "")
+		const JWTdecode = jsonwebtoken.decode(JWT)
+		res.json({
+			"accountId": JWTdecode["sub"],
+			"isInstalled":false
+		})
+	},
+
 	sparks: async function(req, res){
 		const data = (await axios.get('https://fortnitecontent-website-prod07.ol.epicgames.com/content/api/pages/fortnite-game/spark-tracks').catch(() => {})).data;
 		res.json(data);

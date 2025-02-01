@@ -128,6 +128,7 @@ module.exports.routes = {
         skipAssets: false
     },*/
     'GET /:resourceId/master.blurl': 'ApiController.blurl',
+    'GET /app_installation/status': 'ApiController.postPartyInstallStatus',
     'GET /content/api/pages/fortnite-game/spark-tracks': 'ApiController.sparks',
     'GET /content/api/pages/fortnite-game/eventscreens': 'ApiController.eventScreen',
     'POST /fortnite/api/game/v2/profile/:accountId/client/:command': 'ProfileController.mcp',
