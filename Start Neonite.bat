@@ -1,4 +1,6 @@
 @echo off
+cd /d %~dp0
+
 where node >nul 2>&1
 if %ERRORLEVEL% NEQ 0 (
     echo NodeJS is not installed. Downloading NodeJS. Trying to install it automatically. Make sure to follow the installer instructions.
@@ -12,6 +14,9 @@ if %ERRORLEVEL% NEQ 0 (
 )
 
 if not exist node_modules (call npm i && call npm install sails -g)
+
 title NeoniteV2
+
 node app.js
+
 cmd /k
