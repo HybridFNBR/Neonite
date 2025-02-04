@@ -98,7 +98,7 @@ module.exports.routes = {
     },
     'GET /api/v1/events/Fortnite/download/:accountId': 'ApiController.eventsDownload',
     'GET /region': 'ApiController.region',
-    'GET /fortnite/api/game/v2/br-inventory/account/': 'ApiController.brInventory',
+    'GET /fortnite/api/game/v2/br-inventory/account/:accountId': 'ApiController.brInventory',
     'GET /fortnite/api/storeaccess/v1/request_access/:accountId': 'ApiController.storeAccess',
     'POST /api/v1/user/setting': 'ApiController.userSetting',
     'PATCH /v1/epic-settings/public/users/:accountId/*':{ 
