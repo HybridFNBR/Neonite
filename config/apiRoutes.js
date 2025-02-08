@@ -100,6 +100,13 @@ module.exports.routes = {
     'GET /region': 'ApiController.region',
     'GET /fortnite/api/game/v2/br-inventory/account/:accountId': 'ApiController.brInventory',
     'GET /fortnite/api/storeaccess/v1/request_access/:accountId': 'ApiController.storeAccess',
+    'GET /api/v1/lfg/Fortnite/users/:accountId/settings': 'ApiController.lfgSettings',
+    'GET /followers/api/v1/FortniteLive/:accountId/*':{
+        action: "followers",
+        controller:'ApiController', 
+        skipAssets: false
+    },
+    'GET /api/content/v2/launch-data': 'ApiController.launchData',
     'POST /api/v1/user/setting': 'ApiController.userSetting',
     'PATCH /v1/epic-settings/public/users/:accountId/*':{ 
         action: "epicSettings",

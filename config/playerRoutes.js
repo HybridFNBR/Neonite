@@ -36,6 +36,8 @@ module.exports.routes = {
     },
     'GET /fortnite/api/receipts/v1/account/:accountId/receipts': 'PlayerController.receipts',
     'GET /friends/api/public/blocklist/:accountId': 'PlayerController.blocklist',
+    'GET /party/api/v1/Fortnite/user/:accountId/notifications/undelivered/count': 'PlayerController.notifications',
+    'GET /party/api/v1/Fortnite/user/:accountId/settings/privacy': 'PlayerController.settingsPrivacy'
 
 
 
