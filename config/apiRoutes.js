@@ -68,7 +68,7 @@ module.exports.routes = {
         controller:'ApiController', 
         skipAssets: false
     },
-    'HEAD /ias/fortnite/:Hash':{ 
+    'GET /ias/fortnite/:Hash':{ 
         action: "ias",
         controller:'ApiController', 
         skipAssets: false
