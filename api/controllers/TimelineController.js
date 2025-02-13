@@ -1381,6 +1381,37 @@ module.exports = {
             )
         }
 
+        if (version == 33.30) {
+            timeline.channels["client-events"]["states"][0]["activeEvents"].push(
+                {
+                    eventType: "GrillMoon_Day1", //GrillMoon Mini Event Buildup Stages
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "GrillMoon_Day2", //GrillMoon Mini Event Buildup Stages
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "GrillMoon_Day3", //GrillMoon Mini Event Buildup Stages
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "GrillMoon_Day4", //GrillMoon Mini Event Buildup Stages
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "GrillMoon_Day5", //GrillMoon Mini Event Buildup Stages
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                                       
+            )
+        }
+
         if(versionGlobal == 10){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
