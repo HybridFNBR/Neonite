@@ -1408,6 +1408,11 @@ module.exports = {
                     activeUntil: "9999-09-14T07:00:00.000Z",
                     activeSince: "2020-09-09T07:00:00.000Z"
                 },
+                {
+                    eventType: "GrillMoon_Event", //GrillMoon Mini Event
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
                                        
             )
         }
