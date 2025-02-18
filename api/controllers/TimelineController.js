@@ -8,13 +8,37 @@ const {getVersionInfo, loadJSON} = require("../../config/defs")
 
 module.exports = {
     timeline: function(req, res){
-        const { version, versionGlobal } = getVersionInfo(req);
+        let { version, versionGlobal, versionLegacy} = getVersionInfo(req);
         const keychain = loadJSON("../responses/keychain.json")
         var config = ini.parse(fs.readFileSync(path.join(__dirname, '../../config.ini'), 'utf-8'));
+        certVersions = [{
+            3700114: 1,
+            3724489: 1,
+            3729133: 1,
+            3741772: 1,
+            3757339: 1,
+            3775276: 1,
+            3790078: 1,
+            3807424: 2,
+            3825894: 2,
+            3841827: 2,
+            3847564: 2,
+            3858292: 2,
+            3870737: 2,
+            3889387: 2,
+        }]
+        certVersions.forEach(cl => {
+            if(cl[versionLegacy]){
+                versionGlobal = cl[versionLegacy]
+            }
+        });
         const timeline = {
             channels: {
                 "standalone-store": {},
-                "client-matchmaking": {},
+                "client-matchmaking": {
+                    "states": [],
+                    "cacheExpire": "9999-01-01T22:28:47.830Z"
+                },
                 tk: {
                     states: [
                         {
@@ -25,7 +49,7 @@ module.exports = {
                             }
                         }
                     ],
-                    cacheExpire: new Date(Date.now() - new Date().getTimezoneOffset() * 60000 + 1000).toISOString()
+                    cacheExpire: new Date(Date.now() - new Date().getTimezoneOffset() * 60000 + 5000).toISOString()
                 },
                 "featured-islands": {},
                 "community-votes": {},
@@ -157,12 +181,12 @@ module.exports = {
                             rmtPromotion: "melody"
                         }
                     }],
-                    cacheExpire: new Date(Date.now() - new Date().getTimezoneOffset() * 60000 + 1000).toISOString() //refresh every second(might be a bit over kill)
+                    cacheExpire: new Date(Date.now() - new Date().getTimezoneOffset() * 60000 + 5000).toISOString()
                 }
             },
-            currentTime: new Date(Date.now() - new Date().getTimezoneOffset() * 60000).toISOString(),
-            cacheIntervalMins: 0,
-            eventsTimeOffsetHrs: 0
+            eventsTimeOffsetHrs: 0,
+            cacheIntervalMins: 10,
+            currentTime: new Date(new Date().getTime()).toISOString(),
         }
 
         if(version == "Cert"){

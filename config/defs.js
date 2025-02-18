@@ -460,7 +460,8 @@ const getVersionInfo = (req) => {
         const userAgent = req.headers["user-agent"];
         const version = userAgent.split('-')[1];
         const versionGlobal = parseInt(version.split('.')[0], 10);
-        return { version, versionGlobal };
+        const versionLegacy = userAgent.split('CL-')[1].split(',')[0]
+        return { version, versionGlobal, versionLegacy };
     }
     catch{}
 };
