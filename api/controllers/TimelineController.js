@@ -181,7 +181,7 @@ module.exports = {
                             rmtPromotion: "melody"
                         }
                     }],
-                    cacheExpire: new Date(Date.now() - new Date().getTimezoneOffset() * 60000 + 5000).toISOString()
+                    "cacheExpire": "9999-01-01T22:28:47.830Z"
                 }
             },
             eventsTimeOffsetHrs: 0,
