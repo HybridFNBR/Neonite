@@ -425,11 +425,11 @@ module.exports = {
                     activeUntil: "9999-09-14T07:00:00.000Z",
                     activeSince: "2020-10-05T00:00:00.000Z"
                 },
-                {  
+                /*{  
                     eventType: "survey_br_nick_001", // nightnight blackhole lobby mini event
                     activeUntil: "9999-09-14T07:00:00.000Z",
                     activeSince: "9999-09-14T07:00:00.000Z"
-                }                
+                }*/            
             )
         }
         
