@@ -33,161 +33,135 @@ module.exports = {
             }
         });
         const timeline = {
-            channels: {
-                "standalone-store": {},
-                "client-matchmaking": {
-                    "states": [],
-                    "cacheExpire": "9999-01-01T22:28:47.830Z"
-                },
-                tk: {
-                    states: [
-                        {
-                            validFrom: "2019-12-31T23:59:59.999Z",
-                            activeEvents: [],
-                            state: {
-                                k: keychain,
-                            }
-                        }
-                    ],
-                    cacheExpire: new Date(Date.now() - new Date().getTimezoneOffset() * 60000 + 5000).toISOString()
-                },
-                "featured-islands": {},
-                "community-votes": {},
-                "client-events": {
-                    states: [{
+            "channels": {
+              "client-matchmaking": {
+                "states": [],
+                "cacheExpire": "9999-01-01T22:28:47.830Z"
+              },
+              tk: {
+                states: [
+                    {
                         validFrom: "2019-12-31T23:59:59.999Z",
-                        activeEvents: [
-                            {
-                                eventType: "heard0stone78hole65stick178feet", // C2S4-related (Comics)
-                                activeUntil: "9999-12-31T23:59:59.999Z",
-                                activeSince: "2019-12-31T23:59:59.999Z"
-                            },
-                            {
-                                eventType: "RBFI", // IslandScripting (CH1) related
-                                activeUntil: "9999-12-01T21:10:00.000Z",
-                                activeSince: "2020-11-21T07:00:00.000Z"
-                            },
-                            {
-                                eventType: `EventFlag.Season${versionGlobal}`,
-                                activeUntil: "9999-12-31T23:59:59.999Z",
-                                activeSince: "2019-12-31T23:59:59.999Z"
-                            },                                                                                                                                           
-                            {
-                                eventType: `EventFlag.LobbySeason${versionGlobal}`,
-                                activeUntil: "9999-12-31T23:59:59.999Z",
-                                activeSince: "2021-06-05T14:00:00.000Z"
-                            },
-                            {
-                                eventType: "Gal_Crashes", // Starwars spaceship crashes (season 11)
-                                activeUntil: "9999-09-14T07:00:00.000Z",
-                                activeSince: "2015-09-14T07:00:00.000Z"
-                            },
-                            {
-                                eventType: "Papaya_Stage", //Party Royale Stage
-                                activeUntil: "9999-12-31T23:59:59.999Z",
-                                activeSince: "2021-06-05T14:00:00.000Z"
-                            },
-                            {
-                                eventType: "Papaya_Theater", //Party Royale Theater
-                                activeUntil: "9999-12-31T23:59:59.999Z",
-                                activeSince: "2021-06-05T14:00:00.000Z"
-                            }
-                            /*
-                            {
-                                eventType: "EventFlag.WinterBattleBus",
-                                activeUntil: "9999-12-31T23:59:59.999Z",
-                                activeSince: "2021-06-05T14:00:00.000Z"
-                            },
-                            {
-                                eventType: "HW_01",
-                                activeUntil: "9999-12-31T23:59:59.999Z",
-                                activeSince: "2021-06-05T14:00:00.000Z"
-                            },
-                            {
-                                eventType: "HW_02",
-                                activeUntil: "9999-12-31T23:59:59.999Z",
-                                activeSince: "2021-06-05T14:00:00.000Z"
-                            },
-                            {
-                                eventType: "HW_03",
-                                activeUntil: "9999-12-31T23:59:59.999Z",
-                                activeSince: "2021-06-05T14:00:00.000Z"
-                            },
-                            {
-                                eventType: "HW_04",
-                                activeUntil: "9999-12-31T23:59:59.999Z",
-                                activeSince: "2021-06-05T14:00:00.000Z"
-                            },
-                            {
-                                eventType: "HW_05",
-                                activeUntil: "9999-12-31T23:59:59.999Z",
-                                activeSince: "2021-06-05T14:00:00.000Z"
-                            },
-                            {
-                                eventType: "HW_06",
-                                activeUntil: "9999-12-31T23:59:59.999Z",
-                                activeSince: "2021-06-05T14:00:00.000Z"
-                            },
-                            {
-                                eventType: "HW_07",
-                                activeUntil: "9999-12-31T23:59:59.999Z",
-                                activeSince: "2021-06-05T14:00:00.000Z"
-                            },
-                            {
-                                eventType: "RGCONSTUCTION02", //Rift Gate Construction Stage 2(Ch4S1 related)
-                                activeUntil: "9999-09-09T07:00:00.000Z",
-                                activeSince: "9999-09-09T07:00:00.000Z"
-                            },
-                            {
-                                eventType: "MLQ24", 
-                                activeUntil: "9999-09-09T07:00:00.000Z",
-                                activeSince: "9999-09-09T07:00:00.000Z"
-                            },
-                            {
-                                eventType: "EventFlag.BR_S5_Cube_TurnOn", // Cube Lightning(Ch1S5 Related)
-                                activeUntil: "9999-09-09T07:00:00.000Z",
-                                activeSince: "2020-10-29T00:00:00.000Z"
-                            },
-                            {
-                                eventType: "EventFlag.BR_S5_Cube_Rune1", // Cube Rune 1(Ch1S5 Related)
-                                activeUntil: "9999-09-09T07:00:00.000Z",
-                                activeSince: "2020-10-29T00:00:00.000Z"
-                            },
-                            {
-                                eventType: "EventFlag.BR_S6_Island_MoveTo1", // Cube Move to Rune 1(Ch1S6 Related)
-                                activeUntil: "2023-11-00T07:00:00.000Z",
-                                activeSince: "2020-10-29T00:00:00.000Z"
-                            },
-                            {
-                                eventType: "EventFlag.BR_S6_Island_Drain", //IslandRune1(Ch1S6 Related)
-                                activeUntil: "9999-09-09T07:00:00.000Z",
-                                activeSince: "2020-10-29T00:00:00.000Z"
-                            },*/
-                        ],
+                        activeEvents: [],
                         state: {
-                            activeStorefronts: [],
-                            eventNamedWeights: {},
-                            activeEvents: [],
-                            seasonNumber: versionGlobal,
-                            seasonTemplateId: `AthenaSeason:athenaseason${versionGlobal}`,
-                            matchXpBonusPoints: 0,
-                            eventPunchCardTemplateId: "",
-                            seasonBegin: "2021-06-05T14:00:00Z",
-                            seasonEnd: "9999-12-31T23:59:59.999Z",
-                            seasonDisplayedEnd: "2021-09-30T04:00:00Z",
-                            dailyStoreEnd: new Date(new Date().getTime() + 30000).toISOString(),
-                            weeklyStoreEnd: new Date(new Date().getTime() + 30000).toISOString(),
-                            sectionStoreEnds: {},
-                            rmtPromotion: "melody"
+                            k: keychain,
                         }
-                    }],
-                    "cacheExpire": "9999-01-01T22:28:47.830Z"
-                }
+                    }
+                ],
+                cacheExpire: new Date(Date.now() - new Date().getTimezoneOffset() * 60000 + 5000).toISOString()
+                },
+              "client-events": {
+                "states": [
+                  {
+                    "validFrom": "2020-01-01T00:00:00.000Z",
+                    "activeEvents": [
+                    {
+                        eventType: `EventFlag.Season${versionGlobal}`,
+                        activeUntil: "9999-12-31T23:59:59.999Z",
+                        activeSince: "2019-12-31T23:59:59.999Z"
+                    },                                                                                                                                           
+                    {
+                        eventType: `EventFlag.LobbySeason${versionGlobal}`,
+                        activeUntil: "9999-12-31T23:59:59.999Z",
+                        activeSince: "2021-06-05T14:00:00.000Z"
+                    },
+                    /*
+                        {
+                            eventType: "EventFlag.WinterBattleBus",
+                            activeUntil: "9999-12-31T23:59:59.999Z",
+                            activeSince: "2021-06-05T14:00:00.000Z"
+                        },
+                        {
+                            eventType: "HW_01",
+                            activeUntil: "9999-12-31T23:59:59.999Z",
+                            activeSince: "2021-06-05T14:00:00.000Z"
+                        },
+                        {
+                            eventType: "HW_02",
+                            activeUntil: "9999-12-31T23:59:59.999Z",
+                            activeSince: "2021-06-05T14:00:00.000Z"
+                        },
+                        {
+                            eventType: "HW_03",
+                            activeUntil: "9999-12-31T23:59:59.999Z",
+                            activeSince: "2021-06-05T14:00:00.000Z"
+                        },
+                        {
+                            eventType: "HW_04",
+                            activeUntil: "9999-12-31T23:59:59.999Z",
+                            activeSince: "2021-06-05T14:00:00.000Z"
+                        },
+                        {
+                            eventType: "HW_05",
+                            activeUntil: "9999-12-31T23:59:59.999Z",
+                            activeSince: "2021-06-05T14:00:00.000Z"
+                        },
+                        {
+                            eventType: "HW_06",
+                            activeUntil: "9999-12-31T23:59:59.999Z",
+                            activeSince: "2021-06-05T14:00:00.000Z"
+                        },
+                        {
+                            eventType: "HW_07",
+                            activeUntil: "9999-12-31T23:59:59.999Z",
+                            activeSince: "2021-06-05T14:00:00.000Z"
+                        },
+                        {
+                            eventType: "RGCONSTUCTION02", //Rift Gate Construction Stage 2(Ch4S1 related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "9999-09-09T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "MLQ24", 
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "9999-09-09T07:00:00.000Z"
+                        },
+                        {
+                            eventType: "EventFlag.BR_S5_Cube_TurnOn", // Cube Lightning(Ch1S5 Related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "2020-10-29T00:00:00.000Z"
+                        },
+                        {
+                            eventType: "EventFlag.BR_S5_Cube_Rune1", // Cube Rune 1(Ch1S5 Related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "2020-10-29T00:00:00.000Z"
+                        },
+                        {
+                            eventType: "EventFlag.BR_S6_Island_MoveTo1", // Cube Move to Rune 1(Ch1S6 Related)
+                            activeUntil: "2023-11-00T07:00:00.000Z",
+                            activeSince: "2020-10-29T00:00:00.000Z"
+                        },
+                        {
+                            eventType: "EventFlag.BR_S6_Island_Drain", //IslandRune1(Ch1S6 Related)
+                            activeUntil: "9999-09-09T07:00:00.000Z",
+                            activeSince: "2020-10-29T00:00:00.000Z"
+                        },*/
+                    ],
+                    "state": {
+                        activeStorefronts: [],
+                        eventNamedWeights: {},
+                        activeEvents: [],
+                        seasonNumber: versionGlobal,
+                        seasonTemplateId: `AthenaSeason:athenaseason${versionGlobal}`,
+                        matchXpBonusPoints: 0,
+                        eventPunchCardTemplateId: "",
+                        seasonBegin: "2021-06-05T14:00:00Z",
+                        seasonEnd: "9999-12-31T23:59:59.999Z",
+                        seasonDisplayedEnd: "2021-09-30T04:00:00Z",
+                        dailyStoreEnd: new Date(new Date().getTime() + 30000).toISOString(),
+                        weeklyStoreEnd: new Date(new Date().getTime() + 30000).toISOString(),
+                        sectionStoreEnds: {},
+                        rmtPromotion: "melody"
+                    }
+                  }
+                ],
+                "cacheExpire": "9999-01-01T22:28:47.830Z"
+              }
             },
-            eventsTimeOffsetHrs: 0,
-            cacheIntervalMins: 10,
-            currentTime: new Date(new Date().getTime()).toISOString(),
-        }
+            "eventsTimeOffsetHrs": 0,
+            "cacheIntervalMins": 10,
+            "currentTime": "2025-02-18T12:58:57.560Z"
+          }
 
         if(version == "Cert"){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
