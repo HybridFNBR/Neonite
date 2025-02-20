@@ -938,6 +938,11 @@ const Backgrounds = (version, versionGlobal, backgrounds, content) =>{
                 backgrounds[1].backgroundimage = "https://cdn2.unrealengine.com/mkart-fnbr-32-00-lobby-3840x2160-f18b699506a4.jpg"
             }
         break;
+        case 33:{
+            backgrounds[1].stage = "season3300"
+            backgrounds[1].backgroundimage = "https://cdn2.unrealengine.com/ch6s1-lobby-2048x1024-218a4754f2a0.jpg"
+        }
+        break;
         default:
             backgrounds[1].backgroundimage = content.dynamicbackgrounds.backgrounds.backgrounds[0].backgroundimage;
             backgrounds[1].stage = content.dynamicbackgrounds.backgrounds.backgrounds[0].stage;

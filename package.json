@@ -4,7 +4,7 @@
   "description": "A Fortnite Private Server",
   "main": "app.js",
   "scripts": {
-    "test": "node --unhandled-rejections=strict app.js --test"
+    "start": "NODE_ENV=production node app.js"
   },
   "repository": {
     "type": "git",
@@ -21,7 +21,7 @@
     "ini": "^5.0.0",
     "jsonwebtoken": "^9.0.2",
     "path": "^0.12.7",
-    "sails": "^1.5.11",
+    "sails": "^1.5.14",
     "uuid": "^11.0.5"
   }
 }
