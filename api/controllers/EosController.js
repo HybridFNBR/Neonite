@@ -2540,7 +2540,7 @@ module.exports = {
         "id_token": access_token,
         "expires_in": 7200,
         "expires_at": "2025-02-22T04:51:28.249Z",
-        "account_id": "e7c388664e5442e89f30b396d9fa7183",
+        "account_id": JWTdecode["dn"],
         "client_id": "ec684b8c687f479fadea3cb2ad83f5c6",
         "application_id": "fghi4567FNFBKFz3E4TROb0bmPS8h1GW",
         "selected_account_id": JWTdecode["dn"],
