@@ -8,7 +8,7 @@ module.exports = {
         res.json({
           "access_token": token,
           "token_type": "bearer",
-          "expires_at": "2025-02-22T02:20:50.858Z",
+          "expires_at": "9999-12-31T23:59:59.999Z",
           "features": [
             "AntiCheat",
             "Connect",
@@ -2539,7 +2539,7 @@ module.exports = {
         "refresh_token": refresh_token,
         "id_token": access_token,
         "expires_in": 7200,
-        "expires_at": "2025-02-22T04:51:28.249Z",
+        "expires_at": "9999-12-31T23:59:59.999Z",
         "account_id": JWTdecode["dn"],
         "client_id": "ec684b8c687f479fadea3cb2ad83f5c6",
         "application_id": "fghi4567FNFBKFz3E4TROb0bmPS8h1GW",
