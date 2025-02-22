@@ -19,6 +19,7 @@ module.exports.routes = {
     'GET /epic/friends/v1/:accountId/blocklist': 'EosController.blocklist',
     'PATCH /epic/presence/v1/:gameNsIg/:accountId/presence/:presenceUuid': 'EosController.presence',
     'POST /epic/oauth/v2/token': 'EosController.oauthv2',
+    'GET /v2': 'EosController.wss'
 
 
 
