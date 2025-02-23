@@ -896,6 +896,12 @@ module.exports = {
 		res.status(204)
 	},
 
+	interactions: function(req, res){
+		res.json({
+			interactions: [],
+		  })
+	},
+
 	sparks: async function(req, res){
 		const data = (await axios.get('https://fortnitecontent-website-prod07.ol.epicgames.com/content/api/pages/fortnite-game/spark-tracks').catch(() => {})).data;
 		res.json(data);
