@@ -588,6 +588,31 @@ module.exports = {
             )
         }
 
+        if(version == 11.50){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push(
+                {
+                    eventType: "GP2", // Gold Prop 1
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },
+                {
+                    eventType: "GP3", // Gold Prop 2
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },
+                {
+                    eventType: "GP4", // Gold Prop 3
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },
+                {
+                    eventType: "GP5", // Gold Prop 4
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                }
+            )
+        }
+
         if(version == 12.30){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {

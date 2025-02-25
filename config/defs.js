@@ -716,6 +716,9 @@ const Backgrounds = (version, versionGlobal, backgrounds, content) =>{
             }
             else if (version === "11.31" || version === "11.40") {
                 backgrounds[1].stage = "Winter19";
+            }
+            else if (version === "11.50") {
+                backgrounds[1].stage = "LoveAndWar";
             } 
             else {
                 backgrounds[1].stage = "season11";
@@ -753,6 +756,10 @@ const Backgrounds = (version, versionGlobal, backgrounds, content) =>{
                 backgrounds[1].backgroundimage = "https://cdn2.unrealengine.com/t-bp-17-lobby-summer-2048x1024-709fa99e6be0.png"
             }
             else if(version === "17.21"){
+                backgrounds[1].stage = "defaultnotris"
+                backgrounds[1].backgroundimage = "https://cdn2.unrealengine.com/t-bp17-21-lobby-2048x1024-f6027bf109de.png"
+            }
+            else if(version === "17.30"){
                 backgrounds[1].stage = "defaultnotris"
                 backgrounds[1].backgroundimage = "https://cdn2.unrealengine.com/t-bp17-21-lobby-2048x1024-f6027bf109de.png"
             }
