@@ -706,35 +706,28 @@ module.exports = {
 			}
 
 			case "SetItemFavoriteStatus": {
-				checkValidProfileID("campaign", "athena");
-
 				if (typeof req.body.bFavorite === "boolean" && profileData.items[req.body.targetItemId].attributes.favorite != req.body.bFavorite) {
 					Profile.changeItemAttribute(profileData, req.body.targetItemId, "favorite", req.body.bFavorite, profileChanges);
+					Profile.saveProfile(accountId, profileId, profileData)
 				}
 				break;
 			}
 
 			case "SetItemFavoriteStatusBatch": {
-				checkValidProfileID("campaign", "athena");
-
 				req.body.itemIds.forEach((itemId, index) => {
 					if (typeof itemId === "string" && typeof req.body.itemFavStatus[index] === "boolean") {
 						Profile.changeItemAttribute(profileData, itemId, "favorite", req.body.itemFavStatus[index], profileChanges);
+						Profile.saveProfile(accountId, profileId, profileData)
+
 					}
 				});
-
 				Profile.bumpRvn(profileData);
 				response.profileRevision = profileData.rvn || 1;
 				response.profileCommandRevision = profileData.commandRevision || 1;
-				response.profileChanges = [{
-					"changeType": "fullProfileUpdate",
-					"profile": profileData
-				}];
 				break;
 			}
 
 			case "SetMtxPlatform": {
-				checkValidProfileID("common_core");
 
 				response.profileChanges[0] = {
 					changeType: "statModified",
@@ -745,7 +738,6 @@ module.exports = {
 			}
 
 			case "SetReceiveGiftsEnabled": {
-				checkValidProfileID("common_core");
 
 				if (typeof req.body.bReceiveGifts === "boolean") {
 					Profile.modifyStat(profileData, "allowed_to_receive_gifts", req.body.bReceiveGifts, profileChanges);
