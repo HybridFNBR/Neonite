@@ -249,7 +249,7 @@ const MPLockerLoadout = (accountId, athenprofile) => {
             }
             Profile.saveProfile(accountId, "athena", athenprofile)
         }
-        catch{}
+    catch{}
 };
 
 const stats = (accountId, athenprofile, config, versionGlobal) => {
@@ -291,9 +291,14 @@ const seasonPass = (accountId, athenprofile, versionGlobal) => {
         Profile.addItem(athenprofile, `AthenaSeason:${seasonPass}`, {
             "templateId": `AthenaSeason:${seasonPass}`,
             "attributes": {
+                "purchased": false,
+                "currency_season_total": 1,
+                "tier_one_rewards_given": false,
+                "purchased_at_least_once": false,
                 "level": 1,
-                "purchase_date": "min",
-                "purchase_context": "None"
+                "purchase_date": "0001-01-01T00:00:00.000Z",
+                "purchase_context": "None",
+                "purchased_offers": []
             },
             "quantity": 1
         })
@@ -302,72 +307,30 @@ const seasonPass = (accountId, athenprofile, versionGlobal) => {
 };
 
 const winterFest = (accountId, athenprofile) => {
-    Profile.addItem(athenprofile, "AthenaRewardGraph:Winterfest", {
-        "templateId": "AthenaRewardGraph:Winterfest",
-        "attributes": {
-            "max_level_bonus": 0,
-            "level": 1,
-            "item_seen": true,
-            "xp": 0,
-            "variants": [],
-            "favorite": false
-        },
-        "quantity": 1
+
+    var winterFestTokens = [
+        "AthenaRewardGraph:Winterfest",
+        "Token:AthenaWinterfest_Key",
+        "AthenaRewardGraph:S19_Winterfest",
+        "Token:Athena_S19_Winterfest_Key",
+        "AthenaRewardGraph:s33_winterfest",
+        "Token:athena_s33_winterfest_key"
+    ]
+
+    winterFestTokens.forEach(token => {
+        Profile.addItem(athenprofile, `${token}`, {
+            attributes: {
+                "max_level_bonus": 0,
+                "level": 1,
+                "item_seen": true,
+                "xp": 0,
+                "variants": [],
+                "favorite": false
+            },
+            "templateId": `${token}`
+        })
     })
-    Profile.addItem(athenprofile, "Token:AthenaWinterfest_Key", {
-        "templateId": "Token:AthenaWinterfest_Key",
-        "attributes": {
-            "max_level_bonus": 0,
-            "level": 1,
-            "item_seen": true,
-            "xp": 0,
-            "variants": [],
-            "favorite": false
-        },
-        "quantity": 1
-    })
-    Profile.addItem(athenprofile, "AthenaRewardGraph:S19_Winterfest", {
-        "templateId": "AthenaRewardGraph:S19_Winterfest",
-        "attributes": {
-            "max_level_bonus": 0,
-            "level": 1,
-            "item_seen": true,
-            "xp": 0,
-            "variants": [],
-            "favorite": false
-        },
-        "quantity": 1
-    })
-    Profile.addItem(athenprofile, "Token:Athena_S19_Winterfest_Key", {
-        "templateId": "Token:Athena_S19_Winterfest_Key",
-        "attributes": {
-            "max_level_bonus": 0,
-            "level": 1,
-            "item_seen": true,
-            "xp": 0,
-            "variants": [],
-            "favorite": false
-        },
-        "quantity": 1
-    })
-    Profile.addItem(athenprofile, "AthenaRewardGraph:s33_winterfest", {
-        "templateId": "AthenaRewardGraph:s33_winterfest",
-        "attributes": {
-            "level": 1,
-            "purchase_date": "min",
-            "purchase_context": "None"
-        },
-        "quantity": 1
-    })
-    Profile.addItem(athenprofile, "Token:athena_s33_winterfest_key", {
-        "templateId": "Token:athena_s33_winterfest_key",
-        "attributes": {
-            "level": 1,
-            "purchase_date": "min",
-            "purchase_context": "None"
-        },
-        "quantity": 1
-    })
+    
     Profile.saveProfile(accountId, "athena", athenprofile)
 };
 
