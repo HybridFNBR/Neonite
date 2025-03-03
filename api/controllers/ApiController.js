@@ -513,20 +513,13 @@ module.exports = {
         const response = await axios.get(`https://cdn2.unrealengine.com/${req.params.sparksTrack}.dat`, {
 			responseType: 'stream' 
 		});
-		res.set({
-			'Content-Type': 'video/mp4'
-		});
 		response.data.pipe(res);
     },
 
 	sparksLipSyncData: async function(req, res){
-		const response = await axios.get(`https://cdn2.unrealengine.com/${req.params.sparksLipSyncData}.lad`, {
-			responseType: 'stream' 
-		});
-		res.set({
-			'Content-Type': 'video/mp4'
-		});
-		response.data.pipe(res);
+		res.setHeader("content-type", "application/octet-stream")
+		const response = await axios.get(`https://cdn2.unrealengine.com/${req.params.sparksLipSyncData}.lad`)
+		res.send(response.data)
     },
 
 	trackSegment: async function(req, res){
