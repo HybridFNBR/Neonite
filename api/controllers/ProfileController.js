@@ -171,6 +171,10 @@ module.exports = {
 			}
 
 			case "ClientQuestLogin": {
+				response.profileChanges = [{
+					"changeType": "fullProfileUpdate",
+					"profile": profileData
+				}]
 				break;
 			}
 
@@ -708,18 +712,24 @@ module.exports = {
 			case "SetItemFavoriteStatus": {
 				if (typeof req.body.bFavorite === "boolean" && profileData.items[req.body.targetItemId].attributes.favorite != req.body.bFavorite) {
 					Profile.changeItemAttribute(profileData, req.body.targetItemId, "favorite", req.body.bFavorite, profileChanges);
-					Profile.saveProfile(accountId, profileId, profileData)
+					Profile.saveProfile(accountId, "athena", profileData)
 				}
 				break;
 			}
 
 			case "SetItemFavoriteStatusBatch": {
 				req.body.itemIds.forEach((itemId, index) => {
-					if (typeof itemId === "string" && typeof req.body.itemFavStatus[index] === "boolean") {
-						Profile.changeItemAttribute(profileData, itemId, "favorite", req.body.itemFavStatus[index], profileChanges);
-						Profile.saveProfile(accountId, profileId, profileData)
-
-					}
+					profileData.items[itemId].attributes.favorite = req.body.itemFavStatus[index];
+					Profile.saveProfile(accountId, "athena", profileData)
+					response.profileChanges.push(
+						{
+							"changeType" : "itemAttrChanged",
+							"itemId" : itemId,
+							"attributeName" : "favorite",
+							"attributeValue" : req.body.itemFavStatus[index]
+						}
+					)
+					
 				});
 				Profile.bumpRvn(profileData);
 				response.profileRevision = profileData.rvn || 1;
@@ -824,6 +834,10 @@ module.exports = {
 			
 			
 			case "ExchangeGameCurrencyForBattlePassOffer":{
+				break;
+			}
+
+			case "ExchangeGameCurrencyForSeasonPassOffer":{
 				break;
 			}
 
