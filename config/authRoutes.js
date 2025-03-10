@@ -3,7 +3,11 @@ module.exports.routes = {
     'GET /account/api/oauth/verify': 'AuthController.verifyToken',
     'DELETE /account/api/oauth/sessions/kill': 'AuthController.killToken',
     'DELETE /account/api/oauth/sessions/kill/:token': 'AuthController.killToken',
-    'GET /account/api/public/account/:accountId': 'AuthController.accountInfo',
+    'GET /account/api/public/account/:accountId':{
+        action: "accountInfo",
+        controller:'AuthController', 
+        skipAssets: false ,
+    },
     'GET /account/api/public/account/displayName/:displayName': 'AuthController.displayName',
     'GET /fortnite/api/discovery/accessToken/*':{
         action: "discoveryToken",

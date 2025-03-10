@@ -32,7 +32,11 @@ module.exports.routes = {
         skipAssets: false
     },
     'GET /presence/api/v1/_/:accountId/settings/subscriptions': 'ApiController.presence',
-    'GET /socialban/api/public/v1/:accountId': 'ApiController.socialban',
+    'GET /socialban/api/public/v1/:accountId':{
+        action: "socialban",
+        controller:'ApiController', 
+        skipAssets: false
+    },
     'GET /eulatracking/api/public/agreements/fn/account/:accountId': 'ApiController.eula',
     'GET /eulatracking/api/public/agreements/epicgames_privacy_policy_no_table/account/:accountId':'ApiController.eula',
     'GET /eulatracking/api/shared/agreements/fn':'ApiController.eula',
@@ -46,11 +50,7 @@ module.exports.routes = {
     'GET /content-controls/:accountId/rules/namespaces/fn': 'ApiController.contentControlsRules',
     'POST /content-controls/:accountId/verify-pin': 'ApiController.verifyPin',
     'GET /api/v2/interactions/aggregated/Fortnite/:accountId': 'ApiController.interactionsAggregated',
-    'POST /fortnite/api/game/v2/profileToken/verify/*':{
-        action: "profileToken",
-        controller:'ApiController', 
-        skipAssets: false
-    },
+    'ALL /fortnite/api/game/v2/profileToken/verify/:accountId': 'ApiController.profileToken',
     'GET /api/v1/namespace/fn/worlds/accessibleTo/:accountId': 'ApiController.fetchLegoWorlds',
     'POST /api/v1/namespace/fn/worlds/account/:accountId': 'ApiController.makeLegoWorlds',
     'GET /api/v1/namespace/fn/worlds/world/:worldID/session': 'ApiController.legoWorldSession',
@@ -97,7 +97,11 @@ module.exports.routes = {
         controller:'ApiController', 
         skipAssets: false
     },
-    'GET /api/v1/events/Fortnite/download/:accountId': 'ApiController.eventsDownload',
+    'GET /api/v1/events/Fortnite/download/:accountId':{
+        action: "eventsDownload",
+        controller:'ApiController', 
+        skipAssets: false
+    },
     'GET /region': 'ApiController.region',
     'GET /fortnite/api/game/v2/br-inventory/account/:accountId': 'ApiController.brInventory',
     'GET /fortnite/api/storeaccess/v1/request_access/:accountId': 'ApiController.storeAccess',

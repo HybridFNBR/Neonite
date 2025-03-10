@@ -4,7 +4,11 @@ module.exports.routes = {
         controller:'PlayerController', 
         skipAssets: false
     },
-    'GET /party/api/v1/Fortnite/user/:accountId': 'PlayerController.localparty',
+    'GET /party/api/v1/Fortnite/user/:accountId':{
+        action: "localparty",
+        controller:'PlayerController', 
+        skipAssets: false
+    },
     'GET /party/api/v1/*/parties/:partyId/members/:accountId/meta':{
         action: "partyMeta",
         controller:'PlayerController', 
