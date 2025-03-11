@@ -27,7 +27,7 @@
                 "lastVisited": null,
                 "linkCode": "playlist_radish",
                 "isFavorite": false
-              },					
+              },			
               {
                 "linkData": {
                   "namespace": "fn",
@@ -141,6 +141,29 @@
                 },
                 "lastVisited": null,
                 "linkCode": "playlist_defaultsolo",
+                "isFavorite": false
+              },
+              {
+                "linkData": {
+                  "namespace": "fn",
+                  "mnemonic": "playlist_molegame",
+                  "linkType": "BR:Playlist",
+                  "active": true,
+                  "disabled": false,
+                  "version": 95,
+                  "moderationStatus": "Unmoderated",
+                  "accountId": "epic",
+                  "creatorName": "Epic",
+                  "descriptionTags": [],
+                  "metadata": {
+                    "image_url": "https://cdn2.unrealengine.com/17br-mole-motd-1920x1080-1920x1080-0fa22131cdbc.jpg",
+                    "matchmaking": {
+                    "override_playlist": "playlist_molegame"
+                    }
+                  }
+                },
+                "lastVisited": null,
+                "linkCode": "playlist_molegame",
                 "isFavorite": false
               },
               {  
