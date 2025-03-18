@@ -40,16 +40,6 @@ module.exports = {
 				"+CurveTable=/TacticalSprintGame/DataTables/TacticalSprintGameData;RowUpdate;Default.TacticalSprint.Sprint.Energy.CostPerSecond;0.0;0.0"
 			);
 		}
-		if (version >= 30.10) {
-			DefaultGame = DefaultGame.replace(
-				';+TextReplacements=(Category=Game, bIsMinimalPatch=true, Namespace="Fortnite.FortAthenaMatchmakingWidget", Key="Header.MatchmakingError.Number", NativeString="Matchmaking error (#1)", LocalizedStrings=(("en","<text color=\"FC0303\">Lobby Support Only (For Carbon Users)</>")))',
-				'+TextReplacements=(Category=Game, bIsMinimalPatch=true, Namespace="Fortnite.FortAthenaMatchmakingWidget", Key="Header.MatchmakingError.Number", NativeString="Matchmaking error (#1)", LocalizedStrings=(("en","<text color=\"FC0303\">Lobby Support Only (For Carbon Users)</>")))'
-			);
-			DefaultGame = DefaultGame.replace(
-				';+TextReplacements=(Category=Game, bIsMinimalPatch=true, Namespace="Fortnite.MatchmakingText", Key="FailedToConnectToMMS", NativeString="We had trouble talking to the matchmaker. Give it another shot, but if the problem continues, check out {CheckStatusURL}.", LocalizedStrings=(("en","Fortnite Versions that are <text color=\"FC0303\">30.10 and above</> only have support for the <text color=\"FC0303\">lobby, there is no in-game support</>")))',
-				'+TextReplacements=(Category=Game, bIsMinimalPatch=true, Namespace="Fortnite.MatchmakingText", Key="FailedToConnectToMMS", NativeString="We had trouble talking to the matchmaker. Give it another shot, but if the problem continues, check out {CheckStatusURL}.", LocalizedStrings=(("en","Fortnite Versions that are <text color=\"FC0303\">30.10 and above</> only have support for the <text color=\"FC0303\">lobby, there is no in-game support</>")))'
-			)
-		}
 		const replacements = {
 			"7.30": [
 			  "+FrontEndPlaylistData=(PlaylistName=Playlist_Music_Low, PlaylistAccess=(bEnabled=false, CategoryIndex=1, DisplayPriority=-999))",
@@ -128,6 +118,12 @@ module.exports = {
 			DefaultRuntimeOptions = DefaultRuntimeOptions.replace(
 				';+ExperimentalBucketPercentList=(ExperimentNum=27,Name="ShowMultiProductItemShop",BucketPercents=(100,0,0),WinningBucketIndex=-1)',
 				'+ExperimentalBucketPercentList=(ExperimentNum=27,Name="ShowMultiProductItemShop",BucketPercents=(100,0,0),WinningBucketIndex=-1)'
+			);
+		}
+		else if (version == 17.30) {
+			DefaultRuntimeOptions = DefaultRuntimeOptions.replace(
+				'bEnableSocialTab=false',
+				'bEnableSocialTab=true'
 			);
 		}
 		res.send(DefaultRuntimeOptions)
