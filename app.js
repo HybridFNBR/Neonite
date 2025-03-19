@@ -1,14 +1,15 @@
 const sails = require('sails');
 const NeoLog = require('./structs/NeoLog')
 const { default: axios } = require('axios');
-const fs = require("fs").promises;
-
+const fs = require("fs");
+const ini = require("ini");
+const config = ini.parse(fs.readFileSync("config.ini", "utf-8"));
 
 async function compareAndUpdateKeychain() {
 	const response = await axios.get('https://fortnitecentral.genxgames.gg/api/v1/aes');
     if (response.status === 200) {
       const data = response.data;
-      const keychain = JSON.parse(await fs.readFile('./responses/keychain.json', 'utf8'));
+	  const keychain = JSON.parse(fs.readFileSync('./responses/keychain.json', 'utf8'));
       let count = 0;
       const keychainArray = [];
 
@@ -20,7 +21,7 @@ async function compareAndUpdateKeychain() {
       }
       keychain.push(...keychainArray);
 
-      await fs.writeFile('./responses/keychain.json', JSON.stringify(keychain, null, 2));
+      fs.writeFileSync('./responses/keychain.json', JSON.stringify(keychain, null, 2));
       NeoLog.Debug(`Fetched ${count} New Keychains From Fortnite Central`);
     } 
 	else if (response.status === 503 || response.status === 403)
@@ -37,7 +38,7 @@ async function startbackend(){
 		session: false,
 	  },
 	  log:{
-	  	level: 'silly'
+	  	level: `${config.logLevel}`
 	  },
     }, (err) => {
 		if(err){
