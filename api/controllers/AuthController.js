@@ -221,5 +221,14 @@ module.exports = {
 			"type": "legacy"
 		})
 		
+	},
+
+	credentials: function(req, res){
+		res.json({
+			"username": "1742530227:00027b91959a4c57a1272efcc4d7480f",
+			"password": crypto.randomBytes(16).toString("base64"),
+			"ttl": 9999999,
+			"uris": []
+		  })
 	}
 }

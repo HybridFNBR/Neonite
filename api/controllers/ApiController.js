@@ -886,7 +886,7 @@ module.exports = {
 	},
 
 	launchData: function(req, res){
-		res.status(204)
+		res.status(204).end()
 	},
 
 	interactions: function(req, res){
