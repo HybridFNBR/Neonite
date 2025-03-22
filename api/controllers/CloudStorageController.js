@@ -99,6 +99,7 @@ module.exports = {
 	},
 	
 	defaultEngine: function(req, res){
+		res.setHeader("content-type", "application/octet-stream")
 		const {version} = getVersionInfo(req);
 		let DefaultEngine = fs.readFileSync(path.join(__dirname, '../../hotfixes/DefaultEngine.ini'), 'utf-8');
 		if (version == 32.11) {
@@ -131,9 +132,8 @@ module.exports = {
 
 	defaultInput: function(req, res){
 		res.setHeader("content-type", "application/octet-stream")
-		const InputPath = path.join('hotfixes/DefaultInput.ini');
-		const fileStream = require('fs').createReadStream(InputPath);
-		fileStream.pipe(res)
+		let DefaultInput = fs.readFileSync(path.join(__dirname, '../../hotfixes/DefaultInput.ini'), 'utf-8');
+		res.send(DefaultInput)
 	},
 
 	user: function (req, res) {
