@@ -188,76 +188,7 @@
               "lastVisited": null,
               "linkCode": "playlist_papaya",
               "isFavorite": false
-            },
-              {
-                "linkData": {
-                  "namespace": "fn",
-                  "mnemonic": "playlist_defaultduo",
-                  "linkType": "BR:Playlist",
-                  "active": true,
-                  "disabled": false,
-                  "version": 95,
-                  "moderationStatus": "Unmoderated",
-                  "accountId": "epic",
-                  "creatorName": "Epic",
-                  "descriptionTags": [],
-                  "metadata": {
-                    "image_url": "https://cdn2.unrealengine.com/25br-duos-1920-1920x1080-8b0ad8cc6fd4.jpg",
-                    "matchmaking": {
-                      "override_playlist": "playlist_defaultduo"
-                    }
-                  }
-                },
-                "lastVisited": null,
-                "linkCode": "playlist_defaultduo",
-                "isFavorite": false
-              },
-              {
-                "linkData": {
-                  "namespace": "fn",
-                  "mnemonic": "playlist_trios",
-                  "linkType": "BR:Playlist",
-                  "active": true,
-                  "disabled": false,
-                  "version": 95,
-                  "moderationStatus": "Unmoderated",
-                  "accountId": "epic",
-                  "creatorName": "Epic",
-                  "descriptionTags": [],
-                  "metadata": {
-                    "image_url": "https://cdn2.unrealengine.com/25br-trios-1920-1920x1080-9866e812b10c.jpg",
-                    "matchmaking": {
-                      "override_playlist": "playlist_trios"
-                    }
-                  }
-                },
-                "lastVisited": null,
-                "linkCode": "playlist_trios",
-                "isFavorite": false
-              },
-              {
-                "linkData": {
-                  "namespace": "fn",
-                  "mnemonic": "playlist_defaultsquad",
-                  "linkType": "BR:Playlist",
-                  "active": true,
-                  "disabled": false,
-                  "version": 95,
-                  "moderationStatus": "Unmoderated",
-                  "accountId": "epic",
-                  "creatorName": "Epic",
-                  "descriptionTags": [],
-                  "metadata": {
-                    "image_url": "https://cdn2.unrealengine.com/25br-squads-1920-1920x1080-d515b42c587f.jpg",
-                    "matchmaking": {
-                      "override_playlist": "playlist_defaultsquad"
-                    }
-                  }
-                },
-                "lastVisited": null,
-                "linkCode": "playlist_defaultsquad",
-                "isFavorite": false
-              }
+            }
             ],
             "hasMore": false
           }   
@@ -268,4 +199,4 @@
       "testing"
     ],
     "ModeSets": {}
-  }
+}
