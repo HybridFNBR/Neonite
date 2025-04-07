@@ -1,61 +1,105 @@
 const jsonwebtoken = require('jsonwebtoken');
+const NeoLog = require('../../structs/NeoLog')
 
 
 module.exports = {
     oauthTokenv1: function(req, res){
-      if(req.body["grant_type"] == "client_credentials"){
-        let token = oauthTokenV1_clientCredentials(req.body["deployment_id"])
-        res.json({
-          "access_token": token,
-          "token_type": "bearer",
-          "expires_at": "9999-12-31T23:59:59.999Z",
-          "features": [
-            "AntiCheat",
-            "Connect",
-            "ContentService",
-            "Ecom",
-            "EpicConnect",
-            "Inventories",
-            "LockerService",
-            "Matchmaking Service"
-          ],
-          "organization_id": "o-aa83a0a9bc45e98c80c1b1c9d92e9e",
-          "product_id": "prod-fn",
-          "sandbox_id": "fn",
-          "deployment_id": `${req.body["deployment_id"]}`,
-          "expires_in": 3599
+      switch (req.body.grant_type) {
+        case "client_credentials":
+          var token = oauthTokenV1_clientCredentials(req.body["deployment_id"])
+          res.json({
+            "access_token": token,
+            "token_type": "bearer",
+            "expires_at": "9999-12-31T23:59:59.999Z",
+            "features": [
+              "AntiCheat",
+              "Connect",
+              "ContentService",
+              "Ecom",
+              "EpicConnect",
+              "Inventories",
+              "LockerService",
+              "Matchmaking Service",
+              "ExchangeCodeCreation",
+              "Achievements",
+              "Leaderboards",
+              "Matchmaking",
+              "Metrics",
+              "PlayerReports",
+              "Sanctions",
+              "Stats",
+              "TitleStorage",
+              "Voice"
+            ],
+            "organization_id": "o-aa83a0a9bc45e98c80c1b1c9d92e9e",
+            "product_id": "prod-fn",
+            "sandbox_id": "fn",
+            "deployment_id": `${req.body["deployment_id"]}`,
+            "expires_in": 3599
+          })
+        break;
+        case "external_auth":
+          const JWTdecode = jsonwebtoken.decode(req.body["external_auth_token"])
+          var token = oauthTokenV1_externalAuth(req.body["nonce"], req.body["deployment_id"], JWTdecode["dn"])
+          let idToken = oauthTokenV1_idToken(JWTdecode["dn"])
+          res.json({
+            "access_token": token,
+            "token_type": "bearer",
+            "expires_at": "9999-12-31T23:59:59.999Z",
+            "nonce": req.body["nonce"],
+            "features": [
+              "Connect",
+              "Ecom",
+              "ExchangeCodeCreation"
+            ],
+            "organization_id": "o-aa83a0a9bc45e98c80c1b1c9d92e9e",
+            "product_id": "prod-fn",
+            "sandbox_id": "fn",
+            "deployment_id": req.body["deployment_id"],
+            "organization_user_id": "000185f80b9a4dc3aaf1ca83611c2bf5",
+            "product_user_id": "00027b91959a4c57a1272efcc4d7480f",
+            "product_user_id_created": false,
+            "id_token": idToken,
+            "expires_in": 3599
         })
-
-      }
-      else if(req.body["grant_type"] == "external_auth"){
-        const JWTdecode = jsonwebtoken.decode(req.body["external_auth_token"])
-        let token = oauthTokenV1_externalAuth(req.body["nonce"], req.body["deployment_id"], JWTdecode["dn"])
-        let idToken = oauthTokenV1_idToken(JWTdecode["dn"])
-        res.json({
-          "access_token": token,
-          "token_type": "bearer",
-          "expires_at": "9999-12-31T23:59:59.999Z",
-          "nonce": req.body["nonce"],
-          "features": [
-            "AntiCheat",
-            "Connect",
-            "ContentService",
-            "Ecom",
-            "EpicConnect",
-            "Inventories",
-            "LockerService",
-            "Matchmaking Service"
-          ],
-          "organization_id": "o-aa83a0a9bc45e98c80c1b1c9d92e9e",
-          "product_id": "prod-fn",
-          "sandbox_id": "fn",
-          "deployment_id": req.body["deployment_id"],
-          "organization_user_id": "000185f80b9a4dc3aaf1ca83611c2bf5",
-          "product_user_id": "00027b91959a4c57a1272efcc4d7480f",
-          "product_user_id_created": false,
-          "id_token": idToken,
-          "expires_in": 3599
-        })
+        break;
+        case "refresh_token":
+          JWTdecode = jsonwebtoken.decode(req.body["refresh_token"])
+          const refresh_token = oauthv2_refreshToken(JWTdecode["sub"], JWTdecode["dn"])
+          idToken = oauthTokenV1_idToken(JWTdecode["dn"])
+          res.json({
+            "access_token": refresh_token,
+            "expires_in": 15552000,
+            "expires_at": "9999-12-31T23:59:59.999Z",
+            "token_type": "bearer",
+            "refresh_token": refresh_token,
+            "refresh_expires": 15552000,
+            "refresh_expires_at": "9999-12-31T23:59:59.999Z",
+            "account_id": "e7c388664e5442e89f30b396d9fa7183",
+            "client_id": "3e13c5c57f594a578abe516eecb673fe",
+            "internal_client": true,
+            "client_service": "3fd15bc288014f698cca1a3d1f01c7af",
+            "scope": [
+              "basic_profile",
+              "friends_list",
+              "openid",
+              "offline_access",
+              "presence"
+            ],
+            "displayName": JWTdecode["dn"],
+            "app": "3fd15bc288014f698cca1a3d1f01c7af",
+            "in_app_id": JWTdecode["sub"],
+            "device_id": "NEONITE",
+            "product_id": "3fd15bc288014f698cca1a3d1f01c7af",
+            "sandbox_id": "fn",
+            "deployment_id": "67731b3b183e4efabf9597f04b38ddf9",
+            "application_id": "fghi4567UG3ZXlhvevzKJI65wfTUoYBC",
+            "acr": "urn:epic:loa:aal1",
+            "auth_time": "2025-04-07T13:50:26.438Z"
+          })
+        break;
+        default:
+          NeoLog.Error($`Invalid Grant Type: ${req.body.grant_type}`)
       }
         
     },
@@ -2528,16 +2572,19 @@ module.exports = {
     },
 
     oauthv2: function(req, res){
+      if(!req.body.refresh_token){req.body.refresh_token = "eg1~eyJ0IjoiZXBpY19pZF9yIiwiYWxnIjoiUlMyNTYiLCJraWQiOiJXTVM3RW5rSUdwY0g5REdac3YyV2NZOXhzdUZuWkN0eFpqajRBaGItXzhFIn0.eyJzdWIiOiIiLCJwZnNpZCI6ImEwMTkyN2Y3NDIxYTRkNDk5NTY3M2ZlMzBlZjQ2OTQ1IiwiaXNzIjoiaHR0cHM6Ly9hcGkuZXBpY2dhbWVzLmRldi9lcGljL29hdXRoL3YyIiwiZG4iOiIiLCJwZnBpZCI6Ijg2ZjMyZjExNTEzNTRlN2NiMzljMTJmOGFiMmMyMmEzIiwiYXVkIjoieHl6YTc4OTFSRUJWc0VxU0pSUk5YbWxTN0VRSE00NTkiLCJwZmRpZCI6ImE2NTJhNzJlYTE2NjRkY2FiM2E0Njc4OTFlZWE1ZjMwIiwidCI6ImVwaWNfaWRfciIsImFwcGlkIjoiZmdoaTQ1NjcyZjBRVjZiNkIxS250TGQ3SlI3UkZMV2MiLCJzY29wZSI6ImJhc2ljX3Byb2ZpbGUgb3BlbmlkIG9mZmxpbmVfYWNjZXNzIiwiZXhwIjoyMTQ3NDgzNjQ3LCJpYXQiOjE3NDQwMjc4NzgsImp0aSI6IjIxNDI1MWNlNzZjYzRjODRiYmI0NTBlYTdiZTIyMjgwIn0.b8IkCKzvGr2Tc4zVghgBEP5di-tlbn8P_7y3SxlQjf83b7Xl80wO813ul4rQvjBQmun7bt14CnciDyf9is9sxUe5Qbp3LZAFWbwiZIbzYlAvxlWydkSxSbmxVynSql7IO4LsubzsNjWKqPtwxcVBDZMMqJBxax9cnTEc-ZOWmTusxK0lKQSnB1hr-HIgmE4CnKFlrVtRwRq9wqM0qVPb9ev1ok9MRrmsdmo1d8ZvOQpoHd6sl1K2G38fD_2bp_lxPUNSpCByxBD6H33pVC-HeVJ0A1IBJDFv6HVWK5VN6InJL-xZ-RvQlMYPutZSZqh8FFqlADReO47gWa7TeIPYTw"}
       const JWT = req.body.refresh_token.replace("eg1~", "")
-      const JWTdecode = jsonwebtoken.decode(JWT)
-      let access_token = oauthTokenV1_idToken(JWTdecode["dn"])
+      let JWTdecode = jsonwebtoken.decode(JWT)
+      if(req.body["device_code"] == "device_code"){JWTdecode["dn"] == "Neonite"; JWTdecode["sub"] == "Neonite"}
+      let access_token = oauthTokenV2_accessToken(JWTdecode["dn"])
+      let id_token = oauthTokenV1_idToken(JWTdecode["dn"])
       let refresh_token = oauthv2_refreshToken(JWTdecode["sub"], JWTdecode["dn"])
       res.json({
         "scope": "basic_profile friends_list openid offline_access presence",
         "token_type": "bearer",
         "access_token": access_token,
         "refresh_token": refresh_token,
-        "id_token": access_token,
+        "id_token": id_token,
         "expires_in": 7200,
         "expires_at": "9999-12-31T23:59:59.999Z",
         "account_id": JWTdecode["dn"],
@@ -2558,30 +2605,40 @@ module.exports = {
 
 
 function oauthTokenV1_clientCredentials(deploymentId){
-  return jsonwebtoken.sign({
-    "clientId": "ec684b8c687f479fadea3cb2ad83f5c6",
-    "role": "GameClient",
-    "productId": "prod-fn",
-    "iss": "eos",
-    "env": "prod",
-    "organizationId": "o-aa83a0a9bc45e98c80c1b1c9d92e9e",
-    "features": [
-      "AntiCheat",
-      "Connect",
-      "ContentService",
-      "Ecom",
-      "EpicConnect",
-      "Inventories",
-      "LockerService",
-      "Matchmaking Service"
-    ],
-    "deploymentId": deploymentId,
-    "sandboxId": "fn",
-    "tokenType": "clientToken",
-    "exp": 2147483647,
-    "iat": 1725882476,
-    "jti": "4fac517094d840a88c75234468a4c6c4"
-  },"RS256",  {keyid:"2022-06-14T06:17:57.047928700Z"})
+  return jsonwebtoken.sign(
+    {
+      "clientId": "3e13c5c57f594a578abe516eecb673fe",
+      "productId": "3fd15bc288014f698cca1a3d1f01c7af",
+      "iss": "eos",
+      "env": "prod",
+      "organizationId": "o-aa83a0a9bc45e98c80c1b1c9d92e9e",
+      "features": [
+        "AntiCheat",
+        "Connect",
+        "ContentService",
+        "Ecom",
+        "EpicConnect",
+        "Inventories",
+        "LockerService",
+        "Matchmaking Service",
+        "ExchangeCodeCreation",
+        "Achievements",
+        "Leaderboards",
+        "Matchmaking",
+        "Metrics",
+        "PlayerReports",
+        "Sanctions",
+        "Stats",
+        "TitleStorage",
+        "Voice"
+      ],
+      "deploymentId": deploymentId,
+      "sandboxId": "183b8244f3d84e71a4d4af08a17f7d9a",
+      "tokenType": "clientToken",
+      "exp": 2147483647,
+      "iat": 1744036778,
+      "jti": "b31bc00fc9cd48e38fa0da2ea8f3ecae"
+    },"RS256",  {keyid:"2022-06-14T06:17:57.047928700Z"})
 }
 
 function oauthTokenV1_externalAuth(nonce, deploymentId, accountId){
@@ -2621,6 +2678,26 @@ function oauthTokenV1_externalAuth(nonce, deploymentId, accountId){
     },"RS256",  {keyid:"2022-06-14T06:17:57.047928700Z"})
 }
 
+
+function oauthTokenV2_accessToken(account_id){
+  return jsonwebtoken.sign({
+    "sub": account_id,
+    "pfsid": "a01927f7421a4d4995673fe30ef46945",
+    "iss": "http://127.0.0.1:5595/auth/v1/oauth",
+    "dn": account_id,
+    "nonce": "n-TRePC1vU+xUVFrVbZbqJVk6T2MU=",
+    "pfpid": "86f32f1151354e7cb39c12f8ab2c22a3",
+    "sec": 1,
+    "aud": "xyza7891REBVsEqSJRRNXmlS7EQHM459",
+    "pfdid": "a652a72ea1664dcab3a467891eea5f30",
+    "t": "epic_id",
+    "scope": "basic_profile openid offline_access",
+    "appid": "fghi45672f0QV6b6B1KntLd7JR7RFLWc",
+    "exp": 2147483647,
+    "iat": 1744036780,
+    "jti": "997b9a3ba7b4481284be5993db6a3311"
+  },"RS256")
+}
 
 function oauthTokenV1_idToken(account_id){
     return jsonwebtoken.sign({

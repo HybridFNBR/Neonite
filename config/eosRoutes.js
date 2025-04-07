@@ -1,6 +1,10 @@
 module.exports.routes = {
     'POST /auth/v1/oauth/token': 'EosController.oauthTokenv1',
+    'POST /epic/oauth/v2/token': 'EosController.oauthv2',
+    'POST /epic/oauth/v2/deviceAuthorization' : 'EosController.deviceAuthorization',
     'GET /epic/id/v2/sdk/accounts': 'EosController.eossdkv2',
+    'GET /activate': 'EosController.activateCode',
+    'POST /intake/v2/rum/events': 'EosController.rumEvents',
     'GET /sdk/v1/default':{
         action: "eossdkv1default",
         controller:'EosController', 
@@ -18,7 +22,6 @@ module.exports.routes = {
     },
     'GET /epic/friends/v1/:accountId/blocklist': 'EosController.blocklist',
     'PATCH /epic/presence/v1/:gameNsIg/:accountId/presence/:presenceUuid': 'EosController.presence',
-    'POST /epic/oauth/v2/token': 'EosController.oauthv2',
     'GET /v2': 'EosController.wss'
 
 
