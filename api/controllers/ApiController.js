@@ -187,6 +187,38 @@ module.exports = {
 			};
 			
 		}
+		else if(version == 17.40 || version == 17.50){
+			FrontendAssets.FortPlaylistAthena = {
+				"meta": {
+					"promotion": 9
+				},
+				"assets": {
+					"Playlist_MoleGame": {
+						"meta": {
+							"revision": 2,
+							"headRevision": 2,
+							"revisedAt": "2023-11-27T06:41:57.818Z",
+							"promotion": 3,
+							"promotedAt": "2023-11-27T06:43:00.452Z"
+						},
+						"assetData": {
+							"PreloadPersistentLevel": "/MoleMapUnderBase/Maps/Mole_UnderBase_Parent.Mole_UnderBase_Parent",
+							"MinPlayersForPrivateServer": 1,
+							"MinPlayers": 1,
+							"GameData": "",
+							"BuiltInGameFeaturePluginsToLoad":[
+								"MoleMapUnderBase",
+								"MoleGame",
+								"MoleUI",
+								"MoleAudio"
+							],
+							"ModifierList":[],
+							"AdditionalLevels": []
+						}
+					}
+				}
+			}
+		}
 		res.json(FrontendAssets)
 	},
 
