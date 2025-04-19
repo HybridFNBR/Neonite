@@ -40,7 +40,7 @@ module.exports = {
 		});
 	},
 
-	launcherAssets: function(req, res) {
+	launcherCatalogItem: function(req, res) {
 		res.json({
 			"appName": req.params.appName,
 			"labelName": `${req.query.label}-${req.params.platform}`,
@@ -68,6 +68,7 @@ module.exports = {
 		res.setHeader("content-type", "application/octet-stream")
 		res.sendFile(path.join(__dirname, '../../LauncherAssets/Full.ini'));
 	},
+	//todo: LauncherAssets -> manifestAssets
 
 	ChunksV4: async function(req, res){
 		const response = await axios.get(`https://epicgames-download1.akamaized.net${req.originalUrl}`, {
@@ -149,7 +150,447 @@ module.exports = {
 	},
 
 	habaneroProgress: function(req, res){
-		res.status(204)
+		res.json([
+			{
+			  "gameId": "fortnite",
+			  "trackguid": "d0zEcd",
+			  "accountId": "e7c388664e5442e89f30b396d9fa7183",
+			  "rankingType": "ranked-zb",
+			  "lastUpdated": "1970-01-01T00:00:00Z",
+			  "currentDivision": 9,
+			  "highestDivision": 9,
+			  "promotionProgress": 0,
+			  "currentPlayerRanking": null
+			},
+			{
+			  "gameId": "fortnite",
+			  "trackguid": "EYpme7",
+			  "accountId": "e7c388664e5442e89f30b396d9fa7183",
+			  "rankingType": "ranked-br",
+			  "lastUpdated": "1970-01-01T00:00:00Z",
+			  "currentDivision": 9,
+			  "highestDivision": 9,
+			  "promotionProgress": 0,
+			  "currentPlayerRanking": null
+			},
+			{
+			  "gameId": "fortnite",
+			  "trackguid": "a1m0n3",
+			  "accountId": "e7c388664e5442e89f30b396d9fa7183",
+			  "rankingType": "ranked-zb",
+			  "lastUpdated": "1970-01-01T00:00:00Z",
+			  "currentDivision": 9,
+			  "highestDivision": 9,
+			  "promotionProgress": 0,
+			  "currentPlayerRanking": null
+			},
+			{
+			  "gameId": "fortnite",
+			  "trackguid": "L1GHT5",
+			  "accountId": "e7c388664e5442e89f30b396d9fa7183",
+			  "rankingType": "ranked-zb",
+			  "lastUpdated": "1970-01-01T00:00:00Z",
+			  "currentDivision": 9,
+			  "highestDivision": 9,
+			  "promotionProgress": 0,
+			  "currentPlayerRanking": null
+			},
+			{
+			  "gameId": "fortnite",
+			  "trackguid": "rrzuel",
+			  "accountId": "e7c388664e5442e89f30b396d9fa7183",
+			  "rankingType": "delmar-competitive",
+			  "lastUpdated": "1970-01-01T00:00:00Z",
+			  "currentDivision": 9,
+			  "highestDivision": 9,
+			  "promotionProgress": 0,
+			  "currentPlayerRanking": null
+			},
+			{
+			  "gameId": "fortnite",
+			  "trackguid": "rrwpwg",
+			  "accountId": "e7c388664e5442e89f30b396d9fa7183",
+			  "rankingType": "delmar-competitive",
+			  "lastUpdated": "1970-01-01T00:00:00Z",
+			  "currentDivision": 9,
+			  "highestDivision": 9,
+			  "promotionProgress": 0,
+			  "currentPlayerRanking": null
+			},
+			{
+			  "gameId": "fortnite",
+			  "trackguid": "dmd372",
+			  "accountId": "e7c388664e5442e89f30b396d9fa7183",
+			  "rankingType": "delmar-competitive",
+			  "lastUpdated": "2024-02-07T21:25:52.999Z",
+			  "currentDivision": 9,
+			  "highestDivision": 9,
+			  "promotionProgress": 0.56,
+			  "currentPlayerRanking": null
+			},
+			{
+			  "gameId": "fortnite",
+			  "trackguid": "hEKWqj",
+			  "accountId": "e7c388664e5442e89f30b396d9fa7183",
+			  "rankingType": "ranked-zb",
+			  "lastUpdated": "1970-01-01T00:00:00Z",
+			  "currentDivision": 9,
+			  "highestDivision": 9,
+			  "promotionProgress": 0,
+			  "currentPlayerRanking": null
+			},
+			{
+			  "gameId": "fortnite",
+			  "trackguid": "ch3353",
+			  "accountId": "e7c388664e5442e89f30b396d9fa7183",
+			  "rankingType": "ranked-br",
+			  "lastUpdated": "1970-01-01T00:00:00Z",
+			  "currentDivision": 9,
+			  "highestDivision": 9,
+			  "promotionProgress": 0,
+			  "currentPlayerRanking": null
+			},
+			{
+			  "gameId": "fortnite",
+			  "trackguid": "S4LT3D",
+			  "accountId": "e7c388664e5442e89f30b396d9fa7183",
+			  "rankingType": "ranked-br",
+			  "lastUpdated": "1970-01-01T00:00:00Z",
+			  "currentDivision": 9,
+			  "highestDivision": 9,
+			  "promotionProgress": 0,
+			  "currentPlayerRanking": null
+			},
+			{
+			  "gameId": "fortnite",
+			  "trackguid": "DR3AM5",
+			  "accountId": "e7c388664e5442e89f30b396d9fa7183",
+			  "rankingType": "ranked-figment-nobuild",
+			  "lastUpdated": "1970-01-01T00:00:00Z",
+			  "currentDivision": 9,
+			  "highestDivision": 9,
+			  "promotionProgress": 0,
+			  "currentPlayerRanking": null
+			},
+			{
+			  "gameId": "fortnite",
+			  "trackguid": "D13tDw",
+			  "accountId": "e7c388664e5442e89f30b396d9fa7183",
+			  "rankingType": "ranked-zb",
+			  "lastUpdated": "1970-01-01T00:00:00Z",
+			  "currentDivision": 9,
+			  "highestDivision": 9,
+			  "promotionProgress": 0,
+			  "currentPlayerRanking": null
+			},
+			{
+			  "gameId": "fortnite",
+			  "trackguid": "OiK9k9",
+			  "accountId": "e7c388664e5442e89f30b396d9fa7183",
+			  "rankingType": "ranked-br",
+			  "lastUpdated": "2023-11-05T19:51:28.002Z",
+			  "currentDivision": 9,
+			  "highestDivision": 9,
+			  "promotionProgress": 0.88,
+			  "currentPlayerRanking": null
+			},
+			{
+			  "gameId": "fortnite",
+			  "trackguid": "N4PK1N",
+			  "accountId": "e7c388664e5442e89f30b396d9fa7183",
+			  "rankingType": "ranked-br",
+			  "lastUpdated": "1970-01-01T00:00:00Z",
+			  "currentDivision": 9,
+			  "highestDivision": 9,
+			  "promotionProgress": 0,
+			  "currentPlayerRanking": null
+			},
+			{
+			  "gameId": "fortnite",
+			  "trackguid": "G0LD3N",
+			  "accountId": "e7c388664e5442e89f30b396d9fa7183",
+			  "rankingType": "ranked-figment-nobuild",
+			  "lastUpdated": "1970-01-01T00:00:00Z",
+			  "currentDivision": 9,
+			  "highestDivision": 9,
+			  "promotionProgress": 0,
+			  "currentPlayerRanking": null
+			},
+			{
+			  "gameId": "fortnite",
+			  "trackguid": "P0T4T0",
+			  "accountId": "e7c388664e5442e89f30b396d9fa7183",
+			  "rankingType": "ranked-zb",
+			  "lastUpdated": "1970-01-01T00:00:00Z",
+			  "currentDivision": 9,
+			  "highestDivision": 9,
+			  "promotionProgress": 0,
+			  "currentPlayerRanking": null
+			},
+			{
+			  "gameId": "fortnite",
+			  "trackguid": "Fr3SkA",
+			  "accountId": "e7c388664e5442e89f30b396d9fa7183",
+			  "rankingType": "ranked-br",
+			  "lastUpdated": "1970-01-01T00:00:00Z",
+			  "currentDivision": 9,
+			  "highestDivision": 9,
+			  "promotionProgress": 0,
+			  "currentPlayerRanking": null
+			},
+			{
+			  "gameId": "fortnite",
+			  "trackguid": "rr9qlw",
+			  "accountId": "e7c388664e5442e89f30b396d9fa7183",
+			  "rankingType": "delmar-competitive",
+			  "lastUpdated": "1970-01-01T00:00:00Z",
+			  "currentDivision": 9,
+			  "highestDivision": 9,
+			  "promotionProgress": 0,
+			  "currentPlayerRanking": null
+			},
+			{
+			  "gameId": "fortnite",
+			  "trackguid": "L4nC3r",
+			  "accountId": "e7c388664e5442e89f30b396d9fa7183",
+			  "rankingType": "ranked_blastberry_nobuild",
+			  "lastUpdated": "1970-01-01T00:00:00Z",
+			  "currentDivision": 9,
+			  "highestDivision": 9,
+			  "promotionProgress": 0,
+			  "currentPlayerRanking": null
+			},
+			{
+			  "gameId": "fortnite",
+			  "trackguid": "GL055Y",
+			  "accountId": "e7c388664e5442e89f30b396d9fa7183",
+			  "rankingType": "ranked-bling-nobuild",
+			  "lastUpdated": "1970-01-01T00:00:00Z",
+			  "currentDivision": 9,
+			  "highestDivision": 9,
+			  "promotionProgress": 0,
+			  "currentPlayerRanking": null
+			},
+			{
+			  "gameId": "fortnite",
+			  "trackguid": "W4FFL3",
+			  "accountId": "e7c388664e5442e89f30b396d9fa7183",
+			  "rankingType": "ranked_blastberry_nobuild",
+			  "lastUpdated": "1970-01-01T00:00:00Z",
+			  "currentDivision": 9,
+			  "highestDivision": 9,
+			  "promotionProgress": 0,
+			  "currentPlayerRanking": null
+			},
+			{
+			  "gameId": "fortnite",
+			  "trackguid": "8R1GHT",
+			  "accountId": "e7c388664e5442e89f30b396d9fa7183",
+			  "rankingType": "ranked-bling",
+			  "lastUpdated": "1970-01-01T00:00:00Z",
+			  "currentDivision": 9,
+			  "highestDivision": 9,
+			  "promotionProgress": 0,
+			  "currentPlayerRanking": null
+			},
+			{
+			  "gameId": "fortnite",
+			  "trackguid": "M4rC4S",
+			  "accountId": "e7c388664e5442e89f30b396d9fa7183",
+			  "rankingType": "ranked_blastberry_build",
+			  "lastUpdated": "1970-01-01T00:00:00Z",
+			  "currentDivision": 9,
+			  "highestDivision": 9,
+			  "promotionProgress": 0,
+			  "currentPlayerRanking": null
+			},
+			{
+			  "gameId": "fortnite",
+			  "trackguid": "rrhr6d",
+			  "accountId": "e7c388664e5442e89f30b396d9fa7183",
+			  "rankingType": "delmar-competitive",
+			  "lastUpdated": "1970-01-01T00:00:00Z",
+			  "currentDivision": 9,
+			  "highestDivision": 9,
+			  "promotionProgress": 0,
+			  "currentPlayerRanking": null
+			},
+			{
+			  "gameId": "fortnite",
+			  "trackguid": "Gl4ss1",
+			  "accountId": "e7c388664e5442e89f30b396d9fa7183",
+			  "rankingType": "ranked-br",
+			  "lastUpdated": "1970-01-01T00:00:00Z",
+			  "currentDivision": 9,
+			  "highestDivision": 9,
+			  "promotionProgress": 0,
+			  "currentPlayerRanking": null
+			},
+			{
+			  "gameId": "fortnite",
+			  "trackguid": "M3M0RY",
+			  "accountId": "e7c388664e5442e89f30b396d9fa7183",
+			  "rankingType": "ranked-figment-build",
+			  "lastUpdated": "1970-01-01T00:00:00Z",
+			  "currentDivision": 9,
+			  "highestDivision": 9,
+			  "promotionProgress": 0,
+			  "currentPlayerRanking": null
+			},
+			{
+			  "gameId": "fortnite",
+			  "trackguid": "SP1D3R",
+			  "accountId": "e7c388664e5442e89f30b396d9fa7183",
+			  "rankingType": "ranked-zb",
+			  "lastUpdated": "1970-01-01T00:00:00Z",
+			  "currentDivision": 9,
+			  "highestDivision": 9,
+			  "promotionProgress": 0,
+			  "currentPlayerRanking": null
+			},
+			{
+			  "gameId": "fortnite",
+			  "trackguid": "D3F3ND",
+			  "accountId": "e7c388664e5442e89f30b396d9fa7183",
+			  "rankingType": "ranked-figment-nobuild",
+			  "lastUpdated": "1970-01-01T00:00:00Z",
+			  "currentDivision": 9,
+			  "highestDivision": 9,
+			  "promotionProgress": 0,
+			  "currentPlayerRanking": null
+			},
+			{
+			  "gameId": "fortnite",
+			  "trackguid": "SUG4R",
+			  "accountId": "e7c388664e5442e89f30b396d9fa7183",
+			  "rankingType": "ranked_blastberry_build",
+			  "lastUpdated": "1970-01-01T00:00:00Z",
+			  "currentDivision": 9,
+			  "highestDivision": 9,
+			  "promotionProgress": 0,
+			  "currentPlayerRanking": null
+			},
+			{
+			  "gameId": "fortnite",
+			  "trackguid": "SP1C3",
+			  "accountId": "e7c388664e5442e89f30b396d9fa7183",
+			  "rankingType": "ranked_blastberry_nobuild",
+			  "lastUpdated": "1970-01-01T00:00:00Z",
+			  "currentDivision": 9,
+			  "highestDivision": 9,
+			  "promotionProgress": 0,
+			  "currentPlayerRanking": null
+			},
+			{
+			  "gameId": "fortnite",
+			  "trackguid": "P3PP3R",
+			  "accountId": "e7c388664e5442e89f30b396d9fa7183",
+			  "rankingType": "ranked_blastberry_build",
+			  "lastUpdated": "1970-01-01T00:00:00Z",
+			  "currentDivision": 9,
+			  "highestDivision": 9,
+			  "promotionProgress": 0,
+			  "currentPlayerRanking": null
+			},
+			{
+			  "gameId": "fortnite",
+			  "trackguid": "vidr1o",
+			  "accountId": "e7c388664e5442e89f30b396d9fa7183",
+			  "rankingType": "ranked-zb",
+			  "lastUpdated": "1970-01-01T00:00:00Z",
+			  "currentDivision": 9,
+			  "highestDivision": 9,
+			  "promotionProgress": 0,
+			  "currentPlayerRanking": null
+			},
+			{
+			  "gameId": "fortnite",
+			  "trackguid": "G4RL1C",
+			  "accountId": "e7c388664e5442e89f30b396d9fa7183",
+			  "rankingType": "ranked-feral",
+			  "lastUpdated": "1970-01-01T00:00:00Z",
+			  "currentDivision": 9,
+			  "highestDivision": 9,
+			  "promotionProgress": 0,
+			  "currentPlayerRanking": null
+			},
+			{
+			  "gameId": "fortnite",
+			  "trackguid": "rr36y9",
+			  "accountId": "e7c388664e5442e89f30b396d9fa7183",
+			  "rankingType": "delmar-competitive",
+			  "lastUpdated": "1970-01-01T00:00:00Z",
+			  "currentDivision": 9,
+			  "highestDivision": 9,
+			  "promotionProgress": 0,
+			  "currentPlayerRanking": null
+			},
+			{
+			  "gameId": "fortnite",
+			  "trackguid": "RU5T3D",
+			  "accountId": "e7c388664e5442e89f30b396d9fa7183",
+			  "rankingType": "ranked-figment-build",
+			  "lastUpdated": "1970-01-01T00:00:00Z",
+			  "currentDivision": 9,
+			  "highestDivision": 9,
+			  "promotionProgress": 0,
+			  "currentPlayerRanking": null
+			},
+			{
+			  "gameId": "fortnite",
+			  "trackguid": "D3F3AT",
+			  "accountId": "e7c388664e5442e89f30b396d9fa7183",
+			  "rankingType": "ranked-figment-build",
+			  "lastUpdated": "1970-01-01T00:00:00Z",
+			  "currentDivision": 9,
+			  "highestDivision": 9,
+			  "promotionProgress": 0,
+			  "currentPlayerRanking": null
+			},
+			{
+			  "gameId": "fortnite",
+			  "trackguid": "S4ngu1",
+			  "accountId": "e7c388664e5442e89f30b396d9fa7183",
+			  "rankingType": "ranked-br",
+			  "lastUpdated": "1970-01-01T00:00:00Z",
+			  "currentDivision": 9,
+			  "highestDivision": 9,
+			  "promotionProgress": 0,
+			  "currentPlayerRanking": null
+			},
+			{
+			  "gameId": "fortnite",
+			  "trackguid": "H4B1T5",
+			  "accountId": "e7c388664e5442e89f30b396d9fa7183",
+			  "rankingType": "ranked-feral",
+			  "lastUpdated": "1970-01-01T00:00:00Z",
+			  "currentDivision": 9,
+			  "highestDivision": 9,
+			  "promotionProgress": 0,
+			  "currentPlayerRanking": null
+			}
+		])
+	},
+
+	habaneroActiveBy: function(req, res){
+		res.json([
+			{
+			  "gameId": "fortnite",
+			  "trackguid": "OiK9k9",
+			  "rankingType": "ranked-br",
+			  "beginTime": "2023-11-02T07:00:18Z",
+			  "endTime": "2023-12-03T08:00:17Z",
+			  "divisionCount": 18
+			},
+			{
+			  "gameId": "fortnite",
+			  "trackguid": "hEKWqj",
+			  "rankingType": "ranked-zb",
+			  "beginTime": "2023-11-02T07:00:18Z",
+			  "endTime": "2023-12-03T08:00:17Z",
+			  "divisionCount": 18
+			}
+		  ])
 	},
 
 	versionCheck: function(req, res){

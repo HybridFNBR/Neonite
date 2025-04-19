@@ -126,18 +126,5 @@ module.exports = {
         res.json({
 			blockedUsers: []
 		})
-    },
-
-	notifications: function(req, res){
-		res.json({
-			"invites":0,
-			"pings":0
-		})
-	},
-
-	settingsPrivacy: function(req, res){
-		res.json({
-			"receiveInvites":"ALL","receiveIntentions":"ALL"
-		})
-	}
+    }
 }

@@ -1,6 +1,6 @@
 module.exports.routes = {
     'GET /launcher/api/public/distributionpoints': 'ApiController.distributionpoints',
-    'GET /launcher/api/public/assets/:platform/:catalogItemId/:appName': 'ApiController.launcherAssets',
+    'GET /launcher/api/public/assets/:platform/:catalogItemId/:appName': 'ApiController.launcherCatalogItem',
     'GET /Builds/Fortnite/Content/CloudDir/*.manifest':{ 
         action: "manifest",
         controller:'ApiController', 
@@ -17,6 +17,11 @@ module.exports.routes = {
     'ALL /api/v1/events/Fortnite/:event/history/:accountId': 'ApiController.eventHistory',
     'GET /api/v1/games/fortnite/tracks/query*': 'ApiController.habaneroTracks',
     'GET /api/v1/games/fortnite/trackprogress/:accountId': 'ApiController.habaneroProgress',
+    'GET /api/v1/games/fortnite/tracks/activeBy/*':{
+        action: "habaneroActiveBy",
+        controller:'ApiController', 
+        skipAssets: false
+    },
     'GET /fortnite/api/v2/versioncheck*': 'ApiController.versionCheck',
     'GET /fortnite/api/versioncheck*': 'ApiController.versionCheck',
     'GET /fortnite/api/version': 'ApiController.versionCheck',
