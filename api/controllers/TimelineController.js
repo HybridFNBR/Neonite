@@ -1473,6 +1473,63 @@ module.exports = {
             )
         }
 
+        if (version == 34.30 || version == 34.40) {
+            timeline.channels["client-events"]["states"][0]["activeEvents"].push(
+                {
+                    eventType: "GiftedTraveler_Phase1", //GiftedTraveler Buildup Stages(Daigo Portal Beams)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "GiftedTraveler_Phase2", //GiftedTraveler Buildup Stages(Daigo Portal Beams)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "GiftedTraveler_Phase3", //GiftedTraveler Buildup Stages(Daigo Portal Beams)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "GiftedTraveler_Phase4", //GiftedTraveler Buildup Stages(Daigo Portal Beams)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "GiftedTraveler_FinalPhase", //GiftedTraveler Buildup Stages(Daigo Portal Beams)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "GiftedTraveler_Observer_Phase1", //GiftedTraveler_Observer Buildup Stages(Death Star Stages)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "GiftedTraveler_Observer_Phase2", //GiftedTraveler_Observer Buildup Stages(Death Star Stages)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "GiftedTraveler_Observer_Phase3", //GiftedTraveler_Observer Buildup Stages(Death Star Stages)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "GiftedTraveler_Observer_Phase4", //GiftedTraveler_Observer Buildup Stages(Death Star Stages)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "GiftedTraveler_Observer_Phase5", //GiftedTraveler_Observer Buildup Stages(Death Star Stages)
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+               
+                                       
+            )
+        }
+
         if(versionGlobal == 10){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
