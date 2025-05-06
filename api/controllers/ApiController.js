@@ -1041,7 +1041,7 @@ module.exports = {
     },
 
 	epicSettings204: function(req, res){
-		res.sack(204).end()
+		res.status(204).end()
 	},
 
     epicSettings: function(req, res){
