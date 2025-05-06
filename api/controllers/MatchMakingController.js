@@ -55,7 +55,6 @@ module.exports = {
 			data.attributes[key] = value;
 		});
 		var payload = Buffer.from(JSON.stringify(data, null, 0)).toString('base64');
-		if(version >= 35.00){return res.status(404).end()}
 		res.json({
 			"serviceUrl": "ws://localhost:5595",
 			"ticketType": "mms-player",
@@ -113,6 +112,14 @@ module.exports = {
 
 	findPlayer: function(req, res){
 		res.json([])
+	},
+
+	verifyMatch: function(req, res){
+		res.json({
+			"account_id": req.body.account_id,
+			"data": req.body.data,
+			"allow":true
+		})
 	}
 }
 
