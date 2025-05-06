@@ -1,5 +1,6 @@
 const jsonwebtoken = require('jsonwebtoken');
 const NeoLog = require('../../structs/NeoLog')
+const {account} = require("../../config/defs")
 
 
 module.exports = {
@@ -2599,6 +2600,23 @@ module.exports = {
 
     wss: function(req, res){
       res.status(403)
+    },
+
+    productUsersSearch: function(req, res){
+      res.json({
+        productUsers: {
+          [req.body.productUserIds[0]]: {
+            accounts: [
+              {
+                accountId: account.accountId,
+                displayName: account.displayName,
+                identityProviderId: "epicgames",
+                lastLogin: "2025-05-06T13:59:46Z"
+              }
+            ]
+          }
+        }
+      });
     }
 }
 

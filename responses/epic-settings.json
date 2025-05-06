@@ -2,26 +2,24 @@
   "response": {
     "settings": [
       {
-        "namespace": "discovery-browser",
-        "settingName": "experience-browser",
+        "namespace": "stats",
+        "settingName": "show-in-leaderboard",
         "preferredValue": true,
         "preferredValueFromOrgLevel": true,
         "effectiveValue": true,
         "effectiveSource": "default",
-        "isOrgLevel": false,
+        "isOrgLevel": true,
         "definition": {
           "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
-          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
-          "namespace": "discovery-browser",
-          "settingName": "experience-browser",
+          "namespace": "stats",
+          "settingName": "show-in-leaderboard",
           "valueType": "boolean",
           "allowProductOverrides": "ageBrackets",
-          "inheritFromOrg": true,
           "translations": {
             "en": {
-              "label": "Content can be targeted for experience purposes",
-              "userNotice": "Determines if you can be targeted content, based on personal data, for experience purposes",
-              "parentNotice": "Determines if your child can be targeted content, based on personal data, for experience purposes"
+              "label": "Show on career leaderboard",
+              "userNotice": "Show on career leaderboard",
+              "parentNotice": "Show on career leaderboard"
             }
           },
           "options": [],
@@ -43,20 +41,17 @@
       {
         "namespace": "party",
         "settingName": "party-joinability",
-        "preferredValue": "Private",
-        "preferredValueUpdatedAt": 1692801510749,
-        "preferredValueFromOrgLevel": false,
-        "effectiveValue": "Private",
-        "effectiveSource": "preference",
-        "isOrgLevel": false,
+        "preferredValue": "Public",
+        "preferredValueFromOrgLevel": true,
+        "effectiveValue": "Public",
+        "effectiveSource": "default",
+        "isOrgLevel": true,
         "definition": {
           "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
-          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
           "namespace": "party",
           "settingName": "party-joinability",
           "valueType": "option",
           "allowProductOverrides": "ageBrackets",
-          "inheritFromOrg": true,
           "translations": {
             "en": {
               "label": "Party Privacy",
@@ -102,144 +97,24 @@
         }
       },
       {
-        "namespace": "prm",
-        "settingName": "functional",
+        "namespace": "discovery-browser",
+        "settingName": "experience-browser",
         "preferredValue": true,
         "preferredValueFromOrgLevel": true,
         "effectiveValue": true,
         "effectiveSource": "default",
-        "isOrgLevel": false,
+        "isOrgLevel": true,
         "definition": {
           "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
-          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
-          "namespace": "prm",
-          "settingName": "functional",
+          "namespace": "discovery-browser",
+          "settingName": "experience-browser",
           "valueType": "boolean",
           "allowProductOverrides": "ageBrackets",
-          "inheritFromOrg": true,
-          "translations": {
-            "en": {
-              "label": "Content can be targeted for functional purposes",
-              "userNotice": "Determines if you can be targeted content, based on personal data, for functional purposes",
-              "parentNotice": "Determines if your child can be targeted content, based on personal data, for functional purposes"
-            }
-          },
-          "options": [],
-          "restrictiveOrder": "falseRestrictive",
-          "userHidden": false,
-          "required": false,
-          "dataStorage": "raw",
-          "maximumScheduleWindowsPerDay": 0,
-          "ageBracket": {
-            "consentTypeRequired": "none",
-            "consentType": "none",
-            "applyConsentToEnforcedUsersOnly": false,
-            "defaultValue": true,
-            "defaultPreference": true,
-            "enforcedLimit": true
-          }
-        }
-      },
-      {
-        "namespace": "prm",
-        "settingName": "experience",
-        "preferredValue": true,
-        "preferredValueFromOrgLevel": true,
-        "effectiveValue": true,
-        "effectiveSource": "default",
-        "isOrgLevel": false,
-        "definition": {
-          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
-          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
-          "namespace": "prm",
-          "settingName": "experience",
-          "valueType": "boolean",
-          "allowProductOverrides": "ageBrackets",
-          "inheritFromOrg": true,
           "translations": {
             "en": {
               "label": "Content can be targeted for experience purposes",
               "userNotice": "Determines if you can be targeted content, based on personal data, for experience purposes",
               "parentNotice": "Determines if your child can be targeted content, based on personal data, for experience purposes"
-            }
-          },
-          "options": [],
-          "restrictiveOrder": "falseRestrictive",
-          "userHidden": false,
-          "required": false,
-          "dataStorage": "raw",
-          "maximumScheduleWindowsPerDay": 0,
-          "ageBracket": {
-            "consentTypeRequired": "none",
-            "consentType": "none",
-            "applyConsentToEnforcedUsersOnly": false,
-            "defaultValue": true,
-            "defaultPreference": true,
-            "enforcedLimit": true
-          }
-        }
-      },
-      {
-        "namespace": "prm",
-        "settingName": "marketing",
-        "preferredValue": true,
-        "preferredValueFromOrgLevel": true,
-        "effectiveValue": true,
-        "effectiveSource": "default",
-        "isOrgLevel": false,
-        "definition": {
-          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
-          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
-          "namespace": "prm",
-          "settingName": "marketing",
-          "valueType": "boolean",
-          "allowProductOverrides": "ageBrackets",
-          "inheritFromOrg": true,
-          "translations": {
-            "en": {
-              "label": "Content can be targeted for marketing purposes",
-              "userNotice": "Determines if you can be targeted content, based on personal data, for marketing purposes",
-              "parentNotice": "Determines if your child can be targeted content, based on personal data, for marketing purposes"
-            }
-          },
-          "options": [],
-          "restrictiveOrder": "falseRestrictive",
-          "userHidden": false,
-          "required": false,
-          "dataStorage": "raw",
-          "maximumScheduleWindowsPerDay": 0,
-          "ageBracket": {
-            "consentTypeRequired": "none",
-            "consentType": "none",
-            "applyConsentToEnforcedUsersOnly": false,
-            "defaultValue": true,
-            "defaultPreference": true,
-            "enforcedLimit": true
-          }
-        }
-      },
-      {
-        "namespace": "stats",
-        "settingName": "show-in-leaderboard",
-        "preferredValue": true,
-        "preferredValueUpdatedAt": 1712945737022,
-        "preferredValueFromOrgLevel": false,
-        "effectiveValue": true,
-        "effectiveSource": "preference",
-        "isOrgLevel": false,
-        "definition": {
-          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
-          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
-          "namespace": "stats",
-          "settingName": "show-in-leaderboard",
-          "valueType": "boolean",
-          "allowProductOverrides": "ageBrackets",
-          "inheritFromOrg": true,
-          "translations": {
-            "en": {
-              "label": "Show on career leaderboard",
-              "userNotice": "Show on career leaderboard",
-              "parentNotice": "Show on career leaderboard"
             }
           },
           "options": [],
@@ -268,12 +143,10 @@
         "isOrgLevel": true,
         "definition": {
           "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
-          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
           "namespace": "ratings",
           "settingName": "ratings-body",
           "valueType": "option",
           "allowProductOverrides": "ageBrackets",
-          "inheritFromOrg": true,
           "translations": {
             "en": {
               "label": "Rating Body",
@@ -439,22 +312,19 @@
       {
         "namespace": "ratings",
         "settingName": "limit-esrb",
-        "preferredValue": "ESRB_AGE_T",
+        "preferredValue": "Unrated",
         "preferredValueFromOrgLevel": true,
-        "parentLimit": "ESRB_AGE_T",
-        "parentLimitFromOrgLevel": false,
-        "parentLimitUpdatedAt": 1721737772452,
-        "effectiveValue": "ESRB_AGE_T",
+        "parentLimit": "Unrated",
+        "parentLimitFromOrgLevel": true,
+        "effectiveValue": "Unrated",
         "effectiveSource": "default",
-        "isOrgLevel": false,
+        "isOrgLevel": true,
         "definition": {
           "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
-          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
           "namespace": "ratings",
           "settingName": "limit-esrb",
           "valueType": "option",
           "allowProductOverrides": "ageBrackets",
-          "inheritFromOrg": true,
           "translations": {
             "en": {
               "label": "ESRB limit",
@@ -488,6 +358,24 @@
                   "parentNotice": "TBD"
                 }
               }
+            },
+            {
+              "value": "ESRB_AGE_M",
+              "translations": {
+                "en": {
+                  "label": "Mature 17+",
+                  "parentNotice": "TBD"
+                }
+              }
+            },
+            {
+              "value": "Unrated",
+              "translations": {
+                "en": {
+                  "label": "Unrated",
+                  "parentNotice": "TBD"
+                }
+              }
             }
           ],
           "restrictiveOrder": "firstRestrictive",
@@ -509,22 +397,19 @@
       {
         "namespace": "ratings",
         "settingName": "limit-pegi",
-        "preferredValue": "PEGI_AGE_12",
+        "preferredValue": "Unrated",
         "preferredValueFromOrgLevel": true,
-        "parentLimit": "PEGI_AGE_12",
-        "parentLimitFromOrgLevel": false,
-        "parentLimitUpdatedAt": 1721737772452,
-        "effectiveValue": "PEGI_AGE_12",
+        "parentLimit": "Unrated",
+        "parentLimitFromOrgLevel": true,
+        "effectiveValue": "Unrated",
         "effectiveSource": "default",
-        "isOrgLevel": false,
+        "isOrgLevel": true,
         "definition": {
           "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
-          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
           "namespace": "ratings",
           "settingName": "limit-pegi",
           "valueType": "option",
           "allowProductOverrides": "ageBrackets",
-          "inheritFromOrg": true,
           "translations": {
             "en": {
               "label": "PEGI limit",
@@ -558,6 +443,33 @@
                   "parentNotice": "TBD"
                 }
               }
+            },
+            {
+              "value": "PEGI_AGE_16",
+              "translations": {
+                "en": {
+                  "label": "PEGI 16",
+                  "parentNotice": "TBD"
+                }
+              }
+            },
+            {
+              "value": "PEGI_AGE_18",
+              "translations": {
+                "en": {
+                  "label": "PEGI 18",
+                  "parentNotice": "TBD"
+                }
+              }
+            },
+            {
+              "value": "Unrated",
+              "translations": {
+                "en": {
+                  "label": "Unrated",
+                  "parentNotice": "TBD"
+                }
+              }
             }
           ],
           "restrictiveOrder": "firstRestrictive",
@@ -579,22 +491,19 @@
       {
         "namespace": "ratings",
         "settingName": "limit-usk",
-        "preferredValue": "USK_AGE_16",
+        "preferredValue": "Unrated",
         "preferredValueFromOrgLevel": true,
-        "parentLimit": "USK_AGE_16",
-        "parentLimitFromOrgLevel": false,
-        "parentLimitUpdatedAt": 1721737772452,
-        "effectiveValue": "USK_AGE_16",
+        "parentLimit": "Unrated",
+        "parentLimitFromOrgLevel": true,
+        "effectiveValue": "Unrated",
         "effectiveSource": "default",
-        "isOrgLevel": false,
+        "isOrgLevel": true,
         "definition": {
           "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
-          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
           "namespace": "ratings",
           "settingName": "limit-usk",
           "valueType": "option",
           "allowProductOverrides": "ageBrackets",
-          "inheritFromOrg": true,
           "translations": {
             "en": {
               "label": "USK limit",
@@ -637,6 +546,15 @@
                   "parentNotice": "TBD"
                 }
               }
+            },
+            {
+              "value": "Unrated",
+              "translations": {
+                "en": {
+                  "label": "Unrated",
+                  "parentNotice": "TBD"
+                }
+              }
             }
           ],
           "restrictiveOrder": "firstRestrictive",
@@ -658,22 +576,19 @@
       {
         "namespace": "ratings",
         "settingName": "limit-grac",
-        "preferredValue": "GRAC_AGE_12",
+        "preferredValue": "GRAC_AGE_ADULT",
         "preferredValueFromOrgLevel": true,
-        "parentLimit": "GRAC_AGE_12",
-        "parentLimitFromOrgLevel": false,
-        "parentLimitUpdatedAt": 1721737772453,
-        "effectiveValue": "GRAC_AGE_12",
-        "effectiveSource": "default",
-        "isOrgLevel": false,
+        "parentLimit": "GRAC_AGE_15",
+        "parentLimitFromOrgLevel": true,
+        "effectiveValue": "GRAC_AGE_15",
+        "effectiveSource": "parentLimit",
+        "isOrgLevel": true,
         "definition": {
           "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
-          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
           "namespace": "ratings",
           "settingName": "limit-grac",
           "valueType": "option",
           "allowProductOverrides": "ageBrackets",
-          "inheritFromOrg": true,
           "translations": {
             "en": {
               "label": "GRAC limit",
@@ -695,6 +610,24 @@
               "translations": {
                 "en": {
                   "label": "12+",
+                  "parentNotice": "TBD"
+                }
+              }
+            },
+            {
+              "value": "GRAC_AGE_15",
+              "translations": {
+                "en": {
+                  "label": "15+",
+                  "parentNotice": "TBD"
+                }
+              }
+            },
+            {
+              "value": "GRAC_AGE_ADULT",
+              "translations": {
+                "en": {
+                  "label": "19+",
                   "parentNotice": "TBD"
                 }
               }
@@ -720,22 +653,19 @@
       {
         "namespace": "ratings",
         "settingName": "limit-generic",
-        "preferredValue": "GEN_AGE_12",
+        "preferredValue": "Unrated",
         "preferredValueFromOrgLevel": true,
-        "parentLimit": "GEN_AGE_12",
-        "parentLimitFromOrgLevel": false,
-        "parentLimitUpdatedAt": 1721737772452,
-        "effectiveValue": "GEN_AGE_12",
+        "parentLimit": "Unrated",
+        "parentLimitFromOrgLevel": true,
+        "effectiveValue": "Unrated",
         "effectiveSource": "default",
-        "isOrgLevel": false,
+        "isOrgLevel": true,
         "definition": {
           "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
-          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
           "namespace": "ratings",
           "settingName": "limit-generic",
           "valueType": "option",
           "allowProductOverrides": "ageBrackets",
-          "inheritFromOrg": true,
           "translations": {
             "en": {
               "label": "Generic limit",
@@ -769,6 +699,33 @@
                   "parentNotice": "TBD"
                 }
               }
+            },
+            {
+              "value": "GEN_AGE_16",
+              "translations": {
+                "en": {
+                  "label": "16+",
+                  "parentNotice": "TBD"
+                }
+              }
+            },
+            {
+              "value": "GEN_AGE_18",
+              "translations": {
+                "en": {
+                  "label": "18+",
+                  "parentNotice": "TBD"
+                }
+              }
+            },
+            {
+              "value": "Unrated",
+              "translations": {
+                "en": {
+                  "label": "Unrated",
+                  "parentNotice": "TBD"
+                }
+              }
             }
           ],
           "restrictiveOrder": "firstRestrictive",
@@ -790,22 +747,19 @@
       {
         "namespace": "ratings",
         "settingName": "limit-acb",
-        "preferredValue": "ACB_AGE_M",
+        "preferredValue": "ACB_AGE_R18",
         "preferredValueFromOrgLevel": true,
-        "parentLimit": "ACB_AGE_M",
-        "parentLimitFromOrgLevel": false,
-        "parentLimitUpdatedAt": 1721737772452,
-        "effectiveValue": "ACB_AGE_M",
+        "parentLimit": "ACB_AGE_R18",
+        "parentLimitFromOrgLevel": true,
+        "effectiveValue": "ACB_AGE_R18",
         "effectiveSource": "default",
-        "isOrgLevel": false,
+        "isOrgLevel": true,
         "definition": {
           "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
-          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
           "namespace": "ratings",
           "settingName": "limit-acb",
           "valueType": "option",
           "allowProductOverrides": "ageBrackets",
-          "inheritFromOrg": true,
           "translations": {
             "en": {
               "label": "ACB limit",
@@ -839,6 +793,24 @@
                   "parentNotice": "TBD"
                 }
               }
+            },
+            {
+              "value": "ACB_AGE_MA15",
+              "translations": {
+                "en": {
+                  "label": "Restricted 15",
+                  "parentNotice": "TBD"
+                }
+              }
+            },
+            {
+              "value": "ACB_AGE_R18",
+              "translations": {
+                "en": {
+                  "label": "Restricted 18",
+                  "parentNotice": "TBD"
+                }
+              }
             }
           ],
           "restrictiveOrder": "firstRestrictive",
@@ -860,22 +832,19 @@
       {
         "namespace": "ratings",
         "settingName": "limit-classind",
-        "preferredValue": "CLASSIND_AGE_12",
+        "preferredValue": "CLASSIND_AGE_18",
         "preferredValueFromOrgLevel": true,
-        "parentLimit": "CLASSIND_AGE_12",
-        "parentLimitFromOrgLevel": false,
-        "parentLimitUpdatedAt": 1721737772452,
-        "effectiveValue": "CLASSIND_AGE_12",
+        "parentLimit": "CLASSIND_AGE_18",
+        "parentLimitFromOrgLevel": true,
+        "effectiveValue": "CLASSIND_AGE_18",
         "effectiveSource": "default",
-        "isOrgLevel": false,
+        "isOrgLevel": true,
         "definition": {
           "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
-          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
           "namespace": "ratings",
           "settingName": "limit-classind",
           "valueType": "option",
           "allowProductOverrides": "ageBrackets",
-          "inheritFromOrg": true,
           "translations": {
             "en": {
               "label": "ClassInd limit",
@@ -909,6 +878,33 @@
                   "parentNotice": "TBD"
                 }
               }
+            },
+            {
+              "value": "CLASSIND_AGE_14",
+              "translations": {
+                "en": {
+                  "label": "14 years",
+                  "parentNotice": "TBD"
+                }
+              }
+            },
+            {
+              "value": "CLASSIND_AGE_16",
+              "translations": {
+                "en": {
+                  "label": "16 years",
+                  "parentNotice": "TBD"
+                }
+              }
+            },
+            {
+              "value": "CLASSIND_AGE_18",
+              "translations": {
+                "en": {
+                  "label": "18 years",
+                  "parentNotice": "TBD"
+                }
+              }
             }
           ],
           "restrictiveOrder": "firstRestrictive",
@@ -930,22 +926,19 @@
       {
         "namespace": "ratings",
         "settingName": "limit-russia",
-        "preferredValue": "RUSSIA_AGE_12",
+        "preferredValue": "RUSSIA_AGE_18",
         "preferredValueFromOrgLevel": true,
-        "parentLimit": "RUSSIA_AGE_12",
-        "parentLimitFromOrgLevel": false,
-        "parentLimitUpdatedAt": 1721737772452,
-        "effectiveValue": "RUSSIA_AGE_12",
+        "parentLimit": "RUSSIA_AGE_18",
+        "parentLimitFromOrgLevel": true,
+        "effectiveValue": "RUSSIA_AGE_18",
         "effectiveSource": "default",
-        "isOrgLevel": false,
+        "isOrgLevel": true,
         "definition": {
           "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
-          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
           "namespace": "ratings",
           "settingName": "limit-russia",
           "valueType": "option",
           "allowProductOverrides": "ageBrackets",
-          "inheritFromOrg": true,
           "translations": {
             "en": {
               "label": "Russia limit",
@@ -979,6 +972,24 @@
                   "parentNotice": "TBD"
                 }
               }
+            },
+            {
+              "value": "RUSSIA_AGE_16",
+              "translations": {
+                "en": {
+                  "label": "16+",
+                  "parentNotice": "TBD"
+                }
+              }
+            },
+            {
+              "value": "RUSSIA_AGE_18",
+              "translations": {
+                "en": {
+                  "label": "18+",
+                  "parentNotice": "TBD"
+                }
+              }
             }
           ],
           "restrictiveOrder": "firstRestrictive",
@@ -1000,22 +1011,19 @@
       {
         "namespace": "ratings",
         "settingName": "limit-oflc",
-        "preferredValue": "OFLC_AGE_13",
+        "preferredValue": "Unrated",
         "preferredValueFromOrgLevel": true,
-        "parentLimit": "OFLC_AGE_13",
-        "parentLimitFromOrgLevel": false,
-        "parentLimitUpdatedAt": 1721737772452,
-        "effectiveValue": "OFLC_AGE_13",
+        "parentLimit": "Unrated",
+        "parentLimitFromOrgLevel": true,
+        "effectiveValue": "Unrated",
         "effectiveSource": "default",
-        "isOrgLevel": false,
+        "isOrgLevel": true,
         "definition": {
           "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
-          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
           "namespace": "ratings",
           "settingName": "limit-oflc",
           "valueType": "option",
           "allowProductOverrides": "ageBrackets",
-          "inheritFromOrg": true,
           "translations": {
             "en": {
               "label": "OFLC limit",
@@ -1049,6 +1057,42 @@
                   "parentNotice": "TBD"
                 }
               }
+            },
+            {
+              "value": "OFLC_AGE_R15",
+              "translations": {
+                "en": {
+                  "label": "R15",
+                  "parentNotice": "TBD"
+                }
+              }
+            },
+            {
+              "value": "OFLC_AGE_16",
+              "translations": {
+                "en": {
+                  "label": "R16",
+                  "parentNotice": "TBD"
+                }
+              }
+            },
+            {
+              "value": "OFLC_AGE_18",
+              "translations": {
+                "en": {
+                  "label": "R18",
+                  "parentNotice": "TBD"
+                }
+              }
+            },
+            {
+              "value": "Unrated",
+              "translations": {
+                "en": {
+                  "label": "Unrated",
+                  "parentNotice": "TBD"
+                }
+              }
             }
           ],
           "restrictiveOrder": "firstRestrictive",
@@ -1070,22 +1114,19 @@
       {
         "namespace": "ratings",
         "settingName": "limit-fpb",
-        "preferredValue": "FPB_AGE_13",
+        "preferredValue": "Unrated",
         "preferredValueFromOrgLevel": true,
-        "parentLimit": "FPB_AGE_13",
-        "parentLimitFromOrgLevel": false,
-        "parentLimitUpdatedAt": 1721737772453,
-        "effectiveValue": "FPB_AGE_13",
+        "parentLimit": "Unrated",
+        "parentLimitFromOrgLevel": true,
+        "effectiveValue": "Unrated",
         "effectiveSource": "default",
-        "isOrgLevel": false,
+        "isOrgLevel": true,
         "definition": {
           "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
-          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
           "namespace": "ratings",
           "settingName": "limit-fpb",
           "valueType": "option",
           "allowProductOverrides": "ageBrackets",
-          "inheritFromOrg": true,
           "translations": {
             "en": {
               "label": "FPB limit",
@@ -1128,6 +1169,33 @@
                   "parentNotice": "TBD"
                 }
               }
+            },
+            {
+              "value": "FPB_AGE_16",
+              "translations": {
+                "en": {
+                  "label": "16",
+                  "parentNotice": "TBD"
+                }
+              }
+            },
+            {
+              "value": "FPB_AGE_18",
+              "translations": {
+                "en": {
+                  "label": "18",
+                  "parentNotice": "TBD"
+                }
+              }
+            },
+            {
+              "value": "Unrated",
+              "translations": {
+                "en": {
+                  "label": "Unrated",
+                  "parentNotice": "TBD"
+                }
+              }
             }
           ],
           "restrictiveOrder": "firstRestrictive",
@@ -1149,22 +1217,19 @@
       {
         "namespace": "ratings",
         "settingName": "limit-cero",
-        "preferredValue": "CERO_AGE_15",
+        "preferredValue": "Unrated",
         "preferredValueFromOrgLevel": true,
-        "parentLimit": "CERO_AGE_15",
-        "parentLimitFromOrgLevel": false,
-        "parentLimitUpdatedAt": 1721737772453,
-        "effectiveValue": "CERO_AGE_15",
+        "parentLimit": "Unrated",
+        "parentLimitFromOrgLevel": true,
+        "effectiveValue": "Unrated",
         "effectiveSource": "default",
-        "isOrgLevel": false,
+        "isOrgLevel": true,
         "definition": {
           "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
-          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
           "namespace": "ratings",
           "settingName": "limit-cero",
           "valueType": "option",
           "allowProductOverrides": "ageBrackets",
-          "inheritFromOrg": true,
           "translations": {
             "en": {
               "label": "CERO limit",
@@ -1198,6 +1263,33 @@
                   "parentNotice": "TBD"
                 }
               }
+            },
+            {
+              "value": "CERO_AGE_17",
+              "translations": {
+                "en": {
+                  "label": "CERO D",
+                  "parentNotice": "TBD"
+                }
+              }
+            },
+            {
+              "value": "CERO_AGE_18",
+              "translations": {
+                "en": {
+                  "label": "CERO Z",
+                  "parentNotice": "TBD"
+                }
+              }
+            },
+            {
+              "value": "Unrated",
+              "translations": {
+                "en": {
+                  "label": "Unrated",
+                  "parentNotice": "TBD"
+                }
+              }
             }
           ],
           "restrictiveOrder": "firstRestrictive",
@@ -1219,22 +1311,19 @@
       {
         "namespace": "ratings",
         "settingName": "limit-csrr",
-        "preferredValue": "CSRR_AGE_12",
+        "preferredValue": "Unrated",
         "preferredValueFromOrgLevel": true,
-        "parentLimit": "CSRR_AGE_12",
-        "parentLimitFromOrgLevel": false,
-        "parentLimitUpdatedAt": 1721737772453,
-        "effectiveValue": "CSRR_AGE_12",
+        "parentLimit": "Unrated",
+        "parentLimitFromOrgLevel": true,
+        "effectiveValue": "Unrated",
         "effectiveSource": "default",
-        "isOrgLevel": false,
+        "isOrgLevel": true,
         "definition": {
           "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
-          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
           "namespace": "ratings",
           "settingName": "limit-csrr",
           "valueType": "option",
           "allowProductOverrides": "ageBrackets",
-          "inheritFromOrg": true,
           "translations": {
             "en": {
               "label": "CSRR limit",
@@ -1268,6 +1357,33 @@
                   "parentNotice": "TBD"
                 }
               }
+            },
+            {
+              "value": "CSRR_AGE_15",
+              "translations": {
+                "en": {
+                  "label": "PG15",
+                  "parentNotice": "TBD"
+                }
+              }
+            },
+            {
+              "value": "CSRR_AGE_18",
+              "translations": {
+                "en": {
+                  "label": "R",
+                  "parentNotice": "TBD"
+                }
+              }
+            },
+            {
+              "value": "Unrated",
+              "translations": {
+                "en": {
+                  "label": "Unrated",
+                  "parentNotice": "TBD"
+                }
+              }
             }
           ],
           "restrictiveOrder": "firstRestrictive",
@@ -1289,22 +1405,19 @@
       {
         "namespace": "ratings",
         "settingName": "limit-gcam",
-        "preferredValue": "GCAM_AGE_12",
+        "preferredValue": "Unrated",
         "preferredValueFromOrgLevel": true,
-        "parentLimit": "GCAM_AGE_12",
-        "parentLimitFromOrgLevel": false,
-        "parentLimitUpdatedAt": 1721737772453,
-        "effectiveValue": "GCAM_AGE_12",
+        "parentLimit": "Unrated",
+        "parentLimitFromOrgLevel": true,
+        "effectiveValue": "Unrated",
         "effectiveSource": "default",
-        "isOrgLevel": false,
+        "isOrgLevel": true,
         "definition": {
           "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
-          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
           "namespace": "ratings",
           "settingName": "limit-gcam",
           "valueType": "option",
           "allowProductOverrides": "ageBrackets",
-          "inheritFromOrg": true,
           "translations": {
             "en": {
               "label": "GCAM limit",
@@ -1338,6 +1451,33 @@
                   "parentNotice": "TBD"
                 }
               }
+            },
+            {
+              "value": "GCAM_AGE_16",
+              "translations": {
+                "en": {
+                  "label": "16",
+                  "parentNotice": "TBD"
+                }
+              }
+            },
+            {
+              "value": "GCAM_AGE_18",
+              "translations": {
+                "en": {
+                  "label": "18",
+                  "parentNotice": "TBD"
+                }
+              }
+            },
+            {
+              "value": "Unrated",
+              "translations": {
+                "en": {
+                  "label": "Unrated",
+                  "parentNotice": "TBD"
+                }
+              }
             }
           ],
           "restrictiveOrder": "firstRestrictive",
@@ -1359,22 +1499,19 @@
       {
         "namespace": "ratings",
         "settingName": "limit-mro",
-        "preferredValue": "MRO_AGE_12",
+        "preferredValue": "Unrated",
         "preferredValueFromOrgLevel": true,
-        "parentLimit": "MRO_AGE_12",
-        "parentLimitFromOrgLevel": false,
-        "parentLimitUpdatedAt": 1721737772453,
-        "effectiveValue": "MRO_AGE_12",
+        "parentLimit": "Unrated",
+        "parentLimitFromOrgLevel": true,
+        "effectiveValue": "Unrated",
         "effectiveSource": "default",
-        "isOrgLevel": false,
+        "isOrgLevel": true,
         "definition": {
           "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
-          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
           "namespace": "ratings",
           "settingName": "limit-mro",
           "valueType": "option",
           "allowProductOverrides": "ageBrackets",
-          "inheritFromOrg": true,
           "translations": {
             "en": {
               "label": "MRO limit",
@@ -1408,6 +1545,42 @@
                   "parentNotice": "TBD"
                 }
               }
+            },
+            {
+              "value": "MRO_AGE_16",
+              "translations": {
+                "en": {
+                  "label": "16",
+                  "parentNotice": "TBD"
+                }
+              }
+            },
+            {
+              "value": "MRO_AGE_18",
+              "translations": {
+                "en": {
+                  "label": "18",
+                  "parentNotice": "TBD"
+                }
+              }
+            },
+            {
+              "value": "MRO_AGE_21",
+              "translations": {
+                "en": {
+                  "label": "21",
+                  "parentNotice": "TBD"
+                }
+              }
+            },
+            {
+              "value": "Unrated",
+              "translations": {
+                "en": {
+                  "label": "Unrated",
+                  "parentNotice": "TBD"
+                }
+              }
             }
           ],
           "restrictiveOrder": "firstRestrictive",
@@ -1427,28 +1600,26 @@
         }
       },
       {
-        "namespace": "profile",
-        "settingName": "require-pin-to-add-friend",
+        "namespace": "purchases",
+        "settingName": "require-pin-to-make-purchases",
         "preferredValue": false,
         "preferredValueFromOrgLevel": true,
         "parentLimit": false,
         "parentLimitFromOrgLevel": true,
-        "parentLimitUpdatedAt": 1663702993922,
         "effectiveValue": false,
         "effectiveSource": "default",
-        "isOrgLevel": false,
+        "isOrgLevel": true,
         "definition": {
           "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
-          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
-          "namespace": "profile",
-          "settingName": "require-pin-to-add-friend",
+          "namespace": "purchases",
+          "settingName": "require-pin-to-make-purchases",
           "valueType": "boolean",
-          "allowProductOverrides": "ageBrackets",
-          "inheritFromOrg": true,
+          "allowProductOverrides": "none",
           "translations": {
             "en": {
-              "label": "Require PIN to add Epic friends",
-              "parentNotice": "<b>On:</b> Each time your child tries to send or accept an Epic Games friend request, you will need to enter your PIN. If a game or service doesn't yet support this setting, friend requests won't be permitted. This setting doesn’t affect friends systems on gaming platforms such as Playstation, Steam, XBox, and Switch."
+              "label": "Require PIN to make purchases",
+              "userNotice": "Determines if you need a parent PIN to make purchases",
+              "parentNotice": "Determines if your child is required to provide a parent PIN to make pruchases"
             }
           },
           "options": [],
@@ -1469,105 +1640,204 @@
         }
       },
       {
-        "namespace": "profile",
-        "settingName": "allow-non-squad-users-to-see-my-username",
+        "namespace": "prm",
+        "settingName": "experience",
         "preferredValue": true,
-        "preferredValueUpdatedAt": 1740494993181,
-        "preferredValueFromOrgLevel": false,
-        "effectiveValue": true,
-        "effectiveSource": "preference",
-        "isOrgLevel": false,
-        "definition": {
-          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
-          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
-          "namespace": "profile",
-          "settingName": "allow-non-squad-users-to-see-my-username",
-          "valueType": "boolean",
-          "allowProductOverrides": "ageBrackets",
-          "inheritFromOrg": true,
-          "translations": {
-            "en": {
-              "label": "Display username to non-squad users",
-              "userNotice": "Determines if your username can be shown to non-squad users",
-              "parentNotice": "Determines if your child''s username can be shown to non-squad users"
-            }
-          },
-          "options": [],
-          "restrictiveOrder": "falseRestrictive",
-          "userHidden": false,
-          "required": false,
-          "dataStorage": "raw",
-          "maximumScheduleWindowsPerDay": 0,
-          "ageBracket": {
-            "consentTypeRequired": "none",
-            "consentType": "none",
-            "applyConsentToEnforcedUsersOnly": false,
-            "defaultValue": true,
-            "defaultPreference": true
-          }
-        }
-      },
-      {
-        "namespace": "profile",
-        "settingName": "can-see-player-usernames-from-other-squads",
-        "preferredValue": true,
-        "preferredValueUpdatedAt": 1740494993181,
-        "preferredValueFromOrgLevel": false,
-        "effectiveValue": true,
-        "effectiveSource": "preference",
-        "isOrgLevel": false,
-        "definition": {
-          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
-          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
-          "namespace": "profile",
-          "settingName": "can-see-player-usernames-from-other-squads",
-          "valueType": "boolean",
-          "allowProductOverrides": "ageBrackets",
-          "inheritFromOrg": true,
-          "translations": {
-            "en": {
-              "label": "Can see usernames of players from other squads",
-              "userNotice": "Determines if you can see usernames of players from other squads",
-              "parentNotice": "Determines if your child can see usernames of players from other squads"
-            }
-          },
-          "options": [],
-          "restrictiveOrder": "falseRestrictive",
-          "userHidden": false,
-          "required": false,
-          "dataStorage": "raw",
-          "maximumScheduleWindowsPerDay": 0,
-          "ageBracket": {
-            "consentTypeRequired": "none",
-            "consentType": "none",
-            "applyConsentToEnforcedUsersOnly": false,
-            "defaultValue": true,
-            "defaultPreference": true
-          }
-        }
-      },
-      {
-        "namespace": "profile",
-        "settingName": "playtime-reporting-frequency",
-        "preferredValue": "never",
         "preferredValueFromOrgLevel": true,
-        "parentLimit": "never",
-        "parentLimitFromOrgLevel": true,
-        "effectiveValue": "never",
+        "effectiveValue": true,
         "effectiveSource": "default",
-        "isOrgLevel": false,
+        "isOrgLevel": true,
         "definition": {
           "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
-          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
-          "namespace": "profile",
-          "settingName": "playtime-reporting-frequency",
+          "namespace": "prm",
+          "settingName": "experience",
+          "valueType": "boolean",
+          "allowProductOverrides": "ageBrackets",
+          "translations": {
+            "en": {
+              "label": "Content can be targeted for experience purposes",
+              "userNotice": "Determines if you can be targeted content, based on personal data, for experience purposes",
+              "parentNotice": "Determines if your child can be targeted content, based on personal data, for experience purposes"
+            }
+          },
+          "options": [],
+          "restrictiveOrder": "falseRestrictive",
+          "userHidden": false,
+          "required": false,
+          "dataStorage": "raw",
+          "maximumScheduleWindowsPerDay": 0,
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentType": "none",
+            "applyConsentToEnforcedUsersOnly": false,
+            "defaultValue": true,
+            "defaultPreference": true,
+            "enforcedLimit": true
+          }
+        }
+      },
+      {
+        "namespace": "prm",
+        "settingName": "functional",
+        "preferredValue": true,
+        "preferredValueFromOrgLevel": true,
+        "effectiveValue": true,
+        "effectiveSource": "default",
+        "isOrgLevel": true,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "namespace": "prm",
+          "settingName": "functional",
+          "valueType": "boolean",
+          "allowProductOverrides": "ageBrackets",
+          "translations": {
+            "en": {
+              "label": "Content can be targeted for functional purposes",
+              "userNotice": "Determines if you can be targeted content, based on personal data, for functional purposes",
+              "parentNotice": "Determines if your child can be targeted content, based on personal data, for functional purposes"
+            }
+          },
+          "options": [],
+          "restrictiveOrder": "falseRestrictive",
+          "userHidden": false,
+          "required": false,
+          "dataStorage": "raw",
+          "maximumScheduleWindowsPerDay": 0,
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentType": "none",
+            "applyConsentToEnforcedUsersOnly": false,
+            "defaultValue": true,
+            "defaultPreference": true,
+            "enforcedLimit": true
+          }
+        }
+      },
+      {
+        "namespace": "prm",
+        "settingName": "marketing",
+        "preferredValue": true,
+        "preferredValueFromOrgLevel": true,
+        "effectiveValue": true,
+        "effectiveSource": "default",
+        "isOrgLevel": true,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "namespace": "prm",
+          "settingName": "marketing",
+          "valueType": "boolean",
+          "allowProductOverrides": "ageBrackets",
+          "translations": {
+            "en": {
+              "label": "Content can be targeted for marketing purposes",
+              "userNotice": "Determines if you can be targeted content, based on personal data, for marketing purposes",
+              "parentNotice": "Determines if your child can be targeted content, based on personal data, for marketing purposes"
+            }
+          },
+          "options": [],
+          "restrictiveOrder": "falseRestrictive",
+          "userHidden": false,
+          "required": false,
+          "dataStorage": "raw",
+          "maximumScheduleWindowsPerDay": 0,
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentType": "none",
+            "applyConsentToEnforcedUsersOnly": false,
+            "defaultValue": true,
+            "defaultPreference": true,
+            "enforcedLimit": true
+          }
+        }
+      },
+      {
+        "namespace": "friends",
+        "settingName": "mutual-friends-visibility",
+        "preferredValue": "friends",
+        "preferredValueUpdatedAt": 1741962030395,
+        "preferredValueFromOrgLevel": true,
+        "effectiveValue": "friends",
+        "effectiveSource": "preference",
+        "isOrgLevel": true,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "namespace": "friends",
+          "settingName": "mutual-friends-visibility",
           "valueType": "option",
           "allowProductOverrides": "ageBrackets",
-          "inheritFromOrg": true,
           "translations": {
             "en": {
-              "label": "Receive weekly playtime tracking reports",
-              "parentNotice": "Receive weekly playtime tracking reports"
+              "label": "TBD",
+              "userNotice": "TBD",
+              "parentNotice": "TBD"
+            }
+          },
+          "options": [
+            {
+              "value": "none",
+              "translations": {
+                "en": {
+                  "label": "Private",
+                  "userNotice": "TBD",
+                  "parentNotice": "TBD"
+                }
+              }
+            },
+            {
+              "value": "friends",
+              "translations": {
+                "en": {
+                  "label": "Friends Only",
+                  "parentNotice": "TODO"
+                }
+              }
+            },
+            {
+              "value": "all",
+              "translations": {
+                "en": {
+                  "label": "Public",
+                  "userNotice": "TBD",
+                  "parentNotice": "TBD"
+                }
+              }
+            }
+          ],
+          "restrictiveOrder": "firstRestrictive",
+          "userHidden": false,
+          "required": false,
+          "dataStorage": "raw",
+          "maximumScheduleWindowsPerDay": 0,
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentType": "none",
+            "applyConsentToEnforcedUsersOnly": false,
+            "defaultValue": "all",
+            "defaultPreference": "all",
+            "enforcedLimit": "all"
+          }
+        }
+      },
+      {
+        "namespace": "parental-email",
+        "settingName": "frequency",
+        "preferredValue": "off",
+        "preferredValueFromOrgLevel": true,
+        "parentLimit": "weekly",
+        "parentLimitFromOrgLevel": true,
+        "effectiveValue": "weekly",
+        "effectiveSource": "parentLimit",
+        "isOrgLevel": true,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "namespace": "parental-email",
+          "settingName": "frequency",
+          "valueType": "option",
+          "allowProductOverrides": "ageBrackets",
+          "translations": {
+            "en": {
+              "label": "Subscribe/Unsubscribe",
+              "parentNotice": "How often would you like activity reports?"
             }
           },
           "options": [
@@ -1576,16 +1846,25 @@
               "translations": {
                 "en": {
                   "label": "Weekly",
-                  "parentNotice": "<b>On:</b> We'll send a weekly playtime report to the parent or guardian associated with this account. If there isn't a parent or guardian email address, we'll send the playtime report to this account’s email address."
+                  "parentNotice": "Weekly"
                 }
               }
             },
             {
-              "value": "never",
+              "value": "monthly",
               "translations": {
                 "en": {
-                  "label": "Never",
-                  "parentNotice": "<b>Off:</b> You won't receive weekly playtime tracking reports."
+                  "label": "Monthly",
+                  "parentNotice": "Monthly"
+                }
+              }
+            },
+            {
+              "value": "off",
+              "translations": {
+                "en": {
+                  "label": "Off",
+                  "parentNotice": "Off"
                 }
               }
             }
@@ -1600,121 +1879,37 @@
             "consentTypeUnderParentalControl": "opt-in-unverified",
             "consentType": "opt-in-unverified",
             "applyConsentToEnforcedUsersOnly": true,
-            "defaultValue": "never",
-            "defaultPreference": "never",
-            "defaultParentLimit": "never"
+            "defaultValue": "off",
+            "defaultPreference": "off",
+            "defaultParentLimit": "weekly"
           }
         }
       },
       {
-        "namespace": "profile",
-        "settingName": "show-season-level",
-        "preferredValue": true,
-        "preferredValueUpdatedAt": 1664305793410,
-        "preferredValueFromOrgLevel": false,
-        "effectiveValue": true,
-        "effectiveSource": "preference",
-        "isOrgLevel": false,
-        "definition": {
-          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
-          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
-          "namespace": "profile",
-          "settingName": "show-season-level",
-          "valueType": "boolean",
-          "allowProductOverrides": "ageBrackets",
-          "inheritFromOrg": true,
-          "translations": {
-            "en": {
-              "label": "Show Season level in feed",
-              "userNotice": "Show Season level in feed",
-              "parentNotice": "Show Season level in feed"
-            }
-          },
-          "options": [],
-          "restrictiveOrder": "falseRestrictive",
-          "userHidden": false,
-          "required": false,
-          "dataStorage": "raw",
-          "maximumScheduleWindowsPerDay": 0,
-          "ageBracket": {
-            "consentTypeRequired": "none",
-            "consentType": "none",
-            "applyConsentToEnforcedUsersOnly": false,
-            "defaultValue": true,
-            "defaultPreference": true,
-            "enforcedLimit": true
-          }
-        }
-      },
-      {
-        "namespace": "profile",
-        "settingName": "player-surveys",
-        "preferredValue": true,
-        "preferredValueUpdatedAt": 1663966642975,
-        "preferredValueFromOrgLevel": false,
-        "effectiveValue": true,
-        "effectiveSource": "preference",
-        "isOrgLevel": false,
-        "definition": {
-          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
-          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
-          "namespace": "profile",
-          "settingName": "player-surveys",
-          "valueType": "boolean",
-          "allowProductOverrides": "ageBrackets",
-          "inheritFromOrg": true,
-          "translations": {
-            "en": {
-              "label": "Player Surveys",
-              "userNotice": "Player Surveys",
-              "parentNotice": "Player Surveys"
-            }
-          },
-          "options": [],
-          "restrictiveOrder": "falseRestrictive",
-          "userHidden": false,
-          "required": false,
-          "dataStorage": "raw",
-          "maximumScheduleWindowsPerDay": 0,
-          "ageBracket": {
-            "consentTypeRequired": "none",
-            "consentType": "none",
-            "applyConsentToEnforcedUsersOnly": false,
-            "defaultValue": true,
-            "defaultPreference": true,
-            "enforcedLimit": true
-          }
-        }
-      },
-      {
-        "namespace": "profile",
-        "settingName": "can-receive-gifts",
-        "preferredValue": true,
-        "preferredValueUpdatedAt": 1677621341867,
-        "preferredValueFromOrgLevel": false,
-        "parentLimit": true,
+        "namespace": "parental-email",
+        "settingName": "friends-list-additions",
+        "preferredValue": false,
+        "preferredValueFromOrgLevel": true,
+        "parentLimit": false,
         "parentLimitFromOrgLevel": true,
-        "effectiveValue": true,
-        "effectiveSource": "preference",
-        "isOrgLevel": false,
+        "effectiveValue": false,
+        "effectiveSource": "default",
+        "isOrgLevel": true,
         "definition": {
           "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
-          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
-          "namespace": "profile",
-          "settingName": "can-receive-gifts",
+          "namespace": "parental-email",
+          "settingName": "friends-list-additions",
           "valueType": "boolean",
           "allowProductOverrides": "ageBrackets",
-          "inheritFromOrg": true,
           "translations": {
             "en": {
-              "label": "Can Receive Gifts",
-              "userNotice": "Can Receive Gifts",
-              "parentNotice": "Can Receive Gifts"
+              "label": "Parental Control Settings Updates",
+              "parentNotice": "Summary of changes to your child's account."
             }
           },
           "options": [],
-          "restrictiveOrder": "falseRestrictive",
-          "userHidden": false,
+          "restrictiveOrder": "falsePermissive",
+          "userHidden": true,
           "required": false,
           "dataStorage": "raw",
           "maximumScheduleWindowsPerDay": 0,
@@ -1723,69 +1918,114 @@
             "consentTypeUnderParentalControl": "opt-in-unverified",
             "consentType": "opt-in-unverified",
             "applyConsentToEnforcedUsersOnly": true,
-            "defaultValue": true,
-            "defaultPreference": true,
-            "defaultParentLimit": true,
-            "enforcedLimit": true
+            "defaultValue": false,
+            "defaultPreference": false,
+            "defaultParentLimit": false
           }
         }
       },
       {
-        "namespace": "profile",
-        "settingName": "region-visibility",
-        "preferredValue": "private",
-        "preferredValueUpdatedAt": 1664369967640,
-        "preferredValueFromOrgLevel": false,
-        "effectiveValue": "private",
-        "effectiveSource": "preference",
-        "isOrgLevel": false,
+        "namespace": "parental-email",
+        "settingName": "friends-requests",
+        "preferredValue": false,
+        "preferredValueFromOrgLevel": true,
+        "parentLimit": false,
+        "parentLimitFromOrgLevel": true,
+        "effectiveValue": false,
+        "effectiveSource": "default",
+        "isOrgLevel": true,
         "definition": {
           "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
-          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
-          "namespace": "profile",
-          "settingName": "region-visibility",
-          "valueType": "option",
+          "namespace": "parental-email",
+          "settingName": "friends-requests",
+          "valueType": "boolean",
           "allowProductOverrides": "ageBrackets",
-          "inheritFromOrg": true,
           "translations": {
             "en": {
-              "label": "TBD",
-              "userNotice": "TBD",
-              "parentNotice": "TBD"
+              "label": "Parental Control Settings Updates",
+              "parentNotice": "Summary of changes to your child's account."
             }
           },
-          "options": [
-            {
-              "value": "private",
-              "translations": {
-                "en": {
-                  "label": "Private",
-                  "userNotice": "TBD",
-                  "parentNotice": "TBD"
-                }
-              }
-            },
-            {
-              "value": "friends-only",
-              "translations": {
-                "en": {
-                  "label": "Friends Only",
-                  "parentNotice": "TODO"
-                }
-              }
-            },
-            {
-              "value": "public",
-              "translations": {
-                "en": {
-                  "label": "Public",
-                  "userNotice": "TBD",
-                  "parentNotice": "TBD"
-                }
-              }
+          "options": [],
+          "restrictiveOrder": "falsePermissive",
+          "userHidden": true,
+          "required": false,
+          "dataStorage": "raw",
+          "maximumScheduleWindowsPerDay": 0,
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentTypeUnderParentalControl": "opt-in-unverified",
+            "consentType": "opt-in-unverified",
+            "applyConsentToEnforcedUsersOnly": true,
+            "defaultValue": false,
+            "defaultPreference": false,
+            "defaultParentLimit": false
+          }
+        }
+      },
+      {
+        "namespace": "parental-email",
+        "settingName": "parental-control-settings-updates",
+        "preferredValue": false,
+        "preferredValueFromOrgLevel": true,
+        "parentLimit": false,
+        "parentLimitFromOrgLevel": true,
+        "effectiveValue": false,
+        "effectiveSource": "default",
+        "isOrgLevel": true,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "namespace": "parental-email",
+          "settingName": "parental-control-settings-updates",
+          "valueType": "boolean",
+          "allowProductOverrides": "ageBrackets",
+          "translations": {
+            "en": {
+              "label": "Parental Control Settings Updates",
+              "parentNotice": "Summary of changes to your child's account."
             }
-          ],
-          "restrictiveOrder": "firstRestrictive",
+          },
+          "options": [],
+          "restrictiveOrder": "falsePermissive",
+          "userHidden": true,
+          "required": false,
+          "dataStorage": "raw",
+          "maximumScheduleWindowsPerDay": 0,
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentTypeUnderParentalControl": "opt-in-unverified",
+            "consentType": "opt-in-unverified",
+            "applyConsentToEnforcedUsersOnly": true,
+            "defaultValue": false,
+            "defaultPreference": false,
+            "defaultParentLimit": false
+          }
+        }
+      },
+      {
+        "namespace": "communications",
+        "settingName": "email",
+        "preferredValue": true,
+        "preferredValueUpdatedAt": 1730403754629,
+        "preferredValueFromOrgLevel": true,
+        "effectiveValue": true,
+        "effectiveSource": "preference",
+        "isOrgLevel": true,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "namespace": "communications",
+          "settingName": "email",
+          "valueType": "boolean",
+          "allowProductOverrides": "none",
+          "translations": {
+            "en": {
+              "label": "Email Subscribe/Unsubscribe",
+              "userNotice": "Determines if you can subscribe to emails about Epic Games products, news, events and promotion",
+              "parentNotice": "Determines if your child can subscribe to emails about Epic Games products, news, events and promotion"
+            }
+          },
+          "options": [],
+          "restrictiveOrder": "falseRestrictive",
           "userHidden": false,
           "required": false,
           "dataStorage": "raw",
@@ -1794,68 +2034,34 @@
             "consentTypeRequired": "none",
             "consentType": "none",
             "applyConsentToEnforcedUsersOnly": false,
-            "defaultValue": "public",
-            "defaultPreference": "public",
-            "enforcedLimit": "public"
+            "defaultValue": false,
+            "defaultPreference": false
           }
         }
       },
       {
-        "namespace": "profile",
-        "settingName": "languages-visibility",
-        "preferredValue": "private",
-        "preferredValueUpdatedAt": 1664369967641,
-        "preferredValueFromOrgLevel": false,
-        "effectiveValue": "private",
-        "effectiveSource": "preference",
-        "isOrgLevel": false,
+        "namespace": "communications",
+        "settingName": "email-egs-announcements",
+        "preferredValue": false,
+        "preferredValueFromOrgLevel": true,
+        "effectiveValue": false,
+        "effectiveSource": "default",
+        "isOrgLevel": true,
         "definition": {
           "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
-          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
-          "namespace": "profile",
-          "settingName": "languages-visibility",
-          "valueType": "option",
-          "allowProductOverrides": "ageBrackets",
-          "inheritFromOrg": true,
+          "namespace": "communications",
+          "settingName": "email-egs-announcements",
+          "valueType": "boolean",
+          "allowProductOverrides": "none",
           "translations": {
             "en": {
-              "label": "TBD",
-              "userNotice": "TBD",
-              "parentNotice": "TBD"
+              "label": "Enables/disables EGS announcement emails",
+              "userNotice": "Determines if you can subscribe to EGS announcement emails",
+              "parentNotice": "Determines if your child can subscribe to EGS announcement emails"
             }
           },
-          "options": [
-            {
-              "value": "private",
-              "translations": {
-                "en": {
-                  "label": "Private",
-                  "userNotice": "TBD",
-                  "parentNotice": "TBD"
-                }
-              }
-            },
-            {
-              "value": "friends-only",
-              "translations": {
-                "en": {
-                  "label": "Friends Only",
-                  "parentNotice": "TODO"
-                }
-              }
-            },
-            {
-              "value": "public",
-              "translations": {
-                "en": {
-                  "label": "Public",
-                  "userNotice": "TBD",
-                  "parentNotice": "TBD"
-                }
-              }
-            }
-          ],
-          "restrictiveOrder": "firstRestrictive",
+          "options": [],
+          "restrictiveOrder": "falseRestrictive",
           "userHidden": false,
           "required": false,
           "dataStorage": "raw",
@@ -1864,58 +2070,34 @@
             "consentTypeRequired": "none",
             "consentType": "none",
             "applyConsentToEnforcedUsersOnly": false,
-            "defaultValue": "public",
-            "defaultPreference": "public",
-            "enforcedLimit": "public"
+            "defaultValue": false,
+            "defaultPreference": false
           }
         }
       },
       {
-        "namespace": "profile",
-        "settingName": "badges-visibility",
-        "preferredValue": "private",
-        "preferredValueUpdatedAt": 1664369967641,
-        "preferredValueFromOrgLevel": false,
-        "effectiveValue": "private",
-        "effectiveSource": "preference",
-        "isOrgLevel": false,
+        "namespace": "communications",
+        "settingName": "email-egs-updates",
+        "preferredValue": false,
+        "preferredValueFromOrgLevel": true,
+        "effectiveValue": false,
+        "effectiveSource": "default",
+        "isOrgLevel": true,
         "definition": {
           "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
-          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
-          "namespace": "profile",
-          "settingName": "badges-visibility",
-          "valueType": "option",
-          "allowProductOverrides": "ageBrackets",
-          "inheritFromOrg": true,
+          "namespace": "communications",
+          "settingName": "email-egs-updates",
+          "valueType": "boolean",
+          "allowProductOverrides": "none",
           "translations": {
             "en": {
-              "label": "TBD",
-              "userNotice": "TBD",
-              "parentNotice": "TBD"
+              "label": "Replacing email-egs-announcements and email-egs-newsletter",
+              "userNotice": "Determines if you can subscribe to EGS announcement emails",
+              "parentNotice": "Determines if your child can subscribe to EGS announcement emails"
             }
           },
-          "options": [
-            {
-              "value": "private",
-              "translations": {
-                "en": {
-                  "label": "Private",
-                  "userNotice": "TBD",
-                  "parentNotice": "TBD"
-                }
-              }
-            },
-            {
-              "value": "friends-only",
-              "translations": {
-                "en": {
-                  "label": "Friends Only",
-                  "parentNotice": "TBD"
-                }
-              }
-            }
-          ],
-          "restrictiveOrder": "firstRestrictive",
+          "options": [],
+          "restrictiveOrder": "falseRestrictive",
           "userHidden": false,
           "required": false,
           "dataStorage": "raw",
@@ -1924,15 +2106,596 @@
             "consentTypeRequired": "none",
             "consentType": "none",
             "applyConsentToEnforcedUsersOnly": false,
-            "defaultValue": "friends-only",
-            "defaultPreference": "friends-only",
-            "enforcedLimit": "friends-only"
+            "defaultValue": false,
+            "defaultPreference": false
           }
         }
       },
       {
-        "namespace": "profile",
-        "settingName": "allow-strikethrough-prices",
+        "namespace": "communications",
+        "settingName": "email-creatoreco-creationtools",
+        "preferredValue": true,
+        "preferredValueUpdatedAt": 1730403754629,
+        "preferredValueFromOrgLevel": true,
+        "effectiveValue": true,
+        "effectiveSource": "preference",
+        "isOrgLevel": true,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "namespace": "communications",
+          "settingName": "email-creatoreco-creationtools",
+          "valueType": "boolean",
+          "allowProductOverrides": "none",
+          "translations": {
+            "en": {
+              "label": "Enables/disables a user to receive updates on tools to create in Fortnite",
+              "userNotice": "Determines if you can receive updates on tools to create in Fortnite",
+              "parentNotice": "Determines if your child can receive updates on tools to create in Fortnite"
+            }
+          },
+          "options": [],
+          "restrictiveOrder": "falseRestrictive",
+          "userHidden": false,
+          "required": false,
+          "dataStorage": "raw",
+          "maximumScheduleWindowsPerDay": 0,
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentType": "none",
+            "applyConsentToEnforcedUsersOnly": false,
+            "defaultValue": false,
+            "defaultPreference": false
+          }
+        }
+      },
+      {
+        "namespace": "communications",
+        "settingName": "email-creatoreco-creationeco",
+        "preferredValue": false,
+        "preferredValueUpdatedAt": 1705173467118,
+        "preferredValueFromOrgLevel": true,
+        "effectiveValue": false,
+        "effectiveSource": "preference",
+        "isOrgLevel": true,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "namespace": "communications",
+          "settingName": "email-creatoreco-creationeco",
+          "valueType": "boolean",
+          "allowProductOverrides": "none",
+          "translations": {
+            "en": {
+              "label": "Enables/disables updates on creator programs and monetization",
+              "userNotice": "Determines if you can subscribe to updates on creator programs and monetization",
+              "parentNotice": "Determines if your child can subscribe to updates on creator programs and monetization"
+            }
+          },
+          "options": [],
+          "restrictiveOrder": "falseRestrictive",
+          "userHidden": false,
+          "required": false,
+          "dataStorage": "raw",
+          "maximumScheduleWindowsPerDay": 0,
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentType": "none",
+            "applyConsentToEnforcedUsersOnly": false,
+            "defaultValue": false,
+            "defaultPreference": false
+          }
+        }
+      },
+      {
+        "namespace": "communications",
+        "settingName": "email-egs-newsletter",
+        "preferredValue": false,
+        "preferredValueFromOrgLevel": true,
+        "effectiveValue": false,
+        "effectiveSource": "default",
+        "isOrgLevel": true,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "namespace": "communications",
+          "settingName": "email-egs-newsletter",
+          "valueType": "boolean",
+          "allowProductOverrides": "none",
+          "translations": {
+            "en": {
+              "label": "Enables/disables EGS Newsletter",
+              "userNotice": "Determines if you can subscribe to EGS Newsletter emails",
+              "parentNotice": "Determines if your child can subscribe to EGS Newsletter emails"
+            }
+          },
+          "options": [],
+          "restrictiveOrder": "falseRestrictive",
+          "userHidden": false,
+          "required": false,
+          "dataStorage": "raw",
+          "maximumScheduleWindowsPerDay": 0,
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentType": "none",
+            "applyConsentToEnforcedUsersOnly": false,
+            "defaultValue": false,
+            "defaultPreference": false
+          }
+        }
+      },
+      {
+        "namespace": "communications",
+        "settingName": "email-egs-wishlist",
+        "preferredValue": false,
+        "preferredValueFromOrgLevel": true,
+        "effectiveValue": false,
+        "effectiveSource": "default",
+        "isOrgLevel": true,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "namespace": "communications",
+          "settingName": "email-egs-wishlist",
+          "valueType": "boolean",
+          "allowProductOverrides": "none",
+          "translations": {
+            "en": {
+              "label": "Enables/disables Wishlist alerts",
+              "userNotice": "Determines if you can subscribe to Wishlist alert emails",
+              "parentNotice": "Determines if your child can subscribe to Wishlist alert emails"
+            }
+          },
+          "options": [],
+          "restrictiveOrder": "falseRestrictive",
+          "userHidden": false,
+          "required": false,
+          "dataStorage": "raw",
+          "maximumScheduleWindowsPerDay": 0,
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentType": "none",
+            "applyConsentToEnforcedUsersOnly": false,
+            "defaultValue": false,
+            "defaultPreference": false
+          }
+        }
+      },
+      {
+        "namespace": "communications",
+        "settingName": "email-fortnite",
+        "preferredValue": false,
+        "preferredValueUpdatedAt": 1705173467121,
+        "preferredValueFromOrgLevel": true,
+        "effectiveValue": false,
+        "effectiveSource": "preference",
+        "isOrgLevel": true,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "namespace": "communications",
+          "settingName": "email-fortnite",
+          "valueType": "boolean",
+          "allowProductOverrides": "none",
+          "translations": {
+            "en": {
+              "label": "Enables/disables Fortnite emails",
+              "userNotice": "Determines if you can subscribe to Fortnite emails",
+              "parentNotice": "Determines if your child can subscribe to Fortnite emails"
+            }
+          },
+          "options": [],
+          "restrictiveOrder": "falseRestrictive",
+          "userHidden": false,
+          "required": false,
+          "dataStorage": "raw",
+          "maximumScheduleWindowsPerDay": 0,
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentType": "none",
+            "applyConsentToEnforcedUsersOnly": false,
+            "defaultValue": false,
+            "defaultPreference": false
+          }
+        }
+      },
+      {
+        "namespace": "communications",
+        "settingName": "email-rocket-league",
+        "preferredValue": false,
+        "preferredValueFromOrgLevel": true,
+        "effectiveValue": false,
+        "effectiveSource": "default",
+        "isOrgLevel": true,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "namespace": "communications",
+          "settingName": "email-rocket-league",
+          "valueType": "boolean",
+          "allowProductOverrides": "none",
+          "translations": {
+            "en": {
+              "label": "Enables/disables Rocket League emails",
+              "userNotice": "Determines if you can subscribe to Rocket League emails",
+              "parentNotice": "Determines if your child can subscribe to Rocket League emails"
+            }
+          },
+          "options": [],
+          "restrictiveOrder": "falseRestrictive",
+          "userHidden": false,
+          "required": false,
+          "dataStorage": "raw",
+          "maximumScheduleWindowsPerDay": 0,
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentType": "none",
+            "applyConsentToEnforcedUsersOnly": false,
+            "defaultValue": false,
+            "defaultPreference": false
+          }
+        }
+      },
+      {
+        "namespace": "communications",
+        "settingName": "email-fallguys",
+        "preferredValue": false,
+        "preferredValueUpdatedAt": 1705173467119,
+        "preferredValueFromOrgLevel": true,
+        "effectiveValue": false,
+        "effectiveSource": "preference",
+        "isOrgLevel": true,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "namespace": "communications",
+          "settingName": "email-fallguys",
+          "valueType": "boolean",
+          "allowProductOverrides": "none",
+          "translations": {
+            "en": {
+              "label": "Enables/disables Fallguys emails",
+              "userNotice": "Determines if you can subscribe to Fallguys emails",
+              "parentNotice": "Determines if your child can subscribe to Fallguys emails"
+            }
+          },
+          "options": [],
+          "restrictiveOrder": "falseRestrictive",
+          "userHidden": false,
+          "required": false,
+          "dataStorage": "raw",
+          "maximumScheduleWindowsPerDay": 0,
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentType": "none",
+            "applyConsentToEnforcedUsersOnly": false,
+            "defaultValue": false,
+            "defaultPreference": false
+          }
+        }
+      },
+      {
+        "namespace": "communications",
+        "settingName": "email-survey",
+        "preferredValue": false,
+        "preferredValueUpdatedAt": 1705173467123,
+        "preferredValueFromOrgLevel": true,
+        "effectiveValue": false,
+        "effectiveSource": "preference",
+        "isOrgLevel": true,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "namespace": "communications",
+          "settingName": "email-survey",
+          "valueType": "boolean",
+          "allowProductOverrides": "none",
+          "translations": {
+            "en": {
+              "label": "Enables/disables survey emails",
+              "userNotice": "Determines if you can subscribe to survey emails",
+              "parentNotice": "Determines if your child can subscribe to survey emails"
+            }
+          },
+          "options": [],
+          "restrictiveOrder": "falseRestrictive",
+          "userHidden": false,
+          "required": false,
+          "dataStorage": "raw",
+          "maximumScheduleWindowsPerDay": 0,
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentType": "none",
+            "applyConsentToEnforcedUsersOnly": false,
+            "defaultValue": false,
+            "defaultPreference": false
+          }
+        }
+      },
+      {
+        "namespace": "communications",
+        "settingName": "email-ue",
+        "preferredValue": false,
+        "preferredValueFromOrgLevel": true,
+        "effectiveValue": false,
+        "effectiveSource": "default",
+        "isOrgLevel": true,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "namespace": "communications",
+          "settingName": "email-ue",
+          "valueType": "boolean",
+          "allowProductOverrides": "none",
+          "translations": {
+            "en": {
+              "label": "Enables/disables UE announcement emails",
+              "userNotice": "Determines if you can subscribe to UE announcement emails",
+              "parentNotice": "Determines if your child can subscribe to UE announcement emails"
+            }
+          },
+          "options": [],
+          "restrictiveOrder": "falseRestrictive",
+          "userHidden": false,
+          "required": false,
+          "dataStorage": "raw",
+          "maximumScheduleWindowsPerDay": 0,
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentType": "none",
+            "applyConsentToEnforcedUsersOnly": false,
+            "defaultValue": false,
+            "defaultPreference": false
+          }
+        }
+      },
+      {
+        "namespace": "communications",
+        "settingName": "email-fab",
+        "preferredValue": false,
+        "preferredValueFromOrgLevel": true,
+        "effectiveValue": false,
+        "effectiveSource": "default",
+        "isOrgLevel": true,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "namespace": "communications",
+          "settingName": "email-fab",
+          "valueType": "boolean",
+          "allowProductOverrides": "none",
+          "translations": {
+            "en": {
+              "label": "Enables/disables fab announcement emails",
+              "userNotice": "Determines if you can subscribe to fab announcement emails",
+              "parentNotice": "Determines if your child can subscribe to fab announcement emails"
+            }
+          },
+          "options": [],
+          "restrictiveOrder": "falseRestrictive",
+          "userHidden": false,
+          "required": false,
+          "dataStorage": "raw",
+          "maximumScheduleWindowsPerDay": 0,
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentType": "none",
+            "applyConsentToEnforcedUsersOnly": false,
+            "defaultValue": false,
+            "defaultPreference": false
+          }
+        }
+      },
+      {
+        "namespace": "communications",
+        "settingName": "push-notifications",
+        "preferredValue": false,
+        "preferredValueUpdatedAt": 1705173467122,
+        "preferredValueFromOrgLevel": true,
+        "effectiveValue": false,
+        "effectiveSource": "preference",
+        "isOrgLevel": true,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "namespace": "communications",
+          "settingName": "push-notifications",
+          "valueType": "boolean",
+          "allowProductOverrides": "none",
+          "translations": {
+            "en": {
+              "label": "Push Notifications",
+              "userNotice": "Receive push notifications for Epic Games apps on your mobile device.",
+              "parentNotice": "Determines if your child can receive push notifications for Epic Games apps on mobile devices."
+            }
+          },
+          "options": [],
+          "restrictiveOrder": "falseRestrictive",
+          "userHidden": false,
+          "required": false,
+          "dataStorage": "raw",
+          "maximumScheduleWindowsPerDay": 0,
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentType": "none",
+            "applyConsentToEnforcedUsersOnly": false,
+            "defaultValue": false,
+            "defaultPreference": false
+          }
+        }
+      },
+      {
+        "namespace": "communications",
+        "settingName": "notification-center-marketing-messages",
+        "preferredValue": false,
+        "preferredValueFromOrgLevel": true,
+        "effectiveValue": false,
+        "effectiveSource": "default",
+        "isOrgLevel": true,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "namespace": "communications",
+          "settingName": "notification-center-marketing-messages",
+          "valueType": "boolean",
+          "allowProductOverrides": "none",
+          "translations": {
+            "en": {
+              "label": "Launcher Marketing Notifications",
+              "userNotice": "Receive marketing messages, such as notifications when games on your wishlist go on sale, in the notification center on applications such as the Epic Games Launcher or Epic Games Store.",
+              "parentNotice": "Determines if your child can receive marketing messages, such as notifications when games on their wishlist go on sale, in the notification center on applications such as the Epic Games Launcher or Epic Games Store."
+            }
+          },
+          "options": [],
+          "restrictiveOrder": "falseRestrictive",
+          "userHidden": false,
+          "required": false,
+          "dataStorage": "raw",
+          "maximumScheduleWindowsPerDay": 0,
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentType": "none",
+            "applyConsentToEnforcedUsersOnly": false,
+            "defaultValue": false,
+            "defaultPreference": false
+          }
+        }
+      },
+      {
+        "namespace": "communications",
+        "settingName": "notification-center-non-marketing-messages",
+        "preferredValue": false,
+        "preferredValueFromOrgLevel": true,
+        "effectiveValue": false,
+        "effectiveSource": "default",
+        "isOrgLevel": true,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "namespace": "communications",
+          "settingName": "notification-center-non-marketing-messages",
+          "valueType": "boolean",
+          "allowProductOverrides": "none",
+          "translations": {
+            "en": {
+              "label": "Launcher Non-Marketing Notifications",
+              "userNotice": "Receive optional messages that are not marketing, such as friend invites or game invites, in the notification center on applications such as the Epic Games Launcher or Epic Games Store.",
+              "parentNotice": "Determines if your child can receive optional messages that are not marketing, such as friend invites or game invites, in the notification center on applications such as the Epic Games Launcher or Epic Games Store."
+            }
+          },
+          "options": [],
+          "restrictiveOrder": "falseRestrictive",
+          "userHidden": false,
+          "required": false,
+          "dataStorage": "raw",
+          "maximumScheduleWindowsPerDay": 0,
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentType": "none",
+            "applyConsentToEnforcedUsersOnly": false,
+            "defaultValue": false,
+            "defaultPreference": false
+          }
+        }
+      },
+      {
+        "namespace": "communications",
+        "settingName": "push-friend-invite",
+        "preferredValue": false,
+        "preferredValueFromOrgLevel": true,
+        "effectiveValue": false,
+        "effectiveSource": "default",
+        "isOrgLevel": true,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "namespace": "communications",
+          "settingName": "push-friend-invite",
+          "valueType": "boolean",
+          "allowProductOverrides": "none",
+          "translations": {
+            "en": {
+              "label": "Push Friend Invite Notifications",
+              "userNotice": "Receive push notifications for Friend Invites from Epic Games apps on your mobile device.",
+              "parentNotice": "Determines if your child can receive push notifications for Friend Invites from Epic Games apps on mobile devices."
+            }
+          },
+          "options": [],
+          "restrictiveOrder": "falseRestrictive",
+          "userHidden": false,
+          "required": false,
+          "dataStorage": "raw",
+          "maximumScheduleWindowsPerDay": 0,
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentType": "none",
+            "applyConsentToEnforcedUsersOnly": false,
+            "defaultValue": false,
+            "defaultPreference": false
+          }
+        }
+      },
+      {
+        "namespace": "communications",
+        "settingName": "push-party-invite",
+        "preferredValue": false,
+        "preferredValueFromOrgLevel": true,
+        "effectiveValue": false,
+        "effectiveSource": "default",
+        "isOrgLevel": true,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "namespace": "communications",
+          "settingName": "push-party-invite",
+          "valueType": "boolean",
+          "allowProductOverrides": "ageBrackets",
+          "translations": {
+            "en": {
+              "label": "Push Party Invite Notifications",
+              "userNotice": "Receive push notifications for Party Invites from Epic Games apps on your mobile device.",
+              "parentNotice": "Determines if your child can receive push notifications for Party Invites from Epic Games apps on mobile devices."
+            }
+          },
+          "options": [],
+          "restrictiveOrder": "falseRestrictive",
+          "userHidden": false,
+          "required": false,
+          "dataStorage": "raw",
+          "maximumScheduleWindowsPerDay": 0,
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentType": "none",
+            "applyConsentToEnforcedUsersOnly": false,
+            "defaultValue": false,
+            "defaultPreference": false
+          }
+        }
+      },
+      {
+        "namespace": "communications",
+        "settingName": "push-marketing",
+        "preferredValue": false,
+        "preferredValueFromOrgLevel": true,
+        "effectiveValue": false,
+        "effectiveSource": "default",
+        "isOrgLevel": true,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "namespace": "communications",
+          "settingName": "push-marketing",
+          "valueType": "boolean",
+          "allowProductOverrides": "ageBrackets",
+          "translations": {
+            "en": {
+              "label": "Push Marketing Notifications",
+              "userNotice": "Receive push notifications for Marketing from Epic Games apps on your mobile device.",
+              "parentNotice": "Determines if your child can receive push notifications for Marketing from Epic Games apps on mobile devices."
+            }
+          },
+          "options": [],
+          "restrictiveOrder": "falseRestrictive",
+          "userHidden": false,
+          "required": false,
+          "dataStorage": "raw",
+          "maximumScheduleWindowsPerDay": 0,
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentType": "none",
+            "applyConsentToEnforcedUsersOnly": false,
+            "defaultValue": false,
+            "defaultPreference": false
+          }
+        }
+      },
+      {
+        "namespace": "egs",
+        "settingName": "experience",
         "preferredValue": true,
         "preferredValueFromOrgLevel": true,
         "effectiveValue": true,
@@ -1940,24 +2703,22 @@
         "isOrgLevel": true,
         "definition": {
           "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
-          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
-          "namespace": "profile",
-          "settingName": "allow-strikethrough-prices",
+          "namespace": "egs",
+          "settingName": "experience",
           "valueType": "boolean",
           "allowProductOverrides": "ageBrackets",
-          "inheritFromOrg": true,
           "translations": {
             "en": {
-              "label": "TBD",
-              "userNotice": "TBD",
-              "parentNotice": "TBD"
+              "label": "Personalized Experience recommendations",
+              "userNotice": "Allow personalized Experience recommendations in EGS",
+              "parentNotice": "Determines if your child can receive personalized Experience recommendations in EGS"
             }
           },
           "options": [],
           "restrictiveOrder": "falseRestrictive",
           "userHidden": false,
           "required": false,
-          "dataStorage": "readOnly",
+          "dataStorage": "raw",
           "maximumScheduleWindowsPerDay": 0,
           "ageBracket": {
             "consentTypeRequired": "none",
@@ -1969,25 +2730,229 @@
         }
       },
       {
-        "namespace": "profile",
-        "settingName": "allow-create-experiences",
+        "namespace": "egs",
+        "settingName": "marketing",
         "preferredValue": true,
-        "preferredValueFromOrgLevel": false,
-        "parentLimit": true,
-        "parentLimitFromOrgLevel": false,
+        "preferredValueFromOrgLevel": true,
         "effectiveValue": true,
         "effectiveSource": "default",
-        "isOrgLevel": false,
+        "isOrgLevel": true,
         "definition": {
           "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
-          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
-          "namespace": "profile",
-          "settingName": "allow-create-experiences",
+          "namespace": "egs",
+          "settingName": "marketing",
           "valueType": "boolean",
+          "allowProductOverrides": "ageBrackets",
           "translations": {
             "en": {
-              "label": "Allow Create Experiences",
-              "userNotice": "Determines whether the account can access general-purpose Create experiences in Fortnite (e.g. Creative Create)",
+              "label": "Personalized Purchase recommendations",
+              "userNotice": "Allow personalized Purchase recommendations in EGS",
+              "parentNotice": "Determines if your child can receive personalized Purchase recommendations in EGS"
+            }
+          },
+          "options": [],
+          "restrictiveOrder": "falseRestrictive",
+          "userHidden": false,
+          "required": false,
+          "dataStorage": "raw",
+          "maximumScheduleWindowsPerDay": 0,
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentType": "none",
+            "applyConsentToEnforcedUsersOnly": false,
+            "defaultValue": true,
+            "defaultPreference": true
+          }
+        }
+      },
+      {
+        "namespace": "time",
+        "settingName": "play-limits-enabled",
+        "preferredValue": false,
+        "preferredValueFromOrgLevel": true,
+        "parentLimit": false,
+        "parentLimitFromOrgLevel": true,
+        "effectiveValue": false,
+        "effectiveSource": "default",
+        "isOrgLevel": true,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "namespace": "time",
+          "settingName": "play-limits-enabled",
+          "valueType": "boolean",
+          "allowProductOverrides": "ageBrackets",
+          "translations": {
+            "en": {
+              "label": "TBD",
+              "userNotice": "TBD",
+              "parentNotice": "TBD"
+            }
+          },
+          "options": [],
+          "restrictiveOrder": "falsePermissive",
+          "userHidden": true,
+          "required": false,
+          "dataStorage": "raw",
+          "maximumScheduleWindowsPerDay": 0,
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentTypeUnderParentalControl": "opt-in-unverified",
+            "consentType": "opt-in-unverified",
+            "applyConsentToEnforcedUsersOnly": true,
+            "defaultValue": false,
+            "defaultPreference": false,
+            "defaultParentLimit": false
+          }
+        }
+      },
+      {
+        "namespace": "time",
+        "settingName": "play-minutes-allowed",
+        "preferredValue": 1440,
+        "preferredValueFromOrgLevel": true,
+        "parentLimit": 1440,
+        "parentLimitFromOrgLevel": true,
+        "parentLimitScheduleEnabled": false,
+        "effectiveValue": 1440,
+        "effectiveSource": "default",
+        "isOrgLevel": true,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "namespace": "time",
+          "settingName": "play-minutes-allowed",
+          "valueType": "numeric",
+          "numericValueFormat": "integer",
+          "numberOfDecimals": 0,
+          "min": 0,
+          "max": 1440,
+          "incrementOrDecrementBy": 1,
+          "allowProductOverrides": "ageBrackets",
+          "translations": {
+            "en": {
+              "label": "TBD",
+              "userNotice": "TBD",
+              "parentNotice": "TBD"
+            }
+          },
+          "options": [],
+          "restrictiveOrder": "lowRestrictive",
+          "userHidden": true,
+          "required": false,
+          "dataStorage": "raw",
+          "maximumScheduleWindowsPerDay": 1,
+          "schedulePeriod": "1d",
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentTypeUnderParentalControl": "opt-in-unverified",
+            "consentType": "opt-in-unverified",
+            "applyConsentToEnforcedUsersOnly": true,
+            "defaultValue": 1440,
+            "defaultPreference": 1440,
+            "defaultParentLimit": 1440
+          }
+        }
+      },
+      {
+        "namespace": "time",
+        "settingName": "play-schedule",
+        "preferredValue": true,
+        "preferredValueFromOrgLevel": true,
+        "parentLimit": true,
+        "parentLimitFromOrgLevel": true,
+        "parentLimitScheduleEnabled": false,
+        "effectiveValue": true,
+        "effectiveSource": "default",
+        "isOrgLevel": true,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "namespace": "time",
+          "settingName": "play-schedule",
+          "valueType": "boolean",
+          "allowProductOverrides": "ageBrackets",
+          "translations": {
+            "en": {
+              "label": "TBD",
+              "userNotice": "TBD",
+              "parentNotice": "TBD"
+            }
+          },
+          "options": [],
+          "restrictiveOrder": "falseRestrictive",
+          "userHidden": true,
+          "required": false,
+          "dataStorage": "raw",
+          "maximumScheduleWindowsPerDay": 5,
+          "schedulePeriod": "5m",
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentTypeUnderParentalControl": "opt-in-unverified",
+            "consentType": "opt-in-unverified",
+            "applyConsentToEnforcedUsersOnly": true,
+            "defaultValue": true,
+            "defaultPreference": true,
+            "defaultParentLimit": true
+          }
+        }
+      },
+      {
+        "namespace": "time",
+        "settingName": "playtime-reporting-enabled",
+        "preferredValue": false,
+        "preferredValueFromOrgLevel": true,
+        "parentLimit": false,
+        "parentLimitFromOrgLevel": true,
+        "effectiveValue": false,
+        "effectiveSource": "default",
+        "isOrgLevel": true,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "namespace": "time",
+          "settingName": "playtime-reporting-enabled",
+          "valueType": "boolean",
+          "allowProductOverrides": "ageBrackets",
+          "translations": {
+            "en": {
+              "label": "TBD",
+              "userNotice": "TBD",
+              "parentNotice": "TBD"
+            }
+          },
+          "options": [],
+          "restrictiveOrder": "falsePermissive",
+          "userHidden": true,
+          "required": false,
+          "dataStorage": "raw",
+          "maximumScheduleWindowsPerDay": 0,
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentTypeUnderParentalControl": "opt-in-unverified",
+            "consentType": "opt-in-unverified",
+            "applyConsentToEnforcedUsersOnly": true,
+            "defaultValue": false,
+            "defaultPreference": false,
+            "defaultParentLimit": false
+          }
+        }
+      },
+      {
+        "namespace": "time",
+        "settingName": "request-additional-time",
+        "preferredValue": true,
+        "preferredValueFromOrgLevel": true,
+        "parentLimit": true,
+        "parentLimitFromOrgLevel": true,
+        "effectiveValue": true,
+        "effectiveSource": "default",
+        "isOrgLevel": true,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "namespace": "time",
+          "settingName": "request-additional-time",
+          "valueType": "boolean",
+          "allowProductOverrides": "ageBrackets",
+          "translations": {
+            "en": {
+              "label": "TBD",
               "parentNotice": "TBD"
             }
           },
@@ -2009,60 +2974,24 @@
         }
       },
       {
-        "namespace": "profile",
-        "settingName": "can-monetize",
+        "namespace": "ct",
+        "settingName": "experience",
         "preferredValue": true,
-        "preferredValueFromOrgLevel": false,
+        "preferredValueFromOrgLevel": true,
         "effectiveValue": true,
         "effectiveSource": "default",
-        "isOrgLevel": false,
+        "isOrgLevel": true,
         "definition": {
           "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
-          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
-          "namespace": "profile",
-          "settingName": "can-monetize",
+          "namespace": "ct",
+          "settingName": "experience",
           "valueType": "boolean",
+          "allowProductOverrides": "none",
           "translations": {
             "en": {
-              "label": "TBD",
-              "userNotice": "TBD",
-              "parentNotice": "TBD"
-            }
-          },
-          "options": [],
-          "restrictiveOrder": "falseRestrictive",
-          "userHidden": false,
-          "required": false,
-          "dataStorage": "readOnly",
-          "maximumScheduleWindowsPerDay": 0,
-          "ageBracket": {
-            "consentTypeRequired": "none",
-            "consentType": "none",
-            "applyConsentToEnforcedUsersOnly": false,
-            "defaultValue": true,
-            "defaultPreference": true
-          }
-        }
-      },
-      {
-        "namespace": "profile",
-        "settingName": "share-play-activity",
-        "preferredValue": false,
-        "preferredValueFromOrgLevel": false,
-        "effectiveValue": false,
-        "effectiveSource": "default",
-        "isOrgLevel": false,
-        "definition": {
-          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
-          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
-          "namespace": "profile",
-          "settingName": "share-play-activity",
-          "valueType": "boolean",
-          "translations": {
-            "en": {
-              "label": "TBD",
-              "userNotice": "TBD",
-              "parentNotice": "TBD"
+              "label": "Creator Tools Experience",
+              "userNotice": "Allow personalization of experience recommendations in Creator Tools",
+              "parentNotice": "Allow personalization of experience recommendations in Creator Tools"
             }
           },
           "options": [],
@@ -2075,31 +3004,63 @@
             "consentTypeRequired": "none",
             "consentType": "none",
             "applyConsentToEnforcedUsersOnly": false,
-            "defaultValue": false,
-            "defaultPreference": false,
-            "enforcedLimit": true
+            "defaultValue": true,
+            "defaultPreference": true
+          }
+        }
+      },
+      {
+        "namespace": "ct",
+        "settingName": "marketing",
+        "preferredValue": true,
+        "preferredValueFromOrgLevel": true,
+        "effectiveValue": true,
+        "effectiveSource": "default",
+        "isOrgLevel": true,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "namespace": "ct",
+          "settingName": "marketing",
+          "valueType": "boolean",
+          "allowProductOverrides": "none",
+          "translations": {
+            "en": {
+              "label": "Creator Tools Marketing",
+              "userNotice": "Allow personalization of purchase recommendations in Creator Tools",
+              "parentNotice": "Allow personalization of purchase recommendations in Creator Tools"
+            }
+          },
+          "options": [],
+          "restrictiveOrder": "falseRestrictive",
+          "userHidden": false,
+          "required": false,
+          "dataStorage": "raw",
+          "maximumScheduleWindowsPerDay": 0,
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentType": "none",
+            "applyConsentToEnforcedUsersOnly": false,
+            "defaultValue": true,
+            "defaultPreference": true
           }
         }
       },
       {
         "namespace": "chat",
         "settingName": "filter-out-mature-language",
-        "preferredValue": true,
-        "preferredValueUpdatedAt": 1733540554860,
-        "preferredValueFromOrgLevel": false,
+        "preferredValue": false,
+        "preferredValueFromOrgLevel": true,
         "parentLimit": false,
         "parentLimitFromOrgLevel": true,
-        "effectiveValue": true,
-        "effectiveSource": "preference",
-        "isOrgLevel": false,
+        "effectiveValue": false,
+        "effectiveSource": "default",
+        "isOrgLevel": true,
         "definition": {
           "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
-          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
           "namespace": "chat",
           "settingName": "filter-out-mature-language",
           "valueType": "boolean",
           "allowProductOverrides": "ageBrackets",
-          "inheritFromOrg": true,
           "translations": {
             "en": {
               "label": "Filter out mature language in Epic text chat",
@@ -2128,21 +3089,18 @@
         "namespace": "chat",
         "settingName": "voice",
         "preferredValue": "everybody",
-        "preferredValueUpdatedAt": 1740494993184,
-        "preferredValueFromOrgLevel": false,
+        "preferredValueFromOrgLevel": true,
         "parentLimit": "everybody",
         "parentLimitFromOrgLevel": true,
         "effectiveValue": "everybody",
-        "effectiveSource": "preference",
-        "isOrgLevel": false,
+        "effectiveSource": "default",
+        "isOrgLevel": true,
         "definition": {
           "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
-          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
           "namespace": "chat",
           "settingName": "voice",
           "valueType": "option",
           "allowProductOverrides": "ageBrackets",
-          "inheritFromOrg": true,
           "translations": {
             "en": {
               "label": "Voice chat",
@@ -2212,21 +3170,18 @@
         "namespace": "chat",
         "settingName": "text",
         "preferredValue": "everybody",
-        "preferredValueUpdatedAt": 1740494993184,
-        "preferredValueFromOrgLevel": false,
+        "preferredValueFromOrgLevel": true,
         "parentLimit": "everybody",
         "parentLimitFromOrgLevel": true,
         "effectiveValue": "everybody",
-        "effectiveSource": "preference",
-        "isOrgLevel": false,
+        "effectiveSource": "default",
+        "isOrgLevel": true,
         "definition": {
           "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
-          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
           "namespace": "chat",
           "settingName": "text",
           "valueType": "option",
           "allowProductOverrides": "ageBrackets",
-          "inheritFromOrg": true,
           "translations": {
             "en": {
               "label": "Voice chat",
@@ -2299,15 +3254,13 @@
         "preferredValueFromOrgLevel": true,
         "effectiveValue": "prefer-not-recording",
         "effectiveSource": "default",
-        "isOrgLevel": false,
+        "isOrgLevel": true,
         "definition": {
           "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
-          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
           "namespace": "chat",
           "settingName": "enhanced-voice-reporting",
           "valueType": "option",
           "allowProductOverrides": "ageBrackets",
-          "inheritFromOrg": true,
           "translations": {
             "en": {
               "label": "Enhanced voice chat recording",
@@ -2353,15 +3306,13 @@
         "preferredValueFromOrgLevel": true,
         "effectiveValue": "prefer-not-recording",
         "effectiveSource": "default",
-        "isOrgLevel": false,
+        "isOrgLevel": true,
         "definition": {
           "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
-          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
           "namespace": "chat",
           "settingName": "enhanced-text-reporting",
           "valueType": "option",
           "allowProductOverrides": "ageBrackets",
-          "inheritFromOrg": true,
           "translations": {
             "en": {
               "label": "Enhanced text chat recording",
@@ -2407,15 +3358,13 @@
         "preferredValueFromOrgLevel": true,
         "effectiveValue": "prefer-not-recording-and-auto-mute",
         "effectiveSource": "default",
-        "isOrgLevel": false,
+        "isOrgLevel": true,
         "definition": {
           "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
-          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
           "namespace": "chat",
           "settingName": "voice-chat-recording",
           "valueType": "option",
           "allowProductOverrides": "ageBrackets",
-          "inheritFromOrg": true,
           "translations": {
             "en": {
               "label": "Enhanced voice chat recording",
@@ -2472,15 +3421,13 @@
         "preferredValueFromOrgLevel": true,
         "effectiveValue": false,
         "effectiveSource": "default",
-        "isOrgLevel": false,
+        "isOrgLevel": true,
         "definition": {
           "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
-          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
           "namespace": "chat",
           "settingName": "filter-out-pii",
           "valueType": "boolean",
           "allowProductOverrides": "ageBrackets",
-          "inheritFromOrg": true,
           "translations": {
             "en": {
               "label": "Filter out Personally Identifiable Information in Epic text chat",
@@ -2504,161 +3451,25 @@
         }
       },
       {
-        "namespace": "time",
-        "settingName": "play-limits-enabled",
-        "preferredValue": false,
-        "preferredValueFromOrgLevel": true,
-        "parentLimit": false,
-        "parentLimitFromOrgLevel": true,
-        "effectiveValue": false,
-        "effectiveSource": "default",
-        "isOrgLevel": false,
-        "definition": {
-          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
-          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
-          "namespace": "time",
-          "settingName": "play-limits-enabled",
-          "valueType": "boolean",
-          "allowProductOverrides": "ageBrackets",
-          "inheritFromOrg": true,
-          "translations": {
-            "en": {
-              "label": "TBD",
-              "userNotice": "TBD",
-              "parentNotice": "TBD"
-            }
-          },
-          "options": [],
-          "restrictiveOrder": "falsePermissive",
-          "userHidden": true,
-          "required": false,
-          "dataStorage": "raw",
-          "maximumScheduleWindowsPerDay": 0,
-          "ageBracket": {
-            "consentTypeRequired": "none",
-            "consentTypeUnderParentalControl": "opt-in-unverified",
-            "consentType": "opt-in-unverified",
-            "applyConsentToEnforcedUsersOnly": true,
-            "defaultValue": false,
-            "defaultPreference": false,
-            "defaultParentLimit": false
-          }
-        }
-      },
-      {
-        "namespace": "time",
-        "settingName": "play-schedule",
-        "preferredValue": true,
-        "preferredValueFromOrgLevel": true,
-        "parentLimit": true,
-        "parentLimitFromOrgLevel": true,
-        "parentLimitScheduleEnabled": false,
-        "effectiveValue": true,
-        "effectiveSource": "default",
-        "isOrgLevel": false,
-        "definition": {
-          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
-          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
-          "namespace": "time",
-          "settingName": "play-schedule",
-          "valueType": "boolean",
-          "allowProductOverrides": "ageBrackets",
-          "inheritFromOrg": true,
-          "translations": {
-            "en": {
-              "label": "TBD",
-              "userNotice": "TBD",
-              "parentNotice": "TBD"
-            }
-          },
-          "options": [],
-          "restrictiveOrder": "falseRestrictive",
-          "userHidden": true,
-          "required": false,
-          "dataStorage": "raw",
-          "maximumScheduleWindowsPerDay": 5,
-          "schedulePeriod": "5m",
-          "ageBracket": {
-            "consentTypeRequired": "none",
-            "consentTypeUnderParentalControl": "opt-in-unverified",
-            "consentType": "opt-in-unverified",
-            "applyConsentToEnforcedUsersOnly": true,
-            "defaultValue": true,
-            "defaultPreference": true,
-            "defaultParentLimit": true
-          }
-        }
-      },
-      {
-        "namespace": "time",
-        "settingName": "play-minutes-allowed",
-        "preferredValue": 1440,
-        "preferredValueFromOrgLevel": true,
-        "parentLimit": 1440,
-        "parentLimitFromOrgLevel": true,
-        "parentLimitScheduleEnabled": false,
-        "effectiveValue": 1440,
-        "effectiveSource": "default",
-        "isOrgLevel": false,
-        "definition": {
-          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
-          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
-          "namespace": "time",
-          "settingName": "play-minutes-allowed",
-          "valueType": "numeric",
-          "numericValueFormat": "integer",
-          "numberOfDecimals": 0,
-          "min": 0,
-          "max": 1440,
-          "incrementOrDecrementBy": 1,
-          "allowProductOverrides": "ageBrackets",
-          "inheritFromOrg": true,
-          "translations": {
-            "en": {
-              "label": "TBD",
-              "userNotice": "TBD",
-              "parentNotice": "TBD"
-            }
-          },
-          "options": [],
-          "restrictiveOrder": "lowRestrictive",
-          "userHidden": true,
-          "required": false,
-          "dataStorage": "raw",
-          "maximumScheduleWindowsPerDay": 1,
-          "schedulePeriod": "1d",
-          "ageBracket": {
-            "consentTypeRequired": "none",
-            "consentTypeUnderParentalControl": "opt-in-unverified",
-            "consentType": "opt-in-unverified",
-            "applyConsentToEnforcedUsersOnly": true,
-            "defaultValue": 1440,
-            "defaultPreference": 1440,
-            "defaultParentLimit": 1440
-          }
-        }
-      },
-      {
-        "namespace": "time",
-        "settingName": "request-additional-time",
+        "namespace": "chat",
+        "settingName": "ample-hammer",
         "preferredValue": true,
         "preferredValueFromOrgLevel": true,
         "parentLimit": true,
         "parentLimitFromOrgLevel": true,
         "effectiveValue": true,
         "effectiveSource": "default",
-        "isOrgLevel": false,
+        "isOrgLevel": true,
         "definition": {
           "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
-          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
-          "namespace": "time",
-          "settingName": "request-additional-time",
+          "namespace": "chat",
+          "settingName": "ample-hammer",
           "valueType": "boolean",
           "allowProductOverrides": "ageBrackets",
-          "inheritFromOrg": true,
           "translations": {
             "en": {
               "label": "TBD",
+              "userNotice": "TBD",
               "parentNotice": "TBD"
             }
           },
@@ -2680,68 +3491,24 @@
         }
       },
       {
-        "namespace": "time",
-        "settingName": "playtime-reporting-enabled",
-        "preferredValue": false,
+        "namespace": "fab",
+        "settingName": "experience",
+        "preferredValue": true,
         "preferredValueFromOrgLevel": true,
-        "parentLimit": false,
-        "parentLimitFromOrgLevel": true,
-        "effectiveValue": false,
+        "effectiveValue": true,
         "effectiveSource": "default",
-        "isOrgLevel": false,
+        "isOrgLevel": true,
         "definition": {
           "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
-          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
-          "namespace": "time",
-          "settingName": "playtime-reporting-enabled",
-          "valueType": "boolean",
-          "allowProductOverrides": "ageBrackets",
-          "inheritFromOrg": true,
-          "translations": {
-            "en": {
-              "label": "TBD",
-              "userNotice": "TBD",
-              "parentNotice": "TBD"
-            }
-          },
-          "options": [],
-          "restrictiveOrder": "falsePermissive",
-          "userHidden": true,
-          "required": false,
-          "dataStorage": "raw",
-          "maximumScheduleWindowsPerDay": 0,
-          "ageBracket": {
-            "consentTypeRequired": "none",
-            "consentTypeUnderParentalControl": "opt-in-unverified",
-            "consentType": "opt-in-unverified",
-            "applyConsentToEnforcedUsersOnly": true,
-            "defaultValue": false,
-            "defaultPreference": false,
-            "defaultParentLimit": false
-          }
-        }
-      },
-      {
-        "namespace": "communications",
-        "settingName": "push-friend-invite",
-        "preferredValue": false,
-        "preferredValueFromOrgLevel": true,
-        "effectiveValue": false,
-        "effectiveSource": "default",
-        "isOrgLevel": false,
-        "definition": {
-          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
-          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
-          "namespace": "communications",
-          "settingName": "push-friend-invite",
+          "namespace": "fab",
+          "settingName": "experience",
           "valueType": "boolean",
           "allowProductOverrides": "none",
-          "inheritFromOrg": true,
           "translations": {
             "en": {
-              "label": "Push Friend Invite Notifications",
-              "userNotice": "Receive push notifications for Friend Invites from Epic Games apps on your mobile device.",
-              "parentNotice": "Determines if your child can receive push notifications for Friend Invites from Epic Games apps on mobile devices."
+              "label": "FAB Experience",
+              "userNotice": "Allow personalization of experience recommendations in FAB",
+              "parentNotice": "Allow personalization of experience recommendations in FAB"
             }
           },
           "options": [],
@@ -2754,32 +3521,30 @@
             "consentTypeRequired": "none",
             "consentType": "none",
             "applyConsentToEnforcedUsersOnly": false,
-            "defaultValue": false,
-            "defaultPreference": false
+            "defaultValue": true,
+            "defaultPreference": true
           }
         }
       },
       {
-        "namespace": "communications",
-        "settingName": "push-party-invite",
-        "preferredValue": false,
+        "namespace": "fab",
+        "settingName": "marketing",
+        "preferredValue": true,
         "preferredValueFromOrgLevel": true,
-        "effectiveValue": false,
+        "effectiveValue": true,
         "effectiveSource": "default",
-        "isOrgLevel": false,
+        "isOrgLevel": true,
         "definition": {
           "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
-          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
-          "namespace": "communications",
-          "settingName": "push-party-invite",
+          "namespace": "fab",
+          "settingName": "marketing",
           "valueType": "boolean",
-          "allowProductOverrides": "ageBrackets",
-          "inheritFromOrg": true,
+          "allowProductOverrides": "none",
           "translations": {
             "en": {
-              "label": "Push Party Invite Notifications",
-              "userNotice": "Receive push notifications for Party Invites from Epic Games apps on your mobile device.",
-              "parentNotice": "Determines if your child can receive push notifications for Party Invites from Epic Games apps on mobile devices."
+              "label": "FAB Marketing",
+              "userNotice": "Allow personalization of purchase recommendations in FAB",
+              "parentNotice": "Allow personalization of purchase recommendations in FAB"
             }
           },
           "options": [],
@@ -2792,32 +3557,30 @@
             "consentTypeRequired": "none",
             "consentType": "none",
             "applyConsentToEnforcedUsersOnly": false,
-            "defaultValue": false,
-            "defaultPreference": false
+            "defaultValue": true,
+            "defaultPreference": true
           }
         }
       },
       {
-        "namespace": "communications",
-        "settingName": "push-marketing",
-        "preferredValue": false,
+        "namespace": "dp",
+        "settingName": "experience",
+        "preferredValue": true,
         "preferredValueFromOrgLevel": true,
-        "effectiveValue": false,
+        "effectiveValue": true,
         "effectiveSource": "default",
-        "isOrgLevel": false,
+        "isOrgLevel": true,
         "definition": {
           "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
-          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
-          "namespace": "communications",
-          "settingName": "push-marketing",
+          "namespace": "dp",
+          "settingName": "experience",
           "valueType": "boolean",
-          "allowProductOverrides": "ageBrackets",
-          "inheritFromOrg": true,
+          "allowProductOverrides": "none",
           "translations": {
             "en": {
-              "label": "Push Marketing Notifications",
-              "userNotice": "Receive push notifications for Marketing from Epic Games apps on your mobile device.",
-              "parentNotice": "Determines if your child can receive push notifications for Marketing from Epic Games apps on mobile devices."
+              "label": "Developer Product Experience",
+              "userNotice": "Allow personalization of experience recommendations in Developer Products",
+              "parentNotice": "Allow personalization of experience recommendations in Developer Products"
             }
           },
           "options": [],
@@ -2825,6 +3588,706 @@
           "userHidden": false,
           "required": false,
           "dataStorage": "raw",
+          "maximumScheduleWindowsPerDay": 0,
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentType": "none",
+            "applyConsentToEnforcedUsersOnly": false,
+            "defaultValue": true,
+            "defaultPreference": true
+          }
+        }
+      },
+      {
+        "namespace": "dp",
+        "settingName": "marketing",
+        "preferredValue": true,
+        "preferredValueFromOrgLevel": true,
+        "effectiveValue": true,
+        "effectiveSource": "default",
+        "isOrgLevel": true,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "namespace": "dp",
+          "settingName": "marketing",
+          "valueType": "boolean",
+          "allowProductOverrides": "none",
+          "translations": {
+            "en": {
+              "label": "Developer Product Marketing",
+              "userNotice": "Allow personalization of purchase recommendations in Developer Products",
+              "parentNotice": "Allow personalization of purchase recommendations in Developer Products"
+            }
+          },
+          "options": [],
+          "restrictiveOrder": "falseRestrictive",
+          "userHidden": false,
+          "required": false,
+          "dataStorage": "raw",
+          "maximumScheduleWindowsPerDay": 0,
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentType": "none",
+            "applyConsentToEnforcedUsersOnly": false,
+            "defaultValue": true,
+            "defaultPreference": true
+          }
+        }
+      },
+      {
+        "namespace": "profile",
+        "settingName": "can-receive-gifts",
+        "preferredValue": true,
+        "preferredValueFromOrgLevel": true,
+        "parentLimit": true,
+        "parentLimitFromOrgLevel": true,
+        "effectiveValue": true,
+        "effectiveSource": "default",
+        "isOrgLevel": true,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "namespace": "profile",
+          "settingName": "can-receive-gifts",
+          "valueType": "boolean",
+          "allowProductOverrides": "ageBrackets",
+          "translations": {
+            "en": {
+              "label": "Can Receive Gifts",
+              "userNotice": "Can Receive Gifts",
+              "parentNotice": "Can Receive Gifts"
+            }
+          },
+          "options": [],
+          "restrictiveOrder": "falseRestrictive",
+          "userHidden": false,
+          "required": false,
+          "dataStorage": "raw",
+          "maximumScheduleWindowsPerDay": 0,
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentTypeUnderParentalControl": "opt-in-unverified",
+            "consentType": "opt-in-unverified",
+            "applyConsentToEnforcedUsersOnly": true,
+            "defaultValue": true,
+            "defaultPreference": true,
+            "defaultParentLimit": true,
+            "enforcedLimit": true
+          }
+        }
+      },
+      {
+        "namespace": "profile",
+        "settingName": "require-pin-to-add-friend",
+        "preferredValue": false,
+        "preferredValueFromOrgLevel": true,
+        "parentLimit": false,
+        "parentLimitFromOrgLevel": true,
+        "parentLimitUpdatedAt": 1663702993922,
+        "effectiveValue": false,
+        "effectiveSource": "default",
+        "isOrgLevel": true,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "namespace": "profile",
+          "settingName": "require-pin-to-add-friend",
+          "valueType": "boolean",
+          "allowProductOverrides": "ageBrackets",
+          "translations": {
+            "en": {
+              "label": "Require PIN to add Epic friends",
+              "parentNotice": "<b>On:</b> Each time your child tries to send or accept an Epic Games friend request, you will need to enter your PIN. If a game or service doesn't yet support this setting, friend requests won't be permitted. This setting doesn’t affect friends systems on gaming platforms such as Playstation, Steam, XBox, and Switch."
+            }
+          },
+          "options": [],
+          "restrictiveOrder": "falsePermissive",
+          "userHidden": true,
+          "required": false,
+          "dataStorage": "raw",
+          "maximumScheduleWindowsPerDay": 0,
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentTypeUnderParentalControl": "opt-in-unverified",
+            "consentType": "opt-in-unverified",
+            "applyConsentToEnforcedUsersOnly": true,
+            "defaultValue": false,
+            "defaultPreference": false,
+            "defaultParentLimit": false
+          }
+        }
+      },
+      {
+        "namespace": "profile",
+        "settingName": "allow-non-squad-users-to-see-my-username",
+        "preferredValue": true,
+        "preferredValueFromOrgLevel": true,
+        "effectiveValue": true,
+        "effectiveSource": "default",
+        "isOrgLevel": true,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "namespace": "profile",
+          "settingName": "allow-non-squad-users-to-see-my-username",
+          "valueType": "boolean",
+          "allowProductOverrides": "ageBrackets",
+          "translations": {
+            "en": {
+              "label": "Display username to non-squad users",
+              "userNotice": "Determines if your username can be shown to non-squad users",
+              "parentNotice": "Determines if your child''s username can be shown to non-squad users"
+            }
+          },
+          "options": [],
+          "restrictiveOrder": "falseRestrictive",
+          "userHidden": false,
+          "required": false,
+          "dataStorage": "raw",
+          "maximumScheduleWindowsPerDay": 0,
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentType": "none",
+            "applyConsentToEnforcedUsersOnly": false,
+            "defaultValue": true,
+            "defaultPreference": true
+          }
+        }
+      },
+      {
+        "namespace": "profile",
+        "settingName": "can-see-player-usernames-from-other-squads",
+        "preferredValue": true,
+        "preferredValueFromOrgLevel": true,
+        "effectiveValue": true,
+        "effectiveSource": "default",
+        "isOrgLevel": true,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "namespace": "profile",
+          "settingName": "can-see-player-usernames-from-other-squads",
+          "valueType": "boolean",
+          "allowProductOverrides": "ageBrackets",
+          "translations": {
+            "en": {
+              "label": "Can see usernames of players from other squads",
+              "userNotice": "Determines if you can see usernames of players from other squads",
+              "parentNotice": "Determines if your child can see usernames of players from other squads"
+            }
+          },
+          "options": [],
+          "restrictiveOrder": "falseRestrictive",
+          "userHidden": false,
+          "required": false,
+          "dataStorage": "raw",
+          "maximumScheduleWindowsPerDay": 0,
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentType": "none",
+            "applyConsentToEnforcedUsersOnly": false,
+            "defaultValue": true,
+            "defaultPreference": true
+          }
+        }
+      },
+      {
+        "namespace": "profile",
+        "settingName": "playtime-reporting-frequency",
+        "preferredValue": "never",
+        "preferredValueFromOrgLevel": true,
+        "parentLimit": "never",
+        "parentLimitFromOrgLevel": true,
+        "effectiveValue": "never",
+        "effectiveSource": "default",
+        "isOrgLevel": true,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "namespace": "profile",
+          "settingName": "playtime-reporting-frequency",
+          "valueType": "option",
+          "allowProductOverrides": "ageBrackets",
+          "translations": {
+            "en": {
+              "label": "Receive weekly playtime tracking reports",
+              "parentNotice": "Receive weekly playtime tracking reports"
+            }
+          },
+          "options": [
+            {
+              "value": "weekly",
+              "translations": {
+                "en": {
+                  "label": "Weekly",
+                  "parentNotice": "<b>On:</b> We'll send a weekly playtime report to the parent or guardian associated with this account. If there isn't a parent or guardian email address, we'll send the playtime report to this account’s email address."
+                }
+              }
+            },
+            {
+              "value": "never",
+              "translations": {
+                "en": {
+                  "label": "Never",
+                  "parentNotice": "<b>Off:</b> You won't receive weekly playtime tracking reports."
+                }
+              }
+            }
+          ],
+          "restrictiveOrder": "firstRestrictive",
+          "userHidden": true,
+          "required": false,
+          "dataStorage": "raw",
+          "maximumScheduleWindowsPerDay": 0,
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentTypeUnderParentalControl": "opt-in-unverified",
+            "consentType": "opt-in-unverified",
+            "applyConsentToEnforcedUsersOnly": true,
+            "defaultValue": "never",
+            "defaultPreference": "never",
+            "defaultParentLimit": "never"
+          }
+        }
+      },
+      {
+        "namespace": "profile",
+        "settingName": "show-season-level",
+        "preferredValue": true,
+        "preferredValueFromOrgLevel": true,
+        "effectiveValue": true,
+        "effectiveSource": "default",
+        "isOrgLevel": true,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "namespace": "profile",
+          "settingName": "show-season-level",
+          "valueType": "boolean",
+          "allowProductOverrides": "ageBrackets",
+          "translations": {
+            "en": {
+              "label": "Show Season level in feed",
+              "userNotice": "Show Season level in feed",
+              "parentNotice": "Show Season level in feed"
+            }
+          },
+          "options": [],
+          "restrictiveOrder": "falseRestrictive",
+          "userHidden": false,
+          "required": false,
+          "dataStorage": "raw",
+          "maximumScheduleWindowsPerDay": 0,
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentType": "none",
+            "applyConsentToEnforcedUsersOnly": false,
+            "defaultValue": true,
+            "defaultPreference": true,
+            "enforcedLimit": true
+          }
+        }
+      },
+      {
+        "namespace": "profile",
+        "settingName": "player-surveys",
+        "preferredValue": true,
+        "preferredValueFromOrgLevel": true,
+        "effectiveValue": true,
+        "effectiveSource": "default",
+        "isOrgLevel": true,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "namespace": "profile",
+          "settingName": "player-surveys",
+          "valueType": "boolean",
+          "allowProductOverrides": "ageBrackets",
+          "translations": {
+            "en": {
+              "label": "Player Surveys",
+              "userNotice": "Player Surveys",
+              "parentNotice": "Player Surveys"
+            }
+          },
+          "options": [],
+          "restrictiveOrder": "falseRestrictive",
+          "userHidden": false,
+          "required": false,
+          "dataStorage": "raw",
+          "maximumScheduleWindowsPerDay": 0,
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentType": "none",
+            "applyConsentToEnforcedUsersOnly": false,
+            "defaultValue": true,
+            "defaultPreference": true,
+            "enforcedLimit": true
+          }
+        }
+      },
+      {
+        "namespace": "profile",
+        "settingName": "region-visibility",
+        "preferredValue": "public",
+        "preferredValueFromOrgLevel": true,
+        "effectiveValue": "public",
+        "effectiveSource": "default",
+        "isOrgLevel": true,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "namespace": "profile",
+          "settingName": "region-visibility",
+          "valueType": "option",
+          "allowProductOverrides": "ageBrackets",
+          "translations": {
+            "en": {
+              "label": "TBD",
+              "userNotice": "TBD",
+              "parentNotice": "TBD"
+            }
+          },
+          "options": [
+            {
+              "value": "private",
+              "translations": {
+                "en": {
+                  "label": "Private",
+                  "userNotice": "TBD",
+                  "parentNotice": "TBD"
+                }
+              }
+            },
+            {
+              "value": "friends-only",
+              "translations": {
+                "en": {
+                  "label": "Friends Only",
+                  "userNotice": "TBD",
+                  "parentNotice": "TODO"
+                }
+              }
+            },
+            {
+              "value": "public",
+              "translations": {
+                "en": {
+                  "label": "Public",
+                  "userNotice": "TBD",
+                  "parentNotice": "TBD"
+                }
+              }
+            }
+          ],
+          "restrictiveOrder": "firstRestrictive",
+          "userHidden": false,
+          "required": false,
+          "dataStorage": "raw",
+          "maximumScheduleWindowsPerDay": 0,
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentType": "none",
+            "applyConsentToEnforcedUsersOnly": false,
+            "defaultValue": "public",
+            "defaultPreference": "public",
+            "enforcedLimit": "public"
+          }
+        }
+      },
+      {
+        "namespace": "profile",
+        "settingName": "languages-visibility",
+        "preferredValue": "public",
+        "preferredValueFromOrgLevel": true,
+        "effectiveValue": "public",
+        "effectiveSource": "default",
+        "isOrgLevel": true,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "namespace": "profile",
+          "settingName": "languages-visibility",
+          "valueType": "option",
+          "allowProductOverrides": "ageBrackets",
+          "translations": {
+            "en": {
+              "label": "TBD",
+              "userNotice": "TBD",
+              "parentNotice": "TBD"
+            }
+          },
+          "options": [
+            {
+              "value": "private",
+              "translations": {
+                "en": {
+                  "label": "Private",
+                  "userNotice": "TBD",
+                  "parentNotice": "TBD"
+                }
+              }
+            },
+            {
+              "value": "friends-only",
+              "translations": {
+                "en": {
+                  "label": "Friends Only",
+                  "userNotice": "TBD",
+                  "parentNotice": "TODO"
+                }
+              }
+            },
+            {
+              "value": "public",
+              "translations": {
+                "en": {
+                  "label": "Public",
+                  "userNotice": "TBD",
+                  "parentNotice": "TBD"
+                }
+              }
+            }
+          ],
+          "restrictiveOrder": "firstRestrictive",
+          "userHidden": false,
+          "required": false,
+          "dataStorage": "raw",
+          "maximumScheduleWindowsPerDay": 0,
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentType": "none",
+            "applyConsentToEnforcedUsersOnly": false,
+            "defaultValue": "public",
+            "defaultPreference": "public",
+            "enforcedLimit": "public"
+          }
+        }
+      },
+      {
+        "namespace": "profile",
+        "settingName": "badges-visibility",
+        "preferredValue": "friends-only",
+        "preferredValueFromOrgLevel": true,
+        "effectiveValue": "friends-only",
+        "effectiveSource": "default",
+        "isOrgLevel": true,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "namespace": "profile",
+          "settingName": "badges-visibility",
+          "valueType": "option",
+          "allowProductOverrides": "ageBrackets",
+          "translations": {
+            "en": {
+              "label": "TBD",
+              "userNotice": "TBD",
+              "parentNotice": "TBD"
+            }
+          },
+          "options": [
+            {
+              "value": "private",
+              "translations": {
+                "en": {
+                  "label": "Private",
+                  "userNotice": "TBD",
+                  "parentNotice": "TBD"
+                }
+              }
+            },
+            {
+              "value": "friends-only",
+              "translations": {
+                "en": {
+                  "label": "Friends Only",
+                  "userNotice": "TBD",
+                  "parentNotice": "TBD"
+                }
+              }
+            }
+          ],
+          "restrictiveOrder": "firstRestrictive",
+          "userHidden": false,
+          "required": false,
+          "dataStorage": "raw",
+          "maximumScheduleWindowsPerDay": 0,
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentType": "none",
+            "applyConsentToEnforcedUsersOnly": false,
+            "defaultValue": "friends-only",
+            "defaultPreference": "friends-only",
+            "enforcedLimit": "friends-only"
+          }
+        }
+      },
+      {
+        "namespace": "profile",
+        "settingName": "p2p-trading",
+        "preferredValue": "everybody",
+        "preferredValueFromOrgLevel": true,
+        "effectiveValue": "everybody",
+        "effectiveSource": "default",
+        "isOrgLevel": true,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "namespace": "profile",
+          "settingName": "p2p-trading",
+          "valueType": "option",
+          "allowProductOverrides": "ageBrackets",
+          "translations": {
+            "en": {
+              "label": "TBD",
+              "userNotice": "TBD",
+              "parentNotice": "TBD"
+            }
+          },
+          "options": [
+            {
+              "value": "nobody",
+              "translations": {
+                "en": {
+                  "label": "Nobody",
+                  "userNotice": "TBD",
+                  "parentNotice": "TBD"
+                }
+              }
+            },
+            {
+              "value": "friends",
+              "translations": {
+                "en": {
+                  "label": "Friends Only",
+                  "userNotice": "TBD",
+                  "parentNotice": "TBD"
+                }
+              }
+            },
+            {
+              "value": "friends-and-teammates",
+              "translations": {
+                "en": {
+                  "label": "Friends & Teammates",
+                  "userNotice": "TBD",
+                  "parentNotice": "TBD"
+                }
+              }
+            },
+            {
+              "value": "everybody",
+              "translations": {
+                "en": {
+                  "label": "Everybody",
+                  "userNotice": "TBD",
+                  "parentNotice": "TBD"
+                }
+              }
+            }
+          ],
+          "restrictiveOrder": "firstRestrictive",
+          "userHidden": false,
+          "required": false,
+          "dataStorage": "raw",
+          "maximumScheduleWindowsPerDay": 0,
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentType": "none",
+            "applyConsentToEnforcedUsersOnly": false,
+            "defaultValue": "everybody",
+            "defaultPreference": "everybody"
+          }
+        }
+      },
+      {
+        "namespace": "profile",
+        "settingName": "allow-strikethrough-prices",
+        "preferredValue": true,
+        "preferredValueFromOrgLevel": true,
+        "effectiveValue": true,
+        "effectiveSource": "default",
+        "isOrgLevel": true,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "namespace": "profile",
+          "settingName": "allow-strikethrough-prices",
+          "valueType": "boolean",
+          "allowProductOverrides": "ageBrackets",
+          "translations": {
+            "en": {
+              "label": "TBD",
+              "userNotice": "TBD",
+              "parentNotice": "TBD"
+            }
+          },
+          "options": [],
+          "restrictiveOrder": "falseRestrictive",
+          "userHidden": false,
+          "required": false,
+          "dataStorage": "readOnly",
+          "maximumScheduleWindowsPerDay": 0,
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentType": "none",
+            "applyConsentToEnforcedUsersOnly": false,
+            "defaultValue": true,
+            "defaultPreference": true
+          }
+        }
+      },
+      {
+        "namespace": "profile",
+        "settingName": "allow-mtx-strikethrough-prices",
+        "preferredValue": true,
+        "preferredValueFromOrgLevel": true,
+        "effectiveValue": true,
+        "effectiveSource": "default",
+        "isOrgLevel": true,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "namespace": "profile",
+          "settingName": "allow-mtx-strikethrough-prices",
+          "valueType": "boolean",
+          "allowProductOverrides": "ageBrackets",
+          "translations": {
+            "en": {
+              "label": "TBD",
+              "userNotice": "TBD",
+              "parentNotice": "TBD"
+            }
+          },
+          "options": [],
+          "restrictiveOrder": "falseRestrictive",
+          "userHidden": false,
+          "required": false,
+          "dataStorage": "readOnly",
+          "maximumScheduleWindowsPerDay": 0,
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentType": "none",
+            "applyConsentToEnforcedUsersOnly": false,
+            "defaultValue": true,
+            "defaultPreference": true
+          }
+        }
+      },
+      {
+        "namespace": "profile",
+        "settingName": "display-vat-included",
+        "preferredValue": false,
+        "preferredValueFromOrgLevel": true,
+        "effectiveValue": false,
+        "effectiveSource": "default",
+        "isOrgLevel": true,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "namespace": "profile",
+          "settingName": "display-vat-included",
+          "valueType": "boolean",
+          "allowProductOverrides": "ageBrackets",
+          "translations": {
+            "en": {
+              "label": "TBD",
+              "userNotice": "TBD",
+              "parentNotice": "TBD"
+            }
+          },
+          "options": [],
+          "restrictiveOrder": "falsePermissive",
+          "userHidden": false,
+          "required": false,
+          "dataStorage": "readOnly",
           "maximumScheduleWindowsPerDay": 0,
           "ageBracket": {
             "consentTypeRequired": "none",
@@ -2838,7 +4301,7 @@
     ]
   },
   "meta": {
-    "requestId": "FN-CumlzQ58RkuyanB5cOV9GA",
-    "timestamp": "2025-02-25T20:08:51.258Z"
+    "requestId": "5fdf2d21-470b-4706-8a45-0b65f540720b",
+    "timestamp": "2025-05-06T13:32:51.530Z"
   }
 }

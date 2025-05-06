@@ -118,6 +118,11 @@ module.exports.routes = {
     },
     'GET /api/content/v2/launch-data': 'ApiController.launchData',
     'POST /api/v1/user/setting': 'ApiController.userSetting',
+    'OPTIONS /v1/epic-settings/public/users/:accountId/*':{
+        action: "epicSettings204",
+        controller:'ApiController',
+        skipAssets: false
+    },
     'PATCH /v1/epic-settings/public/users/:accountId/*':{ 
         action: "epicSettings",
         controller:'ApiController', 

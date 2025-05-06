@@ -1040,6 +1040,10 @@ module.exports = {
         ])
     },
 
+	epicSettings204: function(req, res){
+		res.sack(204).end()
+	},
+
     epicSettings: function(req, res){
         res.json(loadJSON("../responses/epic-settings.json"))
     },
@@ -1150,7 +1154,7 @@ module.exports = {
 				},
 				"metadata": {
 					"TeamLockType": "Window",
-					"minimumAccountLevel": 15,
+					"minimumAccountLevel": 1,
 					"TrackedStats": [
 						"MMO_LootIsland",
 						"MMO_RadioTower"
@@ -1164,7 +1168,7 @@ module.exports = {
 					"eventTemplateId": "EventTemplate_S26_DuosCashCup_EU_Event1_Round1",
 					"countdownBeginTime": "2023-09-07T15:00:00.000Z",
 					"beginTime": "2023-09-07T17:00:00.000Z",
-					"endTime": "2023-09-07T20:00:00.000Z",
+					"endTime": "9999-12-30T20:00:00.000Z",
 					"blackoutPeriods": [],
 					"round": 0,
 					"payoutDelay": 32,
@@ -1190,11 +1194,7 @@ module.exports = {
 					],
 					"requireAllTokensCaller": [],
 					"requireAnyTokensCaller": [],
-					"additionalRequirements": [
-						"mfa",
-						"eula:s26_brcash_rules",
-						"currentRanking:ranked-br:6"
-					],
+					"additionalRequirements": [],
 					"teammateEligibility": "all",
 					"regionMappings": null,
 					"metadata": {
@@ -1205,7 +1205,7 @@ module.exports = {
 				}
 				],
 				"beginTime": "2023-09-07T17:00:00.000Z",
-				"endTime": "2023-11-02T21:00:00.000Z"
+				"endTime": "9999-12-30T20:00:00.000Z",
 			}],
 				"templates": [],
 				"scores": [],
