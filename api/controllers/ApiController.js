@@ -8,25 +8,6 @@ var config = ini.parse(fs.readFileSync(path.join(__dirname, '../../config.ini'),
 
 
 
-Date.prototype.addHours = function (h) {
-	this.setTime(this.getTime() + (h * 60 * 60 * 1000));
-	return this;
-}
-
-Array.prototype.shuffle = function () {
-	var a = this;
-	var j, x, i;
-	for (i = a.length - 1; i > 0; i--) {
-		j = Math.floor(Math.random() * (i + 1));
-		x = a[i];
-		a[i] = a[j];
-		a[j] = x;
-	}
-	return a;
-}
-
-
-
 module.exports = {
 
 	distributionpoints: function (req, res) {
