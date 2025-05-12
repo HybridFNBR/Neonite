@@ -46,7 +46,7 @@ module.exports = {
                             }
                         }
                     ],
-                    cacheExpire: new Date(Date.now() - new Date().getTimezoneOffset() * 60000 + 1000).toISOString()
+                    cacheExpire: new Date(Date.now() + 1000).toISOString()
                 },
                 "featured-islands": {},
                 "community-votes": {},
@@ -178,10 +178,10 @@ module.exports = {
                             rmtPromotion: "melody"
                         }
                     }],
-                    cacheExpire: new Date(Date.now() - new Date().getTimezoneOffset() * 60000 + 1000).toISOString() //refresh every second(might be a bit over kill)
+                    cacheExpire: new Date(Date.now() + 1000).toISOString()
                 }
             },
-            currentTime: new Date(Date.now() - new Date().getTimezoneOffset() * 60000).toISOString(),
+            currentTime: new Date().toISOString(),
             cacheIntervalMins: 0,
             eventsTimeOffsetHrs: 0
         }
