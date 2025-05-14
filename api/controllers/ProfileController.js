@@ -28,6 +28,7 @@ module.exports = {
 				profileData = Profile.readProfileTemplate(profileId);
 
 				if (!profileData) {
+					NeoLog.Error("Failed to read profile template");
 					throw next(new ApiException(errors.com.epicgames.modules.profiles.operation_forbidden).with(profileId));
 				}
 
@@ -39,6 +40,7 @@ module.exports = {
 				try {
 					fs.mkdirSync(`./profile/${accountId}/profiles`, { recursive: true });
 					Profile.saveProfile(accountId, profileId, profileData);
+					NeoLog.Log(`Created ${profileId} profile for ${accountId}`);
 				} catch (e) {
 					NeoLog.Error("Failed creating profile.");
 					throw e;
@@ -363,16 +365,19 @@ module.exports = {
 			}
 
 			case "QueryProfile":{
-				try{
+				getOrCreateProfile(`${profileId}`)
+				if(profileId == "athena"){
 					stats(accountId, athenprofile, config, versionGlobal)
 					if(versionGlobal >= 33){seasonPass(accountId, athenprofile, versionGlobal)}
-					winterFest(accountId, athenprofile)
-					for (const [questId, quest] of Object.entries(miniPassData)){Profile.addItem(athenprofile, questId, quest);}
+					if(version == 33.11 || version == 23.10 || version == 19.01 || version == 11.31){winterFest(accountId, athenprofile)}
+					for(const [questId, quest] of Object.entries(miniPassData))
+					{
+						Profile.addItem(athenprofile, questId, quest)
+					}
+					if(version >= 28.00){MPLockerLoadout(accountId, athenprofile)}
+					if(version <= 10.40 || VersionFilter.includes(versionGlobal)){CH1Fix(accountId, athenprofile)}
+					Profile.bumpRvn(profileId)
 				}
-				catch{}
-				if(version >= 28.00){MPLockerLoadout(accountId, athenprofile)}
-				if(version <= 10.40 || VersionFilter.includes(versionGlobal)){CH1Fix(accountId, athenprofile)}
-				Profile.bumpRvn(profileId)
 				response.profileChanges = [
 					{
 						"changeType": "fullProfileUpdate",

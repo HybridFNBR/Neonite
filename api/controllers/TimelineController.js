@@ -2,8 +2,9 @@
 const path = require('path');
 var fs = require('fs')
 var ini = require('ini')
-const {getVersionInfo, loadJSON} = require("../../config/defs")
-
+const {getVersionInfo, loadJSON} = require("../../config/defs");
+const NeoLog = require('../../structs/NeoLog');
+let requested = false;
 
 
 module.exports = {
@@ -2439,7 +2440,19 @@ module.exports = {
                 activeSince: "2000-09-14T07:00:00.000Z"
             })
         }
+        if(!requested) {
+            const activeEvents = timeline.channels['client-events'].states[0].activeEvents;
+            let count = 0;
+            for (const event of activeEvents) {
+                if(event["eventType"]){
+                    count++
+                }
+            }
+            NeoLog.Log(`${count} Event Flags currently active`);
+            requested = true;
+        }
         res.json(timeline)
+
     }
-    
+
 }

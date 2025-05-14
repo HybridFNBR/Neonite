@@ -9,6 +9,7 @@ module.exports = {
         const getOrCreateLockerProfile = () => {
 			var lockerData = Profile.readLockerProfile(accountId, 3);
 			if (!lockerData) {
+				NeoLog.Error(`Locker Not Found for Account: ${accountId}, creating new Locker`);
 				lockerData = Profile.readLockerTemplate(3);
 
 				lockerData["activeLoadouts"].forEach(loadout => {
@@ -17,7 +18,7 @@ module.exports = {
 				});
 
 				if (!lockerData) {
-					NeoLog.Error("An Error Occured Trying To Read Locker Data")
+					NeoLog.Error("An Error Occured Trying To Read Locker Template")
 				}
 				try {
 					fs.mkdirSync(`./profile/${accountId}/profiles`, { recursive: true });
@@ -135,6 +136,7 @@ module.exports = {
         const getOrCreateLockerProfile = () => {
 			var lockerData = Profile.readLockerProfile(accountId, 4);
 			if (!lockerData) {
+				NeoLog.Error(`Locker Not Found for Account: ${accountId}, creating new Locker`);
 				lockerData = Profile.readLockerTemplate(4);
 
 				lockerData["activeLoadoutGroup"].accountId = accountId
