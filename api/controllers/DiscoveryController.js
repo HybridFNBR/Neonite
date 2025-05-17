@@ -278,11 +278,8 @@ module.exports = {
 
     mnemonicPlaylist: function(req, res){
         const { version, versionGlobal } = getVersionInfo(req);
-		const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
-		if(versionGlobal <= 15){
-			if(numbers.some(number => req.originalUrl.includes(number))){
-				res.status(404).end();
-			}
+		if(versionGlobal <= 16){
+			res.status(404).end();
 		}
 		else if(version >= 23.00){
 			for (const result of discoveryv2) {
