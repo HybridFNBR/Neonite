@@ -12,7 +12,7 @@ module.exports = {
     //second interation of discovery api
     discoveryv2: function(req, res){
         const {version} = getVersionInfo(req);
-		if(version >= 23.50){
+		if(version >= 23.00){
 			return res.json({
 				"panels": [
 					{
@@ -204,7 +204,7 @@ module.exports = {
 
     mnemonicLinks: function(req, res){
         const {version} = getVersionInfo(req);
-		if(version >= 23.50){
+		if(version >= 23.00){
 			if (version > 27.11) {
 				const durianIndex = discoveryv2.findIndex(i => i.mnemonic === "playlist_durian");
 				discoveryv2[durianIndex].active = false;
@@ -276,7 +276,6 @@ module.exports = {
         })
     },
 
-
     mnemonicPlaylist: function(req, res){
         const { version, versionGlobal } = getVersionInfo(req);
 		const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
@@ -285,7 +284,7 @@ module.exports = {
 				res.status(404).end();
 			}
 		}
-		else if(version >= 23.50){
+		else if(version >= 23.00){
 			for (const result of discoveryv2) {
 				if (result.mnemonic === req.params.playlistId) {
 					return res.json(result);
