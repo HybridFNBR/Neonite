@@ -220,40 +220,24 @@ module.exports = {
 			return res.json(defaultResponse);
 		}
     },
-
+	
     related: function(req, res){
 		const relatedResponse = {
 			parentLinks: [],
     		links: {}
 		}
-		for (const result of discoveryv2) {
-			if (req.params.playlistId && result.mnemonic === "set_br_playlists") {
-				relatedResponse.parentLinks = [result]; 
-				relatedResponse.links = result.metadata["sub_link_codes"].reduce((links, code) => {
-					const matchingResult = discoveryv2.find(i => i.mnemonic === code);
-						if (discoveryv2.find(i => i.mnemonic === code)) links[code] = matchingResult;
-						return links;
-					}, {});
-				return res.json(relatedResponse);
-			}
-			if (result.mnemonic === req.params.playlistId) {
-				relatedResponse.links[req.params.playlistId] = result;
-				if (result.metadata.parent_set) {
-					const parentSet = discoveryv2.find(i => i.mnemonic === result.metadata.parent_set);
-					if (parentSet) {
-						relatedResponse.parentLinks.push(parentSet)
-						const existingLinks = new Set(Object.keys(relatedResponse.links));
-						parentSet.metadata["sub_link_codes"].forEach(code => {
-							const matchingResult = discoveryv2.find(i => i.mnemonic === code);
-							if (matchingResult && !existingLinks.has(code)) {
-								relatedResponse.links[code] = matchingResult; 
-							}
-						});
-					}
-				}
-				return res.json(relatedResponse);
+		const findPlaylist = discoveryv2.findIndex(i => i.mnemonic === req.params.playlistId);
+		if(discoveryv2[findPlaylist].metadata["sub_link_codes"]){
+			relatedResponse.parentLinks.push(discoveryv2[findPlaylist])
+			for (const subLinkCode of discoveryv2[findPlaylist].metadata.sub_link_codes) {
+				const subPlaylist = discoveryv2.find(i => i.mnemonic === subLinkCode)
+				relatedResponse.links[subLinkCode] = subPlaylist;
 			}
 		}
+		else{
+			relatedResponse.links[discoveryv2[findPlaylist].mnemonic] = discoveryv2[findPlaylist]
+		}
+		res.json(relatedResponse);
     },
 
 
