@@ -40,9 +40,18 @@ module.exports = {
 		})
 	},
 	
-	manifest: function(req, res) {
+	manifest: async function(req, res) {
 		res.setHeader("content-type", "application/octet-stream")
-		res.sendFile(path.join(__dirname, '../../LauncherAssets/Neonite.manifest'));
+		let requested = false
+		if(!requested){		
+			res.sendFile(path.join(__dirname, '../../LauncherAssets/Neonite.manifest'));
+			requested = true
+		}
+		else if(requested){
+			const response = await axios.get(`https://epicgames-download1.akamaized.net${req.originalUrl}`, {responseType: 'stream'});
+			response.data.pipe(res);
+			requested = false
+		}
 	},
 
 	ini: function (req, res) {
