@@ -422,14 +422,14 @@ const winterFestPresents = {
 }
 
 const getVersionInfo = (req) => {
-    try{
+   try{
         const userAgent = req.headers["user-agent"];
         const version = userAgent.split('-')[1];
         const versionGlobal = parseInt(version.split('.')[0], 10);
         const versionLegacy = userAgent.split('CL-')[1].split(',')[0]
         return { version, versionGlobal, versionLegacy };
-    }
-    catch{}
+    } 
+    catch {return {version: 1.00, versionGlobal: 1}}
 };
 
 
