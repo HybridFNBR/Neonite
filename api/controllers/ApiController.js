@@ -5,7 +5,7 @@ const jsonwebtoken = require('jsonwebtoken');
 var ini = require('ini')
 const { getVersionInfo, loadJSON, VersionFilter} = require("../../config/defs")
 var config = ini.parse(fs.readFileSync(path.join(__dirname, '../../config.ini'), 'utf-8'));
-
+let requested = false
 
 
 module.exports = {
@@ -41,14 +41,13 @@ module.exports = {
 	},
 	
 	manifest: async function(req, res) {
-		res.setHeader("content-type", "application/octet-stream")
-		let requested = false
+		res.set("content-type", "application/octet-stream")
 		if(!requested){		
 			res.sendFile(path.join(__dirname, '../../LauncherAssets/Neonite.manifest'));
 			requested = true
 		}
 		else if(requested){
-			const response = await axios.get(`https://epicgames-download1.akamaized.net${req.originalUrl}`, {responseType: 'stream'});
+			const response = await axios.get(`https://fastly-download.epicgames.com${req.originalUrl}`, {responseType: 'stream'});
 			response.data.pipe(res);
 			requested = false
 		}
