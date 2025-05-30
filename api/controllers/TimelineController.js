@@ -1531,6 +1531,17 @@ module.exports = {
             )
         }
 
+        if (version == 35.20) {
+            timeline.channels["client-events"]["states"][0]["activeEvents"].push(
+                {
+                    eventType: "RHDEvent", //Ripehoneydew Event Countdown
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2021-06-05T14:00:00.000Z"
+                }
+                                       
+            )
+        }
+
         if(versionGlobal == 10){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
