@@ -42,7 +42,11 @@ module.exports.routes = {
         controller:'ApiController', 
         skipAssets: false
     },
-    'GET /eulatracking/api/public/agreements/fn/account/:accountId': 'ApiController.eula',
+    'GET /eulatracking/api/public/agreements/fn/account/:accountId':{
+        action: "eula",
+        controller:'ApiController', 
+        skipAssets: false
+    },
     'GET /eulatracking/api/public/agreements/epicgames_privacy_policy_no_table/account/:accountId':'ApiController.eula',
     'GET /eulatracking/api/shared/agreements/fn':'ApiController.eula',
     'GET /fortnite/api/game/v2/creative/*':{
