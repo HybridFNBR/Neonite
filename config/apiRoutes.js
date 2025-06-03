@@ -138,6 +138,12 @@ module.exports.routes = {
         skipAssets: false
     },
     'PUT /profile/languages': 'ApiController.languages',
+    'POST /api/content/v2/cooked-content-package': 'ApiController.cookedContent',
+    'GET /valkyrie/cooked-content/*':{ 
+        action: "valkyrieContent",
+        controller:'ApiController', 
+        skipAssets: false
+    },
     /*'GET /api/content/v2/search/artifact/:artifactId/*':{
         action: "searchArtifact",
         controller:'ApiController', 
