@@ -102,7 +102,7 @@ module.exports = {
 		res.setHeader("content-type", "application/octet-stream")
 		const {version} = getVersionInfo(req);
 		let DefaultEngine = fs.readFileSync(path.join(__dirname, '../../hotfixes/DefaultEngine.ini'), 'utf-8');
-		if (version == 32.11) {
+		if (version == 32.11|| version == 35.20) {
 			DefaultEngine = DefaultEngine.replace(
 				';Fort.Event.bForceOffLoadingScreen=1',
 				'Fort.Event.bForceOffLoadingScreen=1'
