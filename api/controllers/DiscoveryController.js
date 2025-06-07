@@ -154,6 +154,34 @@ module.exports = {
 				"playHistoryType": null
 				},
 				{
+					"panelName": "RipeHoneyDew",
+					"panelDisplayName": "Death Star Sabotage",
+					"panelSubtitle": "Death Star Sabotage",
+					"featureTags": [
+					  "bannerItemRow"
+					],
+					"firstPage": {
+					  "results": [
+						{
+						  "lastVisited": null,
+						  "linkCode": "playlist_ripehoneydew",
+						  "isFavorite": false,
+						  "globalCCU": -1,
+						  "lockStatus": "UNLOCKED",
+						  "lockStatusReason": "RATING_THRESHOLD",
+						  "isVisible": true,
+						  "favoriteStatus": "NONE"
+						}
+					  ],
+					  "hasMore": false,
+					  "panelTargetName": null,
+					  "pageMarker": null
+					},
+					"panelType": "CuratedList",
+					"playHistoryType": null,
+					"panelContexts": {}
+				},
+				{
 					"panelName": "A-Spot",
 					"panelDisplayName": "Remix: The Finale",
 					"panelSubtitle": "Remix: The Finale",
@@ -212,6 +240,10 @@ module.exports = {
 			if (version > 32.11) {
 				const quailIndex = discoveryv2.findIndex(i => i.mnemonic === "playlist_quail");
 				discoveryv2[quailIndex].active = false;
+			}
+			if (version > 35.20) {
+				const ripehonedewIndex = discoveryv2.findIndex(i => i.mnemonic === "playlist_ripehoneydew");
+				discoveryv2[ripehonedewIndex].active = false;
 			}
 			return res.json(discoveryv2)
 		}
