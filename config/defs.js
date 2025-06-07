@@ -284,6 +284,7 @@ const seasonPass = (accountId, athenprofile, versionGlobal) => {
         "figmentpass_s01",
         "figmentpass_s02",
         "figmentpass_s03",
+        "figmentpass_s04"
         `athenaseason${versionGlobal}`,
         "junoseason1pass",
         "junoseason2pass",
