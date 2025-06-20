@@ -88,6 +88,11 @@ module.exports.routes = {
         controller:'ApiController', 
         skipAssets: false
     },
+    'GET /iad/fortnite/chunks/:chunkNum/:chunkFile':{ 
+        action: "iasChunks",
+        controller:'ApiController', 
+        skipAssets: false
+    },
     'GET /:hash/:trackHash/*.mp4':{ 
         action: "trackSegment",
         controller:'ApiController', 
