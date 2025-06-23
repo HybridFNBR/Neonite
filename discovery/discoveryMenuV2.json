@@ -78,7 +78,7 @@
         "title": "Remix: The Finale"
       },
       "version": 1,
-      "active": true,
+      "active": false,
       "disabled": false,
       "created": "2024-05-17T22:15:18.598Z",
       "published": "2024-05-17T22:15:18.598Z",
@@ -471,7 +471,7 @@
       "tagline": "It\u2019s all led up to this! Join the Rebellion and board the Death Star as you take the fight to Emperor Palpatine on June 7 at 2 PM ET."
     },
     "version": 1,
-    "active": true,
+    "active": false,
     "disabled": false,
     "created": "2025-02-11T21:23:16.739Z",
     "published": "2025-02-11T21:23:16.739Z",
@@ -642,7 +642,7 @@
         "title": "The Big Bang"
       },
       "version": 95,
-      "active": true,
+      "active": false,
       "disabled": false,
       "created": "2021-10-01T00:56:42.938Z",
       "published": "2023-11-03T08:25:06.100Z",
