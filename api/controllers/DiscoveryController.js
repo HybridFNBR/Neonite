@@ -233,15 +233,15 @@ module.exports = {
     mnemonicLinks: function(req, res){
         const {version} = getVersionInfo(req);
 		if(version >= 23.00){
-			if (version === 27.11) {
+			if (version == 27.11) {
 				const durianIndex = discoveryv2.findIndex(i => i.mnemonic === "playlist_durian");
 				discoveryv2[durianIndex].active = true;
 			}
-			if (version === 32.11) {
+			if (version == 32.11) {
 				const quailIndex = discoveryv2.findIndex(i => i.mnemonic === "playlist_quail");
 				discoveryv2[quailIndex].active = true;
 			}
-			if (version === 35.20) {
+			if (version == 35.20) {
 				const ripehonedewIndex = discoveryv2.findIndex(i => i.mnemonic === "playlist_ripehoneydew");
 				discoveryv2[ripehonedewIndex].active = true;
 			}
@@ -268,6 +268,19 @@ module.exports = {
 		}
 		else{
 			relatedResponse.links[discoveryv2[findPlaylist].mnemonic] = discoveryv2[findPlaylist]
+			if (discoveryv2[findPlaylist].metadata.parent_set) {
+					const parentSet = discoveryv2.find(i => i.mnemonic === discoveryv2[findPlaylist].metadata.parent_set);
+					if (parentSet) {
+						relatedResponse.parentLinks.push(parentSet)
+						const existingLinks = new Set(Object.keys(relatedResponse.links));
+						parentSet.metadata["sub_link_codes"].forEach(code => {
+							const matchingResult = discoveryv2.find(i => i.mnemonic === code);
+							if (matchingResult && !existingLinks.has(code)) {
+								relatedResponse.links[code] = matchingResult; 
+							}
+						});
+					}
+				}
 		}
 		res.json(relatedResponse);
     },
