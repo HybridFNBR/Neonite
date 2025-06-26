@@ -10,10 +10,12 @@
 <!-- PROJECT LOGO -->
 
 <!-- ABOUT NEONITEV2 -->
+This Repo Serves as a continuation to support/maintain the Neonite V2 Project made by [Kemo](https://github.com/kem0x) for older and newer versions of Fortnite, Neonite Currently Supports 1.7.2 upto latest. 
+
 ## About Neonite V2
 
 Neonite V2 is a popular private server written in [Node.js](https://nodejs.org/en/download/current/), aimed to provide a fun yet easy-to-use program for people wanting to customize their Fortnite experience.
-_This project was made for fun and it doesn't aim to harm the original game by any means, If you are an Epic Games employee and have any problems with this project, please do not hesitate to [contact us](#contact) through your official business email._ <br>
+_This project was made for fun and it doesn't aim to harm the original game by any means, If you are an Epic Games employee and have any problems with this project, please do not hesitate to send an email to hybridfnbrbusiness@gmail.com through your official business email._ <br>
 _In acquiescence to Epic Games Inc. - Please note that access to all cosmetics for Neonite V2 has been stripped. If you want to use skins, please purchase them on Fortnite._
 
 <!-- INSTALL -->
@@ -48,7 +50,7 @@ Discord Server: [Carbon](https://discord.com/invite/X525zyJtaU) <- *you can get 
 
 | Contributor | Helped with |
 | ----------- | ----------- |
-| [Kemo](https://github.com/kem0o)  | Original creator and maintainer |
+| [Kemo](https://github.com/kem0x)  | Original creator and maintainer |
 | [Hybrid](https://github.com/HybridFNBR)   | Current maintainer |
 | [Andre](https://github.com/JustAndr3h)   | Pull requests |
 | [Beat-YT](https://github.com/Beat-YT)   | maintainer |
