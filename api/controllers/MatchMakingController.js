@@ -73,7 +73,6 @@ module.exports = {
     },
 
     matchmakingSession2: function(req, res){
-        var BuildUniqueId = req.cookies["NetCL"];
 		res.json({
 			"id": req.params.sessionId,
 			"ownerId": "Neonite",
@@ -97,7 +96,7 @@ module.exports = {
 			"usesPresence": false,
 			"allowJoinViaPresence": true,
 			"allowJoinViaPresenceFriendsOnly": false,
-			"buildUniqueId": BuildUniqueId || "00000000",
+			"buildUniqueId": "00000000",
 			"lastUpdated": "2020-11-09T00:40:28.878Z",
 			"started": false
 		});
@@ -133,4 +132,9 @@ function RandomString(length) {
 			charactersLength)));
 	}
 	return result.join('');
+}
+
+Date.prototype.addHours = function (h) {
+	this.setTime(this.getTime() + (h * 60 * 60 * 1000));
+	return this;
 }
