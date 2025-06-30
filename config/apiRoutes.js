@@ -149,7 +149,7 @@ module.exports.routes = {
         controller:'ApiController', 
         skipAssets: false
     },
-    /*'GET /api/content/v2/search/artifact/:artifactId/*':{
+    'GET /api/content/v2/search/artifact/:artifactId/*':{
         action: "searchArtifact",
         controller:'ApiController', 
         skipAssets: false
@@ -159,11 +159,6 @@ module.exports.routes = {
         controller:'ApiController', 
         skipAssets: false
     },
-    'GET /api/v1/redirect/fortnite/valkyrie/cooked-content/*':{
-        action: "valkyrie",
-        controller:'ApiController', 
-        skipAssets: false
-    },*/
     'GET /:resourceId/master.blurl': 'ApiController.blurl',
     'GET /app_installation/status': 'ApiController.postPartyInstallStatus',
     'GET /content/api/pages/fortnite-game/spark-tracks': 'ApiController.sparks',

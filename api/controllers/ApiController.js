@@ -617,7 +617,7 @@ module.exports = {
 			};
 			
 		}
-		else if(version == 17.40 || version == 17.50){
+		else if(version >= 17.40){
 			FrontendAssets.FortPlaylistAthena = {
 				"meta": {
 					"promotion": 9
@@ -5447,6 +5447,41 @@ module.exports = {
 			'x-amz-meta-content-md5': response.headers['x-amz-meta-content-md5']
 		});
     	res.send(response.data);
-},
+	},
+
+	searchArtifact: function (req, res) {
+		res.json({
+			"artifactId": req.params.artifactId + ":pc",
+			"name":"pc",
+			"filter":{
+				"platform":"Windows"
+    		}	
+ 		})
+	},
+
+	artifact: function (req, res) {
+		const useragentFormatting = req.headers["user-agent"].replace("Fortnite/++Fortnite+Release-", "").replace("-CL-", ".")
+		const split = useragentFormatting.split(' ')
+		const indexing = split[0]
+		res.json({
+			"cookJobId":"58557db6-01d9-45ff-bc7f-2520b1ef6cac",
+			"cooker": {indexing} +"-live-testing",
+			"end":"2023-03-08T13:30:49.074Z",
+			"output":{
+				"baseUrl":`https://datastorage-public-service-live.ol.epicgames.com/api/v1/redirect/fortnite/valkyrie/cooked-content/${indexing}/0900f784-4f38-4606-4092-95a613f6c5fb/v2/58557db6-01d9-45ff-bc7f-2520b1ef6cac/`,
+				"files":[
+				   
+				],
+				"manifest":"alt/plugin.manifest",
+				"manifestDiskSizeKb":1581.4296875,
+				"manifestDownloadSizeKb":1264.5029296875,
+				"manifestSizeKb":0.4375,
+				"totalSizeKb":1581.8671875,
+				"userContentTotalSizeKb":0
+			 },
+			 "start":"2023-03-08T13:30:15.847Z",
+			 "status":"cooked"
+			})
+	}
 
 };
