@@ -5482,6 +5482,37 @@ module.exports = {
 			 "start":"2023-03-08T13:30:15.847Z",
 			 "status":"cooked"
 			})
+	},
+
+	questProgress: function(req, res){
+		const {versionGlobal} = getVersionInfo(req);
+		res.json({
+			"questProgress": {},
+			"tokens": [],
+			"accountXp": {
+				"dynamicXp": {
+					"timespan": 0,
+					"bucketXp": 0,
+					"bankXp": 0,
+					"bankXpMult": 0,
+					"boosterBucketXp": 0,
+					"boosterXpMult": 0,
+					"weeklyExcessXpMult": 1,
+					"currentWeekXp": 0,
+					"currentWeek": 1
+				},
+				"playtimeXp": {
+				"currentWeek": 1,
+				"currentWeekXp": 0
+				},
+				"restedXp": 0,
+				"seasonXp": 0,
+				"seasonLevel": config.Level,
+				"seasonNumber": versionGlobal,
+				"seasonBegin": "2025-06-01T13:00:00Z",
+				"timeDilation": 0
+			}
+		})
 	}
 
 };

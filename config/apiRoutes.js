@@ -163,6 +163,7 @@ module.exports.routes = {
     'GET /app_installation/status': 'ApiController.postPartyInstallStatus',
     'GET /content/api/pages/fortnite-game/spark-tracks': 'ApiController.sparks',
     'GET /content/api/pages/fortnite-game/eventscreens': 'ApiController.eventScreen',
+    'GET /api/quest/v3/:deploymentId/progress/account/:accountId': 'ApiController.questProgress',
     'POST /fortnite/api/game/v2/profile/:accountId/client/:command': 'ProfileController.mcp',
     'GET /content/api/pages/fortnite-game': 'FortniteGameController.fortniteGame',
     'GET /content/api/pages/fortnite-game/radio-stations': 'FortniteGameController.stations',
