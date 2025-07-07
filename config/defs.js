@@ -10,7 +10,6 @@ const account = {
 };
 
 const MPLockerLoadout = (accountId, athenprofile) => {
-    NeoLog.Log("Applying Profile fixups for Season 28+")
     var characterloadout = athenprofile.items["NEONITECHARACTER"]
     var emoteloadout = athenprofile.items["NEONITEEMOTE"]
     var platformloadout = athenprofile.items["NEONITEPLATFORM"]
@@ -279,7 +278,6 @@ const stats = (accountId, athenprofile, config, versionGlobal) => {
 };
 
 const seasonPass = (accountId, athenprofile, versionGlobal) => {
-    NeoLog.Log("Adding Season Passes")
     var passArray = [
         "figmentpass_s01",
         "figmentpass_s02",
@@ -314,7 +312,6 @@ const seasonPass = (accountId, athenprofile, versionGlobal) => {
 };
 
 const winterFest = (accountId, athenprofile) => {
-    NeoLog.Log("Adding Winterfest Tokens")
     var winterFestTokens = [
         "AthenaRewardGraph:Winterfest",
         "Token:AthenaWinterfest_Key",
@@ -438,7 +435,6 @@ const getVersionInfo = (req) => {
 
 
 const CH1Fix = (accountId, athenprofile) => {
-    NeoLog.Log("Applying Profile fixups for Chapter 1")
     try {
         Profile.addItem(athenprofile, "AthenaCharacter:CID_001_Athena_Commando_F_Default", {
             attributes: {
