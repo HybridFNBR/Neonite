@@ -178,7 +178,7 @@ module.exports.routes = {
         controller:'ApiController', 
         skipAssets: false
     },
-    'GET /api/v1/Fortnite/get': 'ApiController.interactions',
+    //'GET /api/v1/Fortnite/get': 'ApiController.interactions',
     'POST /api/v1/fortnite-br/surfaces/:gameMode/target': 'FortniteGameController.motd',
     'POST /api/v1/fortnite-br/channel/motd/target': 'FortniteGameController.motdTarget',
     'POST /api/v1/fortnite-br/interactions/contentHash': 'FortniteGameController.contentHash',

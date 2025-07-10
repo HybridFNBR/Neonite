@@ -229,7 +229,7 @@ module.exports = {
 		let displayName = req.body["displayName"] || "";
 		
 		let existingPreset = lockerData["loadoutPresets"].find(preset => 
-			preset.presetIndex === parseInt(req.params.presetIndex) && preset.loadoutType == req.params.loadoutType
+			preset.presetIndex === parseInt(req.params.presetIndex) && preset.loadoutType === req.params.loadoutType
 		);
 		
 		if (existingPreset) {

@@ -1,23 +1,20 @@
 const Profile = require("../profile");
 const fs = require("fs");
 const path = require('path');
-const NeoLog = require("../structs/NeoLog");
-
-
 const account = {
     displayName: "",
     accountId: ""
 };
 
 const MPLockerLoadout = (accountId, athenprofile) => {
-    var characterloadout = athenprofile.items["NEONITECHARACTER"]
-    var emoteloadout = athenprofile.items["NEONITEEMOTE"]
-    var platformloadout = athenprofile.items["NEONITEPLATFORM"]
-    var wrapsloadout = athenprofile.items["NEONITEWRAPS"]
-    var jamloadout = athenprofile.items["NEONITEJAM"]
-    var sparksloadout = athenprofile.items["NEONITESPARKS"]
-    var vehicleloadout = athenprofile.items["NEONITEVEHICLE"]
-    var vehiclesuvloadout = athenprofile.items["NEONITESUV"]
+    const characterloadout = athenprofile.items["NEONITECHARACTER"]
+    const emoteloadout = athenprofile.items["NEONITEEMOTE"]
+    const platformloadout = athenprofile.items["NEONITEPLATFORM"]
+    const wrapsloadout = athenprofile.items["NEONITEWRAPS"]
+    const jamloadout = athenprofile.items["NEONITEJAM"]
+    const sparksloadout = athenprofile.items["NEONITESPARKS"]
+    const vehicleloadout = athenprofile.items["NEONITEVEHICLE"]
+    const vehiclesuvloadout = athenprofile.items["NEONITESUV"]
     if (typeof characterloadout == 'undefined'){
         Profile.addItem(athenprofile, "NEONITECHARACTER", {
             "templateId": "CosmeticLoadout:LoadoutSchema_Character",
@@ -267,7 +264,7 @@ const stats = (accountId, athenprofile, config, versionGlobal) => {
         athenprofile.stats["attributes"]["past_seasons"] = pastSeasons;
     }
 
-    if(athenprofile.stats.attributes["favorite_character"] = "" || !athenprofile.stats.attributes["favorite_character"]){
+    if(athenprofile.stats.attributes["favorite_character"] === "" || !athenprofile.stats.attributes["favorite_character"]){
         athenprofile.stats["attributes"]["favorite_character"] = "AthenaCharacter:CID_001_Athena_Commando_F_Default"
     }
     Profile.modifyStat(athenprofile, "book_level", parseInt(config.Level))
@@ -936,7 +933,7 @@ const Backgrounds = (version, versionGlobal, backgrounds, content) =>{
 
 const Playlists = (fortnitegame, version) =>{
     const playlistData = fortnitegame.playlistinformation.playlist_info.playlists
-    if(version == 7.40){
+    if(version === 7.40){
         playlistData[6].image = "https://i.imgur.com/3xoXe4R.png"
         playlistData[6].description = "Fan-made Fortnite Live Event. Not endorsed by Epic Games. Drop into the water planet and enjoy the show.\nEvent Made by bigboitaj2005tajypoo(@jalzod), sizzyleaks & Era Dev Team(@ProjectEraFN)"
         playlistData[6].display_name = "ERA FESTIVAL"

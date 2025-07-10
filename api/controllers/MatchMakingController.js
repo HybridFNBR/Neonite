@@ -2,13 +2,10 @@ const {
 	ApiException
 } = require('../../structs/errors');
 const NeoLog = require('../../structs/NeoLog')
-const {getVersionInfo} = require("../../config/defs")
-
 module.exports = {
     
     matchmakingTicket: function(req, res){
-		const {version} = getVersionInfo(req);
-        var ParsedBckt = {
+		var ParsedBckt = {
 			NetCL: "",
 			Region: "",
 			Playlist: "",
@@ -49,7 +46,7 @@ module.exports = {
 			"nonce": RandomString(32)
 		}
 		Object.entries(req.query).forEach(([key, value]) => {
-			if (key == "player.subregions" && value.includes(',')) {
+			if (key === "player.subregions" && value.includes(',')) {
 				data.attributes["player.preferredSubregion"] = value.split(',')[0];
 			}
 			data.attributes[key] = value;

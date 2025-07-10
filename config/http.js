@@ -12,7 +12,7 @@ module.exports.http = {
         const endTime = new Date();
         const responseTime = endTime - startTime;
         if (req.originalUrl === "/fortnite/api/calendar/v1/timeline" || req.originalUrl === "/account/api/public/account/token") {} 
-        else if (res.statusCode == 404) {
+        else if (res.statusCode === 404) {
           NeoLog.warn(`${req.originalUrl}`)
         } 
         else {

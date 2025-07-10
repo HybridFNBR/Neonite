@@ -4,7 +4,7 @@ const { ApiException } = errors;
 const fs = require("fs");
 const { v4: uuidv4 } = require("uuid");
 const path = require('path');
-var ini = require('ini')
+const ini = require('ini')
 const { getVersionInfo, MPLockerLoadout, CH1Fix, VersionFilter, loadJSON, stats, seasonPass, winterFest, winterFestPresents} = require("../../config/defs")
 let miniPassData = loadJSON("../config/MiniPass.json")
 Array.prototype.insert = function ( index, item ) {
@@ -77,7 +77,7 @@ module.exports = {
 				//sourceIndex > 0 (Load)
 				let item;
 
-				if (req.body.sourceIndex == 0) {
+				if (req.body.sourceIndex === 0) {
 					const last_applied_loadout = profileData.stats.attributes["last_applied_loadout"]
 					item = profileData.items[`neoset${req.body.targetIndex}_loadout`];
 					profileData.items[`neoset${req.body.targetIndex}_loadout`] = profileData.items[last_applied_loadout];
@@ -125,7 +125,7 @@ module.exports = {
 					throw next(new ApiException(errors.com.epicgames.fortnite.item_not_found).withMessage("Locker item {0} not found", req.body.lockerItem));
 				}
 
-				if (typeof req.body.name === "string" && item.attributes.locker_name != req.body.name) {
+				if (typeof req.body.name === "string" && item.attributes.locker_name !== req.body.name) {
 					Profile.changeItemAttribute(profileData, req.body.lockerItem, "locker_name", req.body.name, profileChanges);
 				}
 				break;
@@ -141,6 +141,7 @@ module.exports = {
 					"changeType": "fullProfileUpdate",
 					"profile": profileData
 				}];
+				break;
 			}
 
 			case "RequestRestedStateIncrease":{
@@ -232,7 +233,7 @@ module.exports = {
 					}*/
 
 					for (catalogEntry of storefront.catalogEntries) {
-						if (catalogEntry.offerId == req.body.offerId) {
+						if (catalogEntry.offerId === req.body.offerId) {
 							catalogEntryToPurchase = catalogEntry;
 						}
 					}
@@ -366,10 +367,10 @@ module.exports = {
 
 			case "QueryProfile":{
 				getOrCreateProfile(`${profileId}`)
-				if(profileId == "athena"){
+				if(profileId === "athena"){
 					stats(accountId, athenprofile, config, versionGlobal)
 					if(versionGlobal >= 33){seasonPass(accountId, athenprofile, versionGlobal)}
-					if(version == 33.11 || version == 23.10 || version == 19.01 || version == 11.31){winterFest(accountId, athenprofile)}
+					if(version === 33.11 || version === 23.10 || version === 19.01 || version === 11.31){winterFest(accountId, athenprofile)}
 					for(const [questId, quest] of Object.entries(miniPassData))
 					{
 						Profile.addItem(athenprofile, questId, quest)
@@ -445,11 +446,11 @@ module.exports = {
 					throw next(new ApiException(errors.com.epicgames.fortnite.item_not_found).withMessage("Locker item {0} not found", req.body.lockerItem));
 				}
 
-				if (typeof req.body.bannerIconTemplateName === "string" && item.attributes.banner_icon_template != req.body.bannerIconTemplateName) {
+				if (typeof req.body.bannerIconTemplateName === "string" && item.attributes.banner_icon_template !== req.body.bannerIconTemplateName) {
 					Profile.changeItemAttribute(profileData, req.body.lockerItem, "banner_icon_template", req.body.bannerIconTemplateName, profileChanges);
 				}
 
-				if (typeof req.body.bannerColorTemplateName === "string" && item.attributes.banner_color_template != req.body.bannerColorTemplateName) {
+				if (typeof req.body.bannerColorTemplateName === "string" && item.attributes.banner_color_template !== req.body.bannerColorTemplateName) {
 					Profile.changeItemAttribute(profileData, req.body.lockerItem, "banner_color_template", req.body.bannerColorTemplateName, profileChanges);
 				}
 
@@ -523,7 +524,7 @@ module.exports = {
 					}
 				}
 			
-				if (req.body.variantUpdates.length != 0) {
+				if (req.body.variantUpdates.length !== 0) {
 					lockerSlot.activeVariants = [{
 						"variants": []
 					}]
@@ -663,7 +664,7 @@ module.exports = {
 						break
 					case "Dance":
 					case "ItemWrap":
-						var bIsDance = req.body.slotName == "Dance";
+						var bIsDance = req.body.slotName === "Dance";
 						statName = bIsDance ? "favorite_dance" : "favorite_itemwraps";
 						var arr = profileData.stats.attributes[statName] || [];
 						if (req.body.indexWithinSlot === -1) {
@@ -687,7 +688,7 @@ module.exports = {
 				}
 				bChanged = false
 				try{
-					if (req.body.variantUpdates.length != 0) {
+					if (req.body.variantUpdates.length !== 0) {
 						for (var variant in item.attributes.variants) {
 							if (item.attributes.variants.hasOwnProperty(variant) && req.body.variantUpdates.hasOwnProperty(variant) && item.attributes.variants[variant].channel === req.body.variantUpdates[variant].channel) {
 								item.attributes.variants[variant].active = req.body.variantUpdates[variant].active;
@@ -715,7 +716,7 @@ module.exports = {
 			}
 
 			case "SetItemFavoriteStatus": {
-				if (typeof req.body.bFavorite === "boolean" && profileData.items[req.body.targetItemId].attributes.favorite != req.body.bFavorite) {
+				if (typeof req.body.bFavorite === "boolean" && profileData.items[req.body.targetItemId].attributes.favorite !== req.body.bFavorite) {
 					Profile.changeItemAttribute(profileData, req.body.targetItemId, "favorite", req.body.bFavorite, profileChanges);
 					Profile.saveProfile(accountId, "athena", profileData)
 				}

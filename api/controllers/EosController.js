@@ -5,9 +5,12 @@ const {account} = require("../../config/defs")
 
 module.exports = {
     oauthTokenv1: function(req, res){
+      let JWTdecode;
+      let idToken;
+      let token;
       switch (req.body.grant_type) {
         case "client_credentials":
-          var token = oauthTokenV1_clientCredentials(req.body["deployment_id"])
+          token = oauthTokenV1_clientCredentials(req.body["deployment_id"])
           res.json({
             "access_token": token,
             "token_type": "bearer",
@@ -40,9 +43,9 @@ module.exports = {
           })
         break;
         case "external_auth":
-          const JWTdecode = jsonwebtoken.decode(req.body["external_auth_token"])
-          var token = oauthTokenV1_externalAuth(req.body["nonce"], req.body["deployment_id"], JWTdecode["dn"])
-          let idToken = oauthTokenV1_idToken(JWTdecode["dn"])
+          JWTdecode = jsonwebtoken.decode(req.body["external_auth_token"])
+          token = oauthTokenV1_externalAuth(req.body["nonce"], req.body["deployment_id"], JWTdecode["dn"])
+          idToken = oauthTokenV1_idToken(JWTdecode["dn"])
           res.json({
             "access_token": token,
             "token_type": "bearer",
@@ -2575,8 +2578,8 @@ module.exports = {
     oauthv2: function(req, res){
       if(!req.body.refresh_token){req.body.refresh_token = "eg1~eyJ0IjoiZXBpY19pZF9yIiwiYWxnIjoiUlMyNTYiLCJraWQiOiJXTVM3RW5rSUdwY0g5REdac3YyV2NZOXhzdUZuWkN0eFpqajRBaGItXzhFIn0.eyJzdWIiOiIiLCJwZnNpZCI6ImEwMTkyN2Y3NDIxYTRkNDk5NTY3M2ZlMzBlZjQ2OTQ1IiwiaXNzIjoiaHR0cHM6Ly9hcGkuZXBpY2dhbWVzLmRldi9lcGljL29hdXRoL3YyIiwiZG4iOiIiLCJwZnBpZCI6Ijg2ZjMyZjExNTEzNTRlN2NiMzljMTJmOGFiMmMyMmEzIiwiYXVkIjoieHl6YTc4OTFSRUJWc0VxU0pSUk5YbWxTN0VRSE00NTkiLCJwZmRpZCI6ImE2NTJhNzJlYTE2NjRkY2FiM2E0Njc4OTFlZWE1ZjMwIiwidCI6ImVwaWNfaWRfciIsImFwcGlkIjoiZmdoaTQ1NjcyZjBRVjZiNkIxS250TGQ3SlI3UkZMV2MiLCJzY29wZSI6ImJhc2ljX3Byb2ZpbGUgb3BlbmlkIG9mZmxpbmVfYWNjZXNzIiwiZXhwIjoyMTQ3NDgzNjQ3LCJpYXQiOjE3NDQwMjc4NzgsImp0aSI6IjIxNDI1MWNlNzZjYzRjODRiYmI0NTBlYTdiZTIyMjgwIn0.b8IkCKzvGr2Tc4zVghgBEP5di-tlbn8P_7y3SxlQjf83b7Xl80wO813ul4rQvjBQmun7bt14CnciDyf9is9sxUe5Qbp3LZAFWbwiZIbzYlAvxlWydkSxSbmxVynSql7IO4LsubzsNjWKqPtwxcVBDZMMqJBxax9cnTEc-ZOWmTusxK0lKQSnB1hr-HIgmE4CnKFlrVtRwRq9wqM0qVPb9ev1ok9MRrmsdmo1d8ZvOQpoHd6sl1K2G38fD_2bp_lxPUNSpCByxBD6H33pVC-HeVJ0A1IBJDFv6HVWK5VN6InJL-xZ-RvQlMYPutZSZqh8FFqlADReO47gWa7TeIPYTw"}
       const JWT = req.body.refresh_token.replace("eg1~", "")
-      let JWTdecode = jsonwebtoken.decode(JWT)
-      if(req.body["device_code"] == "device_code"){JWTdecode["dn"] == "Neonite"; JWTdecode["sub"] == "Neonite"}
+      const JWTdecode = jsonwebtoken.decode(JWT)
+      if(req.body["device_code"] === "device_code"){JWTdecode["dn"] === "Neonite"; JWTdecode["sub"] === "Neonite"}
       let access_token = oauthTokenV2_accessToken(JWTdecode["dn"])
       let id_token = oauthTokenV1_idToken(JWTdecode["dn"])
       let refresh_token = oauthv2_refreshToken(JWTdecode["sub"], JWTdecode["dn"])

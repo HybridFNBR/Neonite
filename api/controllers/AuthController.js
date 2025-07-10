@@ -2,10 +2,10 @@ const crypto = require('crypto');
 const {ApiException} = require('../../structs/errors');
 const errors = require("../../structs/errors");
 const jsonwebtoken = require('jsonwebtoken');
-var ini = require('ini')
-var fs = require('fs')
+const ini = require('ini')
+const fs = require('fs')
 const path = require("path");
-var config = ini.parse(fs.readFileSync(path.join(__dirname, '../../config.ini'), 'utf-8'));
+const config = ini.parse(fs.readFileSync(path.join(__dirname, '../../config.ini'), 'utf-8'));
 const {account} = require("../../config/defs")
 
 
@@ -33,7 +33,7 @@ module.exports = {
             break;
         }
 		
-		if(config.bEnableOverride == true){
+		if(config.bEnableOverride === true){
 			account.displayName = config.username
 			account.accountId = config.username
 		}

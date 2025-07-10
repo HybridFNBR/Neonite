@@ -28,7 +28,7 @@ async function compareAndUpdateKeychain() {
     } else if (response.status === 503 || response.status === 403) {
         NeoLog.Error(`Failed to update Keychain, received status: ${response.status}.`);
     }
-};
+}
 
 async function startBackend() {
     sails.lift({
@@ -45,11 +45,11 @@ async function startBackend() {
             console.error(err);
         }
     });
-};
+}
 
 async function runFunctions() {
     await compareAndUpdateKeychain();
     await startBackend();
-};
+}
 
 runFunctions();

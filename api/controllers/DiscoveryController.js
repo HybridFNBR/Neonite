@@ -1,4 +1,3 @@
-const { default: axios } = require("axios");
 const { getVersionInfo, loadJSON } =  require("../../config/defs")
 const discoveryv1 = loadJSON("../discovery/discoveryMenuV1.json");
 const discoveryv2 = loadJSON("../discovery/discoveryMenuV2.json")
@@ -233,15 +232,15 @@ module.exports = {
     mnemonicLinks: function(req, res){
         const {version} = getVersionInfo(req);
 		if(version >= 23.00){
-			if (version == 27.11) {
+			if (version === 27.11) {
 				const durianIndex = discoveryv2.findIndex(i => i.mnemonic === "playlist_durian");
 				discoveryv2[durianIndex].active = true;
 			}
-			if (version == 32.11) {
+			if (version === 32.11) {
 				const quailIndex = discoveryv2.findIndex(i => i.mnemonic === "playlist_quail");
 				discoveryv2[quailIndex].active = true;
 			}
-			if (version == 35.20) {
+			if (version === 35.20) {
 				const ripehonedewIndex = discoveryv2.findIndex(i => i.mnemonic === "playlist_ripehoneydew");
 				discoveryv2[ripehonedewIndex].active = true;
 			}
@@ -262,8 +261,7 @@ module.exports = {
 		if(discoveryv2[findPlaylist].metadata["sub_link_codes"]){
 			relatedResponse.parentLinks.push(discoveryv2[findPlaylist])
 			for (const subLinkCode of discoveryv2[findPlaylist].metadata.sub_link_codes) {
-				const subPlaylist = discoveryv2.find(i => i.mnemonic === subLinkCode)
-				relatedResponse.links[subLinkCode] = subPlaylist;
+				relatedResponse.links[subLinkCode] = discoveryv2.find(i => i.mnemonic === subLinkCode);
 			}
 		}
 		else{
