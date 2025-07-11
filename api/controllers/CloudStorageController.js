@@ -102,7 +102,7 @@ module.exports = {
 		res.setHeader("content-type", "application/octet-stream")
 		const {version} = getVersionInfo(req);
 		let DefaultEngine = fs.readFileSync(path.join(__dirname, '../../hotfixes/DefaultEngine.ini'), 'utf-8');
-		if (version === 32.11|| version === 35.20) {
+		if (version === "32.11"|| version === "35.20") {
 			DefaultEngine = DefaultEngine.replace(
 				';Fort.Event.bForceOffLoadingScreen=1',
 				'Fort.Event.bForceOffLoadingScreen=1'
@@ -115,13 +115,13 @@ module.exports = {
 		res.setHeader("content-type", "application/octet-stream")
 		const {version} = getVersionInfo(req);
 		let DefaultRuntimeOptions = fs.readFileSync(path.join(__dirname, '../../hotfixes/DefaultRuntimeOptions.ini'), 'utf-8');
-		if (version === 26.20) {
+		if (version === "26.20") {
 			DefaultRuntimeOptions = DefaultRuntimeOptions.replace(
 				';+ExperimentalBucketPercentList=(ExperimentNum=27,Name="ShowMultiProductItemShop",BucketPercents=(100,0,0),WinningBucketIndex=-1)',
 				'+ExperimentalBucketPercentList=(ExperimentNum=27,Name="ShowMultiProductItemShop",BucketPercents=(100,0,0),WinningBucketIndex=-1)'
 			);
 		}
-		else if (version === 17.30) {
+		else if (version === "17.30") {
 			DefaultRuntimeOptions = DefaultRuntimeOptions.replace(
 				'bEnableSocialTab=false',
 				'bEnableSocialTab=true'
