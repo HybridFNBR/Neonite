@@ -187,7 +187,7 @@ module.exports = {
             eventsTimeOffsetHrs: 0
         }
 
-        if(version === "Cert"){
+        if(version == "Cert"){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "EventFlag.LobbyWinterDecor", //Winter Lobby
@@ -197,7 +197,7 @@ module.exports = {
             )
         }
 
-        if(version === 4.5){
+        if(version == 4.5){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "EventFlag.BR_S4_Geode_Countdown", //Rocket Launch Event Countdown
@@ -227,7 +227,7 @@ module.exports = {
             )
         }
 
-        if(version === 6.21){
+        if(version == 6.21){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "EventFlag.LobbySeason6Halloween",
@@ -237,7 +237,7 @@ module.exports = {
             )
         }
 
-        if(version === 7.20){
+        if(version == 7.20){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "EventFlag.LTM_14DaysOfFortnite", //WinterFest
@@ -267,7 +267,7 @@ module.exports = {
             )
         }
 
-        if(version === 7.30){
+        if(version == 7.30){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "F0", // Marshmello Event countdown
@@ -318,7 +318,7 @@ module.exports = {
         }
         
 
-        if(version === 8.51){
+        if(version == 8.51){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "EventFlag.UnvaultingCountdown", // Unvaulting Event countdown (idk if this works, havent tried it)
@@ -378,7 +378,7 @@ module.exports = {
             )
         }
 
-        if(version === 9.20){
+        if(version == 9.20){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "CatSpot1", // Cattus Spotting Ocean
@@ -388,7 +388,7 @@ module.exports = {
             )
         }
 
-        if(version === 9.30 || version === 9.40 || version === 9.41){
+        if(version == 9.30 || version == 9.40 || version == 9.41){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "CDTime", // Final Showdown countdown (idk if this works, havent tried it)
@@ -418,7 +418,7 @@ module.exports = {
             )
         }  
 
-        if(version === 10.31 || version === 10.40){
+        if(version == 10.31 || version == 10.40){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "RBBMS", // Black Monday Tilted POI Swap
@@ -429,7 +429,7 @@ module.exports = {
         }
         
         
-        if(version === 10.40){
+        if(version == 10.40){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "NN1", // The End Countdown
@@ -444,7 +444,7 @@ module.exports = {
             )
         }
         
-        if(version === 11.10){
+        if(version == 11.10){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "HW2019", // FortniteMares 2019
@@ -459,7 +459,7 @@ module.exports = {
             )
         }
 
-        if(version === 11.30){
+        if(version == 11.30){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "GALCD", // C2S1-related (Winterfest 2019)
@@ -474,7 +474,7 @@ module.exports = {
             )
         }
         
-        if(version === 11.31){
+        if(version == 11.31){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "EventFlag.LTE_WinterFest", // C2S1-related (Winterfest 2019)
@@ -599,7 +599,7 @@ module.exports = {
             )
         }
 
-        if(version === 11.50){
+        if(version == 11.50){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "GP2", // Gold Prop 1
@@ -624,7 +624,7 @@ module.exports = {
             )
         }
 
-        if(version === 12.30){
+        if(version == 12.30){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "DPY01", // Deadpool Yacht
@@ -639,7 +639,7 @@ module.exports = {
             )
         }
         
-        if(version === 12.40 || version === 12.41){
+        if(version == 12.40 || version == 12.41){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "JCD01", // Travis Related (Countdown)
@@ -694,7 +694,7 @@ module.exports = {
             )
         }           
 
-        if(version === 12.60 || version === 12.61){
+        if(version == 12.60 || version == 12.61){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "FLA01", // C2S2-related (Timers)
@@ -724,7 +724,7 @@ module.exports = {
             )
         }
         
-        if(version === 13.40){
+        if(version == 13.40){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {      
                     eventType: "SM1",//scorch marks
@@ -754,7 +754,7 @@ module.exports = {
             )
         }
 
-        if(version === 14.00){
+        if(version == 14.00){
             timeline.channels["client-events"]["states"][0]["activeEvents"].push(
                 {
                     eventType: "LS2", //Galactus Countdown(Ch2S4 related)
@@ -769,7 +769,7 @@ module.exports = {
             )
         }
 
-        if(version === 14.30){
+        if(version == 14.30){
             timeline.channels["client-events"]["states"][0]["activeEvents"].push(
                 {
                     eventType: "SPJ02", //Sky Card for Junior(Ch2S4 related)
@@ -779,7 +779,7 @@ module.exports = {
             )
         }
 
-        if(version === 14.60){
+        if(version == 14.60){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "FLA01", // C2S4-related (Timers)
@@ -814,7 +814,7 @@ module.exports = {
             )
         }
 
-        if(version === 17.30 || version === 17.20){
+        if(version == 17.30 || version == 17.20){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "BEL01", // Leadup In-game/Leadup In-Lobby
@@ -864,7 +864,7 @@ module.exports = {
             )
         }
 
-        if(version === 17.50){
+        if(version == 17.50){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "KEL01", // Operation Sky Fire Event-related
@@ -884,7 +884,7 @@ module.exports = {
             )
         }
 
-        if(version === 19.01){
+        if(version == 19.01){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "EventFlag.LTE_WinterFest", // WinterFest 2021
@@ -899,7 +899,7 @@ module.exports = {
             )
         }
 
-        if(version === 20.40){
+        if(version == 20.40){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "AL01", // Collision Event-related (Countdown)
@@ -924,7 +924,7 @@ module.exports = {
             )
         }
 
-        if(version === 21.30 || version === 21.40){
+        if(version == 21.30 || version == 21.40){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "STMN_PH", // Dragon Ball Collab Preheat(21.30)
@@ -949,7 +949,7 @@ module.exports = {
             )
         }        
 
-        if(version === 22.40){
+        if(version == 22.40){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "RL01", // Fracture In-Game Leadup
@@ -1044,7 +1044,7 @@ module.exports = {
             )
         }
 
-        if(version === 23.10){
+        if(version == 23.10){
             timeline.channels["client-events"]["states"][0]["activeEvents"].push(
                 {
                     eventType: "CalendarEvent_Season23_Winterfest", // Winterfest 2022
@@ -1059,7 +1059,7 @@ module.exports = {
             )
         }
     
-        if(version === 23.50){
+        if(version == 23.50){
             timeline.channels["client-events"]["states"][0]["activeEvents"].push(
                 {
                     eventType: "EventFlag.Event_Vaultbreakers", // Most Wanted tab
@@ -1094,7 +1094,7 @@ module.exports = {
             )
         }
 
-        if(version === 24.00 || version === 24.10){
+        if(version == 24.00 || version == 24.10){
             timeline.channels["client-events"]["states"][0]["activeEvents"].push(
                 {
                     eventType: "EventFlag.Event_S24_LanternFest", // Latern Fest 2023 
@@ -1119,7 +1119,7 @@ module.exports = {
             )
         }
         
-        if(version === 24.30 || version === 24.40){
+        if(version == 24.30 || version == 24.40){
             timeline.channels["client-events"]["states"][0]["activeEvents"].push(
                 {
                     eventType: "EventFlag.Event_PlotTwist", // Star Wars 2023 tab 
@@ -1129,7 +1129,7 @@ module.exports = {
             )
         }
 
-        if(version === 25.30){
+        if(version == 25.30){
             timeline.channels["client-events"]["states"][0]["activeEvents"].push(
                 {
                     eventType: "EventFlag.Event_BelongTreaty", // Jujutsu Kaisen tab
@@ -1139,7 +1139,7 @@ module.exports = {
             )
         }        
 
-        if(version === 27.11 || version === 31.41 || version === 32.11){
+        if(version == 27.11 || version == 31.41 || version == 32.11){
             timeline.channels["client-events"]["states"][0]["activeEvents"].push(
                 {
                     eventType: "DL01", // Durian & Kiln Event-related (Countdown)
@@ -1154,7 +1154,7 @@ module.exports = {
             )
         }
 
-        if(version === 28.10){
+        if(version == 28.10){
             timeline.channels["client-events"]["states"][0]["activeEvents"].push(
                 {
                     eventType: "EventFlag.Event_LinedNotebook_Teaser", // TMNT Tab countdown (always needed)
@@ -1164,7 +1164,7 @@ module.exports = {
             )
         }
 
-        if(version === 28.20 || version === 28.30){
+        if(version == 28.20 || version == 28.30){
             timeline.channels["client-events"]["states"][0]["activeEvents"].push(
                 {
                     eventType: "EventFlag.Event_LinedNotebook", // TMNT mini pass
@@ -1174,7 +1174,7 @@ module.exports = {
             )
         }
 
-        if(version === 28.30){
+        if(version == 28.30){
             timeline.channels["client-events"]["states"][0]["activeEvents"].push(
                 /*{
                     eventType: "CH5S1CPPE", //Pre-Emergence Event(Central Picnic)
@@ -1214,7 +1214,7 @@ module.exports = {
             )
         }
 
-        if (version === 29.00 || version === 29.01 || version === 29.10){
+        if (version == 29.00 || version == 29.01 || version == 29.10){
             timeline.channels["client-events"]["states"][0]["activeEvents"].push(
                 {
                     eventType: "EventFlag.Event_S29_SeasonalActivation", 
@@ -1229,7 +1229,7 @@ module.exports = {
             )
         }
         
-        if(version === 29.20 || version === 29.30){
+        if(version == 29.20 || version == 29.30){
             timeline.channels["client-events"]["states"][0]["activeEvents"].push(
                 {
                     eventType: "EventFlag.Event_S29_ColdDay", // Avatar mini pass + cabbages
@@ -1254,7 +1254,7 @@ module.exports = {
             )
         }
 
-        if(version === 29.40){
+        if(version == 29.40){
             timeline.channels["client-events"]["states"][0]["activeEvents"].push(
                 /*{
                     eventType: "EventFlag.Event_Osiris",
@@ -1319,7 +1319,7 @@ module.exports = {
             )
         }
 
-        if(version === 30.20 || version === 30.30){
+        if(version == 30.20 || version == 30.30){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
             {
                 eventType: "EventFlag.Event_Greenhouse", //Pirates Of the Caribbean Mini Pass
@@ -1378,22 +1378,22 @@ module.exports = {
             )
         }
 
-        if (version === 31.41) {
+        if (version == 31.41) {
             timeline.channels["client-events"]["states"][0]["activeEvents"].push(
                 {
                     eventType: "StageA", //Kiln Buildup Stage 1
                     activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
+                    activeUntil: "9999-09-14T07:00:00.000Z",
                 },
                 {
                     eventType: "StageB", //Kiln Buildup Stage 2
                     activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
+                    activeUntil: "9999-09-14T07:00:00.000Z",
                 },
                 {
                     eventType: "StageC", //Kiln Buildup Stage 3
                     activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
+                    activeUntil: "9999-09-14T07:00:00.000Z",
                 },
                 {
                     eventType: "StageD", //Kiln Buildup Stage 4
@@ -1423,7 +1423,7 @@ module.exports = {
             )
         }
 
-        if (version === 33.11) {
+        if (version == 33.11) {
             timeline.channels["client-events"]["states"][0]["activeEvents"].push(
                 {
                     eventType: "EventFlag.S33_WinterFestTab", //2024 winterfest
@@ -1438,7 +1438,7 @@ module.exports = {
             )
         }
 
-        if (version === 33.30) {
+        if (version == 33.30) {
             timeline.channels["client-events"]["states"][0]["activeEvents"].push(
                 {
                     eventType: "GrillMoon_Day1", //GrillMoon Mini Event Buildup Stages
@@ -1474,7 +1474,7 @@ module.exports = {
             )
         }
 
-        if (version === 34.30 || version === 34.40) {
+        if (version == 34.30 || version == 34.40) {
             timeline.channels["client-events"]["states"][0]["activeEvents"].push(
                 {
                     eventType: "GiftedTraveler_Phase1", //GiftedTraveler Buildup Stages(Daigo Portal Beams)
@@ -1531,7 +1531,7 @@ module.exports = {
             )
         }
 
-        if (version === 35.20) {
+        if (version == 35.20) {
             timeline.channels["client-events"]["states"][0]["activeEvents"].push(
                 {
                     eventType: "RHDEvent", //Ripehoneydew Event Countdown
@@ -1542,7 +1542,7 @@ module.exports = {
             )
         }
 
-        if(versionGlobal === 10){
+        if(versionGlobal == 10){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "ITB", //IT Balloon 
@@ -1552,7 +1552,7 @@ module.exports = {
             )
         }
 
-        if(versionGlobal === 11 || versionGlobal === 15){
+        if(versionGlobal == 11 || versionGlobal == 15){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "WSL0", //Snow Level
@@ -1577,7 +1577,7 @@ module.exports = {
             )
         }
 
-        if(versionGlobal === 12){
+        if(versionGlobal == 12){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "FEC01", //FE Cables Stage 1
@@ -1597,7 +1597,7 @@ module.exports = {
             )
         }
 
-        if(versionGlobal === 14){
+        if(versionGlobal == 14){
             timeline.channels["client-events"]["states"][0]["activeEvents"].push(
                 {
                     eventType: "RLS0", //Rift Landmark Sphere 0(Ch2S4 related)
@@ -1687,7 +1687,7 @@ module.exports = {
             )
         }
 
-        if(versionGlobal === 15){
+        if(versionGlobal == 15){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "WPICK02", //Wombat Complete Portal(Ch2S5 Portal related)
@@ -1732,7 +1732,7 @@ module.exports = {
             )
         }
 
-        if(versionGlobal === 16){
+        if(versionGlobal == 16){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "RPFS1", //Dino Egg Cracking(Ch2S6 related)
@@ -1777,7 +1777,7 @@ module.exports = {
             )
         }
 
-        if(versionGlobal === 17){
+        if(versionGlobal == 17){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "WLCM1", //Welcome Party full-swing(Ch2S7 related)
@@ -1887,7 +1887,7 @@ module.exports = {
             )
         }
 
-        if(versionGlobal === 18){
+        if(versionGlobal == 18){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "GGL01", // Chapter 2 Finale Event-related (Countdown)
@@ -1996,7 +1996,7 @@ module.exports = {
             )
         }
 
-        if(versionGlobal === 19){
+        if(versionGlobal == 19){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "2021_SM01", //Snow Stage 01(Ch3S1 related)
@@ -2090,7 +2090,7 @@ module.exports = {
                 },
             )
         }
-        if(versionGlobal === 22){
+        if(versionGlobal == 22){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "FNBD05", //Fortnite Birthday Map Changes(Ch3S4 related)
@@ -2110,7 +2110,7 @@ module.exports = {
             )
         }
 
-        if(versionGlobal === 32){
+        if(versionGlobal == 32){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "Week1",
@@ -2170,7 +2170,7 @@ module.exports = {
             )
         }
 
-        if(versionGlobal === 7 || versionGlobal === 11 || versionGlobal === 15 || versionGlobal === 19){
+        if(versionGlobal == 7 || versionGlobal == 11 || versionGlobal == 15 || versionGlobal == 19){
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "TopSecret", //Holiday Bus (S7/S11/S15/S19)
                 activeUntil: "9999-09-14T07:00:00.000Z",
@@ -2178,7 +2178,7 @@ module.exports = {
             })
         }
 
-        if(versionGlobal === 14 || versionGlobal === 18 || versionGlobal === 22){
+        if(versionGlobal == 14 || versionGlobal == 18 || versionGlobal == 22){
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "EventFlag.HalloweenBattleBus", //Halloween Bus (S14/S18/S22)
                 activeUntil: "9999-09-14T07:00:00.000Z",
@@ -2190,7 +2190,7 @@ module.exports = {
         //Configurable Flags
 
 
-        if(config.bEnableRuinHouseBeacon === true && versionGlobal === 10){
+        if(config.bEnableRuinHouseBeacon == true && versionGlobal == 10){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "RBPRH", // Ruined House Beacon Loaded(Chapter 1 Season 10)
@@ -2206,7 +2206,7 @@ module.exports = {
 
         }
 
-        if(config.bEnableGothemCityBeacon === true && version === 10.31){
+        if(config.bEnableGothemCityBeacon == true && version == 10.31){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "RBBMP", // Gothem City Beacon Loaded(Chapter 1 Season 10)
@@ -2222,7 +2222,7 @@ module.exports = {
 
         }
 
-        if(config.bEnableGreasyGroveBeacon === true && versionGlobal === 10){
+        if(config.bEnableGreasyGroveBeacon == true && versionGlobal == 10){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "RBPGG", // Greasy Grove Beacon Loaded(Chapter 1 Season 10)
@@ -2238,7 +2238,7 @@ module.exports = {
 
         }
 
-        if(config.bEnableMoistyPalmsBeacon === true && versionGlobal === 10){
+        if(config.bEnableMoistyPalmsBeacon == true && versionGlobal == 10){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "RBPMP", // Moisty Palms Beacon Loaded(Chapter 1 Season 10)
@@ -2254,7 +2254,7 @@ module.exports = {
 
         }
 
-        if(config.bEnableFrenzyFieldsBeacon === true && versionGlobal === 10){
+        if(config.bEnableFrenzyFieldsBeacon == true && versionGlobal == 10){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "RBPFI", // Frenzy Fields Beacon Loaded(Chapter 1 Season 10)
@@ -2270,7 +2270,7 @@ module.exports = {
 
         }
 
-        if(config.bEnableOakBeacon === true && versionGlobal === 10){
+        if(config.bEnableOakBeacon == true && versionGlobal == 10){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "RBPBO", // Oak Beacon Loaded(Chapter 1 Season 10)
@@ -2286,7 +2286,7 @@ module.exports = {
 
         }
 
-        if(config.bEnableVoidBeacon === true && versionGlobal === 10){
+        if(config.bEnableVoidBeacon == true && versionGlobal == 10){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "RBPVA", // Void Beacon Loaded(Chapter 1 Season 10)
@@ -2302,7 +2302,7 @@ module.exports = {
 
         }
 
-        if(config.bEnableRetailRowBeacon === true && versionGlobal === 10){
+        if(config.bEnableRetailRowBeacon == true && versionGlobal == 10){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "RBPRR", // Retail Row Beacon Loaded(Chapter 1 Season 10)
@@ -2318,7 +2318,7 @@ module.exports = {
 
         }
 
-        if(config.bEnableFloatingCubeIsland === true && versionGlobal === 10){
+        if(config.bEnableFloatingCubeIsland == true && versionGlobal == 10){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "RBFI", // Floating Cube Island(Chapter 1 Season 10)
@@ -2329,21 +2329,21 @@ module.exports = {
 
         }
 
-        if(config.RufusWeek2 === true && versionGlobal === 27){
+        if(config.RufusWeek2 == true && versionGlobal == 27){
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "RufusWeek2", // Rufus Week 2(Chapter 4 Season OG)
                 activeUntil: "9999-09-14T07:00:00.000Z",
                 activeSince: "2000-09-14T07:00:00.000Z"
             })
         }
-        if(config.RufusWeek3 === true && versionGlobal === 27){
+        if(config.RufusWeek3 == true && versionGlobal == 27){
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "RufusWeek3", // Rufus Week 3(Chapter 4 Season OG)
                 activeUntil: "9999-09-14T07:00:00.000Z",
                 activeSince: "2000-09-14T07:00:00.000Z"
             })
         }
-        if(config.RufusWeek4 === true && versionGlobal === 27){
+        if(config.RufusWeek4 == true && versionGlobal == 27){
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "RufusWeek4", // Rufus Week 4(Chapter 4 Season OG)
                 activeUntil: "9999-09-14T07:00:00.000Z",
@@ -2351,21 +2351,21 @@ module.exports = {
             })
         }
 
-        if(config.TMNTStage1 === true){
+        if(config.TMNTStage1 == true){
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "EventFlag.Event_LinedNotebook_Teaser1", // TMNT Tab Stage 1 
                 activeUntil: "9999-09-14T07:00:00.000Z",
                 activeSince: "2000-09-14T07:00:00.000Z"
             })
         }
-        if(config.TMNTStage2 === true){
+        if(config.TMNTStage2 == true){
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "EventFlag.Event_LinedNotebook_Teaser2", // TMNT Tab Stage 2
                 activeUntil: "9999-09-14T07:00:00.000Z",
                 activeSince: "2000-09-14T07:00:00.000Z"
             })
         }
-        if(config.TMNTStage3 === true){
+        if(config.TMNTStage3 == true){
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "EventFlag.Event_LinedNotebook_Teaser3", // TMNT Tab Stage 3
                 activeUntil: "9999-09-14T07:00:00.000Z",
@@ -2373,21 +2373,21 @@ module.exports = {
             })
         }    
         
-        if(config.AtlaIceberg1 === true){
+        if(config.AtlaIceberg1 == true){
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "AtlaIceberg1", // Avatar iceberg stage 1 
                 activeUntil: "9999-09-14T07:00:00.000Z",
                 activeSince: "2000-09-14T07:00:00.000Z"
             })
         }  
-        if(config.AtlaIceberg2 === true){
+        if(config.AtlaIceberg2 == true){
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "AtlaIceberg2", // Avatar iceberg stage 2 
                 activeUntil: "9999-09-14T07:00:00.000Z",
                 activeSince: "2000-09-14T07:00:00.000Z"
             },)
         }   
-        if(config.AtlaIceberg3 === true){
+        if(config.AtlaIceberg3 == true){
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "AtlaIceberg3", // Avatar iceberg stage 3
                 activeUntil: "9999-09-14T07:00:00.000Z",
@@ -2395,56 +2395,56 @@ module.exports = {
             })
         }
 
-        if(config.WaterLevel_0 === true && versionGlobal === 13){
+        if(config.WaterLevel_0 == true && versionGlobal == 13){
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "WL0", // Water Level 0
                 activeUntil: "9999-09-14T07:00:00.000Z",
                 activeSince: "2000-09-14T07:00:00.000Z"
             })
         }
-        if(config.WaterLevel_1 === true && versionGlobal === 13){
+        if(config.WaterLevel_1 == true && versionGlobal == 13){
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "WL1", // Water Level 1
                 activeUntil: "9999-09-14T07:00:00.000Z",
                 activeSince: "2000-09-14T07:00:00.000Z"
             })
         }
-        if(config.WaterLevel_2 === true && versionGlobal === 13){
+        if(config.WaterLevel_2 == true && versionGlobal == 13){
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "WL2", // Water Level 2
                 activeUntil: "9999-09-14T07:00:00.000Z",
                 activeSince: "2000-09-14T07:00:00.000Z"
             })
         }
-        if(config.WaterLevel_3 === true && versionGlobal === 13){
+        if(config.WaterLevel_3 == true && versionGlobal == 13){
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "WL3", // Water Level 3
                 activeUntil: "9999-09-14T07:00:00.000Z",
                 activeSince: "2000-09-14T07:00:00.000Z"
             })
         }
-        if(config.WaterLevel_4 === true && versionGlobal === 13){
+        if(config.WaterLevel_4 == true && versionGlobal == 13){
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "WL4", // Water Level 4
                 activeUntil: "9999-09-14T07:00:00.000Z",
                 activeSince: "2000-09-14T07:00:00.000Z"
             })
         }
-        if(config.WaterLevel_5 === true && versionGlobal === 13){
+        if(config.WaterLevel_5 == true && versionGlobal == 13){
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "WL5", // Water Level 5
                 activeUntil: "9999-09-14T07:00:00.000Z",
                 activeSince: "2000-09-14T07:00:00.000Z"
             })
         }
-        if(config.WaterLevel_6 === true && versionGlobal === 13){
+        if(config.WaterLevel_6 == true && versionGlobal == 13){
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "WL6", // Water Level 6
                 activeUntil: "9999-09-14T07:00:00.000Z",
                 activeSince: "2000-09-14T07:00:00.000Z"
             })
         }
-        if(config.WaterLevel_7 === true && versionGlobal === 13){
+        if(config.WaterLevel_7 == true && versionGlobal == 13){
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "WL7", // Water Level 7
                 activeUntil: "9999-09-14T07:00:00.000Z",
