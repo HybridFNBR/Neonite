@@ -1112,6 +1112,8 @@ module.exports = {
     },
 
     eventsDownload: function(req, res){
+		const {versionGlobal} = getVersionInfo(req);
+		if(versionGlobal==9){return res.status(404)}
         res.json({
 			"player": {
 				"gameId": "Fortnite",
