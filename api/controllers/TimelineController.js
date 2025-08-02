@@ -1542,6 +1542,61 @@ module.exports = {
             )
         }
 
+        if (version == 36.30) {
+            timeline.channels["client-events"]["states"][0]["activeEvents"].push(
+                {
+                    eventType: "PC_01", //Pistol Canary Stage 1
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "PC_02", //Pistol Canary Stage 2
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "PC_03", //Pistol Canary Stage 3
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "Event_S33_Winterfest_BrickSoup_Sequence", //Pistol Canary Sequence 
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "Event_S33_Winterfest_BrickSoup_PreLoad_Sequence", //Pistol Canary Pre Load Sequence
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "PC_Event", //Pistol Canary Event
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "EventStart", //Pistol Canary Event Start
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "PC_After", //Pistol Canary After Event
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "PC_TentacleStage2", //Pistol Canary Tentacle Stage 2
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "PC_Timer", //Pistol Canary Countdown
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                }
+            )
+        }
+
         if(versionGlobal == 10){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
