@@ -884,6 +884,16 @@ module.exports = {
             )
         }
 
+        if(version == 18.21){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push(
+                {
+                    eventType: "FNM21", // FNMares 2021
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "2021-07-27T06:00:00.000Z"
+                }
+            )
+        }
+
         if(version == 19.01){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
