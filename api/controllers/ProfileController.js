@@ -365,28 +365,29 @@ module.exports = {
 				break;
 			}
 
-			case "QueryProfile":{
-				getOrCreateProfile(`${profileId}`)
-				if(profileId === "athena"){
-					stats(accountId, athenprofile, config, versionGlobal)
-					if(versionGlobal >= 33){seasonPass(accountId, athenprofile, versionGlobal)}
-					if(version === 33.11 || version === 23.10 || version === 19.01 || version === 11.31){winterFest(accountId, athenprofile)}
-					for(const [questId, quest] of Object.entries(miniPassData))
-					{
-						Profile.addItem(athenprofile, questId, quest)
+			case "QueryProfile": {
+				getOrCreateProfile(`${profileId}`);
+				if (profileId === "athena") {
+					stats(accountId, athenprofile, config, versionGlobal);
+					if (versionGlobal >= 33) { seasonPass(accountId, athenprofile, versionGlobal); }
+					if ([33.11, 23.10, 19.01, 11.31].includes(version)) { winterFest(accountId, athenprofile); }
+					for (const [questId, quest] of Object.entries(miniPassData)) {
+						Profile.addItem(athenprofile, questId, quest);
 					}
-					if(version >= 28.00){MPLockerLoadout(accountId, athenprofile)}
-					if(version <= 10.40 || VersionFilter.includes(versionGlobal)){CH1Fix(accountId, athenprofile)}
-					Profile.bumpRvn(profileId)
+					if (version >= 28.00) { MPLockerLoadout(accountId, athenprofile); }
+					if (version <= 10.40 || VersionFilter.includes(versionGlobal)) { CH1Fix(accountId, athenprofile); }
+					Profile.bumpRvn(athenprofile);
+					Profile.saveProfile(accountId, "athena", athenprofile);
 				}
 				response.profileChanges = [
 					{
 						"changeType": "fullProfileUpdate",
 						"profile": profileData
 					}
+				
 				];
-				break;
 			}
+			break;
 
 			//had to be slighly redone to have a check if there is actually a giftbox or not mainly due to the fact on 11.31(maybe more i didnt test) it will just constantly spam RemoveGiftBox
 			case "RemoveGiftBox": {
