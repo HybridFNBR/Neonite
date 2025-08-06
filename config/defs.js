@@ -331,7 +331,6 @@ const winterFest = (accountId, athenprofile) => {
             "templateId": `${token}`
         })
     })
-    
     Profile.saveProfile(accountId, "athena", athenprofile)
 };
 
@@ -922,6 +921,11 @@ const Backgrounds = (version, versionGlobal, backgrounds, content) =>{
         case 35:{
             backgrounds[1].stage = "season3500"
             backgrounds[1].backgroundimage = "https://cdn2.unrealengine.com/ch6ms1-lobby-bg-plate-jpeg-2048x1024-e4f1f3252405.jpg"
+        }
+        break;
+        case 36:{
+            backgrounds[1].stage = "season3600"
+            backgrounds[1].backgroundimage = "https://cdn2.unrealengine.com/mkart-fnbr-ch6s3-lobbybg-final-4096x2048-340e7bf8bb02.jpg"
         }
         break;
         default:
