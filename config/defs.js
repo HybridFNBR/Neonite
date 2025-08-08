@@ -280,14 +280,16 @@ const seasonPass = (accountId, athenprofile, versionGlobal) => {
         "figmentpass_s02",
         "figmentpass_s03",
         "figmentpass_s04",
+        "figment_s05_passdata_seasonasset",
         `athenaseason${versionGlobal}`,
         "junoseason1pass",
         "junoseason2pass",
         "s3pass_seasonasset",
         "s04pass_seasonasset",
+        "junoseason05pass_seasonasset",
         "sparks_season07_seasonasset",
         "sparks_season08_seasonasset",
-        "musicpasss09_seasonasset"
+        "musicpasss09_seasonasset",
     ]
     passArray.forEach(seasonPass => {
         Profile.addItem(athenprofile, `AthenaSeason:${seasonPass}`, {
