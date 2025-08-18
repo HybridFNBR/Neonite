@@ -15,13 +15,6 @@ module.exports.routes = {
     'GET /lightswitch/api/service/bulk/status': 'ApiController.lightSwitchbulk',
     'GET /lightswitch/api/service/:serviceId/status': 'ApiController.lightswitch',
     'ALL /api/v1/events/Fortnite/:event/history/:accountId': 'ApiController.eventHistory',
-    'GET /api/v1/games/fortnite/tracks/query*': 'ApiController.habaneroTracks',
-    'GET /api/v1/games/fortnite/trackprogress/:accountId': 'ApiController.habaneroProgress',
-    'GET /api/v1/games/fortnite/tracks/activeBy/*':{
-        action: "habaneroActiveBy",
-        controller:'ApiController', 
-        skipAssets: false
-    },
     'GET /fortnite/api/v2/versioncheck*': 'ApiController.versionCheck',
     'GET /fortnite/api/versioncheck*': 'ApiController.versionCheck',
     'GET /fortnite/api/version': 'ApiController.versionCheck',
@@ -143,22 +136,6 @@ module.exports.routes = {
         skipAssets: false
     },
     'PUT /profile/languages': 'ApiController.languages',
-    'POST /api/content/v2/cooked-content-package': 'ApiController.cookedContent',
-    'GET /valkyrie/cooked-content/*':{ 
-        action: "valkyrieContent",
-        controller:'ApiController', 
-        skipAssets: false
-    },
-    'GET /api/content/v2/search/artifact/:artifactId/*':{
-        action: "searchArtifact",
-        controller:'ApiController', 
-        skipAssets: false
-    },
-    'GET /api/content/v2/artifact/:artifactId/*':{
-        action: "artifact",
-        controller:'ApiController', 
-        skipAssets: false
-    },
     'GET /:resourceId/master.blurl': 'ApiController.blurl',
     'GET /app_installation/status': 'ApiController.postPartyInstallStatus',
     'GET /content/api/pages/fortnite-game/spark-tracks': 'ApiController.sparks',
