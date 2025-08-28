@@ -1327,51 +1327,78 @@
     "lastModified": "2021-02-10T23:57:48.837Z",
     "_locale": "en-US"
   },
-  "eventscreens": {
+ "eventscreens": {
     "eventScreenGroup": {
       "_type": "Event Screen Group",
       "eventScreens": [
         {
-          "purchasePremiumTrackHeader": "[PH] Purchase Premium Track Header",
-          "resourceHeader": "[PH] Resource Header",
-          "moreInfoHeader": "[PH] More Info Header",
+          "purchasePremiumTrackHeader": "BUY <text color=\"E779FF\">PREMIUM REWARD TRACK</>",
+          "resourceHeader": "Ooze",
+          "moreInfoHeader": "COWABUNGA",
           "eventCMSId": "LinedNotebookEvent",
-          "eventCTA": "[PH] Call to Action",
-          "inspectSpecialItemUnowned": "[PH] Inspect Special Item Unowned",
-          "premiumUpsellOwnedHeader": "[PH] Premium Upsell Owned Header",
-          "headerCTA": "[PH] Header Call to Action",
-          "inspectSpecialPremiumItemOwned": "[PH] Inspect Special Premium Item Owned",
+          "inspectSpecialItemUnowned": "Collect all 6 <text color=\"A8E40C\">Blueprints</> <img id=\"TokenIcon\"/> by completing quests to get the Krang Backbling!",
+          "_type": "Event Screen Data",
+          "premiumUpsellOwnedHeader": "TRACK UPGRADED",
+          "rewardTrackLegal": "Purchases of Premium Reward Track are not eligible for returns through Fortnite Cancel Purchase or Return Tickets. Cowabunga Pass available through February 27 at 9:00 am ET. Some rewards require quests to be completed in Battle Royale / Zero-Build mode in order to be earned.",
+          "eventCTACompleted": "<text color=\"A8E40C\">YOU HAVE BECOME A TRUE NINJA!</>",
+          "inspectSpecialPremiumItemOwned": "Claimed with the <text color=\"7E51FF\">PREMIUM REWARD TRACK</>",
+          "starterHeader": "Complete quests to find Ooze!",
+          "moreInfoSubHeader": "<text color=\"A8E40C\">Cowabunga pass runs from 2/9/2024 to 2/27/2024</>",
+          "premiumUpsellUnownedBody": "Includes the <text color=\"E779FF\">SHREDDER Outfit</> and access to the bottom track for 1,000 V-Bucks",
+          "purchasePremiumTrackBodyList": [
+            "Instantly claim the <text color=\"E779FF\">SHREDDER Fortnite Style</> and <text color=\"E779FF\">SHREDDER LEGO Style!</>",
+            "<text color=\"E779FF\">Access the bottom reward track and</> earn more rewards!",
+            "If you've earned <text color=\"A8E40C\">Ooze</> before purchasing the Premium Reward Track, you'll automatically claim the <text color=\"E779FF\">upgraded rewards</> you've earned up to that point!",
+            "<text color=\"E779FF\">Premium Reward Track </> items may be available in the Item Shop at a later date."
+          ],
+          "completionHeader": "<text color=\"A8E40C\">YOU HAVE BECOME A TRUE NINJA!</>",
+          "premiumUpsellOwnedBody": "<text color=\"E779FF\">SHREDDER Fortnite Style</> and <text color=\"E779FF\">LEGO Style</> CLAIMED!",
+          "eventDescription": "Gain <text color=\"A8E40C\">Ooze</> <img id=\"ResourceIcon\"/> and <text color=\"A8E40C\">Blueprints</> <img id=\"TokenIcon\"/> as you complete quests and shell out justice.",
+          "eventName": "COWABUNGA",
+          "inspectSpecialItemOwned": "Krang Backbling Obtained!",
+          "premiumUpsellUnownedHeader": "PREMIUM REWARD TRACK",
+          "moreInfoLegal": "Purchases of Premium Reward Track are not eligible for returns through Fortnite Cancel Purchase or Return Tickets. Cowabunga Pass available through February 27 at 9:00 am ET.  Not all cosmetics are usable in all experiences. For more details on cosmetics variations and limitations of use, see fn.gg/cosmetics ",
+          "inspectSpecialPremiumItemUnowned": "<img id=\"LockIcon\"/> Included with the <text color=\"7E51FF\">PREMIUM REWARD TRACK</>",
+          "purchaseLegal": "Purchases of Premium Reward Track are not eligible for returns through Fortnite Cancel Purchase or Return Tickets. Cowabunga Pass available through February 27 at 9:00 am ET.  Some rewards require quests to be completed in Battle Royale / Zero-Build mode in order to be earned. Not all cosmetics are usable in all experiences.  "
+        },
+        {
+          "purchasePremiumTrackHeader": "BUY THE PREMIUM REWARD TRACK",
+          "resourceHeader": "FESTIVAL POINTS",
+          "moreInfoHeader": "UNLOCK YOUR TALENT",
+          "eventCMSId": "SparksPackS02Event",
+          "_type": "Event Screen Data",
+          "premiumUpsellOwnedHeader": "TRACK UPGRADED",
+          "rewardTrackLegal": "Buying rewards is optional. Purchases of the Premium Reward Track are not eligible for returns through Fortnite Cancel Purchase or Return Tickets. UNLOCK YOUR TALENT pass available through April 22nd, 2024. Not all cosmetics are usable in all experiences. For more details on cosmetics variations and limitations of use, see fn.gg/cosmetics",
           "moreInfoGroups": [
             {
               "_type": "Event Screen More Info Group",
-              "header": "[PH] More Info Header 1",
-              "body": "[PH] More Info Body 1"
+              "icon": "https://cdn2.unrealengine.com/sparkspassmoreinfo-01-256x128-bc4fa249fae3.png",
+              "header": "THE REWARD TRACK",
+              "body": "Gain Festival Points by completing Festival Quests. Unlock rewards when you fill each section on the track!\n\nPurchase the Premium Reward Track at any time during the event for 1,800 V-Bucks. You'll automatically claim the rewards you've earned up to that point. \n\nPlease note that all in-game rewards are not exclusive to UNLOCK YOUR TALENT and may be available later in the Item Shop for purchase. For more details on cosmetics variations and limitations of use, see fn.gg/cosmetics"
             },
             {
               "_type": "Event Screen More Info Group",
-              "header": "[PH] More Info Header 2",
-              "body": "[PH] More Info Body 2"
+              "icon": "https://cdn2.unrealengine.com/sparkspassmoreinfo-02-256x128-7361bf56c84f.png",
+              "header": "BUYING REWARDS",
+              "body": "If you’ve purchased the Premium Reward Track, you’ll then have the option to buy rewards from both tracks simultaneously!\n\nThe \"Buy Rewards\" button appears at the bottom of the screen after you purchase the Premium Reward Track, and from there you can choose how many rewards you would like to buy."
             }
           ],
-          "starterHeader": "[PH] Starter Header",
-          "moreInfoSubHeader": "[PH] More Info Subheader",
+          "starterHeader": "Earn Festival Points by completing quests!",
+          "moreInfoSubHeader": "UNLOCK YOUR TALENT runs through April 22nd, 2024",
+          "premiumUpsellUnownedBody": "Includes the Glitch Groove Aura and access to the Premium Reward Track for 1,800 V-Bucks",
           "purchasePremiumTrackBodyList": [
-            "[PH] Purchase Premium Track Body 1",
-            "[PH] Purchase Premium Track Body 2"
+            "Instantly claim the Glitch Groove Aura",
+            "Access the premium reward track and earn more rewards!",
+            "If you've earned Festival Points before purchasing the Premium Reward Track, you'll automatically claim the upgraded rewards you've earned up to that point!",
+            "Premium Reward Track items may be available in the Item Shop at a later date."
           ],
-          "eventDescription": "[PH] Event Description",
-          "eventName": "[PH] Event Name",
-          "inspectSpecialItemOwned": "[PH] Inspect Special Item Owned",
-          "premiumUpsellUnownedHeader": "[PH] Premium Upsell Unowned Header",
-          "inspectSpecialPremiumItemUnowned": "[PH] Inspect Special Premium Item Unowned",
-          "_type": "Event Screen Data",
-          "rewardTrackLegal": "[PH] Reward Track Legal",
-          "eventCTACompleted": "[PH] Call to Action Completed",
-          "premiumUpsellUnownedBody": "[PH] Premium Upsell Unowned Body",
-          "completionHeader": "[PH] Completion Header",
-          "premiumUpsellOwnedBody": "[PH] Premium Upsell Owned Body",
-          "moreInfoLegal": "[PH] More Info Legal",
-          "purchaseLegal": "[PH] Purchase Legal"
+          "completionHeader": "UNLOCK YOUR TALENT is complete!",
+          "premiumUpsellOwnedBody": "GLITCH GROOVE AURA CLAIMED",
+          "eventDescription": "Take center stage and complete Festival Quests to gain Festival Points during UNLOCK YOUR TALENT",
+          "eventName": "UNLOCK YOUR TALENT",
+          "premiumUpsellUnownedHeader": "PREMIUM REWARD TRACK",
+          "moreInfoLegal": "Buying rewards is optional. Purchases of the Premium Reward Track are not eligible for returns through Fortnite Cancel Purchase or Return Tickets. UNLOCK YOUR TALENT pass available through April 22nd, 2024. Not all cosmetics are usable in all experiences. For more details on cosmetics variations and limitations of use, see fn.gg/cosmetics",
+          "purchaseLegal": "Buying rewards is optional. Purchases of the Premium Reward Track are not eligible for returns through Fortnite Cancel Purchase or Return Tickets. UNLOCK YOUR TALENT pass available through April 22nd, 2024. Not all cosmetics are usable in all experiences. For more details on cosmetics variations and limitations of use, see fn.gg/cosmetics"
         },
         {
           "purchasePremiumTrackHeader": "BUY PREMIUM REWARD TRACK",
@@ -1379,44 +1406,36 @@
           "moreInfoHeader": "OPENING NIGHT",
           "eventCMSId": "SparksPackS01Event",
           "eventCTA": "Event Call To Action",
-          "inspectSpecialItemUnowned": "",
+          "_type": "Event Screen Data",
           "premiumUpsellOwnedHeader": "TRACK UPGRADED",
-          "headerCTA": "Header Call To ACtion",
-          "inspectSpecialPremiumItemOwned": "",
+          "rewardTrackLegal": "Purchases of the Premium Reward Track are not eligible for returns through Fortnite Cancel Purchase or Return Tickets. Opening Night pass available through February 22nd, 2024. ",
+          "eventCTACompleted": "Event Call To Action Completed",
           "moreInfoGroups": [
             {
               "_type": "Event Screen More Info Group",
-              "icon": "https://cdn2.unrealengine.com/sparkspassmoreinfo-01-256x128-bc4fa249fae3.png",
               "header": "THE REWARD TRACK",
               "body": "Complete Festival Quests to gain Festival Points. Claim rewards as each section of the track is filled. \n\n\nPurchase the Premium Reward Track at any time during the event for 1,800 V-Bucks. You'll automatically claim the rewards you've earned up to that point.\n\nPlease note that all in-game rewards are not exclusive to Opening Night and may be available later in the Item Shop for purchase at a potentially higher price."
             },
             {
               "_type": "Event Screen More Info Group",
-              "icon": "https://cdn2.unrealengine.com/sparkspassmoreinfo-02-256x128-7361bf56c84f.png",
               "header": "BUYING REWARDS",
               "body": "If you’ve purchased the Premium Reward Track, you’ll then have the option to buy rewards from both tracks simultaneously!\n\nThe “Buy Rewards” button appears at the bottom of the screen after you purchase the Premium Reward Track, and from there you can choose how many rewards you would like to buy."
             }
           ],
           "starterHeader": "Complete quests to earn Festival Points!",
           "moreInfoSubHeader": "OPENING NIGHT runs through February 22nd, 2024 at 10:00pm ET",
+          "premiumUpsellUnownedBody": "Includes the Rift Rock Aura and access to the Premium Reward Track for 1,800 V-Bucks",
           "purchasePremiumTrackBodyList": [
             "Instantly claim the Rift Rock Aura",
             "Access the bottom reward track and earn more rewards",
             "If you've earned Festival Points before purchasing the Premium Reward Track, you'll automaticaly claim the upgraded rewards you've earned up to that point.",
             "Premium Reward Track items may be available in the Item Shop at a later date."
           ],
-          "eventDescription": "Take center stage and complete Festival Quests to gain Festival Points during OPENING NIGHT. \n",
-          "eventName": "OPENING NIGHT",
-          "inspectSpecialItemOwned": "Inspect Special Item Owned",
-          "premiumUpsellUnownedHeader": "PREMIUM REWARD TRACK",
-          "inspectSpecialPremiumItemUnowned": "",
-          "_type": "Event Screen Data",
-          "eventCTACompleted": "Event Call To Action Completed",
-          "rewardTrackLegal": "Purchases of the Premium Reward Track are not eligible for returns through Fortnite Cancel Purchase or Return Tickets. Opening Night pass available through February 22nd, 2024. ",
-          "itemShopCallout": "Item Shop Callout",
-          "premiumUpsellUnownedBody": "Includes the Rift Rock Aura and access to the Premium Reward Track for 1,800 V-Bucks",
           "completionHeader": "Opening Night is complete!",
           "premiumUpsellOwnedBody": "RIFT ROCK AURA CLAIMED",
+          "eventDescription": "Take center stage and complete Festival Quests to gain Festival Points during OPENING NIGHT. \n",
+          "eventName": "OPENING NIGHT",
+          "premiumUpsellUnownedHeader": "PREMIUM REWARD TRACK",
           "moreInfoLegal": "Purchases of the Premium Reward Track are not eligible for returns through Fortnite Cancel Purchase or Return Tickets. Opening Night pass available through February 22nd, 2024. ",
           "purchaseLegal": "Purchases of the Premium Reward Track are not eligible for returns through Fortnite Cancel Purchase or Return Tickets. Opening Night pass available through February 22nd, 2024. "
         },
@@ -1565,8 +1584,8 @@
     },
     "_title": "EventScreens",
     "_noIndex": false,
-    "_activeDate": "2023-12-07T16:00:00.000Z",
-    "lastModified": "2023-12-11T20:44:09.126Z",
+    "_activeDate": "2024-04-12T12:20:00.000Z",
+    "lastModified": "2024-04-08T19:49:46.156Z",
     "_locale": "en-US",
     "_templateName": "FortGameEventScreens"
   },
