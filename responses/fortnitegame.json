@@ -73,6 +73,1224 @@
     "lastModified": "2021-03-17T15:07:27.924Z",
     "_locale": "en-US"
   },
+  "crewscreendata": {
+    "benefits": {
+      "recurringBenefits": [
+        {
+          "tileType": "Basic",
+          "tileLabel": "1,000 V-BUCKS",
+          "nextDetails": {
+            "_type": "Crew Tile Details Data"
+          },
+          "bHasNextCrewPackDetails": false,
+          "_type": "Crew Tile Data",
+          "details": {
+            "tileImageURL": "https://cdn2.unrealengine.com/crewbenefits-vbtile-520x320-f6fc1124ea0c.png",
+            "_type": "Crew Tile Details Data",
+            "color3Hex": "C3F7F7",
+            "description": "Get 1,000 V-Bucks every month on your Fortnite Crew billing date!",
+            "color4Hex": "000000FF",
+            "tag": "MonthlyBenefit",
+            "title": "1,000 V-Bucks",
+            "color2Hex": "75B8E3FF",
+            "color1Hex": "263C4AFF",
+            "backgroundImageURL": "https://cdn2.unrealengine.com/vbucksfullscreen-1920x1080-c3912213e6d8-1920x1080-f542c26953e3.png"
+          }
+        },
+        {
+          "tileType": "BattlePass",
+          "tileLabel": "Battle Pass",
+          "nextDetails": {
+            "_type": "Crew Tile Details Data"
+          },
+          "bHasNextCrewPackDetails": false,
+          "_type": "Crew Tile Data",
+          "details": {
+            "secondaryTileImageURL": "https://cdn2.unrealengine.com/fixed-t-ui-pass-tile-battlepass-3700-fallback-592x192-a115f827be25.png",
+            "tileImageURL": "https://cdn2.unrealengine.com/t-ui-crewbenefits-battlepass-3700-tile-260x160-33cc5355532b.png",
+            "_type": "Crew Tile Details Data",
+            "color3Hex": "#C3432A",
+            "description": "While subscribed to Fortnite Crew, claim premium rewards from the Battle Pass as you progress. Looking for the Battle Bundle? Add 25 rewards to your Battle Pass at any time!",
+            "color4Hex": "#A03A2A",
+            "tag": "SeasonLaunchBenefit",
+            "title": "Battle Pass",
+            "color2Hex": "#FFE378",
+            "color1Hex": "#5A1500",
+            "backgroundImageURL": "https://cdn2.unrealengine.com/fixed-t-ui-benefits-battlepass-3700-background-1920x1080-2887fe4d0119.png"
+          },
+          "templateId": "battlepassdata"
+        },
+        {
+          "tileType": "BattlePass",
+          "tileLabel": "OG Pass",
+          "nextDetails": {
+            "_type": "Crew Tile Details Data",
+            "tag": "None"
+          },
+          "bHasNextCrewPackDetails": false,
+          "_type": "Crew Tile Data",
+          "comingSoonText": "",
+          "details": {
+            "secondaryTileImageURL": "https://cdn2.unrealengine.com/t-ui-pass-tile-figment-3700-fallback-312x192-7a99ed140eb8.png",
+            "tileImageURL": "https://cdn2.unrealengine.com/t-ui-3700-crew-tile-figment-resaved-260x160-b0cf23dcfbf6.png",
+            "_type": "Crew Tile Details Data",
+            "description": "While subscribed to Fortnite Crew, claim premium rewards from the OG Pass as you progress.",
+            "color4Hex": "09253D",
+            "tag": "SeasonLaunchBenefit",
+            "title": "OG Pass",
+            "color2Hex": "32AEE4",
+            "color1Hex": "11395A",
+            "backgroundImageURL": "https://cdn2.unrealengine.com/t-ui-3700-crewpass-background-figment-1920x1080-61b904f64c9a.png"
+          },
+          "templateId": "figmentpassdata"
+        },
+        {
+          "tileType": "BattlePass",
+          "tileLabel": "Music Pass",
+          "nextDetails": {
+            "_type": "Crew Tile Details Data",
+            "tag": "None"
+          },
+          "bHasNextCrewPackDetails": false,
+          "_type": "Crew Tile Data",
+          "details": {
+            "secondaryTileImageURL": "https://cdn2.unrealengine.com/s10music-t-ui-festival-3710-landingreplacement-312x192-97fea300c99b-312x192-0501d90423c5.png",
+            "tileImageURL": "https://cdn2.unrealengine.com/s10music-t-ui-musicpass-3710-crew-benefitstile-260x160-a4fe8461ee58-260x160-d314fb839d89.png",
+            "_type": "Crew Tile Details Data",
+            "color3Hex": "721269",
+            "description": "While subscribed to Fortnite Crew, claim premium rewards from the Music Pass as you progress.",
+            "color4Hex": "290C18",
+            "tag": "SeasonLaunchBenefit",
+            "title": "Music Pass",
+            "color2Hex": "A84143",
+            "color1Hex": "E27576",
+            "backgroundImageURL": "https://cdn2.unrealengine.com/s10music-t-ui-festival-3710-crew-background-1920x1080-1920x1080-035ee6925e65-1920x1080-fd9b3bb8b329.png"
+          },
+          "templateId": "musicpassdata"
+        },
+        {
+          "tileType": "BattlePass",
+          "tileLabel": "Lego® Pass",
+          "nextDetails": {
+            "_type": "Crew Tile Details Data",
+            "tag": "None"
+          },
+          "bHasNextCrewPackDetails": false,
+          "_type": "Crew Tile Data",
+          "details": {
+            "secondaryTileImageURL": "https://cdn2.unrealengine.com/t-ui-juno-crewlanding-palmparadise-primarytile-312x192-65b1c65c559a.png",
+            "tileImageURL": "https://cdn2.unrealengine.com/t-ui-juno-crewbenefits-passtile-palmparadise-260x160-0af64cd38ef5.png",
+            "_type": "Crew Tile Details Data",
+            "description": "While subscribed to Fortnite Crew, claim premium rewards from the LEGO Pass as you progress.",
+            "tag": "SeasonLaunchBenefit",
+            "title": "Lego® Pass",
+            "backgroundImageURL": "https://cdn2.unrealengine.com/t-ui-juno-palmparadise-crewbenefits-passsection-1920x1080-e6cc51d8614b.png"
+          },
+          "templateId": "legopassdata"
+        },
+        {
+          "tileType": "CrewPack",
+          "tileLabel": "Crew Pack",
+          "crewPackItems": [
+            "AthenaCharacter:character_EagerTrapper",
+            "AthenaBackpack:backpack_EagerTrapper",
+            "AthenaPickaxe:pickaxe_EagerTrapper"
+          ],
+          "nextDetails": {
+            "colorA": "",
+            "colorB": "",
+            "secondaryTileImageURL": "https://cdn2.unrealengine.com/2025september-crew-benefits---recurring-benefits-crew-pack-tile-260x160-c4f622f573b9.png",
+            "tileImageURL": "https://cdn2.unrealengine.com/2025september-crew-benefits---recurring-benefits-crew-pack-tile-260x160-c4f622f573b9.png",
+            "_type": "Crew Tile Details Data",
+            "color3Hex": "",
+            "description": "Get the Augury Outfit, Back Bling, and Pickaxe!",
+            "color4Hex": "7BA0D5",
+            "title": "September Crew Pack",
+            "color2Hex": "E6ADFF",
+            "color1Hex": "394489",
+            "tag": "MonthlyBenefit",
+            "colorC": "",
+            "backgroundImageURL": "https://cdn2.unrealengine.com/2025september-crew-benefits-screen---crew-pack-background-texture-1922x1082-4b7f140ac6c9.png"
+          },
+          "nextCrewPackItems": [
+            "AthenaCharacter:character_TitalNinja",
+            "AthenaBackpack:backpack_TitalNinja",
+            "AthenaPickaxe:pickaxe_TitalNinja"
+          ],
+          "bHasNextCrewPackDetails": true,
+          "_type": "Crew Tile Data",
+          "details": {
+            "colorA": "",
+            "colorB": "",
+            "secondaryTileImageURL": "https://cdn2.unrealengine.com/2025august-crew-benefits---recurring-benefits-crew-pack-tile-260x160-6ac901598c27.png",
+            "tileImageURL": "https://cdn2.unrealengine.com/2025august-crew-benefits---recurring-benefits-crew-pack-tile-260x160-6ac901598c27.png",
+            "_type": "Crew Tile Details Data",
+            "color3Hex": "",
+            "description": "Get the Bernie Outfit, Back Bling, and Pickaxe!",
+            "color4Hex": "3d0c5b",
+            "title": "August Crew Pack",
+            "color2Hex": "28a4c2",
+            "color1Hex": "3d0c5b",
+            "tag": "CrewMonthBenefit",
+            "colorC": "",
+            "backgroundImageURL": "https://cdn2.unrealengine.com/2025august-crew-benefits-screen---crew-pack-background-texture-1920x1080-b20a53dd08b8.png"
+          }
+        }
+      ],
+      "_type": "Crew Benefits",
+      "limitedTimeBenefits": [
+        {
+          "tileType": "Basic",
+          "tileLabel": "Rocket Pass",
+          "nextDetails": {
+            "_type": "Crew Tile Details Data",
+            "tag": "None"
+          },
+          "bHasNextCrewPackDetails": false,
+          "_type": "Crew Tile Data",
+          "details": {
+            "tileImageURL": "https://cdn2.unrealengine.com/crewbenefits-rockettile-520x320-1e6ae8846a29.png",
+            "_type": "Crew Tile Details Data",
+            "description": "Get Rocket Pass Premium for the current season of Rocket League as part of your Crew subscription (Rocket League not available on Mobile).",
+            "tag": "CrewMonthBenefit",
+            "title": "Rocket Pass Premium",
+            "backgroundImageURL": "https://cdn2.unrealengine.com/rl-s17-u52-upsell-crewoutfit-1920x1080-4e71966959d0.jpg"
+          }
+        },
+        {
+          "tileType": "ProgressiveCosmetic",
+          "tileLabel": "Crew Styles",
+          "nextDetails": {
+            "_type": "Crew Tile Details Data",
+            "tag": "None",
+            "title": ""
+          },
+          "bHasNextCrewPackDetails": false,
+          "_type": "Crew Tile Data",
+          "details": {
+            "secondaryTileImageURL": "https://cdn2.unrealengine.com/2025august-crew-benefits---recurring-benefits-crew-legacy-tile-260x160-a6a6f84d8b07.png",
+            "tileImageURL": "https://cdn2.unrealengine.com/2025august-crew-benefits---recurring-benefits-crew-legacy-tile-260x160-a6a6f84d8b07.png",
+            "_type": "Crew Tile Details Data",
+            "description": "Crew-exclusive cosmetics that unlock a new stage every month that you are an active subscriber to the Fortnite Crew.",
+            "color4Hex": "09081A",
+            "tag": "AvailableUntilBenefit",
+            "title": "Crew Styles",
+            "color2Hex": "45D2F5",
+            "color1Hex": "0744AC",
+            "backgroundImageURL": "https://cdn2.unrealengine.com/2025august-crew-benefits-screen---crew-legacy-background-texture-1920x1080-100471a5a134.png"
+          }
+        }
+      ]
+    },
+    "upsellBenefits": {
+      "themeColors": [
+        {
+          "_type": "Named Color",
+          "name": "Offer Color",
+          "colorString": "D6AFFF"
+        },
+        {
+          "_type": "Named Color",
+          "name": "Price Text Color",
+          "colorString": "E1BEFF"
+        },
+        {
+          "_type": "Named Color",
+          "name": "Price Text Color - Hover",
+          "colorString": "672E98"
+        },
+        {
+          "_type": "Named Color",
+          "name": "Tile Color 1",
+          "colorString": "9A5FFB00"
+        },
+        {
+          "_type": "Named Color",
+          "name": "Tile Color 2",
+          "colorString": "49297C"
+        }
+      ],
+      "imageUrl": "https://cdn2.unrealengine.com/s10music-t-ui-upsellscreen-crew-3710-tile-560x328-4a741676118e-560x328-c8b03bf9d17f.png",
+      "_type": "Fortnite - Subscription Simple Benefit Groups",
+      "benefitGroups": [
+        {
+          "benefits": [
+            {
+              "imageUrl": "https://cdn2.unrealengine.com/t-ui-upsellscreen-benefits-vbucks-medium-88x88-f32c0088ad97.png",
+              "_type": "Fortnite - Subscription Simple Benefit",
+              "label": "1,200 V-Bucks"
+            },
+            {
+              "imageUrl": "https://cdn2.unrealengine.com/t-ui-upsellscreen-benefits-bp-3700-bundle-1-88x88-4ba06390c6f7.png",
+              "_type": "Fortnite - Subscription Simple Benefit",
+              "label": "12 Outfits"
+            },
+            {
+              "imageUrl": "https://cdn2.unrealengine.com/t-ui-upsellscreen-benefits-bp-3700-paid-1-88x88-c5e0b34b916e.png",
+              "_type": "Fortnite - Subscription Simple Benefit",
+              "label": "200+ Rewards"
+            }
+          ],
+          "_type": "Fortnite - Subscription Simple Benefit Group",
+          "label": "Earn Up To:"
+        },
+        {
+          "benefits": [
+            {
+              "imageUrl": "https://cdn2.unrealengine.com/t-ui-upsellscreen-benefits-vbucks-large-88x88-79229599c3d2.png",
+              "_type": "Fortnite - Subscription Simple Benefit",
+              "label": "1,000 V-Bucks",
+              "subText": "Monthly"
+            },
+            {
+              "imageUrl": "https://cdn2.unrealengine.com/t-ui-upsellscreen-benefits-allpasses-88x88-0bf40ff21c30.png",
+              "_type": "Fortnite - Subscription Simple Benefit",
+              "label": "Access to All Passes"
+            },
+            {
+              "imageUrl": "https://cdn2.unrealengine.com/t-ui-upsellscreen-benefits-crew-3700-1-88x88-757b5ec2391f.png",
+              "_type": "Fortnite - Subscription Simple Benefit",
+              "label": "Fortnite Crew Exclusive Outfit"
+            }
+          ],
+          "_type": "Fortnite - Subscription Simple Benefit Group",
+          "label": "Instantly Claim:"
+        }
+      ]
+    },
+    "crewDisclaimer": "Auto-renews each month until cancelled. Cancel anytime. Territorial restrictions apply. Ability to claim Premium Rewards during active subscription only. Select \"Subscription Terms\" for more info.",
+    "defaultData": {
+      "backgroundURL": "https://cdn2.unrealengine.com/s10music-t-ui-bento-3710-fullsize-2048x512-1a92e2a086af-2048x512-d6dcd676184b.png",
+      "bPassOnlyInUpsell": false,
+      "_type": "Crew Default Data",
+      "overrideUpsellPass": "",
+      "description": "The Battle Pass and All Fortnite Passes\n14 Outfits and 150+ Rewards\nGet 1,000 V-Bucks EVERY month",
+      "bCrew50PercentInUpsell": true,
+      "bDefaultShowBundle": true,
+      "shortDescription": "Get the current season’s Battle Pass and other benefits! Select the tiles to learn more!",
+      "bUseNewUpsellFormat": true,
+      "title": " ",
+      "bCrewOnlyInUpsell": false,
+      "bAllowToggleBundle": true,
+      "bCrewOnRightInUpsell": true,
+      "subscribedBackgroundURL": "https://cdn2.unrealengine.com/fixed-t-ui-crewbenefits-subscribed-3700-background-1920x1080-66e5544b3a06.png"
+    },
+    "progressiveInfo": {
+      "sizzleVideo": {
+        "videoString": "PBB_Sizzle",
+        "videoUID": "LwftzrskCAwXgBKFzw",
+        "_type": "SpecialOfferVideoConfig",
+        "bStreamingEnabled": true,
+        "bCheckAutoPlay": true
+      },
+      "newStagesUnlockFinePrint": "New Stages unlock on the {UnlockDay}{UnlockDay}|ordinal(one=st,two=nd,few=rd,other=th) of each month at {UnlockTime} while active.",
+      "_type": "SubscriptionProgressiveInfo",
+      "infoModalEntries": [
+        "The Crew Legacy Sets are Crew exclusive cosmetic items that unlock new stages every month that you are subscribed to the Fortnite Crew.",
+        "When you subscribe to the Fortnite Crew, you claim stage 1 of any sets you have yet to start unlocking! Additionally, you will unlock the next stage of any sets you are currently making progress on the {UnlockDay}{UnlockDay}|ordinal(one=st,two=nd,few=rd,other=th) of every month at {UnlockTime}",
+        "Need to pause your membership? Not a problem, you will retain all unlocked stages and should you decide to return, you will continue your progression where you left off. There is no time limit to unlock all stages of an offer once it has been claimed.",
+        "Unlock progress of a Crew Legacy Set can only begin after a given Crew Legacy Set's release date. Any months of Fortnite Crew membership before a given Crew Legacy Set's release would not apply towards unlock progress."
+      ]
+    },
+    "_title": "crewscreendata",
+    "crewModals": {
+      "platformAndCountriesNotificationModals": [
+        {
+          "defaultBodyText": "Effective as of <text color=\"FFFFFFFF\" fontface=\"black\">{EffectiveDate}</>, we've made some changes to <text color=\"FFFFFFFF\" fontface=\"black\">Fortnite Crew prices</> for specific currencies to maintain fair pricing for Fortnite players in all regions. Any price changes will start with <text color=\"FFFFFFFF\" fontface=\"black\">your next billing date</>. Please note that you can <text color=\"FFFFFFFF\" fontface=\"black\">cancel</> your Fortnite Crew Subscription at any time.",
+          "bodyTextIfNoBodyTableAndSubscriptionCanceled": "Effective as of <text color=\"FFFFFFFF\" fontface=\"black\">{EffectiveDate}</>, we've made some changes to <text color=\"FFFFFFFF\" fontface=\"black\">Fortnite Crew prices</> for specific currencies to maintain fair pricing for Fortnite players in all regions. To learn more about this change please visit the below URL. Please note your <text color=\"FFFFFFFF\" fontface=\"black\">canceled subscription status has not changed.</>",
+          "moreInfoText": "For more information please visit:",
+          "_type": "Subscription - Platform And Countries Notification Modal",
+          "checkboxText": "\"I have been notified of the Fortnite Crew Price Change.\"",
+          "validPlatformAndCountriesPairs": [
+            {
+              "countryCodes": "AR,CL,CO,MX,PL,SE",
+              "subscriptionPlatform": "NintendoEShop",
+              "_type": "Subscription - Platform And Countries Pair"
+            },
+            {
+              "countryCodes": "BG,HR,PL,SE,TR",
+              "subscriptionPlatform": "PlayStation5Store",
+              "_type": "Subscription - Platform And Countries Pair"
+            },
+            {
+              "countryCodes": "BG,HR,PL,SE,TR",
+              "subscriptionPlatform": "PlayStation4Store",
+              "_type": "Subscription - Platform And Countries Pair"
+            },
+            {
+              "countryCodes": "SA,AE,AR,BG,CL,CO,HR,HK,KZ,MX,PL,SE,TW,TR",
+              "subscriptionPlatform": "SamsungGalaxyAppStore",
+              "_type": "Subscription - Platform And Countries Pair"
+            },
+            {
+              "countryCodes": "SA,AE,BG,CL,CO,HK,KZ,MX,PL,SE,TW,TR",
+              "subscriptionPlatform": "EpicPurchasingService",
+              "_type": "Subscription - Platform And Countries Pair"
+            },
+            {
+              "countryCodes": "SA,AR,CL,CO,MX,PL,SE,TR",
+              "subscriptionPlatform": "MicrosoftStore",
+              "_type": "Subscription - Platform And Countries Pair"
+            }
+          ],
+          "notificationEndDate": "2022-06-30T04:00:00.000Z",
+          "title": "Fortnite Crew Pricing Alignment",
+          "confirmButtonTextIfSubscriptionCanceled": "Okay",
+          "notificationStartDate": "2022-04-30T00:00:00.000Z",
+          "bodyTextIfSubscriptionCanceled": "Effective as of <text color=\"FFFFFFFF\" fontface=\"black\">{EffectiveDate}</>, we've made some changes to <text color=\"FFFFFFFF\" fontface=\"black\">Fortnite Crew prices</> for specific currencies to maintain fair pricing for Fortnite players in all regions. Please note your <text color=\"FFFFFFFF\" fontface=\"black\">cancelled</> subscription status has not changed.",
+          "cancelSubscriptionButtonText": "<text color=\"FFFFFFFF\" fontface=\"black\">Cancel Subscription</>\n<text color=\"78c7f5FF\" fontface=\"black\" size=\"18\">[More Info Provided]</>",
+          "platformSpecificBodyTables": [
+            {
+              "subscriptionPlatform": "DebugStore",
+              "_type": "Subscription - Platform Table",
+              "tableRows": [
+                {
+                  "bIsHeaderRow": true,
+                  "_type": "Subscription - Table Row",
+                  "rowData": [
+                    "Region",
+                    "Currency",
+                    "Price"
+                  ]
+                },
+                {
+                  "bIsHeaderRow": false,
+                  "_type": "Subscription - Table Row",
+                  "rowData": [
+                    "Bulgaria",
+                    "Bulgarian Lev",
+                    "22.49"
+                  ]
+                },
+                {
+                  "bIsHeaderRow": false,
+                  "_type": "Subscription - Table Row",
+                  "rowData": [
+                    "Chile",
+                    "Chilean Peso",
+                    "8,725"
+                  ]
+                },
+                {
+                  "bIsHeaderRow": false,
+                  "_type": "Subscription - Table Row",
+                  "rowData": [
+                    "Colombia",
+                    "Colombian Peso",
+                    "41,350"
+                  ]
+                },
+                {
+                  "bIsHeaderRow": false,
+                  "_type": "Subscription - Table Row",
+                  "rowData": [
+                    "Hong Kong",
+                    "Hong Kong Dollar",
+                    "76"
+                  ]
+                },
+                {
+                  "bIsHeaderRow": false,
+                  "_type": "Subscription - Table Row",
+                  "rowData": [
+                    "Kazakhstan",
+                    "Kazakhstani Tenge",
+                    "4,553"
+                  ]
+                },
+                {
+                  "bIsHeaderRow": false,
+                  "_type": "Subscription - Table Row",
+                  "rowData": [
+                    "Mexico",
+                    "Mexican Peso",
+                    "249"
+                  ]
+                },
+                {
+                  "bIsHeaderRow": false,
+                  "_type": "Subscription - Table Row",
+                  "rowData": [
+                    "Poland",
+                    "Poland złoty",
+                    "42.49"
+                  ]
+                },
+                {
+                  "bIsHeaderRow": false,
+                  "_type": "Subscription - Table Row",
+                  "rowData": [
+                    "Sweden",
+                    "Swedish Krona",
+                    "113.79"
+                  ]
+                },
+                {
+                  "bIsHeaderRow": false,
+                  "_type": "Subscription - Table Row",
+                  "rowData": [
+                    "Taiwan",
+                    "New Taiwan Dollar",
+                    "288"
+                  ]
+                },
+                {
+                  "bIsHeaderRow": false,
+                  "_type": "Subscription - Table Row",
+                  "rowData": [
+                    "Turkey",
+                    "Turkish Lira",
+                    "79"
+                  ]
+                },
+                {
+                  "bIsHeaderRow": false,
+                  "_type": "Subscription - Table Row",
+                  "rowData": [
+                    "Saudi Arabia",
+                    "Saudi Riyal",
+                    "45"
+                  ]
+                },
+                {
+                  "bIsHeaderRow": false,
+                  "_type": "Subscription - Table Row",
+                  "rowData": [
+                    "United Arab Emirates",
+                    "UAE Dirham",
+                    "45"
+                  ]
+                }
+              ]
+            },
+            {
+              "subscriptionPlatform": "MicrosoftStore",
+              "_type": "Subscription - Platform Table",
+              "tableRows": [
+                {
+                  "bIsHeaderRow": true,
+                  "_type": "Subscription - Table Row",
+                  "rowData": [
+                    "Region",
+                    "Currency",
+                    "Price"
+                  ]
+                },
+                {
+                  "bIsHeaderRow": false,
+                  "_type": "Subscription - Table Row",
+                  "rowData": [
+                    "Argentina",
+                    "Argentine Peso",
+                    "683"
+                  ]
+                },
+                {
+                  "bIsHeaderRow": false,
+                  "_type": "Subscription - Table Row",
+                  "rowData": [
+                    "Chile",
+                    "Chilean Peso",
+                    "8725"
+                  ]
+                },
+                {
+                  "bIsHeaderRow": false,
+                  "_type": "Subscription - Table Row",
+                  "rowData": [
+                    "Colombia",
+                    "Colombian Peso",
+                    "41350"
+                  ]
+                },
+                {
+                  "bIsHeaderRow": false,
+                  "_type": "Subscription - Table Row",
+                  "rowData": [
+                    "Mexico",
+                    "Mexican Peso",
+                    "249"
+                  ]
+                },
+                {
+                  "bIsHeaderRow": false,
+                  "_type": "Subscription - Table Row",
+                  "rowData": [
+                    "Poland",
+                    "Poland złoty",
+                    "42.49"
+                  ]
+                },
+                {
+                  "bIsHeaderRow": false,
+                  "_type": "Subscription - Table Row",
+                  "rowData": [
+                    "Sweden",
+                    "Swedish Krona",
+                    "113.79"
+                  ]
+                },
+                {
+                  "bIsHeaderRow": false,
+                  "_type": "Subscription - Table Row",
+                  "rowData": [
+                    "Turkey",
+                    "Turkish Lira",
+                    "79"
+                  ]
+                },
+                {
+                  "bIsHeaderRow": false,
+                  "_type": "Subscription - Table Row",
+                  "rowData": [
+                    "Saudi Arabia",
+                    "Saudi Riyal",
+                    "45"
+                  ]
+                }
+              ]
+            },
+            {
+              "subscriptionPlatform": "NintendoEShop",
+              "_type": "Subscription - Platform Table",
+              "tableRows": [
+                {
+                  "bIsHeaderRow": true,
+                  "_type": "Subscription - Table Row",
+                  "rowData": [
+                    "Region",
+                    "Currency",
+                    "Price"
+                  ]
+                },
+                {
+                  "bIsHeaderRow": false,
+                  "_type": "Subscription - Table Row",
+                  "rowData": [
+                    "Argentina",
+                    "Argentine Peso",
+                    "683"
+                  ]
+                },
+                {
+                  "bIsHeaderRow": false,
+                  "_type": "Subscription - Table Row",
+                  "rowData": [
+                    "Chile",
+                    "Chilean Peso",
+                    "8725"
+                  ]
+                },
+                {
+                  "bIsHeaderRow": false,
+                  "_type": "Subscription - Table Row",
+                  "rowData": [
+                    "Colombia",
+                    "Colombian Peso",
+                    "41350"
+                  ]
+                },
+                {
+                  "bIsHeaderRow": false,
+                  "_type": "Subscription - Table Row",
+                  "rowData": [
+                    "Mexico",
+                    "Mexican Peso",
+                    "249"
+                  ]
+                },
+                {
+                  "bIsHeaderRow": false,
+                  "_type": "Subscription - Table Row",
+                  "rowData": [
+                    "Poland",
+                    "Poland złoty",
+                    "42.49"
+                  ]
+                },
+                {
+                  "bIsHeaderRow": false,
+                  "_type": "Subscription - Table Row",
+                  "rowData": [
+                    "Sweden",
+                    "Swedish Krona",
+                    "113.79"
+                  ]
+                }
+              ]
+            },
+            {
+              "subscriptionPlatform": "PlayStation4Store",
+              "_type": "Subscription - Platform Table",
+              "tableRows": [
+                {
+                  "bIsHeaderRow": true,
+                  "_type": "Subscription - Table Row",
+                  "rowData": [
+                    "Region",
+                    "Currency",
+                    "Price"
+                  ]
+                },
+                {
+                  "bIsHeaderRow": false,
+                  "_type": "Subscription - Table Row",
+                  "rowData": [
+                    "Bulgaria",
+                    "Bulgarian Lev",
+                    "22.49"
+                  ]
+                },
+                {
+                  "bIsHeaderRow": false,
+                  "_type": "Subscription - Table Row",
+                  "rowData": [
+                    "Croatia",
+                    "Croatian Kuna",
+                    "83.49"
+                  ]
+                },
+                {
+                  "bIsHeaderRow": false,
+                  "_type": "Subscription - Table Row",
+                  "rowData": [
+                    "Poland",
+                    "Poland złoty",
+                    "42.49"
+                  ]
+                },
+                {
+                  "bIsHeaderRow": false,
+                  "_type": "Subscription - Table Row",
+                  "rowData": [
+                    "Sweden",
+                    "Swedish Krona",
+                    "113.79"
+                  ]
+                },
+                {
+                  "bIsHeaderRow": false,
+                  "_type": "Subscription - Table Row",
+                  "rowData": [
+                    "Turkey",
+                    "Turkish Lira",
+                    "79"
+                  ]
+                }
+              ]
+            },
+            {
+              "subscriptionPlatform": "PlayStation5Store",
+              "_type": "Subscription - Platform Table",
+              "tableRows": [
+                {
+                  "bIsHeaderRow": true,
+                  "_type": "Subscription - Table Row",
+                  "rowData": [
+                    "Region",
+                    "Currency",
+                    "Price"
+                  ]
+                },
+                {
+                  "bIsHeaderRow": false,
+                  "_type": "Subscription - Table Row",
+                  "rowData": [
+                    "Bulgaria",
+                    "Bulgarian Lev",
+                    "22.49"
+                  ]
+                },
+                {
+                  "bIsHeaderRow": false,
+                  "_type": "Subscription - Table Row",
+                  "rowData": [
+                    "Croatia",
+                    "Croatian Kuna",
+                    "83.49"
+                  ]
+                },
+                {
+                  "bIsHeaderRow": false,
+                  "_type": "Subscription - Table Row",
+                  "rowData": [
+                    "Poland",
+                    "Poland złoty",
+                    "42.49"
+                  ]
+                },
+                {
+                  "bIsHeaderRow": false,
+                  "_type": "Subscription - Table Row",
+                  "rowData": [
+                    "Sweden",
+                    "Swedish Krona",
+                    "113.79"
+                  ]
+                },
+                {
+                  "bIsHeaderRow": false,
+                  "_type": "Subscription - Table Row",
+                  "rowData": [
+                    "Turkey",
+                    "Turkish Lira",
+                    "79"
+                  ]
+                }
+              ]
+            },
+            {
+              "subscriptionPlatform": "SamsungGalaxyAppStore",
+              "_type": "Subscription - Platform Table",
+              "tableRows": [
+                {
+                  "bIsHeaderRow": true,
+                  "_type": "Subscription - Table Row",
+                  "rowData": [
+                    "Region",
+                    "Currency",
+                    "Price"
+                  ]
+                },
+                {
+                  "bIsHeaderRow": false,
+                  "_type": "Subscription - Table Row",
+                  "rowData": [
+                    "Argentina",
+                    "Argentine Peso",
+                    "683"
+                  ]
+                },
+                {
+                  "bIsHeaderRow": false,
+                  "_type": "Subscription - Table Row",
+                  "rowData": [
+                    "Bulgaria",
+                    "Bulgarian Lev",
+                    "22.49"
+                  ]
+                },
+                {
+                  "bIsHeaderRow": false,
+                  "_type": "Subscription - Table Row",
+                  "rowData": [
+                    "Chile",
+                    "Chilean Peso",
+                    "8725"
+                  ]
+                },
+                {
+                  "bIsHeaderRow": false,
+                  "_type": "Subscription - Table Row",
+                  "rowData": [
+                    "Colombia",
+                    "Colombian Peso",
+                    "41350"
+                  ]
+                },
+                {
+                  "bIsHeaderRow": false,
+                  "_type": "Subscription - Table Row",
+                  "rowData": [
+                    "Croatia",
+                    "Croatian Kuna",
+                    "83.49"
+                  ]
+                },
+                {
+                  "bIsHeaderRow": false,
+                  "_type": "Subscription - Table Row",
+                  "rowData": [
+                    "Hong Kong",
+                    "Hong Kong Dollar",
+                    "76"
+                  ]
+                },
+                {
+                  "bIsHeaderRow": false,
+                  "_type": "Subscription - Table Row",
+                  "rowData": [
+                    "Kazakhstan",
+                    "Kazakhstani Tenge",
+                    "4553"
+                  ]
+                },
+                {
+                  "bIsHeaderRow": false,
+                  "_type": "Subscription - Table Row",
+                  "rowData": [
+                    "Mexico",
+                    "Mexican Peso",
+                    "249"
+                  ]
+                },
+                {
+                  "bIsHeaderRow": false,
+                  "_type": "Subscription - Table Row",
+                  "rowData": [
+                    "Poland",
+                    "Poland złoty",
+                    "42.49"
+                  ]
+                },
+                {
+                  "bIsHeaderRow": false,
+                  "_type": "Subscription - Table Row",
+                  "rowData": [
+                    "Sweden",
+                    "Swedish Krona",
+                    "113.79"
+                  ]
+                },
+                {
+                  "bIsHeaderRow": false,
+                  "_type": "Subscription - Table Row",
+                  "rowData": [
+                    "Taiwan",
+                    "New Taiwan Dollar",
+                    "288"
+                  ]
+                },
+                {
+                  "bIsHeaderRow": false,
+                  "_type": "Subscription - Table Row",
+                  "rowData": [
+                    "Turkey",
+                    "Turkish Lira",
+                    "79"
+                  ]
+                }
+              ]
+            }
+          ],
+          "bodyTextIfNoBodyTable": "Effective as of <text color=\"FFFFFFFF\" fontface=\"black\">{EffectiveDate}</>, we've made some changes to <text color=\"FFFFFFFF\" fontface=\"black\">Fortnite Crew prices</> for specific currencies to maintain fair pricing for Fortnite players in all regions. Any <text color=\"FFFFFFFF\" fontface=\"black\">price changes</> will start with your <text color=\"FFFFFFFF\" fontface=\"black\">next billing date.</> To learn more about this change and to see if your subscription price has changed, please visit the below URL. Please note that <text color=\"FFFFFFFF\" fontface=\"black\">you can cancel</> your Fortnite Crew Subscription at <text color=\"FFFFFFFF\" fontface=\"black\">any time.</>",
+          "moreInfoUrl": "https://www.epicgames.com/fortnite/en-US/news/pricing-alignment",
+          "notificationId": "FN_Crew_Price_Alignment_April_2022",
+          "effectiveDate": "2022-04-30T00:00:00.000Z",
+          "defaultConfirmButtonText": "Accept"
+        }
+      ],
+      "_type": "Subscription - Crew Modals",
+      "cancellationInfoErrorStateModals": [
+        {
+          "_type": "Subscription - Subscription State Modal",
+          "subscriptionState": "PlatformAuthError",
+          "bulletPoints": [
+            "Log on to the <text color=\"FFFFFFFF\" fontface=\"black\">platform you originally subscribed on</> for up to date cancellation info",
+            "<text color=\"FFFFFFFF\" fontface=\"black\">Go to the Item Shop</> and click on the <text color=\"FFFFFFFF\" fontface=\"black\">Fortnite Crew tile</>",
+            "Click on the <text color=\"FFFFFFFF\" fontface=\"black\">“Cancellation Info” button</> on the Fortnite Crew Screen",
+            "Follow the <text color=\"FFFFFFFF\" fontface=\"black\">final cancellation step(s).</>",
+            "Alternatively, you can go to your <text color=\"FFFFFFFF\" fontface=\"black\">platform’s respective website</> to find out options to cancel your subscription."
+          ]
+        },
+        {
+          "_type": "Subscription - Subscription State Modal",
+          "subscriptionState": "RewardsDelayed",
+          "bulletPoints": [
+            "<text color=\"FFFFFFFF\" fontface=\"black\">Log back in later</> and using the below steps try again. We are currently <text color=\"FFFFFFFF\" fontface=\"black\">experiencing an error</> processing your account information.",
+            "<text color=\"FFFFFFFF\" fontface=\"black\">Go to the Item Shop</> and click on the <text color=\"FFFFFFFF\" fontface=\"black\">Fortnite Crew tile</>",
+            "Click on the <text color=\"FFFFFFFF\" fontface=\"black\">“Cancellation Info” button</> on the Fortnite Crew Screen",
+            "Follow the <text color=\"FFFFFFFF\" fontface=\"black\">final cancellation step(s).</>",
+            "If this problem persists, please <text color=\"FFFFFFFF\" fontface=\"black\">contact Player Support.</>"
+          ]
+        }
+      ]
+    },
+    "itemShopData": {
+      "tileEntries": [
+        {
+          "tileType": "Subscription",
+          "_type": "Crew Item Shop Tile Entry",
+          "tileData": {
+            "nextViolatorIntensity": "High",
+            "itemShopTileImages": {
+              "tileImageURL": "https://cdn2.unrealengine.com/s10music-t-ui-bento-3710-fullsize-2048x512-1a92e2a086af-2048x512-d6dcd676184b.png",
+              "fallbackTileImageURL": "https://cdn2.unrealengine.com/s10music-t-ui-bento-3710-replacement-1024x1024-9310527f6bd8-1024x1024-0b9fe7b27579.jpg",
+              "_type": "Crew Global Image"
+            },
+            "violatorIntensity": "High",
+            "_type": "Crew Item Shop Tile Data"
+          }
+        },
+        {
+          "tileType": "ProgressiveCosmetic",
+          "_type": "Crew Item Shop Tile Entry",
+          "tileData": {
+            "nextViolatorIntensity": "High",
+            "itemShopTileImages": {
+              "tileImageURL": "https://cdn2.unrealengine.com/fneco-31-40-subs-leafyvest-ingame-legacy-pack-tile-440x864-440x864-814f6cabcde3.png",
+              "_type": "Crew Global Image"
+            },
+            "violatorIntensity": "High",
+            "_type": "Crew Item Shop Tile Data"
+          }
+        }
+      ],
+      "_type": "Crew Item Shop Data"
+    },
+    "_noIndex": false,
+    "temporaryItemsInfo": {
+      "_type": "SubscriptionTemporaryItemsInfo"
+    },
+    "subModals": {
+      "_type": "SubscriptionModals",
+      "modals": [
+        {
+          "entries": [
+            "Open ‘My’ menu",
+            "Open Settings",
+            "Open Subscription",
+            "Select [Fortnite]",
+            "Select [Cancel Subscription]",
+            "Select [Schedule Cancellation]"
+          ],
+          "_type": "SubscriptionModalInfo",
+          "modalId": "cancellation",
+          "platformId": "OneStore"
+        },
+        {
+          "entries": [
+            "Open ‘My’ menu",
+            "Open Settings",
+            "Open Subscription",
+            "Select [Fortnite]",
+            "Select [Withdraw Subscription Cancellation]"
+          ],
+          "_type": "SubscriptionModalInfo",
+          "modalId": "rejoin",
+          "platformId": "OneStore"
+        },
+        {
+          "entries": [
+            "Open ‘My’ menu",
+            "Open Settings",
+            "Open Subscription",
+            "Select [Fortnite]",
+            "Select [Change] under Payment Method",
+            "Update your payment method and click [Confirm]"
+          ],
+          "_type": "SubscriptionModalInfo",
+          "modalId": "resolveissues",
+          "platformId": "OneStore"
+        },
+        {
+          "entries": [
+            "1. Sign in to PlayStation Network",
+            "2. (On PlayStation 4) Go to [Settings] > [Account Management] > [Account Information] > [Services List] ",
+            "2. (On PlayStation 5) Go to [Settings] > [Users and Accounts] > [Account] > [Payment and Subscriptions] > [Game and App Services] > [Fortnite] > [Fortnite Crew - 1 Month]",
+            "3. Select the subscription you want to rejoin",
+            "4. Select [Turn On Auto-Renew]"
+          ],
+          "_type": "SubscriptionModalInfo",
+          "modalId": "rejoin",
+          "platformId": "PlayStation4Store"
+        },
+        {
+          "entries": [
+            "We are experiencing some delays in processing your subscription renewal payment. It may take a few days for our systems to confirm your payment.",
+            "1. (On PlayStation 4) Go to [Settings] > [Account Management] > [Account Information] > [Services List] ",
+            "2. (On PlayStation 5) Go to [Settings] > [Users and Accounts] > [Account] > [Payment and Subscriptions] > [Game and App Services] > [Fortnite] > [Fortnite Crew - 1 Month]",
+            "3. Select the subscription you want to cancel",
+            "4. Select [Turn Off Auto-Renew]"
+          ],
+          "_type": "SubscriptionModalInfo",
+          "modalId": "resolveissues",
+          "platformId": "PlayStation4Store"
+        },
+        {
+          "entries": [
+            "We are experiencing some delays in processing your subscription renewal payment. It may take a few days for our systems to confirm your payment.",
+            "1. Go to [Settings] > [Users and Accounts] > [Account] > [Payment and Subscriptions] > [Subscriptions]",
+            "2. Select the subscription you want to cancel",
+            "3. Select [Turn Off Auto-Renew]"
+          ],
+          "_type": "SubscriptionModalInfo",
+          "modalId": "resolveissues",
+          "platformId": "PlayStation5Store"
+        },
+        {
+          "entries": [
+            "1. Please visit epicgames.com and login with your Epic account",
+            "2. At the top right of the page, select your Username and then Account",
+            "3. Select Subscriptions",
+            "4. Resolve any outstanding payment issues by following the instructions.",
+            "5. Click the [Reactivate Automatic Renewal] button in the Fortnite monthly subscription information",
+            "Note: Your Fortnite Crew subscription status may take up to 30 minutes and/or require restarting your game to update."
+          ],
+          "_type": "SubscriptionModalInfo",
+          "modalId": "resolveissues",
+          "platformId": "EpicPurchasingService"
+        },
+        {
+          "entries": [
+            "1. Go to account.microsoft.com/account and sign into your Microsoft account",
+            "2. Navigate to Services & Subscriptions at the top of the page",
+            "3. Select Manage next to your subscription listing",
+            "4. Select \"Turn off recurring billing\" to the right",
+            "5. Follow the prompts to \"Turn off recurring billing\""
+          ],
+          "_type": "SubscriptionModalInfo",
+          "modalId": "cancellation",
+          "platformId": "MicrosoftStore"
+        },
+        {
+          "entries": [
+            "1. Sign in to PlayStation Network",
+            "2. (On PlayStation 4) Go to [Settings] > [Account Management] > [Account Information] > [Services List] ",
+            "2. (On PlayStation 5) Go to [Settings] > [Users and Accounts] > [Account] > [Payment and Subscriptions] > [Game and App Services] > [Fortnite] > [Fortnite Crew - 1 Month]",
+            "3. Select the subscription you want to cancel",
+            "4. Select [Turn Off Auto-Renew]"
+          ],
+          "_type": "SubscriptionModalInfo",
+          "modalId": "cancellation",
+          "platformId": "PlayStation4Store"
+        },
+        {
+          "entries": [
+            "1. Sign in to PlayStation Network",
+            "2. Go to [Settings] > [Users and Accounts] > [Account] > [Payment and Subscriptions] > [Subscriptions]",
+            "3. Select the subscription you want to cancel",
+            "4. Select [Turn Off Auto-Renew]",
+            "5. Click the [Reactivate Automatic Renewal] button in the Fortnite monthly subscription information"
+          ],
+          "_type": "SubscriptionModalInfo",
+          "modalId": "cancellation",
+          "platformId": "PlayStation5Store"
+        },
+        {
+          "entries": [
+            "1. Press the HOME button",
+            "2. Open the Nintendo eShop",
+            "3. Select your account icon in the top right of the screen",
+            "4. Select [Your Subscriptions]",
+            "5. Click the [Turn Off Automatic Renewal] button in the Fortnite monthly subscription information",
+            "You may also cancel your subscription online by going to https://ec.nintendo.com/my/rights",
+            "Note: Your Fortnite Crew subscription status may take up to 30 minutes and/or require restarting your game to update."
+          ],
+          "_type": "SubscriptionModalInfo",
+          "modalId": "cancellation",
+          "platformId": "NintendoEShop"
+        },
+        {
+          "entries": [
+            "Important: It may take up to 48 hours to confirm your Fortnite Crew renewal payment. If you have already paid, the process for granting your rewards has already begun. ",
+            "Is your payment method up to date? You can find out following these steps:",
+            "1. Go to account.microsoft.com/account and sign into your Microsoft account",
+            "2. Navigate to Services & Subscriptions at the top of the page",
+            "3. Select Manage next to your subscription listing",
+            "4. Select the Pay Now option to the right side of the screen",
+            "5. Follow the prompts to update your billing information for your subscription"
+          ],
+          "_type": "SubscriptionModalInfo",
+          "modalId": "resolveissues",
+          "platformId": "MicrosoftStore"
+        },
+        {
+          "entries": [
+            "1. Press the HOME button",
+            "2. Open the Nintendo eShop",
+            "3. Select your account icon in the top right of the screen",
+            "4. Select [Your Subscriptions]",
+            "5. Click the [Reactivate Automatic Renewal] button in the Fortnite monthly subscription information",
+            "Note: Your Fortnite Crew subscription status may take up to 30 minutes and/or require restarting your game to update."
+          ],
+          "_type": "SubscriptionModalInfo",
+          "modalId": "resolveissues",
+          "platformId": "NintendoEShop"
+        },
+        {
+          "entries": [
+            "1. Press the HOME button",
+            "2. Open the Nintendo eShop",
+            "3. Select your account icon in the top right of the screen",
+            "4. Select [Your Subscriptions]",
+            "5. Click the [Reactivate Automatic Renewal] button in the Fortnite monthly subscription information"
+          ],
+          "_type": "SubscriptionModalInfo",
+          "modalId": "rejoin",
+          "platformId": "NintendoEShop"
+        },
+        {
+          "entries": [
+            "1. Go to account.microsoft.com/account and sign into your Microsoft account",
+            "2. Navigate to Services & Subscriptions at the top of the page",
+            "3. Select Manage next to your subscription listing",
+            "4. Select Turn on Recurring Billing to the right side of the screen",
+            "5. Follow the prompts to rejoin"
+          ],
+          "_type": "SubscriptionModalInfo",
+          "modalId": "rejoin",
+          "platformId": "MicrosoftStore"
+        },
+        {
+          "entries": [
+            "1. Open the Galaxy Store ",
+            "2. Select [Menu] ",
+            "3. Select [Payment methods] ",
+            "4. Select [Recurring payments]"
+          ],
+          "_type": "SubscriptionModalInfo",
+          "modalId": "resolveissues",
+          "platformId": "SamsungGalaxyAppStore"
+        },
+        {
+          "entries": [
+            "1. Open the Galaxy Store ",
+            "2. Select [Menu] ",
+            "3. Select [Subscriptions] ",
+            "4. Select the Fortnite app",
+            "5. Select [Unsubscribe]",
+            "Note: Your Fortnite Crew subscription status may take up to 30 minutes and/or require restarting your game to update."
+          ],
+          "_type": "SubscriptionModalInfo",
+          "modalId": "cancellation",
+          "platformId": "SamsungGalaxyAppStore"
+        },
+        {
+          "entries": [
+            "1. Open Settings",
+            "2. Select [Your Name]",
+            "3. Select [Subscriptions]",
+            "4. Select [Fortnite Crew]",
+            "5. Select [Cancel Subscription]",
+            "6. Select [Confirm]"
+          ],
+          "_type": "SubscriptionModalInfo",
+          "modalId": "cancellation",
+          "platformId": "IOSAppStore"
+        },
+        {
+          "entries": [
+            "1. Open Settings",
+            "2. Select [Your Name]",
+            "3. Select [Subscriptions]",
+            "4. Select [Fortnite Crew]",
+            "5. Select [Fortnite Crew (1 Month)]",
+            "6. Follow the on-screen instruction to authorize the purchase."
+          ],
+          "_type": "SubscriptionModalInfo",
+          "modalId": "rejoin",
+          "platformId": "IOSAppStore"
+        },
+        {
+          "entries": [
+            "1. Open Settings",
+            "2. Select [Your Name]",
+            "3. Select [Payment & Shipping]. You might be asked to sign in with your Apple Account.",
+            "4. If you need to update the billing information of an existing card, tap the payment method, then tap [Edit]",
+            "5. Enter your new billing information, then tap [Done]"
+          ],
+          "_type": "SubscriptionModalInfo",
+          "modalId": "resolveissues",
+          "platformId": "IOSAppStore"
+        }
+      ]
+    },
+    "_activeDate": "2025-08-26T08:00:00.000Z",
+    "lastModified": "2025-08-27T11:54:30.441Z",
+    "_locale": "en-US",
+    "_templateName": "FortniteGameCrewScreenData"
+  },
   "battleroyalenewsv2": {
     "news": {
       "motds": [
