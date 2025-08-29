@@ -290,6 +290,7 @@ const seasonPass = (accountId, athenprofile, versionGlobal) => {
         "sparks_season07_seasonasset",
         "sparks_season08_seasonasset",
         "musicpasss09_seasonasset",
+        "musicpasss10_seasonasset"
     ]
     passArray.forEach(seasonPass => {
         Profile.addItem(athenprofile, `AthenaSeason:${seasonPass}`, {
