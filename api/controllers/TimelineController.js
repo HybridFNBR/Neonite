@@ -47,7 +47,7 @@ module.exports = {
                             }
                         }
                     ],
-                    cacheExpire: new Date(Date.now() + 1000).toISOString()
+                    cacheExpire: new Date(Date.now() + 30000).toISOString()
                 },
                 "featured-islands": {},
                 "community-votes": {},
@@ -179,7 +179,7 @@ module.exports = {
                             rmtPromotion: "melody"
                         }
                     }],
-                    cacheExpire: new Date(Date.now() + 1000).toISOString()
+                    cacheExpire: new Date(Date.now() + 30000).toISOString()
                 }
             },
             currentTime: new Date().toISOString(),
