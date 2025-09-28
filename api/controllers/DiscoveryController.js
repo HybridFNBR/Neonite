@@ -153,6 +153,34 @@ module.exports = {
 				"playHistoryType": null
 				},
 				{
+					"panelName": "StrideMice",
+					"panelDisplayName": "The Daft Punk Experience",
+					"panelSubtitle": "The Daft Punk Experience",
+					"featureTags": [
+					  "bannerItemRow"
+					],
+					"firstPage": {
+					  "results": [
+						{
+						  "lastVisited": null,
+						  "linkCode": "playlist_stridemice",
+						  "isFavorite": false,
+						  "globalCCU": -1,
+						  "lockStatus": "UNLOCKED",
+						  "lockStatusReason": "RATING_THRESHOLD",
+						  "isVisible": true,
+						  "favoriteStatus": "NONE"
+						}
+					  ],
+					  "hasMore": false,
+					  "panelTargetName": null,
+					  "pageMarker": null
+					},
+					"panelType": "CuratedList",
+					"playHistoryType": null,
+					"panelContexts": {}
+				},
+				{
 					"panelName": "RipeHoneyDew",
 					"panelDisplayName": "Death Star Sabotage",
 					"panelSubtitle": "Death Star Sabotage",
@@ -231,20 +259,27 @@ module.exports = {
 
     mnemonicLinks: function(req, res){
         const {version} = getVersionInfo(req);
-		if(version >= 23.00){
-			if (version == 27.11) {
-				const durianIndex = discoveryv2.findIndex(i => i.mnemonic === "playlist_durian");
-				discoveryv2[durianIndex].active = true;
+		if (version >= 23.00) {
+			switch (version) {
+				case "27.11":
+					const durianIndex = discoveryv2.findIndex(i => i.mnemonic === "playlist_durian");
+					discoveryv2[durianIndex].active = true;
+				break;
+				case "32.11":
+					const quailIndex = discoveryv2.findIndex(i => i.mnemonic === "playlist_quail");
+					discoveryv2[quailIndex].active = true;
+				break;
+				case "35.20": 
+					const ripehoneydewIndex = discoveryv2.findIndex(i => i.mnemonic === "playlist_ripehoneydew");
+					discoveryv2[ripehoneydewIndex].active = true;
+				break;
+				case "37.31": 
+					const stridemiceIndex = discoveryv2.findIndex(i => i.mnemonic === "playlist_stridemice");
+					discoveryv2[stridemiceIndex].active = true;
+				break;
+				default:
 			}
-			if (version == 32.11) {
-				const quailIndex = discoveryv2.findIndex(i => i.mnemonic === "playlist_quail");
-				discoveryv2[quailIndex].active = true;
-			}
-			if (version == 35.20) {
-				const ripehonedewIndex = discoveryv2.findIndex(i => i.mnemonic === "playlist_ripehoneydew");
-				discoveryv2[ripehonedewIndex].active = true;
-			}
-			return res.json(discoveryv2)
+			return res.json(discoveryv2);
 		}
 		else{
 			const defaultResponse = discoveryv1.Panels[0].Pages[0].results.map(result => result.linkData);
