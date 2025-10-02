@@ -274,13 +274,14 @@ const stats = (accountId, athenprofile, config, versionGlobal) => {
     Profile.saveProfile(accountId, "athena", athenprofile)
 };
 
-const seasonPass = (accountId, athenprofile, versionGlobal) => {
+const seasonPass = (accountId, athenprofile, version, versionGlobal) => {
     var passArray = [
         "figmentpass_s01",
         "figmentpass_s02",
         "figmentpass_s03",
         "figmentpass_s04",
         "figment_s05_passdata_seasonasset",
+        "figment_s06_passdata_seasonasset",
         `athenaseason${versionGlobal}`,
         "junoseason1pass",
         "junoseason2pass",
@@ -292,6 +293,10 @@ const seasonPass = (accountId, athenprofile, versionGlobal) => {
         "musicpasss09_seasonasset",
         "musicpasss10_seasonasset"
     ]
+    if(version == 37.40 ){ //Epic didnt remove the season 5 figment pass
+        passArray = passArray.filter(item => item !== "figment_s05_passdata_seasonasset")
+        delete athenprofile.items["AthenaSeason:figment_s05_passdata_seasonasset"]
+    }
     passArray.forEach(seasonPass => {
         Profile.addItem(athenprofile, `AthenaSeason:${seasonPass}`, {
             "templateId": `AthenaSeason:${seasonPass}`,

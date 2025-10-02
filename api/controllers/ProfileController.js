@@ -369,7 +369,7 @@ module.exports = {
 				getOrCreateProfile(`${profileId}`);
 				if (profileId === "athena") {
 					stats(accountId, athenprofile, config, versionGlobal);
-					if (versionGlobal >= 33) { seasonPass(accountId, athenprofile, versionGlobal); }
+					if (versionGlobal >= 33) { seasonPass(accountId, athenprofile, version, versionGlobal); }
 					if ([33.11, 23.10, 19.01, 11.31].includes(version)) { winterFest(accountId, athenprofile); }
 					for (const [questId, quest] of Object.entries(miniPassData)) {
 						Profile.addItem(athenprofile, questId, quest);

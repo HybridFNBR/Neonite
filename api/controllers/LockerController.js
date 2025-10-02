@@ -2,6 +2,7 @@ const Profile = require("../../profile");
 const { v4: uuidv4 } = require("uuid");
 const NeoLog = require("../../structs/NeoLog");
 const fs = require("fs");
+const {getVersionInfo} = require("../../config/defs")
 
 module.exports = {
     lockerv3: async function(req, res){
@@ -163,6 +164,7 @@ module.exports = {
     },
 
 	lockerLoadoutV4: function(req, res){
+		const {version} = getVersionInfo(req);
 		var accountId = req.params.accountId;
 		var lockerData = Profile.readLockerProfile(accountId, 4);
 		if(req.body.equippedPresetId){
@@ -170,6 +172,15 @@ module.exports = {
 		}
 		else if(!req.body.equippedPresetId){
 			delete lockerData["activeLoadoutGroup"].equippedPresetId
+		}
+		if(version >= 37.40){
+			let characterLoadout = req.body.loadouts["CosmeticLoadout:LoadoutSchema_Character"].loadoutSlots.find(slot => slot.slotTemplate === "CosmeticLoadoutSlotTemplate:LoadoutSlot_Character");
+			if (characterLoadout.equippedItemId) {
+				const [category, itemId] = characterLoadout.equippedItemId.split(":");
+				characterLoadout.category = category;
+				characterLoadout.itemId = itemId;
+				characterLoadout.equippedItemId = `${category}:${itemId}`			
+			}
 		}
 		lockerData["activeLoadoutGroup"].updatedTime = new Date().toISOString()	
 		lockerData["activeLoadoutGroup"].loadouts = req.body["loadouts"]
