@@ -174,12 +174,16 @@ module.exports = {
 			delete lockerData["activeLoadoutGroup"].equippedPresetId
 		}
 		if(version >= 37.40){
-			let characterLoadout = req.body.loadouts["CosmeticLoadout:LoadoutSchema_Character"].loadoutSlots.find(slot => slot.slotTemplate === "CosmeticLoadoutSlotTemplate:LoadoutSlot_Character");
-			if (characterLoadout.equippedItemId) {
-				const [category, itemId] = characterLoadout.equippedItemId.split(":");
-				characterLoadout.category = category;
-				characterLoadout.itemId = itemId;
-				characterLoadout.equippedItemId = `${category}:${itemId}`			
+			for (const LoadoutSchema in req.body.loadouts) {
+				const schema = req.body.loadouts[LoadoutSchema];
+				schema.loadoutSlots.forEach(slot => {
+					if (slot.equippedItemId) {
+						const [category, itemId] = slot.equippedItemId.split(":");
+						slot.category = category;
+						slot.itemId = itemId;
+						slot.equippedItemId = `${category}:${itemId}`;
+					}
+				});
 			}
 		}
 		lockerData["activeLoadoutGroup"].updatedTime = new Date().toISOString()	
