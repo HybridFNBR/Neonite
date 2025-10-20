@@ -6,6 +6,7 @@ const ini = require('ini')
 const { getVersionInfo, loadJSON, VersionFilter} = require("../../config/defs")
 const config = ini.parse(fs.readFileSync(path.join(__dirname, '../../config.ini'), 'utf-8'));
 let requested = false
+const fortnitegame = loadJSON("../responses/fortnitegame.json")
 
 
 module.exports = {
@@ -929,9 +930,60 @@ module.exports = {
 	},
 
 	eventScreen: async function(req, res){
-		const data = (await axios.get('https://fortnitecontent-website-prod07.ol.epicgames.com/content/api/pages/fortnite-game/eventscreens').catch(() => {})).data;
-		res.json(data);
+		try {
+			const data = await axios.get('https://fortnitecontent-website-prod07.ol.epicgames.com/content/api/pages/fortnite-game/eventscreens');
+			res.json(data.data);
+		} 
+		catch {
+			res.json(fortnitegame.eventscreens);
+		}
 	},
+
+	seasonPass: async function(req, res){
+	try{
+      	const data = await axios.get('https://fortnitecontent-website-prod07.ol.epicgames.com/content/api/pages/fortnite-game/seasonpasses')
+      	res.json(data.data)
+	}
+	catch{
+		res.json({
+			"_title": "seasonpasses",
+			"_noIndex": false,
+			"_activeDate": "2024-10-15T00:27:45.046Z",
+			"lastModified": "2025-10-09T11:24:05.519Z",
+			"_locale": "en-US",
+			"_templateName": "blank",
+			"battlepassdata": {
+				"_title": "battlepassdata",
+				"_activeDate": "2025-10-01T18:17:00.000Z",
+				"lastModified": "2025-10-01T18:09:44.216Z",
+				"_locale": "en-US",
+				"_templateName": "BattlePassPurchaseTemplate"
+			},
+			"figmentpassdata": {
+				"_title": "Figmentpassdata",
+				"_activeDate": "2025-10-02T08:00:00.000Z",
+				"lastModified": "2025-10-01T20:24:42.073Z",
+				"_locale": "en-US",
+				"_templateName": "BattlePassPurchaseTemplate"
+			},
+			"legopassdata": {
+				"_title": "legopassdata",
+				"_activeDate": "2025-08-07T06:00:00.000Z",
+				"lastModified": "2025-09-23T21:23:44.909Z",
+				"_locale": "en-US",
+				"_templateName": "BattlePassPurchaseTemplate"
+			},
+			"musicpassdata": {
+				"_title": "Musicpassdata",
+				"_activeDate": "2025-10-09T07:30:00.000Z",
+				"lastModified": "2025-10-09T11:24:05.519Z",
+				"_locale": "en-US",
+				"_templateName": "BattlePassPurchaseTemplate"
+			},
+			"_suggestedPrefetch": []
+		})
+	  }
+    },
 
 	questProgress: function(req, res){
 		const {versionGlobal} = getVersionInfo(req);
