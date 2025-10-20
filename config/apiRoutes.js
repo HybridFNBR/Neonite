@@ -143,6 +143,7 @@ module.exports.routes = {
     'GET /content/api/pages/fortnite-game/seasonpasses': 'ApiController.seasonPass',
     'GET /api/quest/v3/:deploymentId/progress/account/:accountId': 'ApiController.questProgress',
     'POST /fortnite/api/game/v2/profile/:accountId/client/:command': 'ProfileController.mcp',
+    'POST /fortnite/api/game/v2/profile/:accountId/dedicated_server/:command': 'ProfileController.mcp',
     'GET /content/api/pages/fortnite-game': 'FortniteGameController.fortniteGame',
     'GET /content/api/pages/fortnite-game/radio-stations': 'FortniteGameController.stations',
     'GET /:trackdata': 'ApiController.trackData',
