@@ -749,8 +749,7 @@ const Backgrounds = (version, versionGlobal, backgrounds, content) =>{
             }
             else{
                 const backgroundStages = ["season17d", "season17c", "season17b", "season17"];
-                const randombackground = backgroundStages[Math.floor(Math.random() * backgroundStages.length)];
-                backgrounds[1].stage = `${randombackground}`;
+                backgrounds[1].stage = backgroundStages[Math.floor(Math.random() * backgroundStages.length)];
             }
         break;
         case 18:
@@ -939,6 +938,33 @@ const Backgrounds = (version, versionGlobal, backgrounds, content) =>{
         case 36:{
             backgrounds[1].stage = "season3600"
             backgrounds[1].backgroundimage = "https://cdn2.unrealengine.com/mkart-fnbr-ch6s3-lobbybg-final-4096x2048-340e7bf8bb02.jpg"
+        }
+        break;
+        case 37:{
+            if(version === "37.10" ||version === "37.20"){
+                const backgroundImages = [
+                    "https://cdn2.unrealengine.com/mkart-ch6s4-37-20-mural-update-lobby-bg-ltg-v9-1-stage1-4096x2048-7c99610cb2e5.jpg",
+                    "https://cdn2.unrealengine.com/mkart-ch6s4-37-20-mural-update-lobby-bg-ltg-v10-1-stage2-4096x2048-62f85531048f.jpg", 
+                    "https://cdn2.unrealengine.com/mkart-ch6s4-37-20-mural-update-lobby-bg-ltg-v11-1-stage3-4096x2048-db7cb2ad4221.jpg", 
+                    "https://cdn2.unrealengine.com/mkart-ch6s4-37-20-mural-update-lobby-bg-ltg-v12-1-stage4-4096x2048-0ede7555e124.jpg",
+                    "https://cdn2.unrealengine.com/mkart-ch6s4-37-20-mural-update-lobby-bg-ltg-v13-1-stage5-4096x2048-9521957dae87.jpg",
+                    "https://cdn2.unrealengine.com/mkart-ch6s4-37-20-mural-update-lobby-bg-ltg-v14-1-stage6-4096x2048-59b63c4363c7.jpg"
+                ];
+                backgrounds[1].stage = "defaultnotris"
+                backgrounds[1].backgroundimage = backgroundImages[Math.floor(Math.random() * backgroundImages.length)]
+            }
+            else if(version === "37.30" || version === "37.40"){
+                backgrounds[1].stage = "season3730"
+                backgrounds[1].backgroundimage = "https://cdn2.unrealengine.com/megazord-midseason-lobby-bg-4096x2048-87c393fad772.jpg"
+            }
+            else if(version === "37.50" || version === "37.51"){
+                backgrounds[1].stage = "season3750"
+                backgrounds[1].backgroundimage = "https://cdn2.unrealengine.com/mkart-fnbr-fortnitemares-37-50-lobbybg-final-4096x2048-92c002d8d677.jpg"
+            }
+            else{
+                backgrounds[1].stage = "season3700"
+                backgrounds[1].backgroundimage = "https://cdn2.unrealengine.com/mkart-ch6s4-lobby-bg-4096x2048-d73f821bb40c.jpg"
+            }
         }
         break;
         default:

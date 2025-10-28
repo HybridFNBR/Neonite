@@ -1,16 +1,17 @@
+
 {
-    "created": "",
-    "updated": "",
-    "rvn": 1,
-    "wipeNumber": 1,
-    "accountId": "",
-    "profileId": "outpost0",
-    "version": "no_version",
-    "items": {},
-    "stats": {
-      "attributes": {
-        "inventory_limit_bonus": 0
-      }
+    "created" : "2018-04-02T12:35:01.806Z",
+    "updated" : "2025-10-28T03:31:15.092Z",
+    "rvn" : 722,
+    "wipeNumber" : 9,
+    "accountId" : "",
+    "profileId" : "outpost0",
+    "version" : "season29_2940_cleanupItemsWithMissingTemplates_May_2024",
+    "stats" : {
+      "attributes" : { }
     },
-    "commandRevision": 0
+    "profileLockExpiration" : "0001-01-01T00:00:00.000Z",
+    "commandRevision" : 93,
+    "_id" : "957c8da822dd4120994984e3685f2075",
+    "items" : { }
 }
