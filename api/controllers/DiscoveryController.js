@@ -153,6 +153,34 @@ module.exports = {
 				"playHistoryType": null
 				},
 				{
+					"panelName": "LimeRock",
+					"panelDisplayName": "Welcome, Our Alien Overlords",
+					"panelSubtitle": "Welcome, Our Alien Overlords",
+					"featureTags": [
+					  "bannerItemRow"
+					],
+					"firstPage": {
+					  "results": [
+						{
+						  "lastVisited": null,
+						  "linkCode": "playlist_limerock",
+						  "isFavorite": false,
+						  "globalCCU": -1,
+						  "lockStatus": "UNLOCKED",
+						  "lockStatusReason": "RATING_THRESHOLD",
+						  "isVisible": true,
+						  "favoriteStatus": "NONE"
+						}
+					  ],
+					  "hasMore": false,
+					  "panelTargetName": null,
+					  "pageMarker": null
+					},
+					"panelType": "CuratedList",
+					"playHistoryType": null,
+					"panelContexts": {}
+				},
+				{
 					"panelName": "StrideMice",
 					"panelDisplayName": "The Daft Punk Experience",
 					"panelSubtitle": "The Daft Punk Experience",
@@ -274,8 +302,14 @@ module.exports = {
 					discoveryv2[ripehoneydewIndex].active = true;
 				break;
 				case "37.31": 
+				case "37.40":
+				case "37.50":
 					const stridemiceIndex = discoveryv2.findIndex(i => i.mnemonic === "playlist_stridemice");
 					discoveryv2[stridemiceIndex].active = true;
+				break;
+				case "37.51":
+					const limeorckIndex = discoveryv2.findIndex(i => i.mnemonic === "playlist_limerock");
+					discoveryv2[limeorckIndex].active = true;
 				break;
 				default:
 			}
