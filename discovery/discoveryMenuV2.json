@@ -1077,6 +1077,180 @@
       "namespace": "fn",
       "accountId": "epic",
       "creatorName": "Epic",
+      "mnemonic": "playlist_limerock",
+      "linkType": "BR:Playlist",
+      "metadata": {
+        "pop_out_image_urls": {
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37.51_Limerock_A-SpotForeground_-1096x384-951e11ea.png"
+        },
+        "background_image_urls": {
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37.51_Limerock_A-Spot_Background_-1760x352-ae33ab2c.png"
+        },
+        "image_url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-51_Limerock_DiscoverPlaylistTile_-1920x1080-a7c593a1.jpg",
+        "image_urls": {
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-51_Limerock_DiscoverPlaylistTile_-480x270-ef3026ba.jpg",
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-51_Limerock_DiscoverPlaylistTile_-640x360-08bc3ca8.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-51_Limerock_DiscoverPlaylistTile_-1920x1080-a7c593a1.jpg"
+        },
+        "matchmaking": {
+          "override_playlist": "playlist_limerock"
+        },
+        "title": "Welcome, Our Alien Overlords",
+        "matchmakingV2": {
+          "allowSquadFillOption": false,
+          "allowJoinInProgress": false,
+          "crossplayRequired": true,
+          "maxPlayers": 24,
+          "ratingType": "fun",
+          "maxSocialPartySize": 4,
+          "isRanked": false,
+          "maxTeamCount": 2,
+          "allowPrivateMatches": false,
+          "maxTeamSize": 12
+        },
+        "alt_image_urls": {
+          "de": {
+            "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-51_Limerock_DiscoverPlaylistTile_-480x270-4c2e5aaf.jpg",
+            "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-51_Limerock_DiscoverPlaylistTile_-640x360-5e1906df.jpg",
+            "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-51_Limerock_DiscoverPlaylistTile_-1920x1080-c5c48a12.jpg"
+          },
+          "ru": {
+            "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-51_Limerock_DiscoverPlaylistTile_-480x270-b3a19ada.jpg",
+            "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-51_Limerock_DiscoverPlaylistTile_-640x360-f0c9d27e.jpg",
+            "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-51_Limerock_DiscoverPlaylistTile_-1920x1080-81979d46.jpg"
+          },
+          "ko": {
+            "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-51_Limerock_DiscoverPlaylistTile_-480x270-46f3d3bc.jpg",
+            "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-51_Limerock_DiscoverPlaylistTile_-640x360-7e8e1b18.jpg",
+            "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-51_Limerock_DiscoverPlaylistTile_-1920x1080-02e78306.jpg"
+          },
+          "zh-hant": {
+            "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-51_Limerock_DiscoverPlaylistTile_-480x270-92619298.jpg",
+            "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-51_Limerock_DiscoverPlaylistTile_-640x360-2a2c9d9d.jpg",
+            "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-51_Limerock_DiscoverPlaylistTile_-1920x1080-80ae8341.jpg"
+          },
+          "pt-BR": {
+            "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-51_Limerock_DiscoverPlaylistTile_-480x270-4d06d2fe.jpg",
+            "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-51_Limerock_DiscoverPlaylistTile_-640x360-83521a3e.jpg",
+            "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-51_Limerock_DiscoverPlaylistTile_-1920x1080-1d3e4f7f.jpg"
+          },
+          "zh-hans": {
+            "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-51_Limerock_DiscoverPlaylistTile_-480x270-c7992ec9.jpg",
+            "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-51_Limerock_DiscoverPlaylistTile_-640x360-fcf77699.jpg",
+            "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-51_Limerock_DiscoverPlaylistTile_-1920x1080-feee8d72.jpg"
+          },
+          "it": {
+            "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-51_Limerock_DiscoverPlaylistTile_-480x270-172bb815.jpg",
+            "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-51_Limerock_DiscoverPlaylistTile_-640x360-87f1aa07.jpg",
+            "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-51_Limerock_DiscoverPlaylistTile_-1920x1080-8fde82bc.jpg"
+          },
+          "fr": {
+            "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-51_Limerock_DiscoverPlaylistTile_-480x270-7ae39be4.jpg",
+            "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-51_Limerock_DiscoverPlaylistTile_-640x360-cf002d4f.jpg",
+            "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-51_Limerock_DiscoverPlaylistTile_-1920x1080-d13f1153.jpg"
+          },
+          "es": {
+            "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-51_Limerock_DiscoverPlaylistTile_-480x270-de85fe0f.jpg",
+            "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-51_Limerock_DiscoverPlaylistTile_-640x360-740daf3f.jpg",
+            "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-51_Limerock_DiscoverPlaylistTile_-1920x1080-8d56e7ff.jpg"
+          },
+          "ar": {
+            "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-51_Limerock_DiscoverPlaylistTile_-480x270-365d6648.jpg",
+            "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-51_Limerock_DiscoverPlaylistTile_-640x360-db1c85f8.jpg",
+            "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-51_Limerock_DiscoverPlaylistTile_-1920x1080-d92b48c4.jpg"
+          },
+          "vi": {
+            "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-51_Limerock_DiscoverPlaylistTile_-480x270-8a58c7ae.jpg",
+            "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-51_Limerock_DiscoverPlaylistTile_-640x360-fd43e7cb.jpg",
+            "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-51_Limerock_DiscoverPlaylistTile_-1920x1080-b83dd98b.jpg"
+          },
+          "th": {
+            "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-51_Limerock_DiscoverPlaylistTile_-480x270-87d57005.jpg",
+            "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-51_Limerock_DiscoverPlaylistTile_-640x360-2a17a568.jpg",
+            "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-51_Limerock_DiscoverPlaylistTile_-1920x1080-704e3626.jpg"
+          },
+          "ja": {
+            "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-51_Limerock_DiscoverPlaylistTile_-480x270-1c588947.jpg",
+            "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-51_Limerock_DiscoverPlaylistTile_-640x360-db9bf8f9.jpg",
+            "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-51_Limerock_DiscoverPlaylistTile_-1920x1080-7641a6aa.jpg"
+          },
+          "id": {
+            "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-51_Limerock_DiscoverPlaylistTile_-480x270-da8232b8.jpg",
+            "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-51_Limerock_DiscoverPlaylistTile_-640x360-6d194c1b.jpg",
+            "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-51_Limerock_DiscoverPlaylistTile_-1920x1080-79707618.jpg"
+          },
+          "pl": {
+            "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-51_Limerock_DiscoverPlaylistTile_-480x270-fd1d51d9.jpg",
+            "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-51_Limerock_DiscoverPlaylistTile_-640x360-ca4b5346.jpg",
+            "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-51_Limerock_DiscoverPlaylistTile_-1920x1080-de4327e2.jpg"
+          },
+          "es-419": {
+            "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-51_Limerock_DiscoverPlaylistTile_-480x270-681baf8e.jpg",
+            "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-51_Limerock_DiscoverPlaylistTile_-640x360-1ba94cbc.jpg",
+            "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-51_Limerock_DiscoverPlaylistTile_-1920x1080-75be9797.jpg"
+          },
+          "tr": {
+            "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-51_Limerock_DiscoverPlaylistTile_-480x270-323d3ee9.jpg",
+            "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-51_Limerock_DiscoverPlaylistTile_-640x360-a7879a94.jpg",
+            "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-51_Limerock_DiscoverPlaylistTile_-1920x1080-48cb37d6.jpg"
+          }
+        },
+        "alt_title": {
+          "de": "Seid gegr\u00fc\u00dft, unsere Alien-Herrscher",
+          "ru": "\u041f\u0440\u0438\u0432\u0435\u0442\u0441\u0442\u0432\u0443\u0435\u043c \u043d\u0430\u0448\u0438\u0445 \u0438\u043d\u043e\u043f\u043b\u0430\u043d\u0435\u0442\u043d\u044b\u0445 \u0432\u043b\u0430\u0434\u044b\u043a",
+          "ko": "\ud658\uc601\ud569\ub2c8\ub2e4, \uc778\ub958\uc758 \uc678\uacc4\uc778 \uc9c0\ubc30\uc790\uc2dc\uc5ec",
+          "zh-hant": "\u6b61\u8fce\u5c0a\u656c\u7684\u5916\u661f\u9738\u4e3b",
+          "pt-BR": "Sauda\u00e7\u00f5es, Nossos Conquistadores Alien\u00edgenas",
+          "zh-hans": "\u6b22\u8fce\u5916\u661f\u9886\u4e3b",
+          "it": "Benvenuti, nostri sovrani alieni",
+          "fr": "Accueillons nos grands patrons extraterrestres",
+          "es": "Bienvenidos, amos alien\u00edgenas",
+          "ar": "\u0645\u0631\u062d\u0628\u064b\u0627 \u0628\u0627\u0644\u0633\u0627\u062f\u0629 \u0627\u0644\u0641\u0636\u0627\u0626\u064a\u064a\u0646",
+          "vi": "Ch\u00e0o M\u1eebng C\u00e1c L\u00e3nh Ch\u00faa Ngo\u00e0i H\u00e0nh Tinh C\u1ee7a Ch\u00fang Ta",
+          "th": "\u0e22\u0e34\u0e19\u0e14\u0e35\u0e15\u0e49\u0e2d\u0e19\u0e23\u0e31\u0e1a\u0e40\u0e2d\u0e40\u0e25\u0e35\u0e48\u0e22\u0e19\u0e42\u0e2d\u0e40\u0e27\u0e2d\u0e23\u0e4c\u0e25\u0e2d\u0e23\u0e4c\u0e14\u0e02\u0e2d\u0e07\u0e40\u0e23\u0e32",
+          "ja": "\u3088\u3046\u3053\u305d\u3001\u30a8\u30a4\u30ea\u30a2\u30f3\u306e\u541b\u4e3b\u305f\u3061\u3088",
+          "id": "Selamat datang, Alien Overlords Kita",
+          "pl": "Witajcie, nasi kosmiczni w\u0142adcy",
+          "es-419": "Bienvenidos, amos alien\u00edgenas",
+          "tr": "Ho\u015f Geldiniz Uzayl\u0131 Efendilerimiz"
+        },
+        "alt_tagline": {
+          "de": "Nicht einmal in Barts Baumhaus ist genug Platz f\u00fcr das, was wir f\u00fcr euch geplant haben. Macht es euch auf der Couch bequem, nehmt euch einen Donut und begr\u00fc\u00dft Kang und Kodos am 1. November um 16:00 Uhr MEZ!",
+          "ru": "\u0417\u0430\u0432\u0441\u0435\u0433\u0434\u0430\u0442\u0430\u044f\u043c \u0434\u043e\u043c\u0438\u043a\u0430 \u0411\u0430\u0440\u0442\u0430 \u043d\u0430 \u0434\u0435\u0440\u0435\u0432\u0435 \u0442\u0430\u043a\u043e\u0435 \u0438 \u043d\u0435 \u0441\u043d\u0438\u043b\u043e\u0441\u044c\u2026 \u0423\u0441\u0442\u0440\u043e\u0439\u0442\u0435\u0441\u044c \u043d\u0430 \u0434\u0438\u0432\u0430\u043d\u0435 \u043f\u043e\u0443\u0434\u043e\u0431\u043d\u0435\u0435, \u0432\u043e\u0437\u044c\u043c\u0438\u0442\u0435 \u043f\u043e\u043d\u0447\u0438\u043a \u0438 \u043f\u0440\u0438\u0433\u043e\u0442\u043e\u0432\u044c\u0442\u0435\u0441\u044c \u0432\u0441\u0442\u0440\u0435\u0447\u0430\u0442\u044c \u041a\u044d\u043d\u0433\u0430 \u0438 \u041a\u043e\u0434\u043e\u0441 1\u00a0\u043d\u043e\u044f\u0431\u0440\u044f \u0432 18:00 \u043f\u043e \u043c\u043e\u0441\u043a\u043e\u0432\u0441\u043a\u043e\u043c\u0443 \u0432\u0440\u0435\u043c\u0435\u043d\u0438!",
+          "ko": "\ubc14\ud2b8\uc758 \ud2b8\ub9ac\ud558\uc6b0\uc2a4\uc870\ucc28\ub3c4 \uac10\ub2f9\ud560 \uc218 \uc5c6\ub294 \ucf58\ud150\uce20\uac00 \ucc3e\uc544\uc635\ub2c8\ub2e4. \uc18c\ud30c\uc5d0 \ud3b8\ud558\uac8c \uc549\uc544 \ub3c4\ub11b\uc744 \ud558\ub098 \uc9d1\uc5b4\ub4dc\uc138\uc694. \uadf8\ub9ac\uace0 11\uc6d4 2\uc77c \uc624\uc804 0\uc2dc(\ud55c\uad6d \uc2dc\uac04)\uc5d0 \uce89\uacfc \ucf54\ub3c4\uc2a4\ub97c \ub9de\uc774\ud558\uc138\uc694!",
+          "zh-hant": "\u5c31\u9023\u9738\u5b50\u7684\u6050\u6016\u6a39\u5c4b\u4e5f\u62b5\u64cb\u4e0d\u4e86\u5373\u5c07\u5230\u4f86\u7684\u98a8\u66b4\u3002\u8eba\u9032\u6c99\u767c\uff0c\u6293\u8d77\u751c\u751c\u5708\uff0c\u6b61\u8fce\u6211\u5011\u7684\u5916\u661f\u9738\u4e3b\uff01\u6d3b\u52d5\u5c07\u65bc\u53f0\u5317\u6642\u9593 11 \u6708 1 \u65e5\u665a\u4e0a 11 \u9ede\u767b\u5834\u3002",
+          "pt-BR": "Nem mesmo a Casa da \u00c1rvore do Bart pode impedir o que est\u00e1 por vir. Relaxe no sof\u00e1, pegue uma rosquinha e receba Kang e Kodos em 1\u00b0 de novembro, ao meio-dia (12h BRT)!",
+          "zh-hans": "\u5c31\u8fde\u5df4\u7279\u7684\u6811\u5c4b\u4e5f\u65e0\u6cd5\u904f\u5236\u5373\u5c06\u964d\u4e34\u7684\u60ca\u559c\u3002\u5317\u4eac\u65f6\u95f411\u67081\u65e5\u665a\u4e0a11\u70b9\uff0c\u9760\u5728\u6c99\u53d1\u4e0a\uff0c\u62ff\u8d77\u751c\u751c\u5708\uff0c\u8fce\u63a5\u5eb7\u548c\u79d1\u591a\u517d\u5427\uff01",
+          "it": "La paura fa novanta, ma con quello che ti attende si arriva anche a novantuno. Rilassati sul divano, prendi una ciambella e dai il benvenuto a Kang e Kodos l'1 novembre alle 16:00 ora italiana!",
+          "fr": "M\u00eame la cabane de Bart n'est pas pr\u00eate pour ce qui va arriver. Posez-vous sur un divan, prenez un donut et pr\u00e9parez-vous \u00e0 accueillir nos grands patrons extraterrestres le 1er\u00a0novembre \u00e0 16h (CET)\u00a0!",
+          "es": "Ni la casa del \u00e1rbol de Bart puede albergar lo que est\u00e1 por venir. \u00a1Ve al sof\u00e1, coge una rosquilla y da la bienvenida a Kang y Kodos el 1 de noviembre a las 16:00\u00a0CET!",
+          "ar": "\u062d\u062a\u0649 \u0645\u0646\u0632\u0644 \u0634\u062c\u0631\u0629 \u0628\u0627\u0631\u062a \u0644\u0627 \u064a\u0645\u0643\u0646\u0647 \u0627\u0633\u062a\u064a\u0639\u0627\u0628 \u0627\u0644\u0645\u062a\u0639\u0629 \u0627\u0644\u062a\u064a \u062a\u0646\u062a\u0638\u0631\u0643. \u0627\u0633\u062a\u0631\u062e\u0650 \u0639\u0644\u0649 \u0627\u0644\u0623\u0631\u064a\u0643\u0629 \u0648\u062a\u0646\u0627\u0648\u0644 \u0643\u0639\u0643\u0629 \u062f\u0648\u0646\u0627\u062a \u0648\u0631\u062d\u0651\u0628 \u0628\u0643\u0627\u0646\u063a \u0648\u0643\u0648\u062f\u0648\u0633 \u064a\u0648\u0645 1 \u0646\u0648\u0641\u0645\u0628\u0631 \u0627\u0644\u0633\u0627\u0639\u0629 6:00 \u0645\u0633\u0627\u0621\u064b \u0628\u062a\u0648\u0642\u064a\u062a \u0627\u0644\u0631\u064a\u0627\u0636!",
+          "vi": "\u0110\u1ebfn Ng\u00f4i Nh\u00e0 Tr\u00ean C\u00e2y c\u1ee7a Bart c\u0169ng kh\u00f4ng tr\u1ee5 v\u1eefng n\u1ed5i tr\u01b0\u1edbc di\u1ec5n bi\u1ebfn s\u1eafp t\u1edbi. H\u00e3y th\u1ea3 l\u1ecfng, t\u1ef1a l\u01b0ng v\u00e0o gh\u1ebf, b\u00e1nh donut s\u1eb5n tr\u00ean tay, c\u00f9ng ch\u00e0o \u0111\u00f3n Kang v\u00e0 Kodos v\u00e0o l\u00fac 22:00 ng\u00e0y 01/11 theo gi\u1edd Vi\u1ec7t Nam!",
+          "th": "\u0e41\u0e21\u0e49\u0e41\u0e15\u0e48\u0e1a\u0e49\u0e32\u0e19\u0e15\u0e49\u0e19\u0e44\u0e21\u0e49\u0e02\u0e2d\u0e07\u0e1a\u0e32\u0e23\u0e4c\u0e15\u0e01\u0e47\u0e44\u0e21\u0e48\u0e2a\u0e32\u0e21\u0e32\u0e23\u0e16\u0e23\u0e31\u0e1a\u0e21\u0e37\u0e2d\u0e01\u0e31\u0e1a\u0e2a\u0e34\u0e48\u0e07\u0e17\u0e35\u0e48\u0e01\u0e33\u0e25\u0e31\u0e07\u0e08\u0e30\u0e21\u0e32\u0e16\u0e36\u0e07\u0e44\u0e14\u0e49 \u0e40\u0e2d\u0e19\u0e2b\u0e25\u0e31\u0e07\u0e1a\u0e19\u0e42\u0e0b\u0e1f\u0e32 \u0e2b\u0e22\u0e34\u0e1a\u0e42\u0e14\u0e19\u0e31\u0e17 \u0e41\u0e25\u0e49\u0e27\u0e15\u0e49\u0e2d\u0e19\u0e23\u0e31\u0e1a\u0e41\u0e04\u0e07\u0e41\u0e25\u0e30\u0e42\u0e04\u0e42\u0e14\u0e2a\u0e43\u0e19\u0e27\u0e31\u0e19\u0e17\u0e35\u0e48 1 \u0e1e\u0e24\u0e28\u0e08\u0e34\u0e01\u0e32\u0e22\u0e19 \u0e40\u0e27\u0e25\u0e32 22:00 \u0e19. \u0e15\u0e32\u0e21\u0e40\u0e27\u0e25\u0e32\u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28\u0e44\u0e17\u0e22!",
+          "ja": "\u30d0\u30fc\u30c8\u306e\u30c4\u30ea\u30fc\u30cf\u30a6\u30b9\u3067\u3055\u3048\u3001\u3053\u308c\u304b\u3089\u8a2a\u308c\u308b\u3082\u306e\u306b\u592a\u5200\u6253\u3061\u3067\u304d\u306a\u3044\u300211\u67082\u65e5\u5348\u524d0\u6642(\u65e5\u672c\u6642\u9593)\u306b\u306f\u3001\u30bd\u30d5\u30a1\u3067\u304f\u3064\u308d\u304e\u306a\u304c\u3089\u3001\u30c9\u30fc\u30ca\u30c4\u3092\u7247\u624b\u306b\u3001\u30ab\u30f3\u30b0\u3068\u30b3\u30c9\u30b9\u3092\u304a\u8fce\u3048\u3057\u3088\u3046\uff01",
+          "id": "Bahkan Rumah Pohon Bart pun tidak dapat menampung sosok yang akan datang. Duduk manis di sofa, sambil makan donat, dan sambut Kang dan Kodos pada tanggal 1 Nov pukul 22:00 WIB!",
+          "pl": "Nawet domek na drzewie Barta nie pomie\u015bci tego, co nadci\u0105ga. Usi\u0105d\u017a wygodnie na kanapie, przegry\u017a p\u0105czka i przywitaj Kanga i Kodosa ju\u017c 1\u00a0listopada o godzinie 16:00 czasu polskiego.",
+          "es-419": "Ni siquiera la casa del \u00e1rbol de Bart podr\u00e1 contener lo que se avecina. \u00a1Rel\u00e1jate en el sof\u00e1, come una rosquilla y dales la bienvenida a Kang y Kodos el 1 de noviembre a las 12:00\u00a0AR y 09:00\u00a0MX!",
+          "tr": "Bart'\u0131n A\u011fa\u00e7 Evi bile seni bekleyen \u015feyleri zapt edemeyecek. 1 Kas\u0131m TS\u0130 18.00'de \u00e7\u00f6re\u011fini al, arkana yaslan ve Kang ve Kodos'u kar\u015f\u0131lamaya haz\u0131rlan!"
+        },
+        "product_tag": "Product.LimeRock",
+        "tagline": "Not even Bart\u2019s Treehouse can contain what awaits. Kick back on the couch, grab a donut, and welcome Kang and Kodos on November 1 at 11 AM ET!"
+      },
+      "version": 1,
+      "active": false,
+      "disabled": false,
+      "created": "2025-08-21T16:22:28.950Z",
+      "published": "2025-08-21T16:22:28.950Z",
+      "descriptionTags": [],
+      "moderationStatus": "Approved",
+      "lastActivatedDate": "2025-08-21T16:22:28.955Z",
+      "discoveryIntent": "PUBLIC",
+      "linkState": "LIVE"
+    },
+    {
+      "namespace": "fn",
+      "accountId": "epic",
+      "creatorName": "Epic",
       "mnemonic": "set_br_playlists",
       "linkType": "ModeSet",
       "metadata": {
