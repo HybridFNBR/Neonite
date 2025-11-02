@@ -1014,6 +1014,16 @@ module.exports = {
 				"timeDilation": 0
 			}
 		})
+	},
+
+	cosmoFdeb: async function(req, res){
+		const response = await axios.get(`https://cosmo.fdeb.live.use1a.on.epicgames.com${req.originalUrl}`, {
+            responseType: 'stream' 
+        });
+        res.set({
+            'Content-Type': response.headers["Content-Type"]
+        });
+        response.data.pipe(res);
 	}
 
 };
