@@ -175,13 +175,12 @@ module.exports = {
 		}
 		if(version >= 37.40){
 			for (const LoadoutSchema in req.body.loadouts) {
+				if (LoadoutSchema === "CosmeticLoadout:LoadoutSchema_Mimosa") continue;
 				const schema = req.body.loadouts[LoadoutSchema];
 				schema.loadoutSlots.forEach(slot => {
 					if (slot.equippedItemId) {
-						const [category, itemId] = slot.equippedItemId.split(":");
-						slot.category = category;
-						slot.itemId = itemId;
-						slot.equippedItemId = `${category}:${itemId}`;
+						const [backendType, itemId] = slot.equippedItemId.split(":");
+						slot.equippedItemId = `${backendType}:${itemId}`;
 					}
 				});
 			}
@@ -301,4 +300,44 @@ module.exports = {
 		}
 
 	},
+
+	lockerImmutableItem: async function(req, res){
+		athenaProfile = Profile.readProfile(req.params.accountId, "athena")
+		const companionUUID = req.params.companion.split(":").pop(); //has to be UUID(example:"4fa32b64-2e03-416c-9d12-05aad6c5b9d1") otherwise Fortnite does not send the request
+		const companionVarients = athenaProfile.items[companionUUID].attributes
+		for (const channel in req.body.variants) {
+			const variantTag = req.body.variants[channel].variantTag;
+			const findVarient = companionVarients["variants"].find(v => v.channel === channel);
+
+			if (findVarient) {
+				findVarient["active"] = variantTag;
+				if (!findVarient["owned"].includes(variantTag)) {
+					findVarient.owned.push(variantTag);
+				}
+			} 
+			else {
+				companionVarients["variants"].push({
+					channel,
+					active: variantTag,
+					owned: [variantTag]
+				});
+				
+			}
+			//not like we really need this check but may aswell.
+		}
+		Profile.changeItemAttribute(athenaProfile, companionUUID, "variants", companionVarients.variants);
+		Profile.bumpRvn(athenaProfile);
+		Profile.saveProfile(req.params.accountId, "athena", athenaProfile)
+		res.status(204).end()
+	},
+
+	lockerCompanionName: async function(req, res){
+		athenaProfile = Profile.readProfile(req.params.accountId, "athena")
+		const companionUUID = req.body.cosmeticItemId.split(":").pop()
+		const companionVarients = athenaProfile.items[companionUUID].attributes.variants
+		const companionName = companionVarients.find(v => v.channel === "CustomName")
+		companionName.active = req.body.companionName
+		Profile.saveProfile(req.params.accountId, "athena", athenaProfile)
+		res.status(204).end()
+	}
 }

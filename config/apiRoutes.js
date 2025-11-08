@@ -194,4 +194,14 @@ module.exports.routes = {
         controller:'LockerController', 
         skipAssets: false
     },
+    'POST /api/locker/v4/:deploymentId/account/:accountId/lock-in-immutable-item/:companion': { 
+        action: "lockerImmutableItem",
+        controller:'LockerController', 
+        skipAssets: false
+    },
+    'PATCH /api/locker/v4/:deploymentId/account/:accountId/companion-name': { 
+        action: "lockerCompanionName",
+        controller:'LockerController', 
+        skipAssets: false
+    }
 };
