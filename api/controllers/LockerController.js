@@ -305,6 +305,7 @@ module.exports = {
 		athenaProfile = Profile.readProfile(req.params.accountId, "athena")
 		const companionUUID = req.params.companion.split(":").pop(); //has to be UUID(example:"4fa32b64-2e03-416c-9d12-05aad6c5b9d1") otherwise Fortnite does not send the request
 		const companionVarients = athenaProfile.items[companionUUID].attributes
+		companionVarients["locked_in"] = true
 		for (const channel in req.body.variants) {
 			const variantTag = req.body.variants[channel].variantTag;
 			const findVarient = companionVarients["variants"].find(v => v.channel === channel);
