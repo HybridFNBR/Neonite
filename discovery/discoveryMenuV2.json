@@ -1074,6 +1074,165 @@
       "discoveryIntent": "PUBLIC"
     },
     {
+    "namespace": "fn",
+    "accountId": "epic",
+    "creatorName": "Epic",
+    "mnemonic": "set_figment_playlists",
+    "linkType": "ModeSet",
+    "metadata": {
+      "lobby_background_image_urls": {
+        "url": "https://cdn2.unrealengine.com/cdn-uploader-Figment_C1S6_Lobby-7ba3539f.png"
+      },
+      "frontend_plugin": "FigmentFrontend",
+      "pop_out_image_urls": {
+        "url": "https://cdn2.unrealengine.com/cdn-uploader-FNFigment_38-00_ButterflyEvent_Foreground_-1096x384-ebf0ac24.png"
+      },
+      "background_image_urls": {
+        "url": "https://cdn2.unrealengine.com/cdn-uploader-FNFigment_38-00_ButterflyEvent_Background_-1760x352-a3a67615.jpg"
+      },
+      "image_url": "https://cdn2.unrealengine.com/cdn-uploader-EN_FN_OG_C1S6_OG_Lineup_DiscoverPlaylistTile_-1920x1080-74a22028.jpg",
+      "genre_labels": [
+        "Battle Royale"
+      ],
+      "image_urls": {
+        "url_s": "https://cdn2.unrealengine.com/cdn-uploader-EN_FN_OG_C1S6_OG_Lineup_DiscoverPlaylistTile_-480x270-ca719e3c.jpg",
+        "url_m": "https://cdn2.unrealengine.com/cdn-uploader-EN_FN_OG_C1S6_OG_Lineup_DiscoverPlaylistTile_-640x360-68677f5d.jpg",
+        "url": "https://cdn2.unrealengine.com/cdn-uploader-EN_FN_OG_C1S6_OG_Lineup_DiscoverPlaylistTile_-1920x1080-74a22028.jpg"
+      },
+      "title": "Fortnite OG",
+      "video_vuid": "qXaZdMSokWKCZguVyg",
+      "sub_link_codes": [
+        "playlist_figmentsolo",
+        "playlist_figmentduo",
+        "playlist_figmentsquad"
+      ],
+      "alt_image_urls": {
+        "de": {
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-DE_FN_OG_C1S6_OG_Lineup_DiscoverPlaylistTile_-480x270-1198c92a.jpg",
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-DE_FN_OG_C1S6_OG_Lineup_DiscoverPlaylistTile_-640x360-9989cedc.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-DE_FN_OG_C1S6_OG_Lineup_DiscoverPlaylistTile_-1920x1080-de906667.jpg"
+        },
+        "ru": {
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-RU_FN_OG_C1S6_OG_Lineup_DiscoverPlaylistTile_-480x270-7add3673.jpg",
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-RU_FN_OG_C1S6_OG_Lineup_DiscoverPlaylistTile_-640x360-23f2f051.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-RU_FN_OG_C1S6_OG_Lineup_DiscoverPlaylistTile_-1920x1080-6dbc6a8d.jpg"
+        },
+        "ko": {
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-KR_FN_OG_C1S6_OG_Lineup_DiscoverPlaylistTile_-480x270-1c54da6a.jpg",
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-KR_FN_OG_C1S6_OG_Lineup_DiscoverPlaylistTile_-640x360-ad6a5913.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-KR_FN_OG_C1S6_OG_Lineup_DiscoverPlaylistTile_-1920x1080-749bd485.jpg"
+        },
+        "zh-hant": {
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-zhTW_FN_OG_C1S6_OG_Lineup_DiscoverPlaylistTile_-480x270-ec19174f.jpg",
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-zhTW_FN_OG_C1S6_OG_Lineup_DiscoverPlaylistTile_-640x360-0301de59.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-zhTW_FN_OG_C1S6_OG_Lineup_DiscoverPlaylistTile_-1920x1080-9f3b944b.jpg"
+        },
+        "pt-BR": {
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-PT-BR_FN_OG_C1S6_OG_Lineup_DiscoverPlaylistTile_-480x270-976ef616.jpg",
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-PT-BR_FN_OG_C1S6_OG_Lineup_DiscoverPlaylistTile_-640x360-f746a255.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-PT-BR_FN_OG_C1S6_OG_Lineup_DiscoverPlaylistTile_-1920x1080-2b17649f.jpg"
+        },
+        "zh-hans": {
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-zhCN_FN_OG_C1S6_OG_Lineup_DiscoverPlaylistTile_-480x270-78233289.jpg",
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-zhCN_FN_OG_C1S6_OG_Lineup_DiscoverPlaylistTile_-640x360-bcd9d607.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-zhCN_FN_OG_C1S6_OG_Lineup_DiscoverPlaylistTile_-1920x1080-7d9218b8.jpg"
+        },
+        "it": {
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-IT_FN_OG_C1S6_OG_Lineup_DiscoverPlaylistTile_-480x270-2bb12ecf.jpg",
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-IT_FN_OG_C1S6_OG_Lineup_DiscoverPlaylistTile_-640x360-5915328e.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-IT_FN_OG_C1S6_OG_Lineup_DiscoverPlaylistTile_-1920x1080-6c5690e8.jpg"
+        },
+        "fr": {
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FR_FN_OG_C1S6_OG_Lineup_DiscoverPlaylistTile_-480x270-584ca083.jpg",
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FR_FN_OG_C1S6_OG_Lineup_DiscoverPlaylistTile_-640x360-c3c468de.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-FR_FN_OG_C1S6_OG_Lineup_DiscoverPlaylistTile_-1920x1080-4e13dc19.jpg"
+        },
+        "es": {
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-ES-ES_FN_OG_C1S6_OG_Lineup_DiscoverPlaylistTile_-480x270-42e1930d.jpg",
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-ES-ES_FN_OG_C1S6_OG_Lineup_DiscoverPlaylistTile_-640x360-25385ba9.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-ES-ES_FN_OG_C1S6_OG_Lineup_DiscoverPlaylistTile_-1920x1080-c927bd19.jpg"
+        },
+        "ar": {
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-AR_FN_OG_C1S6_OG_Lineup_DiscoverPlaylistTile_-480x270-d0229515.jpg",
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-AR_FN_OG_C1S6_OG_Lineup_DiscoverPlaylistTile_-640x360-f65c7c10.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-AR_FN_OG_C1S6_OG_Lineup_DiscoverPlaylistTile_-1920x1080-7f7bbc74.jpg"
+        },
+        "vi": {
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-VI_FN_OG_C1S6_OG_Lineup_DiscoverPlaylistTile_-480x270-7391dab6.jpg",
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-VI_FN_OG_C1S6_OG_Lineup_DiscoverPlaylistTile_-640x360-0f0bdc00.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-VI_FN_OG_C1S6_OG_Lineup_DiscoverPlaylistTile_-1920x1080-49ea8f43.jpg"
+        },
+        "th": {
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-TH_FN_OG_C1S6_OG_Lineup_DiscoverPlaylistTile_-480x270-42212385.jpg",
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-TH_FN_OG_C1S6_OG_Lineup_DiscoverPlaylistTile_-640x360-c3fb8487.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-TH_FN_OG_C1S6_OG_Lineup_DiscoverPlaylistTile_-1920x1080-1914ab2c.jpg"
+        },
+        "ja": {
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-JP_FN_OG_C1S6_OG_Lineup_DiscoverPlaylistTile_-480x270-1e099023.jpg",
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-JP_FN_OG_C1S6_OG_Lineup_DiscoverPlaylistTile_-640x360-3de412e5.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-JP_FN_OG_C1S6_OG_Lineup_DiscoverPlaylistTile_-1920x1080-50aa9c01.jpg"
+        },
+        "id": {
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-ID_FN_OG_C1S6_OG_Lineup_DiscoverPlaylistTile_-480x270-ee0b2bdc.jpg",
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-ID_FN_OG_C1S6_OG_Lineup_DiscoverPlaylistTile_-640x360-3a264eab.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-ID_FN_OG_C1S6_OG_Lineup_DiscoverPlaylistTile_-1920x1080-6047e21a.jpg"
+        },
+        "pl": {
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-PL_FN_OG_C1S6_OG_Lineup_DiscoverPlaylistTile_-480x270-64b590a3.jpg",
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-PL_FN_OG_C1S6_OG_Lineup_DiscoverPlaylistTile_-640x360-9b344a4c.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-PL_FN_OG_C1S6_OG_Lineup_DiscoverPlaylistTile_-1920x1080-9f657d46.jpg"
+        },
+        "es-419": {
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-ES-MX_FN_OG_C1S6_OG_Lineup_DiscoverPlaylistTile_-480x270-39fc736f.jpg",
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-ES-MX_FN_OG_C1S6_OG_Lineup_DiscoverPlaylistTile_-640x360-284c334f.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-ES-MX_FN_OG_C1S6_OG_Lineup_DiscoverPlaylistTile_-1920x1080-48af218a.jpg"
+        },
+        "tr": {
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-TR_FN_OG_C1S6_OG_Lineup_DiscoverPlaylistTile_-480x270-36a38155.jpg",
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-TR_FN_OG_C1S6_OG_Lineup_DiscoverPlaylistTile_-640x360-fd93110e.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-TR_FN_OG_C1S6_OG_Lineup_DiscoverPlaylistTile_-1920x1080-10b4314c.jpg"
+        }
+      },
+      "alt_title": {
+        "de": "Fortnite: OG",
+        "ru": "Fortnite \u00ab\u041a\u0430\u043a \u0440\u0430\u043d\u044c\u0448\u0435\u00bb",
+        "ko": "\ud3ec\ud2b8\ub098\uc774\ud2b8 OG",
+        "zh-hant": "Fortnite\u300a\u61f7\u820a\u300b",
+        "pt-BR": "Fortnite: Raiz",
+        "zh-hans": "Fortnite\u6000\u65e7",
+        "it": "Fortnite OG",
+        "fr": "Fortnite OG",
+        "es": "Fortnite: Or\u00edgenes",
+        "ar": "Fortnite \u0627\u0644\u0639\u0648\u062f\u0629",
+        "vi": "Di S\u1ea3n Fortnite",
+        "th": "Fortnite OG",
+        "ja": "\u30d5\u30a9\u30fc\u30c8\u30ca\u30a4\u30c8 ORIGIN",
+        "id": "Fortnite OG",
+        "pl": "Fortnite OG",
+        "es-419": "Fortnite: Or\u00edgenes",
+        "tr": "Fortnite Mazi"
+      },
+      "alt_tagline": {},
+      "product_tag": "Product.Figment",
+      "tagline": "Relive Battle Royale from its beginnings in Chapter 1. Drop back in and explore the OG map, collect OG loot, and relive OG seasons!",
+      "web_slug": "fortnite-og",
+      "category_labels": [
+        "Battle Royale"
+      ],
+      "default_sub_link_code": "playlist_figmentsquad"
+    },
+    "version": 1,
+    "active": false,
+    "disabled": false,
+    "created": "2024-10-28T17:08:39.786Z",
+    "published": "2024-10-28T17:08:39.786Z",
+    "descriptionTags": [],
+    "moderationStatus": "Approved",
+    "lastActivatedDate": "2024-10-28T17:08:39.789Z",
+    "discoveryIntent": "PUBLIC",
+    "linkState": "LIVE"
+  },
+    {
       "namespace": "fn",
       "accountId": "epic",
       "creatorName": "Epic",

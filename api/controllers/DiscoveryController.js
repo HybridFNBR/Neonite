@@ -103,7 +103,7 @@ module.exports = {
 							"isVisible": true
 						},
 						{
-							"linkCode": "playlist_beanstalk",
+							"linkCode": "set_figment_playlists",
 							"isFavorite": false,
 							"globalCCU": 1,
 							"lockStatus": "UNLOCKED",
@@ -120,6 +120,14 @@ module.exports = {
 						},
 						{
 							"linkCode": "playlist_juno",
+							"isFavorite": false,
+							"globalCCU": 1,
+							"lockStatus": "UNLOCKED",
+							"lockStatusReason": "NONE",
+							"isVisible": true
+						},
+						{
+							"linkCode": "playlist_beanstalk",
 							"isFavorite": false,
 							"globalCCU": 1,
 							"lockStatus": "UNLOCKED",
@@ -288,6 +296,10 @@ module.exports = {
     mnemonicLinks: function(req, res){
         const {version} = getVersionInfo(req);
 		if (version >= 23.00) {
+			if(version >= 33.00){
+				const figmentIndex = discoveryv2.findIndex(i => i.mnemonic === "set_figment_playlists");
+				discoveryv2[figmentIndex].active = true;
+			}
 			switch (version) {
 				case "27.11":
 					const durianIndex = discoveryv2.findIndex(i => i.mnemonic === "playlist_durian");
