@@ -934,7 +934,7 @@ module.exports = {
             )
         }
 
-        if(version == 21.30 || version == 21.40){
+        if(version == 21.30 || version == 21.40 || version == 21.50 || version == 21.51){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "STMN_PH", // Dragon Ball Collab Preheat(21.30)
