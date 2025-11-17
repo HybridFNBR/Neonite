@@ -203,5 +203,11 @@ module.exports.routes = {
         action: "lockerCompanionName",
         controller:'LockerController', 
         skipAssets: false
-    }
+    },
+    'GET /api/content/v2/link/:linkId/cooked-content-package': 'ApiController.contentLinkPackage',
+    'GET /valkyrie/cooked-content*': {
+        controller: 'ApiController',
+        action: 'cookedContent',
+        skipAssets: false
+    },
 };

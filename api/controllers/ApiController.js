@@ -3,7 +3,7 @@ const { default: axios } = require("axios");
 const fs = require('fs')
 const jsonwebtoken = require('jsonwebtoken');
 const ini = require('ini')
-const { getVersionInfo, loadJSON, VersionFilter} = require("../../config/defs")
+const { getVersionInfo, loadJSON, VersionFilter} = require("../../config/defs");
 const config = ini.parse(fs.readFileSync(path.join(__dirname, '../../config.ini'), 'utf-8'));
 let requested = false
 const fortnitegame = loadJSON("../responses/fortnitegame.json")
@@ -1024,6 +1024,38 @@ module.exports = {
             'Content-Type': response.headers["Content-Type"]
         });
         response.data.pipe(res);
-	}
+	},
 
+	contentLinkPackage: async function(req, res){
+		/*
+		 * This endpoint requires auth on Epics server
+		 * The data in this cooked-content-package changes every update
+		 * It gets routed trough a caching server which stores this and requests new ones when needed
+		*/
+		const response = await axios.post(`https://epic-cache.neptune.cbn.lol/content/cooked-content`, {
+			linkCode: req.params.linkId,
+			role: req.query.role || "client",
+			client: req.query.platform || "windows",
+			majorVersion: parseInt(req.query.major),
+			minorVersion: parseInt(req.query.minor),
+			patch: parseInt(req.query.patch)
+		});
+
+		res.json(response.data.result);
+	},
+
+	cookedContent: async function(req, res){
+    	const fullPath = req.path.replace('/valkyrie/cooked-content/', '');
+		const userAgent = req.headers['user-agent'];
+
+		const response = await axios.get(`https://cooked-content-live-cdn.epicgames.com/valkyrie/cooked-content/${fullPath}`, {
+			headers: {
+				'User-Agent': userAgent
+			},
+			responseType: 'stream'
+		});
+
+		res.set('Content-Type', response.headers["content-type"]);
+		response.data.pipe(res);
+	},
 };
