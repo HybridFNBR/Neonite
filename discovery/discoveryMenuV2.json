@@ -3,11 +3,11 @@
     "namespace": "fn",
     "accountId": "epic",
     "creatorName": "Epic",
-    "mnemonic": "reference_byepicnocompetitive_5",
+    "mnemonic": "ref_panel_byepicfeeder_1",
     "linkType": "Reference",
     "metadata": {
-      "ref_id": "CreativeDiscoverySurface_Frontend:ByEpicNoCompetitive",
-      "ref_qty": 5,
+      "ref_id": "CreativeDiscoverySurface_Frontend:ByEpicFeeder",
+      "ref_qty": 7,
       "feature_flags": [
         "bypass_rating_check"
       ],
@@ -16,12 +16,13 @@
     "version": 1,
     "active": true,
     "disabled": false,
-    "created": "2023-11-28T19:37:59.026Z",
-    "published": "2023-11-28T19:37:59.026Z",
+    "created": "2025-05-15T18:53:08.531Z",
+    "published": "2025-05-15T18:53:08.531Z",
     "descriptionTags": [],
     "moderationStatus": "Unmoderated",
-    "lastActivatedDate": "2023-11-28T19:37:59.033Z",
-    "discoveryIntent": "PUBLIC"
+    "lastActivatedDate": "2025-05-15T18:53:08.536Z",
+    "discoveryIntent": "PUBLIC",
+    "linkState": "LIVE"
   },
   {
     "namespace": "fn",
@@ -1417,7 +1418,7 @@
       "default_sub_link_code": "playlist_figmentsquad"
     },
     "version": 1,
-    "active": false,
+    "active": true,
     "disabled": false,
     "created": "2024-10-28T17:08:39.786Z",
     "published": "2024-10-28T17:08:39.786Z",
@@ -1673,5 +1674,1377 @@
     "moderationStatus": "Approved",
     "lastActivatedDate": "2022-06-30T17:57:54.770Z",
     "discoveryIntent": "PUBLIC"
+  },
+  {
+    "namespace": "fn",
+    "accountId": "epic",
+    "creatorName": "Epic",
+    "mnemonic": "set_blastberry_playlists",
+    "linkType": "ModeSet",
+    "metadata": {
+      "lobby_background_image_urls": {
+        "url": "https://cdn2.unrealengine.com/blastberry-lobby-bg-final-notext-2560x1440-788db0478027.jpg"
+      },
+      "required_content": {
+        "verse_uris": [
+          "/Fortnite.com/GameFeatures/BRRoot",
+          "/Fortnite.com/GameFeatures/CreativeRoot"
+        ]
+      },
+      "background_image_urls": {
+        "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-30_Reload_Nitemare_Background_-1760x352-53dd9497.jpg"
+      },
+      "pop_out_image_urls": {
+        "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-30_Reload_Nitemare_Foreground_-1096x384-53b65952.png"
+      },
+      "image_url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-1920x1080-923260ae.jpg",
+      "rotation": [
+        {
+          "duration": 30,
+          "subtitle": "Venture",
+          "alt_subtitle": {
+            "de": "Wagnis",
+            "ru": "\u0422\u0440\u0438\u0443\u043c\u0444\u0430\u043d\u0442",
+            "ko": "\ubaa8\ud5d8",
+            "pt": "Aventura",
+            "zh-hant": "\u5192\u96aa",
+            "zh-hans": "\u5192\u9669",
+            "it": "Ventura",
+            "fr": "Victoire",
+            "es": "Aventura",
+            "ar": "\u0627\u0644\u0645\u063a\u0627\u0645\u0631\u0629",
+            "vi": "M\u1ea1o Hi\u1ec3m",
+            "th": "\u0e40\u0e2a\u0e35\u0e48\u0e22\u0e07\u0e20\u0e31\u0e22",
+            "ja": "\u30d9\u30f3\u30c1\u30e3\u30fc",
+            "id": "Venture",
+            "pl": "Odwa\u017cni Odkrywcy",
+            "es-419": "Aventura",
+            "tr": "G\u00fcm\u00fc\u015f"
+          },
+          "sub_image_url": "https://cdn2.unrealengine.com/fnreload-og-selection-628x512-0c59c26d6200.jpg"
+        },
+        {
+          "duration": 30,
+          "subtitle": "Slurp Rush",
+          "alt_subtitle": {
+            "de": "SCHL\u00dcRFSCHUB",
+            "ru": "\u041d\u0415\u041a\u0422\u0410\u0420\u041d\u042b\u0419 \u0428\u0422\u041e\u0420\u041c",
+            "ko": "\ud640\uc9dd \ub7ec\uc2dc",
+            "pt": "HORA DO GLUP",
+            "zh-hant": "\u5438\u6a02\u88dc\u71b1",
+            "zh-hans": "\u679c\u6c41\u72c2\u6f6e",
+            "it": "SUCCORSA",
+            "fr": "\u00ceLE DU BLEUVAGE",
+            "es": "FURIA DE SLURP",
+            "ar": "\u062a\u062f\u0641\u0642 \u0627\u0644\u0634\u0631\u0627\u0628",
+            "vi": "Lam Th\u1ec3 Tr\u00e0o D\u00e2ng",
+            "th": "\u0e2a\u0e40\u0e25\u0e34\u0e23\u0e4c\u0e1b\u0e23\u0e31\u0e0a",
+            "ja": "\u30b9\u30e9\u30fc\u30d7\u30fb\u30e9\u30c3\u30b7\u30e5",
+            "id": "Slurp Rush",
+            "pl": "SIORBOSZA\u0141",
+            "es-419": "FURIA DE SLURP",
+            "tr": "GAZOZLA TAM GAZ"
+          },
+          "sub_image_url": "https://cdn2.unrealengine.com/mkart-reload-dashberry-env-screenshots-lighting-v4-3-map-nostarterisland-628x512-007b5edb09bb.jpg",
+          "sub_link_codes": {
+            "playlist_sunflowersolo": "playlist_dashberrysolo",
+            "playlist_sunflowerduo": "playlist_dashberryduo",
+            "playlist_sunflowersquad": "playlist_dashberrysquad"
+          }
+        },
+        {
+          "duration": 30,
+          "subtitle": "Steady Storm",
+          "alt_subtitle": {
+            "de": "Oase - BEST\u00c4NDIGER STURM",
+            "ru": "\u041e\u0430\u0437\u0438\u0441 - \u041d\u0415\u0423\u041c\u041e\u041b\u0418\u041c\u0410\u042f \u0411\u0423\u0420\u042f",
+            "ko": "\uc624\uc544\uc2dc\uc2a4 - \ub2e8\uc77c \ud3ed\ud48d",
+            "pt": "Oasis - TEMPESTADE CONSTANTE",
+            "zh-hant": "\u7da0\u6d32 - \u7a69\u5b9a\u98a8\u66b4",
+            "zh-hans": "\u7eff\u6d32 - \u7a33\u5b9a\u98ce\u66b4",
+            "it": "Oasi - TEMPESTA CONTINUA",
+            "fr": "Oasis - TEMP\u00caTE CONSTANTE",
+            "es": "Oasis - TORMENTA INMUTABLE",
+            "ar": "\u0647\u0628\u0648\u0637 \u0627\u0644\u0635\u062d\u0631\u0627\u0621 - \u0627\u0644\u0639\u0627\u0635\u0641\u0629 \u0627\u0644\u0645\u0633\u062a\u0645\u0631\u0629",
+            "vi": "\u1ed0c \u0111\u1ea3o - V\u1eeeNG V\u00c0NG V\u01af\u1ee2T B\u00c3O",
+            "th": "\u0e42\u0e2d\u0e40\u0e2d\u0e0b\u0e34\u0e2a - \u0e1e\u0e32\u0e22\u0e38\u0e04\u0e07\u0e17\u0e35\u0e48",
+            "ja": "\u30aa\u30a2\u30b7\u30b9 - \u30b9\u30c6\u30c7\u30a3\u30fc\u30b9\u30c8\u30fc\u30e0",
+            "id": "Oasis - BADAI STABIL",
+            "pl": "Oaza - STABILNA BURZA",
+            "es-419": "Oasis - TORMENTA FIRME",
+            "tr": "Vaha - DENGEL\u0130 FIRTINA"
+          },
+          "sub_image_url": "https://cdn2.unrealengine.com/fnbr-38-10-modmadness-matchmakingwidget-oasis-map-628x512-628x512-b79c74a18300.jpg",
+          "sub_link_codes": {
+            "playlist_sunflowersolo": "playlist_rusticpeppersolo",
+            "playlist_sunflowerduo": "playlist_rusticpepperduo",
+            "playlist_sunflowersquad": "playlist_rusticpeppersquad"
+          }
+        }
+      ],
+      "genre_labels": [
+        "Battle Royale"
+      ],
+      "image_urls": {
+        "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-480x270-38b642e7.jpg",
+        "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-640x360-5a43d057.jpg",
+        "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-1920x1080-923260ae.jpg"
+      },
+      "title": "Reload",
+      "predownload_link_codes": [
+        "6990-4594-4017",
+        "0794-7216-8184",
+        "9725-4954-0946"
+      ],
+      "sub_link_codes": [
+        "playlist_sunflowersolo",
+        "playlist_sunflowerduo",
+        "playlist_sunflowersquad"
+      ],
+      "activated_public_date": "2025-07-23T00:00:00.000Z",
+      "alt_image_urls": {
+        "de": {
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-480x270-f29af0c3.jpg",
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-640x360-cb7f04d0.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-1920x1080-0bfa4217.jpg"
+        },
+        "ru": {
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-480x270-72d07695.jpg",
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-640x360-70a7f915.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-1920x1080-481e285c.jpg"
+        },
+        "ko": {
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-480x270-d900f2a8.jpg",
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-640x360-e45732f6.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-1920x1080-47d351b7.jpg"
+        },
+        "zh-hant": {
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-480x270-4b234311.jpg",
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-640x360-c64785f8.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-1920x1080-464a1c81.jpg"
+        },
+        "pt-BR": {
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-480x270-740ad8d6.jpg",
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-640x360-3f3afd27.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-1920x1080-c04f6ef7.jpg"
+        },
+        "zh-hans": {
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-480x270-3f4ec671.jpg",
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-640x360-d30f061c.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-1920x1080-6a3c51cf.jpg"
+        },
+        "it": {
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-480x270-6a7bc6a8.jpg",
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-640x360-1785a29e.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-1920x1080-1a7aeb37.jpg"
+        },
+        "fr": {
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-480x270-18ed7650.jpg",
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-640x360-ff551e4a.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-1920x1080-3ae4a2dc.jpg"
+        },
+        "es": {
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-480x270-7ac243b2.jpg",
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-640x360-7bd003b2.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-1920x1080-2e50f411.jpg"
+        },
+        "ar": {
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-480x270-4192129d.jpg",
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-640x360-96ad42db.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-1920x1080-d5065cd1.jpg"
+        },
+        "vi": {
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-480x270-99795eed.jpg",
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-640x360-ebf88700.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-1920x1080-fdbb24a6.jpg"
+        },
+        "th": {
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-480x270-f913ce04.jpg",
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-640x360-13e6d655.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-1920x1080-202c7bc4.jpg"
+        },
+        "ja": {
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-480x270-e473e668.jpg",
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-640x360-0a590c3d.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-1920x1080-54d3fcd9.jpg"
+        },
+        "id": {
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-480x270-5450e63b.jpg",
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-640x360-79e7cb80.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-1920x1080-3700dcda.jpg"
+        },
+        "pl": {
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-480x270-5c9c141c.jpg",
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-640x360-02cb8ccf.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-1920x1080-939ce5ae.jpg"
+        },
+        "es-419": {
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-480x270-5a14d7bd.jpg",
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-640x360-be082d65.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-1920x1080-7117d0ae.jpg"
+        },
+        "tr": {
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-480x270-58b3468f.jpg",
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-640x360-c8143495.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-1920x1080-24a36681.jpg"
+        }
+      },
+      "alt_title": {
+        "de": "Reload",
+        "ru": "\u041f\u0435\u0440\u0435\u0437\u0430\u0440\u044f\u0434\u043a\u0430",
+        "ko": "\ub9ac\ub85c\ub4dc",
+        "zh-hant": "\u706b\u529b\u5168\u958b",
+        "pt-BR": "Reload",
+        "zh-hans": "\u706b\u529b\u5168\u5f00",
+        "it": "Rientro",
+        "fr": "Recharge",
+        "es": "Recarga",
+        "ar": "\u0627\u0644\u0625\u0639\u0627\u062f\u0629",
+        "vi": "T\u00e1i Chi\u1ebfn Th\u1ea7n T\u1ed1c",
+        "th": "\u0e23\u0e35\u0e42\u0e2b\u0e25\u0e14",
+        "ja": "\u30ea\u30ed\u30fc\u30c9",
+        "id": "Reload",
+        "pl": "Reaktywacja",
+        "es-419": "Fortnite: Recarga",
+        "tr": "Yeniden"
+      },
+      "block_cascading_data": "true",
+      "alt_tagline": {
+        "de": "Fortnite Reload ist ein temporeiches Battle Royale-Spiel mit 40 Spielern, bei dem es darum geht, das Team zum Sieg zu f\u00fchren.  Erhalte einen Neustart, solange noch ein Teammitglied im Spiel aktiv ist!  Sammle Beute nach dem Neustart, um wieder kampfbereit zu sein!  Eliminiere Gegner, um den Neustart deiner Teammitglieder zu beschleunigen!  Zum Ende des Matches hin gibt es keine Neustarts mehr. Trommle dein Team zusammen und holt euch den epischen Sieg!",
+        "ru": "\u00ab\u041f\u0435\u0440\u0435\u0437\u0430\u0440\u044f\u0434\u043a\u0430\u00bb\u00a0\u2014 \u0434\u0438\u043d\u0430\u043c\u0438\u0447\u043d\u044b\u0439 \u0431\u043e\u0439 \u0432 \u0440\u0435\u0436\u0438\u043c\u0435 \u00ab\u041a\u043e\u0440\u043e\u043b\u0435\u0432\u0441\u043a\u043e\u0439 \u0431\u0438\u0442\u0432\u044b\u00bb \u0441 \u0443\u0447\u0430\u0441\u0442\u0438\u0435\u043c 40\u00a0\u0438\u0433\u0440\u043e\u043a\u043e\u0432, \u0441\u0442\u0440\u0435\u043c\u044f\u0449\u0438\u0445\u0441\u044f \u043f\u0440\u0438\u0432\u0435\u0441\u0442\u0438 \u0441\u0432\u043e\u0439 \u043e\u0442\u0440\u044f\u0434 \u043a \u043f\u043e\u0431\u0435\u0434\u0435.  \u0412\u044b \u043c\u043e\u0436\u0435\u0442\u0435 \u0432\u043e\u0437\u0440\u043e\u0436\u0434\u0430\u0442\u044c\u0441\u044f, \u043f\u043e\u043a\u0430 \u0436\u0438\u0432 \u0445\u043e\u0442\u044f \u0431\u044b \u043e\u0434\u0438\u043d \u0441\u043e\u044e\u0437\u043d\u0438\u043a! \u0418\u0449\u0438\u0442\u0435 \u0434\u043e\u0431\u044b\u0447\u0443 \u043f\u043e\u0441\u043b\u0435 \u0432\u043e\u0437\u0440\u043e\u0436\u0434\u0435\u043d\u0438\u044f, \u0447\u0442\u043e\u0431\u044b \u0432\u0435\u0440\u043d\u0443\u0442\u044c\u0441\u044f \u0432 \u0441\u0442\u0440\u043e\u0439! \u0423\u0441\u0442\u0440\u0430\u043d\u044f\u0439\u0442\u0435 \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u043e\u0432, \u0447\u0442\u043e\u0431\u044b \u0431\u044b\u0441\u0442\u0440\u0435\u0435 \u0432\u043e\u0437\u0440\u043e\u0436\u0434\u0430\u0442\u044c \u0441\u043e\u044e\u0437\u043d\u0438\u043a\u043e\u0432!  \u0412\u043e\u0437\u0440\u043e\u0436\u0434\u0435\u043d\u0438\u044f \u043f\u0440\u0435\u043a\u0440\u0430\u0449\u0430\u044e\u0442\u0441\u044f \u043d\u0435\u0437\u0430\u0434\u043e\u043b\u0433\u043e \u0434\u043e \u043a\u043e\u043d\u0446\u0430 \u043c\u0430\u0442\u0447\u0430. \u041f\u043e\u043c\u043e\u0433\u0430\u0439\u0442\u0435 \u0442\u043e\u0432\u0430\u0440\u0438\u0449\u0430\u043c \u043f\u043e \u043e\u0442\u0440\u044f\u0434\u0443 \u043e\u0434\u0435\u0440\u0436\u0430\u0442\u044c \u043a\u043e\u0440\u043e\u043b\u0435\u0432\u0441\u043a\u0443\u044e \u043f\u043e\u0431\u0435\u0434\u0443!",
+        "ko": "\ud3ec\ud2b8\ub098\uc774\ud2b8 \ub9ac\ub85c\ub4dc\ub294 40\uba85\uc758 \ud50c\ub808\uc774\uc5b4\uac00 \ucc38\uc5ec\ud558\ub294 \ube60\ub978 \ud15c\ud3ec\uc758 \ubc30\ud2c0\ub85c\uc584 \uac8c\uc784\uc785\ub2c8\ub2e4. \ubaa9\ud45c\ub294 \ub2e8 \ud558\ub098, \ud300\uc744 \uc2b9\ub9ac\ub85c \uc774\ub044\ub294 \uac83\uc785\ub2c8\ub2e4.  \ub2e8 \ud55c \uba85\uc758 \ud300\uc6d0\uc774\ub77c\ub3c4 \uc0b4\uc544\ub0a8\uc558\ub2e4\uba74 \ub9ac\ubd80\ud2b8\ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4!  \ub9ac\ubd80\ud2b8 \ud6c4 \uc804\ub9ac\ud488\uc744 \ucc59\uaca8 \ub2e4\uc2dc \uc2f8\uc6b8 \ud0dc\uc138\ub97c \uac16\ucd94\uc138\uc694!  \ub2e4\ub978 \ud50c\ub808\uc774\uc5b4\ub97c \ucc98\uce58\ud558\uba74 \ud300\uc6d0\uc744 \ub354 \ube60\ub974\uac8c \ub9ac\ubd80\ud2b8\uc2dc\ud0ac \uc218 \uc788\uc2b5\ub2c8\ub2e4!  \ub9e4\uce58 \ub9c9\ubc14\uc9c0\uc5d0 \uc811\uc5b4\ub4e4\uba74 \ub9ac\ubd80\ud2b8\uac00 \uc911\ub2e8\ub429\ub2c8\ub2e4. \uc2a4\ucffc\ub4dc\uc640 \ud568\uaed8 \ube45\ud1a0\ub9ac \ub85c\uc584\uc744 \uc7c1\ucde8\ud558\uc138\uc694!",
+        "zh-hant": "Fortnite\u300a\u706b\u529b\u5168\u958b\u300b\u662f\u4e00\u6b3e 40 \u540d\u73a9\u5bb6\u53c3\u8207\u7684\u5feb\u7bc0\u594f\u300a\u5927\u9003\u6bba\u300b\u904a\u6232\uff0c\u76ee\u6a19\u662f\u5e36\u9818\u5c0f\u968a\u9081\u5411\u52dd\u5229\u3002 \u53ea\u8981\u6709\u968a\u53cb\u4ecd\u5728\u6230\u9b25\uff0c\u5c31\u53ef\u4ee5\u91cd\u555f\uff01 \u91cd\u555f\u5f8c\uff0c\u591a\u591a\u641c\u522e\uff0c\u8b93\u81ea\u5df1\u6062\u5fa9\u6230\u9b25\u72c0\u614b\uff01 \u6dd8\u6c70\u5c0d\u624b\u53ef\u4ee5\u8b93\u968a\u53cb\u66f4\u5feb\u91cd\u555f\uff01 \u5c0d\u6230\u63a5\u8fd1\u7d50\u675f\u6642\uff0c\u91cd\u555f\u5c07\u505c\u6b62\u3002\u8207\u5c0f\u968a\u7dca\u5bc6\u914d\u5408\uff0c\u722d\u53d6\u8f1d\u714c\u52dd\u5229\uff01",
+        "pt-BR": "Fortnite Reload \u00e9 uma experi\u00eancia fren\u00e9tica de Battle Royale para 40 pessoas em que o objetivo \u00e9 levar seu esquadr\u00e3o rumo \u00e0 vit\u00f3ria.  Ressurja se ao menos uma pessoa da sua equipe ainda estiver no p\u00e1reo!  Saqueie ap\u00f3s ressurgir para voltar com tudo!  Elimine oponentes para reinicializar colegas de equipe mais r\u00e1pido!  A reinicializa\u00e7\u00e3o ser\u00e1 desabilitada quando a partida estiver perto do fim. Sobreviva com seu esquadr\u00e3o para garantir a Vit\u00f3ria Royale!",
+        "zh-hans": "\u201cFortnite\u706b\u529b\u5168\u5f00\u201d\u662f\u4e00\u4e2a\u96c6\u7ed340\u540d\u73a9\u5bb6\u7684\u5feb\u8282\u594f\u5927\u9003\u6740\u6e38\u620f\u3002\u4f60\u7684\u76ee\u6807\u662f\u5e26\u9886\u961f\u4f0d\u8d70\u5411\u80dc\u5229\u3002 \u53ea\u8981\u8fd8\u6709\u4e00\u540d\u961f\u53cb\u5b58\u6d3b\uff0c\u5c31\u53ef\u4ee5\u65e0\u9650\u91cd\u751f\uff01 \u91cd\u751f\u540e\u8fdb\u884c\u641c\u522e\uff0c\u5feb\u901f\u6062\u590d\u5230\u6218\u6597\u72b6\u6001\uff01 \u6dd8\u6c70\u5bf9\u624b\u6765\u4f7f\u961f\u53cb\u66f4\u5feb\u91cd\u751f\uff01 \u6bd4\u8d5b\u4e34\u8fd1\u7ed3\u675f\u65f6\u5c06\u65e0\u6cd5\u91cd\u751f\u3002\u4e0e\u5c0f\u961f\u7d27\u5bc6\u534f\u4f5c\uff0c\u4e89\u53d6\u5927\u83b7\u5168\u80dc\uff01",
+        "it": "Fortnite Rientro \u00e8 un adrenalinico gioco di Battaglia reale per 40 giocatori. Porta la tua squadra alla vittoria!  Finch\u00e9 hai almeno un compagno ancora in azione, potrai riavviarti!  Dopo il riavvio, accumula bottino per tornare in condizione di combattere!  Elimina avversari per riavviare pi\u00f9 velocemente i compagni di squadra!  Verso la fine della partita non sar\u00e0 pi\u00f9 possibile riavviarsi. Rimani saldamente in squadra per assicurarti la Vittoria reale!",
+        "fr": "Recharge est un mode Battle Royale \u00e0 40\u00a0joueurs au rythme soutenu, dans lequel vous devez porter votre \u00e9quipe jusqu'\u00e0 la victoire.  Tant qu'un \u00e9quipier est encore en vie, vous pouvez revenir dans la partie\u00a0! \u00c0 votre retour, r\u00e9cup\u00e9rez du butin pour repartir au combat\u00a0! \u00c9liminez des adversaires pour r\u00e9tablir vos \u00e9quipiers plus rapidement\u00a0!  En fin de partie, les r\u00e9tablissements s'arr\u00eatent. Votre section doit tout donner pour d\u00e9crocher la Victoire royale\u00a0!",
+        "es": "Recarga es un trepidante modo de juego de Battle Royale para 40 jugadores centrado \u00fanicamente en lograr la victoria junto a tu escuadr\u00f3n.  \u00a1Podr\u00e1s reaparecer siempre que alg\u00fan miembro de tu equipo siga en pie!  \u00a1Acumula bot\u00edn tras reiniciarte y vuelve r\u00e1pidamente a la batalla!  \u00a1Elimina oponentes para reiniciar m\u00e1s r\u00e1pido a tus compa\u00f1eros!  Los reinicios se desactivar\u00e1n cuando se acerque el final de la partida. \u00a1Resiste junto a tu escuadr\u00f3n para lograr la victoria magistral!",
+        "ar": "Fortnite \u0627\u0644\u0625\u0639\u0627\u062f\u0629 \u0647\u064a \u0645\u0648\u0627\u062c\u0647\u0629 \u0628\u0627\u062a\u0644 \u0631\u0648\u064a\u0627\u0644 \u0633\u0631\u064a\u0639\u0629 \u0627\u0644\u0648\u062a\u064a\u0631\u0629 \u0645\u0643\u0648\u0646\u0629 \u0645\u0646 40 \u0644\u0627\u0639\u0628\u064b\u0627 \u0648\u062a\u062a\u0645\u062d\u0648\u0631 \u062d\u0648\u0644 \u0642\u064a\u0627\u062f\u0629 \u0627\u0644\u0641\u0631\u064a\u0642 \u0646\u062d\u0648 \u0627\u0644\u0646\u0635\u0631. \u064a\u0645\u0643\u0646\u0643 \u0627\u0644\u0639\u0648\u062f\u0629 \u0645\u0627 \u062f\u0627\u0645 \u0647\u0646\u0627\u0643 \u0632\u0645\u064a\u0644 \u0641\u0631\u064a\u0642 \u0641\u064a \u0627\u0644\u0642\u062a\u0627\u0644! \u062a\u0632\u0648\u0651\u062f \u0628\u0627\u0644\u063a\u0646\u0627\u0626\u0645 \u0628\u0639\u062f \u0627\u0644\u0639\u0648\u062f\u0629 \u0644\u062a\u0643\u0648\u0646 \u0645\u0633\u062a\u0639\u062f\u064b\u0627 \u0644\u0644\u0642\u062a\u0627\u0644 \u0645\u062c\u062f\u062f\u064b\u0627! \u0627\u0642\u0636\u0650 \u0639\u0644\u0649 \u0627\u0644\u062e\u0635\u0648\u0645 \u0644\u062a\u064f\u0639\u064a\u062f \u0632\u0645\u0644\u0627\u0621 \u0627\u0644\u0641\u0631\u064a\u0642 \u0628\u0634\u0643\u0644 \u0623\u0633\u0631\u0639! \u0633\u062a\u062a\u0648\u0642\u0641 \u0627\u0644\u0625\u0639\u0627\u062f\u0627\u062a \u0645\u0639 \u0627\u0642\u062a\u0631\u0627\u0628 \u0646\u0647\u0627\u064a\u0629 \u0627\u0644\u0645\u0648\u0627\u062c\u0647\u0629. \u0627\u0635\u0645\u062f \u0645\u0639 \u0641\u0631\u064a\u0642\u0643 \u0644\u062a\u062d\u0642\u0642\u0648\u0627 \u0627\u0644\u0627\u0646\u062a\u0635\u0627\u0631 \u0627\u0644\u0645\u0644\u0643\u064a!",
+        "vi": "Fortnite T\u00e1i Chi\u1ebfn Th\u1ea7n T\u1ed1c l\u00e0 m\u1ed9t Cu\u1ed9c Chi\u1ebfn Sinh T\u1ed3n t\u1ed1c \u0111\u1ed9 cao cho 40 ng\u01b0\u1eddi ch\u01a1i, n\u01a1i b\u1ea1n ph\u1ea3i d\u1eabn d\u1eaft c\u1ea3 bi\u1ec7t \u0111\u1ed9i \u0111\u1ebfn \u0111\u01b0\u1ee3c Chi\u1ebfn Th\u1eafng.  B\u1ea1n c\u00f3 th\u1ec3 t\u00e1i sinh mi\u1ec5n l\u00e0 c\u00f2n m\u1ed9t \u0111\u1ed3ng \u0111\u1ed9i ch\u01b0a b\u1ecb h\u1ea1!  L\u00ean \u0111\u1ed3 sau khi t\u00e1i sinh \u0111\u1ec3 tr\u1edf l\u1ea1i tr\u1ea1ng th\u00e1i chi\u1ebfn \u0111\u1ea5u t\u1ed1t nh\u1ea5t!  H\u1ea1 g\u1ee5c nhi\u1ec1u \u0111\u1ed1i th\u1ee7 \u0111\u1ec3 gi\u00fap \u0111\u1ed3ng \u0111\u1ed9i t\u00e1i sinh nhanh h\u01a1n!  Khi g\u1ea7n k\u1ebft th\u00fac tr\u1eadn \u0111\u1ea5u, ch\u1ebf \u0111\u1ed9 t\u00e1i sinh s\u1ebd d\u1eebng. H\u1ee3p l\u1ef1c c\u00f9ng bi\u1ec7t \u0111\u1ed9i c\u1ee7a b\u1ea1n \u0111\u1ec3 gi\u00e0nh l\u1ea5y H\u00e0o Quang Chi\u1ebfn Th\u1eafng ngay!",
+        "th": "Fortnite Reload \u0e40\u0e1b\u0e47\u0e19\u0e40\u0e01\u0e21\u0e41\u0e1a\u0e17\u0e40\u0e17\u0e34\u0e25\u0e23\u0e2d\u0e22\u0e31\u0e25\u0e08\u0e31\u0e07\u0e2b\u0e27\u0e30\u0e23\u0e27\u0e14\u0e40\u0e23\u0e47\u0e27\u0e14\u0e38\u0e40\u0e14\u0e37\u0e2d\u0e14 \u0e42\u0e14\u0e22\u0e1c\u0e39\u0e49\u0e40\u0e25\u0e48\u0e19 40 \u0e04\u0e19\u0e15\u0e49\u0e2d\u0e07\u0e1e\u0e32\u0e17\u0e35\u0e21\u0e44\u0e1b\u0e2a\u0e39\u0e48\u0e0a\u0e31\u0e22\u0e0a\u0e19\u0e30 \u0e1b\u0e25\u0e38\u0e01\u0e0a\u0e35\u0e1e\u0e44\u0e14\u0e49\u0e40\u0e2a\u0e21\u0e2d\u0e2b\u0e32\u0e01\u0e22\u0e31\u0e07\u0e21\u0e35\u0e2a\u0e21\u0e32\u0e0a\u0e34\u0e01\u0e17\u0e35\u0e21\u0e40\u0e2b\u0e25\u0e37\u0e2d\u0e23\u0e2d\u0e14\u0e2d\u0e22\u0e39\u0e48! \u0e40\u0e01\u0e47\u0e1a\u0e44\u0e2d\u0e40\u0e17\u0e21\u0e40\u0e1e\u0e34\u0e48\u0e21\u0e40\u0e15\u0e34\u0e21\u0e2b\u0e25\u0e31\u0e07\u0e16\u0e39\u0e01\u0e1b\u0e25\u0e38\u0e01\u0e0a\u0e35\u0e1e\u0e40\u0e1e\u0e37\u0e48\u0e2d\u0e43\u0e2b\u0e49\u0e1e\u0e23\u0e49\u0e2d\u0e21\u0e25\u0e38\u0e22\u0e15\u0e48\u0e2d! \u0e01\u0e33\u0e08\u0e31\u0e14\u0e28\u0e31\u0e15\u0e23\u0e39\u0e43\u0e2b\u0e49\u0e44\u0e14\u0e49 \u0e41\u0e25\u0e49\u0e27\u0e08\u0e30\u0e1b\u0e25\u0e38\u0e01\u0e0a\u0e35\u0e1e\u0e40\u0e1e\u0e37\u0e48\u0e2d\u0e19\u0e23\u0e48\u0e27\u0e21\u0e17\u0e35\u0e21\u0e44\u0e14\u0e49\u0e40\u0e23\u0e47\u0e27\u0e02\u0e36\u0e49\u0e19! \u0e44\u0e21\u0e48\u0e2a\u0e32\u0e21\u0e32\u0e23\u0e16\u0e1b\u0e25\u0e38\u0e01\u0e0a\u0e35\u0e1e\u0e44\u0e14\u0e49\u0e2d\u0e35\u0e01\u0e15\u0e48\u0e2d\u0e44\u0e1b\u0e40\u0e21\u0e37\u0e48\u0e2d\u0e43\u0e01\u0e25\u0e49\u0e08\u0e1a\u0e41\u0e21\u0e15\u0e0a\u0e4c  \u0e23\u0e27\u0e21\u0e17\u0e35\u0e21\u0e43\u0e2b\u0e49\u0e1e\u0e23\u0e49\u0e2d\u0e21 \u0e41\u0e25\u0e49\u0e27\u0e04\u0e27\u0e49\u0e32\u0e27\u0e34\u0e01\u0e15\u0e2d\u0e23\u0e35\u0e48\u0e23\u0e2d\u0e22\u0e31\u0e25\u0e21\u0e32\u0e04\u0e23\u0e2d\u0e07\u0e43\u0e2b\u0e49\u0e44\u0e14\u0e49!",
+        "ja": "\u300c\u30d5\u30a9\u30fc\u30c8\u30ca\u30a4\u30c8 \u30ea\u30ed\u30fc\u30c9\u300d\u306f40\u4eba\u306e\u30d7\u30ec\u30a4\u30e4\u30fc\u5bfe\u5fdc\u306e\u30d0\u30c8\u30eb\u30ed\u30a4\u30e4\u30eb\u30b2\u30fc\u30e0\u3002\u30b9\u30af\u30ef\u30c3\u30c9\u3092\u52dd\u5229\u3078\u5c0e\u304f\u3053\u3068\u306b\u7126\u70b9\u304c\u5f53\u3066\u3089\u308c\u3066\u3044\u308b\u305e\u3002  \u30c1\u30fc\u30e0\u30e1\u30a4\u30c8\u304c1\u4eba\u3067\u3082\u751f\u304d\u6b8b\u3063\u3066\u3044\u308b\u9650\u308a\u3001\u30ea\u30d6\u30fc\u30c8\u3067\u304d\u308b\uff01 \u30ea\u30d6\u30fc\u30c8\u5f8c\u306f\u6226\u5229\u54c1\u3092\u96c6\u3081\u3066\u6226\u95d8\u614b\u52e2\u3092\u6574\u3048\u3088\u3046\uff01 \u6575\u3092\u6483\u7834\u3059\u308c\u3070\u30c1\u30fc\u30e0\u30e1\u30a4\u30c8\u306e\u30ea\u30d6\u30fc\u30c8\u3092\u30b9\u30d4\u30fc\u30c9\u30a2\u30c3\u30d7\u3067\u304d\u308b\uff01  \u30de\u30c3\u30c1\u306e\u7d42\u76e4\u3067\u306f\u30ea\u30d6\u30fc\u30c8\u3067\u304d\u306a\u304f\u306a\u308b\u3002\u30b9\u30af\u30ef\u30c3\u30c9\u5168\u54e1\u3067\u3057\u3063\u304b\u308a\u96c6\u4e2d\u3057\u3066Victory Royale\u3092\u9054\u6210\u3057\u3088\u3046\uff01",
+        "id": "Fortnite Reload adalah game Battle Royale bertempo cepat dengan 40 pemain yang bertujuan membawa skuad menuju Kemenangan.  Reboot bisa dilakukan selama masih ada satu rekan tim yang bertahan!  Ambil semua jarahan setelah di-reboot agar siap tempur kembali!  Singkirkan lawan untuk mempercepat reboot rekan timmu!  Menjelang akhir pertandingan, reboot akan berhenti. Berjuanglah bersama skuadmu untuk meraih Victory Royale!",
+        "pl": "Fortnite: Reaktywacja to dynamiczna 40-osobowa gra Battle Royale, w kt\u00f3rej wiedziesz dru\u017cyn\u0119 do zwyci\u0119stwa.  Restartuj si\u0119, je\u015bli przy \u017cyciu pozostaje cho\u0107by jeden towarzysz!  Gromad\u017a \u0142upy po restarcie, by odzyska\u0107 form\u0119 bojow\u0105!  Likwiduj przeciwnik\u00f3w, by szybciej restartowa\u0107 towarzyszy!  Pod koniec meczu restarty przestaj\u0105 dzia\u0142a\u0107. Zgraj si\u0119 z oddzia\u0142em, by zdoby\u0107 Kr\u00f3lewskie Zwyci\u0119stwo!",
+        "es-419": "Fortnite: Recarga es un modo vertiginoso de Batalla campal para 40 jugadores donde lo \u00fanico que importa es llevar al escuadr\u00f3n a la victoria.  \u00a1Siempre que quede un miembro del equipo en pie, podr\u00e1s reiniciarte!  \u00a1Abast\u00e9cete tras reiniciarte y prep\u00e1rate para la batalla!  \u00a1Elimina oponentes para reiniciar a tus compa\u00f1eros m\u00e1s r\u00e1pido!  Cerca del final de la partida, se detendr\u00e1n los reinicios. \u00a1Mantegan la concentraci\u00f3n y aseguren su victoria campal!",
+        "tr": "Fortnite Yeniden, 40 oyunculu h\u0131zl\u0131 tempolu bir Battle Royale oyunudur ve amac\u0131 ekibi zafere ta\u015f\u0131makt\u0131r.  Tek bir tak\u0131m arkada\u015f\u0131n ayakta oldu\u011fu s\u00fcrece canlanabilirsin!  Canland\u0131ktan sonra sava\u015fabilecek duruma gelmek i\u00e7in ganimet topla!  Tak\u0131m arkada\u015flar\u0131n\u0131 daha h\u0131zl\u0131 canland\u0131rmak i\u00e7in rakip avla!  Ma\u00e7\u0131n sonlar\u0131na do\u011fru canland\u0131rmalar sonlan\u0131r. Azmin Zaferi'ni kazanmak i\u00e7in ekibinle hedefe odaklan!"
+      },
+      "product_tag": "Product.BlastBerry.Build",
+      "ccu_source_links": [
+        "playlist_sunflowersolo",
+        "playlist_sunflowerduo",
+        "playlist_sunflowersquad",
+        "playlist_dashberrysolo",
+        "playlist_dashberryduo",
+        "playlist_dashberrysquad",
+        "playlist_rusticpeppersolo",
+        "playlist_rusticpepperduo",
+        "playlist_rusticpeppersquad"
+      ],
+      "tagline": "Fortnite Reload is a 40-player fast-paced Battle Royale game that is all about carrying the squad to Victory.   \r\nReboot as long as one teammate is still in the action!  \r\nLoot up after rebooting to get back into fighting shape!  \r\nEliminate opponents to reboot teammates faster! \r\nNear the end of the match, reboots will stop. Lock in with your squad to secure the Victory Royale!  ",
+      "web_slug": "reload",
+      "category_labels": [
+        "Battle Royale"
+      ],
+      "default_sub_link_code": "playlist_sunflowersquad"
+    },
+    "version": 1,
+    "active": true,
+    "disabled": false,
+    "created": "2024-06-10T23:21:00.260Z",
+    "published": "2024-06-10T23:21:00.260Z",
+    "descriptionTags": [],
+    "moderationStatus": "Approved",
+    "lastActivatedDate": "2024-06-10T23:21:00.263Z",
+    "discoveryIntent": "PUBLIC",
+    "linkState": "LIVE"
+  },
+  {
+    "namespace": "fn",
+    "accountId": "epic",
+    "creatorName": "Epic",
+    "mnemonic": "playlist_sunflowersolo",
+    "linkType": "BR:Playlist",
+    "metadata": {
+      "alt_title": {
+        "de": "Solo",
+        "ru": "\u041e\u0434\u0438\u043d\u043e\u0447\u043a\u0438",
+        "ko": "\uc194\ub85c",
+        "zh-hant": "\u55ae\u4eba",
+        "pt-BR": "Solo",
+        "zh-hans": "\u5355\u4eba",
+        "it": "Singolo",
+        "fr": "Solo",
+        "es": "En solitario",
+        "ar": "\u0641\u0631\u062f\u064a",
+        "vi": "\u0110\u01a1n",
+        "th": "\u0e42\u0e0b\u0e42\u0e25\u0e48",
+        "ja": "\u30bd\u30ed",
+        "id": "Solo",
+        "pl": "Solo",
+        "es-419": "En solitario",
+        "tr": "Tekli"
+      },
+      "favorite_override": "set_blastberry_playlists",
+      "parent_set": "set_blastberry_playlists",
+      "play_history_override": "set_blastberry_playlists",
+      "image_url": "https://cdn2.unrealengine.com/solosize-1920-1920x1080-741c5c77900f.jpg",
+      "product_tag": "Product.BlastBerry.Build",
+      "dynamicXp": {
+        "uniqueGameVersion": 1,
+        "calibrationPhase": "DataAnalysis"
+      },
+      "image_urls": {
+        "url_s": "https://cdn2.unrealengine.com/solosize-480-480x270-bd71a8aecb8f.jpg",
+        "url_xs": "https://cdn2.unrealengine.com/solosize-256-256x144-9e4ba5075e53.jpg",
+        "url_m": "https://cdn2.unrealengine.com/solosize-640-640x360-0062a2e4e8b4.jpg",
+        "url": "https://cdn2.unrealengine.com/solosize-1920-1920x1080-741c5c77900f.jpg"
+      },
+      "title": "Solo",
+      "matchmaking": {
+        "override_playlist": "playlist_sunflowersolo"
+      }
+    },
+    "version": 1,
+    "active": true,
+    "disabled": false,
+    "created": "2024-08-13T18:55:39.361Z",
+    "published": "2024-08-13T18:55:39.361Z",
+    "descriptionTags": [],
+    "moderationStatus": "Unmoderated",
+    "lastActivatedDate": "2024-08-13T18:55:39.365Z",
+    "discoveryIntent": "PUBLIC",
+    "linkState": "LIVE"
+  },
+  {
+    "namespace": "fn",
+    "accountId": "epic",
+    "creatorName": "Epic",
+    "mnemonic": "playlist_sunflowerduo",
+    "linkType": "BR:Playlist",
+    "metadata": {
+      "alt_title": {
+        "de": "Duo",
+        "ru": "\u041f\u0430\u0440\u043d\u044b\u0435 \u0441\u0440\u0430\u0436\u0435\u043d\u0438\u044f",
+        "ko": "\ub4c0\uc624",
+        "zh-hant": "\u96d9\u4eba",
+        "pt-BR": "Dupla",
+        "zh-hans": "\u53cc\u4eba",
+        "it": "Coppie",
+        "fr": "Duo",
+        "es": "D\u00fao",
+        "ar": "\u0627\u0644\u0648\u0636\u0639 \u0627\u0644\u062b\u0646\u0627\u0626\u064a",
+        "vi": "2v2",
+        "th": "\u0e14\u0e39\u0e42\u0e2d\u0e49",
+        "ja": "\u30c7\u30e5\u30aa",
+        "id": "Duo",
+        "pl": "Pary",
+        "es-419": "En d\u00fao",
+        "tr": "\u00c7iftli"
+      },
+      "parent_set": "set_blastberry_playlists",
+      "favorite_override": "set_blastberry_playlists",
+      "play_history_override": "set_blastberry_playlists",
+      "image_url": "https://cdn2.unrealengine.com/duossize-1920-1920x1080-284f117a184a.jpg",
+      "product_tag": "Product.BlastBerry.Build",
+      "image_urls": {
+        "url_s": "https://cdn2.unrealengine.com/duossize-480-480x270-f7ab641d8d9c.jpg",
+        "url_xs": "https://cdn2.unrealengine.com/duossize-256-256x144-6291155853c9.jpg",
+        "url_m": "https://cdn2.unrealengine.com/duossize-640-640x360-9cd7be7aba4c.jpg",
+        "url": "https://cdn2.unrealengine.com/duossize-1920-1920x1080-284f117a184a.jpg"
+      },
+      "dynamicXp": {
+        "uniqueGameVersion": 1,
+        "calibrationPhase": "DataAnalysis"
+      },
+      "title": "Duo",
+      "matchmaking": {
+        "override_playlist": "playlist_sunflowerduo"
+      }
+    },
+    "version": 1,
+    "active": true,
+    "disabled": false,
+    "created": "2024-08-13T18:55:38.671Z",
+    "published": "2024-08-13T18:55:38.671Z",
+    "descriptionTags": [],
+    "moderationStatus": "Unmoderated",
+    "lastActivatedDate": "2024-08-13T18:55:38.675Z",
+    "discoveryIntent": "PUBLIC",
+    "linkState": "LIVE"
+  },
+  {
+    "namespace": "fn",
+    "accountId": "epic",
+    "creatorName": "Epic",
+    "mnemonic": "playlist_sunflowersquad",
+    "linkType": "BR:Playlist",
+    "metadata": {
+      "alt_title": {
+        "de": "Team",
+        "ru": "\u0411\u043e\u0438 \u043e\u0442\u0440\u044f\u0434\u043e\u0432",
+        "ko": "\uc2a4\ucffc\ub4dc",
+        "zh-hant": "\u5c0f\u968a",
+        "pt-BR": "Esquadr\u00f5es",
+        "zh-hans": "\u5c0f\u961f",
+        "it": "Squadre",
+        "fr": "Sections",
+        "es": "Escuadrones",
+        "ar": "\u0641\u0650\u0631\u0642",
+        "vi": "Bi\u1ec7t \u0110\u1ed9i",
+        "th": "\u0e17\u0e35\u0e21",
+        "ja": "\u30b9\u30af\u30ef\u30c3\u30c9",
+        "id": "Skuad",
+        "pl": "Oddzia\u0142y",
+        "es-419": "En escuadr\u00f3n",
+        "tr": "Ekipli"
+      },
+      "parent_set": "set_blastberry_playlists",
+      "favorite_override": "set_blastberry_playlists",
+      "play_history_override": "set_blastberry_playlists",
+      "image_url": "https://cdn2.unrealengine.com/squadssize-1920-1920x1080-4da9e2186875.jpg",
+      "product_tag": "Product.BlastBerry.Build",
+      "image_urls": {
+        "url_s": "https://cdn2.unrealengine.com/squadssize-480-480x270-823c15f5f2f5.jpg",
+        "url_xs": "https://cdn2.unrealengine.com/squadssize-256-256x144-8dc31a6baffa.jpg",
+        "url_m": "https://cdn2.unrealengine.com/squadssize-640-640x360-696ba89c81db.jpg",
+        "url": "https://cdn2.unrealengine.com/squadssize-1920-1920x1080-4da9e2186875.jpg"
+      },
+      "dynamicXp": {
+        "uniqueGameVersion": 1,
+        "calibrationPhase": "DataAnalysis"
+      },
+      "title": "Squad",
+      "matchmaking": {
+        "override_playlist": "playlist_sunflowersquad"
+      }
+    },
+    "version": 1,
+    "active": true,
+    "disabled": false,
+    "created": "2024-08-13T18:55:38.612Z",
+    "published": "2024-08-13T18:55:38.612Z",
+    "descriptionTags": [],
+    "moderationStatus": "Unmoderated",
+    "lastActivatedDate": "2024-08-13T18:55:38.617Z",
+    "discoveryIntent": "PUBLIC",
+    "linkState": "LIVE"
+  },
+  {
+    "namespace": "fn",
+    "accountId": "epic",
+    "creatorName": "Epic",
+    "mnemonic": "playlist_dashberrysolo",
+    "linkType": "BR:Playlist",
+    "metadata": {
+      "matchmakingV2": {
+        "allowSquadFillOption": true,
+        "allowJoinInProgress": false,
+        "crossplayRequired": false,
+        "maxPlayers": 40,
+        "ratingType": "blastberry_build",
+        "maxSocialPartySize": 1,
+        "isRanked": false,
+        "maxTeamCount": 40,
+        "allowPrivateMatches": false,
+        "maxTeamSize": 1
+      },
+      "alt_title": {
+        "de": "Solo",
+        "ru": "\u0412 \u043e\u0434\u0438\u043d\u043e\u0447\u043a\u0443",
+        "ko": "\uc194\ub85c",
+        "pt-BR": "Solo",
+        "zh-hans": "\u5355\u4eba",
+        "en": "Solo",
+        "it": "Singolo",
+        "fr": "Solo",
+        "zh-CN": "",
+        "es": "En solitario",
+        "es-MX": "En solitario",
+        "zh": "",
+        "ar": "\u0641\u0631\u062f\u064a",
+        "zh-Hant": "",
+        "ja": "\u30bd\u30ed",
+        "pl": "Solo",
+        "es-419": "En solitario",
+        "tr": "Tekli"
+      },
+      "favorite_override": "set_blastberry_playlists",
+      "parent_set": "set_blastberry_playlists",
+      "play_history_override": "set_blastberry_playlists",
+      "block_cascading_data": "true",
+      "image_url": "https://cdn2.unrealengine.com/solosize-1920-1920x1080-741c5c77900f.jpg",
+      "product_tag": "Product.BlastBerry.Build",
+      "image_urls": {
+        "url_s": "https://cdn2.unrealengine.com/solosize-480-480x270-bd71a8aecb8f.jpg",
+        "url_xs": "https://cdn2.unrealengine.com/solosize-256-256x144-9e4ba5075e53.jpg",
+        "url_m": "https://cdn2.unrealengine.com/solosize-640-640x360-0062a2e4e8b4.jpg",
+        "url": "https://cdn2.unrealengine.com/solosize-1920-1920x1080-741c5c77900f.jpg"
+      },
+      "title": "Solo",
+      "matchmaking": {
+        "override_playlist": "playlist_dashberrysolo"
+      }
+    },
+    "version": 1,
+    "active": true,
+    "disabled": false,
+    "created": "2024-11-26T21:36:01.690Z",
+    "published": "2024-11-26T21:36:01.690Z",
+    "descriptionTags": [],
+    "moderationStatus": "Unmoderated",
+    "lastActivatedDate": "2024-11-26T21:36:01.695Z",
+    "discoveryIntent": "PUBLIC",
+    "linkState": "LIVE"
+  },
+  {
+    "namespace": "fn",
+    "accountId": "epic",
+    "creatorName": "Epic",
+    "mnemonic": "playlist_dashberryduo",
+    "linkType": "BR:Playlist",
+    "metadata": {
+      "matchmakingV2": {
+        "allowSquadFillOption": true,
+        "allowJoinInProgress": false,
+        "crossplayRequired": false,
+        "maxPlayers": 40,
+        "ratingType": "blastberry_build",
+        "maxSocialPartySize": 2,
+        "isRanked": false,
+        "maxTeamCount": 40,
+        "allowPrivateMatches": false,
+        "maxTeamSize": 2
+      },
+      "alt_title": {
+        "de": "Duo",
+        "ru": "\u041f\u0430\u0440\u043d\u044b\u0435 \u0441\u0440\u0430\u0436\u0435\u043d\u0438\u044f",
+        "ko": "\ub4c0\uc624",
+        "pt-BR": "Duplas",
+        "zh-hans": "\u53cc\u4eba",
+        "en": "Duo",
+        "it": "Coppie",
+        "fr": "Duos",
+        "zh-CN": "",
+        "es": "D\u00faos",
+        "es-MX": "En d\u00fao",
+        "zh": "",
+        "ar": "\u062b\u0646\u0627\u0626\u064a",
+        "zh-Hant": "",
+        "ja": "\u30c7\u30e5\u30aa",
+        "pl": "Pary",
+        "es-419": "En d\u00fao",
+        "tr": "\u00c7iftli"
+      },
+      "favorite_override": "set_blastberry_playlists",
+      "parent_set": "set_blastberry_playlists",
+      "play_history_override": "set_blastberry_playlists",
+      "block_cascading_data": "true",
+      "image_url": "https://cdn2.unrealengine.com/duossize-1920-1920x1080-284f117a184a.jpg",
+      "product_tag": "Product.BlastBerry.Build",
+      "image_urls": {
+        "url_s": "https://cdn2.unrealengine.com/duossize-480-480x270-f7ab641d8d9c.jpg",
+        "url_xs": "https://cdn2.unrealengine.com/duossize-256-256x144-6291155853c9.jpg",
+        "url_m": "https://cdn2.unrealengine.com/duossize-640-640x360-9cd7be7aba4c.jpg",
+        "url": "https://cdn2.unrealengine.com/duossize-1920-1920x1080-284f117a184a.jpg"
+      },
+      "title": "Duo",
+      "matchmaking": {
+        "override_playlist": "playlist_dashberryduo"
+      }
+    },
+    "version": 1,
+    "active": true,
+    "disabled": false,
+    "created": "2024-11-26T21:36:01.180Z",
+    "published": "2024-11-26T21:36:01.180Z",
+    "descriptionTags": [],
+    "moderationStatus": "Unmoderated",
+    "lastActivatedDate": "2024-11-26T21:36:01.185Z",
+    "discoveryIntent": "PUBLIC",
+    "linkState": "LIVE"
+  },
+  {
+    "namespace": "fn",
+    "accountId": "epic",
+    "creatorName": "Epic",
+    "mnemonic": "playlist_dashberrysquad",
+    "linkType": "BR:Playlist",
+    "metadata": {
+      "matchmakingV2": {
+        "allowSquadFillOption": true,
+        "allowJoinInProgress": false,
+        "crossplayRequired": false,
+        "maxPlayers": 40,
+        "ratingType": "blastberry_build",
+        "maxSocialPartySize": 4,
+        "isRanked": false,
+        "maxTeamCount": 40,
+        "allowPrivateMatches": false,
+        "maxTeamSize": 4
+      },
+      "alt_title": {
+        "de": "Team",
+        "ru": "\u0411\u043e\u0438 \u043e\u0442\u0440\u044f\u0434\u043e\u0432",
+        "ko": "\uc2a4\ucffc\ub4dc",
+        "pt-BR": "Esquadr\u00f5es",
+        "zh-hans": "\u5c0f\u961f",
+        "en": "Squad",
+        "it": "Squadre",
+        "fr": "Sections",
+        "zh-CN": "",
+        "es": "Escuadrones",
+        "es-MX": "En escuadr\u00f3n",
+        "zh": "",
+        "ar": "\u0641\u0650\u0631\u0642",
+        "zh-Hant": "",
+        "ja": "\u30b9\u30af\u30ef\u30c3\u30c9",
+        "pl": "Oddzia\u0142y",
+        "es-419": "En escuadr\u00f3n",
+        "tr": "Ekipli"
+      },
+      "parent_set": "set_blastberry_playlists",
+      "favorite_override": "set_blastberry_playlists",
+      "play_history_override": "set_blastberry_playlists",
+      "block_cascading_data": "true",
+      "image_url": "https://cdn2.unrealengine.com/squadssize-1920-1920x1080-4da9e2186875.jpg",
+      "product_tag": "Product.BlastBerry.Build",
+      "image_urls": {
+        "url_s": "https://cdn2.unrealengine.com/squadssize-480-480x270-823c15f5f2f5.jpg",
+        "url_xs": "https://cdn2.unrealengine.com/squadssize-256-256x144-8dc31a6baffa.jpg",
+        "url_m": "https://cdn2.unrealengine.com/squadssize-640-640x360-696ba89c81db.jpg",
+        "url": "https://cdn2.unrealengine.com/squadssize-1920-1920x1080-4da9e2186875.jpg"
+      },
+      "title": "Squad",
+      "matchmaking": {
+        "override_playlist": "playlist_dashberrysquad"
+      }
+    },
+    "version": 1,
+    "active": true,
+    "disabled": false,
+    "created": "2024-11-26T21:36:01.346Z",
+    "published": "2024-11-26T21:36:01.346Z",
+    "descriptionTags": [],
+    "moderationStatus": "Unmoderated",
+    "lastActivatedDate": "2024-11-26T21:36:01.350Z",
+    "discoveryIntent": "PUBLIC",
+    "linkState": "LIVE"
+  },
+  {
+    "namespace": "fn",
+    "accountId": "epic",
+    "creatorName": "Epic",
+    "mnemonic": "playlist_rusticpeppersolo",
+    "linkType": "BR:Playlist",
+    "metadata": {
+      "matchmakingV2": {
+        "allowSquadFillOption": true,
+        "allowJoinInProgress": false,
+        "crossplayRequired": true,
+        "maxPlayers": 40,
+        "ratingType": "blastberry_build",
+        "maxSocialPartySize": 1,
+        "isRanked": false,
+        "maxTeamCount": 40,
+        "allowPrivateMatches": false,
+        "maxTeamSize": 1
+      },
+      "alt_title": {
+        "de": "Solo",
+        "ru": "\u0412 \u043e\u0434\u0438\u043d\u043e\u0447\u043a\u0443",
+        "ko": "\uc194\ub85c",
+        "pt-BR": "Solo",
+        "zh-hans": "\u5355\u4eba",
+        "en": "Solo",
+        "it": "Singolo",
+        "fr": "Solo",
+        "zh-CN": "",
+        "es": "En solitario",
+        "es-MX": "En solitario",
+        "zh": "",
+        "ar": "\u0641\u0631\u062f\u064a",
+        "zh-Hant": "",
+        "ja": "\u30bd\u30ed",
+        "pl": "Solo",
+        "es-419": "En solitario",
+        "tr": "Tekli"
+      },
+      "favorite_override": "set_blastberry_playlists",
+      "parent_set": "set_blastberry_playlists",
+      "play_history_override": "set_blastberry_playlists",
+      "block_cascading_data": "true",
+      "image_url": "https://cdn2.unrealengine.com/solosize-1920-1920x1080-741c5c77900f.jpg",
+      "product_tag": "Product.BlastBerry.Build",
+      "image_urls": {
+        "url_s": "https://cdn2.unrealengine.com/solosize-480-480x270-bd71a8aecb8f.jpg",
+        "url_xs": "https://cdn2.unrealengine.com/solosize-256-256x144-9e4ba5075e53.jpg",
+        "url_m": "https://cdn2.unrealengine.com/solosize-640-640x360-0062a2e4e8b4.jpg",
+        "url": "https://cdn2.unrealengine.com/solosize-1920-1920x1080-741c5c77900f.jpg"
+      },
+      "title": "Solo",
+      "matchmaking": {
+        "override_playlist": "playlist_rusticpeppersolo"
+      }
+    },
+    "version": 1,
+    "active": true,
+    "disabled": false,
+    "created": "2025-10-17T18:59:15.589Z",
+    "published": "2025-10-17T18:59:15.589Z",
+    "descriptionTags": [],
+    "moderationStatus": "Unmoderated",
+    "lastActivatedDate": "2025-10-17T18:59:15.594Z",
+    "discoveryIntent": "PUBLIC",
+    "linkState": "LIVE"
+  },
+  {
+    "namespace": "fn",
+    "accountId": "epic",
+    "creatorName": "Epic",
+    "mnemonic": "playlist_rusticpepperduo",
+    "linkType": "BR:Playlist",
+    "metadata": {
+      "matchmakingV2": {
+        "allowSquadFillOption": true,
+        "allowJoinInProgress": false,
+        "crossplayRequired": true,
+        "maxPlayers": 40,
+        "ratingType": "blastberry_build",
+        "maxSocialPartySize": 2,
+        "isRanked": false,
+        "maxTeamCount": 40,
+        "allowPrivateMatches": false,
+        "maxTeamSize": 2
+      },
+      "alt_title": {
+        "de": "Duo",
+        "ru": "\u041f\u0430\u0440\u043d\u044b\u0435 \u0441\u0440\u0430\u0436\u0435\u043d\u0438\u044f",
+        "ko": "\ub4c0\uc624",
+        "pt-BR": "Duplas",
+        "zh-hans": "\u53cc\u4eba",
+        "en": "Duo",
+        "it": "Coppie",
+        "fr": "Duos",
+        "zh-CN": "",
+        "es": "D\u00faos",
+        "es-MX": "En d\u00fao",
+        "zh": "",
+        "ar": "\u062b\u0646\u0627\u0626\u064a",
+        "zh-Hant": "",
+        "ja": "\u30c7\u30e5\u30aa",
+        "pl": "Pary",
+        "es-419": "En d\u00fao",
+        "tr": "\u00c7iftli"
+      },
+      "favorite_override": "set_blastberry_playlists",
+      "parent_set": "set_blastberry_playlists",
+      "play_history_override": "set_blastberry_playlists",
+      "block_cascading_data": "true",
+      "image_url": "https://cdn2.unrealengine.com/duossize-1920-1920x1080-284f117a184a.jpg",
+      "product_tag": "Product.BlastBerry.Build",
+      "image_urls": {
+        "url_s": "https://cdn2.unrealengine.com/duossize-480-480x270-f7ab641d8d9c.jpg",
+        "url_xs": "https://cdn2.unrealengine.com/duossize-256-256x144-6291155853c9.jpg",
+        "url_m": "https://cdn2.unrealengine.com/duossize-640-640x360-9cd7be7aba4c.jpg",
+        "url": "https://cdn2.unrealengine.com/duossize-1920-1920x1080-284f117a184a.jpg"
+      },
+      "title": "Duo",
+      "matchmaking": {
+        "override_playlist": "playlist_rusticpepperduo"
+      }
+    },
+    "version": 1,
+    "active": true,
+    "disabled": false,
+    "created": "2025-10-17T18:59:15.012Z",
+    "published": "2025-10-17T18:59:15.012Z",
+    "descriptionTags": [],
+    "moderationStatus": "Unmoderated",
+    "lastActivatedDate": "2025-10-17T18:59:15.015Z",
+    "discoveryIntent": "PUBLIC",
+    "linkState": "LIVE"
+  },
+  {
+    "namespace": "fn",
+    "accountId": "epic",
+    "creatorName": "Epic",
+    "mnemonic": "playlist_rusticpeppersquad",
+    "linkType": "BR:Playlist",
+    "metadata": {
+      "matchmakingV2": {
+        "allowSquadFillOption": true,
+        "allowJoinInProgress": false,
+        "crossplayRequired": true,
+        "maxPlayers": 40,
+        "ratingType": "blastberry_build",
+        "maxSocialPartySize": 4,
+        "isRanked": false,
+        "maxTeamCount": 40,
+        "allowPrivateMatches": false,
+        "maxTeamSize": 4
+      },
+      "alt_title": {
+        "de": "Team",
+        "ru": "\u0411\u043e\u0438 \u043e\u0442\u0440\u044f\u0434\u043e\u0432",
+        "ko": "\uc2a4\ucffc\ub4dc",
+        "pt-BR": "Esquadr\u00f5es",
+        "zh-hans": "\u5c0f\u961f",
+        "en": "Squad",
+        "it": "Squadre",
+        "fr": "Sections",
+        "zh-CN": "",
+        "es": "Escuadrones",
+        "es-MX": "En escuadr\u00f3n",
+        "zh": "",
+        "ar": "\u0641\u0650\u0631\u0642",
+        "zh-Hant": "",
+        "ja": "\u30b9\u30af\u30ef\u30c3\u30c9",
+        "pl": "Oddzia\u0142y",
+        "es-419": "En escuadr\u00f3n",
+        "tr": "Ekipli"
+      },
+      "favorite_override": "set_blastberry_playlists",
+      "parent_set": "set_blastberry_playlists",
+      "play_history_override": "set_blastberry_playlists",
+      "block_cascading_data": "true",
+      "image_url": "https://cdn2.unrealengine.com/squadssize-1920-1920x1080-4da9e2186875.jpg",
+      "product_tag": "Product.BlastBerry.Build",
+      "image_urls": {
+        "url_s": "https://cdn2.unrealengine.com/squadssize-480-480x270-823c15f5f2f5.jpg",
+        "url_xs": "https://cdn2.unrealengine.com/squadssize-256-256x144-8dc31a6baffa.jpg",
+        "url_m": "https://cdn2.unrealengine.com/squadssize-640-640x360-696ba89c81db.jpg",
+        "url": "https://cdn2.unrealengine.com/squadssize-1920-1920x1080-4da9e2186875.jpg"
+      },
+      "title": "Squad",
+      "matchmaking": {
+        "override_playlist": "playlist_rusticpeppersquad"
+      }
+    },
+    "version": 1,
+    "active": true,
+    "disabled": false,
+    "created": "2025-10-17T18:59:15.869Z",
+    "published": "2025-10-17T18:59:15.869Z",
+    "descriptionTags": [],
+    "moderationStatus": "Unmoderated",
+    "lastActivatedDate": "2025-10-17T18:59:15.873Z",
+    "discoveryIntent": "PUBLIC",
+    "linkState": "LIVE"
+  },
+  {
+    "namespace": "fn",
+    "accountId": "epic",
+    "creatorName": "Epic",
+    "mnemonic": "set_forbiddenfruit_nobuild_playlists",
+    "linkType": "ModeSet",
+    "metadata": {
+      "lobby_background_image_urls": {
+        "url": "https://cdn2.unrealengine.com/cdn-uploader-blitz_lobbybackground_2-9c8748aa.jpg"
+      },
+      "frontend_plugin": "ForbiddenFruitFrontEnd",
+      "pop_out_image_urls": {
+        "url": "https://cdn2.unrealengine.com/a-spot-foreground-1096x384-1096x384-a7b0e979ddb6.png"
+      },
+      "background_image_urls": {
+        "url": "https://cdn2.unrealengine.com/a-spot-background-1760x352-1760x352-2efae69b1d77.jpg"
+      },
+      "image_url": "https://cdn2.unrealengine.com/cdn-uploader-FNECO_38-10_BlitzRoyale_MortalKombat_BR_DiscoverPlaylistTile_-1920x1080-9e66de0f.jpg",
+      "rotation": [
+        {
+          "duration": 0,
+          "subtitle": "",
+          "alt_subtitle": {},
+          "sub_image_url": "https://cdn2.unrealengine.com/cdn-uploader-FNECO_38-10_BlitzRoyale_MortalKombat_MatchmakingWidget_-628x512-507d2a4e.jpg"
+        }
+      ],
+      "genre_labels": [
+        "Team Deathmatch"
+      ],
+      "image_urls": {
+        "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNECO_38-10_BlitzRoyale_MortalKombat_BR_DiscoverPlaylistTile_-480x270-a145065a.jpg",
+        "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNECO_38-10_BlitzRoyale_MortalKombat_BR_DiscoverPlaylistTile_-640x360-6f30cd03.jpg",
+        "url": "https://cdn2.unrealengine.com/cdn-uploader-FNECO_38-10_BlitzRoyale_MortalKombat_BR_DiscoverPlaylistTile_-1920x1080-9e66de0f.jpg"
+      },
+      "title": "Blitz Royale",
+      "predownload_link_codes": [
+        "0689-7630-5479"
+      ],
+      "sub_link_codes": [
+        "playlist_forbiddenfruitnobuildbrsolo",
+        "playlist_forbiddenfruitnobuildbrduo",
+        "playlist_forbiddenfruitnobuildbrsquad"
+      ],
+      "alt_title": {
+        "de": "Blitz Royale",
+        "ru": "Blitz Royale",
+        "ko": "\ube14\ub9ac\uce20 \ub85c\uc584",
+        "zh-hant": "Blitz Royale",
+        "pt-BR": "Blitz Royale",
+        "zh-hans": "Blitz Royale",
+        "it": "Blitz Royale",
+        "fr": "Blitz Royale",
+        "es": "Blitz Royale",
+        "ar": "Blitz Royale",
+        "vi": "Blitz Royale",
+        "th": "Blitz Royale",
+        "ja": "Blitz Royale",
+        "id": "Blitz Royale",
+        "pl": "Blitz Royale",
+        "es-419": "Blitz Royale",
+        "tr": "Blitz Royale"
+      },
+      "block_cascading_data": "true",
+      "alt_tagline": {
+        "de": "32 Spieler. Kleine Karte. Schnelle Matches. Null Bauen. Sammle Eliminierungen und \u00fcberlebe Sturmphasen, um dein Blitzlevel zu steigern und dadurch starke Gegenst\u00e4nde zu erhalten!",
+        "ru": "32 \u0438\u0433\u0440\u043e\u043a\u0430. \u041d\u0435\u0431\u043e\u043b\u044c\u0448\u0430\u044f \u043a\u0430\u0440\u0442\u0430. \u0411\u044b\u0441\u0442\u0440\u044b\u0435 \u043c\u0430\u0442\u0447\u0438. \u0411\u0435\u0437 \u0441\u0442\u0440\u043e\u0438\u0442\u0435\u043b\u044c\u0441\u0442\u0432\u0430. \u0423\u0441\u0442\u0440\u0430\u043d\u044f\u0439\u0442\u0435 \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u043e\u0432 \u0438 \u0432\u044b\u0436\u0438\u0432\u0430\u0439\u0442\u0435 \u0432 \u043a\u0440\u0443\u0433\u0430\u0445 \u0411\u0443\u0440\u0438, \u0447\u0442\u043e\u0431\u044b \u043f\u043e\u0432\u044b\u0441\u0438\u0442\u044c \u0443\u0440\u043e\u0432\u0435\u043d\u044c \u0434\u043e\u0431\u043b\u0435\u0441\u0442\u0438 \u0438 \u043f\u043e\u043b\u0443\u0447\u0438\u0442\u044c \u043f\u043e\u043b\u0435\u0437\u043d\u0443\u044e \u0434\u043e\u0431\u044b\u0447\u0443!",
+        "ko": "32\uba85\uc758 \ud50c\ub808\uc774\uc5b4. \uc18c\uaddc\ubaa8 \ub9f5. \ube60\ub974\uac8c \uc9c4\ud589\ub418\ub294 \uac8c\uc784. \ube4c\ub4dc \uc81c\ub85c. \uacc4\uc18d \ucc98\uce58\ub97c \uae30\ub85d\ud558\uace0 \ud3ed\ud48d \uc6d0\uc5d0\uc11c \uc0b4\uc544\ub0a8\uc73c\uba74 \ube14\ub9ac\uce20 \ub808\ubca8\uc774 \uc0c1\uc2b9\ud569\ub2c8\ub2e4. \ub808\ubca8\uc744 \uc62c\ub9ac\uba74 \uac15\ub825\ud55c \uc804\ub9ac\ud488\uc744 \ud68d\ub4dd\ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4!",
+        "zh-hant": "32 \u540d\u73a9\u5bb6\u3002\u5c0f\u578b\u5730\u5716\u3002\u5feb\u7bc0\u594f\u904a\u6232\u3002\u96f6\u5efa\u9020\u3002- \u6dd8\u6c70\u6575\u4eba\u4e26\u5728\u98a8\u66b4\u5708\u4e2d\u5b58\u6d3b\uff0c\u4ee5\u63d0\u5347\u4f60\u7684 Blitz \u7b49\u7d1a\u3002\u7b49\u7d1a\u8d8a\u9ad8\uff0c\u7372\u5f97\u7684\u6230\u5229\u54c1\u8d8a\u5f37\u5927\uff01",
+        "pt-BR": "32 Participantes. Mapa Pequeno. Jogos R\u00e1pidos. Troca\u00e7\u00e3o. Acumule elimina\u00e7\u00f5es e sobreviva a c\u00edrculos da tempestade para aumentar seu N\u00edvel Blitz, que concede saques poderosos conforme voc\u00ea sobe de n\u00edvel!",
+        "zh-hans": "32\u540d\u73a9\u5bb6\u3002\u5c0f\u578b\u5730\u56fe\u3002\u6781\u901f\u5bf9\u5c40\u3002\u96f6\u5efa\u9020\u3002\u7d2f\u79ef\u6dd8\u6c70\u6570\u5e76\u5728\u98ce\u66b4\u5708\u4e2d\u5b58\u6d3b\u4e0b\u6765\uff0c\u4ee5\u63d0\u5347\u95ea\u7535\u7b49\u7ea7\u3002\u7b49\u7ea7\u8d8a\u9ad8\uff0c\u6218\u5229\u54c1\u8d8a\u5f3a\uff01",
+        "it": "32 giocatori. Una mappa piccola. Partite veloci. Zero costruzioni. Accumula eliminazioni e sopravvivi ai cerchi della Tempesta per aumentare il tuo livello Blitz, che ti conferisce incredibili bottini man mano che sali di livello!",
+        "fr": "32 joueurs. Une petite carte. Des parties rapides. Z\u00e9ro construction. Accumulez les \u00e9liminations et survivez \u00e0 des cercles de temp\u00eate pour augmenter votre niveau de Blitz et ainsi obtenir de puissants objets !",
+        "es": "32 jugadores. Un mapa peque\u00f1o. Partidas r\u00e1pidas. Cero construcci\u00f3n. Acumula eliminaciones y sobrevive a los c\u00edrculos de la tormenta para aumentar tu nivel de Blitz, que te proporcionar\u00e1 un bot\u00edn incre\u00edble cuando subas de nivel.",
+        "ar": "32 \u0644\u0627\u0639\u0628\u064b\u0627. \u062e\u0631\u064a\u0637\u0629 \u0635\u063a\u064a\u0631\u0629. \u0645\u0648\u0627\u062c\u0647\u0627\u062a \u0633\u0631\u064a\u0639\u0629 \u0627\u0644\u0648\u062a\u064a\u0631\u0629. \u0648\u0636\u0639 \u0628\u0644\u0627 \u0628\u0646\u0627\u0621. \u0646\u0641\u0651\u0630 \u0639\u0645\u0644\u064a\u0627\u062a \u062a\u0635\u0641\u064a\u0629 \u0643\u062b\u064a\u0631\u0629 \u0648\u0627\u0646\u062c\u064f \u0645\u0646 \u062f\u0648\u0627\u0626\u0631 \u0627\u0644\u0639\u0627\u0635\u0641\u0629 \u0644\u0632\u064a\u0627\u062f\u0629 \u0645\u0633\u062a\u0648\u0649 Blitz \u0627\u0644\u062e\u0627\u0635 \u0628\u0643\u060c \u0644\u062a\u062d\u0635\u0644 \u0639\u0644\u0649 \u0639\u0646\u0627\u0626\u0645 \u0642\u0648\u064a\u0629 \u0643\u0644\u0645\u0627 \u0627\u0631\u062a\u0641\u0639!",
+        "vi": "32 Ng\u01b0\u1eddi Ch\u01a1i. B\u1ea3n \u0110\u1ed3 Nh\u1ecf. Nh\u1ecbp Ch\u01a1i Nhanh. \u0110\u1ecd S\u00fang Thu\u1ea7n Ch\u1ea5t. H\u00e3y h\u1ea1 g\u1ee5c th\u1eadt nhi\u1ec1u \u0111\u1ed1i th\u1ee7 v\u00e0 s\u1ed1ng s\u00f3t qua c\u00e1c v\u00e0nh \u0111ai b\u00e3o \u0111\u1ec3 t\u0103ng C\u1ea5p Blitz c\u1ee7a b\u1ea1n, t\u1eeb \u0111\u00f3 nh\u1eadn \u0111\u01b0\u1ee3c nhi\u1ec1u chi\u1ebfn l\u1ee3i ph\u1ea9m quy\u1ec1n n\u0103ng khi l\u00ean c\u1ea5p!",
+        "th": "\u0e1c\u0e39\u0e49\u0e40\u0e25\u0e48\u0e19 32 \u0e04\u0e19 \u0e41\u0e1c\u0e19\u0e17\u0e35\u0e48\u0e40\u0e25\u0e47\u0e01 \u0e40\u0e01\u0e21\u0e40\u0e23\u0e47\u0e27 \u0e0b\u0e35\u0e42\u0e23\u0e48\u0e1a\u0e34\u0e25\u0e14\u0e4c \u0e2a\u0e30\u0e2a\u0e21\u0e22\u0e2d\u0e14\u0e01\u0e32\u0e23\u0e01\u0e33\u0e08\u0e31\u0e14\u0e41\u0e25\u0e30\u0e40\u0e2d\u0e32\u0e0a\u0e35\u0e27\u0e34\u0e15\u0e23\u0e2d\u0e14\u0e08\u0e32\u0e01\u0e27\u0e07\u0e1e\u0e32\u0e22\u0e38\u0e40\u0e1e\u0e37\u0e48\u0e2d\u0e40\u0e1e\u0e34\u0e48\u0e21\u0e40\u0e25\u0e40\u0e27\u0e25\u0e1a\u0e25\u0e34\u0e17\u0e0b\u0e4c \u0e1c\u0e39\u0e49\u0e40\u0e25\u0e48\u0e19\u0e08\u0e30\u0e44\u0e14\u0e49\u0e23\u0e31\u0e1a\u0e02\u0e2d\u0e07\u0e25\u0e39\u0e17\u0e17\u0e35\u0e48\u0e17\u0e23\u0e07\u0e1e\u0e25\u0e31\u0e07\u0e2b\u0e25\u0e31\u0e07\u0e2d\u0e31\u0e1b\u0e40\u0e25\u0e40\u0e27\u0e25\u0e2a\u0e33\u0e40\u0e23\u0e47\u0e08!",
+        "ja": "32\u4eba\u306e\u30d7\u30ec\u30a4\u30e4\u30fc\u3002\u5c0f\u578b\u306e\u30de\u30c3\u30d7\u3002\u77ed\u671f\u6c7a\u6226\u3002\u30bc\u30ed\u30d3\u30eb\u30c9\u3002\u6483\u7834\u6570\u3092\u7a4d\u307f\u4e0a\u3052\u3001\u30b9\u30c8\u30fc\u30e0\u30d5\u30a7\u30fc\u30ba\u3092\u751f\u304d\u5ef6\u3073\u3066\u3001Blitz\u30ec\u30d9\u30eb\u3092\u4e0a\u3052\u3088\u3046\u3002\u30ec\u30d9\u30eb\u304c\u4e0a\u304c\u308b\u3068\u5f37\u529b\u306a\u6226\u5229\u54c1\u304c\u624b\u306b\u5165\u308b\uff01",
+        "id": "32 Pemain. Peta Kecil. Game Cepat. Zero Build. Perbanyak eliminasi dan bertahanlah di lingkaran badai untuk meningkatkan Level Blitz, yang akan memberikan jarahan luar biasa seiring kenaikan levelmu!",
+        "pl": "32\u00a0graczy. Ma\u0142a mapa. Szybkie gry. Zero Budowania. Zbieraj likwidacje i prze\u017cyj kr\u0119gi burzy, by zwi\u0119kszy\u0107 poziom B\u0142yskawicy, kt\u00f3ry po awansie zapewnia pot\u0119\u017cne \u0142upy!",
+        "es-419": "32 jugadores. Un mapa peque\u00f1o. Partidas r\u00e1pidas. Cero construcci\u00f3n. Obt\u00e9n eliminaciones y sobrevive a c\u00edrculos de la tormenta para aumentar tu nivel de Blitz, que te otorga un poderoso bot\u00edn a medida que subes de nivel.",
+        "tr": "32 Oyuncu. K\u00fc\u00e7\u00fck Harita. H\u0131zl\u0131 Oyunlar. S\u0131f\u0131r \u0130n\u015fa. Blitz Seviyesi'ni artt\u0131rmak i\u00e7in avlama yap ve f\u0131rt\u0131na \u00e7emberi atlat. Seviye atlad\u0131k\u00e7a g\u00fc\u00e7l\u00fc ganimetler al\u0131rs\u0131n!"
+      },
+      "product_tag": "Product.ForbiddenFruit.NoBuild",
+      "ccu_source_links": [
+        "playlist_forbiddenfruitnobuildbrsolo",
+        "playlist_forbiddenfruitnobuildbrduopc",
+        "playlist_forbiddenfruitnobuildbrduo",
+        "playlist_forbiddenfruitnobuildbrsquad",
+        "playlist_forbiddenfruitnobuildbrstack",
+        "playlist_forbiddenfruitnobuildbrstackpc"
+      ],
+      "cohort_variants": [
+        {
+          "image_urls": {
+            "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNECO_37-50_BR14_BrutalBulwark_Screenshot_DiscoverPlaylistTile_-480x270-baa084b5.jpg",
+            "url_l": "https://cdn2.unrealengine.com/cdn-uploader-FNECO_37-50_BR14_BrutalBulwark_Screenshot_DiscoverPlaylistTile_-1920x1080-43a8099c.jpg",
+            "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNECO_37-50_BR14_BrutalBulwark_Screenshot_DiscoverPlaylistTile_-640x360-c5f35425.jpg",
+            "url": "https://cdn2.unrealengine.com/cdn-uploader-FNECO_37-50_BR14_BrutalBulwark_Screenshot_DiscoverPlaylistTile_-1920x1080-43a8099c.jpg"
+          },
+          "id": "cohort_b"
+        }
+      ],
+      "tagline": "32 Players. Small Map. Fast Games. Zero Build. Rack up eliminations and survive storm circles to increase your Blitz Level, which grants powerful loot as you level up!",
+      "web_slug": "fortnite-blitz-royale",
+      "square_image_urls": {
+        "url": "https://cdn2.unrealengine.com/en-fneco-36-10-forbiddenfruit-discoverplaylisttile-v5-480x480-480x480-9859d927e8a9.jpg"
+      },
+      "category_labels": [
+        "Combat"
+      ],
+      "countdownTimers": [
+        {
+          "visibleTime": 0,
+          "featureFlags": [
+            "lobby"
+          ],
+          "targetTime": 1756481400
+        }
+      ],
+      "default_sub_link_code": "playlist_forbiddenfruitnobuildbrsolo"
+    },
+    "version": 1,
+    "active": true,
+    "disabled": false,
+    "created": "2025-06-10T17:03:29.077Z",
+    "published": "2025-06-10T17:03:29.077Z",
+    "descriptionTags": [],
+    "moderationStatus": "Approved",
+    "lastActivatedDate": "2025-06-10T17:03:29.082Z",
+    "discoveryIntent": "PUBLIC",
+    "linkState": "LIVE"
+  },
+  {
+    "namespace": "fn",
+    "accountId": "epic",
+    "creatorName": "Epic",
+    "mnemonic": "playlist_forbiddenfruitnobuildbrsolo",
+    "linkType": "BR:Playlist",
+    "metadata": {
+      "matchmakingV2": {
+        "crossplayRequired": false
+      },
+      "alt_title": {
+        "de": "Solo",
+        "ru": "\u0412 \u043e\u0434\u0438\u043d\u043e\u0447\u043a\u0443",
+        "ko": "\uc194\ub85c",
+        "pt-BR": "Solo",
+        "zh-hans": "\u5355\u4eba",
+        "en": "Solo",
+        "it": "Singolo",
+        "fr": "Solo",
+        "zh-CN": "",
+        "es": "En solitario",
+        "es-MX": "En solitario",
+        "zh": "",
+        "ar": "\u0641\u0631\u062f\u064a",
+        "zh-Hant": "",
+        "ja": "\u30bd\u30ed",
+        "pl": "Solo",
+        "es-419": "En solitario",
+        "tr": "Tekli"
+      },
+      "parent_set": "set_forbiddenfruit_nobuild_playlists",
+      "play_history_override": "set_forbiddenfruit_nobuild_playlists",
+      "block_cascading_data": "true",
+      "image_url": "https://cdn2.unrealengine.com/solosize-1920-1920x1080-741c5c77900f.jpg",
+      "product_tag": "Product.ForbiddenFruit.NoBuild",
+      "image_urls": {
+        "url_s": "https://cdn2.unrealengine.com/solosize-480-480x270-bd71a8aecb8f.jpg",
+        "url_xs": "https://cdn2.unrealengine.com/solosize-256-256x144-9e4ba5075e53.jpg",
+        "url_m": "https://cdn2.unrealengine.com/solosize-640-640x360-0062a2e4e8b4.jpg",
+        "url": "https://cdn2.unrealengine.com/solosize-1920-1920x1080-741c5c77900f.jpg"
+      },
+      "title": "Solo",
+      "matchmaking": {
+        "override_playlist": "playlist_forbiddenfruitnobuildbrsolo"
+      }
+    },
+    "version": 1,
+    "active": true,
+    "disabled": false,
+    "created": "2025-05-15T03:14:43.801Z",
+    "published": "2025-05-15T03:14:43.801Z",
+    "descriptionTags": [],
+    "moderationStatus": "Unmoderated",
+    "lastActivatedDate": "2025-05-15T03:14:43.804Z",
+    "discoveryIntent": "PUBLIC",
+    "linkState": "LIVE"
+  },
+  {
+    "namespace": "fn",
+    "accountId": "epic",
+    "creatorName": "Epic",
+    "mnemonic": "playlist_forbiddenfruitnobuildbrduopc",
+    "linkType": "BR:Playlist",
+    "metadata": {
+      "matchmakingv2": {
+        "crossplayRequired": true
+      },
+      "alt_title": {
+        "de": "Duo (Pures Chaos)",
+        "ru": "\u041f\u0430\u0440\u043d\u044b\u0435 \u0441\u0440\u0430\u0436\u0435\u043d\u0438\u044f (\u00ab\u0410\u0431\u0441\u043e\u043b\u044e\u0442\u043d\u044b\u0439 \u0445\u0430\u043e\u0441\u00bb)",
+        "ko": "\ub4c0\uc624(\uc21c\uc218\ud55c \ud63c\ub3c8)",
+        "zh-hant": "\u55ae\u4eba\uff08\u7d14\u7cb9\u6df7\u4e82\uff09",
+        "pt-BR": "Dupla (Caos Total)",
+        "zh-hans": "\u53cc\u4eba\uff08\u7eaf\u7cb9\u6df7\u4e71\uff09",
+        "it": "Coppie (Caos puro)",
+        "fr": "Duos (pur chaos)",
+        "es": "D\u00faos (Caos puro)",
+        "ar": "\u0627\u0644\u0648\u0636\u0639 \u0627\u0644\u062b\u0646\u0627\u0626\u064a (\u0641\u0648\u0636\u0649 \u0639\u0627\u0631\u0645\u0629)",
+        "vi": "2v2 (H\u1ed7n Lo\u1ea1n Thu\u1ea7n Ch\u1ea5t)",
+        "th": "\u0e14\u0e39\u0e42\u0e2d\u0e49 (\u0e2a\u0e38\u0e14\u0e23\u0e49\u0e32\u0e22\u0e27\u0e32\u0e22\u0e1b\u0e48\u0e27\u0e07)",
+        "ja": "\u30c7\u30e5\u30aa(\u7d14\u7c8b\u306a\u308b\u30ab\u30aa\u30b9)",
+        "id": "Duo (Kekacauan Murni)",
+        "pl": "Pary (Czysty chaos)",
+        "es-419": "En d\u00fao (caos puro)",
+        "tr": "\u00c7iftli (Saf Kaos)"
+      },
+      "parent_set": "set_forbiddenfruit_nobuild_playlists",
+      "play_history_override": "set_forbiddenfruit_nobuild_playlists",
+      "image_url": "https://cdn2.unrealengine.com/fneco-36-20-forbiddenfruit-squadsizeicon-duo-1920x1080-1920x1080-a0ae91faf382.jpg",
+      "product_tag": "Product.ForbiddenFruit.NoBuild.PureChaos",
+      "image_urls": {
+        "url_s": "https://cdn2.unrealengine.com/fneco-36-20-forbiddenfruit-squadsizeicon-duo-480x270-480x270-e7d941d754d4.jpg",
+        "url_xs": "https://cdn2.unrealengine.com/fneco-36-20-forbiddenfruit-squadsizeicon-duo-256x144-256x144-dfc82d6e79ab.jpg",
+        "url_m": "https://cdn2.unrealengine.com/fneco-36-20-forbiddenfruit-squadsizeicon-duo-640x360-640x360-5d7d30206d97.jpg",
+        "url": "https://cdn2.unrealengine.com/fneco-36-20-forbiddenfruit-squadsizeicon-duo-1920x1080-1920x1080-a0ae91faf382.jpg"
+      },
+      "title": "Duo (Pure Chaos)",
+      "matchmaking": {
+        "override_playlist": "playlist_forbiddenfruitnobuildbrduopc"
+      }
+    },
+    "version": 1,
+    "active": true,
+    "disabled": false,
+    "created": "2025-08-13T22:15:02.116Z",
+    "published": "2025-08-13T22:15:02.116Z",
+    "descriptionTags": [],
+    "moderationStatus": "Unmoderated",
+    "lastActivatedDate": "2025-08-13T22:15:02.121Z",
+    "discoveryIntent": "PUBLIC",
+    "linkState": "LIVE"
+  },
+  {
+    "namespace": "fn",
+    "accountId": "epic",
+    "creatorName": "Epic",
+    "mnemonic": "playlist_forbiddenfruitnobuildbrduo",
+    "linkType": "BR:Playlist",
+    "metadata": {
+      "matchmakingV2": {
+        "allowSquadFillOption": true,
+        "allowJoinInProgress": false,
+        "crossplayRequired": true,
+        "maxPlayers": 40,
+        "ratingType": "blastberry_nobuild",
+        "maxSocialPartySize": 2,
+        "isRanked": false,
+        "maxTeamCount": 40,
+        "allowPrivateMatches": false,
+        "maxTeamSize": 2
+      },
+      "alt_title": {
+        "de": "Duo",
+        "ru": "\u041f\u0430\u0440\u043d\u044b\u0435 \u0441\u0440\u0430\u0436\u0435\u043d\u0438\u044f",
+        "ko": "\ub4c0\uc624",
+        "pt-BR": "Duplas",
+        "zh-hans": "\u53cc\u4eba",
+        "en": "Duo",
+        "it": "Coppie",
+        "fr": "Duos",
+        "zh-CN": "",
+        "es": "D\u00faos",
+        "es-MX": "En d\u00fao",
+        "zh": "",
+        "ar": "\u062b\u0646\u0627\u0626\u064a",
+        "zh-Hant": "",
+        "ja": "\u30c7\u30e5\u30aa",
+        "pl": "Pary",
+        "es-419": "En d\u00fao",
+        "tr": "\u00c7iftli"
+      },
+      "favorite_override": "set_forbiddenfruit_nobuild_playlists",
+      "parent_set": "set_forbiddenfruit_nobuild_playlists",
+      "play_history_override": "set_forbiddenfruit_nobuild_playlists",
+      "image_url": "https://cdn2.unrealengine.com/duossize-1920-1920x1080-284f117a184a.jpg",
+      "product_tag": "Product.ForbiddenFruit.NoBuild",
+      "image_urls": {
+        "url_s": "https://cdn2.unrealengine.com/duossize-480-480x270-f7ab641d8d9c.jpg",
+        "url_xs": "https://cdn2.unrealengine.com/duossize-256-256x144-6291155853c9.jpg",
+        "url_m": "https://cdn2.unrealengine.com/duossize-640-640x360-9cd7be7aba4c.jpg",
+        "url": "https://cdn2.unrealengine.com/duossize-1920-1920x1080-284f117a184a.jpg"
+      },
+      "title": "Duo",
+      "matchmaking": {
+        "override_playlist": "playlist_forbiddenfruitnobuildbrduo"
+      }
+    },
+    "version": 1,
+    "active": true,
+    "disabled": false,
+    "created": "2025-05-20T01:26:11.364Z",
+    "published": "2025-05-20T01:26:11.364Z",
+    "descriptionTags": [],
+    "moderationStatus": "Unmoderated",
+    "lastActivatedDate": "2025-05-20T01:26:11.367Z",
+    "discoveryIntent": "PUBLIC",
+    "linkState": "LIVE"
+  },
+  {
+    "namespace": "fn",
+    "accountId": "epic",
+    "creatorName": "Epic",
+    "mnemonic": "playlist_forbiddenfruitnobuildbrsquad",
+    "linkType": "BR:Playlist",
+    "metadata": {
+      "matchmakingV2": {
+        "allowSquadFillOption": true,
+        "allowJoinInProgress": false,
+        "crossplayRequired": true,
+        "maxPlayers": 40,
+        "ratingType": "blastberry_nobuild",
+        "maxSocialPartySize": 4,
+        "isRanked": false,
+        "maxTeamCount": 40,
+        "allowPrivateMatches": false,
+        "maxTeamSize": 4
+      },
+      "alt_title": {
+        "de": "Team",
+        "ru": "\u0411\u043e\u0438 \u043e\u0442\u0440\u044f\u0434\u043e\u0432",
+        "ko": "\uc2a4\ucffc\ub4dc",
+        "pt-BR": "Esquadr\u00f5es",
+        "zh-hans": "\u5c0f\u961f",
+        "en": "Squad",
+        "it": "Squadre",
+        "fr": "Sections",
+        "zh-CN": "",
+        "es": "Escuadrones",
+        "es-MX": "En escuadr\u00f3n",
+        "zh": "",
+        "ar": "\u0641\u0650\u0631\u0642",
+        "zh-Hant": "",
+        "ja": "\u30b9\u30af\u30ef\u30c3\u30c9",
+        "pl": "Oddzia\u0142y",
+        "es-419": "En escuadr\u00f3n",
+        "tr": "Ekipli"
+      },
+      "favorite_override": "set_forbiddenfruit_nobuild_playlists",
+      "parent_set": "set_forbiddenfruit_nobuild_playlists",
+      "play_history_override": "set_forbiddenfruit_nobuild_playlists",
+      "block_cascading_data": "true",
+      "image_url": "https://cdn2.unrealengine.com/squadssize-1920-1920x1080-4da9e2186875.jpg",
+      "product_tag": "Product.ForbiddenFruit.NoBuild",
+      "image_urls": {
+        "url_s": "https://cdn2.unrealengine.com/squadssize-480-480x270-823c15f5f2f5.jpg",
+        "url_xs": "https://cdn2.unrealengine.com/squadssize-256-256x144-8dc31a6baffa.jpg",
+        "url_m": "https://cdn2.unrealengine.com/squadssize-640-640x360-696ba89c81db.jpg",
+        "url": "https://cdn2.unrealengine.com/squadssize-1920-1920x1080-4da9e2186875.jpg"
+      },
+      "title": "Squad",
+      "matchmaking": {
+        "override_playlist": "playlist_forbiddenfruitnobuildbrsquad"
+      }
+    },
+    "version": 1,
+    "active": true,
+    "disabled": false,
+    "created": "2025-05-20T01:26:10.717Z",
+    "published": "2025-05-20T01:26:10.717Z",
+    "descriptionTags": [],
+    "moderationStatus": "Unmoderated",
+    "lastActivatedDate": "2025-05-20T01:26:10.720Z",
+    "discoveryIntent": "PUBLIC",
+    "linkState": "LIVE"
+  },
+  {
+    "namespace": "fn",
+    "accountId": "epic",
+    "creatorName": "Epic",
+    "mnemonic": "playlist_forbiddenfruitnobuildbrstack",
+    "linkType": "BR:Playlist",
+    "metadata": {
+      "matchmakingV2": {
+        "allowSquadFillOption": true,
+        "allowJoinInProgress": false,
+        "crossplayRequired": true,
+        "maxPlayers": 30,
+        "ratingType": "forbiddenfruit_nobuild",
+        "maxSocialPartySize": 6,
+        "isRanked": false,
+        "maxTeamCount": 30,
+        "allowPrivateMatches": false,
+        "maxTeamSize": 6
+      },
+      "alt_title": {
+        "de": "Sechsertrupp",
+        "ru": "\u0412\u0435\u043b\u0438\u043a\u043e\u043b\u0435\u043f\u043d\u0430\u044f \u0448\u0435\u0441\u0442\u0451\u0440\u043a\u0430",
+        "ko": "\uc2dd\uc2a4 \uc2a4\ud0dd",
+        "pt-BR": "Sexteto",
+        "zh-hans": "\u516d\u4eba\u5c0f\u961f",
+        "en": "Six Stack",
+        "it": "Squadra da sei",
+        "fr": "Groupes de six",
+        "zh-CN": "\u516d\u4eba\u5c0f\u961f",
+        "es": "Sexta acumulaci\u00f3n",
+        "zh": "",
+        "ar": "\u0641\u0631\u0642\u0629 \u0633\u062f\u0627\u0633\u064a\u0629",
+        "zh-Hant": "\u516d\u6392",
+        "vi": "\u0110\u1ed9i S\u00e1u",
+        "th": "\u0e23\u0e27\u0e21\u0e17\u0e35\u0e21\u0e2b\u0e01\u0e04\u0e19",
+        "ja": "\u30b7\u30c3\u30af\u30b9\u30fb\u30b9\u30bf\u30c3\u30af",
+        "id": "Enam Sekawan",
+        "pl": "Sze\u015bcioosobowa ekipa",
+        "es-419": "Grupo de seis",
+        "tr": "Alt\u0131l\u0131"
+      },
+      "parent_set": "set_forbiddenfruit_nobuild_playlists",
+      "favorite_override": "set_forbiddenfruit_nobuild_playlists",
+      "play_history_override": "set_forbiddenfruit_nobuild_playlists",
+      "block_cascading_data": "true",
+      "image_url": "https://cdn2.unrealengine.com/squad-plus-1920x1080-29c46b7c5bcf.jpg",
+      "product_tag": "Product.ForbiddenFruit.NoBuild",
+      "image_urls": {
+        "url_s": "https://cdn2.unrealengine.com/squad-plus-480x270-480x270-bff52f93a166.jpg",
+        "url_xs": "https://cdn2.unrealengine.com/squad-plus-256x144-256x144-b4782b3a3518.jpg",
+        "url_m": "https://cdn2.unrealengine.com/squad-plus-640x360-640x360-3209e87bc2c1.jpg",
+        "url": "https://cdn2.unrealengine.com/squad-plus-1920x1080-29c46b7c5bcf.jpg"
+      },
+      "title": "Six Stack",
+      "matchmaking": {
+        "override_playlist": "playlist_forbiddenfruitnobuildbrstack"
+      }
+    },
+    "version": 1,
+    "active": true,
+    "disabled": false,
+    "created": "2025-07-15T21:48:59.661Z",
+    "published": "2025-07-15T21:48:59.661Z",
+    "descriptionTags": [],
+    "moderationStatus": "Unmoderated",
+    "lastActivatedDate": "2025-07-15T21:48:59.665Z",
+    "discoveryIntent": "PUBLIC",
+    "linkState": "LIVE"
+  },
+  {
+    "namespace": "fn",
+    "accountId": "epic",
+    "creatorName": "Epic",
+    "mnemonic": "playlist_forbiddenfruitnobuildbrstackpc",
+    "linkType": "BR:Playlist",
+    "metadata": {
+      "matchmakingV2": {
+        "allowSquadFillOption": true,
+        "allowJoinInProgress": false,
+        "crossplayRequired": true,
+        "maxPlayers": 30,
+        "ratingType": "forbiddenfruit_nobuild",
+        "maxSocialPartySize": 6,
+        "isRanked": false,
+        "maxTeamCount": 30,
+        "allowPrivateMatches": false,
+        "maxTeamSize": 6
+      },
+      "alt_title": {
+        "de": "Sechsertrupp (Pures Chaos)",
+        "ru": "\u0412\u0435\u043b\u0438\u043a\u043e\u043b\u0435\u043f\u043d\u0430\u044f \u0448\u0435\u0441\u0442\u0451\u0440\u043a\u0430 (\u00ab\u0410\u0431\u0441\u043e\u043b\u044e\u0442\u043d\u044b\u0439 \u0445\u0430\u043e\u0441\u00bb)",
+        "ko": "\uc2dd\uc2a4 \uc2a4\ud0dd(\uc21c\uc218\ud55c \ud63c\ub3c8)",
+        "pt-BR": "Sexteto (Caos Total)",
+        "zh-hans": "\u516d\u4eba\u5c0f\u961f\uff08\u7eaf\u7cb9\u6df7\u4e71\uff09",
+        "en": "Six Stack (Pure Chaos)",
+        "it": "Squadra da sei (Caos puro)",
+        "fr": "Groupes de six (pur chaos)",
+        "zh-CN": "\u516d\u4eba\u5c0f\u961f\uff08\u7eaf\u7cb9\u6df7\u4e71\uff09",
+        "es": "Sexta acumulaci\u00f3n (caos puro)",
+        "es-MX": "Grupo de seis (caos puro)",
+        "zh": "",
+        "ar": "\u0641\u0631\u0642\u0629 \u0633\u062f\u0627\u0633\u064a\u0629 (\u0641\u0648\u0636\u0649 \u0639\u0627\u0631\u0645\u0629)",
+        "zh-Hant": "\u516d\u6392\uff08\u7d14\u7cb9\u6df7\u4e82\uff09",
+        "vi": "\u0110\u1ed9i S\u00e1u (H\u1ed7n Lo\u1ea1n Thu\u1ea7n Ch\u1ea5t)",
+        "th": "\u0e23\u0e27\u0e21\u0e17\u0e35\u0e21\u0e2b\u0e01\u0e04\u0e19 (\u0e2a\u0e38\u0e14\u0e23\u0e49\u0e32\u0e22\u0e27\u0e32\u0e22\u0e1b\u0e48\u0e27\u0e07)",
+        "ja": "\u30b7\u30c3\u30af\u30b9\u30fb\u30b9\u30bf\u30c3\u30af(\u7d14\u7c8b\u306a\u308b\u30ab\u30aa\u30b9)",
+        "id": "Enam Sekawan (Kekacauan Murni)",
+        "pl": "Sze\u015bcioosobowa ekipa (czysty chaos)",
+        "es-419": "Grupo de seis (caos puro)",
+        "tr": "Alt\u0131l\u0131 (Saf Kaos)"
+      },
+      "parent_set": "set_forbiddenfruit_nobuild_playlists",
+      "favorite_override": "set_forbiddenfruit_nobuild_playlists",
+      "play_history_override": "set_forbiddenfruit_nobuild_playlists",
+      "block_cascading_data": "true",
+      "image_url": "https://cdn2.unrealengine.com/fneco-36-20-forbiddenfruit-squadsizeicon-sixstacks-1920x1080-1920x1080-ee137ffa7575.jpg",
+      "product_tag": "Product.ForbiddenFruit.NoBuild",
+      "image_urls": {
+        "url_s": "https://cdn2.unrealengine.com/fneco-36-20-forbiddenfruit-squadsizeicon-sixstacks-480x270-480x270-cd71ff358387.jpg",
+        "url_xs": "https://cdn2.unrealengine.com/fneco-36-20-forbiddenfruit-squadsizeicon-sixstacks-256x144-256x144-682d97e810cb.jpg",
+        "url_m": "https://cdn2.unrealengine.com/fneco-36-20-forbiddenfruit-squadsizeicon-sixstacks-640x360-640x360-1ef0568c75dc.jpg",
+        "url": "https://cdn2.unrealengine.com/fneco-36-20-forbiddenfruit-squadsizeicon-sixstacks-1920x1080-1920x1080-ee137ffa7575.jpg"
+      },
+      "title": "Six Stack (Pure Chaos)",
+      "matchmaking": {
+        "override_playlist": "playlist_forbiddenfruitnobuildbrstackpc"
+      }
+    },
+    "version": 1,
+    "active": true,
+    "disabled": false,
+    "created": "2025-07-15T21:48:58.431Z",
+    "published": "2025-07-15T21:48:58.431Z",
+    "descriptionTags": [],
+    "moderationStatus": "Unmoderated",
+    "lastActivatedDate": "2025-07-15T21:48:58.436Z",
+    "discoveryIntent": "PUBLIC",
+    "linkState": "LIVE"
   }
 ]
