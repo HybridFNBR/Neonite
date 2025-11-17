@@ -267,9 +267,11 @@ const stats = (accountId, athenprofile, config, versionGlobal) => {
     if(athenprofile.stats.attributes["favorite_character"] === "" || !athenprofile.stats.attributes["favorite_character"]){
         athenprofile.stats["attributes"]["favorite_character"] = "AthenaCharacter:CID_001_Athena_Commando_F_Default"
     }
-    Profile.modifyStat(athenprofile, "book_level", parseInt(config.Level))
-    Profile.modifyStat(athenprofile, "level", parseInt(config.Level))
-    Profile.modifyStat(athenprofile, "accountLevel", parseInt(config.Level))
+    if(parseInt(config.Level) > 1){
+        Profile.modifyStat(athenprofile, "book_level", parseInt(config.Level))
+        Profile.modifyStat(athenprofile, "level", parseInt(config.Level))
+        Profile.modifyStat(athenprofile, "accountLevel", parseInt(config.Level))
+    }
     Profile.modifyStat(athenprofile, "season_num", versionGlobal)
     Profile.saveProfile(accountId, "athena", athenprofile)
 };

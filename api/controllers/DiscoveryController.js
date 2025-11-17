@@ -449,10 +449,10 @@ module.exports = {
 	mnemonicLinks: function (req, res) {
 		const { version } = getVersionInfo(req);
 		if (version >= 23.00) {
-			if (version >= 33.00){activatePlaylist(discoveryv2, "set_figment_playlists")}
+			if(version >= 33.00){activatePlaylist(discoveryv2, "set_figment_playlists")}
 			if(version >= 30.20){activatePlaylist(discoveryv2, "set_blastberry_playlists")}
 			if(version >= 36.10){activatePlaylist(discoveryv2, "set_forbiddenfruit_nobuild_playlists")}
-			if (version >= 37.31 && version <= 38.11) { activatePlaylist(discoveryv2, "playlist_stridemice")}
+			if(version >= 37.31 && version <= 38.11){activatePlaylist(discoveryv2, "playlist_stridemice")}
 
 			if (playlistManager[version]){playlistManager[version].forEach(playlist => activatePlaylist(discoveryv2, playlist))}
 
