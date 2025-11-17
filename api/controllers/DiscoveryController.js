@@ -167,265 +167,266 @@ module.exports = {
 				]
 			})
 		}
-
-		return res.json({
-			"panels": [
-				{
-					"panelName": "Homebar",
-					"panelDisplayName": "Homebar",
-					"panelSubtitle": null,
-					"featureTags": [
-						"col:5",
-						"homebar"
-					],
-					"firstPage": {
-						"results": [
-							{
-								"lastVisited": null,
-								"linkCode": "ref_panel_byepicfeeder_1",
-								"isFavorite": false,
-								"globalCCU": -1,
-								"lockStatus": "UNLOCKED",
-								"lockStatusReason": "NONE",
-								"isVisible": true
-							},
+		else{
+			return res.json({
+				"panels": [
+					{
+						"panelName": "Homebar",
+						"panelDisplayName": "Homebar",
+						"panelSubtitle": null,
+						"featureTags": [
+							"col:5",
+							"homebar"
 						],
-						"hasMore": true,
-						"panelTargetName": null,
-						"pageMarker": null
+						"firstPage": {
+							"results": [
+								{
+									"lastVisited": null,
+									"linkCode": "ref_panel_byepicfeeder_1",
+									"isFavorite": false,
+									"globalCCU": -1,
+									"lockStatus": "UNLOCKED",
+									"lockStatusReason": "NONE",
+									"isVisible": true
+								},
+							],
+							"hasMore": true,
+							"panelTargetName": null,
+							"pageMarker": null
+						},
+						"panelType": "CuratedList",
+						"playHistoryType": null
 					},
-					"panelType": "CuratedList",
-					"playHistoryType": null
-				},
-				{
-					"panelName": "ByEpicFeeder",
-					"panelNativeDisplayName": "By Epic",
-					"panelDisplayName": "By Epic",
-					"panelSubtitle": null,
-					"featureTags": [
-						"ForReferenceViewOnly",
-						"col:5",
-						"hasViewAll:true",
-						"horizontalScroll:false",
-					],
-					"firstPage": {
-						"results": [
-							{
-								"linkCode": "playlist_durian",
-								"isFavorite": false,
-								"globalCCU": 1,
-								"lockStatus": "UNLOCKED",
-								"lockStatusReason": "NONE",
-								"isVisible": true
-							},
-							{
-								"linkCode": "set_br_playlists",
-								"isFavorite": false,
-								"globalCCU": 1,
-								"lockStatus": "UNLOCKED",
-								"lockStatusReason": "NONE",
-								"isVisible": true
-							},
-							{
-								"linkCode": "playlist_pilgrimquickplay",
-								"isFavorite": false,
-								"globalCCU": 1,
-								"lockStatus": "UNLOCKED",
-								"lockStatusReason": "NONE",
-								"isVisible": true
-							},
-							{
-								"linkCode": "playlist_juno",
-								"isFavorite": false,
-								"globalCCU": 1,
-								"lockStatus": "UNLOCKED",
-								"lockStatusReason": "NONE",
-								"isVisible": true
-							},
-							{
-								"linkCode": "playlist_beanstalk",
-								"isFavorite": false,
-								"globalCCU": 1,
-								"lockStatus": "UNLOCKED",
-								"lockStatusReason": "NONE",
-								"isVisible": true
-							},
-							{
-								"lastVisited": null,
-								"linkCode": "playlist_papaya",
-								"isFavorite": false,
-								"globalCCU": 1,
-								"lockStatus": "UNLOCKED",
-								"lockStatusReason": "NONE",
-								"isVisible": true
-							},
+					{
+						"panelName": "ByEpicFeeder",
+						"panelNativeDisplayName": "By Epic",
+						"panelDisplayName": "By Epic",
+						"panelSubtitle": null,
+						"featureTags": [
+							"ForReferenceViewOnly",
+							"col:5",
+							"hasViewAll:true",
+							"horizontalScroll:false",
 						],
-						"hasMore": true,
-						"panelTargetName": null,
-						"pageMarker": null
+						"firstPage": {
+							"results": [
+								{
+									"linkCode": "playlist_durian",
+									"isFavorite": false,
+									"globalCCU": 1,
+									"lockStatus": "UNLOCKED",
+									"lockStatusReason": "NONE",
+									"isVisible": true
+								},
+								{
+									"linkCode": "set_br_playlists",
+									"isFavorite": false,
+									"globalCCU": 1,
+									"lockStatus": "UNLOCKED",
+									"lockStatusReason": "NONE",
+									"isVisible": true
+								},
+								{
+									"linkCode": "playlist_pilgrimquickplay",
+									"isFavorite": false,
+									"globalCCU": 1,
+									"lockStatus": "UNLOCKED",
+									"lockStatusReason": "NONE",
+									"isVisible": true
+								},
+								{
+									"linkCode": "playlist_juno",
+									"isFavorite": false,
+									"globalCCU": 1,
+									"lockStatus": "UNLOCKED",
+									"lockStatusReason": "NONE",
+									"isVisible": true
+								},
+								{
+									"linkCode": "playlist_beanstalk",
+									"isFavorite": false,
+									"globalCCU": 1,
+									"lockStatus": "UNLOCKED",
+									"lockStatusReason": "NONE",
+									"isVisible": true
+								},
+								{
+									"lastVisited": null,
+									"linkCode": "playlist_papaya",
+									"isFavorite": false,
+									"globalCCU": 1,
+									"lockStatus": "UNLOCKED",
+									"lockStatusReason": "NONE",
+									"isVisible": true
+								},
+							],
+							"hasMore": true,
+							"panelTargetName": null,
+							"pageMarker": null
+						},
+						"panelType": "AnalyticsList",
+						"playHistoryType": null
 					},
-					"panelType": "AnalyticsList",
-					"playHistoryType": null
-				},
-				{
-					"panelName": "ByEpicConvergenceBlastberry",
-					"panelNativeDisplayName": "Other Modes By Epic",
-					"panelDisplayName": "Other Modes By Epic",
-					"panelSubtitle": null,
-					"featureTags": [
-						"col:7",
-						"horizontalScroll:false",
-						"squareTiles:false",
-						"hasViewAll:true"
-					],
-					"firstPage": {
-						"results": [
-							{
-								"linkCode": "set_figment_playlists",
-								"isFavorite": false,
-								"globalCCU": 1,
-								"lockStatus": "UNLOCKED",
-								"lockStatusReason": "NONE",
-								"isVisible": true
-							},
-							{
-								"linkCode": "set_blastberry_playlists",
-								"isFavorite": false,
-								"globalCCU": 1,
-								"lockStatus": "UNLOCKED",
-								"lockStatusReason": "NONE",
-								"isVisible": true
-							},
-							{
-								"linkCode": "set_forbiddenfruit_nobuild_playlists",
-								"isFavorite": false,
-								"globalCCU": 1,
-								"lockStatus": "UNLOCKED",
-								"lockStatusReason": "NONE",
-								"isVisible": true
-							}
+					{
+						"panelName": "ByEpicConvergenceBlastberry",
+						"panelNativeDisplayName": "Other Modes By Epic",
+						"panelDisplayName": "Other Modes By Epic",
+						"panelSubtitle": null,
+						"featureTags": [
+							"col:7",
+							"horizontalScroll:false",
+							"squareTiles:false",
+							"hasViewAll:true"
 						],
-						"hasMore": true,
-						"panelTargetName": null,
-						"pageMarker": null
+						"firstPage": {
+							"results": [
+								{
+									"linkCode": "set_figment_playlists",
+									"isFavorite": false,
+									"globalCCU": 1,
+									"lockStatus": "UNLOCKED",
+									"lockStatusReason": "NONE",
+									"isVisible": true
+								},
+								{
+									"linkCode": "set_blastberry_playlists",
+									"isFavorite": false,
+									"globalCCU": 1,
+									"lockStatus": "UNLOCKED",
+									"lockStatusReason": "NONE",
+									"isVisible": true
+								},
+								{
+									"linkCode": "set_forbiddenfruit_nobuild_playlists",
+									"isFavorite": false,
+									"globalCCU": 1,
+									"lockStatus": "UNLOCKED",
+									"lockStatusReason": "NONE",
+									"isVisible": true
+								}
+							],
+							"hasMore": true,
+							"panelTargetName": null,
+							"pageMarker": null
+						},
+						"panelType": "AnalyticsList",
+						"playHistoryType": null
 					},
-					"panelType": "AnalyticsList",
-					"playHistoryType": null
-				},
-				{
-					"panelName": "LimeRock",
-					"panelDisplayName": "Welcome, Our Alien Overlords",
-					"panelSubtitle": "Welcome, Our Alien Overlords",
-					"featureTags": [
-						"bannerItemRow"
-					],
-					"firstPage": {
-						"results": [
-							{
-								"lastVisited": null,
-								"linkCode": "playlist_limerock",
-								"isFavorite": false,
-								"globalCCU": -1,
-								"lockStatus": "UNLOCKED",
-								"lockStatusReason": "RATING_THRESHOLD",
-								"isVisible": true,
-								"favoriteStatus": "NONE"
-							}
+					{
+						"panelName": "LimeRock",
+						"panelDisplayName": "Welcome, Our Alien Overlords",
+						"panelSubtitle": "Welcome, Our Alien Overlords",
+						"featureTags": [
+							"bannerItemRow"
 						],
-						"hasMore": false,
-						"panelTargetName": null,
-						"pageMarker": null
+						"firstPage": {
+							"results": [
+								{
+									"lastVisited": null,
+									"linkCode": "playlist_limerock",
+									"isFavorite": false,
+									"globalCCU": -1,
+									"lockStatus": "UNLOCKED",
+									"lockStatusReason": "RATING_THRESHOLD",
+									"isVisible": true,
+									"favoriteStatus": "NONE"
+								}
+							],
+							"hasMore": false,
+							"panelTargetName": null,
+							"pageMarker": null
+						},
+						"panelType": "CuratedList",
+						"playHistoryType": null,
+						"panelContexts": {}
 					},
-					"panelType": "CuratedList",
-					"playHistoryType": null,
-					"panelContexts": {}
-				},
-				{
-					"panelName": "StrideMice",
-					"panelDisplayName": "The Daft Punk Experience",
-					"panelSubtitle": "The Daft Punk Experience",
-					"featureTags": [
-						"bannerItemRow"
-					],
-					"firstPage": {
-						"results": [
-							{
-								"lastVisited": null,
-								"linkCode": "playlist_stridemice",
-								"isFavorite": false,
-								"globalCCU": -1,
-								"lockStatus": "UNLOCKED",
-								"lockStatusReason": "RATING_THRESHOLD",
-								"isVisible": true,
-								"favoriteStatus": "NONE"
-							}
+					{
+						"panelName": "StrideMice",
+						"panelDisplayName": "The Daft Punk Experience",
+						"panelSubtitle": "The Daft Punk Experience",
+						"featureTags": [
+							"bannerItemRow"
 						],
-						"hasMore": false,
-						"panelTargetName": null,
-						"pageMarker": null
+						"firstPage": {
+							"results": [
+								{
+									"lastVisited": null,
+									"linkCode": "playlist_stridemice",
+									"isFavorite": false,
+									"globalCCU": -1,
+									"lockStatus": "UNLOCKED",
+									"lockStatusReason": "RATING_THRESHOLD",
+									"isVisible": true,
+									"favoriteStatus": "NONE"
+								}
+							],
+							"hasMore": false,
+							"panelTargetName": null,
+							"pageMarker": null
+						},
+						"panelType": "CuratedList",
+						"playHistoryType": null,
+						"panelContexts": {}
 					},
-					"panelType": "CuratedList",
-					"playHistoryType": null,
-					"panelContexts": {}
-				},
-				{
-					"panelName": "RipeHoneyDew",
-					"panelDisplayName": "Death Star Sabotage",
-					"panelSubtitle": "Death Star Sabotage",
-					"featureTags": [
-						"bannerItemRow"
-					],
-					"firstPage": {
-						"results": [
-							{
-								"lastVisited": null,
-								"linkCode": "playlist_ripehoneydew",
-								"isFavorite": false,
-								"globalCCU": -1,
-								"lockStatus": "UNLOCKED",
-								"lockStatusReason": "RATING_THRESHOLD",
-								"isVisible": true,
-								"favoriteStatus": "NONE"
-							}
+					{
+						"panelName": "RipeHoneyDew",
+						"panelDisplayName": "Death Star Sabotage",
+						"panelSubtitle": "Death Star Sabotage",
+						"featureTags": [
+							"bannerItemRow"
 						],
-						"hasMore": false,
-						"panelTargetName": null,
-						"pageMarker": null
+						"firstPage": {
+							"results": [
+								{
+									"lastVisited": null,
+									"linkCode": "playlist_ripehoneydew",
+									"isFavorite": false,
+									"globalCCU": -1,
+									"lockStatus": "UNLOCKED",
+									"lockStatusReason": "RATING_THRESHOLD",
+									"isVisible": true,
+									"favoriteStatus": "NONE"
+								}
+							],
+							"hasMore": false,
+							"panelTargetName": null,
+							"pageMarker": null
+						},
+						"panelType": "CuratedList",
+						"playHistoryType": null,
+						"panelContexts": {}
 					},
-					"panelType": "CuratedList",
-					"playHistoryType": null,
-					"panelContexts": {}
-				},
-				{
-					"panelName": "A-Spot",
-					"panelDisplayName": "Remix: The Finale",
-					"panelSubtitle": "Remix: The Finale",
-					"featureTags": [
-						"bannerItemRow"
-					],
-					"firstPage": {
-						"results": [
-							{
-								"lastVisited": null,
-								"linkCode": "playlist_quail",
-								"isFavorite": false,
-								"globalCCU": -1,
-								"lockStatus": "UNLOCKED",
-								"lockStatusReason": "RATING_THRESHOLD",
-								"isVisible": true,
-								"favoriteStatus": "NONE"
-							}
+					{
+						"panelName": "A-Spot",
+						"panelDisplayName": "Remix: The Finale",
+						"panelSubtitle": "Remix: The Finale",
+						"featureTags": [
+							"bannerItemRow"
 						],
-						"hasMore": false,
-						"panelTargetName": null,
-						"pageMarker": null
+						"firstPage": {
+							"results": [
+								{
+									"lastVisited": null,
+									"linkCode": "playlist_quail",
+									"isFavorite": false,
+									"globalCCU": -1,
+									"lockStatus": "UNLOCKED",
+									"lockStatusReason": "RATING_THRESHOLD",
+									"isVisible": true,
+									"favoriteStatus": "NONE"
+								}
+							],
+							"hasMore": false,
+							"panelTargetName": null,
+							"pageMarker": null
+						},
+						"panelType": "CuratedList",
+						"playHistoryType": null,
+						"panelContexts": {}
 					},
-					"panelType": "CuratedList",
-					"playHistoryType": null,
-					"panelContexts": {}
-				},
-			]
-		})
+				]
+			})
+		}
 	},
 
 	page: async function (req, res) {
