@@ -1948,7 +1948,7 @@
       "default_sub_link_code": "playlist_sunflowersquad"
     },
     "version": 1,
-    "active": true,
+    "active": false,
     "disabled": false,
     "created": "2024-06-10T23:21:00.260Z",
     "published": "2024-06-10T23:21:00.260Z",
@@ -2641,19 +2641,10 @@
       "category_labels": [
         "Combat"
       ],
-      "countdownTimers": [
-        {
-          "visibleTime": 0,
-          "featureFlags": [
-            "lobby"
-          ],
-          "targetTime": 1756481400
-        }
-      ],
       "default_sub_link_code": "playlist_forbiddenfruitnobuildbrsolo"
     },
     "version": 1,
-    "active": true,
+    "active": false,
     "disabled": false,
     "created": "2025-06-10T17:03:29.077Z",
     "published": "2025-06-10T17:03:29.077Z",

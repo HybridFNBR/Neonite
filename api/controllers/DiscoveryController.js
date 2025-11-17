@@ -1,4 +1,4 @@
-const { getVersionInfo, loadJSON } = require("../../config/defs")
+const { getVersionInfo, loadJSON} = require("../../config/defs")
 const discoveryv1 = loadJSON("../discovery/discoveryMenuV1.json");
 const discoveryv2 = loadJSON("../discovery/discoveryMenuV2.json")
 module.exports = {
@@ -167,7 +167,7 @@ module.exports = {
 				]
 			})
 		}
-		else{
+		else {
 			return res.json({
 				"panels": [
 					{
@@ -449,35 +449,12 @@ module.exports = {
 	mnemonicLinks: function (req, res) {
 		const { version } = getVersionInfo(req);
 		if (version >= 23.00) {
-			if (version >= 33.00) {
-				const figmentIndex = discoveryv2.findIndex(i => i.mnemonic === "set_figment_playlists");
-				discoveryv2[figmentIndex].active = true;
-			}
-			switch (version) {
-				case "27.11":
-					const durianIndex = discoveryv2.findIndex(i => i.mnemonic === "playlist_durian");
-					discoveryv2[durianIndex].active = true;
-					break;
-				case "32.11":
-					const quailIndex = discoveryv2.findIndex(i => i.mnemonic === "playlist_quail");
-					discoveryv2[quailIndex].active = true;
-					break;
-				case "35.20":
-					const ripehoneydewIndex = discoveryv2.findIndex(i => i.mnemonic === "playlist_ripehoneydew");
-					discoveryv2[ripehoneydewIndex].active = true;
-					break;
-				case "37.31":
-				case "37.40":
-				case "37.50":
-					const stridemiceIndex = discoveryv2.findIndex(i => i.mnemonic === "playlist_stridemice");
-					discoveryv2[stridemiceIndex].active = true;
-					break;
-				case "37.51":
-					const limeorckIndex = discoveryv2.findIndex(i => i.mnemonic === "playlist_limerock");
-					discoveryv2[limeorckIndex].active = true;
-					break;
-				default:
-			}
+			if (version >= 33.00){activatePlaylist(discoveryv2, "set_figment_playlists")}
+			if(version >= 30.20){activatePlaylist(discoveryv2, "set_blastberry_playlists")}
+			if(version >= 36.10){activatePlaylist(discoveryv2, "set_forbiddenfruit_nobuild_playlists")}
+
+			if (playlistManager[version]){playlistManager[version].forEach(playlist => activatePlaylist(discoveryv2, playlist))}
+
 			return res.json(discoveryv2);
 		}
 		else {
@@ -559,3 +536,25 @@ module.exports = {
 	}
 
 }
+
+
+function activatePlaylist(playlist, mnemonic) {
+	const findPlaylist = playlist.find(ltmObject => ltmObject.mnemonic === mnemonic);
+	if (findPlaylist) {
+		findPlaylist.active = true;
+	}
+}
+
+const playlistManager = {
+	"27.11": ["playlist_durian"],
+	"32.11": ["playlist_quail"],
+	"35.20": ["playlist_ripehoneydew"],
+	"37.31": ["playlist_stridemice"],
+	"37.40": ["playlist_stridemice"],
+	"37.50": ["playlist_stridemice"],
+	"37.51": ["playlist_limerock"],
+	"38.00": ["playlist_stridemice"],
+	"38.10": ["playlist_stridemice"],
+	"38.11": ["playlist_stridemice"]
+
+};
