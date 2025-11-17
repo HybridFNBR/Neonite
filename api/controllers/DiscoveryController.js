@@ -452,6 +452,7 @@ module.exports = {
 			if (version >= 33.00){activatePlaylist(discoveryv2, "set_figment_playlists")}
 			if(version >= 30.20){activatePlaylist(discoveryv2, "set_blastberry_playlists")}
 			if(version >= 36.10){activatePlaylist(discoveryv2, "set_forbiddenfruit_nobuild_playlists")}
+			if (version >= 37.31 && version <= 38.11) { activatePlaylist(discoveryv2, "playlist_stridemice")}
 
 			if (playlistManager[version]){playlistManager[version].forEach(playlist => activatePlaylist(discoveryv2, playlist))}
 
@@ -549,12 +550,5 @@ const playlistManager = {
 	"27.11": ["playlist_durian"],
 	"32.11": ["playlist_quail"],
 	"35.20": ["playlist_ripehoneydew"],
-	"37.31": ["playlist_stridemice"],
-	"37.40": ["playlist_stridemice"],
-	"37.50": ["playlist_stridemice"],
 	"37.51": ["playlist_limerock"],
-	"38.00": ["playlist_stridemice"],
-	"38.10": ["playlist_stridemice"],
-	"38.11": ["playlist_stridemice"]
-
 };

@@ -12,6 +12,7 @@ module.exports.routes = {
         skipAssets: false
     },
     'POST /api/v2/discovery/surface/CreativeDiscoverySurface_Frontend': 'DiscoveryController.discoveryv3',
+    'POST /api/v2/discovery/surface/CreativeDiscoverySurface_FrontendV2': 'DiscoveryController.discoveryv3',
     'POST /api/v2/discovery/surface/:surface/page':{
         action: "page",
         controller:'DiscoveryController', 
