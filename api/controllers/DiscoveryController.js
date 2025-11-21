@@ -140,7 +140,7 @@ module.exports = {
 								},
 								{
 									"lastVisited": null,
-									"linkCode": "playlist_eventtest",
+									"linkCode": "playlist_papaya",
 									"isFavorite": false,
 									"globalCCU": 1,
 									"lockStatus": "UNLOCKED",
