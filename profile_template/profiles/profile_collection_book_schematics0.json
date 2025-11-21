@@ -1,18 +1,1675 @@
 {
-  "_id": "",
-  "Update": "profile by tim",
-  "created": "2022-01-08T22:58:06.983Z",
-  "updated": "2022-01-08T22:58:57.261Z",
-  "rvn": 24,
-  "wipeNumber": 1,
-  "accountId": "",
+  "created": "2018-04-02T12:35:00.747Z",
+  "updated": "2025-11-06T23:11:34.641Z",
+  "rvn": 154,
+  "wipeNumber": 9,
+  "accountId": "e7c388664e5442e89f30b396d9fa7183",
   "profileId": "collection_book_schematics0",
-  "version": "no_version",
-  "items": {},
+  "version": "season37_3750_XenonBowWeaponReset_October_2025",
   "stats": {
-    "attributes": {
-      "inventory_limit_bonus": 0
+    "attributes": {}
+  },
+  "commandRevision": 18,
+  "_id": "4ed2d86ea55a4669a59405422c53e604",
+  "items": {
+    "13886bd3-afef-4cbe-828c-0c29252be454": {
+      "templateId": "Schematic:sid_edged_axe_heavy_c_ore_t01",
+      "attributes": {
+        "refund_legacy_item": true,
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_att_melee_damage"
+        ]
+      },
+      "quantity": 1
+    },
+    "352967ac-cd45-42db-8a8b-96d17cb4bab0": {
+      "templateId": "CollectionBookPage:pageranged_shotgun_weapons",
+      "attributes": {
+        "state": "Active"
+      },
+      "quantity": 1
+    },
+    "2b1b9b45-38c8-4215-a301-016bf9cf7845": {
+      "templateId": "CollectionBookPage:pagespecial_artdeco_weapons",
+      "attributes": {
+        "state": "Active"
+      },
+      "quantity": 0
+    },
+    "cc9f86de-c38a-447c-8348-ce0474bf772c": {
+      "templateId": "CollectionBookPage:pagespecial_primal_weapons",
+      "attributes": {
+        "state": "Active"
+      },
+      "quantity": 0
+    },
+    "ba55ad97-4fb3-4c71-8db7-ccff796f67e0": {
+      "templateId": "CollectionBookPage:pagetraps_ceiling",
+      "attributes": {
+        "state": "Active"
+      },
+      "quantity": 1
+    },
+    "fda2749b-691d-4b93-a2ef-aa8577fcf3e6": {
+      "templateId": "CollectionBookPage:pagespecial_weapons_medieval",
+      "attributes": {
+        "state": "Active"
+      },
+      "quantity": 0
+    },
+    "a284c532-3a5e-4268-9f58-d6f5b044d47a": {
+      "templateId": "CollectionBookPage:pagespecial_roadtrip2018_weapons",
+      "attributes": {
+        "state": "Active"
+      },
+      "quantity": 0
+    },
+    "ff657d38-6d4d-4dbe-84e7-cd63b1271e0d": {
+      "templateId": "Schematic:sid_blunt_light_bat_r_ore_t01",
+      "attributes": {
+        "level": 1,
+        "alterations": [
+          "Alteration:aid_att_critchance_t02",
+          "Alteration:aid_att_movementspeed_t02",
+          "Alteration:aid_att_damage_physical_t02",
+          "Alteration:aid_att_heavyattackstaminacost_t03",
+          "Alteration:aid_conditional_slowed_dmgbonus_t03",
+          "Alteration:aid_g_weapon_ondmg_applysnare_v2"
+        ]
+      },
+      "quantity": 1
+    },
+    "8d3a847a-177c-409d-9887-b4c821d8a8a5": {
+      "templateId": "Schematic:sid_wall_speaker_uc_t01",
+      "attributes": {
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_att_maxdurability_trap_t01",
+          "Alteration:aid_att_reloadspeed_trap_t01",
+          "Alteration:aid_att_maxdurability_trap_t02",
+          "Alteration:aid_att_knockbackimpact_t02",
+          "Alteration:aid_att_maxdurability_trap_t03",
+          "Alteration:aid_att_maxdurability_trap_t03"
+        ]
+      },
+      "quantity": 1
+    },
+    "2427134f-cbad-47fb-895b-a9e324851796": {
+      "templateId": "CollectionBookPage:pagemelee_swords_weapons",
+      "attributes": {
+        "state": "Active"
+      },
+      "quantity": 1
+    },
+    "5733c1fd-e597-4020-947c-c972b822ce9f": {
+      "templateId": "CollectionBookPage:pagespecial_weapons_ancients",
+      "attributes": {
+        "state": "Active"
+      },
+      "quantity": 0
+    },
+    "e8ea2a45-62e7-4cc8-a0ff-bf1cc6e47aff": {
+      "templateId": "Schematic:sid_edged_sword_light_uc_ore_t01",
+      "attributes": {
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_att_damage_t01",
+          "Alteration:aid_att_damage_t01",
+          "Alteration:aid_att_damage_physical_t02",
+          "Alteration:aid_att_critdamage_t03",
+          "Alteration:aid_conditional_slowed_dmgbonus_t03",
+          "Alteration:aid_g_onmeleehit_stackbuff_movespeed"
+        ]
+      },
+      "quantity": 1
+    },
+    "1f5a1d93-88b8-4166-acfd-1bda33688061": {
+      "templateId": "Schematic:sid_assault_burst_r_ore_t01",
+      "attributes": {
+        "refund_legacy_item": true,
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_att_critchance_t01",
+          "Alteration:aid_att_stability_t01",
+          "Alteration:aid_ele_nature_t02",
+          "Alteration:aid_att_magazinesize_t02",
+          "Alteration:aid_conditional_afflicted_dmgbonus_t03",
+          "Alteration:aid_g_ranged_headshotstreak_dmgbonus_v2"
+        ]
+      },
+      "quantity": 1
+    },
+    "2ec08cb0-e0a9-4a4d-bf65-199bd2d8c3d2": {
+      "templateId": "Schematic:sid_floor_health_uc_t01",
+      "attributes": {
+        "level": 1,
+        "alterations": [
+          "Alteration:aid_att_maxdurability_trap_t01",
+          "Alteration:aid_att_healing_t02",
+          "Alteration:aid_att_maxdurability_trap_t02",
+          "Alteration:aid_att_reloadspeed_trap_t03",
+          "Alteration:aid_att_healing_t03",
+          "Alteration:aid_att_maxdurability_trap_t03"
+        ]
+      },
+      "quantity": 1
+    },
+    "b6e4ec7f-d582-4581-8d36-553ecf6490b4": {
+      "templateId": "Schematic:sid_assault_auto_r_ore_t01",
+      "attributes": {
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_att_damage_t02",
+          "Alteration:aid_att_reloadspeed_ranged_t02",
+          "Alteration:aid_att_damage_physical_t03",
+          "Alteration:aid_att_critchance_t03",
+          "Alteration:aid_conditional_slowed_dmgbonus_t03",
+          "Alteration:aid_g_affliction_v2"
+        ]
+      },
+      "quantity": 1
+    },
+    "c8c0a6b4-ccd0-4630-b346-3b4e7c24cff7": {
+      "templateId": "Schematic:sid_pistol_auto_uc_ore_t01",
+      "attributes": {
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_att_critdamage_t02",
+          "Alteration:aid_att_maxdurability_t01",
+          "Alteration:aid_ele_water_t02",
+          "Alteration:aid_att_magazinesize_t02",
+          "Alteration:aid_conditional_stunned_dmgbonus_t03",
+          "Alteration:aid_g_ranged_headshotstreak_dmgbonus_v2"
+        ]
+      },
+      "quantity": 1
+    },
+    "34cb4c7a-9947-4d43-867e-297698033944": {
+      "templateId": "Schematic:sid_ceiling_electric_single_uc_t01",
+      "attributes": {
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_ele_energy_intrin_t01",
+          "Alteration:aid_att_maxdurability_trap_t01",
+          "Alteration:aid_att_critdamage_t02",
+          "Alteration:aid_att_maxdurability_trap_t02",
+          "Alteration:aid_att_damage_t03",
+          "Alteration:aid_att_maxdurability_trap_t03"
+        ]
+      },
+      "quantity": 1
+    },
+    "6b402f94-2935-4b66-bf96-b5f3038d3779": {
+      "templateId": "Schematic:sid_floor_spikes_wood_uc_t01",
+      "attributes": {
+        "refund_legacy_item": true,
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_att_damage_physical_t01",
+          "Alteration:aid_att_damage_t01",
+          "Alteration:aid_att_critdamage_t02",
+          "Alteration:aid_att_maxdurability_trap_t02",
+          "Alteration:aid_att_damage_t03",
+          "Alteration:aid_att_buildingheal_t03"
+        ]
+      },
+      "quantity": 1
+    },
+    "c245ca96-2c89-4151-85ae-5944a93075f4": {
+      "templateId": "Schematic:sid_edged_sword_light_r_ore_t01",
+      "attributes": {
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_att_lifeleech_t01",
+          "Alteration:aid_att_maxdurability_t01",
+          "Alteration:aid_att_damage_physical_t02",
+          "Alteration:aid_att_critchance_t02",
+          "Alteration:aid_conditional_stunned_dmgbonus_t03",
+          "Alteration:aid_g_onmeleehit_stackbuff_movespeed"
+        ]
+      },
+      "quantity": 1
+    },
+    "cb067848-79f4-4a28-952f-97c01dd4f5bf": {
+      "templateId": "Schematic:sid_pistol_auto_r_ore_t01",
+      "attributes": {
+        "level": 1,
+        "alterations": [
+          "Alteration:aid_att_critdamage_t01",
+          "Alteration:aid_att_reloadspeed_ranged_t01",
+          "Alteration:aid_ele_fire_t02",
+          "Alteration:aid_att_headshotdamage_t02",
+          "Alteration:aid_conditional_stunned_dmgbonus_t03",
+          "Alteration:aid_g_affliction_v2"
+        ]
+      },
+      "quantity": 1
+    },
+    "1fe67f71-cd49-477a-9e4a-404202a5f407": {
+      "templateId": "Schematic:sid_edged_axe_heavy_uc_ore_t01",
+      "attributes": {
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_att_critdamage_t01",
+          "Alteration:aid_att_damage_t01",
+          "Alteration:aid_ele_water_t03",
+          "Alteration:aid_att_critdamage_t03",
+          "Alteration:aid_conditional_boss_dmgbonus_t03",
+          "Alteration:aid_g_onmeleehit_stackbuff_damage"
+        ]
+      },
+      "quantity": 1
+    },
+    "7270e206-b5f1-4580-ad26-172b9b8ab8af": {
+      "templateId": "CollectionBookPage:pagemelee_axes_weapons",
+      "attributes": {
+        "state": "Active"
+      },
+      "quantity": 1
+    },
+    "b8fae294-ed5b-49d8-b3a1-defd127170a4": {
+      "templateId": "Schematic:sid_blunt_medium_c_ore_t01",
+      "attributes": {
+        "level": 1,
+        "alterations": [
+          "Alteration:aid_att_critdamage_t02",
+          "Alteration:aid_att_damage_t01",
+          "Alteration:aid_ele_energy_t03",
+          "Alteration:aid_att_critchance_t02",
+          "Alteration:aid_conditional_afflicted_dmgbonus_t03",
+          "Alteration:aid_g_onmeleehit_stackbuff_movespeed"
+        ]
+      },
+      "quantity": 1
+    },
+    "9bca3502-3405-47ce-877c-ecb300368b64": {
+      "templateId": "Schematic:sid_floor_flamegrill_r_t01",
+      "attributes": {
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_ele_fire_intrin_t02",
+          "Alteration:aid_att_maxdurability_trap_t01",
+          "Alteration:aid_att_damage_t02",
+          "Alteration:aid_att_maxdurability_trap_t02",
+          "Alteration:aid_att_maxdurability_trap_t03",
+          "Alteration:aid_att_buildingmaxhealth_t03"
+        ]
+      },
+      "quantity": 1
+    },
+    "1e1a6082-4b3c-41b4-a25d-9bc6eeb893e5": {
+      "templateId": "CollectionBookPage:pagemelee_spears_weapons",
+      "attributes": {
+        "state": "Active"
+      },
+      "quantity": 1
+    },
+    "23c0efcb-2427-4b75-ac84-1d59d03dc705": {
+      "templateId": "Schematic:sid_launcher_grenade_r_ore_t01",
+      "attributes": {
+        "level": 1,
+        "alterations": [
+          "Alteration:aid_att_critdamage_t01",
+          "Alteration:aid_att_damage_t01",
+          "Alteration:aid_att_damage_physical_t02",
+          "Alteration:aid_att_magazinesize_t02",
+          "Alteration:aid_conditional_slowed_dmgbonus_t03",
+          "Alteration:aid_g_weapon_ondmg_applysnare_v2"
+        ]
+      },
+      "quantity": 1
+    },
+    "61b4d42b-37d4-438e-8829-57845599bad2": {
+      "templateId": "Schematic:sid_blunt_heavy_paddle_r_ore_t01",
+      "attributes": {
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_att_lifeleech_t01",
+          "Alteration:aid_att_movementspeed_t02",
+          "Alteration:aid_att_damage_physical_t02",
+          "Alteration:aid_att_damage_t03",
+          "Alteration:aid_conditional_stunned_dmgbonus_t03",
+          "Alteration:aid_g_weapon_ondmg_applysnare_v2"
+        ]
+      },
+      "quantity": 1
+    },
+    "8c92a5a2-5f1f-4904-95e0-05b17b847412": {
+      "templateId": "Schematic:sid_shotgun_break_r_ore_t01",
+      "attributes": {
+        "refund_legacy_item": true,
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_att_critdamage_t01",
+          "Alteration:aid_att_maxdurability_t01",
+          "Alteration:aid_ele_fire_t02",
+          "Alteration:aid_att_damage_t02",
+          "Alteration:aid_conditional_afflicted_dmgbonus_t03",
+          "Alteration:aid_g_affliction_v2"
+        ]
+      },
+      "quantity": 1
+    },
+    "dbbaffb1-905b-4daf-b15c-b343ae7d76d9": {
+      "templateId": "Schematic:sid_pistol_sixshooter_uc_ore_t01",
+      "attributes": {
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_att_critdamage_t02",
+          "Alteration:aid_att_maxdurability_t02",
+          "Alteration:aid_att_damage_physical_t02",
+          "Alteration:aid_att_headshotdamage_t03",
+          "Alteration:aid_conditional_stunned_dmgbonus_t03",
+          "Alteration:aid_g_weapon_hitstreak_aoe_dmg_v2"
+        ]
+      },
+      "quantity": 1
+    },
+    "823b1bff-26a2-4f50-8459-9066b4e345e1": {
+      "templateId": "Schematic:sid_sniper_boltaction_scope_r_ore_t01",
+      "attributes": {
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_att_reloadspeed_ranged_t02",
+          "Alteration:aid_att_damage_t01",
+          "Alteration:aid_ele_energy_t02",
+          "Alteration:aid_att_magazinesize_t03",
+          "Alteration:aid_conditional_slowed_dmgbonus_t03",
+          "Alteration:aid_g_ranged_headshotstreak_dmgbonus_v2"
+        ]
+      },
+      "quantity": 1
+    },
+    "45d1482a-3018-44c7-b3f3-4b990649ecc0": {
+      "templateId": "Schematic:sid_blunt_hammer_heavy_uc_ore_t01",
+      "attributes": {
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_att_damage_t01",
+          "Alteration:aid_att_heavyattackstaminacost_t02",
+          "Alteration:aid_att_damage_physical_t02",
+          "Alteration:aid_att_firerate_melee_t02",
+          "Alteration:aid_conditional_slowed_dmgbonus_t03",
+          "Alteration:aid_g_onmeleekill_regenshields"
+        ]
+      },
+      "quantity": 1
+    },
+    "4f622779-2510-46e1-b6b9-ea03311b7093": {
+      "templateId": "CollectionBookPage:pagespecial_winter2017_weapons",
+      "attributes": {
+        "state": "Active"
+      },
+      "quantity": 1
+    },
+    "7ceb2611-01b3-4e98-bfbd-0f40e413c7f4": {
+      "templateId": "Schematic:sid_edged_scythe_uc_ore_t01",
+      "attributes": {
+        "level": 1,
+        "alterations": [
+          "Alteration:aid_att_firerate_melee_t01",
+          "Alteration:aid_att_lifeleech_t02",
+          "Alteration:aid_att_damage_physical_t02",
+          "Alteration:aid_att_heavyattackstaminacost_t02",
+          "Alteration:aid_conditional_afflicted_dmgbonus_t03",
+          "Alteration:aid_g_onmeleekill_regenshields"
+        ]
+      },
+      "quantity": 1
+    },
+    "b6f4f43b-228d-434a-b80d-d5c3bada6f61": {
+      "templateId": "Schematic:sid_pistol_handcannon_semi_r_ore_t01",
+      "attributes": {
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_att_damage_t01",
+          "Alteration:aid_att_damage_t02",
+          "Alteration:aid_ele_nature_t02",
+          "Alteration:aid_att_critchance_t03",
+          "Alteration:aid_conditional_boss_dmgbonus_t03",
+          "Alteration:aid_g_ranged_headshot_explodeondeath_v2"
+        ]
+      },
+      "quantity": 1
+    },
+    "9ae96195-89e1-4ad0-bc0d-9df7fdf16c37": {
+      "templateId": "Schematic:sid_assault_semiauto_uc_ore_t01",
+      "attributes": {
+        "refund_legacy_item": true,
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_att_damage_t01",
+          "Alteration:aid_att_reloadspeed_ranged_t01",
+          "Alteration:aid_ele_fire_t03",
+          "Alteration:aid_att_magazinesize_t03",
+          "Alteration:aid_conditional_boss_dmgbonus_t03",
+          "Alteration:aid_g_affliction_v2"
+        ]
+      },
+      "quantity": 1
+    },
+    "7d52111e-14ce-4ee2-8aba-f1a408478c27": {
+      "templateId": "CollectionBookPage:pageranged_explosive_weapons",
+      "attributes": {
+        "state": "Active"
+      },
+      "quantity": 1
+    },
+    "1dcc3649-d853-4799-9b0d-c23a21636b17": {
+      "templateId": "Schematic:sid_pistol_auto_c_ore_t01",
+      "attributes": {
+        "level": 1,
+        "alterations": [
+          "Alteration:aid_att_reloadspeed_ranged_t01",
+          "Alteration:aid_att_maxdurability_t02",
+          "Alteration:aid_att_damage_physical_t02",
+          "Alteration:aid_att_damage_t02",
+          "Alteration:aid_conditional_boss_dmgbonus_t03",
+          "Alteration:aid_g_ranged_headshot_explodeondeath_v2"
+        ]
+      },
+      "quantity": 1
+    },
+    "b14b23d0-ccf0-430a-b68d-3bf0596fde69": {
+      "templateId": "Schematic:sid_ceiling_electric_single_c_t01",
+      "attributes": {
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_ele_energy_intrin_t01",
+          "Alteration:aid_att_maxdurability_trap_t01",
+          "Alteration:aid_att_damage_t02",
+          "Alteration:aid_att_damage_t02",
+          "Alteration:aid_att_maxdurability_trap_t03",
+          "Alteration:aid_att_buildingmaxhealth_t03"
+        ]
+      },
+      "quantity": 1
+    },
+    "c4a6a04f-5604-4487-9142-48a374f393c0": {
+      "templateId": "Schematic:sid_pistol_sixshooter_r_ore_t01",
+      "attributes": {
+        "refund_legacy_item": true,
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_att_critchance_t01",
+          "Alteration:aid_att_stability_t01",
+          "Alteration:aid_ele_fire_t02",
+          "Alteration:aid_att_critdamage_t02",
+          "Alteration:aid_conditional_boss_dmgbonus_t03",
+          "Alteration:aid_g_weapon_ondmg_applysnare_v2"
+        ]
+      },
+      "quantity": 1
+    },
+    "dcb71fcc-29c4-4636-8d0a-ac63e16a7642": {
+      "templateId": "Schematic:sid_shotgun_tactical_r_ore_t01",
+      "attributes": {
+        "refund_legacy_item": true,
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_att_damage_t01",
+          "Alteration:aid_att_stability_t01",
+          "Alteration:aid_att_damage_physical_t02",
+          "Alteration:aid_att_critchance_t02",
+          "Alteration:aid_conditional_boss_dmgbonus_t03",
+          "Alteration:aid_g_ranged_headshotstreak_dmgbonus_v2"
+        ]
+      },
+      "quantity": 1
+    },
+    "dcd5846c-6add-4132-8db4-536a49d8d967": {
+      "templateId": "CollectionBookPage:pagespecial_blackmetal_weapons",
+      "attributes": {
+        "state": "Active"
+      },
+      "quantity": 0
+    },
+    "6b20feb0-6dce-48da-9a1c-f40d2f07e967": {
+      "templateId": "Schematic:sid_sniper_standard_uc_ore_t01",
+      "attributes": {
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_att_critchance_t01",
+          "Alteration:aid_att_damage_t02",
+          "Alteration:aid_att_damage_physical_t02",
+          "Alteration:aid_att_critchance_t03",
+          "Alteration:aid_conditional_afflicted_dmgbonus_t03",
+          "Alteration:aid_g_ranged_headshot_explodeondeath_v2"
+        ]
+      },
+      "quantity": 1
+    },
+    "7b5a363a-c2c6-4930-bbca-e4b2888b62be": {
+      "templateId": "Schematic:sid_floor_launcher_uc_t01",
+      "attributes": {
+        "level": 1,
+        "alterations": [
+          "Alteration:aid_att_maxdurability_trap_t01",
+          "Alteration:aid_att_reloadspeed_trap_t02",
+          "Alteration:aid_att_maxdurability_trap_t02",
+          "Alteration:aid_att_knockbackimpact_t03",
+          "Alteration:aid_att_knockbackimpact_t03",
+          "Alteration:aid_att_buildingheal_t03"
+        ]
+      },
+      "quantity": 1
+    },
+    "8dc9767d-ce9a-4f2c-a93d-e2ddad6c0a89": {
+      "templateId": "CollectionBookPage:pagemelee_clubs_weapons",
+      "attributes": {
+        "state": "Active"
+      },
+      "quantity": 1
+    },
+    "81f624bb-5aeb-4801-81fe-6bb5d15dc1c5": {
+      "templateId": "Schematic:sid_blunt_medium_uc_ore_t01",
+      "attributes": {
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_att_critdamage_t01",
+          "Alteration:aid_att_movementspeed_t01",
+          "Alteration:aid_att_damage_physical_t02",
+          "Alteration:aid_att_firerate_melee_t02",
+          "Alteration:aid_conditional_slowed_dmgbonus_t03",
+          "Alteration:aid_g_onmeleehit_stackbuff_critrate"
+        ]
+      },
+      "quantity": 1
+    },
+    "7d2f1236-86a6-4615-a27e-fa6966c2ff2f": {
+      "templateId": "Schematic:sid_wall_wood_spikes_uc_t01",
+      "attributes": {
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_att_damage_physical_t01",
+          "Alteration:aid_att_maxdurability_trap_t02",
+          "Alteration:aid_att_maxdurability_trap_t02",
+          "Alteration:aid_att_damage_t03",
+          "Alteration:aid_att_damage_t03",
+          "Alteration:aid_att_maxdurability_trap_t03"
+        ]
+      },
+      "quantity": 1
+    },
+    "ad5bdf50-79aa-4946-8a23-0bad6b807d23": {
+      "templateId": "CollectionBookPage:pagespecial_weapons_vacuumtube",
+      "attributes": {
+        "state": "Active"
+      },
+      "quantity": 0
+    },
+    "446bd7a0-90dc-4f16-95de-1df558d9ca64": {
+      "templateId": "Schematic:sid_piercing_spear_military_r_ore_t01",
+      "attributes": {
+        "level": 1,
+        "alterations": [
+          "Alteration:aid_att_damage_t01",
+          "Alteration:aid_att_maxdurability_t02",
+          "Alteration:aid_att_damage_physical_t02",
+          "Alteration:aid_att_critdamage_t03",
+          "Alteration:aid_conditional_stunned_dmgbonus_t03",
+          "Alteration:aid_g_affliction_v2"
+        ]
+      },
+      "quantity": 1
+    },
+    "390fd493-1471-4655-a8f7-7fa742d1427a": {
+      "templateId": "Schematic:sid_pistol_semiauto_r_ore_t01",
+      "attributes": {
+        "level": 1,
+        "alterations": [
+          "Alteration:aid_att_reloadspeed_ranged_t02",
+          "Alteration:aid_att_maxdurability_t01",
+          "Alteration:aid_att_damage_physical_t02",
+          "Alteration:aid_att_critchance_t02",
+          "Alteration:aid_conditional_boss_dmgbonus_t03",
+          "Alteration:aid_g_affliction_v2"
+        ]
+      },
+      "quantity": 1
+    },
+    "3b8af223-f871-445e-a7ed-394846860a48": {
+      "templateId": "Schematic:sid_edged_axe_medium_c_ore_t01",
+      "attributes": {
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_att_firerate_melee_t02",
+          "Alteration:aid_att_movementspeed_t02",
+          "Alteration:aid_att_damage_physical_t02",
+          "Alteration:aid_att_heavyattackstaminacost_t03",
+          "Alteration:aid_conditional_afflicted_dmgbonus_t03",
+          "Alteration:aid_g_weapon_ondmg_applysnare_v2"
+        ]
+      },
+      "quantity": 1
+    },
+    "b2188563-7a39-44d1-b6e4-7abcec069b05": {
+      "templateId": "Schematic:sid_edged_axe_medium_uc_ore_t01",
+      "attributes": {
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_att_critdamage_t01",
+          "Alteration:aid_att_damage_t02",
+          "Alteration:aid_ele_nature_t02",
+          "Alteration:aid_att_damage_t02",
+          "Alteration:aid_conditional_stunned_dmgbonus_t03",
+          "Alteration:aid_g_onmeleehit_stackbuff_armor"
+        ]
+      },
+      "quantity": 1
+    },
+    "63931448-92cb-4540-8761-43dbc46d3158": {
+      "templateId": "CollectionBookPage:pagespecial_blockbuster2018_ranged",
+      "attributes": {
+        "state": "Active"
+      },
+      "quantity": 1
+    },
+    "376f1c2a-d04f-4e5c-bc5f-66ca8ded4970": {
+      "templateId": "Schematic:sid_pistol_sixshooter_c_ore_t01",
+      "attributes": {
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_att_reloadspeed_ranged_t01",
+          "Alteration:aid_att_maxdurability_t02",
+          "Alteration:aid_att_damage_physical_t03",
+          "Alteration:aid_att_critdamage_t03",
+          "Alteration:aid_conditional_afflicted_dmgbonus_t03",
+          "Alteration:aid_g_ranged_headshotstreak_dmgbonus_v2"
+        ]
+      },
+      "quantity": 1
+    },
+    "91d854b5-8183-4233-88d8-05f8e0302438": {
+      "templateId": "Schematic:sid_sniper_boltaction_c_ore_t01",
+      "attributes": {
+        "level": 1,
+        "alterations": [
+          "Alteration:aid_att_critdamage_t01",
+          "Alteration:aid_att_maxdurability_t01",
+          "Alteration:aid_ele_nature_t03",
+          "Alteration:aid_att_headshotdamage_t02",
+          "Alteration:aid_conditional_stunned_dmgbonus_t03",
+          "Alteration:aid_g_ranged_headshotstreak_dmgbonus_v2"
+        ]
+      },
+      "quantity": 1
+    },
+    "ab885ed3-db7f-4961-8936-dd06a95342fe": {
+      "templateId": "Schematic:sid_sniper_standard_r_ore_t01",
+      "attributes": {
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_att_reloadspeed_ranged_t01",
+          "Alteration:aid_att_maxdurability_t02",
+          "Alteration:aid_att_damage_physical_t02",
+          "Alteration:aid_att_headshotdamage_t03",
+          "Alteration:aid_conditional_slowed_dmgbonus_t03",
+          "Alteration:aid_g_standstill_stackbuff_damagevsmist"
+        ]
+      },
+      "quantity": 1
+    },
+    "bf8b6503-5b19-4968-bee0-e71ae7ac9fbe": {
+      "templateId": "Schematic:sid_shotgun_standard_r_ore_t01",
+      "attributes": {
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_att_reloadspeed_ranged_t01",
+          "Alteration:aid_att_damage_t02",
+          "Alteration:aid_ele_fire_t02",
+          "Alteration:aid_att_magazinesize_t03",
+          "Alteration:aid_conditional_slowed_dmgbonus_t03",
+          "Alteration:aid_g_ranged_headshotstreak_dmgbonus_v2"
+        ]
+      },
+      "quantity": 1
+    },
+    "3c9bb41a-b251-48d3-bc69-13a0830531a6": {
+      "templateId": "CollectionBookPage:pagemelee_tools_weapons",
+      "attributes": {
+        "state": "Active"
+      },
+      "quantity": 1
+    },
+    "0583c94a-f0c3-4868-82b4-a4ff6b06f920": {
+      "templateId": "Schematic:sid_blunt_heavy_paddle_uc_ore_t01",
+      "attributes": {
+        "level": 1,
+        "alterations": [
+          "Alteration:aid_att_damage_t01",
+          "Alteration:aid_att_lifeleech_t01",
+          "Alteration:aid_att_damage_physical_t03",
+          "Alteration:aid_att_firerate_melee_t03",
+          "Alteration:aid_conditional_slowed_dmgbonus_t03",
+          "Alteration:aid_g_weapon_ondmg_applysnare_v2"
+        ]
+      },
+      "quantity": 1
+    },
+    "31d5ea3d-23b9-487e-9ac7-7e30db866f4a": {
+      "templateId": "Schematic:sid_shotgun_heavy_sr_ore_t01",
+      "attributes": {
+        "refund_legacy_item": true,
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_att_weapon_afflicted_dmgbonus",
+          "Alteration:aid_att_ranged_recoil",
+          "Alteration:aid_att_ranged_reloadspeed_alt1",
+          "Alteration:aid_att_ranged_durabilitydecay_alt2",
+          "Alteration:aid_att_ranged_damage_alt2"
+        ]
+      },
+      "quantity": 1
+    },
+    "7f6333ac-cba1-4154-86d6-d9020fef1018": {
+      "templateId": "Schematic:sid_assault_singleshot_r_ore_t01",
+      "attributes": {
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_att_firerate_ranged_t01",
+          "Alteration:aid_att_damage_t01",
+          "Alteration:aid_att_damage_physical_t02",
+          "Alteration:aid_att_damage_t02",
+          "Alteration:aid_conditional_stunned_dmgbonus_t03",
+          "Alteration:aid_g_shrapnel"
+        ]
+      },
+      "quantity": 1
+    },
+    "e241f5ea-2a50-46f2-9be6-48c3ec162b99": {
+      "templateId": "Schematic:sid_piercing_spear_uc_ore_t01",
+      "attributes": {
+        "level": 1,
+        "alterations": [
+          "Alteration:aid_att_damage_t01",
+          "Alteration:aid_att_damage_t02",
+          "Alteration:aid_att_damage_physical_t03",
+          "Alteration:aid_att_critdamage_t02",
+          "Alteration:aid_conditional_slowed_dmgbonus_t03",
+          "Alteration:aid_g_onimpactbreak_dealdamage"
+        ]
+      },
+      "quantity": 1
+    },
+    "2ed1a7a5-9b98-45ee-a39f-521d82c90e76": {
+      "templateId": "Schematic:sid_ceiling_gas_uc_t01",
+      "attributes": {
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_att_damage_physical_t01",
+          "Alteration:aid_att_maxdurability_trap_t01",
+          "Alteration:aid_att_critdamage_t02",
+          "Alteration:aid_att_maxdurability_trap_t02",
+          "Alteration:aid_att_damage_t02",
+          "Alteration:aid_att_buildingmaxhealth_t03"
+        ]
+      },
+      "quantity": 1
+    },
+    "f61a7aea-b30e-4ff0-ad76-5948e4da51ba": {
+      "templateId": "CollectionBookPage:pagespecial_weapons_vindertech",
+      "attributes": {
+        "state": "Active"
+      },
+      "quantity": 0
+    },
+    "b4ce4c13-c04d-4aca-9770-e8036b147a8b": {
+      "templateId": "Schematic:sid_sniper_auto_uc_ore_t01",
+      "attributes": {
+        "level": 1,
+        "alterations": [
+          "Alteration:aid_att_critdamage_t01",
+          "Alteration:aid_att_stability_t01",
+          "Alteration:aid_ele_energy_t02",
+          "Alteration:aid_att_magazinesize_t03",
+          "Alteration:aid_conditional_stunned_dmgbonus_t03",
+          "Alteration:aid_g_affliction_v2"
+        ]
+      },
+      "quantity": 1
+    },
+    "9428167d-6c9e-4e67-ae11-8b5b20d4cedd": {
+      "templateId": "CollectionBookPage:pagespecial_retroscifi_weapons",
+      "attributes": {
+        "state": "Active"
+      },
+      "quantity": 0
+    },
+    "b1b5dd95-4fdc-45c5-aef5-bdba5a297a65": {
+      "templateId": "CollectionBookPage:pagespecial_scavenger",
+      "attributes": {
+        "state": "Active"
+      },
+      "quantity": 1
+    },
+    "fe5cd27d-4845-440d-8faf-e27da6eed834": {
+      "templateId": "Schematic:sid_wall_darts_r_t01",
+      "attributes": {
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_att_damage_physical_t01",
+          "Alteration:aid_att_maxdurability_trap_t02",
+          "Alteration:aid_att_reloadspeed_trap_t02",
+          "Alteration:aid_att_maxdurability_trap_t02",
+          "Alteration:aid_att_maxdurability_trap_t03",
+          "Alteration:aid_att_buildingmaxhealth_t03"
+        ]
+      },
+      "quantity": 1
+    },
+    "8fdeec15-103d-409c-9a94-c2505f53bf83": {
+      "templateId": "Schematic:sid_assault_lmg_r_ore_t01",
+      "attributes": {
+        "level": 1,
+        "alterations": [
+          "Alteration:aid_att_reloadspeed_ranged_t01",
+          "Alteration:aid_att_reloadspeed_ranged_t02",
+          "Alteration:aid_att_damage_physical_t02",
+          "Alteration:aid_att_headshotdamage_t02",
+          "Alteration:aid_conditional_afflicted_dmgbonus_t03",
+          "Alteration:aid_g_ranged_headshotstreak_dmgbonus_v2"
+        ]
+      },
+      "quantity": 1
+    },
+    "c0887bad-3091-4b62-84a7-b9fa2fe512e2": {
+      "templateId": "Schematic:sid_assault_burst_uc_ore_t01",
+      "attributes": {
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_att_damage_t01",
+          "Alteration:aid_att_maxdurability_t02",
+          "Alteration:aid_att_damage_physical_t02",
+          "Alteration:aid_att_critdamage_t02",
+          "Alteration:aid_conditional_afflicted_dmgbonus_t03",
+          "Alteration:aid_g_weapon_ondmg_applysnare_v2"
+        ]
+      },
+      "quantity": 1
+    },
+    "d49da10b-0fe7-4a3c-b918-8e9ff0933ecd": {
+      "templateId": "CollectionBookPage:pagetraps_wall",
+      "attributes": {
+        "state": "Active"
+      },
+      "quantity": 1
+    },
+    "19ba1a67-9d72-42ce-bf0a-819081faa915": {
+      "templateId": "CollectionBookPage:pagetraps_floor",
+      "attributes": {
+        "state": "Active"
+      },
+      "quantity": 1
+    },
+    "81b4772a-62ae-4070-ae8c-dee9239250b3": {
+      "templateId": "Schematic:sid_edged_axe_heavy_r_ore_t01",
+      "attributes": {
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_att_lifeleech_t01",
+          "Alteration:aid_att_damage_t02",
+          "Alteration:aid_att_damage_physical_t03",
+          "Alteration:aid_att_damage_t02",
+          "Alteration:aid_conditional_slowed_dmgbonus_t03",
+          "Alteration:aid_g_weapon_knockback_impact_v2"
+        ]
+      },
+      "quantity": 1
+    },
+    "0ac9ddca-f97b-4324-8ee0-96277ffba981": {
+      "templateId": "Schematic:sid_ceiling_gas_r_t01",
+      "attributes": {
+        "refund_legacy_item": true,
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_att_trap_maxdurability",
+          "Alteration:aid_att_trap_coredamage_t02",
+          "Alteration:aid_att_trap_coredamage_t03"
+        ]
+      },
+      "quantity": 1
+    },
+    "036a01c6-6bae-4584-85a2-8b34fa6d862d": {
+      "templateId": "Schematic:sid_pistol_firecracker_r_ore_t01",
+      "attributes": {
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_att_critchance_t02",
+          "Alteration:aid_att_stability_t01",
+          "Alteration:aid_att_damage_physical_t02",
+          "Alteration:aid_att_critdamage_t03",
+          "Alteration:aid_conditional_stunned_dmgbonus_t03",
+          "Alteration:aid_g_affliction_v2"
+        ]
+      },
+      "quantity": 1
+    },
+    "f2ea3a1d-5d5b-4f80-b00b-c7a2c1191841": {
+      "templateId": "Schematic:sid_floor_spikes_uc_t01",
+      "attributes": {
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_att_damage_physical_t02",
+          "Alteration:aid_att_critchance_t02",
+          "Alteration:aid_att_critdamage_t02",
+          "Alteration:aid_att_critchance_t02",
+          "Alteration:aid_att_reloadspeed_trap_t03",
+          "Alteration:aid_att_buildingmaxhealth_t03"
+        ]
+      },
+      "quantity": 1
+    },
+    "81e2063d-d011-4aeb-8c2f-a98ee4bc48c2": {
+      "templateId": "Schematic:sid_blunt_medium_r_ore_t01",
+      "attributes": {
+        "refund_legacy_item": true,
+        "level": 1,
+        "alterations": [
+          "Alteration:aid_att_firerate_melee_t01",
+          "Alteration:aid_att_maxdurability_t01",
+          "Alteration:aid_ele_fire_t02",
+          "Alteration:aid_att_heavyattackstaminacost_t02",
+          "Alteration:aid_conditional_afflicted_dmgbonus_t03",
+          "Alteration:aid_g_weapon_ondmg_applysnare_v2"
+        ]
+      },
+      "quantity": 1
+    },
+    "5b93d9c2-f514-4e67-9960-0f60dc264d2b": {
+      "templateId": "Schematic:sid_sniper_auto_r_ore_t01",
+      "attributes": {
+        "refund_legacy_item": true,
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_att_ranged_durabilitydecay",
+          "Alteration:aid_att_ranged_durabilitydecay_alt1",
+          "Alteration:aid_att_ranged_critchance_alt1"
+        ]
+      },
+      "quantity": 1
+    },
+    "98cfcb64-3836-40dd-bffb-a690a1d2ed6a": {
+      "templateId": "Schematic:sid_floor_spikes_r_t01",
+      "attributes": {
+        "refund_legacy_item": true,
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_att_damage_physical_t01",
+          "Alteration:aid_att_damage_t01",
+          "Alteration:aid_att_critdamage_t02",
+          "Alteration:aid_att_critchance_t02",
+          "Alteration:aid_att_maxdurability_trap_t02",
+          "Alteration:aid_att_maxdurability_trap_t03"
+        ]
+      },
+      "quantity": 1
+    },
+    "ac767d85-836b-4d3a-86df-cedc41eb0525": {
+      "templateId": "CollectionBookPage:pageranged_snipers_weapons",
+      "attributes": {
+        "sectionStates": [
+          {
+            "section": "weapons_Ranged_Snipers_4",
+            "state": "Completed"
+          }
+        ],
+        "state": "Active"
+      },
+      "quantity": 1
+    },
+    "e0ea0ce4-cb09-40d6-83f7-96b28f191f5a": {
+      "templateId": "CollectionBookPage:pagespecial_hydraulic",
+      "attributes": {
+        "state": "Active"
+      },
+      "quantity": 1
+    },
+    "38e18fd0-a84a-4db9-ab2c-b20c348b9042": {
+      "templateId": "CollectionBookPage:pagespecial_weapons_fortnitemares",
+      "attributes": {
+        "state": "Active"
+      },
+      "quantity": 0
+    },
+    "2a052b48-86dc-4b91-9a54-1c756bccac99": {
+      "templateId": "Schematic:sid_edged_sword_heavy_r_ore_t01",
+      "attributes": {
+        "refund_legacy_item": true,
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_att_melee_critchance",
+          "Alteration:aid_att_melee_damage",
+          "Alteration:aid_att_melee_critdamage_alt1"
+        ]
+      },
+      "quantity": 1
+    },
+    "fe3e7841-f74b-4c30-9316-a23feef0374a": {
+      "templateId": "Schematic:sid_blunt_light_r_ore_t01",
+      "attributes": {
+        "refund_legacy_item": true,
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_att_melee_critdamage",
+          "Alteration:aid_att_melee_critchance",
+          "Alteration:aid_att_weapon_stunned_dmgbonus_alt2"
+        ]
+      },
+      "quantity": 1
+    },
+    "e164f675-0948-40c5-9a2e-73fec94eb101": {
+      "templateId": "CollectionBookPage:pagemelee_scythes_weapons",
+      "attributes": {
+        "state": "Active"
+      },
+      "quantity": 1
+    },
+    "2ae18e20-af77-44d8-af91-6c2def5e799d": {
+      "templateId": "Schematic:sid_shotgun_break_ou_r_ore_t01",
+      "attributes": {
+        "level": 1,
+        "alterations": [
+          "Alteration:aid_att_reloadspeed_ranged_t02",
+          "Alteration:aid_att_stability_t02",
+          "Alteration:aid_att_damage_physical_t03",
+          "Alteration:aid_att_critchance_t02",
+          "Alteration:aid_conditional_boss_dmgbonus_t03",
+          "Alteration:aid_g_onimpactbreak_dealdamage"
+        ]
+      },
+      "quantity": 1
+    },
+    "1158166e-e37e-4821-8d45-45ba43f8d9ae": {
+      "templateId": "Schematic:sid_floor_health_r_t01",
+      "attributes": {
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_att_maxdurability_trap_t02",
+          "Alteration:aid_att_reloadspeed_trap_t01",
+          "Alteration:aid_att_maxdurability_trap_t02",
+          "Alteration:aid_att_maxdurability_trap_t02",
+          "Alteration:aid_att_healing_t02",
+          "Alteration:aid_att_buildingheal_t03"
+        ]
+      },
+      "quantity": 1
+    },
+    "c1600b5c-0bd9-46ee-9ab6-5c90da0db5d7": {
+      "templateId": "Schematic:sid_wall_electric_r_t01",
+      "attributes": {
+        "level": 1,
+        "alterations": [
+          "Alteration:aid_ele_nature_intrin_t01",
+          "Alteration:aid_att_critchance_t01",
+          "Alteration:aid_att_reloadspeed_trap_t02",
+          "Alteration:aid_att_critchance_t02",
+          "Alteration:aid_att_maxdurability_trap_t03",
+          "Alteration:aid_att_maxdurability_trap_t03"
+        ]
+      },
+      "quantity": 1
+    },
+    "389638af-ea1e-471d-856b-0d433cb041e5": {
+      "templateId": "Schematic:sid_wall_launcher_uc_t01",
+      "attributes": {
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_att_knockbackimpact_t01",
+          "Alteration:aid_att_maxdurability_trap_t02",
+          "Alteration:aid_att_knockbackimpact_t02",
+          "Alteration:aid_att_maxdurability_trap_t02",
+          "Alteration:aid_att_knockbackimpact_t03",
+          "Alteration:aid_att_buildingheal_t03"
+        ]
+      },
+      "quantity": 1
+    },
+    "81e5ad4a-b961-4064-ae5f-12444a25d608": {
+      "templateId": "CollectionBookPage:pagespecial_boombox_weapons",
+      "attributes": {
+        "state": "Active"
+      },
+      "quantity": 0
+    },
+    "98950b00-438a-44be-89fb-52f79b608b84": {
+      "templateId": "Schematic:sid_edged_sword_heavy_uc_ore_t01",
+      "attributes": {
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_att_critdamage_t01",
+          "Alteration:aid_att_maxdurability_t02",
+          "Alteration:aid_ele_fire_t03",
+          "Alteration:aid_att_damage_t02",
+          "Alteration:aid_conditional_slowed_dmgbonus_t03",
+          "Alteration:aid_g_affliction_v2"
+        ]
+      },
+      "quantity": 1
+    },
+    "965a7fb5-b96e-4ab9-8d73-ef8e65a92e78": {
+      "templateId": "Schematic:sid_edged_sword_medium_r_ore_t01",
+      "attributes": {
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_att_critdamage_t01",
+          "Alteration:aid_att_lifeleech_t02",
+          "Alteration:aid_ele_fire_t02",
+          "Alteration:aid_att_critdamage_t03",
+          "Alteration:aid_conditional_stunned_dmgbonus_t03",
+          "Alteration:aid_g_onmeleehit_stackbuff_movespeed"
+        ]
+      },
+      "quantity": 1
+    },
+    "3aaca328-c32b-4467-9412-562dc6b2e819": {
+      "templateId": "CollectionBookPage:pagespecial_weapons_neon",
+      "attributes": {
+        "state": "Active"
+      },
+      "quantity": 0
+    },
+    "94234b60-88f1-47db-8b20-cc7d6f0c2db9": {
+      "templateId": "CollectionBookPage:pagespecial_weapons_spy",
+      "attributes": {
+        "state": "Active"
+      },
+      "quantity": 0
+    },
+    "819aa183-636e-4a0d-a023-7f6354b9035c": {
+      "templateId": "CollectionBookPage:page_ranged_smgs_weapons",
+      "attributes": {
+        "state": "Active"
+      },
+      "quantity": 0
+    },
+    "c567cb77-b08c-458b-96d4-6e6743b62394": {
+      "templateId": "Schematic:sid_ceiling_electric_aoe_r_t01",
+      "attributes": {
+        "level": 1,
+        "alterations": [
+          "Alteration:aid_ele_energy_intrin_t01",
+          "Alteration:aid_att_maxdurability_trap_t02",
+          "Alteration:aid_att_maxdurability_trap_t02",
+          "Alteration:aid_att_damage_t03",
+          "Alteration:aid_att_maxdurability_trap_t03",
+          "Alteration:aid_att_maxdurability_trap_t03"
+        ]
+      },
+      "quantity": 1
+    },
+    "0fd37af9-c9b9-42c2-8f07-16893e65059e": {
+      "templateId": "Schematic:sid_floor_tar_r_t01",
+      "attributes": {
+        "level": 1,
+        "alterations": [
+          "Alteration:aid_ele_fire_intrin_t01",
+          "Alteration:aid_att_maxdurability_trap_t01",
+          "Alteration:aid_att_maxdurability_trap_t03",
+          "Alteration:aid_att_maxdurability_trap_t02",
+          "Alteration:aid_att_reloadspeed_trap_t03",
+          "Alteration:aid_att_buildingmaxhealth_t03"
+        ]
+      },
+      "quantity": 1
+    },
+    "ee38474a-a448-4103-a57c-232fb8cf2661": {
+      "templateId": "Schematic:sid_blunt_light_boombox_r_ore_t01",
+      "attributes": {
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_att_critdamage_t01",
+          "Alteration:aid_att_damageresistance_t02",
+          "Alteration:aid_att_damage_physical_t02",
+          "Alteration:aid_att_damageresistance_t03",
+          "Alteration:aid_att_critchance_t03",
+          "Alteration:aid_g_onimpactbreak_dance"
+        ]
+      },
+      "quantity": 1
+    },
+    "b47d3d67-2a87-4e79-b980-748a7d7b1b99": {
+      "templateId": "CollectionBookPage:pagespecial_stormking_weapons",
+      "attributes": {
+        "state": "Active"
+      },
+      "quantity": 0
+    },
+    "199eade1-3526-45af-9273-e5ce280addb4": {
+      "templateId": "Schematic:sid_wall_light_r_t01",
+      "attributes": {
+        "level": 1,
+        "alterations": [
+          "Alteration:aid_att_maxdurability_trap_t01",
+          "Alteration:aid_att_reloadspeed_trap_t01",
+          "Alteration:aid_att_knockbackimpact_t02",
+          "Alteration:aid_att_maxdurability_trap_t03",
+          "Alteration:aid_att_knockbackimpact_t03",
+          "Alteration:aid_att_maxdurability_trap_t03"
+        ]
+      },
+      "quantity": 1
+    },
+    "d981dd1f-c7bc-4238-875e-5f37fffa58c1": {
+      "templateId": "Schematic:sid_shotgun_auto_uc_ore_t01",
+      "attributes": {
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_att_reloadspeed_ranged_t02",
+          "Alteration:aid_att_maxdurability_t02",
+          "Alteration:aid_att_damage_physical_t02",
+          "Alteration:aid_att_headshotdamage_t02",
+          "Alteration:aid_conditional_afflicted_dmgbonus_t03",
+          "Alteration:aid_g_weapon_ondmg_applysnare_v2"
+        ]
+      },
+      "quantity": 1
+    },
+    "21484dc4-457e-49d6-8bfb-8192582a1a23": {
+      "templateId": "Schematic:sid_sniper_boltaction_uc_ore_t01",
+      "attributes": {
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_att_critchance_t01",
+          "Alteration:aid_att_maxdurability_t01",
+          "Alteration:aid_ele_energy_t02",
+          "Alteration:aid_att_critchance_t03",
+          "Alteration:aid_conditional_slowed_dmgbonus_t03",
+          "Alteration:aid_g_weapon_ondmg_applysnare_v2"
+        ]
+      },
+      "quantity": 1
+    },
+    "9ad56055-b140-4dd4-a758-675e14fa4c4f": {
+      "templateId": "Schematic:sid_shotgun_burst_blackmetal_r_ore_t01",
+      "attributes": {
+        "level": 1,
+        "alterations": [
+          "Alteration:aid_g_onkill_spawnsparkburst_r",
+          "Alteration:aid_att_critdamage_t01",
+          "Alteration:aid_att_critdamage_t02",
+          "Alteration:aid_att_damage_physical_t02",
+          "Alteration:aid_att_weaponimpact_t02",
+          "Alteration:aid_conditional_boss_dmgbonus_t03"
+        ]
+      },
+      "quantity": 1
+    },
+    "20dd0fe0-4920-4c9d-a07a-a0f56f49606c": {
+      "templateId": "CollectionBookPage:pagespecial_weapons_chinesenewyear2018",
+      "attributes": {
+        "state": "Active"
+      },
+      "quantity": 1
+    },
+    "ef6cb610-e101-4b3a-ab4a-ae1fcc6c2575": {
+      "templateId": "Schematic:sid_blunt_tool_light_uc_ore_t01",
+      "attributes": {
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_att_firerate_melee_t02",
+          "Alteration:aid_att_maxdurability_t02",
+          "Alteration:aid_ele_energy_t03",
+          "Alteration:aid_att_critchance_t03",
+          "Alteration:aid_conditional_stunned_dmgbonus_t03",
+          "Alteration:aid_g_weapon_ondmg_applysnare_v2"
+        ]
+      },
+      "quantity": 1
+    },
+    "0b18c8d8-4758-4c55-bd39-5d42eb679b4b": {
+      "templateId": "CollectionBookPage:pagespecial_steampunk_weapons",
+      "attributes": {
+        "state": "Active"
+      },
+      "quantity": 0
+    },
+    "571f21d9-a4cc-482a-9830-3d74552737e5": {
+      "templateId": "Schematic:sid_floor_ward_uc_t01",
+      "attributes": {
+        "level": 1,
+        "alterations": [
+          "Alteration:aid_att_damage_t01",
+          "Alteration:aid_att_maxdurability_trap_t01",
+          "Alteration:aid_att_maxdurability_trap_t02",
+          "Alteration:aid_att_critdamage_t02",
+          "Alteration:aid_att_buildingheal_t02",
+          "Alteration:aid_att_buildingmaxhealth_t03"
+        ]
+      },
+      "quantity": 1
+    },
+    "a8f357cb-8639-48a8-9c56-fa4032ca8643": {
+      "templateId": "Schematic:sid_shotgun_semiauto_uc_ore_t01",
+      "attributes": {
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_att_reloadspeed_ranged_t01",
+          "Alteration:aid_att_reloadspeed_ranged_t01",
+          "Alteration:aid_att_damage_physical_t02",
+          "Alteration:aid_att_headshotdamage_t02",
+          "Alteration:aid_conditional_stunned_dmgbonus_t03",
+          "Alteration:aid_g_affliction_v2"
+        ]
+      },
+      "quantity": 1
+    },
+    "e3f6989a-6566-4643-a0e4-baa3d3eb2408": {
+      "templateId": "Schematic:sid_assault_auto_c_ore_t01",
+      "attributes": {
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_att_reloadspeed_ranged_t01",
+          "Alteration:aid_att_maxdurability_t01",
+          "Alteration:aid_att_damage_physical_t02",
+          "Alteration:aid_att_magazinesize_t03",
+          "Alteration:aid_conditional_slowed_dmgbonus_t03",
+          "Alteration:aid_g_ranged_headshotstreak_dmgbonus_v2"
+        ]
+      },
+      "quantity": 1
+    },
+    "03047a03-6250-4a05-835e-3d224f0bdcce": {
+      "templateId": "Schematic:sid_edged_axe_medium_r_ore_t01",
+      "attributes": {
+        "level": 1,
+        "alterations": [
+          "Alteration:aid_att_firerate_melee_t01",
+          "Alteration:aid_att_lifeleech_t02",
+          "Alteration:aid_att_damage_physical_t02",
+          "Alteration:aid_att_firerate_melee_t02",
+          "Alteration:aid_conditional_afflicted_dmgbonus_t03",
+          "Alteration:aid_g_weapon_ondmg_applysnare_v2"
+        ]
+      },
+      "quantity": 1
+    },
+    "aa924f98-3ca8-42b9-bdfd-2af0fa2a0394": {
+      "templateId": "Schematic:sid_sniper_boltaction_r_ore_t01",
+      "attributes": {
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_att_firerate_ranged_t02",
+          "Alteration:aid_att_stability_t02",
+          "Alteration:aid_att_damage_physical_t03",
+          "Alteration:aid_att_headshotdamage_t02",
+          "Alteration:aid_conditional_boss_dmgbonus_t03",
+          "Alteration:aid_g_weapon_ondmg_applysnare_v2"
+        ]
+      },
+      "quantity": 1
+    },
+    "92eba1cb-9993-49ff-9429-a0df01f088d9": {
+      "templateId": "Schematic:sid_shotgun_break_uc_ore_t01",
+      "attributes": {
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_att_critdamage_t01",
+          "Alteration:aid_att_damage_t01",
+          "Alteration:aid_att_damage_physical_t02",
+          "Alteration:aid_att_critdamage_t03",
+          "Alteration:aid_conditional_slowed_dmgbonus_t03",
+          "Alteration:aid_g_weapon_ondmg_applysnare_v2"
+        ]
+      },
+      "quantity": 1
+    },
+    "6b960af2-2f3c-4381-b6d9-48f43c09281c": {
+      "templateId": "Schematic:sid_pistol_boltrevolver_r_ore_t01",
+      "attributes": {
+        "level": 1,
+        "alterations": [
+          "Alteration:aid_att_critchance_t01",
+          "Alteration:aid_att_damage_t02",
+          "Alteration:aid_ele_nature_t02",
+          "Alteration:aid_att_critchance_t03",
+          "Alteration:aid_conditional_stunned_dmgbonus_t03",
+          "Alteration:aid_g_shrapnel"
+        ]
+      },
+      "quantity": 1
+    },
+    "1bb2352f-5435-4a50-bfb8-5aa228a2199d": {
+      "templateId": "Schematic:sid_edged_axe_light_r_ore_t01",
+      "attributes": {
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_att_critdamage_t02",
+          "Alteration:aid_att_heavyattackstaminacost_t01",
+          "Alteration:aid_att_damage_physical_t02",
+          "Alteration:aid_att_critchance_t02",
+          "Alteration:aid_conditional_stunned_dmgbonus_t03",
+          "Alteration:aid_g_weapon_ondmg_applysnare_v2"
+        ]
+      },
+      "quantity": 1
+    },
+    "973aeb47-9c46-48dd-9001-cb7e8e979888": {
+      "templateId": "CollectionBookPage:pageranged_assault_weapons",
+      "attributes": {
+        "state": "Active"
+      },
+      "quantity": 1
+    },
+    "6db867c6-4d56-4fef-82db-9b2df5c1cdcd": {
+      "templateId": "Schematic:sid_floor_campfire_r_t01",
+      "attributes": {
+        "refund_legacy_item": true,
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_att_healing_t01",
+          "Alteration:aid_att_reloadspeed_trap_t01",
+          "Alteration:aid_att_maxdurability_trap_t02",
+          "Alteration:aid_att_maxdurability_trap_t02",
+          "Alteration:aid_att_maxdurability_trap_t02",
+          "Alteration:aid_att_buildingmaxhealth_t03"
+        ]
+      },
+      "quantity": 1
+    },
+    "ec86fee2-3fe1-4f27-bc65-fbfbf6e305f9": {
+      "templateId": "CollectionBookPage:pagespecial_ratrod_weapons",
+      "attributes": {
+        "state": "Active"
+      },
+      "quantity": 0
+    },
+    "7847dc10-2e0f-4d23-b50c-d43807c74c9c": {
+      "templateId": "Schematic:sid_wall_speaker_r_t01",
+      "attributes": {
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_att_maxdurability_trap_t01",
+          "Alteration:aid_att_knockbackimpact_t01",
+          "Alteration:aid_att_maxdurability_trap_t02",
+          "Alteration:aid_att_maxdurability_trap_t02",
+          "Alteration:aid_att_knockbackimpact_t02",
+          "Alteration:aid_att_effectduration_t03"
+        ]
+      },
+      "quantity": 1
+    },
+    "65c75819-c049-4e9f-b578-95ce7ab77c87": {
+      "templateId": "CollectionBookPage:page_ranged_pistols_weapons",
+      "attributes": {
+        "sectionStates": [
+          {
+            "section": "weapons_Ranged_Pistols_8",
+            "state": "Completed"
+          }
+        ],
+        "state": "Active"
+      },
+      "quantity": 1
+    },
+    "1a256f0f-8f37-473b-8292-cccc51b83969": {
+      "templateId": "Schematic:sid_shotgun_auto_r_ore_t01",
+      "attributes": {
+        "level": 1,
+        "alterations": [
+          "Alteration:aid_att_firerate_ranged_t01",
+          "Alteration:aid_att_damage_t01",
+          "Alteration:aid_att_damage_physical_t02",
+          "Alteration:aid_att_critdamage_t02",
+          "Alteration:aid_conditional_afflicted_dmgbonus_t03",
+          "Alteration:aid_g_affliction_v2"
+        ]
+      },
+      "quantity": 1
+    },
+    "6e3a6cd2-f79a-49ac-81fc-283c569183ca": {
+      "templateId": "Schematic:sid_blunt_hammer_heavy_r_ore_t01",
+      "attributes": {
+        "refund_legacy_item": true,
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_att_melee_damage",
+          "Alteration:aid_att_melee_staminacostreduction",
+          "Alteration:aid_att_melee_damage_alt1"
+        ]
+      },
+      "quantity": 1
+    },
+    "28932c08-4316-4df1-b50c-3010a8f6bf24": {
+      "templateId": "Schematic:sid_edged_scythe_r_ore_t01",
+      "attributes": {
+        "level": 1,
+        "alterations": [
+          "Alteration:aid_att_critdamage_t01",
+          "Alteration:aid_att_damageresistance_t01",
+          "Alteration:aid_att_damage_physical_t03",
+          "Alteration:aid_att_heavyattackstaminacost_t03",
+          "Alteration:aid_conditional_stunned_dmgbonus_t03",
+          "Alteration:aid_g_weapon_ondmg_applysnare_v2"
+        ]
+      },
+      "quantity": 1
+    },
+    "5b66c528-fe13-411d-8228-e49f95b842cb": {
+      "templateId": "Schematic:sid_ceiling_falling_r_t01",
+      "attributes": {
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_att_damage_physical_t01",
+          "Alteration:aid_att_maxdurability_trap_t01",
+          "Alteration:aid_att_damage_t02",
+          "Alteration:aid_att_critchance_t03",
+          "Alteration:aid_att_reloadspeed_trap_t03",
+          "Alteration:aid_att_buildingmaxhealth_t03"
+        ]
+      },
+      "quantity": 1
+    },
+    "bfc2b73b-7bda-4b21-a8b5-43633085332c": {
+      "templateId": "Schematic:sid_shotgun_standard_c_ore_t01",
+      "attributes": {
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_att_critdamage_t02",
+          "Alteration:aid_att_maxdurability_t02",
+          "Alteration:aid_att_damage_physical_t02",
+          "Alteration:aid_att_critchance_t02",
+          "Alteration:aid_conditional_slowed_dmgbonus_t03",
+          "Alteration:aid_g_ranged_headshot_explodeondeath_v2"
+        ]
+      },
+      "quantity": 1
+    },
+    "a39db135-c328-421d-b128-6b7ba24a3972": {
+      "templateId": "Schematic:sid_pistol_autoheavy_r_ore_t01",
+      "attributes": {
+        "level": 1,
+        "alterations": [
+          "Alteration:aid_att_reloadspeed_ranged_t01",
+          "Alteration:aid_att_stability_t01",
+          "Alteration:aid_ele_nature_t02",
+          "Alteration:aid_att_magazinesize_t03",
+          "Alteration:aid_conditional_boss_dmgbonus_t03",
+          "Alteration:aid_g_ranged_headshot_explodeondeath_v2"
+        ]
+      },
+      "quantity": 1
+    },
+    "c08e6619-622a-4990-b4b3-12a31694dd20": {
+      "templateId": "Schematic:sid_sniper_amr_r_ore_t01",
+      "attributes": {
+        "refund_legacy_item": true,
+        "level": 1,
+        "item_seen": true,
+        "alterations": [
+          "Alteration:aid_ele_energy_intrin_t01",
+          "Alteration:aid_att_reloadspeed_ranged_t01",
+          "Alteration:aid_att_magazinesize_t02",
+          "Alteration:aid_att_magazinesize_t02",
+          "Alteration:aid_conditional_stunned_dmgbonus_t03",
+          "Alteration:aid_g_weapon_ondmg_applysnare_v2"
+        ]
+      },
+      "quantity": 1
     }
   },
-  "commandRevision": 0
+  "profileCommandRevision": 18,
+  "serverTime": "2025-11-20T23:35:13.924Z",
+  "responseVersion": 1
 }

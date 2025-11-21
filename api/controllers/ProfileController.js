@@ -848,6 +848,10 @@ module.exports = {
 				break;
 			}
 
+			case "RedeemSTWAccoladeTokens":{
+				break;
+			}
+
 			case "RefundMtxPurchase": {
 				response.profileChanges[0] = {
 					"changeType": "itemAdded",

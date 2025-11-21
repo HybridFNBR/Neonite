@@ -7,7 +7,7 @@
     "linkType": "Reference",
     "metadata": {
       "ref_id": "CreativeDiscoverySurface_Frontend:ByEpicFeeder",
-      "ref_qty": 7,
+      "ref_qty": 8,
       "feature_flags": [
         "bypass_rating_check"
       ],
@@ -727,6 +727,331 @@
     "lastActivatedDate": "2025-04-28T21:53:02.050Z",
     "discoveryIntent": "PUBLIC",
     "linkState": "LIVE"
+  },
+  {
+    "namespace": "fn",
+    "accountId": "epic",
+    "creatorName": "Epic",
+    "mnemonic": "campaign",
+    "linkType": "SubGame",
+    "metadata": {
+      "ownership_token": "Token:campaignaccess",
+      "lobby_background_image_urls": {
+        "url": "https://cdn2.unrealengine.com/stwwinterlobby-2048x1024-e9435f317f59.jpg"
+      },
+      "blog_category": "save-the-world",
+      "image_url": "https://cdn2.unrealengine.com/cdn-uploader-EN_STW_FrozenFjords_DiscoverPlaylist_Tiles_BR_-1920x1080-86c6a993.jpg",
+      "genre_labels": [
+        "Survival"
+      ],
+      "alt_introduction": {
+        "de": "Dränge die anstürmenden Monsterhorden zurück und erforsche eine weitläufige, zerstörbare Welt.  Baue riesige Festungen, stelle Waffen her, finde Beute und steige im Level auf!",
+        "ru": "Сдерживайте боем полчища монстров и исследуйте обширный разрушаемый мир.  Отстраивайте огромные форты, создавайте оружие, находите добычу и повышайте уровень.",
+        "ko": "몬스터 호드에 맞서 싸우고, 광활하고 파괴적인 세상을 탐험해 보세요. 거대한 요새를 짓고, 무기를 제작하고, 전리품을 찾으면서 레벨을 올리세요! ",
+        "pt-BR": "Lute para conter hordas de monstros e explorar um vasto mundo destrutível. Construa fortes enormes, crie armas, encontre saques e suba de nível.",
+        "it": "Lotta per respingere orde di mostri ed esplorare un vasto mondo distruttibile. Costruisci fortezze, crea armi, raccogli bottino e sali di livello.",
+        "fr": "Repoussez des hordes de monstres et explorez un immense terrain destructible. Bâtissez des forts énormes, fabriquez des armes, dénichez du butin et montez en niveau.",
+        "zh-CN": "",
+        "es": "Lucha para contener las hordas de monstruos y recorre un mundo inmenso y destructible.  Construye fuertes enormes, fabrica armas exóticas, busca botín y sube de nivel.",
+        "es-MX": "Lucha para contener las hordas de monstruos y explora un mundo vasto y destructible.  Construye fuertes enormes, fabrica armas, encuentra botín y sube de nivel.",
+        "zh": "",
+        "ar": "قاتل لكبح جماح الوحوش واستكشاف عالم شاسع قابل للتدمير. ابنِ حصونًا ضخمة واصنع الأسلحة واعثر على الغنائم وارتقِ بالمستوى.",
+        "zh-Hant": "",
+        "ja": "モンスターの群れを食い止め、壊すこともできる広大な世界を探索しよう。巨大な要塞を築き、武器をクラフトし、戦利品を見つてレベルアップしよう。",
+        "pl": "Walcz, by powstrzymać hordy potworów i odkrywaj wielki świat podlegający destrukcji. Buduj olbrzymie forty, twórz broń, zbieraj łupy, awansuj.",
+        "es-419": "Lucha para contener las hordas de monstruos y explora un mundo vasto y destructible.  Construye fuertes enormes, fabrica armas, encuentra botín y sube de nivel.",
+        "tr": "Canavar sürüsünü geri püskürtmek için savaş ve yıkılabilir geniş bir dünyayı keşfet. Devasa kaleler inşa et, silahlar üret, ganimetleri topla ve seviye atla."
+      },
+      "image_urls": {
+        "url_s": "https://cdn2.unrealengine.com/cdn-uploader-EN_STW_FrozenFjords_DiscoverPlaylist_Tiles_BR_-480x270-c145fbd8.jpg",
+        "url_m": "https://cdn2.unrealengine.com/cdn-uploader-EN_STW_FrozenFjords_DiscoverPlaylist_Tiles_BR__-640x360-b569ba95.jpg",
+        "url": "https://cdn2.unrealengine.com/cdn-uploader-EN_STW_FrozenFjords_DiscoverPlaylist_Tiles_BR_-1920x1080-86c6a993.jpg"
+      },
+      "title": "Save The World",
+      "locale": "en",
+      "matchmaking": {
+        "joinInProgressType": "JoinImmediately",
+        "playersPerTeam": 4,
+        "maximumNumberOfPlayers": 4,
+        "override_Playlist": "",
+        "playerCount": 4,
+        "mmsType": "keep_full",
+        "mmsPrivacy": "Public",
+        "numberOfTeams": 1,
+        "bAllowJoinInProgress": true,
+        "minimumNumberOfPlayers": 1,
+        "joinInProgressTeam": 1
+      },
+      "video_vuid": "FafeDLtfnvVWWmOFzQ",
+      "disallowedPlatforms": [
+        "IOS",
+        "Android",
+        "Switch",
+        "Switch2",
+        "GFNMobile",
+        "HeliosMobile",
+        "LunaMobile"
+      ],
+      "activated_public_date": "2023-11-03T00:00:00.000Z",
+      "alt_image_urls": {
+        "ar": {
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-AR_STW_FrozenFjords_DiscoverPlaylist_Tiles_BR__-640x360-355ef5ac.jpg",
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-AR_STW_FrozenFjords_DiscoverPlaylist_Tiles_BR_-480x270-23e42eb4.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-AR_STW_FrozenFjords_DiscoverPlaylist_Tiles_BR_-1920x1080-46befa58.jpg"
+        },
+        "de": {
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-DE_STW_FrozenFjords_DiscoverPlaylist_Tiles_BR__-640x360-a3093cc3.jpg",
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-DE_STW_FrozenFjords_DiscoverPlaylist_Tiles_BR_-480x270-4921964d.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-DE_STW_FrozenFjords_DiscoverPlaylist_Tiles_BR_-1920x1080-4c47c262.jpg"
+        },
+        "es": {
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-ES-ES_STW_FrozenFjords_DiscoverPlaylist_Tiles_BR__-640x360-16beef5e.jpg",
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-ES-ES_STW_FrozenFjords_DiscoverPlaylist_Tiles_BR_-480x270-b7308453.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-ES-ES_STW_FrozenFjords_DiscoverPlaylist_Tiles_BR_-1920x1080-e6709cd6.jpg"
+        },
+        "es-419": {
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-ES-MX_STW_FrozenFjords_DiscoverPlaylist_Tiles_BR__-640x360-bc036bba.jpg",
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-ES-MX_STW_FrozenFjords_DiscoverPlaylist_Tiles_BR_-480x270-96bcf09b.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-ES-MX_STW_FrozenFjords_DiscoverPlaylist_Tiles_BR_-1920x1080-2f722573.jpg"
+        },
+        "fr": {
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FR_STW_FrozenFjords_DiscoverPlaylist_Tiles_BR__-640x360-f7e2a156.jpg",
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FR_STW_FrozenFjords_DiscoverPlaylist_Tiles_BR_-480x270-ac8fb735.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-FR_STW_FrozenFjords_DiscoverPlaylist_Tiles_BR_-1920x1080-75b7ae2b.jpg"
+        },
+        "id": {
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-ID_STW_FrozenFjords_DiscoverPlaylist_Tiles_BR__-640x360-b415d5d0.jpg",
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-ID_STW_FrozenFjords_DiscoverPlaylist_Tiles_BR_-480x270-c91d83f3.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-ID_STW_FrozenFjords_DiscoverPlaylist_Tiles_BR_-1920x1080-d566e22e.jpg"
+        },
+        "it": {
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-IT_STW_FrozenFjords_DiscoverPlaylist_Tiles_BR__-640x360-74e5debd.jpg",
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-IT_STW_FrozenFjords_DiscoverPlaylist_Tiles_BR_-480x270-f33b60c0.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-IT_STW_FrozenFjords_DiscoverPlaylist_Tiles_BR_-1920x1080-71b025d8.jpg"
+        },
+        "ja": {
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-JP_STW_FrozenFjords_DiscoverPlaylist_Tiles_BR__-640x360-e320ebc8.jpg",
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-JP_STW_FrozenFjords_DiscoverPlaylist_Tiles_BR_-480x270-53d57a61.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-JP_STW_FrozenFjords_DiscoverPlaylist_Tiles_BR_-1920x1080-25647982.jpg"
+        },
+        "ko": {
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-KR_STW_FrozenFjords_DiscoverPlaylist_Tiles_BR__-640x360-7f68f1dc.jpg",
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-KR_STW_FrozenFjords_DiscoverPlaylist_Tiles_BR_-480x270-10c99fbc.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-KR_STW_FrozenFjords_DiscoverPlaylist_Tiles_BR_-1920x1080-ee1045de.jpg"
+        },
+        "pl": {
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-PL_STW_FrozenFjords_DiscoverPlaylist_Tiles_BR__-640x360-f38830ad.jpg",
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-PL_STW_FrozenFjords_DiscoverPlaylist_Tiles_BR_-480x270-77cd0fe5.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-PL_STW_FrozenFjords_DiscoverPlaylist_Tiles_BR_-1920x1080-c0e6a939.jpg"
+        },
+        "pt-BR": {
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-PT-BR_STW_FrozenFjords_DiscoverPlaylist_Tiles_BR__-640x360-a04a9a8e.jpg",
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-PT-BR_STW_FrozenFjords_DiscoverPlaylist_Tiles_BR_-480x270-05066cea.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-PT-BR_STW_FrozenFjords_DiscoverPlaylist_Tiles_BR_-1920x1080-fe265de5.jpg"
+        },
+        "ru": {
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-RU_STW_FrozenFjords_DiscoverPlaylist_Tiles_BR__-640x360-a5fb8993.jpg",
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-RU_STW_FrozenFjords_DiscoverPlaylist_Tiles_BR_-480x270-075924ea.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-RU_STW_FrozenFjords_DiscoverPlaylist_Tiles_BR_-1920x1080-8da6ba6a.jpg"
+        },
+        "th": {
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-TH_STW_FrozenFjords_DiscoverPlaylist_Tiles_BR__-640x360-d0abc93a.jpg",
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-TH_STW_FrozenFjords_DiscoverPlaylist_Tiles_BR_-480x270-ac4cd3fd.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-TH_STW_FrozenFjords_DiscoverPlaylist_Tiles_BR_-1920x1080-d1d824f8.jpg"
+        },
+        "tr": {
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-TR_STW_FrozenFjords_DiscoverPlaylist_Tiles_BR__-640x360-908e9808.jpg",
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-TR_STW_FrozenFjords_DiscoverPlaylist_Tiles_BR_-480x270-1d43cdac.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-TR_STW_FrozenFjords_DiscoverPlaylist_Tiles_BR_-1920x1080-86f18f83.jpg"
+        },
+        "vi": {
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-VI_STW_FrozenFjords_DiscoverPlaylist_Tiles_BR__-640x360-fe613283.jpg",
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-VI_STW_FrozenFjords_DiscoverPlaylist_Tiles_BR_-480x270-f0c6da17.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-VI_STW_FrozenFjords_DiscoverPlaylist_Tiles_BR_-1920x1080-50a5b6e5.jpg"
+        },
+        "zh-hans": {
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-zhCN_STW_FrozenFjords_DiscoverPlaylist_Tiles_BR__-640x360-e4151c34.jpg",
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-zhCN_STW_FrozenFjords_DiscoverPlaylist_Tiles_BR_-480x270-44c88259.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-zhCN_STW_FrozenFjords_DiscoverPlaylist_Tiles_BR_-1920x1080-458e284b.jpg"
+        },
+        "zh-hant": {
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-zhTW_STW_FrozenFjords_DiscoverPlaylist_Tiles_BR__-640x360-a85176ed.jpg",
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-zhTW_STW_FrozenFjords_DiscoverPlaylist_Tiles_BR_-480x270-d75a1831.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-zhTW_STW_FrozenFjords_DiscoverPlaylist_Tiles_BR_-1920x1080-84297fe8.jpg"
+        }
+      },
+      "alt_title": {
+        "de": "Rette die Welt",
+        "ru": "Сражение с Бурей",
+        "ko": "세이브 더 월드",
+        "zh-hant": "末世守衛",
+        "pt-BR": "Salve o Mundo",
+        "zh-hans": "守护家园",
+        "it": "Salva il mondo",
+        "fr": "Sauver le monde",
+        "es": "Salvar el mundo",
+        "ar": "أنقِذ العالم",
+        "vi": "Giải Cứu Thế Giới",
+        "th": "เซฟเดอะเวิลด์",
+        "ja": "世界を救え",
+        "id": "Save The World",
+        "pl": "Ratowanie Świata",
+        "es-419": "Salva el mundo",
+        "tr": "Dünyayı Kurtar"
+      },
+      "alt_tagline": {
+        "de": "Dränge die anstürmenden Monsterhorden zurück und erforsche eine weitläufige, zerstörbare Welt. Baue riesige Festungen, stelle Waffen her, finde Beute und steige im Level auf!",
+        "ru": "Сдерживайте боем полчища монстров и исследуйте обширный разрушаемый мир. Отстраивайте огромные форты, создавайте оружие, находите добычу и повышайте уровень.",
+        "ko": "몬스터 무리를 저지하고, 모든 걸 파괴할 수 있는 방대한 세계를 탐험하세요. 거대한 요새를 건설하고, 무기를 제작하고, 전리품을 찾고, 레벨을 올릴 수 있습니다.",
+        "zh-hant": "戰鬥抵禦怪物大軍，在廣闊且可被摧毀的世界中探索。建造巨大要塞、製作武器、尋找戰利品並升級。",
+        "pt-BR": "Batalhe para conter hordas de monstros e explore um vasto mundo destrutível. Construa fortes, crie armas, encontre saques e suba de nível.",
+        "zh-hans": "抵挡群怪，探索广袤且可破坏的世界。建造大型堡垒，打造武器，获得战利品，不断升级。",
+        "it": "Ingaggia battaglia per respingere orde di mostri ed esplorare un vasto mondo distruttibile. Costruisci forti colossali, crea armi, trova bottino e aumenta di livello.",
+        "fr": "Combattez pour repousser des hordes de monstres et explorez un vaste monde destructible. Bâtissez des forts énormes, fabriquez des armes, dénichez du butin et montez en niveau.",
+        "es": "Lucha para contener las hordas de monstruos y recorre un mundo inmenso que se puede destruir. Construye fuertes enormes, fabrica armas exóticas, busca botín y sube de nivel.",
+        "ar": "قاتل لكبح جماح حشود الوحوش واستكشف عالمًا شاسعًا قابلًا للتدمير. ابنِ حصونًا ضخمة واصنع الأسلحة واعثر على الغنائم وارتقِ بمستواك.",
+        "vi": "Chiến đấu để chống lại lũ quái vật và thám hiểm một thế giới bao la, nơi mọi thứ đều có thể bị phá hủy. Và đừng quên xây dựng những pháo đài khổng lồ, chế tạo vũ khí, tìm chiến lợi phẩm rồi lên cấp cao hơn.",
+        "th": "ต่อสู้ยับยั้งฝูงสัตว์ประหลาดและสำรวจโลกอันกว้างใหญ่ที่พังทลายลงได้  สร้างป้อมขนาดมหึมา คราฟต์อาวุธ ปล้นของ และอัปเลเวล",
+        "ja": "戦ってモンスターの群れを食い止め、壊すこともできる広大な世界を探索しよう。巨大な砦を建て、武器をクラフトし、戦利品を手に入れてレベルを上げよう。",
+        "id": "Bertarung untuk menahan gerombolan monster dan menjelajahi dunia yang luas dan dapat dihancurkan. Bangun benteng besar, buat senjata, temukan jarahan, dan tingkatkan levelmu.",
+        "pl": "Walcz, by powstrzymywać hordy potworów i odkrywaj wielki, zniszczalny świat. Buduj olbrzymie forty, twórz broń, znajduj łupy i awansuj na wyższe poziomy.",
+        "es-419": "Lucha para contener a las hordas de monstruos mientras exploras un mundo grande y destructible. Construye fuertes enormes, fabrica armas, encuentra botín y sube de nivel.",
+        "tr": "Her şeyi yıkılabilir bir dünyaya adım at ve canavar sürüleriyle kıran kırana savaş. Devasa kaleler inşa et, silahlar üret, ganimet bul ve seviye atla."
+      },
+      "product_tag": "Product.STW",
+      "ratings": {
+        "rating_received_time": "2023-11-16T00:23:36.625Z",
+        "boards": {
+          "ACB": {
+            "descriptors": [
+              "ACB_Violence",
+              "ACB_GEMCO"
+            ],
+            "rating_overridden": false,
+            "rating": "ACB_AGE_M",
+            "initial_rating": "ACB_AGE_M",
+            "interactive_elements": [
+              "IE_UsersInteract",
+              "IE_InGamePurchases_v7_1"
+            ]
+          },
+          "CERO": {
+            "descriptors": [
+              "CERO_Violence"
+            ],
+            "rating_overridden": false,
+            "rating": "CERO_AGE_15",
+            "initial_rating": "CERO_AGE_15",
+            "interactive_elements": []
+          },
+          "PEGI": {
+            "descriptors": [
+              "PEGI_ModerateViolence"
+            ],
+            "rating_overridden": false,
+            "rating": "PEGI_AGE_12",
+            "initial_rating": "PEGI_AGE_12",
+            "interactive_elements": [
+              "IE_UsersInteract",
+              "IE_InGamePurchases_v7_1"
+            ]
+          },
+          "Generic": {
+            "descriptors": [
+              "GEN_ModerateViolence"
+            ],
+            "rating_overridden": false,
+            "rating": "GEN_AGE_12",
+            "initial_rating": "GEN_AGE_12",
+            "interactive_elements": [
+              "IE_UsersInteract",
+              "IE_InGamePurchases_v7_1"
+            ]
+          },
+          "ClassInd": {
+            "descriptors": [
+              "ClassInd_Violencia"
+            ],
+            "rating_overridden": false,
+            "rating": "CLASSIND_AGE_12",
+            "initial_rating": "CLASSIND_AGE_12",
+            "interactive_elements": [
+              "IE_UsersInteract",
+              "IE_InGamePurchases_v7_1"
+            ]
+          },
+          "GRAC": {
+            "descriptors": [
+              "GRAC_Violence_v7_1"
+            ],
+            "rating_overridden": false,
+            "rating": "GRAC_AGE_12",
+            "initial_rating": "GRAC_AGE_12",
+            "interactive_elements": [
+              "IE_UsersInteract",
+              "IE_InGamePurchases_v7_1"
+            ]
+          },
+          "USK": {
+            "descriptors": [
+              "USK_FantasyGewalt_v9_0"
+            ],
+            "rating_overridden": false,
+            "rating": "USK_AGE_12",
+            "initial_rating": "USK_AGE_12",
+            "interactive_elements": [
+              "IE_UsersInteract",
+              "IE_InGamePurchases_v7_1"
+            ]
+          },
+          "ESRB": {
+            "descriptors": [
+              "ESRB_Violence"
+            ],
+            "rating_overridden": false,
+            "rating": "ESRB_AGE_T",
+            "initial_rating": "ESRB_AGE_T",
+            "interactive_elements": [
+              "IE_UsersInteract",
+              "IE_InGamePurchases_v7_1"
+            ]
+          },
+          "Russia": {
+            "descriptors": [
+              "RUS_Violence_v7_0"
+            ],
+            "rating_overridden": false,
+            "rating": "RUSSIA_AGE_12",
+            "initial_rating": "RUSSIA_AGE_12",
+            "interactive_elements": [
+              "IE_UsersInteract",
+              "IE_InGamePurchases_v7_1"
+            ]
+          }
+        }
+      },
+      "tagline": "Battle to hold back the monster hordes and explore a vast, destructible world.  Build huge forts, craft weapons, find loot and level up.",
+      "dynamicXp": {
+        "uniqueGameVersion": "5",
+        "calibrationPhase": "LiveXp"
+      },
+      "web_slug": "save-the-world",
+      "category_labels": [
+        "Survival"
+      ],
+      "introduction": "Battle to hold back the monster hordes and explore a vast, destructible world.  Build huge forts, craft weapons, find loot and level up."
+    },
+    "version": 5,
+    "active": true,
+    "disabled": false,
+    "created": "2021-10-01T15:06:32.241Z",
+    "published": "2021-08-25T20:02:50.051Z",
+    "updated": "2025-11-20T03:01:45.459Z",
+    "descriptionTags": [
+      "pve"
+    ],
+    "moderationStatus": "Approved",
+    "discoveryIntent": "PUBLIC"
   },
   {
     "namespace": "fn",
@@ -1616,6 +1941,226 @@
         "url_m": "https://cdn2.unrealengine.com/fnbr-32-00-c5s5-kiln-discoverplaylist-tiles-br--640x360-640x360-5eca3596f397.jpg",
         "url": "https://cdn2.unrealengine.com/fnbr-32-00-c5s5-kiln-discoverplaylist-tiles-br-1920x1080-1920x1080-cd1887394e2c.jpg"
       },
+      "matchmakingV3": {
+        "Options": {
+          "/Fortnite.com/Matchmaking:PlayersPerMatch": {
+            "Maximum": 100
+          },
+          "/Fortnite.com/Matchmaking:PlayersPerSquad": {
+            "ConditionalOverrides": [
+              {
+                "Condition": "$[?($.Options['/Fortnite.com/BattleRoyale/Matchmaking:TeamSize'] == 'Solo')]",
+                "Override": {
+                  "Maximum": 1
+                }
+              },
+              {
+                "Condition": "$[?($.Options['/Fortnite.com/BattleRoyale/Matchmaking:TeamSize'] == 'Duo')]",
+                "Override": {
+                  "Maximum": 2
+                }
+              },
+              {
+                "Condition": "$[?($.Options['/Fortnite.com/BattleRoyale/Matchmaking:TeamSize'] == 'Trio')]",
+                "Override": {
+                  "Maximum": 3
+                }
+              },
+              {
+                "Condition": "$[?($.Options['/Fortnite.com/BattleRoyale/Matchmaking:TeamSize'] == 'Squad')]",
+                "Override": {
+                  "Maximum": 4
+                }
+              }
+            ]
+          },
+          "/Fortnite.com/Matchmaking:TeamsPerMatch": {
+            "Maximum": 100
+          },
+          "/Fortnite.com/Matchmaking:SquadsPerTeam": {
+            "Maximum": 1
+          },
+          "/Fortnite.com/Matchmaking:PartyRestriction": {
+            "Default": "Squad"
+          },
+          "/Fortnite.com/Matchmaking:MatchFill": {
+            "ClientAccess": "Read",
+            "UI": {
+              "Visible": false
+            }
+          },
+          "/Fortnite.com/Matchmaking:SquadFill": {
+            "ConditionalOverrides": [
+              {
+                "Condition": "$[?($.Options['/Fortnite.com/BattleRoyale/Matchmaking:TeamSize'] == 'Solo')]",
+                "Override": {
+                  "Default": "NoFill",
+                  "EnumValues": {
+                    "Fill": {
+                      "Enabled": false
+                    }
+                  },
+                  "UI": {
+                    "Enabled": false
+                  }
+                }
+              }
+            ]
+          },
+          "/Fortnite.com/Matchmaking:Ranked": {
+            "ClientAccess": "Write",
+            "UI": {
+              "WidgetType": "RankedToggle",
+              "Visible": true,
+              "Config": {
+                "Priority": 2,
+                "DisplayNameUTCDateTime": "2025-12-04T14:00:00Z",
+                "DisplayName": {
+                  "en": "Ranked (Returning {DisplayNameUTCDateTime})"
+                },
+                "Description": {
+                  "en": "Battle it out against other players of similar rank. Show off your skills, complete challenges for rewards, and climb the ranks."
+                },
+                "EnumValues": {
+                  "Unranked": {
+                    "Priority": 0,
+                    "Text": {
+                      "en": "Off"
+                    }
+                  },
+                  "Ranked": {
+                    "Priority": 1,
+                    "Text": {
+                      "en": "On"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "/Fortnite.com/BattleRoyale/Matchmaking:BuildMode": {
+            "ClientAccess": "Write",
+            "Scope": "Match",
+            "Required": true,
+            "ConstraintType": "Equal",
+            "Type": "Enum",
+            "Default": "Build",
+            "EnumValues": {
+              "Build": {},
+              "Zero": {}
+            },
+            "UI": {
+              "WidgetType": "ModeSelection",
+              "Visible": true,
+              "Config": {
+                "Priority": 1,
+                "DisplayName": {
+                  "en": "Build / Zero Build"
+                },
+                "Description": {
+                  "en": "In Build, gather resources, build structures, and outplay your opponents. The battle is in the building!\nZero Build is all the action, loot, and progression of classic Battle Royale, without the building."
+                },
+                "EnumValues": {
+                  "Build": {
+                    "Priority": 0,
+                    "Text": {
+                      "en": "Build"
+                    }
+                  },
+                  "Zero": {
+                    "Priority": 1,
+                    "Text": {
+                      "en": "Zero Build"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "/Fortnite.com/BattleRoyale/Matchmaking:TeamSize": {
+            "ClientAccess": "Write",
+            "Scope": "Match",
+            "Required": true,
+            "ConstraintType": "Equal",
+            "Type": "Enum",
+            "Default": "Solo",
+            "EnumValues": {
+              "Solo": {},
+              "Duo": {},
+              "Trio": {},
+              "Squad": {}
+            },
+            "UI": {
+              "WidgetType": "TeamSize",
+              "Visible": true,
+              "Config": {
+                "Priority": 3,
+                "DisplayName": {
+                  "en": "Team Size"
+                },
+                "Description": {
+                  "en": "The number of players on your team."
+                },
+                "EnumValues": {
+                  "Solo": {
+                    "Priority": 1,
+                    "Text": {
+                      "en": "Solo"
+                    },
+                    "IconURL": "https://cdn2.unrealengine.com/cdn-uploader-TeamSize_Solo-d021a805.png"
+                  },
+                  "Duo": {
+                    "Priority": 2,
+                    "Text": {
+                      "en": "Duo"
+                    },
+                    "IconURL": "https://cdn2.unrealengine.com/cdn-uploader-TeamSize_Duo-28bb05c1.png"
+                  },
+                  "Trio": {
+                    "Priority": 3,
+                    "Text": {
+                      "en": "Trio"
+                    },
+                    "IconURL": "https://cdn2.unrealengine.com/cdn-uploader-TeamSize_Trios-2bc4207e.png"
+                  },
+                  "Squad": {
+                    "Priority": 4,
+                    "Text": {
+                      "en": "Squad"
+                    },
+                    "IconURL": "https://cdn2.unrealengine.com/cdn-uploader-TeamSize_Squads-3f63d52f.png"
+                  }
+                }
+              }
+            },
+            "ConditionalOverrides": [
+              {
+                "Condition": "$[?($.Options['/Fortnite.com/Matchmaking:Ranked'] == 'Ranked')]",
+                "Override": {
+                  "EnumValues": {
+                    "Squad": {
+                      "Enabled": false
+                    }
+                  }
+                }
+              },
+              {
+                "Condition": "$[?($.Options['/Fortnite.com/Matchmaking:Ranked'] == 'Ranked' && $.Options['/Fortnite.com/BattleRoyale/Matchmaking:BuildMode'] == 'Zero')]",
+                "Override": {
+                  "EnumValues": {
+                    "Trio": {
+                      "Enabled": false
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      "matchmaking_plugins": [
+        "MatchmakingSettingsUI"
+      ],
       "title": "Battle Royale",
       "locale": "en",
       "video_vuid": "DpfVjiXQaFTRgOaGFE",
