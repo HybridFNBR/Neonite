@@ -107,14 +107,6 @@ module.exports = {
 									"isVisible": true
 								},
 								{
-									"linkCode": "set_figment_playlists",
-									"isFavorite": false,
-									"globalCCU": 1,
-									"lockStatus": "UNLOCKED",
-									"lockStatusReason": "NONE",
-									"isVisible": true
-								},
-								{
 									"linkCode": "playlist_pilgrimquickplay",
 									"isFavorite": false,
 									"globalCCU": 1,
