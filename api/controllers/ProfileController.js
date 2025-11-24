@@ -20,6 +20,7 @@ module.exports = {
 		var accountId = req.params.accountId;
 		var athenprofile = Profile.readProfile(accountId, "athena")
 		var commoncore = Profile.readProfile(accountId, "common_core")
+		var campaignProfile = Profile.readProfile(accountId, "campaign")
 		const { version, versionGlobal } = getVersionInfo(req);
 		const getOrCreateProfile = profileId => {
 			var profileData = Profile.readProfile(accountId, profileId);
@@ -213,7 +214,6 @@ module.exports = {
 			}
 
 			case "PurchaseCatalogEntry": {
-				const commoncore = Profile.readProfile(accountId, "common_core");
 				let shop
 				if (version >= 30.10) {
 					shop = loadJSON("../responses/catalog/shopv3.json");
@@ -866,6 +866,30 @@ module.exports = {
 				}
 				break;
 			}
+
+			case "SetHeroCosmeticVariants":{
+				Profile.changeItemAttribute(campaignProfile, req.body.heroItem, "outfitvariants", req.body["outfitVariants"]);
+				Profile.changeItemAttribute(campaignProfile, req.body.heroItem, "backblingvariants", req.body["backblingVariants"]);
+				Profile.bumpRvn(campaignProfile);
+				Profile.saveProfile(accountId, "campaign", campaignProfile)
+				response.profileChanges = [
+					{
+						"changeType": "itemAttrChanged",
+						"itemId": req.body.heroItem,
+						"attributeName": "slots",
+						"attributeValue": campaignProfile.items[req.body.heroItem].attributes.outfitvariants
+					},
+					{
+						"changeType": "itemAttrChanged",
+						"itemId": req.body.heroItem,
+						"attributeName": "slots",
+						"attributeValue": campaignProfile.items[req.body.heroItem].attributes.outfitvariants
+					}
+				]
+				
+				break;
+			}
+				
 
 			default: {
 				return next(new ApiException(errors.com.epicgames.fortnite.operation_not_found).with(req.params.command));
