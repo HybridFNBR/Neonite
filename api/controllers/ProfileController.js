@@ -876,14 +876,14 @@ module.exports = {
 					{
 						"changeType": "itemAttrChanged",
 						"itemId": req.body.heroItem,
-						"attributeName": "slots",
+						"attributeName": "outfitvariants",
 						"attributeValue": campaignProfile.items[req.body.heroItem].attributes.outfitvariants
 					},
 					{
 						"changeType": "itemAttrChanged",
 						"itemId": req.body.heroItem,
-						"attributeName": "slots",
-						"attributeValue": campaignProfile.items[req.body.heroItem].attributes.outfitvariants
+						"attributeName": "backblingvariants",
+						"attributeValue": campaignProfile.items[req.body.heroItem].attributes.backblingVariants
 					}
 				]
 				
