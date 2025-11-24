@@ -2,14 +2,14 @@
 const path = require('path');
 const fs = require('fs')
 const ini = require('ini')
-const {getVersionInfo, loadJSON} = require("../../config/defs");
+const { getVersionInfo, loadJSON } = require("../../config/defs");
 const NeoLog = require('../../structs/NeoLog');
 let requested = false;
 
 
 module.exports = {
-    timeline: function(req, res){
-        let { version, versionGlobal, versionLegacy} = getVersionInfo(req);
+    timeline: function (req, res) {
+        let { version, versionGlobal, versionLegacy } = getVersionInfo(req);
         const keychain = loadJSON("../responses/keychain.json")
         var config = ini.parse(fs.readFileSync(path.join(__dirname, '../../config.ini'), 'utf-8'));
         certVersions = [{
@@ -29,7 +29,7 @@ module.exports = {
             3889387: 2,
         }]
         certVersions.forEach(cl => {
-            if(cl[versionLegacy]){
+            if (cl[versionLegacy]) {
                 versionGlobal = cl[versionLegacy]
             }
         });
@@ -69,7 +69,7 @@ module.exports = {
                                 eventType: `EventFlag.Season${versionGlobal}`,
                                 activeUntil: "9999-12-31T23:59:59.999Z",
                                 activeSince: "2019-12-31T23:59:59.999Z"
-                            },                                                                                                                                           
+                            },
                             {
                                 eventType: `EventFlag.LobbySeason${versionGlobal}`,
                                 activeUntil: "9999-12-31T23:59:59.999Z",
@@ -187,1198 +187,472 @@ module.exports = {
             eventsTimeOffsetHrs: 0
         }
 
-        if(version == "Cert"){
-            timeline.channels['client-events']['states'][0]['activeEvents'].push(
-                {
-                    eventType: "EventFlag.LobbyWinterDecor", //Winter Lobby
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                },
-            )
-        }
+        const versionEventFlags = ({
+            "Cert": [
+                "EventFlag.LobbyWinterDecor"
+            ],
 
-        if(version == 4.5){
-            timeline.channels['client-events']['states'][0]['activeEvents'].push(
-                {
-                    eventType: "EventFlag.BR_S4_Geode_Countdown", //Rocket Launch Event Countdown
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                },
-                {
-                    eventType: "EventFlag.BR_S4_Oddity_02_Event", //Oddity 02 Event
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                },
-                {
-                    eventType: "EventFlag.BR_S4_Oddity_03_Event", //Oddity 03 Event
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                },
-                {
-                    eventType: "EventFlag.BR_S4_Oddity_04_Event", //Oddity 04 Event
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                },
-                {
-                    eventType: "EventFlag.BR_S5_Oddity_Tomato_Event",//Oddity 05 Event
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                },
-            )
-        }
+            "4.5": [
+                "EventFlag.BR_S4_Geode_Countdown",
+                "EventFlag.BR_S4_Oddity_01_Event",
+                "EventFlag.BR_S4_Oddity_02_Event",
+                "EventFlag.BR_S4_Oddity_03_Event",
+                "EventFlag.BR_S4_Oddity_04_Event",
+                "EventFlag.BR_S4_Oddity_05_Event",
+                "EventFlag.BR_S4_Oddity_06_Event",
+                "EventFlag.BR_S4_Oddity_07_Event",
+                "EventFlag.BR_S4_Oddity_08_Event",
+                "EventFlag.BR_S5_Oddity_Tomato_Event",
+                "EventFlag.BR_S4_Rift_Growth"
+            ],
 
-        if(version == 6.21){
-            timeline.channels['client-events']['states'][0]['activeEvents'].push(
-                {
-                    eventType: "EventFlag.LobbySeason6Halloween",
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                }
-            )
-        }
+            "5.10": [
+                "EventFlag.BR_S5_Rift_Corrupt",
+                "EventFlag.BR_S5_Rift_Shrink",
+            ],
 
-        if(version == 7.20){
-            timeline.channels['client-events']['states'][0]['activeEvents'].push(
-                {
-                    eventType: "EventFlag.LTM_14DaysOfFortnite", //WinterFest
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                },
-                {
-                    eventType: "warning", //TV Warning
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                },
-                {
-                    eventType: "Countdown", //TV Countdown
-                    activeUntil: "2024-08-02T02:38:00.000Z",
-                    activeSince: "9999-12-01T21:10:00.000Z"
-                },
-                {
-                    eventType: "P1", // Ice King Event related
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                },
-                {
-                    eventType: "WDK", // Ice King Apeaars
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                },
-            )
-        }
+            "5.40": [
+                "EventFlag.BR_S5_RiskyReels_Event",
+                "EventFlag.BR_S5_Sphere_Spawn",
+                "EventFlag.BR_S5_Cube_TurnOn",
+                "EventFlag.BR_S5_Cube_Lightning",
+                //"EventFlag.BR_S5_Cube_MoveTo1",
+                //"EventFlag.BR_S5_Cube_Rune1",
+                //"EventFlag.BR_S5_Cube_MoveTo2",
+                //"EventFlag.BR_S5_Cube_Rune2",
+                //"EventFlag.BR_S5_Cube_MoveTo3",
+                //"EventFlag.BR_S5_Cube_Rune3",
+                //"EventFlag.BR_S5_Cube_MoveTo4",
+                //"EventFlag.BR_S5_Cube_Rune4",
+                //"EventFlag.BR_S5_Cube_MoveTo5",
+                //"EventFlag.BR_S5_Cube_Rune5",
+                //"EventFlag.BR_S5_Cube_MoveTo6",
+                //"EventFlag.BR_S5_Cube_Rune6",
+                //"EventFlag.BR_S5_Cube_MoveTo7",
+                //"EventFlag.BR_S5_Cube_Rune7",
+                //"EventFlag.BR_S5_Cube_MoveTo8",
+            ],
 
-        if(version == 7.30){
-            timeline.channels['client-events']['states'][0]['activeEvents'].push(
-                {
-                    eventType: "F0", // Marshmello Event countdown
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                },
-                {
-                    eventType: "F1", // Marshmello Event countdown
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                },
-                {
-                    eventType: "FLevel", // Marshmello Event Level
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                },
-                {
-                    eventType: "FEST_POSTER", // Marshmello event posters
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                },
-                {
-                    eventType: "roadie_0", // ?
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                },
-                {
-                    eventType: "EventFlag.LTE_Festivus", // Marshmello event
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                },
-                {
-                    eventType: "S7_B", // ?
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                },
-                {
-                    eventType: "S7_C", // ?
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                },
-                {
-                    eventType: "HP", // ?
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                },              
-            )
+            "6.00": [
+                //"EventFlag.BR_S6_Island_MoveTo1"
+                //"EventFlag.BR_S6_Island_Rune1",
+                //"EventFlag.BR_S6_Island_MoveTo2"
+            ],
+
+            "6.01": [
+                //"EventFlag.BR_S6_Island_Rune2"
+                //"EventFlag.BR_S6_Island_MoveTo3"
+                //"EventFlag.BR_S6_Island_Rune3",
+                //"EventFlag.BR_S6_Island_MoveTo4"
+            ],
+
+            "6.02": [
+                //"EventFlag.BR_S6_Island_Rune4"
+                //"EventFlag.BR_S6_Island_MoveTo5"
+                //"EventFlag.BR_S6_Island_Rune5",
+                //"EventFlag.BR_S6_Island_MoveTo6",
+            ],
+
+            "6.10": [
+                "EventFlag.BR_S6_Island_Beacon"
+                //"EventFlag.BR_S6_Island_MoveTo7",
+                //"EventFlag.BR_S6_Island_Rune7",
+                //"EventFlag.BR_S6_Island_MoveTo8"
+                //"EventFlag.BR_S6_Island_Rune8",
+            ],
+
+            "6.20|6.21": [
+                /* Halloween EventFlags */
+                "HW_01",
+                "HW_02",
+                "HW_03",
+                "HW_04",
+                "HW_05",
+                "HW_06",
+                "HW_07",
+                "EventFlag.LobbySeason6Halloween"
+            ],
+
+            "7.20": [
+                "EventFlag.LTM_14DaysOfFortnite", //WinterFest
+                "warning", //TV Warning
+                "Countdown", //TV Countdown
+                "P1", // Ice King Event related
+                "WDK", // Ice King Apeaars
+            ],
+
+            "7.30": [
+                "F0", // Marshmello Event countdown
+                "F1", // Marshmello Event countdown
+                "FLevel", // Marshmello Event Level
+                "FEST_POSTER", // Marshmello event posters
+                "roadie_0", // ?
+                "EventFlag.LTE_Festivus", // Marshmello event
+                "S7_B", // ?
+                "S7_C", // ?
+                "HP", // ?
+            ],
+
+            "8.51": [
+                "EventFlag.UnvaultingCountdown", // Unvaulting Event countdown
+                "GWS0", // Unvaulting Event related
+                "GWS1", //  Unvaulting Event related
+                "GW1", //  Unvaulting Event related
+                "GW2", //  Unvaulting Event related
+                "GW3", // Unvaulting Event related
+                "GWW1", //  Unvaulting Event related
+                "GWW2", //  Unvaulting Event related
+                "GWW3", //  Unvaulting Event related
+                "GWW4", //  Unvaulting Event related
+                "GWW5", //  Unvaulting Event related
+            ],
+
+            "9.20": [
+                "CatSpot1" // Cattus Spotting Ocean
+            ],
+
+            "9.30|9.40|9.41": [
+                "CDTime", // Final Showdown countdown
+                "DoggusProp", //Doggus Propaganda Posters
+                "CVD1", // Final Showdown countdown
+                "CatSpot2", // Cattus Spotting 2
+                "STP", // Stranger Things Portals(Mega Mall)
+            ],
+            "10.31|10.40": [
+                "RBBMS", // Black Monday Tilted POI Swap
+                "NN1", // The End Countdown
+                //"survey_br_nick_001", // nightnight blackhole lobby mini event
+            ],
+
+            "11.10": [
+                "HW2019", // FortniteMares 2019
+                "HW2019Leadup", // FortniteMares 2019 Leadup
+            ],
+
+            "11.30": [
+                "GALCD", // C2S1-related (Winterfest 2019)
+                "GALP", // C2S1-related (Winterfest 2019)
+            ],
+
+            "11.31": [
+                "EventFlag.LTE_WinterFest", // C2S1-related (Winterfest 2019)
+                "EventFlag.Winterfest.Tree", // C2S1-related (Winterfest 2019)
+                "WSFX3", // C2S1-related (Winterfest 2019)
+                "WSFX3F", // C2S1-related (Winterfest 2019)
+                "WD5", // C2S1-related (Winterfest 2019)
+                "WD4", // C2S1-related (Winterfest 2019)
+                "WD3", // C2S1-related (Winterfest 2019)
+                "WD2", // C2S1-related (Winterfest 2019)
+                "WD1", // C2S1-related (Winterfest 2019)
+                "WTR4", // C2S1-related (Winterfest 2019)
+                "WTR3", // C2S1-related (Winterfest 2019)
+                "WTR2", // C2S1-related (Winterfest 2019)
+                "WTR1", // C2S1-related (Winterfest 2019)
+                "WSH1", // C2S1-related (Winterfest 2019)
+                "WSM1", // C2S1-related (Winterfest 2019)
+                "WSM2", // C2S1-related (Winterfest 2019)
+                "WSM3", // C2S1-related (Winterfest 2019)
+                "WSM4", // C2S1-related (Winterfest 2019)
+                "WRRD1", // C2S1-related (Winterfest 2019)
+                "WDT1", // C2S1-related (Winterfest 2019)
+                "WDT2", // C2S1-related (Winterfest 2019)
+                "WDT3", // C2S1-related (Winterfest 2019)
+                "WDT4", // C2S1-related (Winterfest 2019)
+                "WD1C", // C2S1-related (Winterfest 2019)
+            ],
+
+            "11.50": [
+                "GP1", // Gold Prop 1
+                "GP2", // Gold Prop 2
+                "GP3", // Gold Prop 3
+                "GP4", // Gold Prop 4
+                "GP5", // Gold Prop 5
+            ],
+
+            "12.30": [
+                "DPY01", // Deadpool Yacht
+                "EventFlag.DonutBattleBus", // Deadpool Battle Bus
+            ],
+
+            "12.40|12.41": [
+                "JS01", // Travis Related (Stage Delivery Trucks)
+                "JS02", // Travis Related (Stage Partially Built)
+                "JP01", // Travis Teaser posters Appear (Stage)
+                "JP02", // Travis Teaser posters Appear (Stage)
+                "JL1", // Travis LeadUp 1 (Stage)
+                "JL2", // Travis LeadUp 2 (Stage)
+                "JCD01", // Travis Related (Countdown)
+                "JH01", // Travis Related (Head)
+                "JS03", // Travis Related (Stage Finished Stage)
+                "JCH01", // Travis Related (Countdown)
+                "JLL", // Travis Load level (Level)
+            ],
+
+            "12.60|12.61":[
+                "FLA01", // C2S2-related (Timers)
+                "FLCD01", // C2S2-related (Timers)
+                "FCD01", // C2S2-related (Timers)
+                "FHS01", // Fritter Hatches Stage 1
+                "FHS02", // Fritter Hatches STage 2
+            ],
+
+            "13.40":[
+                "SM1",//scorch marks
+                "LS_PRE",
+                "TC1",//thorhammer 'poi'
+                "TR1",//rift in the sky
+                "CBS1",//Coral buddies stage 1
+            ],
+
+            "14.00":[
+                "LS2", //Galactus Countdown(Ch2S4 related)
+                "HSS2", //Sky Distant Object(Ch2S4 related)
+            ],
+
+            "14.30":[
+                "SPJ02", //Sky Card for Junior(Ch2S4 related)
+            ],
+
+            "14.60":[
+                "FLA01", // C2S4-related (Timers)
+                "FSE01", // C2S4-related (Timers)
+                "FSE02", // C2S4-related (Timers)
+                "JSE02", // C2S4-related (Timers)
+                "JFE01", // C2S4-related (Countdown)
+                "SPJ03", // C2S4-related (Sky Head For Junior)
+
+            ],
+
+            "17.20|17.30":[
+                "BEL01", // Leadup In-game/Leadup In-Lobby
+                "BET01", // Rift Tour-related (Countdown)
+                "BEL02", // Leadup In-game/Leadup In-Lobby
+                "BEP02", // Rift Tour Enable Pads?
+                "BPLS", // Rift Tour Party Landingship
+                "BTP", // Rift Tour Teaser Poster
+                "BAP", // Rift Tour Announce Poster
+                "BTL01", // Rift Tour TOD Leadup 1)
+                "ABDSLP", //Slurpy: Abduction(Ch2S7 related)
+            ],
+
+            "17.50":[
+                "KEL01", // Operation Sky Fire Event-related
+                "KEL02", // Operation Sky Fire Event-related
+                "ABDFRM", //Farm: Abduction(Ch2S7 related)
+            ],
+
+            "18.21":[
+                "FNM21", // FNMares 2021
+            ],
+
+            "19.01":[
+                "EventFlag.LTE_WinterFest", // WinterFest 2021
+                "WF_IG_Avail", // WinterFest 2021
+            ],
+
+            "20.40":[
+                "AL01", // Collision Event-related (Countdown)
+                "AL02", // Collision Event-related (Countdown)
+                "AS01", //Armadillo Start(Ch3S2 related)
+                "ARLU01", //ArmadilloRoll Lead Up(Ch3S2 related)
+            ],
+
+            "21.30|21.40|21.50|21.51":[
+                "STMN_PH", // Dragon Ball Collab Preheat(21.30)
+                "Event_S21_Stamina", // Dragon Ball tab(21.40)
+                "RBB01", // Bugle Bloom (Closed)(21.30)
+                "NSSC02", // No Sweat Summer Concert (Constructed)(21.30)
+            ],
+
+            "22.40":[
+                "RL01", // Fracture In-Game Leadup
+                "RL02", // Fracture Radish Lobby Leadup
+                "RL12", // Fracture Lobby Leadup 2
+                "RL13", // Fracture Lobby Leadup 3
+                "RL14", // Fracture Lobby Leadup 4
+                "RL15", // Fracture Lobby Leadup 5
+                "RL16", // Fracture Lobby Leadup 6
+                "RL22", // Fracture In-Game Leadup 2
+                "RL23", // Fracture In-Game Leadup 3
+                "RL24", // Fracture In-Game Leadup 4
+                "RL25", // Fracture In-Game Leadup 5
+                "RL26", // Fracture In-Game Leadup 6
+                "RC01", // Fracture Core
+                "RC02", // Fracture Core
+                "RC03", // Fracture Core
+                "RC04", // Fracture Core
+                "RC05", // Fracture Core
+                "RC06", // Fracture Core
+            ],
+
+            "23.10": [
+                "CalendarEvent_Season23_Winterfest", // Winterfest 2022
+                "EventFlag.LTE_WinterFestTab", // Winterfest 2022
+            ],
+
+            "23.50": [
+                "EventFlag.Event_Vaultbreakers", // Most Wanted tab
+                "EventFlag.Event_S23_FindIt", // Event_S23_FindIt
+                "RG01", // RiftGate Stage 1
+                "RG02", // RiftGate Stage 2
+                "ST01", // Skytear Stage 1
+                "ST02", // Skytear Stage 2
+            ],
+
+            "24.00|24.10":[
+                "EventFlag.Event_S24_LanternFest", // Latern Fest 2023 
+                "Lanternfest", // Latern Fest 2023 
+                "EventFlag.Event_S24_SunBurst", // Sunburst 
+                "EventFlag.Event_S24_SpringFling", // Springfling 
+            ],
+
+            "24.30|24.40":[
+                "EventFlag.Event_PlotTwist", // Star Wars 2023 tab
+            ],
+
+            "25.30":[
+                "EventFlag.Event_BelongTreaty", // Jujutsu Kaisen tab
+            ],
+
+            "27.11|31.41|32.11":[
+                "DL01", // Durian & Kiln Event-related (Countdown)
+                "DL02", // Durian & Kiln Event-related (Countdown)
+            ],
+
+            "28.10":[
+                "EventFlag.Event_LinedNotebook_Teaser", // TMNT Tab countdown
+            ],
+
+            "28.20|28.30":[
+                "EventFlag.Event_LinedNotebook", // TMNT mini pass
+                /*
+                "CH5S1CPPE", //Pre-Emergence Event(Central Picnic)
+                "CH5S1CPCE", //Crater event - Pre-Emergence Event (Central Picnic)
+                "CH5S1CPTE", //Thump Event - Pre-Emergence Event (Central Picnic)
+                "CH5S1CPFH", //Final Hour - Pre-Emergence Event (Central Picnic)
+                "CH5S1CPFP", //Titan Hand Appears(Central Picnic)
+                "CH5S1CPPP", //Primary Events(Central Picnic)
+                "CH5S1CPEP", //Post-Chain Event(Central Picnic)
+
+                 Flags labled "Pre-Emergence Event" need to have the "CH5S1CPPE" flag to work event flags not labled with the "Pre-Emergence Event" need to have "CH5S1CPPE" disabled to work
+                */
+            ],
+
+            "29.00|29.01|29.10":[
+                "EventFlag.Event_S29_SeasonalActivation",
+                "EventFlag.Event_S29_MidasActivation"
+            ],
+
+            "29.20|29.30":[
+                "EventFlag.Event_S29_ColdDay", // Avatar mini pass + cabbages
+                "AtlaShrines", // Avatar map changes
+                "AtlaScrolls", // Avatar map changes
+                "AtlaChests", // Avatar map changes
+            ],
+
+            "29.40":[
+                /*
+                "EventFlag.Event_Osiris",
+                "SUPERSPORT_BUILDUP_1",
+                "SUPERSPORT_BUILDUP_2",
+                "SUPERSPORT_BUILDUP_3",
+                "SUPERSPORT_CHARGE_1",
+                "SUPERSPORT_STRIKE_1",
+                "SUPERSPORT_CHARGE_2",
+                "SUPERSPORT_STRIKE_2"
+                "SUPERSPORT_CHARGE_3",
+                "SUPERSPORT_STRIKE_3"
+                "SUPERSPORT_SANDSTORM",
+                "SUPERSPORT_LIGHT_2",
+                */
+            ],
+
+            "30.20|30.30":[
+                "EventFlag.Event_Greenhouse", //Pirates Of the Caribbean Mini Pass
+                "RE_01_Cutout",
+                "RE_02_Cutout",
+                "RE_03_Cutout",
+                "RE_01", //Nitro Pipeline Stage 1
+                "RE_02", //Nitro Pipeline Stage 2
+                "RE_03", //Nitro Pipeline Stage 3
+            ],
+
+            "31.20|31.30":[
+                "EventFlag.Event_ButtercakePass"
+            ],
+
+            "31.41":[
+                "StageA", //Kiln Buildup Stage 1
+                "StageB", //Kiln Buildup Stage 2
+                "StageC", //Kiln Buildup Stage 3
+                "StageD", //Kiln Buildup Stage 4
+                "KilnB", //Kiln Buildup
+                "Kiln_TOD", //Kiln Time Of Day
+                "Kiln_Event", //Kiln Event
+                "Kiln_Preload_Event", //Kiln Preload Event
+            ],
+
+            "33.11":[
+                "EventFlag.S33_WinterFestTab", //2024 winterfest
+                "WF_IG_Avail", //2024 winterfest
+            ],
+
+            "33.30":[
+                "GrillMoon_Day1", //GrillMoon Mini Event Buildup Stages
+                "GrillMoon_Day2", //GrillMoon Mini Event Buildup Stages
+                "GrillMoon_Day3", //GrillMoon Mini Event Buildup Stages
+                "GrillMoon_Day4", //GrillMoon Mini Event Buildup Stages
+                "GrillMoon_Day5", //GrillMoon Mini Event Buildup Stages
+                "GrillMoon_Event", //GrillMoon Mini Event
+            ],
+
+            "34.30|34.40":[
+                "GiftedTraveler_Phase1", //GiftedTraveler Buildup Stages(Daigo Portal Beams)
+                "GiftedTraveler_Phase2", //GiftedTraveler Buildup Stages(Daigo Portal Beams)
+                "GiftedTraveler_Phase3", //GiftedTraveler Buildup Stages(Daigo Portal Beams)
+                "GiftedTraveler_Phase4", //GiftedTraveler Buildup Stages(Daigo Portal Beams)
+                "GiftedTraveler_FinalPhase", //GiftedTraveler Buildup Stages(Daigo Portal Beams)
+                "GiftedTraveler_Observer_Phase1", //GiftedTraveler_Observer Buildup Stages(Death Star Stages)
+                "GiftedTraveler_Observer_Phase2", //GiftedTraveler_Observer Buildup Stages(Death Star Stages)
+                "GiftedTraveler_Observer_Phase3", //GiftedTraveler_Observer Buildup Stages(Death Star Stages)
+                "GiftedTraveler_Observer_Phase4", //GiftedTraveler_Observer Buildup Stages(Death Star Stages)
+                "GiftedTraveler_Observer_Phase5", //GiftedTraveler_Observer Buildup Stages(Death Star Stages)
+            ],
+
+            "35.20":[
+                "RHDEvent", //Ripehoneydew Event Countdown
+            ],
+
+            "36.30":[
+                "PC_01", //Pistol Canary Stage 1
+                "PC_02", //Pistol Canary Stage 2
+                "PC_03", //Pistol Canary Stage 3
+                "Event_S33_Winterfest_BrickSoup_Sequence", //Pistol Canary Sequence 
+                "Event_S33_Winterfest_BrickSoup_PreLoad_Sequence", //Pistol Canary Pre Load Sequence
+                "PC_Event", //Pistol Canary Event
+                "EventStart", //Pistol Canary Event Start
+                "PC_After", //Pistol Canary After Event
+                "PC_TentacleStage2", //Pistol Canary Tentacle Stage 2
+                "PC_Timer", //Pistol Canary Countdown
+            ]
+
+        })
+
+        for (const key in versionEventFlags) {
+            const versions = key.split("|");
+            if (versions.includes(version)) {
+                versionEventFlags[key].forEach(flag => {
+                    timeline.channels['client-events'].states[0].activeEvents.push({
+                        eventType: flag,
+                        activeUntil: "9999-12-01T21:10:00.000Z",
+                        activeSince: "2020-11-21T07:00:00.000Z"
+                    });
+                });
+            }
         }
         
 
-        if(version == 8.51){
-            timeline.channels['client-events']['states'][0]['activeEvents'].push(
-                {
-                    eventType: "EventFlag.UnvaultingCountdown", // Unvaulting Event countdown (idk if this works, havent tried it)
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                },
-                {
-                    eventType: "GWS0", // Unvaulting Event related
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                },
-                {
-                    eventType: "GWS1", //  Unvaulting Event related
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                },
-                {
-                    eventType: "GW1", //  Unvaulting Event related
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                },
-                {
-                    eventType: "GW2", //  Unvaulting Event related
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                },
-                {
-                    eventType: "GW3", // Unvaulting Event related
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                },
-                {
-                    eventType: "GWW1", //  Unvaulting Event related
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                },
-                {
-                    eventType: "GWW2", //  Unvaulting Event related
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                },
-                {
-                    eventType: "GWW3", //  Unvaulting Event related
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                },
-                {
-                    eventType: "GWW4", //  Unvaulting Event related
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                },
-                {
-                    eventType: "GWW5", //  Unvaulting Event related
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                },         
-            )
-        }
-
-        if(version == 9.20){
-            timeline.channels['client-events']['states'][0]['activeEvents'].push(
-                {
-                    eventType: "CatSpot1", // Cattus Spotting Ocean
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                },            
-            )
-        }
-
-        if(version == 9.30 || version == 9.40 || version == 9.41){
-            timeline.channels['client-events']['states'][0]['activeEvents'].push(
-                {
-                    eventType: "CDTime", // Final Showdown countdown (idk if this works, havent tried it)
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                },
-                {
-                    eventType: "DoggusProp", //Doggus Propaganda Posters
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                },
-                {
-                    eventType: "CVD1", // Final Showdown countdown (idk if this works, havent tried it)
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                },
-                {
-                    eventType: "CatSpot2", // Cattus Spotting 2
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                },
-                {
-                    eventType: "STP", // Stranger Things Portals(Mega Mall)
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                },           
-            )
-        }  
-
-        if(version == 10.31 || version == 10.40){
-            timeline.channels['client-events']['states'][0]['activeEvents'].push(
-                {
-                    eventType: "RBBMS", // Black Monday Tilted POI Swap
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-10-05T00:00:00.000Z"
-                },            
-            )
-        }
-        
-        
-        if(version == 10.40){
-            timeline.channels['client-events']['states'][0]['activeEvents'].push(
-                {
-                    eventType: "NN1", // The End Countdown
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-10-05T00:00:00.000Z"
-                },
-                /*{  
-                    eventType: "survey_br_nick_001", // nightnight blackhole lobby mini event
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "9999-09-14T07:00:00.000Z"
-                }*/            
-            )
-        }
-        
-        if(version == 11.10){
-            timeline.channels['client-events']['states'][0]['activeEvents'].push(
-                {
-                    eventType: "HW2019", // FortniteMares 2019
-                    activeUntil: "9999-10-05T00:41:00.000Z",
-                    activeSince: "2020-10-05T00:00:00.000Z"
-                },
-                {  
-                    eventType: "HW2019Leadup", // FortniteMares 2019 Leadup
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-10-05T00:00:00.000Z"
-                }             
-            )
-        }
-
-        if(version == 11.30){
-            timeline.channels['client-events']['states'][0]['activeEvents'].push(
-                {
-                    eventType: "GALCD", // C2S1-related (Winterfest 2019)
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2019-12-31T23:59:59.999Z"
-                },
-                {
-                    eventType: "GALP", // C2S1-related (Winterfest 2019)
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2019-12-31T23:59:59.999Z"
-                },
-            )
-        }
-        
-        if(version == 11.31){
-            timeline.channels['client-events']['states'][0]['activeEvents'].push(
-                {
-                    eventType: "EventFlag.LTE_WinterFest", // C2S1-related (Winterfest 2019)
-                    activeUntil: "9999-12-31T23:59:59.999Z",
-                    activeSince: "2019-12-31T23:59:59.999Z"
-                },
-                {
-                    eventType: "EventFlag.Winterfest.Tree", // C2S1-related (Winterfest 2019)
-                    activeUntil: "9999-12-31T23:59:59.999Z",
-                    activeSince: "2019-12-31T23:59:59.999Z"
-                },
-                {
-                    eventType: "WSFX3", // C2S1-related (Winterfest 2019)
-                    activeUntil: "9999-12-31T23:59:59.999Z",
-                    activeSince: "2019-12-31T23:59:59.999Z"
-                },
-                {
-                    eventType: "WSFX3F", // C2S1-related (Winterfest 2019)
-                    activeUntil: "9999-12-31T23:59:59.999Z",
-                    activeSince: "2019-12-31T23:59:59.999Z"
-                },
-                {
-                    eventType: "WD5", // C2S1-related (Winterfest 2019)
-                    activeUntil: "9999-12-31T23:59:59.999Z",
-                    activeSince: "2019-12-31T23:59:59.999Z"
-                },
-                {
-                    eventType: "WD4", // C2S1-related (Winterfest 2019)
-                    activeUntil: "9999-12-31T23:59:59.999Z",
-                    activeSince: "2019-12-31T23:59:59.999Z"
-                },
-                {
-                    eventType: "WD3", // C2S1-related (Winterfest 2019)
-                    activeUntil: "9999-12-31T23:59:59.999Z",
-                    activeSince: "2019-12-31T23:59:59.999Z"
-                },
-                {
-                    eventType: "WD2", // C2S1-related (Winterfest 2019)
-                    activeUntil: "9999-12-31T23:59:59.999Z",
-                    activeSince: "2019-12-31T23:59:59.999Z"
-                },
-                {
-                    eventType: "WD1", // C2S1-related (Winterfest 2019)
-                    activeUntil: "9999-12-31T23:59:59.999Z",
-                    activeSince: "2019-12-31T23:59:59.999Z"
-                },
-                {
-                    eventType: "WTR4", // C2S1-related (Winterfest 2019)
-                    activeUntil: "9999-12-31T23:59:59.999Z",
-                    activeSince: "2019-12-31T23:59:59.999Z"
-                },
-                {
-                    eventType: "WTR3", // C2S1-related (Winterfest 2019)
-                    activeUntil: "9999-12-31T23:59:59.999Z",
-                    activeSince: "2019-12-31T23:59:59.999Z"
-                },
-                {
-                    eventType: "WTR2", // C2S1-related (Winterfest 2019)
-                    activeUntil: "9999-12-31T23:59:59.999Z",
-                    activeSince: "2019-12-31T23:59:59.999Z"
-                },
-                {
-                    eventType: "WTR1", // C2S1-related (Winterfest 2019)
-                    activeUntil: "9999-12-31T23:59:59.999Z",
-                    activeSince: "2019-12-31T23:59:59.999Z"
-                },
-                {
-                    eventType: "WSH1", // C2S1-related (Winterfest 2019)
-                    activeUntil: "9999-12-31T23:59:59.999Z",
-                    activeSince: "2019-12-31T23:59:59.999Z"
-                },
-                {
-                    eventType: "WSM1", // C2S1-related (Winterfest 2019)
-                    activeUntil: "9999-12-31T23:59:59.999Z",
-                    activeSince: "2019-12-31T23:59:59.999Z"
-                },
-                {
-                    eventType: "WSM2", // C2S1-related (Winterfest 2019)
-                    activeUntil: "9999-12-31T23:59:59.999Z",
-                    activeSince: "2019-12-31T23:59:59.999Z"
-                },
-                {
-                    eventType: "WSM3", // C2S1-related (Winterfest 2019)
-                    activeUntil: "9999-12-31T23:59:59.999Z",
-                    activeSince: "2019-12-31T23:59:59.999Z"
-                },
-                {
-                    eventType: "WSM4", // C2S1-related (Winterfest 2019)
-                    activeUntil: "9999-12-31T23:59:59.999Z",
-                    activeSince: "2019-12-31T23:59:59.999Z"
-                },
-                {
-                    eventType: "WRRD1", // C2S1-related (Winterfest 2019)
-                    activeUntil: "9999-12-31T23:59:59.999Z",
-                    activeSince: "2019-12-31T23:59:59.999Z"
-                },
-                {
-                    eventType: "WDT1", // C2S1-related (Winterfest 2019)
-                    activeUntil: "9999-12-31T23:59:59.999Z",
-                    activeSince: "2019-12-31T23:59:59.999Z"
-                },
-                {
-                    eventType: "WDT2", // C2S1-related (Winterfest 2019)
-                    activeUntil: "9999-12-31T23:59:59.999Z",
-                    activeSince: "2019-12-31T23:59:59.999Z"
-                },
-                {
-                    eventType: "WDT3", // C2S1-related (Winterfest 2019)
-                    activeUntil: "9999-12-31T23:59:59.999Z",
-                    activeSince: "2019-12-31T23:59:59.999Z"
-                },
-                {
-                    eventType: "WDT4", // C2S1-related (Winterfest 2019)
-                    activeUntil: "9999-12-31T23:59:59.999Z",
-                    activeSince: "2019-12-31T23:59:59.999Z"
-                },
-                {
-                    eventType: "WD1C", // C2S1-related (Winterfest 2019)
-                    activeUntil: "9999-12-31T23:59:59.999Z",
-                    activeSince: "2019-12-31T23:59:59.999Z"
-                },           
-            )
-        }
-
-        if(version == 11.50){
-            timeline.channels['client-events']['states'][0]['activeEvents'].push(
-                {
-                    eventType: "GP2", // Gold Prop 1
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                },
-                {
-                    eventType: "GP3", // Gold Prop 2
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                },
-                {
-                    eventType: "GP4", // Gold Prop 3
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                },
-                {
-                    eventType: "GP5", // Gold Prop 4
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                }
-            )
-        }
-
-        if(version == 12.30){
-            timeline.channels['client-events']['states'][0]['activeEvents'].push(
-                {
-                    eventType: "DPY01", // Deadpool Yacht
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                },
-                {
-                    eventType: "EventFlag.DonutBattleBus", // Deadpool Battle Bus
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                },
-            )
-        }
-        
-        if(version == 12.40 || version == 12.41){
-            timeline.channels['client-events']['states'][0]['activeEvents'].push(
-                {
-                    eventType: "JCD01", // Travis Related (Countdown)
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                },
-                {
-                    eventType: "JH01", // Travis Related (Head)
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                },
-                {
-                    eventType: "JS01", // Travis Related (Stage Delivery Trucks)
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                },
-                {
-                    eventType: "JS02", // Travis Related (Stage Partially Built)
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "9999-11-21T07:00:00.000Z"
-                },
-                {
-                    eventType: "JS03", // Travis Related (Stage Finished Stage)
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                },
-                {
-                    eventType: "JCH01", // Travis Related (Countdown)
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                },
-                {
-                    eventType: "JP01", // Travis Teaser posters Appear (Stage)
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                },
-                {
-                    eventType: "JL1", // Travis LeadUp 2 (Stage)
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                },
-                {
-                    eventType: "JL2", // Travis LeadUp 2 (Stage)
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                },
-                {
-                    eventType: "JLL", // Travis Load level (Level)
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                }                
-            )
-        }           
-
-        if(version == 12.60 || version == 12.61){
-            timeline.channels['client-events']['states'][0]['activeEvents'].push(
-                {
-                    eventType: "FLA01", // C2S2-related (Timers)
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                },
-                {
-                    eventType: "FLCD01", // C2S2-related (Timers)
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                },  
-                {
-                    eventType: "FCD01", // C2S2-related (Timers)
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                },
-                {
-                    eventType: "FHS01", // Fritter Hatches Stage 1
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                },
-                {
-                    eventType: "FHS02", // Fritter Hatches STage 2
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                }                          
-            )
-        }
-        
-        if(version == 13.40){
-            timeline.channels['client-events']['states'][0]['activeEvents'].push(
-                {      
-                    eventType: "SM1",//scorch marks
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2015-09-14T07:00:00.000Z"
-                },
-                {      
-                    eventType: "LS_PRE",
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2015-09-14T07:00:00.000Z"
-                },
-                {
-                    eventType: "TC1",//thorhammer 'poi'
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2015-09-14T07:00:00.000Z"
-                },
-                {
-                    eventType: "TR1",//unhides the rift in the sky in season13(13.40)
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2015-09-14T07:00:00.000Z"
-                },
-                {
-                    eventType: "CBS1",//Coral buddies stage 1
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2015-09-14T07:00:00.000Z"
-                },                      
-            )
-        }
-
-        if(version == 14.00){
-            timeline.channels["client-events"]["states"][0]["activeEvents"].push(
-                {
-                    eventType: "LS2", //Galactus Countdown(Ch2S4 related)
-                    activeUntil: "9999-09-09T07:00:00.000Z",
-                    activeSince: "2020-09-14T07:00:00.000Z"
-                },
-                {
-                    eventType: "HSS2", //Sky Distant Object(Ch2S4 related)
-                    activeUntil: "9999-09-09T07:00:00.000Z",
-                    activeSince: "2020-09-14T07:00:00.000Z"
-                },
-            )
-        }
-
-        if(version == 14.30){
-            timeline.channels["client-events"]["states"][0]["activeEvents"].push(
-                {
-                    eventType: "SPJ02", //Sky Card for Junior(Ch2S4 related)
-                    activeUntil: "9999-09-09T07:00:00.000Z",
-                    activeSince: "2020-09-14T07:00:00.000Z"
-                }
-            )
-        }
-
-        if(version == 14.60){
-            timeline.channels['client-events']['states'][0]['activeEvents'].push(
-                {
-                    eventType: "FLA01", // C2S4-related (Timers)
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                },
-                {
-                    eventType: "FSE01", // C2S4-related (Timers)
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                },
-                {
-                    eventType: "FSE02", // C2S4-related (Timers)
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                },
-                {
-                    eventType: "JSE02", // C2S4-related (Timers)
-                    activeUntil: "9999-12-01T21:10:00.000Z",
-                    activeSince: "2020-11-21T07:00:00.000Z"
-                },
-                {
-                    eventType: "JFE01", // C2S4-related (Countdown)
-                    activeUntil: "9999-12-02T09:00:00.000Z",
-                    activeSince: "2020-12-01T21:16:00.000Z"
-                },
-                {
-                    eventType: "SPJ03", // C2S4-related (Countdown)
-                    activeUntil: "9999-12-02T09:00:00.000Z",
-                    activeSince: "2020-12-01T21:16:00.000Z"
-                }
-            )
-        }
-
-        if(version == 17.30 || version == 17.20){
-            timeline.channels['client-events']['states'][0]['activeEvents'].push(
-                {
-                    eventType: "BEL01", // Leadup In-game/Leadup In-Lobby
-                    activeUntil: "9999-09-14T07:00:00.000Z", // #1 2021-08-06T22:05:00.000Z // #2 2021-08-07T18:05:00.000Z // #3 2021-08-08T04:05:00.000Z // #4 2021-08-08T14:05:00.000Z // #5 2021-08-08T22:05:00.000Z
-                    activeSince: "2021-07-27T06:00:00.000Z" // #1 2021-07-27T06:00:00.000Z // #2 2021-08-06T23:15:00.000Z // #3 2021-08-07T19:15:00.000Z // #4 2021-08-08T05:15:00.000Z // #5 2021-08-08T15:15:00.000Z
-                },
-                {
-                    eventType: "BET01", // Rift Tour-related (Countdown)
-                    activeUntil: "9999-09-14T07:00:00.000Z", // #1 2021-08-06T22:05:00.000Z // #2 2021-08-07T18:05:00.000Z // #3 2021-08-08T04:05:00.000Z // #4 2021-08-08T14:05:00.000Z // #5 2021-08-08T22:05:00.000Z
-                    activeSince: "2021-07-27T06:00:00.000Z" // #1 2021-07-27T06:00:00.000Z // #2 2021-08-06T23:15:00.000Z // #3 2021-08-07T19:15:00.000Z // #4 2021-08-08T05:15:00.000Z // #5 2021-08-08T15:15:00.000Z
-                },
-                {
-                    eventType: "BEL02", // Leadup In-game/Leadup In-Lobby
-                    activeUntil: "9999-09-14T07:00:00.000Z", // #1 2021-08-06T22:05:00.000Z // #2 2021-08-07T18:05:00.000Z // #3 2021-08-08T04:05:00.000Z // #4 2021-08-08T14:05:00.000Z // #5 2021-08-08T22:05:00.000Z
-                    activeSince: "2021-07-27T06:00:00.000Z" // #1 2021-07-27T06:00:00.000Z // #2 2021-08-06T23:15:00.000Z // #3 2021-08-07T19:15:00.000Z // #4 2021-08-08T05:15:00.000Z // #5 2021-08-08T15:15:00.000Z
-                },
-                {
-                    eventType: "BEP02", // Rift Tour Enable Pads?
-                    activeUntil: "2021-09-14T07:00:00.000Z", 
-                    activeSince: "2021-07-27T06:00:00.000Z"
-                },
-                {
-                    eventType: "BPLS", // Rift Tour Party Landingship
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2021-07-27T06:00:00.000Z"
-                },
-                {
-                    eventType: "BTP", // Rift Tour Teaser Poster
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2021-07-27T06:00:00.000Z"
-                },
-                {
-                    eventType: "BAP", // Rift Tour Announce Poster
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2021-07-27T06:00:00.000Z"
-                },
-                {
-                    eventType: "BTL01", // Rift Tour TOD Leadup 1)
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2021-07-27T06:00:00.000Z"
-                },
-                {
-                    eventType: "ABDSLP", //Slurpy: Abduction(Ch2S7 related)
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2021-07-27T06:00:00.000Z"
-                },
-            )
-        }
-
-        if(version == 17.50){
-            timeline.channels['client-events']['states'][0]['activeEvents'].push(
-                {
-                    eventType: "KEL01", // Operation Sky Fire Event-related
-                    activeUntil: "9999-09-09T07:00:00.000Z",
-                    activeSince: "2023-10-29T00:00:00.000Z"
-                },
-                {
-                    eventType: "KEL02", // Operation Sky Fire Event-related
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2021-07-27T06:00:00.000Z"
-                },
-                {
-                    eventType: "ABDFRM", //Farm: Abduction(Ch2S7 related)
-                    activeUntil: "9999-09-09T07:00:00.000Z",
-                    activeSince: "2021-07-27T06:00:00.000Z"
-                },
-            )
-        }
-
-        if(version == 18.21){
-            timeline.channels['client-events']['states'][0]['activeEvents'].push(
-                {
-                    eventType: "FNM21", // FNMares 2021
-                    activeUntil: "9999-09-09T07:00:00.000Z",
-                    activeSince: "2021-07-27T06:00:00.000Z"
-                }
-            )
-        }
-
-        if(version == 19.01){
-            timeline.channels['client-events']['states'][0]['activeEvents'].push(
-                {
-                    eventType: "EventFlag.LTE_WinterFest", // WinterFest 2021
-                    activeUntil: "9999-09-09T07:00:00.000Z",
-                    activeSince: "2023-10-29T00:00:00.000Z"
-                },
-                {
-                    eventType: "WF_IG_Avail", // WinterFest 2021
-                    activeUntil: "9999-09-09T07:00:00.000Z",
-                    activeSince: "2023-10-29T00:00:00.000Z"
-                }
-            )
-        }
-
-        if(version == 20.40){
-            timeline.channels['client-events']['states'][0]['activeEvents'].push(
-                {
-                    eventType: "AL01", // Collision Event-related (Countdown)
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2021-07-27T06:00:00.000Z"
-                },
-                {
-                    eventType: "AL02", // Collision Event-related (Countdown)
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2021-07-27T06:00:00.000Z"
-                },
-                {
-                    eventType: "AS01", //Armadillo Start(Ch3S2 related)
-                    activeUntil: "9999-09-09T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "ARLU01", //ArmadilloRoll Lead Up(Ch3S2 related)
-                    activeUntil: "9999-09-09T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-            )
-        }
-
-        if(version == 21.30 || version == 21.40 || version == 21.50 || version == 21.51){
-            timeline.channels['client-events']['states'][0]['activeEvents'].push(
-                {
-                    eventType: "STMN_PH", // Dragon Ball Collab Preheat(21.30)
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2021-07-27T06:00:00.000Z"
-                },
-                {
-                    eventType: "Event_S21_Stamina", // Dragon Ball tab(21.40)
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2021-07-27T06:00:00.000Z"
-                },
-                {
-                    eventType: "RBB01", // Bugle Bloom (Closed)(21.30)
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2021-07-27T06:00:00.000Z"
-                },
-                {
-                    eventType: "NSSC02", // No Sweat Summer Concert (Constructed)(21.30)
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2021-07-27T06:00:00.000Z"
-                }
-            )
-        }        
-
-        if(version == 22.40){
-            timeline.channels['client-events']['states'][0]['activeEvents'].push(
-                {
-                    eventType: "RL01", // Fracture In-Game Leadup
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2021-07-27T06:00:00.000Z"
-                },
-                {
-                    eventType: "RL02", // Fracture Radish Lobby Leadup
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2021-07-27T06:00:00.000Z"
-                },
-                {
-                    eventType: "RL12", // Fracture Lobby Leadup 2
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2021-07-27T06:00:00.000Z"
-                },
-                {
-                    eventType: "RL13", // Fracture Lobby Leadup 3
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2021-07-27T06:00:00.000Z"
-                },
-                {
-                    eventType: "RL14", // Fracture Lobby Leadup 4
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2021-07-27T06:00:00.000Z"
-                },
-                {
-                    eventType: "RL15", // Fracture Lobby Leadup 5
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2021-07-27T06:00:00.000Z"
-                },
-                {
-                    eventType: "RL16", // Fracture Lobby Leadup 6
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2021-07-27T06:00:00.000Z"
-                },
-                {
-                    eventType: "RL22", // Fracture In-Game Leadup 2
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2021-07-27T06:00:00.000Z"
-                },
-                {
-                    eventType: "RL23", // Fracture In-Game Leadup 3
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2021-07-27T06:00:00.000Z"
-                },
-                {
-                    eventType: "RL24", // Fracture In-Game Leadup 4
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2021-07-27T06:00:00.000Z"
-                },
-                {
-                    eventType: "RL25", // Fracture In-Game Leadup 5
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2021-07-27T06:00:00.000Z"
-                },
-                {
-                    eventType: "RL26", // Fracture In-Game Leadup 6
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2021-07-27T06:00:00.000Z"
-                },
-                {
-                    eventType: "RC01", // Fracture Core
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2021-07-27T06:00:00.000Z"
-                },
-                {
-                    eventType: "RC02", // Fracture Core 2
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2021-07-27T06:00:00.000Z"
-                },
-                {
-                    eventType: "RC03", // Fracture Core 3
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2021-07-27T06:00:00.000Z"
-                },
-                {
-                    eventType: "RC04", // Fracture Core 4
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2021-07-27T06:00:00.000Z"
-                },
-                {
-                    eventType: "RC05", // Fracture Core 5
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2021-07-27T06:00:00.000Z"
-                },
-                {
-                    eventType: "RC06", // Fracture Core 6
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2021-07-27T06:00:00.000Z"
-                }
-            )
-        }
-
-        if(version == 23.10){
-            timeline.channels["client-events"]["states"][0]["activeEvents"].push(
-                {
-                    eventType: "CalendarEvent_Season23_Winterfest", // Winterfest 2022
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2021-07-27T06:00:00.000Z"
-                },
-                {
-                    eventType: "EventFlag.LTE_WinterFestTab", // Winterfest 2022
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2021-07-27T06:00:00.000Z"
-                }            
-            )
-        }
-    
-        if(version == 23.50){
-            timeline.channels["client-events"]["states"][0]["activeEvents"].push(
-                {
-                    eventType: "EventFlag.Event_Vaultbreakers", // Most Wanted tab
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2021-07-27T06:00:00.000Z"
-                },
-                {
-                    eventType: "EventFlag.Event_S23_FindIt", // Event_S23_FindIt
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2021-07-27T06:00:00.000Z"
-                },
-                {
-                    eventType: "RG01", // RiftGate Stage 1
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "9999-09-14T07:00:00.000Z"
-                },
-                {
-                    eventType: "RG02", // RiftGate Stage 2
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2021-07-27T06:00:00.000Z"
-                },
-                {
-                    eventType: "ST01", // Skytear Stage 1
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "9999-09-14T07:00:00.000Z"
-                },
-                {
-                    eventType: "ST02", // Skytear Stage 2
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2021-07-27T06:00:00.000Z"
-                }             
-            )
-        }
-
-        if(version == 24.00 || version == 24.10){
-            timeline.channels["client-events"]["states"][0]["activeEvents"].push(
-                {
-                    eventType: "EventFlag.Event_S24_LanternFest", // Latern Fest 2023 
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2021-07-27T06:00:00.000Z"
-                },
-                {
-                    eventType: "Lanternfest", // Latern Fest 2023 
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2021-07-27T06:00:00.000Z"
-                },
-                {
-                    eventType: "EventFlag.Event_S24_SunBurst", // Sunburst 
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2021-07-27T06:00:00.000Z"
-                },
-                {
-                    eventType: "EventFlag.Event_S24_SpringFling", // Springfling 
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2021-07-27T06:00:00.000Z"
-                }    
-            )
-        }
-        
-        if(version == 24.30 || version == 24.40){
-            timeline.channels["client-events"]["states"][0]["activeEvents"].push(
-                {
-                    eventType: "EventFlag.Event_PlotTwist", // Star Wars 2023 tab 
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2021-07-27T06:00:00.000Z"
-                }    
-            )
-        }
-
-        if(version == 25.30){
-            timeline.channels["client-events"]["states"][0]["activeEvents"].push(
-                {
-                    eventType: "EventFlag.Event_BelongTreaty", // Jujutsu Kaisen tab
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2021-07-27T06:00:00.000Z"
-                }    
-            )
-        }        
-
-        if(version == 27.11 || version == 31.41 || version == 32.11){
-            timeline.channels["client-events"]["states"][0]["activeEvents"].push(
-                {
-                    eventType: "DL01", // Durian & Kiln Event-related (Countdown)
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "DL02", // Durian & Kiln Event-related (Countdown)
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                }           
-            )
-        }
-
-        if(version == 28.10){
-            timeline.channels["client-events"]["states"][0]["activeEvents"].push(
-                {
-                    eventType: "EventFlag.Event_LinedNotebook_Teaser", // TMNT Tab countdown (always needed)
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                }       
-            )
-        }
-
-        if(version == 28.20 || version == 28.30){
-            timeline.channels["client-events"]["states"][0]["activeEvents"].push(
-                {
-                    eventType: "EventFlag.Event_LinedNotebook", // TMNT mini pass
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                }       
-            )
-        }
-
-        if(version == 28.30){
-            timeline.channels["client-events"]["states"][0]["activeEvents"].push(
-                /*{
-                    eventType: "CH5S1CPPE", //Pre-Emergence Event(Central Picnic)
-                    activeUntil: "2024-03-03T02:00.000Z",
-                    activeSince: "2024-03-01T00:50:00.000Z"
-                },
-                {
-                    eventType: "CH5S1CPCE", //Crater event - Pre-Emergence Event (Central Picnic)
-                    activeUntil: "2024-03-01T02:00.000Z",
-                    activeSince: "2024-03-01T00:50:00.000Z"
-                },
-                {
-                    eventType: "CH5S1CPTE", //Thump Event - Pre-Emergence Event (Central Picnic)
-                    activeUntil: "2024-03-01T01:40.000Z",
-                    activeSince: "2024-03-01T00:40:00.000Z"
-                },
-                {
-                    eventType: "CH5S1CPFH", //Final Hour - Pre-Emergence Event (Central Picnic)
-                    activeUntil: "2024-03-03T10:00.000Z",
-                    activeSince: "2024-03-01T00:50:00.000Z"
-                },
-                {
-                    eventType: "CH5S1CPFP", //Titan Hand Appears(Central Picnic)
-                    activeUntil: "2024-03-03T02:00.000Z",
-                    activeSince: "2024-03-01T00:50:00.000Z"
-                },
-                {
-                    eventType: "CH5S1CPPP", //Primary Events(Central Picnic)
-                    activeUntil: "2024-03-03T02:00.000Z",
-                    activeSince: "2024-03-01T00:50:00.000Z"
-                },
-                {
-                    eventType: "CH5S1CPEP", //Post-Chain Event(Central Picnic)
-                    activeUntil: "2024-03-03T02:00.000Z",
-                    activeSince: "2024-03-01T00:50:00.000Z"
-                }, //Note: Flags labled "Pre-Emergence Event" need to have the "CH5S1CPPE" flag to work event flags not labled with the "Pre-Emergence Event" need to have "CH5S1CPPE" disabled to work*/
-            )
-        }
-
-        if (version == 29.00 || version == 29.01 || version == 29.10){
-            timeline.channels["client-events"]["states"][0]["activeEvents"].push(
-                {
-                    eventType: "EventFlag.Event_S29_SeasonalActivation", 
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2024-03-01T00:50:00.000Z"
-                },
-                {
-                    eventType: "EventFlag.Event_S29_MidasActivation", 
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2024-03-01T00:50:00.000Z"
-                }                               
-            )
-        }
-        
-        if(version == 29.20 || version == 29.30){
-            timeline.channels["client-events"]["states"][0]["activeEvents"].push(
-                {
-                    eventType: "EventFlag.Event_S29_ColdDay", // Avatar mini pass + cabbages
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },    
-                {
-                    eventType: "AtlaShrines", // Avatar map changes
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },    
-                {
-                    eventType: "AtlaScrolls", // Avatar map changes
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "AtlaChests", // Avatar map changes
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                }                                    
-            )
-        }
-
-        if(version == 29.40){
-            timeline.channels["client-events"]["states"][0]["activeEvents"].push(
-                /*{
-                    eventType: "EventFlag.Event_Osiris",
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "SUPERSPORT_BUILDUP_1",
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "SUPERSPORT_BUILDUP_2",
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "SUPERSPORT_BUILDUP_3",
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "SUPERSPORT_CHARGE_1",
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "SUPERSPORT_STRIKE_1",
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "SUPERSPORT_CHARGE_2",
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "SUPERSPORT_STRIKE_2",
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "SUPERSPORT_CHARGE_3",
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "SUPERSPORT_STRIKE_3",
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "SUPERSPORT_SANDSTORM",
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "SUPERSPORT_LIGHT_2",
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },*/
-            )
-        }
-
-        if(version == 30.20 || version == 30.30){
-            timeline.channels['client-events']['states'][0]['activeEvents'].push(
-            {
-                eventType: "EventFlag.Event_Greenhouse", //Pirates Of the Caribbean Mini Pass
-                activeUntil: "9999-09-14T07:00:00.000Z",
-                activeSince: "2020-09-09T07:00:00.000Z"
-            },
-            {
-                eventType: "RE_01_Cutout",
-                activeUntil: "9999-09-14T07:00:00.000Z",
-                activeSince: "2020-09-09T07:00:00.000Z"
-            },
-            {
-                eventType: "RE_02_Cutout",
-                activeUntil: "9999-09-14T07:00:00.000Z",
-                activeSince: "2020-09-09T07:00:00.000Z"
-            },
-            {
-                eventType: "RE_03_Cutout",
-                activeUntil: "9999-09-14T07:00:00.000Z",
-                activeSince: "2020-09-09T07:00:00.000Z"
-            },
-            {
-                eventType: "RE_01", //Nitro Pipeline Stage 1
-                activeUntil: "9999-09-14T07:00:00.000Z",
-                activeSince: "2020-09-09T07:00:00.000Z"
-            },
-            {
-                eventType: "RE_02", //Nitro Pipeline Stage 2
-                activeUntil: "9999-09-14T07:00:00.000Z",
-                activeSince: "2020-09-09T07:00:00.000Z"
-            },
-            {
-                eventType: "RE_03", //Nitro Pipeline Stage 3
-                activeUntil: "9999-09-14T07:00:00.000Z",
-                activeSince: "2020-09-09T07:00:00.000Z"
-            },
-        )}
-
-        if (version >= 31.20 || version <= 31.40){
-            timeline.channels["client-events"]["states"][0]["activeEvents"].push(
-                {
-                    eventType: "EventFlag.Event_ButtercakePass", 
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2024-03-01T00:50:00.000Z"
-                }                           
-            )
-        }
-
-        if (version >= 31.40 || version <= 33.10) { // one UPlugin is set to end on 33.00 while the other on 33.10 so using 33.10 just in case
+        if (version >= 31.40 || version <= 33.10) {
             timeline.channels["client-events"]["states"][0]["activeEvents"].push(
                 {
                     eventType: "EventFlag.Event_SpooktacularPass", // Brick or Treat LEGO pass 
@@ -1387,226 +661,7 @@ module.exports = {
                 }                           
             )
         }
-
-        if (version == 31.41) {
-            timeline.channels["client-events"]["states"][0]["activeEvents"].push(
-                {
-                    eventType: "StageA", //Kiln Buildup Stage 1
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                },
-                {
-                    eventType: "StageB", //Kiln Buildup Stage 2
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                },
-                {
-                    eventType: "StageC", //Kiln Buildup Stage 3
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                },
-                {
-                    eventType: "StageD", //Kiln Buildup Stage 4
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "KilnB", //Kiln Buildup
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "Kiln_TOD", //Kiln Time Of Day
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "Kiln_Event", //Kiln Event
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "Kiln_Preload_Event", //Kiln Preload Event
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                }                           
-            )
-        }
-
-        if (version == 33.11) {
-            timeline.channels["client-events"]["states"][0]["activeEvents"].push(
-                {
-                    eventType: "EventFlag.S33_WinterFestTab", //2024 winterfest
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "WF_IG_Avail", //2024 winterfest
-                    activeUntil: "9999-09-09T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                }                         
-            )
-        }
-
-        if (version == 33.30) {
-            timeline.channels["client-events"]["states"][0]["activeEvents"].push(
-                {
-                    eventType: "GrillMoon_Day1", //GrillMoon Mini Event Buildup Stages
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "GrillMoon_Day2", //GrillMoon Mini Event Buildup Stages
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "GrillMoon_Day3", //GrillMoon Mini Event Buildup Stages
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "GrillMoon_Day4", //GrillMoon Mini Event Buildup Stages
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "GrillMoon_Day5", //GrillMoon Mini Event Buildup Stages
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "GrillMoon_Event", //GrillMoon Mini Event
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                                       
-            )
-        }
-
-        if (version == 34.30 || version == 34.40) {
-            timeline.channels["client-events"]["states"][0]["activeEvents"].push(
-                {
-                    eventType: "GiftedTraveler_Phase1", //GiftedTraveler Buildup Stages(Daigo Portal Beams)
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "GiftedTraveler_Phase2", //GiftedTraveler Buildup Stages(Daigo Portal Beams)
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "GiftedTraveler_Phase3", //GiftedTraveler Buildup Stages(Daigo Portal Beams)
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "GiftedTraveler_Phase4", //GiftedTraveler Buildup Stages(Daigo Portal Beams)
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "GiftedTraveler_FinalPhase", //GiftedTraveler Buildup Stages(Daigo Portal Beams)
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "GiftedTraveler_Observer_Phase1", //GiftedTraveler_Observer Buildup Stages(Death Star Stages)
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "GiftedTraveler_Observer_Phase2", //GiftedTraveler_Observer Buildup Stages(Death Star Stages)
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "GiftedTraveler_Observer_Phase3", //GiftedTraveler_Observer Buildup Stages(Death Star Stages)
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "GiftedTraveler_Observer_Phase4", //GiftedTraveler_Observer Buildup Stages(Death Star Stages)
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "GiftedTraveler_Observer_Phase5", //GiftedTraveler_Observer Buildup Stages(Death Star Stages)
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-               
-                                       
-            )
-        }
-
-        if (version == 35.20) {
-            timeline.channels["client-events"]["states"][0]["activeEvents"].push(
-                {
-                    eventType: "RHDEvent", //Ripehoneydew Event Countdown
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2021-06-05T14:00:00.000Z"
-                }
-                                       
-            )
-        }
-
-        if (version == 36.30) {
-            timeline.channels["client-events"]["states"][0]["activeEvents"].push(
-                {
-                    eventType: "PC_01", //Pistol Canary Stage 1
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "PC_02", //Pistol Canary Stage 2
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "PC_03", //Pistol Canary Stage 3
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "Event_S33_Winterfest_BrickSoup_Sequence", //Pistol Canary Sequence 
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "Event_S33_Winterfest_BrickSoup_PreLoad_Sequence", //Pistol Canary Pre Load Sequence
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "PC_Event", //Pistol Canary Event
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "EventStart", //Pistol Canary Event Start
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "PC_After", //Pistol Canary After Event
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "PC_TentacleStage2", //Pistol Canary Tentacle Stage 2
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "PC_Timer", //Pistol Canary Countdown
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                }
-            )
-        }
-
+        
         if(versionGlobal == 10){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
@@ -1893,7 +948,7 @@ module.exports = {
                     eventType: "BPAQ", //Bomb Parts Assembling(Ch2S7 related)
                     activeUntil: "9999-09-09T07:00:00.000Z",
                     activeSince: "2020-09-09T07:00:00.000Z"
-                },/*
+                },
                 {
                     eventType: "SWRMDUP", //Slurpy Warm Up Event: Beam Turning On(Ch2S7 related)
                     activeUntil: "9999-09-09T07:00:00.000Z",
@@ -1948,7 +1003,7 @@ module.exports = {
                     eventType: "FDOPN", //Farm Warm Up Event: Doors Opening(Ch2S7 related)
                     activeUntil: "9999-09-09T07:00:00.000Z",
                     activeSince: "9999-09-09T07:00:00.000Z"
-                },*/
+                },
             )
         }
 
@@ -2516,19 +1571,19 @@ module.exports = {
                 activeSince: "2000-09-14T07:00:00.000Z"
             })
         }
-        if(!requested) {
-            const activeEvents = timeline.channels['client-events'].states[0].activeEvents;
-            let count = 0;
-            for (const event of activeEvents) {
-                if(event["eventType"]){
-                    count++
+        if (!requested) {
+                const activeEvents = timeline.channels['client-events'].states[0].activeEvents;
+                let count = 0;
+                for (const event of activeEvents) {
+                    if (event["eventType"]) {
+                        count++
+                    }
                 }
+                NeoLog.Log(`${count} Event Flags currently active`);
+                requested = true;
             }
-            NeoLog.Log(`${count} Event Flags currently active`);
-            requested = true;
+            res.json(timeline)
+
         }
-        res.json(timeline)
 
     }
-
-}
