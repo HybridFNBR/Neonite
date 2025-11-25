@@ -453,7 +453,12 @@ module.exports = {
 			if(version >= 30.20){activatePlaylist(discoveryv2, "set_blastberry_playlists")}
 			if(version >= 36.10){activatePlaylist(discoveryv2, "set_forbiddenfruit_nobuild_playlists")}
 			if(version >= 37.31 && version <= 38.11){activatePlaylist(discoveryv2, "playlist_stridemice")}
-
+			if(version >= 37.31 && version <= 38.11){activatePlaylist(discoveryv2, "playlist_stridemice")}
+			if(version >= 38.11){
+				updateMetadata(discoveryv2, "ref_panel_byepicfeeder_1", {
+					ref_id: "CreativeDiscoverySurface_FrontendV2:ByEpicFeeder"
+				});
+			}
 			if (playlistManager[version]){playlistManager[version].forEach(playlist => activatePlaylist(discoveryv2, playlist))}
 
 			return res.json(discoveryv2);
@@ -544,6 +549,12 @@ function activatePlaylist(playlist, mnemonic) {
 	if (findPlaylist) {
 		findPlaylist.active = true;
 	}
+}
+
+function updateMetadata(discovery, mnemonic, metadata) {
+    const findPlaylist = discovery.find(i => i.mnemonic === mnemonic);
+    if (!findPlaylist) return;
+    Object.assign(findPlaylist.metadata, metadata);
 }
 
 const playlistManager = {
