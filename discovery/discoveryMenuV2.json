@@ -24,30 +24,30 @@
     "discoveryIntent": "PUBLIC",
     "linkState": "LIVE"
   },
-   {
-      "namespace": "fn",
-      "accountId": "epic",
-      "creatorName": "Epic",
-      "mnemonic": "reference_byepicnocompetitive_5",
-      "linkType": "Reference",
-      "metadata": {
-        "ref_id": "CreativeDiscoverySurface_Frontend:ByEpicNoCompetitive",
-        "ref_qty": 5,
-        "feature_flags": [
-          "bypass_rating_check"
-        ],
-        "ref_type": "CreativeDiscoverySurfacePanel"
-      },
-      "version": 1,
-      "active": true,
-      "disabled": false,
-      "created": "2023-11-28T19:37:59.026Z",
-      "published": "2023-11-28T19:37:59.026Z",
-      "descriptionTags": [],
-      "moderationStatus": "Unmoderated",
-      "lastActivatedDate": "2023-11-28T19:37:59.033Z",
-      "discoveryIntent": "PUBLIC"
+  {
+    "namespace": "fn",
+    "accountId": "epic",
+    "creatorName": "Epic",
+    "mnemonic": "reference_byepicnocompetitive_5",
+    "linkType": "Reference",
+    "metadata": {
+      "ref_id": "CreativeDiscoverySurface_Frontend:ByEpicNoCompetitive",
+      "ref_qty": 5,
+      "feature_flags": [
+        "bypass_rating_check"
+      ],
+      "ref_type": "CreativeDiscoverySurfacePanel"
     },
+    "version": 1,
+    "active": true,
+    "disabled": false,
+    "created": "2023-11-28T19:37:59.026Z",
+    "published": "2023-11-28T19:37:59.026Z",
+    "descriptionTags": [],
+    "moderationStatus": "Unmoderated",
+    "lastActivatedDate": "2023-11-28T19:37:59.033Z",
+    "discoveryIntent": "PUBLIC"
+  },
   {
     "namespace": "fn",
     "accountId": "epic",
@@ -1948,6 +1948,201 @@
     "descriptionTags": [],
     "moderationStatus": "Approved",
     "lastActivatedDate": "2025-08-21T16:22:28.955Z",
+    "discoveryIntent": "PUBLIC",
+    "linkState": "LIVE"
+  },
+  {
+    "namespace": "fn",
+    "accountId": "epic",
+    "creatorName": "Epic",
+    "mnemonic": "playlist_skymango",
+    "linkType": "BR:Playlist",
+    "metadata": {
+      "required_content": {
+        "verse_uris": [
+          "/Fortnite.com/GameFeatures/BRRoot",
+          "/Fortnite.com/GameFeatures/SkyMangoPlaylist"
+        ]
+      },
+      "pop_out_image_urls": {
+        "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR-3811-C6MS2-End-Event-KA-Aspot-v2-FG-7306e01c.png"
+      },
+      "background_image_urls": {
+        "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR-3811-C6MS2-End-Event-KA-Aspot-v2-BG-c5eb8085.png"
+      },
+      "aspot_title": "Chapter Finale Zero Hour",
+      "image_url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-11_SkyMango_KeyArt_DiscoverPlaylistTile_-1920x1080-278c436a.jpg",
+      "image_urls": {
+        "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-11_SkyMango_KeyArt_DiscoverPlaylistTile_-480x270-78d32874.jpg",
+        "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-11_SkyMango_KeyArt_DiscoverPlaylistTile_-640x360-11119608.jpg",
+        "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-11_SkyMango_KeyArt_DiscoverPlaylistTile_-1920x1080-278c436a.jpg"
+      },
+      "title": "Chapter Finale Zero Hour",
+      "matchmaking": {
+        "override_playlist": "playlist_skymango"
+      },
+      "disable_discovery_features": [
+        "AllWrites"
+      ],
+      "alt_image_urls": {
+        "de": {
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-11_SkyMango_KeyArt_DiscoverPlaylistTile_-480x270-9f04c24b.jpg",
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-11_SkyMango_KeyArt_DiscoverPlaylistTile_-640x360-bb6e96ef.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-11_SkyMango_KeyArt_DiscoverPlaylistTile_-1920x1080-2ef5d1f8.jpg"
+        },
+        "ru": {
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-11_SkyMango_KeyArt_DiscoverPlaylistTile_-480x270-88578fdc.jpg",
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-11_SkyMango_KeyArt_DiscoverPlaylistTile_-640x360-dfecb153.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-11_SkyMango_KeyArt_DiscoverPlaylistTile_-1920x1080-d189abec.jpg"
+        },
+        "ko": {
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-11_SkyMango_KeyArt_DiscoverPlaylistTile_-480x270-5dcb6caa.jpg",
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-11_SkyMango_KeyArt_DiscoverPlaylistTile_-640x360-f972e700.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-11_SkyMango_KeyArt_DiscoverPlaylistTile_-1920x1080-4f3a60dd.jpg"
+        },
+        "zh-hant": {
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-11_SkyMango_KeyArt_DiscoverPlaylistTile_-480x270-33a1b374.jpg",
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-11_SkyMango_KeyArt_DiscoverPlaylistTile_-640x360-72550e73.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-11_SkyMango_KeyArt_DiscoverPlaylistTile_-1920x1080-37abf013.jpg"
+        },
+        "pt-BR": {
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-11_SkyMango_KeyArt_DiscoverPlaylistTile_-480x270-132e1efd.jpg",
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-11_SkyMango_KeyArt_DiscoverPlaylistTile_-640x360-a1c2ac0b.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-11_SkyMango_KeyArt_DiscoverPlaylistTile_-1920x1080-9aa3b334.jpg"
+        },
+        "zh-hans": {
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-11_SkyMango_KeyArt_DiscoverPlaylistTile_-480x270-a5ff0401.jpg",
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-11_SkyMango_KeyArt_DiscoverPlaylistTile_-640x360-d5a010f4.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-11_SkyMango_KeyArt_DiscoverPlaylistTile_-1920x1080-b6ef2ecd.jpg"
+        },
+        "it": {
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-11_SkyMango_KeyArt_DiscoverPlaylistTile_-480x270-adb14430.jpg",
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-11_SkyMango_KeyArt_DiscoverPlaylistTile_-640x360-b9c66c83.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-11_SkyMango_KeyArt_DiscoverPlaylistTile_-1920x1080-dde671d5.jpg"
+        },
+        "fr": {
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-11_SkyMango_KeyArt_DiscoverPlaylistTile_-480x270-6f1b591e.jpg",
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-11_SkyMango_KeyArt_DiscoverPlaylistTile_-640x360-d8543111.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-11_SkyMango_KeyArt_DiscoverPlaylistTile_-1920x1080-974740e9.jpg"
+        },
+        "es": {
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-11_SkyMango_KeyArt_DiscoverPlaylistTile_-480x270-f77292f0.jpg",
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-11_SkyMango_KeyArt_DiscoverPlaylistTile_-640x360-9638f3a2.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-11_SkyMango_KeyArt_DiscoverPlaylistTile_-1920x1080-c578873c.jpg"
+        },
+        "ar": {
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-11_SkyMango_KeyArt_DiscoverPlaylistTile_-480x270-3f7a7080.jpg",
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-11_SkyMango_KeyArt_DiscoverPlaylistTile_-640x360-aa263df3.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-11_SkyMango_KeyArt_DiscoverPlaylistTile_-1920x1080-49407e6e.jpg"
+        },
+        "vi": {
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-11_SkyMango_KeyArt_DiscoverPlaylistTile_-480x270-2703d551.jpg",
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-11_SkyMango_KeyArt_DiscoverPlaylistTile_-640x360-d9d69446.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-11_SkyMango_KeyArt_DiscoverPlaylistTile_-1920x1080-c693c5e7.jpg"
+        },
+        "th": {
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-11_SkyMango_KeyArt_DiscoverPlaylistTile_-480x270-32e903a6.jpg",
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-11_SkyMango_KeyArt_DiscoverPlaylistTile_-640x360-60009141.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-11_SkyMango_KeyArt_DiscoverPlaylistTile_-1920x1080-eb29a36e.jpg"
+        },
+        "ja": {
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-11_SkyMango_KeyArt_DiscoverPlaylistTile_-480x270-9afae9df.jpg",
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-11_SkyMango_KeyArt_DiscoverPlaylistTile_-640x360-0e6a5c94.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-11_SkyMango_KeyArt_DiscoverPlaylistTile_-1920x1080-bddb98c1.jpg"
+        },
+        "id": {
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-11_SkyMango_KeyArt_DiscoverPlaylistTile_-480x270-c44cfb85.jpg",
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-11_SkyMango_KeyArt_DiscoverPlaylistTile_-640x360-6779ebfa.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-11_SkyMango_KeyArt_DiscoverPlaylistTile_-1920x1080-7720befe.jpg"
+        },
+        "pl": {
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-11_SkyMango_KeyArt_DiscoverPlaylistTile_-480x270-98e6d02e.jpg",
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-11_SkyMango_KeyArt_DiscoverPlaylistTile_-640x360-a8545094.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-11_SkyMango_KeyArt_DiscoverPlaylistTile_-1920x1080-e7a5b068.jpg"
+        },
+        "es-419": {
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-11_SkyMango_KeyArt_DiscoverPlaylistTile_-480x270-6f2d61d0.jpg",
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-11_SkyMango_KeyArt_DiscoverPlaylistTile_-640x360-e60fc5f0.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-11_SkyMango_KeyArt_DiscoverPlaylistTile_-1920x1080-da44b68f.jpg"
+        },
+        "tr": {
+          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-11_SkyMango_KeyArt_DiscoverPlaylistTile_-480x270-ac7e1ee7.jpg",
+          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-11_SkyMango_KeyArt_DiscoverPlaylistTile_-640x360-25fc9eb9.jpg",
+          "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-11_SkyMango_KeyArt_DiscoverPlaylistTile_-1920x1080-4cc5c598.jpg"
+        }
+      },
+      "alt_title": {
+        "de": "Kapitelfinale \u2013 Stunde Null",
+        "ru": "\u0424\u0438\u043d\u0430\u043b \u0433\u043b\u0430\u0432\u044b \u00ab\u042d\u043f\u0438\u0446\u0435\u043d\u0442\u0440 \u0445\u0430\u043e\u0441\u0430\u00bb",
+        "ko": "\ucc55\ud130 \ud53c\ub0a0\ub808 \uc81c\ub85c \uc544\uc6cc",
+        "zh-hant": "\u6700\u7d42\u7ae0\u6c7a\u6230\u6642\u523b",
+        "pt-BR": "Cap\u00edtulo Final \u2014 Hora Zero",
+        "zh-hans": "\u6700\u7ec8\u7ae0\u51b3\u80dc\u65f6\u523b",
+        "it": "Gran finale del capitolo Ora zero",
+        "fr": "Fin du chapitre\u00a0: Heure z\u00e9ro",
+        "es": "Cap\u00edtulo final: Hora cero",
+        "ar": "\u062e\u0627\u062a\u0645\u0629 \u0627\u0644\u0641\u0635\u0644: \u0633\u0627\u0639\u0629 \u0627\u0644\u0635\u0641\u0631",
+        "vi": "H\u1ed3i K\u1ebft Ch\u01b0\u01a1ng - Th\u1eddi Kh\u1eafc Quy\u1ebft \u0110\u1ecbnh",
+        "th": "\u0e1a\u0e17\u0e2a\u0e38\u0e14\u0e17\u0e49\u0e32\u0e22: \u0e0a\u0e31\u0e48\u0e27\u0e42\u0e21\u0e07\u0e0a\u0e35\u0e49\u0e02\u0e32\u0e14",
+        "ja": "\u30c1\u30e3\u30d7\u30bf\u30fc\u30d5\u30a3\u30ca\u30fc\u30ec\u30a4\u30d9\u30f3\u30c8 - \u30bc\u30ed\u30fb\u30a2\u30ef\u30fc",
+        "id": "Chapter Akhir Detik Penentu",
+        "pl": "Fina\u0142 rozdzia\u0142u: Godzina Zero",
+        "es-419": "Final del cap\u00edtulo: Hora cero",
+        "tr": "B\u00f6l\u00fcm Finali: S\u0131f\u0131r\u0131nc\u0131 Saat"
+      },
+      "block_cascading_data": "true",
+      "alt_tagline": {
+        "de": "St\u00fcrme in den Kampf in Fortnite: Stunde Null, das Kapitelfinale-Live-Event am 29. November um 20:00 Uhr MEZ Die T\u00fcren \u00f6ffnen sich 40 Minuten vor Beginn, also tauch ein und bereite dich auf die Action vor!",
+        "ru": "\u0423\u0447\u0430\u0441\u0442\u0432\u0443\u0439\u0442\u0435 \u0432 \u0431\u0438\u0442\u0432\u0435 Fortnite: \u00ab\u042d\u043f\u0438\u0446\u0435\u043d\u0442\u0440 \u0445\u0430\u043e\u0441\u0430\u00bb \u2014 \u0444\u0438\u043d\u0430\u043b\u044c\u043d\u043e\u043c \u0441\u043e\u0431\u044b\u0442\u0438\u0438 \u0433\u043b\u0430\u0432\u044b \u0432 \u043f\u0440\u044f\u043c\u043e\u043c \u044d\u0444\u0438\u0440\u0435, \u043a\u043e\u0442\u043e\u0440\u043e\u0435 \u043f\u0440\u043e\u0439\u0434\u0451\u0442 29 \u043d\u043e\u044f\u0431\u0440\u044f \u0432 22:00 \u041c\u0421\u041a. \u0412\u0445\u043e\u0434 \u043e\u0442\u043a\u0440\u043e\u0435\u0442\u0441\u044f \u0437\u0430 40 \u043c\u0438\u043d\u0443\u0442 \u0434\u043e \u0441\u043e\u0431\u044b\u0442\u0438\u044f. \u0417\u0430\u0445\u043e\u0434\u0438\u0442\u0435 \u0432 \u0438\u0433\u0440\u0443 \u0438 \u0433\u043e\u0442\u043e\u0432\u044c\u0442\u0435\u0441\u044c \u043a \u0431\u043e\u044e!",
+        "ko": "11\uc6d4 30\uc77c \uc624\uc804 4\uc2dc(\ud55c\uad6d \uc2dc\uac04)\uc5d0 \ucc55\ud130 \ud53c\ub0a0\ub808 \ub77c\uc774\ube0c \uc774\ubca4\ud2b8 \ud3ec\ud2b8\ub098\uc774\ud2b8: \uc81c\ub85c \uc544\uc6cc \uc804\ud22c\uc5d0 \ub6f0\uc5b4\ub4dc\uc138\uc694. 40\ubd84 \uc804\uc5d0 \ub300\uae30\uc5f4\uc774 \uc624\ud508\ub429\ub2c8\ub2e4. \ubbf8\ub9ac \uc804\ud22c\ub97c \uc900\ube44\ud558\uc138\uc694!",
+        "zh-hant": "\u300cFortnite\uff1a\u6c7a\u6230\u6642\u523b\u300d\u6700\u7d42\u7ae0\u76f4\u64ad\u6d3b\u52d5\u5c07\u65bc\u53f0\u5317\u6642\u9593 11 \u6708 30 \u65e5\u51cc\u6668 3 \u9ede\u767b\u5834\uff0c\u5feb\u4f86\u52a0\u5165\u6230\u9b25\uff01\u6d3b\u52d5\u958b\u59cb\u524d 40 \u5206\u9418\u5373\u53ef\u5165\u5834\uff0c\u5feb\u9032\u4f86\u6e96\u5099\u597d\u8fce\u63a5\u7cbe\u5f69\u7684\u5834\u9762\u5427\uff01",
+        "pt-BR": "V\u00e1 para a batalha no Fortnite: Hora Zero, o Evento ao Vivo do Final de Cap\u00edtulo, em 29 de novembro, \u00e0s 16h (BRT). As portas se abrem 40 minutos antes. Ent\u00e3o entre e prepare-se para a a\u00e7\u00e3o!",
+        "zh-hans": "\u5317\u4eac\u65f6\u95f411\u670830\u65e5\u51cc\u66683\u70b9\uff0c\u5728Fortnite\uff1a\u51b3\u80dc\u65f6\u523b\u6700\u7ec8\u7ae0\u5b9e\u51b5\u4e8b\u4ef6\u4e2d\u51b2\u950b\u9677\u9635\u3002\u4e8b\u4ef6\u5165\u53e3\u5c06\u63d0\u524d40\u5206\u949f\u5f00\u653e\uff0c\u63d0\u524d\u52a0\u5165\uff0c\u505a\u597d\u51c6\u5907\uff01",
+        "it": "Lanciati in battaglia su Fortnite: Ora zero, l'evento in diretta per il Gran finale del capitolo, in arrivo il 29 novembre alle 20:00 ora italiana. I battenti aprono 40 minuti in anticipo, quindi salta dentro e preparati all'azione!",
+        "fr": "Plongez dans la m\u00eal\u00e9e dans Fortnite\u00a0: Heure z\u00e9ro, l'\u00e9v\u00e9nement en direct de fin du chapitre qui aura lieu le 29\u00a0novembre \u00e0 20h (CET). L'ouverture des portes aura lieu 40\u00a0minutes avant le d\u00e9but de l'\u00e9v\u00e9nement. Allez-y et tenez-vous pr\u00eats \u00e0 passer \u00e0 l'action\u00a0!",
+        "es": "Atormenta a tus enemigos en Fortnite: Hora cero, el evento en directo del gran final del cap\u00edtulo, el 29 de noviembre a las 20:00\u00a0CET Las puertas se abrir\u00e1n 40 minutos antes: \u00a1entra y prep\u00e1rate para la acci\u00f3n!",
+        "ar": "\u0634\u0642 \u0637\u0631\u064a\u0642\u0643 \u0646\u062d\u0648 \u0627\u0644\u0645\u0639\u0631\u0643\u0629 \u0641\u064a Fortnite: \u0633\u0627\u0639\u0629 \u0627\u0644\u0635\u0641\u0631\u060c \u0627\u0644\u062d\u062f\u062b \u0627\u0644\u0645\u0628\u0627\u0634\u0631 \u0644\u062e\u0627\u062a\u0645\u0629 \u0627\u0644\u0641\u0635\u0644 \u0641\u064a 29 \u0646\u0648\u0641\u0645\u0628\u0631 \u0627\u0644\u0633\u0627\u0639\u0629 10 \u0645\u0633\u0627\u0621\u064b \u0628\u062a\u0648\u0642\u064a\u062a \u0627\u0644\u0631\u064a\u0627\u0636. \u062a\u064f\u0641\u062a\u062d \u0627\u0644\u0623\u0628\u0648\u0627\u0628 40 \u062f\u0642\u064a\u0642\u0629 \u0645\u0628\u0643\u0631\u064b\u0627\u060c \u0627\u0646\u0637\u0644\u0642 \u0648\u0627\u0633\u062a\u0639\u062f \u0644\u0644\u0645\u0639\u0631\u0643\u0629!",
+        "vi": "Tham gia tr\u1eadn chi\u1ebfn trong Fortnite: Th\u1eddi Kh\u1eafc Quy\u1ebft \u0110\u1ecbnh, S\u1ef1 Ki\u1ec7n Tr\u1ef1c Ti\u1ebfp K\u1ebft Ch\u01b0\u01a1ng v\u00e0o 02:00 ng\u00e0y 30/11 theo gi\u1edd Vi\u1ec7t Nam. S\u1ef1 ki\u1ec7n \u0111\u01b0\u1ee3c m\u1edf s\u1edbm h\u01a1n 40 ph\u00fat, h\u00e3y v\u00e0o ngay v\u00e0 s\u1eb5n s\u00e0ng h\u00e0nh \u0111\u1ed9ng!",
+        "th": "\u0e21\u0e38\u0e48\u0e07\u0e2a\u0e39\u0e48\u0e01\u0e32\u0e23\u0e15\u0e48\u0e2d\u0e2a\u0e39\u0e49\u0e43\u0e19 Fortnite: \u0e0a\u0e31\u0e48\u0e27\u0e42\u0e21\u0e07\u0e0a\u0e35\u0e49\u0e02\u0e32\u0e14 \u0e44\u0e25\u0e1f\u0e4c\u0e2d\u0e35\u0e40\u0e27\u0e19\u0e15\u0e4c\u0e1a\u0e17\u0e2a\u0e38\u0e14\u0e17\u0e49\u0e32\u0e22\u0e43\u0e19\u0e27\u0e31\u0e19\u0e17\u0e35\u0e48 30 \u0e1e\u0e24\u0e28\u0e08\u0e34\u0e01\u0e32\u0e22\u0e19 \u0e40\u0e27\u0e25\u0e32 02:00 \u0e19. \u0e15\u0e32\u0e21\u0e40\u0e27\u0e25\u0e32\u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28\u0e44\u0e17\u0e22 \u0e40\u0e1b\u0e34\u0e14\u0e43\u0e2b\u0e49\u0e40\u0e02\u0e49\u0e32\u0e01\u0e48\u0e2d\u0e19\u0e40\u0e27\u0e25\u0e32 40 \u0e19\u0e32\u0e17\u0e35 \u0e40\u0e15\u0e23\u0e35\u0e22\u0e21\u0e15\u0e31\u0e27\u0e43\u0e2b\u0e49\u0e1e\u0e23\u0e49\u0e2d\u0e21 \u0e2d\u0e2d\u0e01\u0e44\u0e1b\u0e25\u0e38\u0e22\u0e01\u0e31\u0e19!",
+        "ja": "11\u670830\u65e5\u5348\u524d4\u6642(\u65e5\u672c\u6642\u9593)\u958b\u50ac\u306e\u30d5\u30a9\u30fc\u30c8\u30ca\u30a4\u30c8 \u30c1\u30e3\u30d7\u30bf\u30fc\u30d5\u30a3\u30ca\u30fc\u30ec \u30e9\u30a4\u30d6\u30a4\u30d9\u30f3\u30c8\u300c\u30bc\u30ed\u30fb\u30a2\u30ef\u30fc\u300d\u306b\u3066\u3001\u6226\u95d8\u306b\u7a81\u5165\u305b\u3088\u300240\u5206\u524d\u306b\u958b\u5834\u3059\u308b\u306e\u3067\u3001\u65e9\u3081\u306b\u6226\u95d8\u306b\u5099\u3048\u3088\u3046\uff01",
+        "id": "Serbu medan tempur dalam Fortnite: Detik Penentu, Event Live Chapter Akhir pada 30 November pukul 02:00 WIB. Pintu terbuka 40 menit lebih awal, masuklah dan bersiaplah untuk beraksi!",
+        "pl": "Rzu\u0107 si\u0119 w ogie\u0144 bitwy w Fortnite: Godzina Zero \u2013 fina\u0142 rozdzia\u0142u wydarzy si\u0119 na \u017cywo 29\u00a0listopada o 20:00 czasu polskiego. Drzwi otwieraj\u0105 si\u0119 40\u00a0minut przed rozpocz\u0119ciem. Wskakuj i szykuj si\u0119 do akcji!",
+        "es-419": "Carga hacia la batalla en Fortnite: Hora cero, el evento en vivo de final del cap\u00edtulo, el 29 de noviembre a las 15:00 AR y 12:00 MX. Las puertas se abren 40 minutos antes; \u00a1da el salto y prep\u00e1rate para la acci\u00f3n!",
+        "tr": "Fortnite: S\u0131f\u0131r\u0131nc\u0131 Saat'te sava\u015fa \u00f6nden dal. Bu B\u00f6l\u00fcm Finali Canl\u0131 Etkinli\u011fi, 29 Kas\u0131m TS\u0130 22.00'de ba\u015fl\u0131yor. Kap\u0131lar, etkinli\u011fin ba\u015flamas\u0131ndan 40 dakika \u00f6nce a\u00e7\u0131lacak. Hemen oyuna dal ve aksiyona haz\u0131rlan!"
+      },
+      "fallback_links": {
+        "graceful": "playlist_respawn_alt_minimobile"
+      },
+      "tagline": "Charge into battle in Fortnite: Zero Hour, the Chapter Finale Live Event on November 29 at 2 PM ET. Doors open 40 minutes early, hop in and get ready for the action!",
+      "alt_aspot_title": {
+        "de": "Kapitelfinale \u2013 Stunde Null",
+        "ru": "\u0424\u0438\u043d\u0430\u043b \u0433\u043b\u0430\u0432\u044b \u00ab\u042d\u043f\u0438\u0446\u0435\u043d\u0442\u0440 \u0445\u0430\u043e\u0441\u0430\u00bb",
+        "ko": "\ucc55\ud130 \ud53c\ub0a0\ub808 \uc81c\ub85c \uc544\uc6cc",
+        "zh-hant": "\u6700\u7d42\u7ae0\u6c7a\u6230\u6642\u523b",
+        "pt-BR": "Cap\u00edtulo Final \u2014 Hora Zero",
+        "zh-hans": "\u6700\u7ec8\u7ae0\u51b3\u80dc\u65f6\u523b",
+        "it": "Gran finale del capitolo Ora zero",
+        "fr": "Fin du chapitre\u00a0: Heure z\u00e9ro",
+        "es": "Cap\u00edtulo final: Hora cero",
+        "ar": "\u062e\u0627\u062a\u0645\u0629 \u0627\u0644\u0641\u0635\u0644: \u0633\u0627\u0639\u0629 \u0627\u0644\u0635\u0641\u0631",
+        "vi": "H\u1ed3i K\u1ebft Ch\u01b0\u01a1ng - Th\u1eddi Kh\u1eafc Quy\u1ebft \u0110\u1ecbnh",
+        "th": "\u0e1a\u0e17\u0e2a\u0e38\u0e14\u0e17\u0e49\u0e32\u0e22: \u0e0a\u0e31\u0e48\u0e27\u0e42\u0e21\u0e07\u0e0a\u0e35\u0e49\u0e02\u0e32\u0e14",
+        "ja": "\u30c1\u30e3\u30d7\u30bf\u30fc\u30d5\u30a3\u30ca\u30fc\u30ec\u30a4\u30d9\u30f3\u30c8 - \u30bc\u30ed\u30fb\u30a2\u30ef\u30fc",
+        "id": "Chapter Akhir Detik Penentu",
+        "pl": "Fina\u0142 rozdzia\u0142u: Godzina Zero",
+        "es-419": "Final del cap\u00edtulo: Hora cero",
+        "tr": "B\u00f6l\u00fcm Finali: S\u0131f\u0131r\u0131nc\u0131 Saat"
+      }
+    },
+    "version": 1,
+    "active": false,
+    "disabled": false,
+    "created": "2025-07-29T01:43:15.387Z",
+    "published": "2025-11-25T17:15:30.574Z",
+    "updated": "2025-11-25T17:22:05.669Z",
+    "descriptionTags": [],
+    "moderationStatus": "Approved",
+    "lastActivatedDate": "2025-07-29T01:43:15.392Z",
     "discoveryIntent": "PUBLIC",
     "linkState": "LIVE"
   },

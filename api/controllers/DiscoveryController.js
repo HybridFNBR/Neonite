@@ -313,6 +313,34 @@ module.exports = {
 						"playHistoryType": null
 					},
 					{
+						"panelName": "SkyMango",
+						"panelDisplayName": "Chapter Finale Zero Hour",
+						"panelSubtitle": "Chapter Finale Zero Hour",
+						"featureTags": [
+							"bannerItemRow"
+						],
+						"firstPage": {
+							"results": [
+								{
+									"lastVisited": null,
+									"linkCode": "playlist_skymango",
+									"isFavorite": false,
+									"globalCCU": -1,
+									"lockStatus": "UNLOCKED",
+									"lockStatusReason": "RATING_THRESHOLD",
+									"isVisible": true,
+									"favoriteStatus": "NONE"
+								}
+							],
+							"hasMore": false,
+							"panelTargetName": null,
+							"pageMarker": null
+						},
+						"panelType": "CuratedList",
+						"playHistoryType": null,
+						"panelContexts": {}
+					},
+					{
 						"panelName": "LimeRock",
 						"panelDisplayName": "Welcome, Our Alien Overlords",
 						"panelSubtitle": "Welcome, Our Alien Overlords",
@@ -562,4 +590,5 @@ const playlistManager = {
 	"32.11": ["playlist_quail"],
 	"35.20": ["playlist_ripehoneydew"],
 	"37.51": ["playlist_limerock"],
+	"38.11": ["playlist_skymango"],
 };
