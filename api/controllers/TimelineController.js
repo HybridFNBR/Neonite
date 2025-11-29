@@ -636,6 +636,10 @@ module.exports = {
                 "PC_TentacleStage2", //Pistol Canary Tentacle Stage 2
                 */
                 "PC_Timer", //Pistol Canary Countdown
+            ],
+
+            "38.11":[
+                "SM_Timer"
             ]
 
         })
