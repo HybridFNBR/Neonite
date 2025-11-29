@@ -624,6 +624,7 @@ module.exports = {
             ],
 
             "36.30":[
+                /*
                 "PC_01", //Pistol Canary Stage 1
                 "PC_02", //Pistol Canary Stage 2
                 "PC_03", //Pistol Canary Stage 3
@@ -633,6 +634,7 @@ module.exports = {
                 "EventStart", //Pistol Canary Event Start
                 "PC_After", //Pistol Canary After Event
                 "PC_TentacleStage2", //Pistol Canary Tentacle Stage 2
+                */
                 "PC_Timer", //Pistol Canary Countdown
             ]
 
