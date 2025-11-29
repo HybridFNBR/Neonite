@@ -968,6 +968,16 @@ const Backgrounds = (version, versionGlobal, backgrounds, content) =>{
                 backgrounds[1].backgroundimage = "https://cdn2.unrealengine.com/mkart-ch6s4-lobby-bg-4096x2048-d73f821bb40c.jpg"
             }
         }
+        case 38:{
+            if(version === "38.11"){
+                backgrounds[1].stage = "defaultnotris"
+                backgrounds[1].backgroundimage = "https://cdn2.unrealengine.com/mkart-c6ee-lobbybg-demon-3840x1920-ed1afc7e3dfc.jpg"
+            }
+            else{
+                backgrounds[1].stage = "season3800"
+                backgrounds[1].backgroundimage = "https://cdn2.unrealengine.com/mkart-ch6ms2-lobbybg-plate-4098x2048-c51669ab5daa.jpg"
+            }
+        }
         break;
         default:
             backgrounds[1].backgroundimage = content.dynamicbackgrounds.backgrounds.backgrounds[0].backgroundimage;
