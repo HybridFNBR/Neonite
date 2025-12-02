@@ -294,7 +294,9 @@ const seasonPass = (accountId, athenprofile, version, versionGlobal) => {
         "sparks_season08_seasonasset",
         "musicpasss09_seasonasset",
         "musicpasss10_seasonasset",
-        "musicpasss11_seasonasset"
+        "musicpasss11_seasonasset",
+        "musicpasss12_seasonasset",
+
     ]
     if(version == 37.40 || version == 37.50){ //Epic didnt remove the season 5 figment pass
         passArray = passArray.filter(item => item !== "figment_s05_passdata_seasonasset")
