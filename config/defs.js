@@ -991,13 +991,13 @@ const Backgrounds = (version, versionGlobal, backgrounds, content) =>{
 const Playlists = (fortnitegame, version) =>{
     const playlistData = fortnitegame.playlistinformation.playlist_info.playlists
     if(version === 7.40){
-        playlistData[6].image = "https://i.imgur.com/3xoXe4R.png"
+        playlistData[6].image = "https://neonite.cdn.cbn.lol/EraEventLTMImage.png"
         playlistData[6].description = "Fan-made Fortnite Live Event. Not endorsed by Epic Games. Drop into the water planet and enjoy the show.\nEvent Made by bigboitaj2005tajypoo(@jalzod), sizzyleaks & Era Dev Team(@ProjectEraFN)"
         playlistData[6].display_name = "ERA FESTIVAL"
     }
-    playlistData[2].image = "https://i.imgur.com/tm6gOaE.png"
-    playlistData[3].image = "https://i.imgur.com/Itx0SsX.png"
-    playlistData[4].image = "https://i.imgur.com/2wzonis.png"
+    playlistData[2].image = "https://neonite.cdn.cbn.lol/UnvaultingEventLTMImage.png"
+    playlistData[3].image = "https://neonite.cdn.cbn.lol/FinalShowdownEventLTMImage.png"
+    playlistData[4].image = "https://neonite.cdn.cbn.lol/TheEndEventLTMImage.png"
 
 }
 module.exports = {
