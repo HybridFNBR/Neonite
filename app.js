@@ -26,7 +26,7 @@ async function compareAndUpdateKeychain() {
         NeoLog.Debug(`Fetched ${missingCount} New Keychains from Fortnite Central.`);
     } 
     else if (response.status !== 200) {
-        NeoLog.Error("Fortnite Central is down, falling back to dillyapis for the keychain");
+        NeoLog.warn("Fortnite Central is down, falling back to dillyapis for the keychain");
         const fallbackResponse = await axios.get('https://export-service.dillyapis.com/v1/aes', {validateStatus: () => true});
         if (fallbackResponse.status === 200) {
             const data = fallbackResponse.data
