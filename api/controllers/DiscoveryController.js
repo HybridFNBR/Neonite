@@ -267,8 +267,9 @@ module.exports = {
 						"featureTags": [
 							"col:7",
 							"horizontalScroll:false",
+							"hasViewAll:true",
 							"squareTiles:false",
-							"hasViewAll:true"
+							"grid:4"
 						],
 						"firstPage": {
 							"results": [
