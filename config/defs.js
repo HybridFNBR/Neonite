@@ -328,17 +328,42 @@ const seasonPass = (accountId, athenprofile, version, versionGlobal) => {
 };
 
 const winterFest = (accountId, athenprofile) => {
-    var winterFestTokens = [
+    const winterFestRewardGraphs = [
         "AthenaRewardGraph:Winterfest",
-        "Token:AthenaWinterfest_Key",
         "AthenaRewardGraph:S19_Winterfest",
-        "Token:Athena_S19_Winterfest_Key",
         "AthenaRewardGraph:s33_winterfest",
-        "Token:athena_s33_winterfest_key"
-    ]
+        "AthenaRewardGraph:s39_winterfest"
+    ];
 
-    winterFestTokens.forEach(token => {
-        Profile.addItem(athenprofile, `${token}`, {
+    const winterFestKeys = [
+        "Token:AthenaWinterfest_Key",
+        "Token:Athena_S19_Winterfest_Key",
+        "Token:athena_s33_winterfest_key",
+        "Token:athena_s39_winterfest_key"
+    ];
+
+    winterFestRewardGraphs.forEach(graph => {
+        Profile.addItem(athenprofile, graph, {
+            attributes: {
+                "reward_nodes_claimed": [],
+                "unlock_epoch": "2025-12-17T14:00:00.000Z",
+                "player_random_seed": -1526480758,
+                "days_since_grant": 1,
+                "reward_graph_purchased_timestamp": 1766050316877,
+                "reward_graph_purchased": true,
+                "reward_keys": [
+                    {
+                        "keys_granted_today": 14,
+                        "unlock_keys_used": 0,
+                    }
+                ]
+            },
+            templateId: graph
+        });
+    });
+
+    winterFestKeys.forEach(key => {
+        Profile.addItem(athenprofile, key, {
             attributes: {
                 "max_level_bonus": 0,
                 "level": 1,
@@ -347,13 +372,36 @@ const winterFest = (accountId, athenprofile) => {
                 "variants": [],
                 "favorite": false
             },
-            "templateId": `${token}`
-        })
-    })
+            "templateId": key,
+            "quantity": 14
+        });
+    });
     Profile.saveProfile(accountId, "athena", athenprofile)
 };
 
 const winterFestPresents = {
+    "39.11": {
+        "ERG.Node.A.1": "AthenaCharacter:Character_ChubbyJingle",
+        "ERG.Node.A.2": "AthenaCharacter:Character_FrostIron",
+        "ERG.Node.A.3": "AthenaBackpack:Backpack_PolarGander",
+        "ERG.Node.A.4": [
+            "AthenaDance:Emoticon_S39Winterfest",
+            "AthenaDance:Spray_WinterFest3"
+        ],
+        "ERG.Node.A.5": "AthenaBackpack:Backpack_WinkFin",
+        "ERG.Node.A.6": "SparksSong:SID_Placeholder_728",
+        "ERG.Node.A.7": "AthenaPickaxe:Pickaxe_HunSting",
+        "ERG.Node.A.8": "AthenaPickaxe:Pickaxe_JingleBlade",
+        "ERG.Node.A.9": "AthenaItemWrap:Wrap_ShavedIce",
+        "ERG.Node.A.10": "AthenaSkyDiveContrail:Contrail_HollowStun",
+        "ERG.Node.A.11": "SparksGuitar:Sparks_RainbowHouse_Guitar",
+        "ERG.Node.A.12": "SparksBass:Sparks_FrostIron_Bass",
+        "ERG.Node.A.13": "AthenaGlider:Glider_RumpleWisp",
+        "ERG.Node.B.1": [
+            "AthenaDance:Spray_WinterFest",
+            "AthenaDance:Spray_WinterFest2"
+        ]
+    },
     "33.11": {
         "ERG.Node.A.1": "AthenaCharacter:Character_BlowWire",
         "ERG.Node.A.2": "SparksBass:Sparks_Bass_AlmondSplash",
@@ -987,7 +1035,7 @@ const Backgrounds = (version, versionGlobal, backgrounds, content) => {
     }
 }
 
-const Playlists = (fortnitegame, version) =>{
+const Playlists = (fortnitegame, version) => {
     const playlistData = fortnitegame.playlistinformation.playlist_info.playlists
     const getPlaylist = name => playlistData.find(p => p.playlist_name === name);
     if (version === 7.40) {

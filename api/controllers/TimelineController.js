@@ -640,6 +640,11 @@ module.exports = {
 
             "38.11":[
                 "SM_Timer"
+            ],
+
+            "39.11":[
+                "EventFlag.S39_WinterFestTab", //Winterfest Tab 2025
+                "WF_IG_Avail"
             ]
 
         })

@@ -5,18 +5,20 @@ const fs = require("fs");
 const { v4: uuidv4 } = require("uuid");
 const path = require('path');
 const ini = require('ini')
-const { getVersionInfo, MPLockerLoadout, CH1Fix, VersionFilter, loadJSON, stats, seasonPass, winterFest, winterFestPresents} = require("../../config/defs")
+const { getVersionInfo, MPLockerLoadout, CH1Fix, VersionFilter, loadJSON, stats, seasonPass, winterFest, winterFestPresents } = require("../../config/defs")
 let miniPassData = loadJSON("../config/MiniPass.json")
-Array.prototype.insert = function ( index, item ) {
-	this.splice( index, 0, item );
+Array.prototype.insert = function (index, item) {
+	this.splice(index, 0, item);
 };
 const NeoLog = require("../../structs/NeoLog");
 var config = ini.parse(fs.readFileSync(path.join(__dirname, '../../config.ini'), 'utf-8'));
-
+const rewardNodeArray = []
+let keysUsed = 0
+let keysGranted = 14
 
 module.exports = {
-    mcp: function(req, res, next){
-        res.setHeader("Content-Type", "application/json");
+	mcp: function (req, res, next) {
+		res.setHeader("Content-Type", "application/json");
 		var accountId = req.params.accountId;
 		var athenprofile = Profile.readProfile(accountId, "athena")
 		var commoncore = Profile.readProfile(accountId, "common_core")
@@ -61,7 +63,7 @@ module.exports = {
 					"responseVersion": 1
 				}
 			};
-			
+
 
 		};
 		getOrCreateProfile("athena")
@@ -71,7 +73,7 @@ module.exports = {
 		const { profileChanges } = response;
 		//const checkValidProfileID = (...validProfileIds) => checkValidProfileID0(command, profileId, next, ...validProfileIds); //not sure if ill need it but ill keep it just incase
 
-		switch(command){
+		switch (command) {
 
 			case "CopyCosmeticLoadout": {
 				//sourceIndex = 0 (Save)
@@ -136,7 +138,7 @@ module.exports = {
 				break;
 			}
 
-			case "SetForcedIntroPlayed":{
+			case "SetForcedIntroPlayed": {
 				//{ forcedIntroName: 'Coconut' }
 				response.profileChanges = [{
 					"changeType": "fullProfileUpdate",
@@ -145,7 +147,7 @@ module.exports = {
 				break;
 			}
 
-			case "RequestRestedStateIncrease":{
+			case "RequestRestedStateIncrease": {
 				var xpValue = profileData.stats.attributes["book_xp"] + req.body.restedXpGenAccumulated
 
 				Profile.bumpRvn(profileData);
@@ -154,15 +156,15 @@ module.exports = {
 				Profile.modifyStat(profileData, "book_xp", xpValue)
 
 				response.profileChanges = [{
-					"changeType" : "statModified",
-					"name" : "book_xp",
-					"value" : xpValue
+					"changeType": "statModified",
+					"name": "book_xp",
+					"value": xpValue
 
 				}]
 				break;
 			}
 
-			case "GetMcpTimeForLogin":{
+			case "GetMcpTimeForLogin": {
 				response.profileChanges = [{
 					"changeType": "fullProfileUpdate",
 					"profile": profileData
@@ -170,7 +172,7 @@ module.exports = {
 				break
 			}
 
-			case "IncrementNamedCounterStat":{
+			case "IncrementNamedCounterStat": {
 				break
 			}
 
@@ -182,25 +184,25 @@ module.exports = {
 				break;
 			}
 
-			case "QuestLogin":{
+			case "QuestLogin": {
 				break;
 			}
 
-			case "AthenaPinQuest":{
+			case "AthenaPinQuest": {
 				Profile.modifyStat(athenprofile, "pinned_quest", req.body.pinnedQuest)
 				Profile.bumpRvn(profileData);
 				response.profileRevision = profileData.rvn || 1;
 				response.profileCommandRevision = profileData.commandRevision || 1
 				response.profileChanges = [{
-					"changeType" : "statModified",
-					"name" : "pinned_quest",
-					"value" : req.body.pinnedQuest
+					"changeType": "statModified",
+					"name": "pinned_quest",
+					"value": req.body.pinnedQuest
 
 				}]
 				break;
 			}
 
-			case "MarkNewQuestNotificationSent":{
+			case "MarkNewQuestNotificationSent": {
 				break;
 			}
 
@@ -217,15 +219,15 @@ module.exports = {
 				let shop
 				if (version >= 30.10) {
 					shop = loadJSON("../responses/catalog/shopv3.json");
-				} 
+				}
 				else if (version >= 26.30) {
 					shop = loadJSON("../responses/catalog/shopv2.json");
-				} 
+				}
 				else {
 					shop = loadJSON("../responses/catalog/shopv1.json");
 				}
-				
-				
+
+
 				let catalogEntryToPurchase = null;
 				for (let storefront of shop.storefronts) {
 					/*if (!storefront.name.startsWith("BR")) {
@@ -238,7 +240,7 @@ module.exports = {
 						}
 					}
 				}
-				
+
 
 				if (catalogEntryToPurchase == null) {
 					throw next(new ApiException(errors.com.epicgames.modules.gamesubcatalog.catalog_out_of_date).with(req.body.offerId));
@@ -256,28 +258,28 @@ module.exports = {
 						"quantity": itemGrant.quantity
 					});
 				}
-				
+
 				commoncore.stats.attributes["mtx_purchase_history"] = {
-					"refundsUsed" : 0,
-					"refundCredits" : 3,
-					"tokenRefreshReferenceTime" : "2023-10-12T00:00:00.000Z",
-					"purchases" : [ {
-						"purchaseId" : "cc8442a6-77b0-45c7-9c14-6dca6d5cfefe",
-						"offerId" : "v2:/b0ddecc601a1d316ed24a6fbce4297d931599dfcb16fc9c4bd9ef646f0a3a843",
-						"purchaseDate" : new Date().toISOString(),
-						"undoTimeout" : "9999-11-01T17:50:35.861Z",
-						"freeRefundEligible" : true,
-						"fulfillments" : [ ],
-						"lootResult" : [ {
-							"itemType" : catalogEntryToPurchase.itemGrants.templateId,
-                  			"itemGuid" : catalogEntryToPurchase.itemGrants.templateId,
-                  			"itemProfile" : catalogEntryToPurchase.itemGrants.itemProfile,
-                  			"quantity" : catalogEntryToPurchase.itemGrants.quantity
+					"refundsUsed": 0,
+					"refundCredits": 3,
+					"tokenRefreshReferenceTime": "2023-10-12T00:00:00.000Z",
+					"purchases": [{
+						"purchaseId": "cc8442a6-77b0-45c7-9c14-6dca6d5cfefe",
+						"offerId": "v2:/b0ddecc601a1d316ed24a6fbce4297d931599dfcb16fc9c4bd9ef646f0a3a843",
+						"purchaseDate": new Date().toISOString(),
+						"undoTimeout": "9999-11-01T17:50:35.861Z",
+						"freeRefundEligible": true,
+						"fulfillments": [],
+						"lootResult": [{
+							"itemType": catalogEntryToPurchase.itemGrants.templateId,
+							"itemGuid": catalogEntryToPurchase.itemGrants.templateId,
+							"itemProfile": catalogEntryToPurchase.itemGrants.itemProfile,
+							"quantity": catalogEntryToPurchase.itemGrants.quantity
 						}
 						],
-						"totalMtxPaid" : req.body["expectedTotalPrice"],
-						"metadata" : {},
-						"gameContext" : ""
+						"totalMtxPaid": req.body["expectedTotalPrice"],
+						"metadata": {},
+						"gameContext": ""
 					}]
 				}
 				Profile.saveProfile(accountId, "common_core", commoncore)
@@ -329,7 +331,7 @@ module.exports = {
 				break;
 			}
 
-			case "BulkEquipBattleRoyaleCustomization":{
+			case "BulkEquipBattleRoyaleCustomization": {
 				break;
 			}
 
@@ -361,7 +363,7 @@ module.exports = {
 				break;
 			}
 
-			case "SetHardcoreModifier":{
+			case "SetHardcoreModifier": {
 				break;
 			}
 
@@ -370,7 +372,7 @@ module.exports = {
 				if (profileId === "athena") {
 					stats(accountId, athenprofile, config, versionGlobal);
 					if (versionGlobal >= 33) { seasonPass(accountId, athenprofile, version, versionGlobal); }
-					if ([33.11, 23.10, 19.01, 11.31].includes(version)) { winterFest(accountId, athenprofile); }
+					winterFest(accountId, athenprofile);
 					for (const [questId, quest] of Object.entries(miniPassData)) {
 						Profile.addItem(athenprofile, questId, quest);
 					}
@@ -384,30 +386,34 @@ module.exports = {
 						"changeType": "fullProfileUpdate",
 						"profile": profileData
 					}
-				
+
 				];
 			}
-			break;
+				break;
 
 			//had to be slighly redone to have a check if there is actually a giftbox or not mainly due to the fact on 11.31(maybe more i didnt test) it will just constantly spam RemoveGiftBox
 			case "RemoveGiftBox": {
 				if (req.body.giftBoxItemIds) {
 					req.body.giftBoxItemIds.forEach(item => {
-						!profileData.items[item]
-							? response.profileChanges = [{
-								changeType: "fullProfileUpdate",
-								profile: profileData
-							}]
-						: Profile.removeItem(profileData, item, profileChanges);
+						response.profileChanges = [
+							{
+								"changeType": "itemRemoved",
+								"itemId": item
+
+							}
+						]
+						Profile.removeItem(profileData, item);
 					});
 				}
 				if (req.body.giftBoxItemId) {
-					!profileData.items[req.body.giftBoxItemId]
-						? response.profileChanges = [{
-							changeType: "fullProfileUpdate",
-							profile: profileData
-						}]
-					: Profile.removeItem(profileData, profileData.items[req.body.giftBoxItemId]);
+					Profile.removeItem(profileData, profileData.items[req.body.giftBoxItemId]);
+					response.profileChanges = [
+						{
+							"changeType": "itemRemoved",
+							"itemId": giftBoxItemId
+
+						}
+					]
 				}
 				Profile.bumpRvn(profileData);
 				response.profileRevision = profileData.rvn || 1;
@@ -421,25 +427,25 @@ module.exports = {
 				profileData.stats.attributes["mtx_affiliate_set_time"] = new Date().toISOString()
 				response.profileChanges = [
 					{
-						"changeType" : "statModified",
-						"name" : "mtx_affiliate",
-						"value" : req.body.affiliateName
+						"changeType": "statModified",
+						"name": "mtx_affiliate",
+						"value": req.body.affiliateName
 
 					},
 					{
-						"changeType" : "statModified",
-						"name" : "mtx_affiliate_set_time",
-						"value" : new Date().toISOString()
+						"changeType": "statModified",
+						"name": "mtx_affiliate_set_time",
+						"value": new Date().toISOString()
 					}
 				]
 				Profile.bumpRvn(profileData);
 				response.profileRevision = profileData.rvn || 1;
 				response.profileCommandRevision = profileData.commandRevision || 1
-				Profile.saveProfile(accountId, "common_core", profileData)		
-				
+				Profile.saveProfile(accountId, "common_core", profileData)
+
 				break;
 			}
-				
+
 			case "SetCosmeticLockerBanner": {
 				const item = profileData.items[req.body.lockerItem];
 
@@ -459,62 +465,62 @@ module.exports = {
 			}
 
 			case "RedeemRealMoneyPurchases": {
-				response.profileChanges = [ {
-					"changeType" : "statModified",
-					"name" : "in_app_purchases",
-					"value" : {
-					  "receipts" : [],
-					  "ignoredReceipts" : [],
-					  "fulfillmentCounts" : {},
-					  "refreshTimers" : {
-						"MicrosoftStore" : {
-						  "nextEntitlementRefresh" : "9999-12-01T21:10:00.000Z"
+				response.profileChanges = [{
+					"changeType": "statModified",
+					"name": "in_app_purchases",
+					"value": {
+						"receipts": [],
+						"ignoredReceipts": [],
+						"fulfillmentCounts": {},
+						"refreshTimers": {
+							"MicrosoftStore": {
+								"nextEntitlementRefresh": "9999-12-01T21:10:00.000Z"
+							},
+							"SamsungGalaxyAppStore": {},
+							"EpicPurchasingService": {
+								"nextEntitlementRefresh": "9999-12-01T21:10:00.000Z"
+							}
 						},
-						"SamsungGalaxyAppStore" : {},
-						"EpicPurchasingService" : {
-						  "nextEntitlementRefresh" : "9999-12-01T21:10:00.000Z"
-						}
-					  },
-					  "version" : 1
+						"version": 1
 					}
-				  }, 
-				  {
-					"changeType" : "statModified",
-					"name" : "subscriptions",
-					"value" : []
+				},
+				{
+					"changeType": "statModified",
+					"name": "subscriptions",
+					"value": []
 				}]
 				break;
 			}
 
 			case "SetCosmeticLockerSlot": {
 				const item = profileData.items[req.body.lockerItem];
-			
+
 				if (!item) {
 					console.error("[Error] Item not found.");
 					return;
 				}
-			
-				const locker_slots_data = item.attributes.locker_slots_data ;
+
+				const locker_slots_data = item.attributes.locker_slots_data;
 				let lockerSlot = locker_slots_data.slots[req.body.category];
-			
+
 				const expectedCapacity = {
 					"Dance": 6,
 					"ItemWrap": 7,
 				}[req.body.category] || 1;
-			
+
 				if (!lockerSlot) {
 					lockerSlot = locker_slots_data.slots[req.body.category] = {
 						items: new Array(expectedCapacity),
 						activeVariants: new Array(expectedCapacity)
 					};
 				}
-			
+
 				const itemsArray = lockerSlot.items;
 				let bChanged = false;
-			
+
 				const startIndex = Math.max(0, req.body.slotIndex);
 				const endIndex = Math.min(expectedCapacity, startIndex + 1);
-			
+
 				for (let index = startIndex; index < endIndex; index++) {
 					if (index >= itemsArray.length) {
 						itemsArray.push("");
@@ -524,7 +530,7 @@ module.exports = {
 						bChanged = true;
 					}
 				}
-			
+
 				if (req.body.variantUpdates.length !== 0) {
 					lockerSlot.activeVariants = [{
 						"variants": []
@@ -539,9 +545,9 @@ module.exports = {
 					Profile.bumpRvn(profileData);
 					response.profileRevision = profileData.rvn || 1;
 					response.profileCommandRevision = profileData.commandRevision || 1
-					Profile.saveProfile(accountId, profileId, profileData)					
+					Profile.saveProfile(accountId, profileId, profileData)
 					Profile.changeItemAttribute(profileData, req.body.lockerItem, "locker_slots_data", locker_slots_data, profileChanges);
-			
+
 				}
 				break;
 			}
@@ -567,55 +573,55 @@ module.exports = {
 					Profile.saveProfile(accountId, profileId, profileData);
 					response.profileChanges = [
 						{
-						  "changeType": "itemAdded",
-						  "itemId": newPresetId,
-						  "item": {
-							"templateId": loadoutType,
-							"attributes": loadoutData,
-							"quantity": 1
-						  }
+							"changeType": "itemAdded",
+							"itemId": newPresetId,
+							"item": {
+								"templateId": loadoutType,
+								"attributes": loadoutData,
+								"quantity": 1
+							}
 						},
 						{
-						  "changeType": "statModified",
-						  "name": "loadout_presets",
-						  "value": profileData.stats.attributes["loadout_presets"]
+							"changeType": "statModified",
+							"name": "loadout_presets",
+							"value": profileData.stats.attributes["loadout_presets"]
 						},
 						{
-						  "changeType": "statModified",
-						  "name": "locker_two_phase_commit",
-						  "value": "COMMITTED"
+							"changeType": "statModified",
+							"name": "locker_two_phase_commit",
+							"value": "COMMITTED"
 						}
 					]
-					
-				} 
-				else if(presetId > 0 && loadout){
+
+				}
+				else if (presetId > 0 && loadout) {
 					Profile.changeItemAttribute(profileData, loadout, "slots", loadoutData.slots);
 					response.profileChanges =
-					[{
-						"changeType": "itemAttrChanged",
-						"itemId": loadout,
-						"attributeName": "slots",
-						"attributeValue": loadoutData.slots
-					  },
-					  {
-						"changeType": "itemAttrChanged",
-						"itemId": loadout,
-						"attributeName": "user_tags",
-						"attributeValue": []
-					  },
-					  {
-						"changeType": "itemAttrChanged",
-						"itemId": loadout,
-						"attributeName": "display_name",
-						"attributeValue": loadoutData["display_name"]
-					  },
-					  {
-						"changeType": "statModified",
-						"name": "locker_two_phase_commit",
-						"value": "COMMITTED"
-					}]
+						[{
+							"changeType": "itemAttrChanged",
+							"itemId": loadout,
+							"attributeName": "slots",
+							"attributeValue": loadoutData.slots
+						},
+						{
+							"changeType": "itemAttrChanged",
+							"itemId": loadout,
+							"attributeName": "user_tags",
+							"attributeValue": []
+						},
+						{
+							"changeType": "itemAttrChanged",
+							"itemId": loadout,
+							"attributeName": "display_name",
+							"attributeValue": loadoutData["display_name"]
+						},
+						{
+							"changeType": "statModified",
+							"name": "locker_two_phase_commit",
+							"value": "COMMITTED"
+						}]
 				}
-				else{
+				else {
 					Profile.changeItemAttribute(profileData, loadout, "slots", loadoutData.slots);
 					response.profileChanges.push({
 						"changeType": "itemAttrChanged",
@@ -688,7 +694,7 @@ module.exports = {
 						break
 				}
 				bChanged = false
-				try{
+				try {
 					if (req.body.variantUpdates.length !== 0) {
 						for (var variant in item.attributes.variants) {
 							if (item.attributes.variants.hasOwnProperty(variant) && req.body.variantUpdates.hasOwnProperty(variant) && item.attributes.variants[variant].channel === req.body.variantUpdates[variant].channel) {
@@ -704,7 +710,7 @@ module.exports = {
 						bChanged = true
 					}
 				}
-				catch{}
+				catch { }
 				if (statName != null && itemToSlot != null) {
 					Profile.modifyStat(profileData, statName, itemToSlot, response.profileChanges);
 				}
@@ -730,13 +736,13 @@ module.exports = {
 					Profile.saveProfile(accountId, "athena", profileData)
 					response.profileChanges.push(
 						{
-							"changeType" : "itemAttrChanged",
-							"itemId" : itemId,
-							"attributeName" : "favorite",
-							"attributeValue" : req.body.itemFavStatus[index]
+							"changeType": "itemAttrChanged",
+							"itemId": itemId,
+							"attributeName": "favorite",
+							"attributeValue": req.body.itemFavStatus[index]
 						}
 					)
-					
+
 				});
 				Profile.bumpRvn(profileData);
 				response.profileRevision = profileData.rvn || 1;
@@ -763,16 +769,18 @@ module.exports = {
 				break;
 			}
 
-			case "SetLoadoutShuffleEnabled":{
+			case "SetLoadoutShuffleEnabled": {
 				break;
 			}
 
 			case "UnlockRewardNode": {
+				keysUsed++
+				keysGranted--
 				const lootList = [];
-				const rewards = Array.isArray(winterFestPresents[version][req.body.nodeId]) 
-				? winterFestPresents[version][req.body.nodeId]
-				: [winterFestPresents[version][req.body.nodeId]]
-			
+				const rewards = Array.isArray(winterFestPresents[version][req.body.nodeId])
+					? winterFestPresents[version][req.body.nodeId]
+					: [winterFestPresents[version][req.body.nodeId]]
+
 				rewards.forEach(cosmetic => {
 					response.profileChanges.push({
 						changeType: "itemAdded",
@@ -794,61 +802,86 @@ module.exports = {
 						quantity: 1
 					});
 					cosmetic.includes("HomebaseBannerIcon")
-					? (Profile.addItem(commoncore, cosmetic, {
+						? (Profile.addItem(commoncore, cosmetic, {
 							templateId: cosmetic,
 							attributes: { item_seen: true },
 							quantity: 1
 						}),
-						Profile.saveProfile(accountId, "common_core", commoncore))
-						
-					: Profile.addItem(profileData, cosmetic, {
-						templateId: cosmetic,
-						attributes: {
-							max_level_bonus: 0,
-							level: 1,
-							item_seen: false,
-							xp: 0,
-							variants: [],
-							creation_time: new Date().toISOString(),
-							favorite: false
-						},
-						quantity: 1
-					});
+							Profile.saveProfile(accountId, "common_core", commoncore))
+
+						: Profile.addItem(profileData, cosmetic, {
+							templateId: cosmetic,
+							attributes: {
+								max_level_bonus: 0,
+								level: 1,
+								item_seen: false,
+								xp: 0,
+								variants: [],
+								creation_time: new Date().toISOString(),
+								favorite: false
+							},
+							quantity: 1
+						});
 				});
-				response.profileChanges.push({
-					changeType: "itemAdded",
-					itemId: uuidv4(),
-					item: {
-						templateId: "GiftBox:gb_winterfestreward",
-						attributes: {
-							lootList,
-							level: 1,
-							giftedOn: new Date().toISOString(),
-							params: {
-								SubGame: "Athena",
-								winterfestGift: "true"
+				rewardNodeArray.push(req.body.nodeId)
+				response.profileChanges.push(
+					{
+						changeType: "itemAdded",
+						itemId: uuidv4(),
+						item: {
+							templateId: "GiftBox:gb_winterfestreward",
+							attributes: {
+								lootList,
+								level: 1,
+								giftedOn: new Date().toISOString(),
+								params: {
+									SubGame: "Athena",
+									winterfestGift: "true"
+								}
+							},
+							quantity: 1
+						}
+					},
+					{
+						"changeType": "itemAttrChanged",
+						"itemId": req.body.rewardGraphId,
+						"attributeName": "reward_nodes_claimed",
+						"attributeValue": rewardNodeArray
+					},
+					{
+						"changeType": "itemAttrChanged",
+						"itemId": req.body.rewardGraphId,
+						"attributeName": "reward_keys",
+						"attributeValue": [
+							{
+								"static_key_template_id": "Token:athena_s39_winterfest_key",
+								"keys_granted_today": keysGranted,
+								"unlock_keys_used": keysUsed,
 							}
-						},
-						quantity: 1
-					}
-				});
+						],
+						"oldValue": [{
+							"unlock_keys_used": 0,
+							"keys_granted_today": 14
+						}]
+					},
+				);
 				Profile.bumpRvn(profileData);
 				response.profileRevision = profileData.rvn || 1;
 				response.profileCommandRevision = profileData.commandRevision || 1;
 				Profile.saveProfile(accountId, profileId, profileData);
 				break;
 			}
-			
-			
-			case "ExchangeGameCurrencyForBattlePassOffer":{
+
+
+			case "ExchangeGameCurrencyForBattlePassOffer": {
 				break;
 			}
 
-			case "ExchangeGameCurrencyForSeasonPassOffer":{
+			case "ExchangeGameCurrencyForSeasonPassOffer": {
 				break;
 			}
 
-			case "RedeemSTWAccoladeTokens":{
+			case "RedeemSTWAccoladeTokens": {
 				break;
 			}
 
@@ -867,7 +900,7 @@ module.exports = {
 				break;
 			}
 
-			case "SetHeroCosmeticVariants":{
+			case "SetHeroCosmeticVariants": {
 				Profile.changeItemAttribute(campaignProfile, req.body.heroItem, "outfitvariants", req.body["outfitVariants"]);
 				Profile.changeItemAttribute(campaignProfile, req.body.heroItem, "backblingvariants", req.body["backblingVariants"]);
 				Profile.bumpRvn(campaignProfile);
@@ -886,17 +919,15 @@ module.exports = {
 						"attributeValue": campaignProfile.items[req.body.heroItem].attributes.backblingVariants
 					}
 				]
-				
+
 				break;
 			}
-				
+
 
 			default: {
 				return next(new ApiException(errors.com.epicgames.fortnite.operation_not_found).with(req.params.command));
 			}
 		}
 		res.json(response)
-
 	}
 }
-        
