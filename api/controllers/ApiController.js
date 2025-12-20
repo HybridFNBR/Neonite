@@ -1011,22 +1011,18 @@ module.exports = {
 			minorVersion: parseInt(req.query.minor),
 			patch: parseInt(req.query.patch)
 		});
-
 		res.json(response.data.result);
 	},
 
 	cookedContent: async function (req, res) {
-		const fullPath = req.path.replace('/valkyrie/cooked-content/', '');
-		const userAgent = req.headers['user-agent'];
-
-		const response = await axios.get(`https://cooked-content-live-cdn.epicgames.com/valkyrie/cooked-content/${fullPath}`, {
-			headers: {
-				'User-Agent': userAgent
-			},
-			responseType: 'stream'
+		const response = await axios.get(`https://cooked-content-live-cdn.epicgames.com${req.originalUrl}`, ({responseType: 'arraybuffer'}))
+		res.set({
+			'Content-Type':'binary/octet-stream',
+			'Content-Length': response.data.length,
+			'Last-Modified': response.headers['last-modified'],
+			'ETag': response.headers['etag'],
+			'x-amz-meta-content-md5': response.headers['x-amz-meta-content-md5']
 		});
-
-		res.set('Content-Type', response.headers["content-type"]);
-		response.data.pipe(res);
+    	res.send(response.data);
 	},
 };
