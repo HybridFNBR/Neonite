@@ -150,25 +150,62 @@ module.exports = {
 		const { version } = getVersionInfo(req);
 		const FrontendAssets = loadJSON('../responses/FortniteAssets.json');
 		const FortniteGameConfig = loadJSON('../FortniteGameConfig.json');
-		if (config.FortniteGameConfig === true && version >= 24.00) {
-			FrontendAssets.FortPlaylistAthena = {
-				"meta": {
-					"promotion": 9
+		FrontendAssets.FortPlaylistAthena = {
+			"meta": {
+				"promotion": 9
+			},
+			"assets": {
+				"Playlist_SunflowerSolo": {
+					"meta": {
+						"revision": 2,
+						"headRevision": 2,
+						"revisedAt": "2023-11-27T06:41:57.818Z",
+						"promotion": 3,
+						"promotedAt": "2023-11-27T06:43:00.452Z"
+					},
+					"assetData": {
+						"PreloadPersistentLevel": "/fd242d06-46d5-d389-1a48-2fb3bb65c2a1/Maps/BlastBerry_Terrain.BlastBerry_Terrain"
+					}
 				},
-				"assets": {
-					[FortniteGameConfig.playlist_config]: {
-						"meta": {
-							"revision": 2,
-							"headRevision": 2,
-							"revisedAt": "2023-11-27T06:41:57.818Z",
-							"promotion": 3,
-							"promotedAt": "2023-11-27T06:43:00.452Z"
-						},
-						"assetData": FortniteGameConfig.playlist_settings
+				"Playlist_DashBerrySolo": {
+					"meta": {
+						"revision": 2,
+						"headRevision": 2,
+						"revisedAt": "2023-11-27T06:41:57.818Z",
+						"promotion": 3,
+						"promotedAt": "2023-11-27T06:43:00.452Z"
+					},
+					"assetData": {
+						"PreloadPersistentLevel": "/f4032749-42c4-7fe9-7fa2-c78076f34f54/DashBerry.DashBerry"
+					}
+				},
+				"Playlist_PunchBerrySolo": {
+					"meta": {
+						"revision": 2,
+						"headRevision": 2,
+						"revisedAt": "2023-11-27T06:41:57.818Z",
+						"promotion": 3,
+						"promotedAt": "2023-11-27T06:43:00.452Z"
+					},
+					"assetData": {
+						"PreloadPersistentLevel": "/632de27e-4506-41f8-532f-93ac01dc10ca/Maps/PunchBerry_Terrain.PunchBerry_Terrain"
 					}
 				}
+			}
+		};
+		if (config.FortniteGameConfig === true && version >= 24.00) {
+			FrontendAssets.FortPlaylistAthena.assets[
+				FortniteGameConfig.playlist_config
+			] = {
+				"meta": {
+					"revision": 2,
+					"headRevision": 2,
+					"revisedAt": "2023-11-27T06:41:57.818Z",
+					"promotion": 3,
+					"promotedAt": "2023-11-27T06:43:00.452Z"
+				},
+				"assetData": FortniteGameConfig.playlist_settings
 			};
-
 		}
 		res.json(FrontendAssets)
 	},
@@ -1015,14 +1052,14 @@ module.exports = {
 	},
 
 	cookedContent: async function (req, res) {
-		const response = await axios.get(`https://cooked-content-live-cdn.epicgames.com${req.originalUrl}`, ({responseType: 'arraybuffer'}))
+		const response = await axios.get(`https://cooked-content-live-cdn.epicgames.com${req.originalUrl}`, ({ responseType: 'arraybuffer' }))
 		res.set({
-			'Content-Type':'binary/octet-stream',
+			'Content-Type': 'binary/octet-stream',
 			'Content-Length': response.data.length,
 			'Last-Modified': response.headers['last-modified'],
 			'ETag': response.headers['etag'],
 			'x-amz-meta-content-md5': response.headers['x-amz-meta-content-md5']
 		});
-    	res.send(response.data);
+		res.send(response.data);
 	},
 };
