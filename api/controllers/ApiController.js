@@ -157,10 +157,10 @@ module.exports = {
 			"assets": {
 				"Playlist_SunflowerSolo": {
 					"meta": {
-						"revision": 2,
-						"headRevision": 2,
+						"revision": 3,
+						"headRevision": 3,
 						"revisedAt": "2023-11-27T06:41:57.818Z",
-						"promotion": 3,
+						"promotion": 4,
 						"promotedAt": "2023-11-27T06:43:00.452Z"
 					},
 					"assetData": {
@@ -189,6 +189,18 @@ module.exports = {
 					},
 					"assetData": {
 						"PreloadPersistentLevel": "/632de27e-4506-41f8-532f-93ac01dc10ca/Maps/PunchBerry_Terrain.PunchBerry_Terrain"
+					}
+				},
+				"Playlist_ForbiddenFruitNoBuildBRSolo": {
+					"meta": {
+						"revision": 2,
+						"headRevision": 2,
+						"revisedAt": "2023-11-27T06:41:57.818Z",
+						"promotion": 3,
+						"promotedAt": "2023-11-27T06:43:00.452Z"
+					},
+					"assetData": {
+						"PreloadPersistentLevel": "/433b0b76-4507-db70-0b2b-308a82e9fd8d/Maps/BlastBerry_Terrain.BlastBerry_Terrain"
 					}
 				}
 			}
