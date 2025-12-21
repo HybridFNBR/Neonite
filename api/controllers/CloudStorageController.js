@@ -100,13 +100,18 @@ module.exports = {
 	
 	defaultEngine: function(req, res){
 		res.setHeader("content-type", "application/octet-stream")
-		const {version} = getVersionInfo(req);
+		const {version, versionGlobal} = getVersionInfo(req);
 		let DefaultEngine = fs.readFileSync(path.join(__dirname, '../../hotfixes/DefaultEngine.ini'), 'utf-8');
 		if (version === "32.11"|| version === "35.20" || version === "37.51" || version === "38.11") {
 			DefaultEngine = DefaultEngine.replace(
 				';Fort.Event.bForceOffLoadingScreen=1',
 				'Fort.Event.bForceOffLoadingScreen=1'
 			);
+		}
+		if(versionGlobal == 39){
+			DefaultEngine = DefaultEngine
+			.replace(';Protocol="http"', 'Protocol="http"')
+			.replace(';Domain="localhost:5595"', 'Domain="localhost:5595"');
 		}
 		res.send(DefaultEngine)
 	},
