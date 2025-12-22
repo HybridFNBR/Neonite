@@ -108,7 +108,7 @@ module.exports = {
 				'Fort.Event.bForceOffLoadingScreen=1'
 			);
 		}
-		if(versionGlobal == 39){
+		if(versionGlobal == 4){
 			DefaultEngine = DefaultEngine
 			.replace(';Protocol="http"', 'Protocol="http"')
 			.replace(';Domain="localhost:5595"', 'Domain="localhost:5595"');
