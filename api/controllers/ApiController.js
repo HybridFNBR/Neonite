@@ -154,71 +154,105 @@ module.exports = {
 			"meta": {
 				"promotion": 9
 			},
-			"assets": {
-				"Playlist_SunflowerSolo": {
-					"meta": {
-						"revision": 3,
-						"headRevision": 3,
-						"revisedAt": "2023-11-27T06:41:57.818Z",
-						"promotion": 4,
-						"promotedAt": "2023-11-27T06:43:00.452Z"
-					},
-					"assetData": {
-						"PreloadPersistentLevel": "/fd242d06-46d5-d389-1a48-2fb3bb65c2a1/Maps/BlastBerry_Terrain.BlastBerry_Terrain"
-					}
-				},
-				"Playlist_DashBerrySolo": {
-					"meta": {
-						"revision": 2,
-						"headRevision": 2,
-						"revisedAt": "2023-11-27T06:41:57.818Z",
-						"promotion": 3,
-						"promotedAt": "2023-11-27T06:43:00.452Z"
-					},
-					"assetData": {
-						"PreloadPersistentLevel": "/f4032749-42c4-7fe9-7fa2-c78076f34f54/DashBerry.DashBerry"
-					}
-				},
-				"Playlist_PunchBerrySolo": {
-					"meta": {
-						"revision": 2,
-						"headRevision": 2,
-						"revisedAt": "2023-11-27T06:41:57.818Z",
-						"promotion": 3,
-						"promotedAt": "2023-11-27T06:43:00.452Z"
-					},
-					"assetData": {
-						"PreloadPersistentLevel": "/632de27e-4506-41f8-532f-93ac01dc10ca/Maps/PunchBerry_Terrain.PunchBerry_Terrain"
-					}
-				},
-				"Playlist_ForbiddenFruitNoBuildBRSolo": {
-					"meta": {
-						"revision": 2,
-						"headRevision": 2,
-						"revisedAt": "2023-11-27T06:41:57.818Z",
-						"promotion": 3,
-						"promotedAt": "2023-11-27T06:43:00.452Z"
-					},
-					"assetData": {
-						"PreloadPersistentLevel": "/433b0b76-4507-db70-0b2b-308a82e9fd8d/Maps/BlastBerry_Terrain.BlastBerry_Terrain"
-					}
-				}
-			}
+			"assets": {}
 		};
 		if (config.FortniteGameConfig === true && version >= 24.00) {
-			FrontendAssets.FortPlaylistAthena.assets[
-				FortniteGameConfig.playlist_config
-			] = {
-				"meta": {
-					"revision": 2,
-					"headRevision": 2,
-					"revisedAt": "2023-11-27T06:41:57.818Z",
-					"promotion": 3,
-					"promotedAt": "2023-11-27T06:43:00.452Z"
-				},
-				"assetData": FortniteGameConfig.playlist_settings
-			};
+			Object.assign(FrontendAssets.FortPlaylistAthena.assets, {
+				[FortniteGameConfig.playlist_config]: {
+					meta: {
+						revision: 2,
+						headRevision: 2,
+						revisedAt: "2023-11-27T06:41:57.818Z",
+						promotion: 3,
+						promotedAt: "2023-11-27T06:43:00.452Z"
+					},
+					assetData: FortniteGameConfig.playlist_settings
+				}
+			});
 		}
+		if (version >= 17.40) {
+			Object.assign(FrontendAssets.FortPlaylistAthena.assets, {
+				"Playlist_MoleGame": {
+					meta: {
+						revision: 2,
+						headRevision: 2,
+						revisedAt: "2023-11-27T06:41:57.818Z",
+						promotion: 3,
+						promotedAt: "2023-11-27T06:43:00.452Z"
+					},
+					assetData: {
+						PreloadPersistentLevel: "/MoleMapUnderBase/Maps/Mole_UnderBase_Parent.Mole_UnderBase_Parent",
+						MinPlayersForPrivateServer: 1,
+						MinPlayers: 1,
+						GameData: "",
+						BuiltInGameFeaturePluginsToLoad: [
+							"MoleMapUnderBase",
+							"MoleGame",
+							"MoleUI",
+							"MoleAudio"
+						],
+						ModifierList: [],
+						AdditionalLevels: []
+					}
+				}
+			});
+		}
+		if (version >= 30.00) {
+			Object.assign(FrontendAssets.FortPlaylistAthena.assets, {
+				"Playlist_SunflowerSolo": {
+					meta: {
+						revision: 3,
+						headRevision: 3,
+						revisedAt: "2023-11-27T06:41:57.818Z",
+						promotion: 4,
+						promotedAt: "2023-11-27T06:43:00.452Z"
+					},
+					assetData: {
+						PreloadPersistentLevel: "/fd242d06-46d5-d389-1a48-2fb3bb65c2a1/Maps/BlastBerry_Terrain.BlastBerry_Terrain"
+					}
+				},
+
+				"Playlist_DashBerrySolo": {
+					meta: {
+						revision: 2,
+						headRevision: 2,
+						revisedAt: "2023-11-27T06:41:57.818Z",
+						promotion: 3,
+						promotedAt: "2023-11-27T06:43:00.452Z"
+					},
+					assetData: {
+						PreloadPersistentLevel: "/f4032749-42c4-7fe9-7fa2-c78076f34f54/DashBerry.DashBerry"
+					}
+				},
+
+				"Playlist_PunchBerrySolo": {
+					meta: {
+						revision: 2,
+						headRevision: 2,
+						revisedAt: "2023-11-27T06:41:57.818Z",
+						promotion: 3,
+						promotedAt: "2023-11-27T06:43:00.452Z"
+					},
+					assetData: {
+						PreloadPersistentLevel: "/632de27e-4506-41f8-532f-93ac01dc10ca/Maps/PunchBerry_Terrain.PunchBerry_Terrain"
+					}
+				},
+
+				"Playlist_ForbiddenFruitNoBuildBRSolo": {
+					meta: {
+						revision: 2,
+						headRevision: 2,
+						revisedAt: "2023-11-27T06:41:57.818Z",
+						promotion: 3,
+						promotedAt: "2023-11-27T06:43:00.452Z"
+					},
+					assetData: {
+						PreloadPersistentLevel: "/433b0b76-4507-db70-0b2b-308a82e9fd8d/Maps/BlastBerry_Terrain.BlastBerry_Terrain"
+					}
+				}
+			});
+		}
+
 		res.json(FrontendAssets)
 	},
 
