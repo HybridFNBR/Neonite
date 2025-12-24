@@ -197,7 +197,7 @@ module.exports = {
 				}
 			});
 		}
-		if (version >= 30.00) {
+		if (version >= 30.20) {
 			Object.assign(FrontendAssets.FortPlaylistAthena.assets, {
 				"Playlist_SunflowerSolo": {
 					meta: {
