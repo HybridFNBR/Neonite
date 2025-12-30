@@ -7,7 +7,7 @@ module.exports.routes = {
         skipAssets: false
     },
     'GET /Builds/Fortnite/Content/CloudDir/*.ini': 'ApiController.ini',
-    'GET /Builds/Fortnite/Content/CloudDir/ChunksV4/:chunknum/*.chunk':{ 
+    'GET /Builds/Fortnite/Content/CloudDir/ChunksV4/:chunknum/:chunkFile':{ 
         action: "ChunksV4",
         controller:'ApiController', 
         skipAssets: false
@@ -208,9 +208,14 @@ module.exports.routes = {
         skipAssets: false
     },
     'GET /api/content/v2/link/:linkId/cooked-content-package': 'ApiController.contentLinkPackage',
-    'GET /valkyrie/cooked-content*': {
+    'GET /valkyrie/cooked-content/:projectId/:fnVersion/:v/:cookJob/alt/ChunksV4/:chunknum/:chunkFile': {
         controller: 'ApiController',
-        action: 'cookedContent',
+        action: 'cookedContentChunk',
+        skipAssets: false
+    },
+    'GET /valkyrie/cooked-content/:projectId/:fnVersion/:v/:cookJob/alt/*.manifest': {
+        controller: 'ApiController',
+        action: 'cookedContentPlugin',
         skipAssets: false
     },
 };

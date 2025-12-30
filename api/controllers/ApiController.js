@@ -61,35 +61,77 @@ module.exports = {
 	//todo: LauncherAssets -> manifestAssets
 
 	ChunksV4: async function (req, res) {
-		const response = await axios.get(`https://epicgames-download1.akamaized.net${req.originalUrl}`, {
-			responseType: 'stream'
-		});
-		res.set({
-			'Content-Type': "application/octet-stream"
-		});
-		response.data.pipe(res);
+		res.setHeader("Content-Type", "application/octet-stream");
+
+		const cacheDir = path.join(process.cwd(), "cache/ChunksV4");
+		const cacheFile = path.join(cacheDir, req.params.chunkFile);
+
+		if (!fs.existsSync(cacheDir)) {
+			fs.mkdirSync(cacheDir, { recursive: true });
+		}
+		if (fs.existsSync(cacheFile)) {
+			return fs.createReadStream(cacheFile).pipe(res);
+		}
+		else {
+			const response = await axios.get(
+				`https://epicgames-download1.akamaized.net${req.originalUrl}`,
+				{ responseType: "stream" }
+			);
+
+			const fileStream = fs.createWriteStream(cacheFile);
+			response.data.pipe(fileStream);
+			response.data.pipe(res);
+		}
 	},
 
 	ias: async function (req, res) {
-		const response = await axios.get(`https://epicgames-download1.akamaized.net${req.originalUrl}`, {
-			responseType: 'stream'
-		});
-		res.set({
-			'Content-Type': "application/octet-stream"
-		});
-		response.data.pipe(res);
+		res.setHeader("Content-Type", "application/octet-stream");
+
+		const cacheDir = path.join(process.cwd(), "cache/ias");
+		const cacheFile = path.join(cacheDir, req.params.Hash);
+
+		if (!fs.existsSync(cacheDir)) {
+			fs.mkdirSync(cacheDir, { recursive: true });
+		}
+		if (fs.existsSync(cacheFile)) {
+			return fs.createReadStream(cacheFile).pipe(res);
+		}
+		else {
+			const response = await axios.get(
+				`https://epicgames-download1.akamaized.net${req.originalUrl}`,
+				{ responseType: "stream" }
+			);
+
+			const fileStream = fs.createWriteStream(cacheFile);
+			response.data.pipe(fileStream);
+			response.data.pipe(res);
+		}
 
 
 	},
 
 	iasChunks: async function (req, res) {
-		const response = await axios.get(`https://epicgames-download1.akamaized.net${req.originalUrl}`, {
-			responseType: 'stream'
-		});
-		res.set({
-			'Content-Type': "application/octet-stream",
-		});
-		response.data.pipe(res);
+		res.setHeader("Content-Type", "application/octet-stream");
+
+		const cacheDir = path.join(process.cwd(), "cache/ias");
+		const cacheFile = path.join(cacheDir, req.params.chunkFile);
+
+		if (!fs.existsSync(cacheDir)) {
+			fs.mkdirSync(cacheDir, { recursive: true });
+		}
+		if (fs.existsSync(cacheFile)) {
+			return fs.createReadStream(cacheFile).pipe(res);
+		}
+		else {
+			const response = await axios.get(
+				`https://epicgames-download1.akamaized.net${req.originalUrl}`,
+				{ responseType: "stream" }
+			);
+
+			const fileStream = fs.createWriteStream(cacheFile);
+			response.data.pipe(fileStream);
+			response.data.pipe(res);
+		}
 	},
 
 	lightSwitchbulk: function (req, res) {
@@ -1071,13 +1113,31 @@ module.exports = {
 	},
 
 	cosmoFdeb: async function (req, res) {
-		const response = await axios.get(`https://cosmo.fdeb.live.use1a.on.epicgames.com${req.originalUrl}`, {
-			responseType: 'stream'
-		});
-		res.set({
-			'Content-Type': response.headers["Content-Type"]
-		});
-		response.data.pipe(res);
+		const decodedString = Buffer.from(req.query["d"], "base64").toString("utf8");
+		var [fn, version, cosmetic, imageType, randomChars] = decodedString.split('/')
+		cosmetic = cosmetic.split(':')[1]
+		const cacheDir = path.join(process.cwd(), "cache/images");
+		const cacheFile = path.join(cacheDir, `${cosmetic}_${imageType}_${randomChars}.png`);
+
+		if (!fs.existsSync(cacheDir)) {
+			fs.mkdirSync(cacheDir, { recursive: true });
+		}
+		if (fs.existsSync(cacheFile)) {
+			res.setHeader("Content-Type", "image/png");
+			return fs.createReadStream(cacheFile).pipe(res);
+		}
+		else {
+			const response = await axios.get(
+				`https://cosmo.fdeb.live.use1a.on.epicgames.com${req.originalUrl}`,
+				{ responseType: "stream" }
+			);
+			res.set({
+				'Content-Type': response.headers["Content-Type"]
+			});
+			const fileStream = fs.createWriteStream(cacheFile);
+			response.data.pipe(fileStream);
+			response.data.pipe(res);
+		}
 	},
 
 	contentLinkPackage: async function (req, res) {
@@ -1097,10 +1157,34 @@ module.exports = {
 		res.json(response.data.result);
 	},
 
-	cookedContent: async function (req, res) {
-		const response = await axios.get(`https://cooked-content-live-cdn.epicgames.com${req.originalUrl}`, ({ responseType: 'arraybuffer' }))
+	cookedContentChunk: async function (req, res) {
+		res.setHeader("Content-Type", "application/octet-stream");
+		const cacheDir = path.join(process.cwd(), "cache/cookedContentChunks");
+		const cacheFile = path.join(cacheDir, req.params.chunkFile);
+
+		if (!fs.existsSync(cacheDir)) {
+			fs.mkdirSync(cacheDir, { recursive: true });
+		}
+		if (fs.existsSync(cacheFile)) {
+			return fs.createReadStream(cacheFile).pipe(res);
+		}
+		else {
+			const response = await axios.get(`https://cooked-content-live-cdn.epicgames.com${req.originalUrl}`, ({ responseType: 'arraybuffer' }))
 		res.set({
 			'Content-Type': 'binary/octet-stream',
+			'Content-Length': response.data.length,
+			'Last-Modified': response.headers['last-modified'],
+			'ETag': response.headers['etag'],
+			'x-amz-meta-content-md5': response.headers['x-amz-meta-content-md5']
+		});
+			fs.writeFileSync(cacheFile, response.data);
+			res.send(response.data);
+		}
+	},
+
+	cookedContentPlugin: async function (req, res) {
+		const response = await axios.get(`https://cooked-content-live-cdn.epicgames.com${req.originalUrl}`, ({ responseType: 'arraybuffer' }))
+		res.set({
 			'Content-Length': response.data.length,
 			'Last-Modified': response.headers['last-modified'],
 			'ETag': response.headers['etag'],

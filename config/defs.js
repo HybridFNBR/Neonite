@@ -1,10 +1,25 @@
 const Profile = require("../profile");
 const fs = require("fs");
 const path = require('path');
+const NeoLog = require("../structs/NeoLog")
 const account = {
     displayName: "",
     accountId: ""
 };
+
+
+let folderSize = 0;
+for (const cache of fs.readdirSync("cache", { withFileTypes: true })) {
+    const cachePath = path.join("cache", cache.name);
+    for (const file of fs.readdirSync(cachePath)) {
+        const stats = fs.statSync(path.join(cachePath, file));
+        if (stats.isFile()) {
+            folderSize += stats.size;
+        }
+    }
+}
+NeoLog.Debug(`cache Folder size: ${(folderSize / 1024 / 1024).toFixed(2)}MB`);
+
 
 const MPLockerLoadout = (accountId, athenprofile) => {
     const characterloadout = athenprofile.items["NEONITECHARACTER"]

@@ -9,7 +9,7 @@ module.exports = {
     console.warn('[\x1b[33mWARNING\x1b[0m]\x1b[33m', data, '\x1b[0m')
   },
   Debug(data) {
-    console.log(`[\x1b[32mDEBUG\x1b[0m]: ${data}\x1b[0m`)
+    console.log(`[\x1b[1m\x1b[36mDEBUG\x1b[0m]: ${data}\x1b[0m`)
   },
 
   URL(data) {
