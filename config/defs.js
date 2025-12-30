@@ -9,6 +9,9 @@ const account = {
 
 
 let folderSize = 0;
+if (!fs.existsSync(path.join(process.cwd(), "cache"))) {
+    fs.mkdirSync(path.join(process.cwd(), "cache"), { recursive: true });
+}
 for (const cache of fs.readdirSync("cache", { withFileTypes: true })) {
     const cachePath = path.join("cache", cache.name);
     for (const file of fs.readdirSync(cachePath)) {
