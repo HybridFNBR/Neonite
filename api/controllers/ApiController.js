@@ -560,7 +560,7 @@ module.exports = {
 	},
 
 	keychain: function (req, res) {
-		res.json([
+		const keychainArray = [
 			"46159C748694298198A52DC07476FDA3:4CLHOBqSrmS1RkG/SxZYi8Rc0zCmAKxXIBMMUHDl2ag=",
 			"1C6FDB12D706D59E15399DB8FD1EFD85:39JQsqlpGBC1xEz4qeYUYT8Nta0ZkYb3GvjEumq+bAM=",
 			"299C16019D64B4942BC10988AD3B82A0:jTs56Mt7WtAkJ6p14hizw/FPE7pQ60QW9mKQa2ugnjU=",
@@ -581,7 +581,10 @@ module.exports = {
 			"DC5875627031B431F7CA00EB340AD357:6Z4KjcvJJs7Cd7losTCw5CKMYQ6+f+W6PN0h9BjUu2w=",
 			"95F27017E9C9297290DB60941B1C8355:YPWJFdLs7FUG6/8uqCpk7VrfP5Pxuo+u2QposQWrzIY=",
 			"2BBA134ECCB70D2F2815F1E532B8C829:L/LscqejB1XTFtcDWJpLl3byAMZvL3lXAQ2WdPPzU9c="
-		])
+		]
+		const keychainFile = loadJSON("../responses/keychain.json");
+		keychainArray.push(...keychainFile);
+		res.json(keychainArray)
 	},
 
 	regionCheck: function (req, res) {
