@@ -316,6 +316,7 @@ const seasonPass = (accountId, athenprofile, version, versionGlobal) => {
         "musicpasss10_seasonasset",
         "musicpasss11_seasonasset",
         "musicpasss12_seasonasset",
+        "safflower_seasondata_seasonasset"
 
     ]
     if (version == 37.40 || version == 37.50) { //Epic didnt remove the season 5 figment pass
