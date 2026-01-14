@@ -74,7 +74,7 @@ module.exports = {
 		}
 		else {
 			const response = await axios.get(
-				`https://epicgames-download1.akamaized.net${req.originalUrl}`,
+				`https://fastly-download.epicgames.com${req.originalUrl}`,
 				{ responseType: "stream" }
 			);
 
@@ -98,7 +98,7 @@ module.exports = {
 		}
 		else {
 			const response = await axios.get(
-				`https://epicgames-download1.akamaized.net${req.originalUrl}`,
+				`https://fastly-download.epicgames.com${req.originalUrl}`,
 				{ responseType: "stream" }
 			);
 
@@ -124,7 +124,7 @@ module.exports = {
 		}
 		else {
 			const response = await axios.get(
-				`https://epicgames-download1.akamaized.net${req.originalUrl}`,
+				`https://fastly-download.epicgames.com${req.originalUrl}`,
 				{ responseType: "stream" }
 			);
 
@@ -1120,7 +1120,7 @@ module.exports = {
 		var [fn, version, cosmetic, imageType, randomChars] = decodedString.split('/')
 		cosmetic = cosmetic.split(':')[1]
 		const cacheDir = path.join(process.cwd(), "cache/images");
-		const cacheFile = path.join(cacheDir, `${cosmetic}_${imageType}_${randomChars}.png`);
+		const cacheFile = path.join(cacheDir, `${cosmetic}_${imageType}.png`);
 
 		if (!fs.existsSync(cacheDir)) {
 			fs.mkdirSync(cacheDir, { recursive: true });
