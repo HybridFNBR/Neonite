@@ -393,7 +393,7 @@ module.exports = {
 	},
 
 	profileToken: function (req, res) {
-		res.status(204)
+		res.status(204).end();
 	},
 
 	fetchLegoWorlds: function (req, res) {
@@ -1173,13 +1173,13 @@ module.exports = {
 		}
 		else {
 			const response = await axios.get(`https://cooked-content-live-cdn.epicgames.com${req.originalUrl}`, ({ responseType: 'arraybuffer' }))
-		res.set({
-			'Content-Type': 'binary/octet-stream',
-			'Content-Length': response.data.length,
-			'Last-Modified': response.headers['last-modified'],
-			'ETag': response.headers['etag'],
-			'x-amz-meta-content-md5': response.headers['x-amz-meta-content-md5']
-		});
+			res.set({
+				'Content-Type': 'binary/octet-stream',
+				'Content-Length': response.data.length,
+				'Last-Modified': response.headers['last-modified'],
+				'ETag': response.headers['etag'],
+				'x-amz-meta-content-md5': response.headers['x-amz-meta-content-md5']
+			});
 			fs.writeFileSync(cacheFile, response.data);
 			res.send(response.data);
 		}
@@ -1195,4 +1195,45 @@ module.exports = {
 		});
 		res.send(response.data);
 	},
+
+	habaneroTrackSchedule: async function (req, res) {
+		res.json([])
+	},
+
+	habaneroTrackProgress: async function (req, res) {
+		res.json([])
+	},
+
+	habaneroTracks: async function (req, res) {
+		res.json([])
+	},
+
+	publicAccounts: async function (req, res) {
+		res.json({
+			"accounts": [
+				{
+					"accountId": req.query.accountId,
+					"tags": []
+				}
+			]
+		})
+	},
+
+	motdInteractions: function (req, res) {
+		res.status(200).end()
+	},
+
+	interstitialsTarget: function (req, res) {
+		res.status(204).end()
+	},
+
+	playerTokens: function (req, res) {
+		res.json({
+			"accounts": [{
+				"accountId": "e7c388664e5442e89f30b396d9fa7183",
+				"tokens": []
+			}]
+		})
+	}
+
 };

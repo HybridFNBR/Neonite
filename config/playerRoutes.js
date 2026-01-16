@@ -20,6 +20,12 @@ module.exports.routes = {
         controller:'PlayerController', 
         skipAssets: false
     },
+    'GET /party/api/v1/Fortnite/user/hybrid/settings/privacy': 'PlayerController.settingsPrivacy',
+    'GET /party/api/v1/Fortnite/user/:accountId/notifications/undelivered/count': {
+        action: "localparty",
+        controller:'PlayerController', 
+        skipAssets: false
+    },
     'GET /friends/api/v1/:accountId/settings': 'PlayerController.friendsSettings',
     'GET /friends/api/v1/:accountId/summary': 'PlayerController.friendsSummary',
     'GET /friends/api/public/friends/:accountId': 'PlayerController.friends',
