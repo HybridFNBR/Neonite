@@ -29,11 +29,7 @@ module.exports.routes = {
         controller: 'ApiController',
         skipAssets: false
     },
-    'ALL /presence/api/v1/*':{
-        action: "presence",
-        controller:'ApiController', 
-        skipAssets: false
-    },
+    'GET /presence/api/v1/_/:accountId/settings/subscriptions': 'ApiController.presence',
     'GET /socialban/api/public/v1/:accountId': {
         action: "socialban",
         controller: 'ApiController',

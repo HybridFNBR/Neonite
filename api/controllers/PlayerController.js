@@ -120,6 +120,10 @@ module.exports = {
 		})
 	},
 
+	presence: function (req, res) {
+		res.json([])
+	},
+
 	receipts: function (req, res) {
 		res.json([])
 	},

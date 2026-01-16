@@ -35,6 +35,11 @@ module.exports.routes = {
         controller:'PlayerController', 
         skipAssets: false
     },
+    'ALL /presence/api/v1/*':{
+        action: "presence",
+        controller:'PlayerController', 
+        skipAssets: false
+    },
     'GET /fortnite/api/receipts/v1/account/:accountId/receipts': 'PlayerController.receipts',
     'GET /friends/api/public/blocklist/:accountId': 'PlayerController.blocklist',
 
