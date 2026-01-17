@@ -1161,28 +1161,15 @@ module.exports = {
 	},
 
 	cookedContentChunk: async function (req, res) {
-		res.setHeader("Content-Type", "application/octet-stream");
-		const cacheDir = path.join(process.cwd(), "cache/cookedContentChunks");
-		const cacheFile = path.join(cacheDir, req.params.chunkFile);
-
-		if (!fs.existsSync(cacheDir)) {
-			fs.mkdirSync(cacheDir, { recursive: true });
-		}
-		if (fs.existsSync(cacheFile)) {
-			return fs.createReadStream(cacheFile).pipe(res);
-		}
-		else {
-			const response = await axios.get(`https://cooked-content-live-cdn.epicgames.com${req.originalUrl}`, ({ responseType: 'arraybuffer' }))
-			res.set({
-				'Content-Type': 'binary/octet-stream',
-				'Content-Length': response.data.length,
-				'Last-Modified': response.headers['last-modified'],
-				'ETag': response.headers['etag'],
-				'x-amz-meta-content-md5': response.headers['x-amz-meta-content-md5']
-			});
-			fs.writeFileSync(cacheFile, response.data);
-			res.send(response.data);
-		}
+		const response = await axios.get(`https://cooked-content-live-cdn.epicgames.com${req.originalUrl}`, ({ responseType: 'arraybuffer' }))
+		res.set({
+			'Content-Type': 'binary/octet-stream',
+			'Content-Length': response.data.length,
+			'Last-Modified': response.headers['last-modified'],
+			'ETag': response.headers['etag'],
+			'x-amz-meta-content-md5': response.headers['x-amz-meta-content-md5']
+		});
+		res.send(response.data);
 	},
 
 	cookedContentPlugin: async function (req, res) {
@@ -1197,15 +1184,15 @@ module.exports = {
 	},
 
 	habaneroTrackSchedule: async function (req, res) {
-		res.json([])
+		res.status(204).end()
 	},
 
 	habaneroTrackProgress: async function (req, res) {
-		res.json([])
+		res.status(204).end()
 	},
 
 	habaneroTracks: async function (req, res) {
-		res.json([])
+		res.status(204).end()
 	},
 
 	publicAccounts: async function (req, res) {
@@ -1234,6 +1221,10 @@ module.exports = {
 				"tokens": []
 			}]
 		})
+	},
+
+	communityHighlights: function (req, res) {
+		res.status(204).end()
 	}
 
 };

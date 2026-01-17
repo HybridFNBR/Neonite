@@ -587,9 +587,9 @@ module.exports = {
                 "StageC", //Kiln Buildup Stage 3
                 "StageD", //Kiln Buildup Stage 4
                 "KilnB", //Kiln Buildup
-                "Kiln_TOD", //Kiln Time Of Day
-                "Kiln_Event", //Kiln Event
-                "Kiln_Preload_Event", //Kiln Preload Event
+                //"Kiln_TOD", //Kiln Time Of Day
+                //"Kiln_Event", //Kiln Event
+                //"Kiln_Preload_Event", //Kiln Preload Event
             ],
 
             "33.11":[

@@ -2226,9 +2226,6 @@
     "mnemonic": "set_blastberry_playlists",
     "linkType": "ModeSet",
     "metadata": {
-      "lobby_background_image_urls": {
-        "url": "https://cdn2.unrealengine.com/blastberry-lobby-bg-final-notext-2560x1440-788db0478027.jpg"
-      },
       "required_content": {
         "verse_uris": [
           "/Fortnite.com/GameFeatures/BRRoot",
@@ -2245,12 +2242,16 @@
       "predownload_link_codes": [
         "6990-4594-4017",
         "0794-7216-8184",
-        "9725-4954-0946"
+        "9725-4954-0946",
+        "3329-7199-7901",
+        "3545-0240-1020"
       ],
       "sub_link_codes": [
         "playlist_sunflowersolo",
         "playlist_dashberrysolo",
-        "playlist_punchberrysolo"
+        "playlist_punchberrysolo",
+        "playlist_timberstakesolo",
+        "playlist_sourspawnsolo"
       ],
       "activated_public_date": "2025-07-23T00:00:00.000Z",
       "alt_image_urls": {
@@ -2380,7 +2381,7 @@
       },
       "product_tag": "Product.BlastBerry.Build",
       "tagline": "Fortnite Reload is a 40-player fast-paced Battle Royale game that is all about carrying the squad to Victory.   \r\nReboot as long as one teammate is still in the action!  \r\nLoot up after rebooting to get back into fighting shape!  \r\nEliminate opponents to reboot teammates faster! \r\nNear the end of the match, reboots will stop. Lock in with your squad to secure the Victory Royale!  ",
-      "default_sub_link_code": "playlist_sunflowersquad"
+      "default_sub_link_code": "playlist_sunflowersolo"
     },
     "version": 1,
     "active": false,
@@ -2400,6 +2401,9 @@
     "mnemonic": "playlist_sunflowersolo",
     "linkType": "BR:Playlist",
     "metadata": {
+      "lobby_background_image_urls": {
+        "url": "https://cdn2.unrealengine.com/blastberry-lobby-bg-final-notext-2560x1440-788db0478027.jpg"
+      },
       "alt_title": {
         "de": "Wagnis",
         "ru": "\u0422\u0440\u0438\u0443\u043c\u0444\u0430\u043d\u0442",
@@ -2457,17 +2461,8 @@
     "mnemonic": "playlist_dashberrysolo",
     "linkType": "BR:Playlist",
     "metadata": {
-      "matchmakingV2": {
-        "allowSquadFillOption": true,
-        "allowJoinInProgress": false,
-        "crossplayRequired": false,
-        "maxPlayers": 40,
-        "ratingType": "blastberry_build",
-        "maxSocialPartySize": 1,
-        "isRanked": false,
-        "maxTeamCount": 40,
-        "allowPrivateMatches": false,
-        "maxTeamSize": 1
+      "lobby_background_image_urls": {
+        "url": "https://cdn2.unrealengine.com/fortnite-reload-slurp-rush-the-slurpworks-1920x1080-e74ec5e20e44.jpg"
       },
       "alt_title": {
         "de": "SCHL\u00dcRFSCHUB",
@@ -2523,17 +2518,8 @@
     "mnemonic": "playlist_punchberrysolo",
     "linkType": "BR:Playlist",
     "metadata": {
-      "matchmakingV2": {
-        "allowSquadFillOption": true,
-        "allowJoinInProgress": false,
-        "crossplayRequired": true,
-        "maxPlayers": 40,
-        "ratingType": "blastberry_build",
-        "maxSocialPartySize": 1,
-        "isRanked": false,
-        "maxTeamCount": 40,
-        "allowPrivateMatches": false,
-        "maxTeamSize": 1
+      "lobby_background_image_urls": {
+        "url": "https://cdn2.unrealengine.com/mkart-reload-32-00-lobby-2048x1024-88d93a368f3d.jpg"
       },
       "alt_title": {
         "de": "Oase",
@@ -2573,6 +2559,129 @@
     "descriptionTags": [],
     "moderationStatus": "Unmoderated",
     "lastActivatedDate": "2025-10-17T18:59:15.594Z",
+    "discoveryIntent": "PUBLIC",
+    "linkState": "LIVE"
+  },
+  {
+    "namespace": "fn",
+    "accountId": "epic",
+    "creatorName": "Epic",
+    "mnemonic": "playlist_timberstakesolo",
+    "linkType": "BR:Playlist",
+    "metadata": {
+      "lobby_background_image_urls": {
+        "url": "https://cdn2.unrealengine.com/timberstake-lobby-4096x2048-9ad07d806d89.jpg"
+      },
+      "matchmakingV2": {
+        "allowSquadFillOption": true,
+        "allowJoinInProgress": false,
+        "crossplayRequired": false,
+        "maxPlayers": 40,
+        "ratingType": "blastberry_build",
+        "maxSocialPartySize": 1,
+        "isRanked": false,
+        "maxTeamCount": 40,
+        "allowPrivateMatches": false,
+        "maxTeamSize": 1
+      },
+      "alt_title": {
+        "ar": "\u0645\u0644\u0627\u0639\u0628 \u0627\u0644\u062d\u0628\u0651\u0627\u0631",
+        "de": "SQUID GROUNDS",
+        "ru": "\u0410\u0420\u0415\u041d\u0410 \u00ab\u041a\u0410\u041b\u044c\u041c\u0410\u0420\u00bb",
+        "ko": "\uc624\uc9d1\uc5b4 \uadf8\ub77c\uc6b0\ub4dc\uac00",
+        "pt-BR": "ILHA ROUND 6",
+        "ja": "\u30a4\u30ab\u30b0\u30e9\u30a6\u30f3\u30c9",
+        "it": "SQUID GROUNDS",
+        "fr": "SQUID GROUNDS",
+        "pl": "OPERACJA SQUID",
+        "es": "DOMINIOS DEL CALAMAR",
+        "es-419": "DOMINIOS DEL CALAMAR",
+        "tr": "SQUID GROUNDS"
+      },
+      "favorite_override": "set_timberstake_playlists",
+      "parent_set": "set_timberstake_playlists",
+      "play_history_override": "set_timberstake_playlists",
+      "block_cascading_data": "true",
+      "image_url": "https://cdn2.unrealengine.com/timberstakemapimage-720x405-78453f33096e.jpg",
+      "product_tag": "Product.BlastBerry.Build",
+      "image_urls": {
+        "url_s": "https://cdn2.unrealengine.com/timberstakemapimage-720x405-78453f33096e.jpg",
+        "url_xs": "https://cdn2.unrealengine.com/timberstakemapimage-720x405-78453f33096e.jpg",
+        "url_m": "https://cdn2.unrealengine.com/timberstakemapimage-720x405-78453f33096e.jpg",
+        "url": "https://cdn2.unrealengine.com/timberstakemapimage-720x405-78453f33096e.jpg"
+      },
+      "title": "Squid Grounds",
+      "matchmaking": {
+        "override_playlist": "playlist_timberstakesolo"
+      }
+    },
+    "version": 1,
+    "active": true,
+    "disabled": false,
+    "created": "2025-05-05T20:29:16.611Z",
+    "published": "2025-05-05T20:29:16.611Z",
+    "updated": "2025-08-26T20:32:22.689Z",
+    "descriptionTags": [],
+    "moderationStatus": "Unmoderated",
+    "lastActivatedDate": "2025-05-05T20:29:16.542Z",
+    "discoveryIntent": "PUBLIC",
+    "linkState": "LIVE"
+  },
+  {
+    "namespace": "fn",
+    "accountId": "epic",
+    "creatorName": "Epic",
+    "mnemonic": "playlist_sourspawnsolo",
+    "linkType": "BR:Playlist",
+    "metadata": {
+      "lobby_background_image_urls": {
+        "url": "https://cdn2.unrealengine.com/cdn-uploader-Reload_Nitemare_Lobby_4K-0375a03c.jpg"
+      },
+      "alt_title": {
+        "de": "NITEMARE ISLAND",
+        "ru": "\u041e\u0421\u0422\u0420\u041e\u0412 \u041a\u041e\u0428\u041c\u0410\u0420\u041e\u0412",
+        "pt": "ILHA DO PESADELO",
+        "zh-hant": "\u5669\u5922\u5cf6",
+        "zh-hans": "\u68a6\u9b47\u5c0f\u5c9b",
+        "kr": "\uc545\ubabd \uc12c",
+        "it": "ISOLA DA INCUBO",
+        "fr": "\u00ceLE AUX CAUCHEMARS",
+        "es": "ISLA PESADILLA",
+        "ar": "\u062c\u0632\u064a\u0631\u0629 \u0627\u0644\u0643\u0648\u0627\u0628\u064a\u0633",
+        "vi": "H\u00d2N \u0110\u1ea2O \u00c1C M\u1ed8NG",
+        "th": "\u0e40\u0e01\u0e32\u0e30\u0e44\u0e19\u0e15\u0e4c\u0e41\u0e21\u0e23\u0e4c",
+        "ja": "\u30ca\u30a4\u30c8\u30e1\u30a2\u30fb\u30a2\u30a4\u30e9\u30f3\u30c9",
+        "id": "PULAU NITEMARE",
+        "pl": "STRACHOWISKO",
+        "es-419": "ISLA PESADILLA",
+        "tr": "K\u00c2BUSLAR ADASI"
+      },
+      "favorite_override": "set_sourspawn_playlists",
+      "parent_set": "set_sourspawn_playlists",
+      "play_history_override": "set_sourspawn_playlists",
+      "block_cascading_data": "true",
+      "image_url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-50_Nitemare_EnviroScreenshot_Widget_-628x512-31108e93.jpg",
+      "product_tag": "Product.BlastBerry.Build",
+      "image_urls": {
+        "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-50_Nitemare_EnviroScreenshot_Widget_-628x512-31108e93.jpg",
+        "url_xs": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-50_Nitemare_EnviroScreenshot_Widget_-628x512-31108e93.jpg",
+        "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-50_Nitemare_EnviroScreenshot_Widget_-628x512-31108e93.jpg",
+        "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-50_Nitemare_EnviroScreenshot_Widget_-628x512-31108e93.jpg"
+      },
+      "title": "Nitemare Island",
+      "matchmaking": {
+        "override_playlist": "playlist_sourspawnsolo"
+      }
+    },
+    "version": 1,
+    "active": true,
+    "disabled": false,
+    "created": "2025-05-05T20:29:16.611Z",
+    "published": "2025-05-05T20:29:16.611Z",
+    "updated": "2025-08-26T20:32:22.689Z",
+    "descriptionTags": [],
+    "moderationStatus": "Unmoderated",
+    "lastActivatedDate": "2025-05-05T20:29:16.542Z",
     "discoveryIntent": "PUBLIC",
     "linkState": "LIVE"
   },

@@ -236,5 +236,6 @@ module.exports.routes = {
     'GET /api/v1/public/accounts': 'ApiController.publicAccounts',
     'POST /api/v1/fortnite-br/interactions': 'ApiController.motdInteractions',
     'POST /api/v1/fortnite-br/channel/interstitials/target': 'ApiController.interstitialsTarget',
-    'GET /api/v1/players/Fortnite/tokens': 'ApiController.playerTokens'
+    'GET /api/v1/players/Fortnite/tokens': 'ApiController.playerTokens',
+    'GET /api/community/v1/fn-client/community-highlights': 'ApiController.communityHighlights'
 };
