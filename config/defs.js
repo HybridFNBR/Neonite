@@ -729,44 +729,164 @@ const Backgrounds = (version, versionGlobal, backgrounds, content) => {
         "11.31": { stage: "Winter19" },
         "11.40": { stage: "Winter19" },
         "11.50": { stage: "LoveAndWar" },
+        "13.20": {
+            stage: "defaultnotris", 
+            backgroundImage: "https://cdn2.unrealengine.com/Fortnite/fortnite-game/lobby/T_Background_Summer-2048x1024-37957ac10d82d67eab41c7c87615102307fd9afa.png"
+        },
         "14.40": { stage: "halloween2020" },
         "15.10": { stage: "season15xmas"},
-        "17.10": { stage: "defaultnotris", backgroundImage: "https://cdn2.unrealengine.com/t-bp-17-lobby-summer-2048x1024-709fa99e6be0.png" },
-        "17.21": { stage: "defaultnotris", backgroundImage: "https://cdn2.unrealengine.com/t-bp17-21-lobby-2048x1024-f6027bf109de.png" },
-        "17.30": { stage: "defaultnotris", backgroundImage: "https://cdn2.unrealengine.com/t-bp17-21-lobby-2048x1024-f6027bf109de.png" },
-        "17.40": { stage: "defaultnotris", backgroundImage: "https://cdn2.unrealengine.com/t-bp17-40-lobby-2048x1024-f742fc604aae.png" },
-        "17.50": { stage: "defaultnotris", backgroundImage: "https://cdn2.unrealengine.com/s17-50-lobby-2048x1024-f00569ea4991.png" },
-        "19.01": { stage: "winter2021", backgroundImage: "https://cdn2.unrealengine.com/t-bp19-lobby-xmas-2048x1024-f85d2684b4af.png" },
-        "19.10": { stage: "defaultnotris", backgroundImage: "https://cdn2.unrealengine.com/fortnite-tilted-towers-1920x1080-ad94e5f0b016.jpg" },
-        "20.10": { stage: "season20", backgroundImage: "https://cdn2.unrealengine.com/t-bp20-lobby-2048x1024-d89eb522746c.png" },
-        "20.40": { stage: "season20", backgroundImage: "https://cdn2.unrealengine.com/t-bp20-40-armadillo-glowup-lobby-2048x2048-2048x2048-3b83b887cc7f.jpg" },
-        "21.30": { stage: "season2130", backgroundImage: "https://cdn2.unrealengine.com/nss-lobbybackground-2048x1024-f74a14565061.jpg" },
-        "22.20": { stage: "season2220", backgroundImage: "https://cdn2.unrealengine.com/t-bp22-fortnitemares-lobby-square-2048x2048-2048x2048-3b7cda3aa517.jpg" },
-        "23.10": { stage: "season2310", backgroundImage: "https://cdn2.unrealengine.com/t-bp23-winterfest-lobby-square-2048x2048-2048x2048-277a476e5ca6.png" },
-        "23.40": { stage: "defaultnotris", backgroundImage: "https://cdn2.unrealengine.com/mostwanted-final-v2-2048x2048-2048x2048-39f2b5041a40.jpg" },
-        "24.30": { stage: "defaultnotris", backgroundImage: "https://cdn2.unrealengine.com/ch4s2-lobbyupdate-4-20-2022-lifted-copy-3840x2160-d3a138f5f9e7.jpg" },
-        "25.11": { stage: "season2500", backgroundImage: "https://cdn2.unrealengine.com/t-s25-14dos-lobby-4096x2048-2be24969eee3.jpg" },
-        "26.30": { stage: "season2630", backgroundImage: "https://cdn2.unrealengine.com/s26-lobby-timemachine-final-2560x1440-a3ce0018e3fa.jpg" },
-        "27.11": { stage: "defaultnotris", backgroundImage: "https://cdn2.unrealengine.com/durianlobby2-4096x2048-242a51b6a8ee.jpg" },
-        "28.01": { stage: "defaultnotris", backgroundImage: "https://cdn2.unrealengine.com/winterfest2023-lobby-2048x1024-a8853c3a6f59.jpg" },
-        "28.20": { stage: "defaultnotris", backgroundImage: "https://cdn2.unrealengine.com/s28-tmnt-lobby-4096x2048-e6c06a310c05.jpg" },
-        "29.20": { stage: "season2920", backgroundImage: "https://cdn2.unrealengine.com/iceberg-lobby-3840x2160-217bb6ea8af9.jpg" },
-        "29.40": { stage: "defaultnotris", backgroundImage: "https://cdn2.unrealengine.com/mkart-2940-sw-fnbr-lobby-3840x2160-4f1f1486a54a.jpg" },
-        "30.20": { stage: "season3020", backgroundImage: "https://cdn2.unrealengine.com/mkart-c5s3-msee-lobby-bg-2560x1440-9c8aa7721e41.jpg" },
-        "30.30": { stage: "season3020", backgroundImage: "https://cdn2.unrealengine.com/mkart-c5s3-msee-lobby-bg-2560x1440-9c8aa7721e41.jpg" },
-        "30.40": { stage: "season3030", backgroundImage: "https://cdn2.unrealengine.com/ch5s3-lobby-3030-4096x2048-eecf04243faa.jpg" },
-        "31.40": { stage: "season3140", backgroundImage: "https://cdn2.unrealengine.com/mkart-fnbr-fortnitemares2024-lobby-final-4096x2048-d17d51ae76a0.jpg" },
-        "31.41": { stage: "season3140", backgroundImage: "https://cdn2.unrealengine.com/mkart-fnbr-fortnitemares2024-lobby-final-4096x2048-d17d51ae76a0.jpg" },
-        "32.11": { stage: "defaultnotris", backgroundImage: "https://cdn2.unrealengine.com/mkart-fnbr-quail-lobby-3264x1836-b157b2252db6.jpg" },
-        "37.10": { stage: "defaultnotris", backgroundImage: s37backgroundImages[Math.floor(Math.random() * s37backgroundImages.length)]},
-        "37.20": { stage: "defaultnotris", backgroundImage: s37backgroundImages[Math.floor(Math.random() * s37backgroundImages.length)]},
-        "37.30": { stage: "season3730", backgroundImage: "https://cdn2.unrealengine.com/megazord-midseason-lobby-bg-4096x2048-87c393fad772.jpg" },
-        "37.40": { stage: "season3730", backgroundImage: "https://cdn2.unrealengine.com/megazord-midseason-lobby-bg-4096x2048-87c393fad772.jpg" },
-        "37.50": { stage: "season3750", backgroundImage: "https://cdn2.unrealengine.com/mkart-fnbr-fortnitemares-37-50-lobbybg-final-4096x2048-92c002d8d677.jpg" },
-        "37.51": { stage: "season3750", backgroundImage: "https://cdn2.unrealengine.com/mkart-fnbr-fortnitemares-37-50-lobbybg-final-4096x2048-92c002d8d677.jpg" },
-        "38.11": { stage: "defaultnotris", backgroundImage: "https://cdn2.unrealengine.com/mkart-c6ee-lobbybg-demon-3840x1920-ed1afc7e3dfc.jpg" },
-        "39.11": { stage: "season3911", backgroundImage: "https://cdn2.unrealengine.com/mkart-fnbr-winterfest-39-11-lobbybg-final-4k-2560x1280-3f2aa2d84a17.jpg" },
-        "39.20": { stage: "season3920", backgroundImage: "https://cdn2.unrealengine.com/mkart-safflower-lobby-bg-final-4096x2048-9c7abd20d655.jpg" },
+        "17.10": {
+            stage: "defaultnotris",
+            backgroundImage: "https://cdn2.unrealengine.com/t-bp-17-lobby-summer-2048x1024-709fa99e6be0.png"
+        },
+        "17.21": {
+            stage: "defaultnotris",
+            backgroundImage: "https://cdn2.unrealengine.com/t-bp17-21-lobby-2048x1024-f6027bf109de.png"
+        },
+        "17.30": {
+            stage: "defaultnotris",
+            backgroundImage: "https://cdn2.unrealengine.com/t-bp17-21-lobby-2048x1024-f6027bf109de.png"
+        },
+        "17.40": {
+            stage: "defaultnotris",
+            backgroundImage: "https://cdn2.unrealengine.com/t-bp17-40-lobby-2048x1024-f742fc604aae.png"
+        },
+        "17.50": { 
+            stage: "defaultnotris", 
+            backgroundImage: "https://cdn2.unrealengine.com/s17-50-lobby-2048x1024-f00569ea4991.png"
+        },
+        "19.01": { 
+            stage: "winter2021", 
+            backgroundImage: "https://cdn2.unrealengine.com/t-bp19-lobby-xmas-2048x1024-f85d2684b4af.png"
+        },
+        "19.10": {
+            stage: "season1910",
+            backgroundImage: "https://cdn2.unrealengine.com/fortnite-tilted-towers-1920x1080-ad94e5f0b016.jpg" 
+        },
+        "20.10": { 
+            stage: "season20", 
+            backgroundImage: "https://cdn2.unrealengine.com/t-bp20-lobby-2048x1024-d89eb522746c.png" 
+        },
+        "20.40": {
+            stage: "defaultnotris", 
+            backgroundImage: "https://cdn2.unrealengine.com/t-bp20-40-armadillo-glowup-lobby-2048x2048-2048x2048-3b83b887cc7f.jpg" 
+        },
+        "21.30": {
+            stage: "season2130", 
+            backgroundImage: "https://cdn2.unrealengine.com/nss-lobbybackground-2048x1024-f74a14565061.jpg"
+        },
+        "21.40": {
+            stage: "season2140", 
+            backgroundImage: "https://cdn2.unrealengine.com/t-s21-stamina-lobby-2048x1024-87eb7cd878e4.png"
+        },
+        "22.20": {
+            stage: "season2220", 
+            backgroundImage: "https://cdn2.unrealengine.com/t-bp22-fortnitemares-lobby-square-2048x2048-2048x2048-3b7cda3aa517.jpg" 
+        },
+        "23.10": {
+            stage: "season2310",
+            backgroundImage: "https://cdn2.unrealengine.com/t-bp23-winterfest-lobby-square-2048x2048-2048x2048-277a476e5ca6.png"
+        },
+        "23.40": {
+            stage: "defaultnotris",
+            backgroundImage: "https://cdn2.unrealengine.com/mostwanted-final-v2-2048x2048-2048x2048-39f2b5041a40.jpg"
+        },
+        "24.30": {
+            stage: "defaultnotris",
+            backgroundImage: "https://cdn2.unrealengine.com/ch4s2-lobbyupdate-4-20-2022-lifted-copy-3840x2160-d3a138f5f9e7.jpg"
+        },
+         "24.40": {
+            stage: "defaultnotris",
+            backgroundImage: "https://cdn2.unrealengine.com/t-ch4s2-lobby24-40-4096x2048-50eb15d565bb.jpg"
+        },
+        "25.11": {
+            stage: "season2500",
+            backgroundImage: "https://cdn2.unrealengine.com/t-s25-14dos-lobby-4096x2048-2be24969eee3.jpg"
+        },
+        "26.30": {
+            stage: "season2630",
+            backgroundImage: "https://cdn2.unrealengine.com/s26-lobby-timemachine-final-2560x1440-a3ce0018e3fa.jpg"
+        },
+        "27.11": {
+            stage: "defaultnotris",
+            backgroundImage: "https://cdn2.unrealengine.com/durianlobby2-4096x2048-242a51b6a8ee.jpg"
+        },
+        "28.01": {
+            stage: "defaultnotris",
+            backgroundImage: "https://cdn2.unrealengine.com/winterfest2023-lobby-2048x1024-a8853c3a6f59.jpg"
+        },
+        "28.20": {
+            stage: "defaultnotris",
+            backgroundImage: "https://cdn2.unrealengine.com/s28-tmnt-lobby-4096x2048-e6c06a310c05.jpg"
+        },
+        "29.20": {
+            stage: "season2920",
+            backgroundImage: "https://cdn2.unrealengine.com/iceberg-lobby-3840x2160-217bb6ea8af9.jpg"
+        },
+        "29.40": {
+            stage: "defaultnotris",
+            backgroundImage: "https://cdn2.unrealengine.com/mkart-2940-sw-fnbr-lobby-3840x2160-4f1f1486a54a.jpg"
+        },
+        "30.20": {
+            stage: "season3020",
+            backgroundImage: "https://cdn2.unrealengine.com/mkart-c5s3-msee-lobby-bg-2560x1440-9c8aa7721e41.jpg"
+        },
+        "30.30": {
+            stage: "season3020",
+            backgroundImage: "https://cdn2.unrealengine.com/mkart-c5s3-msee-lobby-bg-2560x1440-9c8aa7721e41.jpg"
+        },
+        "30.40": {
+            stage: "season3030",
+            backgroundImage: "https://cdn2.unrealengine.com/ch5s3-lobby-3030-4096x2048-eecf04243faa.jpg"
+        },
+        "31.40": {
+            stage: "season3140",
+            backgroundImage: "https://cdn2.unrealengine.com/mkart-fnbr-fortnitemares2024-lobby-final-4096x2048-d17d51ae76a0.jpg"
+        },
+        "31.41": {
+            stage: "season3140",
+            backgroundImage: "https://cdn2.unrealengine.com/mkart-fnbr-fortnitemares2024-lobby-final-4096x2048-d17d51ae76a0.jpg"
+        },
+        "32.11": {
+            stage: "defaultnotris",
+            backgroundImage: "https://cdn2.unrealengine.com/mkart-fnbr-quail-lobby-3264x1836-b157b2252db6.jpg"
+        },
+        "37.10": {
+            stage: "defaultnotris",
+            backgroundImage: s37backgroundImages[Math.floor(Math.random() * s37backgroundImages.length)]
+        },
+        "37.20": {
+            stage: "defaultnotris",
+            backgroundImage: s37backgroundImages[Math.floor(Math.random() * s37backgroundImages.length)]
+        },
+        "37.30": {
+            stage: "season3730",
+            backgroundImage: "https://cdn2.unrealengine.com/megazord-midseason-lobby-bg-4096x2048-87c393fad772.jpg"
+        },
+        "37.40": {
+            stage: "season3730",
+            backgroundImage: "https://cdn2.unrealengine.com/megazord-midseason-lobby-bg-4096x2048-87c393fad772.jpg"
+        },
+        "37.50": {
+            stage: "season3750",
+            backgroundImage: "https://cdn2.unrealengine.com/mkart-fnbr-fortnitemares-37-50-lobbybg-final-4096x2048-92c002d8d677.jpg"
+        },
+        "37.51": {
+            stage: "season3750",
+            backgroundImage: "https://cdn2.unrealengine.com/mkart-fnbr-fortnitemares-37-50-lobbybg-final-4096x2048-92c002d8d677.jpg"
+        },
+        "38.11": {
+            stage: "defaultnotris",
+            backgroundImage: "https://cdn2.unrealengine.com/mkart-c6ee-lobbybg-demon-3840x1920-ed1afc7e3dfc.jpg"
+        },
+        "39.11": {
+            stage: "season3911",
+            backgroundImage: "https://cdn2.unrealengine.com/mkart-fnbr-winterfest-39-11-lobbybg-final-4k-2560x1280-3f2aa2d84a17.jpg"
+        },
+        "39.20": {
+            stage: "season3920",
+            backgroundImage: "https://cdn2.unrealengine.com/mkart-safflower-lobby-bg-final-4096x2048-9c7abd20d655.jpg"
+        },
     });
 
     const versionGlobalBackgrounds = Object.create({
@@ -777,28 +897,82 @@ const Backgrounds = (version, versionGlobal, backgrounds, content) => {
         14: { stage: "season14" },
         15: { stage: "season15" },
         16: { stage: "season16" },
-        17: { stages: s17backgroundStages[Math.floor(Math.random() * s17backgroundStages.length)]},
+        17: { stages: s17backgroundStages[Math.floor(Math.random() * s17backgroundStages.length)] },
         18: { stage: "season18" },
         19: { stage: "season19" },
-        20: { stage: "season20", backgroundImage: "https://cdn2.unrealengine.com/s20-landscapev4-2048x1024-2494a103ae6c.png" },
-        21: { stage: "season2100", backgroundImage: "https://cdn2.unrealengine.com/s21-lobby-background-2048x1024-2e7112b25dc3.jpg" },
-        22: { stage: "season2200", backgroundImage: "https://cdn2.unrealengine.com/t-bp22-lobby-square-2048x2048-2048x2048-e4e90c6e8018.jpg" },
-        23: { stage: "season2300", backgroundImage: "https://cdn2.unrealengine.com/t-bp23-lobby-2048x1024-2048x1024-26f2c1b27f63.png" },
-        24: { stage: "defaultnotris", backgroundImage: "https://cdn2.unrealengine.com/t-ch4s2-bp-lobby-4096x2048-edde08d15f7e.jpg" },
-        25: { stage: "season2500", backgroundImage: "https://cdn2.unrealengine.com/s25-lobby-4k-4096x2048-4a832928e11f.jpg" },
-        26: { stage: "season2600", backgroundImage: "https://cdn2.unrealengine.com/0814-ch4s4-lobby-2048x1024-2048x1024-e3c2cf8d342d.png" },
+        20: {
+            stage: "season20",
+            backgroundImage: "https://cdn2.unrealengine.com/s20-landscapev4-2048x1024-2494a103ae6c.png"
+        },
+        21: {
+            stage: "season2100",
+            backgroundImage: "https://cdn2.unrealengine.com/s21-lobby-background-2048x1024-2e7112b25dc3.jpg"
+        },
+        22: {
+            stage: "season2200",
+            backgroundImage: "https://cdn2.unrealengine.com/t-bp22-lobby-square-2048x2048-2048x2048-e4e90c6e8018.jpg"
+        },
+        23: {
+            stage: "season2300",
+            backgroundImage: "https://cdn2.unrealengine.com/t-bp23-lobby-2048x1024-2048x1024-26f2c1b27f63.png"
+        },
+        24: {
+            stage: "defaultnotris",
+            backgroundImage: "https://cdn2.unrealengine.com/t-ch4s2-bp-lobby-4096x2048-edde08d15f7e.jpg"
+        },
+        25: {
+            stage: "season2500",
+            backgroundImage: "https://cdn2.unrealengine.com/s25-lobby-4k-4096x2048-4a832928e11f.jpg"
+        },
+        26: {
+            stage: "season2600",
+            backgroundImage: "https://cdn2.unrealengine.com/0814-ch4s4-lobby-2048x1024-2048x1024-e3c2cf8d342d.png"
+        },
         27: { stage: "rufus" },
-        28: { stage: "defaultnotris", backgroundImage: "https://cdn2.unrealengine.com/ch5s1-lobbybg-3640x2048-0974e0c3333c.jpg" },
-        29: { stage: "defaultnotris", backgroundImage: "https://cdn2.unrealengine.com/br-lobby-ch5s2-4096x2304-a0879ccdaafc.jpg" },
-        30: { stage: "season3000", backgroundImage: "https://cdn2.unrealengine.com/lobby-br-c5s3-4096x2048-7a9c78cb7b9a.jpg" },
-        31: { stage: "season3100", backgroundImage: "https://cdn2.unrealengine.com/ch5s4-lobbybg-final-2136x1202-e5885322faf1.jpg" },
-        32: { stage: "defaultnotris", backgroundImage: "https://cdn2.unrealengine.com/mkart-fnbr-32-00-lobby-3840x2160-f18b699506a4.jpg" },
-        33: { stage: "season3300", backgroundImage: "https://cdn2.unrealengine.com/ch6s1-lobby-2048x1024-218a4754f2a0.jpg" },
-        34: { stage: "season3400", backgroundImage: "https://cdn2.unrealengine.com/mkart-fnbr-ch6s2-34-00-lobby-2048x1024-16b9f3791e2a.jpg" },
-        35: { stage: "season3500", backgroundImage: "https://cdn2.unrealengine.com/ch6ms1-lobby-bg-plate-jpeg-2048x1024-e4f1f3252405.jpg" },
-        36: { stage: "season3600", backgroundImage: "https://cdn2.unrealengine.com/mkart-fnbr-ch6s3-lobbybg-final-4096x2048-340e7bf8bb02.jpg" },
-        37: { stage: "season3700", backgroundImage: "https://cdn2.unrealengine.com/mkart-ch6s4-lobby-bg-4096x2048-d73f821bb40c.jpg" },
-        38: { stage: "season3800", backgroundImage: "https://cdn2.unrealengine.com/mkart-ch6ms2-lobbybg-plate-4098x2048-c51669ab5daa.jpg" },
+        28: {
+            stage: "defaultnotris",
+            backgroundImage: "https://cdn2.unrealengine.com/ch5s1-lobbybg-3640x2048-0974e0c3333c.jpg"
+        },
+        29: {
+            stage: "defaultnotris",
+            backgroundImage: "https://cdn2.unrealengine.com/br-lobby-ch5s2-4096x2304-a0879ccdaafc.jpg"
+        },
+        30: {
+            stage: "season3000",
+            backgroundImage: "https://cdn2.unrealengine.com/lobby-br-c5s3-4096x2048-7a9c78cb7b9a.jpg"
+        },
+        31: {
+            stage: "season3100",
+            backgroundImage: "https://cdn2.unrealengine.com/ch5s4-lobbybg-final-2136x1202-e5885322faf1.jpg"
+        },
+        32: {
+            stage: "defaultnotris",
+            backgroundImage: "https://cdn2.unrealengine.com/mkart-fnbr-32-00-lobby-3840x2160-f18b699506a4.jpg"
+        },
+        33: {
+            stage: "season3300",
+            backgroundImage: "https://cdn2.unrealengine.com/ch6s1-lobby-2048x1024-218a4754f2a0.jpg"
+        },
+        34: {
+            stage: "season3400",
+            backgroundImage: "https://cdn2.unrealengine.com/mkart-fnbr-ch6s2-34-00-lobby-2048x1024-16b9f3791e2a.jpg"
+        },
+        35: {
+            stage: "season3500",
+            backgroundImage: "https://cdn2.unrealengine.com/ch6ms1-lobby-bg-plate-jpeg-2048x1024-e4f1f3252405.jpg"
+        },
+        36: {
+            stage: "season3600",
+            backgroundImage: "https://cdn2.unrealengine.com/mkart-fnbr-ch6s3-lobbybg-final-4096x2048-340e7bf8bb02.jpg"
+        },
+        37: {
+            stage: "season3700",
+            backgroundImage: "https://cdn2.unrealengine.com/mkart-ch6s4-lobby-bg-4096x2048-d73f821bb40c.jpg"
+        },
+        38: {
+            stage: "season3800",
+            backgroundImage: "https://cdn2.unrealengine.com/mkart-ch6ms2-lobbybg-plate-4098x2048-c51669ab5daa.jpg"
+        },
     });
     const versionBackground = versionBackgrounds[version] ?? versionGlobalBackgrounds[versionGlobal];
 
