@@ -371,11 +371,9 @@ module.exports = {
 				getOrCreateProfile(`${profileId}`);
 				if (profileId === "athena") {
 					stats(accountId, athenprofile, config, versionGlobal);
-					if (versionGlobal >= 33) { seasonPass(accountId, athenprofile, version, versionGlobal); }
 					winterFest(accountId, athenprofile);
-					for (const [questId, quest] of Object.entries(miniPassData)) {
-						Profile.addItem(athenprofile, questId, quest);
-					}
+					if (versionGlobal >= 33) { seasonPass(accountId, athenprofile, version, versionGlobal); }
+					for (const [questId, quest] of Object.entries(miniPassData)) {Profile.addItem(athenprofile, questId, quest)}
 					if (version >= 28.00) { MPLockerLoadout(accountId, athenprofile); }
 					if (version <= 10.40 || VersionFilter.includes(versionGlobal)) { CH1Fix(accountId, athenprofile); }
 					Profile.bumpRvn(athenprofile);

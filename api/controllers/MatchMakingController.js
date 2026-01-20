@@ -99,14 +99,6 @@ module.exports = {
 		});
     },
 
-    matchmakingSessionJoin: function(req, res){
-        res.status(204).end()
-    },
-
-    waitingRoom: function(req, res){
-        res.status(204).end();
-    },
-
 	findPlayer: function(req, res){
 		res.json([])
 	},

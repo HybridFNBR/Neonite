@@ -1,8 +1,11 @@
 module.exports.routes = {
     'POST /account/api/oauth/token': 'AuthController.oauthToken',
     'GET /account/api/oauth/verify': 'AuthController.verifyToken',
-    'DELETE /account/api/oauth/sessions/kill': 'AuthController.killToken',
-    'DELETE /account/api/oauth/sessions/kill/:token': 'AuthController.killToken',
+    'DELETE /account/api/oauth/sessions/*':{ 
+        action: 'noContent',
+        controller:'ApiController', 
+        skipAssets: false 
+    },
     'GET /account/api/public/account/:accountId':{
         action: "accountInfo",
         controller:'AuthController', 

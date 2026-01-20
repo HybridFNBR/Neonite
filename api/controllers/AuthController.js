@@ -12,6 +12,16 @@ const {account} = require("../../config/defs")
 module.exports = {
     oauthToken: function(req, res){	
 		switch (req.body.grant_type) {
+			case "client_credentials":
+				account.displayName = undefined;
+				account.accountId = undefined;
+				break;
+
+			case "refresh_token":
+				account.displayName = undefined;
+				account.accountId = undefined;
+				break;
+
 			case "password":
 				if (!req.body.username) {
 					throw new ApiException(errors.com.epicgames.common.oauth.invalid_request).with("username")
@@ -21,16 +31,37 @@ module.exports = {
 				} else {
 					account.displayName = req.body.username;
 				}
-            	account.accountId = account.displayName.replace(/ /g, "_");
-			break;
+
+				account.accountId = account.displayName.replace(/ /g, "_");
+				break;
+
+			case "authorization_code":
+				if (!req.body.code) {
+					throw new ApiException(errors.com.epicgames.common.oauth.invalid_request).with("code")
+				}
+				account.displayName = req.body.code;
+				account.accountId = req.body.code;
+
+				break;
+
+			case "device_auth":
+				if (!req.body.account_id) {
+					throw new ApiException(errors.com.epicgames.common.oauth.invalid_request).with("account_id")
+				}
+				account.displayName = req.body.account_id;
+				account.accountId = req.body.account_id;
+				break;
+
 			case "exchange_code":
 				if (!req.body.exchange_code) {
 					throw new ApiException(errors.com.epicgames.common.oauth.invalid_request).with("exchange_code")
 				}
-
 				account.displayName = req.body.exchange_code;
 				account.accountId = req.body.exchange_code;
-            break;
+				break;
+				
+			default:
+				throw new ApiException(errors.com.epicgames.common.oauth.unsupported_grant_type).with(req.body.grant_type)
         }
 		
 		if(config.bEnableOverride === true){
@@ -119,10 +150,6 @@ module.exports = {
 			"auth_time": "1999-01-12T00:20:15.542Z"
 		})
 	},
-
-    killToken: function(req, res){
-        res.status(204).end();
-    },
 
     accountInfo: function(req, res){
         res.json({

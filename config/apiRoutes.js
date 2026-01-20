@@ -22,26 +22,26 @@ module.exports.routes = {
     'POST /api/v1/assets/Fortnite/:version/:netcl': 'ApiController.FrontendAssets',
     'GET /fortnite/api/storefront/v2/catalog': 'ApiController.catalog',
     'GET /catalog/api/shared/bulk/offers': 'ApiController.catalogBulk',
-    'POST /fortnite/api/game/v2/grant_access/:accountId': 'ApiController.grantAccess',
+    'POST /fortnite/api/game/v2/grant_access/:accountId': 'ApiController.noContent',
     'GET /fortnite/api/game/v2/enabled_features': 'ApiController.enabledFeatures',
     'POST */datarouter/api/v1/public/*': {
-        action: "dataRouter",
+        action: "noContent",
         controller: 'ApiController',
         skipAssets: false
     },
-    'GET /presence/api/v1/_/:accountId/settings/subscriptions': 'ApiController.presence',
+    'GET /presence/api/v1/_/:accountId/settings/subscriptions': 'ApiController.noContent',
     'GET /socialban/api/public/v1/:accountId': {
         action: "socialban",
         controller: 'ApiController',
         skipAssets: false
     },
     'GET /eulatracking/api/public/agreements/*': {
-        action: "eula",
+        action: "noContent",
         controller: 'ApiController',
         skipAssets: false
     },
     'GET /eulatracking/api/shared/agreements/*': {
-        action: "eula",
+        action: "noContent",
         controller: 'ApiController',
         skipAssets: false
     },
@@ -52,11 +52,11 @@ module.exports.routes = {
     },
     'GET /affiliate/api/public/affiliates/slug/:affiliateName': 'ApiController.sac',
     'GET /content-controls/:accountId': 'ApiController.contentControls',
-    'GET /content-controls/:accountId/rules/namespaces/fn': 'ApiController.contentControlsRules',
+    'GET /content-controls/:accountId/rules/namespaces/fn': 'ApiController.noContent',
     'POST /content-controls/:accountId/verify-pin': 'ApiController.verifyPin',
-    'GET /api/v2/interactions/aggregated/Fortnite/:accountId': 'ApiController.interactionsAggregated',
+    'GET /api/v2/interactions/aggregated/Fortnite/:accountId': 'ApiController.noContent',
     'POST /fortnite/api/game/v2/profileToken/verify/*': {
-        action: "profileToken", 
+        action: "noContent", 
         controller: 'ApiController', 
         skipAssets: false 
     },
@@ -67,7 +67,7 @@ module.exports.routes = {
     'GET /fortnite/api/storefront/v2/keychain': 'ApiController.keychain',
     'GET /fortnite/api/game/v2/world/info': 'ApiController.worldInfo',
     'POST /region/check': 'ApiController.regionCheck',
-    'PUT /profile/play_region': 'ApiController.playRegion',
+    'PUT /profile/play_region': 'ApiController.noContent',
     'GET /salesEvent/salesEvent/*': {
         action: "salesEvent",
         controller: 'ApiController',
@@ -118,17 +118,17 @@ module.exports.routes = {
     },
     'GET /region': 'ApiController.region',
     'GET /fortnite/api/game/v2/br-inventory/account/:accountId': 'ApiController.brInventory',
-    'GET /fortnite/api/storeaccess/v1/request_access/:accountId': 'ApiController.storeAccess',
+    'GET /fortnite/api/storeaccess/v1/request_access/:accountId': 'ApiController.noContent',
     'GET /api/v1/lfg/Fortnite/users/:accountId/settings': 'ApiController.lfgSettings',
     'GET /followers/api/v1/FortniteLive/:accountId/*': {
         action: "followers",
         controller: 'ApiController',
         skipAssets: false
     },
-    'GET /api/content/v2/launch-data': 'ApiController.launchData',
+    'GET /api/content/v2/launch-data': 'ApiController.noContent',
     'POST /api/v1/user/setting': 'ApiController.userSetting',
     'OPTIONS /v1/epic-settings/public/users/:accountId/*': {
-        action: "epicSettings204",
+        action: "noContent",
         controller: 'ApiController',
         skipAssets: false
     },
@@ -142,7 +142,7 @@ module.exports.routes = {
         controller: 'ApiController',
         skipAssets: false
     },
-    'PUT /profile/languages': 'ApiController.languages',
+    'PUT /profile/languages': 'ApiController.okStatus',
     'GET /:resourceId/master.blurl': 'ApiController.blurl',
     'GET /app_installation/status': 'ApiController.postPartyInstallStatus',
     'GET /content/api/pages/fortnite-game/spark-tracks': 'ApiController.sparks',
@@ -224,18 +224,18 @@ module.exports.routes = {
     },
     'GET /api/v1/games/fortnite/tracks/activeBy/*': { 
         controller: 'ApiController', 
-        action: 'habaneroTrackSchedule', 
+        action: 'noContent', 
         skipAssets: false 
     },
     'GET /api/v1/games/fortnite/trackprogress/*': {
         controller: 'ApiController',
-        action: 'habaneroTrackProgress',
+        action: 'noContent',
         skipAssets: false
     },
-    'GET /api/v1/games/fortnite/tracks/query*': 'ApiController.habaneroTracks',
+    'GET /api/v1/games/fortnite/tracks/query*': 'ApiController.noContent',
     'GET /api/v1/public/accounts': 'ApiController.publicAccounts',
-    'POST /api/v1/fortnite-br/interactions': 'ApiController.motdInteractions',
-    'POST /api/v1/fortnite-br/channel/interstitials/target': 'ApiController.interstitialsTarget',
+    'POST /api/v1/fortnite-br/interactions': 'ApiController.okStatus',
+    'POST /api/v1/fortnite-br/channel/interstitials/target': 'ApiController.noContent',
     'GET /api/v1/players/Fortnite/tokens': 'ApiController.playerTokens',
-    'GET /api/community/v1/fn-client/community-highlights': 'ApiController.communityHighlights'
+    'GET /api/community/v1/fn-client/community-highlights': 'ApiController.noContent'
 };
