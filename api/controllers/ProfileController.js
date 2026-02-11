@@ -375,7 +375,7 @@ module.exports = {
 					if (versionGlobal >= 33) { seasonPass(accountId, athenprofile, version, versionGlobal); }
 					for (const [questId, quest] of Object.entries(miniPassData)) {Profile.addItem(athenprofile, questId, quest)}
 					if (version >= 28.00) { MPLockerLoadout(accountId, athenprofile); }
-					if (VersionFilter.includes(versionGlobal)) { CH1Fix(accountId, athenprofile); }
+					if (version <= 10.40 || VersionFilter.includes(versionGlobal)) { CH1Fix(accountId, athenprofile); }
 					Profile.bumpRvn(athenprofile);
 					Profile.saveProfile(accountId, "athena", athenprofile);
 				}
