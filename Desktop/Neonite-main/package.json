@@ -1,0 +1,27 @@
+{
+  "name": "neonite",
+  "version": "1.6.5",
+  "description": "A Fortnite Private Server",
+  "main": "app.js",
+  "scripts": {
+    "start": "NODE_ENV=production node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HybridFNBR/Neonite.git"
+  },
+  "author": "kemo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HybridFNBR/Neonite/issues"
+  },
+  "homepage": "https://github.com/HybridFNBR/Neonite#readme",
+  "dependencies": {
+    "axios": "^1.12.0",
+    "ini": "^5.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "path": "^0.12.7",
+    "sails": "^1.5.14",
+    "uuid": "^11.1.0"
+  }
+}

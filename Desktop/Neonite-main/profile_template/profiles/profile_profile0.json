@@ -1,0 +1,97 @@
+{
+  "_id": "",
+  "Update": "profile by tim",
+  "created": "2022-01-08T22:58:06.983Z",
+  "updated": "2022-01-08T22:58:57.261Z",
+  "rvn": 24,
+  "wipeNumber": 1,
+  "accountId": "",
+  "profileId": "profile0",
+  "version": "neonite_2",
+  "items": {},
+  "stats": {
+    "templateId": "",
+    "attributes": {
+      "node_costs": {},
+      "mission_alert_redemption_record": {
+        "lastClaimTimesMap": {
+          "General": {
+            "missionAlertGUIDs": [],
+            "lastClaimedTimes": []
+          },
+          "StormLow": {
+            "missionAlertGUIDs": [],
+            "lastClaimedTimes": []
+          },
+          "Halloween": {
+            "missionAlertGUIDs": [],
+            "lastClaimedTimes": []
+          },
+          "Horde": {
+            "missionAlertGUIDs": [],
+            "lastClaimedTimes": []
+          },
+          "Storm": {
+            "missionAlertGUIDs": [],
+            "lastClaimedTimes": []
+          }
+        },
+        "oldestClaimIndexForCategory": []
+      },
+      "twitch": {},
+      "client_settings": {
+        "pinnedQuestInstances": []
+      },
+      "level": 1,
+      "named_counters": {
+        "SubGameSelectCount_Campaign": {
+          "current_count": 1,
+          "last_incremented_time": ""
+        },
+        "SubGameSelectCount_Athena": {
+          "current_count": 0,
+          "last_incremented_time": "2022-01-08T22:58:06.983Z"
+        }
+      },
+      "default_hero_squad_id": "",
+      "collection_book": {
+        "pages": [],
+        "maxBookXpLevelAchieved": 0
+      },
+      "quest_manager": {
+        "dailyLoginInterval": "",
+        "dailyQuestRerolls": 0
+      },
+      "bans": {},
+      "gameplay_stats": [],
+      "inventory_limit_bonus": 1,
+      "current_mtx_platform": "Epic",
+      "weekly_purchases": {},
+      "daily_purchases": {},
+      "mode_loadouts": [],
+      "in_app_purchases": {},
+      "daily_rewards": {
+        "nextDefaultReward": 0,
+        "totalDaysLoggedIn": 0,
+        "lastClaimDate": "2022-01-08T22:58:06.983Z",
+        "additionalSchedules": {
+          "founderspackdailyrewardtoken": {
+            "rewardsClaimed": 0,
+            "claimedToday": true
+          }
+        }
+      },
+      "monthly_purchases": {},
+      "xp": 0,
+      "homebase": {
+        "townName": "",
+        "bannerIconId": "",
+        "bannerColorId": "",
+        "flagPattern": 0,
+        "flagColor": 0
+      },
+      "packs_granted": 0
+    }
+  },
+  "commandRevision": 3
+}
