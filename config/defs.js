@@ -888,6 +888,14 @@ const Backgrounds = (version, versionGlobal, backgrounds, content) => {
             stage: "season3920",
             backgroundImage: "https://cdn2.unrealengine.com/mkart-safflower-lobby-bg-final-4096x2048-9c7abd20d655.jpg"
         },
+        "39.30": {
+            stage: "defaultnotris",
+            backgroundImage: "https://cdn2.unrealengine.com/mkart-safflower-lobby-bg-final-4096x2048-9c7abd20d655.jpg"
+        },
+        "39.40": {
+            stage: "season3940",
+            backgroundImage: "https://cdn2.unrealengine.com/mkart-ch7s1-lobby-stage04-final-4k-v3-4096x2048-3cd8f01c1dc9.jpg"
+        },
     });
 
     const versionGlobalBackgrounds = Object.create({
