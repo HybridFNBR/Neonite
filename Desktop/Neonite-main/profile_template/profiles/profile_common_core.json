@@ -1,0 +1,26 @@
+{
+  "_id": "",
+  "created": "",
+  "updated": "",
+  "rvn": 1,
+  "wipeNumber": 1,
+  "accountId": "",
+  "profileId": "common_core",
+  "version": "neonite_2",
+  "items": {
+    "Currency:MtxPurchased": {
+      "attributes": {
+        "platform": "EpicPC"
+      },
+      "quantity": 0,
+      "templateId": "Currency:MtxPurchased"
+    }
+  },
+  "stats": {
+    "attributes": {
+      "mtx_affiliate": "Neonite",
+      "current_mtx_platform": "EpicPC",
+      "mtx_purchase_history": {}
+    }
+  }
+}

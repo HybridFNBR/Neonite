@@ -1,0 +1,254 @@
+{
+    "activeLoadoutGroup": {
+      "accountId": "",
+      "deploymentId": "62a9473a2dca46b29ccf17577fcf42d7",
+      "athenaItemId": "0386beaa-f3ff-4a5e-9ba5-1cb005a7b2e1",
+      "creationTime": "2024-11-02T07:00:34.827224850Z",
+      "updatedTime": "2024-11-02T07:03:42.790654805Z",
+      "loadouts": {
+        "CosmeticLoadout:LoadoutSchema_Emotes": {
+          "loadoutSlots": [
+            {
+              "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Emote_0",
+              "equippedItemId":"",
+              "itemCustomizations": []
+            },
+            {
+              "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Emote_1",
+              "equippedItemId":"",
+              "itemCustomizations": []
+            },
+            {
+              "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Emote_2",
+              "equippedItemId":"",
+              "itemCustomizations": []
+            },
+            {
+              "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Emote_3",
+              "equippedItemId":"",
+              "itemCustomizations": []
+            },
+            {
+              "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Emote_4",
+              "equippedItemId":"",
+              "itemCustomizations": []
+            },
+            {
+              "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Emote_5",
+              "equippedItemId":"",
+              "itemCustomizations": []
+            }
+          ],
+          "shuffleType": "DISABLED"
+        },
+        "CosmeticLoadout:LoadoutSchema_Platform": {
+          "loadoutSlots": [
+            {
+              "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Banner_Icon",
+              "equippedItemId":"",
+              "itemCustomizations": []
+            },
+            {
+              "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Banner_Color",
+              "equippedItemId":"",
+              "itemCustomizations": []
+            },
+            {
+              "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_LobbyMusic",
+              "equippedItemId":"",
+              "itemCustomizations": []
+            },
+            {
+              "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_LoadingScreen",
+              "equippedItemId":"",
+              "itemCustomizations": []
+            }
+          ],
+          "shuffleType": "DISABLED"
+        },
+        "CosmeticLoadout:LoadoutSchema_Sparks": {
+          "loadoutSlots": [
+            {
+              "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Bass",
+              "equippedItemId":"",
+              "itemCustomizations": []
+            },
+            {
+              "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Guitar",
+              "equippedItemId":"",
+              "itemCustomizations": []
+            },
+            {
+              "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Drum",
+              "equippedItemId":"",
+              "itemCustomizations": []
+            },
+            {
+              "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Keyboard",
+              "equippedItemId":"",
+              "itemCustomizations": []
+            },
+            {
+              "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Microphone",
+              "equippedItemId":"",
+              "itemCustomizations": []
+            }
+          ],
+          "shuffleType": "DISABLED"
+        },
+        "CosmeticLoadout:LoadoutSchema_Wraps": {
+          "loadoutSlots": [
+            {
+              "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Wrap_0",
+              "equippedItemId":"",
+              "itemCustomizations": []
+            },
+            {
+              "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Wrap_1",
+              "equippedItemId":"",
+              "itemCustomizations": []
+            },
+            {
+              "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Wrap_2",
+              "equippedItemId":"",
+              "itemCustomizations": []
+            },
+            {
+              "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Wrap_3",
+              "equippedItemId":"",
+              "itemCustomizations": []
+            },
+            {
+              "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Wrap_4",
+              "equippedItemId":"",
+              "itemCustomizations": []
+            },
+            {
+              "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Wrap_5",
+              "equippedItemId":"",
+              "itemCustomizations": []
+            },
+            {
+              "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Wrap_6",
+              "equippedItemId":"",
+              "itemCustomizations": []
+            }
+          ],
+          "shuffleType": "DISABLED"
+        },
+        "CosmeticLoadout:LoadoutSchema_Jam": {
+          "loadoutSlots": [
+            {
+              "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_JamSong0",
+              "equippedItemId":"",
+              "itemCustomizations": []
+            },
+            {
+              "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_JamSong1",
+              "equippedItemId":"",
+              "itemCustomizations": []
+            },
+            {
+              "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_JamSong2",
+              "equippedItemId":"",
+              "itemCustomizations": []
+            },
+            {
+              "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_JamSong3",
+              "equippedItemId":"",
+              "itemCustomizations": []
+            },
+            {
+              "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_JamSong4",
+              "equippedItemId":"",
+              "itemCustomizations": []
+            },
+            {
+              "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_JamSong5",
+              "equippedItemId":"",
+              "itemCustomizations": []
+            },
+            {
+              "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_JamSong6",
+              "equippedItemId":"",
+              "itemCustomizations": []
+            },
+            {
+              "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_JamSong7",
+              "equippedItemId":"",
+              "itemCustomizations": []
+            }
+          ],
+          "shuffleType": "DISABLED"
+        },
+        "CosmeticLoadout:LoadoutSchema_Vehicle": {
+          "loadoutSlots": [
+            {
+              "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Vehicle_Body",
+              "equippedItemId":"",
+              "itemCustomizations": []
+            },
+            {
+              "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Vehicle_Booster",
+              "equippedItemId":"",
+              "itemCustomizations": []
+            },
+            {
+              "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Vehicle_DriftSmoke",
+              "equippedItemId":"",
+              "itemCustomizations": []
+            },
+            {
+              "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Vehicle_Wheel",
+              "equippedItemId":"",
+              "itemCustomizations": []
+            },
+            {
+              "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Vehicle_Skin",
+              "equippedItemId":"",
+              "itemCustomizations": []
+            }
+          ],
+          "shuffleType": "DISABLED"
+        },
+        "CosmeticLoadout:LoadoutSchema_Character": {
+          "loadoutSlots": [
+            {
+              "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Character",
+              "equippedItemId":"",
+              "itemCustomizations": []
+            },
+            {
+              "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Backpack",
+              "equippedItemId":"",
+              "itemCustomizations": []
+            },
+            {
+              "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Pickaxe",
+              "equippedItemId":"",
+              "itemCustomizations": []
+            },
+            {
+              "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Glider",
+              "equippedItemId":"",
+              "itemCustomizations": []
+            },
+            {
+              "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Contrails",
+              "equippedItemId":"",
+              "itemCustomizations": []
+            },
+            {
+              "slotTemplate": "CosmeticLoadoutSlotTemplate:LoadoutSlot_Aura",
+              "equippedItemId":"",
+              "itemCustomizations": []
+            }
+          ],
+          "shuffleType": "DISABLED"
+        }
+      },
+      "shuffleType": "DISABLED"
+    },
+    "loadoutGroupPresets": [],
+    "loadoutPresets": []
+  }
