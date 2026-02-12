@@ -6,11 +6,12 @@ const ini = require('ini')
 const fs = require('fs')
 const path = require("path");
 const config = ini.parse(fs.readFileSync(path.join(__dirname, '../../config.ini'), 'utf-8'));
-const {account} = require("../../config/defs")
-
+const {account, getClientCredentials, getVersionInfo} = require("../../config/defs");
 
 module.exports = {
-    oauthToken: function(req, res){	
+    oauthToken: async function(req, res){	
+		const { versionGlobal } = getVersionInfo(req);	  
+		const clientCredentials = await getClientCredentials();
 		switch (req.body.grant_type) {
 			case "client_credentials":
 				account.displayName = undefined;
@@ -68,7 +69,6 @@ module.exports = {
 			account.displayName = config.username
 			account.accountId = config.username
 		}
-
         let token = jsonwebtoken.sign({
 			"app": "prod-fn",
 			"sub": account.accountId,
@@ -89,9 +89,13 @@ module.exports = {
 			"exp": 2147483647,
 			"iat": 1725882476,
 			"jti": "132fac2cc9c94fa08fdc3e65fef24f07"
-		  },"RS256", {keyid:""})		  
+		  },"RS256", {keyid:""})
+		if(versionGlobal >= 28){
+			account.token = clientCredentials.access_token
+		}
+		else{account.token = token }
 		res.json({
-			"access_token": `eg1~${token}`,
+			"access_token": account.token,
 			"expires_in": 2147483647,
 			"expires_at": "9999-12-31T23:59:59.999Z",
 			"token_type": "bearer",
@@ -121,6 +125,7 @@ module.exports = {
     verifyToken: function(req, res){
         const JWT = req.headers.authorization.replace("bearer eg1~", "").replace("Bearer eg1~", "")
 		const JWTdecode = jsonwebtoken.decode(JWT)
+		if(account.token == ""){return res.status(401).end()}
 		res.json({
 			"token": req.headers.authorization,
 			"session_id": `${crypto.randomBytes(32).toString("hex")}`,

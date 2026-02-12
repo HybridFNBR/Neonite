@@ -3,7 +3,7 @@ const { default: axios } = require("axios");
 const fs = require('fs')
 const jsonwebtoken = require('jsonwebtoken');
 const ini = require('ini')
-const { getVersionInfo, loadJSON, VersionFilter } = require("../../config/defs");
+const { getVersionInfo, loadJSON, VersionFilter, account } = require("../../config/defs");
 const config = ini.parse(fs.readFileSync(path.join(__dirname, '../../config.ini'), 'utf-8'));
 let requested = false
 const fortnitegame = loadJSON("../responses/fortnitegame.json")
@@ -512,20 +512,9 @@ module.exports = {
 	},
 
 	trackData: async function (req, res) {
-		const auth = await axios.post('https://account-public-service-prod.ol.epicgames.com/account/api/oauth/token',
-			new URLSearchParams({
-				"grant_type": "client_credentials",
-				"token_type": "eg1"
-			}),
-			{
-				headers: {
-					'Content-Type': 'application/x-www-form-urlencoded',
-					'Authorization': 'basic ZWM2ODRiOGM2ODdmNDc5ZmFkZWEzY2IyYWQ4M2Y1YzY6ZTFmMzFjMjExZjI4NDEzMTg2MjYyZDM3YTEzZmM4NGQ=',
-				}
-			});
 		const trackData = (await axios.get(`https://cdn.qstv.on.epicgames.com/${req.params.trackdata}`, {
 			headers: {
-				"Authorization": `bearer ${auth.data.access_token}`
+				"Authorization": `bearer ${account.token}`
 			},
 		})).data;
 		return res.json(trackData)
