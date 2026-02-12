@@ -143,7 +143,8 @@ module.exports = {
 
 	user: async function (req, res) {
 		const accountId = req.params.accountId;
-		const cloudStoragePath = path.join(__dirname, `../../profile/${accountId}/cloudstorage`);
+		const {versionGlobal} = getVersionInfo(req);
+		const cloudStoragePath = path.join(__dirname, `../../profile/${accountId}/cloudstorage/S${versionGlobal}`);
 		if (!fs.existsSync(cloudStoragePath)) {
 			fs.mkdirSync(cloudStoragePath, { recursive: true });
 		}
@@ -177,9 +178,10 @@ module.exports = {
 	},
 
 	userFile: async function (req, res) {
+		const {versionGlobal} = getVersionInfo(req);
 		const accountId = req.params.accountId;
 		const fileName = req.params.fileName;
-		const filePath = path.join(__dirname, `../../profile/${accountId}/cloudstorage/${fileName}`);
+		const filePath = path.join(__dirname, `../../profile/${accountId}/cloudstorage/S${versionGlobal}/${fileName}`);
 
 		if (!fs.existsSync(filePath)) {
 			const errors = require('../../structs/errors');
@@ -196,9 +198,10 @@ module.exports = {
 	},
 
 	userPutFile: function (req, res) {
+		const {versionGlobal} = getVersionInfo(req);
 		const accountId = req.params.accountId;
 		const fileName = req.params.fileName;
-		const cloudStoragePath = path.join(__dirname, `../../profile/${accountId}/cloudstorage`);
+		const cloudStoragePath = path.join(__dirname, `../../profile/${accountId}/cloudstorage/S${versionGlobal}`);
 		const filePath = path.join(cloudStoragePath, fileName);
 		if (!fs.existsSync(cloudStoragePath)) {
 			fs.mkdirSync(cloudStoragePath, { recursive: true });

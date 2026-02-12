@@ -34,7 +34,7 @@ module.exports.http = {
           next();
         });
         req.on('error', (err) => {
-          console.error('[rawBodyParser] Error:', err);
+          NeoLog.Error('[rawBodyParser] Error:', err);
           next(err);
         });
       } else {
