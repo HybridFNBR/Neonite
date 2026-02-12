@@ -545,23 +545,25 @@ module.exports = {
 	},
 
 	trackSegment: async function (req, res) {
-		try {
-			const response = await axios.get(`https://pilgrim.qstv.on.epicgames.com${req.originalUrl}`, {
-				responseType: 'stream'
-			});
-			res.set({
-				'Content-Type': 'video/mp4'
-			});
-			response.data.pipe(res);
-		}
-		catch {
-			const response = await axios.get(`https://cdn-0001.qstv.on.epicgames.com${req.originalUrl}`, {
+		const trackSegmentUrls = [
+			'https://pilgrim.qstv.on.epicgames.com',
+			'https://cdn-0001.qstv.on.epicgames.com',
+			'https://fortnite-vod.akamaized.net'
+		];
+		for (const segmentUrlArray of trackSegmentUrls) {
+			const response = await axios.get(`${segmentUrlArray}${req.originalUrl}`, {
 				responseType: 'stream',
+				headers: {
+					Range: req.headers.range ?? 'bytes=0'
+				},
 			});
+
 			res.set({
-				'Content-Type': 'video/mp4',
-			});
-			response.data.pipe(res);
+				'Content-Type': response.headers['content-type'],
+				'Content-Range': response.headers['content-range'],
+				'Accept-Ranges': 'bytes'
+			})
+			return response.data.pipe(res)
 		}
 	},
 
