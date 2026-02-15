@@ -4,6 +4,7 @@ const fs = require('fs')
 const jsonwebtoken = require('jsonwebtoken');
 const ini = require('ini')
 const { getVersionInfo, loadJSON, VersionFilter, account } = require("../../config/defs");
+const NeoLog = require('../../structs/NeoLog');
 const config = ini.parse(fs.readFileSync(path.join(__dirname, '../../config.ini'), 'utf-8'));
 let requested = false
 const fortnitegame = loadJSON("../responses/fortnitegame.json")
@@ -514,7 +515,7 @@ module.exports = {
 	trackData: async function (req, res) {
 		const trackData = (await axios.get(`https://cdn.qstv.on.epicgames.com/${req.params.trackdata}`, {
 			headers: {
-				"Authorization": `bearer ${account.token}`
+				"Authorization": req.headers.authorization
 			},
 		})).data;
 		return res.json(trackData)
