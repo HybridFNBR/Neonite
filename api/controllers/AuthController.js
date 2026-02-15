@@ -125,7 +125,6 @@ module.exports = {
     verifyToken: function(req, res){
         const JWT = req.headers.authorization.replace("bearer eg1~", "").replace("Bearer eg1~", "")
 		const JWTdecode = jsonwebtoken.decode(JWT)
-		if(account.token == ""){return res.status(401).end()}
 		res.json({
 			"token": req.headers.authorization,
 			"session_id": `${crypto.randomBytes(32).toString("hex")}`,
