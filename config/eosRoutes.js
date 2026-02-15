@@ -16,7 +16,7 @@ module.exports.routes = {
     'PATCH /epic/presence/v1/:gameNsIg/:accountId/presence/:presenceUuid': 'EosController.presence',
     'GET /v2': 'EosController.wss',
     'POST /user/v9/product-users/search' : 'EosController.productUsersSearch',
-    'POST /telemetry/data/*':{ 
+    'POST /telemetry/data*':{ 
         action: "telemetry",
         controller:'EosController', 
         skipAssets: false
@@ -26,5 +26,10 @@ module.exports.routes = {
         action: "chatConversations",
         controller:'EosController', 
         skipAssets: false
-    }
+    },
+    'POST /datarouter/api/v1/public/data/clients':{
+        action: "datarouterClients",
+        controller:'EosController', 
+        skipAssets: false
+    },
 }

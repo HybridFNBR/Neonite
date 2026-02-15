@@ -24,7 +24,7 @@ module.exports.routes = {
     'GET /catalog/api/shared/bulk/offers': 'ApiController.catalogBulk',
     'POST /fortnite/api/game/v2/grant_access/:accountId': 'ApiController.noContent',
     'GET /fortnite/api/game/v2/enabled_features': 'ApiController.enabledFeatures',
-    'POST */datarouter/api/v1/public/*': {
+    'POST /datarouter/api/v1/public/data': {
         action: "noContent",
         controller: 'ApiController',
         skipAssets: false

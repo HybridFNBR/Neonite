@@ -2840,6 +2840,10 @@ module.exports = {
     res.json({})
   },
 
+  datarouterClients: function (req, res) {
+    res.json({})
+  },
+
   chatSummary: function (req, res) {
     res.json({
       "conversationCount": 0, 
