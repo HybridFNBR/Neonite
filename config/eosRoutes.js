@@ -12,11 +12,6 @@ module.exports.routes = {
         controller:'EosController', 
         skipAssets: false
     },
-    'GET /sdk/v1/product/*':{
-        action: "eossdkv1product",
-        controller:'EosController', 
-        skipAssets: false
-    },
     'GET /epic/friends/v1/:accountId/blocklist': 'EosController.blocklist',
     'PATCH /epic/presence/v1/:gameNsIg/:accountId/presence/:presenceUuid': 'EosController.presence',
     'GET /v2': 'EosController.wss',
