@@ -306,7 +306,7 @@ const stats = (accountId, athenprofile, config, versionGlobal) => {
         athenprofile.stats["attributes"]["favorite_character"] = "AthenaCharacter:CID_001_Athena_Commando_F_Default"
     }
     if (parseInt(config.Level) > 1) {
-        Profile.modifyStat(athenprofile, "book_level", parseInt(config.Level))
+        Profile.modifyStat(athenprofile, "book_level", parseInt(config.Level)) //removed as of 39.50
         Profile.modifyStat(athenprofile, "level", parseInt(config.Level))
         Profile.modifyStat(athenprofile, "accountLevel", parseInt(config.Level))
     }
