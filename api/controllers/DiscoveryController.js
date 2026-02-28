@@ -139,15 +139,6 @@ module.exports = {
 									"lockStatusReason": "NONE",
 									"isVisible": true
 								},
-								{
-									"lastVisited": null,
-									"linkCode": "playlist_playgroundv2",
-									"isFavorite": false,
-									"globalCCU": 1,
-									"lockStatus": "UNLOCKED",
-									"lockStatusReason": "NONE",
-									"isVisible": true
-								}
 							],
 							"hasMore": true,
 							"panelTargetName": null,
@@ -202,14 +193,6 @@ module.exports = {
 						],
 						"firstPage": {
 							"results": [
-								{
-									"linkCode": "playlist_durian",
-									"isFavorite": false,
-									"globalCCU": 1,
-									"lockStatus": "UNLOCKED",
-									"lockStatusReason": "NONE",
-									"isVisible": true
-								},
 								{
 									"linkCode": "set_br_playlists",
 									"isFavorite": false,
@@ -457,22 +440,15 @@ module.exports = {
 			})
 		}
 	},
+	//needs fixing at somepoint due to homebar and "By Epic" being show at the same time for 30.10+ versions
 
 	page: async function (req, res) {
-		/*const resultList = [];
-		const results = (await axios.post('http://localhost:5595/api/v2/discovery/surface/CreativeDiscoverySurface_Frontend').catch(() => {})).data;
-		results.panels.forEach(panel => {
-			resultList.push(...panel.firstPage.results); 
-		});
-		resultList.length = 0
-		*/
 		res.json({
 			"results": [],
 			"hasMore": false,
 			"panelTargetName": null,
 			"pageMarker": null
 		})
-		//after implementing i realised its only ever good if you have a ton of ltms on one row where pages are needed, but for base neonite its not really an issue.
 	},
 
 	mnemonicLinks: function (req, res) {
