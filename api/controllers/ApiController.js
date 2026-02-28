@@ -1036,7 +1036,18 @@ module.exports = {
 	},
 
 	cookedContentChunk: async function (req, res) {
-		const response = await axios.get(`https://cooked-content-live-cdn.epicgames.com${req.originalUrl}`, ({ responseType: 'arraybuffer' }))
+		res.setHeader("Content-Type", "application/octet-stream");
+		const cacheDir = path.join(process.cwd(), "cache/cookedContentChunks");
+		const cacheFile = path.join(cacheDir, req.params.chunkFile);
+
+		if (!fs.existsSync(cacheDir)) {
+			fs.mkdirSync(cacheDir, { recursive: true });
+		}
+		if (fs.existsSync(cacheFile)) {
+			return fs.createReadStream(cacheFile).pipe(res);
+		}
+		else {
+			const response = await axios.get(`https://cooked-content-live-cdn.epicgames.com${req.originalUrl}`, ({ responseType: 'arraybuffer' }))
 		res.set({
 			'Content-Type': 'binary/octet-stream',
 			'Content-Length': response.data.length,
@@ -1044,7 +1055,9 @@ module.exports = {
 			'ETag': response.headers['etag'],
 			'x-amz-meta-content-md5': response.headers['x-amz-meta-content-md5']
 		});
-		res.send(response.data);
+			fs.writeFileSync(cacheFile, response.data);
+			res.send(response.data);
+		}
 	},
 
 	cookedContentPlugin: async function (req, res) {
