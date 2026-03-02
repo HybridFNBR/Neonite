@@ -462,7 +462,7 @@ module.exports = {
 				playlistActive(discoveryv2, "playlist_pilgrimquickplay", false, true)
 				playlistActive(discoveryv2, "playlist_juno", false, true)
 			}
-			if(playlistManager[version]){playlistManager[version].forEach(playlist => activatePlaylist(discoveryv2, playlist, true, false))}
+			if(playlistManager[version]){playlistManager[version].forEach(playlist => playlistActive(discoveryv2, playlist, true, false))}
 			if(version >= 38.11){
 				updateMetadata(discoveryv2, "ref_panel_byepicfeeder_1", {
 					ref_id: "CreativeDiscoverySurface_FrontendV2:ByEpicFeeder"
