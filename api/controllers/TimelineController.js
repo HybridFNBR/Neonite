@@ -569,6 +569,7 @@ module.exports = {
 
             "30.20|30.30":[
                 "EventFlag.Event_Greenhouse", //Pirates Of the Caribbean Mini Pass
+                "GreenhouseActive",
                 "RE_01_Cutout",
                 "RE_02_Cutout",
                 "RE_03_Cutout",
