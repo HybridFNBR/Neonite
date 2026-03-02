@@ -1,4 +1,4 @@
-const { getVersionInfo, loadJSON} = require("../../config/defs")
+const { getVersionInfo, loadJSON, misc} = require("../../config/defs")
 const discoveryv1 = loadJSON("../discovery/discoveryMenuV1.json");
 const discoveryv2 = loadJSON("../discovery/discoveryMenuV2.json")
 module.exports = {
@@ -454,17 +454,21 @@ module.exports = {
 	mnemonicLinks: function (req, res) {
 		const { version } = getVersionInfo(req);
 		if (version >= 23.00) {
-			if(version >= 33.00){activatePlaylist(discoveryv2, "set_figment_playlists")}
-			if(version >= 30.20){activatePlaylist(discoveryv2, "set_blastberry_playlists")}
-			if(version >= 36.10){activatePlaylist(discoveryv2, "set_forbiddenfruit_nobuild_playlists")}
-			if(version >= 37.31){activatePlaylist(discoveryv2, "playlist_stridemice")}
+			if(version >= 33.00){playlistActive(discoveryv2, "set_figment_playlists", true, false)}
+			if(version >= 30.20){playlistActive(discoveryv2, "set_blastberry_playlists", true, false)}
+			if(version >= 36.10){playlistActive(discoveryv2, "set_forbiddenfruit_nobuild_playlists", true, false)}
+			if(version >= 37.31){playlistActive(discoveryv2, "playlist_stridemice", true, false)}
+			if(version >= 39.00){playlistActive(discoveryv2, "playlist_defaultsquad", false, true)}
+			if(misc.bInEditor == true){ //scuffed way of doing it but works
+				playlistActive(discoveryv2, "playlist_pilgrimquickplay", false, true)
+				playlistActive(discoveryv2, "playlist_juno", false, true)
+			}
+			if(playlistManager[version]){playlistManager[version].forEach(playlist => activatePlaylist(discoveryv2, playlist, true, false))}
 			if(version >= 38.11){
 				updateMetadata(discoveryv2, "ref_panel_byepicfeeder_1", {
 					ref_id: "CreativeDiscoverySurface_FrontendV2:ByEpicFeeder"
 				});
 			}
-			if (playlistManager[version]){playlistManager[version].forEach(playlist => activatePlaylist(discoveryv2, playlist))}
-
 			return res.json(discoveryv2);
 		}
 		else {
@@ -548,13 +552,29 @@ module.exports = {
 }
 
 
-function activatePlaylist(playlist, mnemonic) {
-	const findPlaylist = playlist.find(ltmObject => ltmObject.mnemonic === mnemonic);
+/**
+ * Adds an item to the profile JSON.
+ * 
+ * @param {Array<Object>} discovery - json response
+ * @param {string} mnemonic - Playlist ID
+ * @param {boolean} bIsActive - Whether the playlist should be active.
+ * @param {boolean} bIsDisabled - Whether the playlist should be disabled this is different from bIsActive
+**/
+function playlistActive(discovery, mnemonic, bIsActive, bIsDisabled) {
+	const findPlaylist = discovery.find(ltmObject => ltmObject.mnemonic === mnemonic);
 	if (findPlaylist) {
-		findPlaylist.active = true;
+		findPlaylist.active = bIsActive;
+		findPlaylist.disabled = bIsDisabled
 	}
 }
 
+/**
+ * Adds an item to the profile JSON.
+ * 
+ * @param {Array<Object>} discovery - json response
+ * @param {string} mnemonic - Playlist ID
+ * @param {any} metadata
+**/
 function updateMetadata(discovery, mnemonic, metadata) {
     const findPlaylist = discovery.find(i => i.mnemonic === mnemonic);
     if (!findPlaylist) return;

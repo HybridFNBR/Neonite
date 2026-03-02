@@ -11,6 +11,11 @@ const account = {
 };
 
 
+const misc = {
+    bInEditor: false
+}
+//will prob get more use out of this as time goes on
+
 let folderSize = 0;
 if (!fs.existsSync(path.join(process.cwd(), "cache"))) {
     fs.mkdirSync(path.join(process.cwd(), "cache"), { recursive: true });
@@ -1045,6 +1050,7 @@ const Playlists = (fortnitegame, version) => {
 
 }
 module.exports = {
+    misc,
     getClientCredentials,
     winterFestPresents,
     seasonPass,

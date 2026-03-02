@@ -3,7 +3,7 @@ const { default: axios } = require("axios");
 const fs = require('fs')
 const jsonwebtoken = require('jsonwebtoken');
 const ini = require('ini')
-const { getVersionInfo, loadJSON, VersionFilter} = require("../../config/defs");
+const { getVersionInfo, loadJSON, VersionFilter, misc} = require("../../config/defs");
 const config = ini.parse(fs.readFileSync(path.join(__dirname, '../../config.ini'), 'utf-8'));
 let requested = false
 const fortnitegame = loadJSON("../responses/fortnitegame.json")
@@ -1096,6 +1096,15 @@ module.exports = {
 	},
 
 	noContent: function (req, res) {
+		if(req.originalUrl.includes("/datarouter/api/v1/public/data")){
+			if(JSON.stringify(req.body).includes("WindowsCookedEditor")){
+				misc.bInEditor = true
+			}
+			else if(JSON.stringify(req.body).includes("WindowsClient")){
+				console.log(1)
+				misc.bInEditor = false
+			}
+		}
 		res.status(204).end()
 	}
 
