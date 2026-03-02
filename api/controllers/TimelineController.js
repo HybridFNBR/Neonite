@@ -1314,6 +1314,11 @@ module.exports = {
         if(config.ClydeWeek4 == true && versionGlobal == 32){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
+                    eventType: "KL1", //Juice WRLD POI Stage 1
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
                     eventType: "Week4", //Either Catty Corner POI or Juice WRLD POI
                     activeUntil: "9999-09-09T07:00:00.000Z",
                     activeSince: "2020-09-09T07:00:00.000Z"
