@@ -1241,66 +1241,6 @@ module.exports = {
             )
         }
 
-        if(versionGlobal == 32){
-            timeline.channels['client-events']['states'][0]['activeEvents'].push(
-                {
-                    eventType: "Week1",
-                    activeUntil: "9999-09-09T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "Week2",
-                    activeUntil: "9999-09-09T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "Week3",
-                    activeUntil: "9999-09-09T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "Week4",
-                    activeUntil: "9999-09-09T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "ClydeSeason1",
-                    activeUntil: "9999-09-09T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "ClydeSeason2Part1",
-                    activeUntil: "9999-09-09T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "ClydeSeason2Part2",
-                    activeUntil: "9999-09-09T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "ClydeSeason3Part1",
-                    activeUntil: "9999-09-09T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "KL1",
-                    activeUntil: "9999-09-09T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "KL2",
-                    activeUntil: "9999-09-09T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "KL3",
-                    activeUntil: "9999-09-09T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-            )
-        }
-
         if(versionGlobal == 7 || versionGlobal == 11 || versionGlobal == 15 || versionGlobal == 19){
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "TopSecret", //Holiday Bus (S7/S11/S15/S19)
@@ -1320,6 +1260,104 @@ module.exports = {
 
         //Configurable Flags
 
+
+
+        if(config.ClydeWeek1 == true && versionGlobal == 32){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push(
+                {
+                    eventType: "ClydeSeason1", //Base CH2: Remix Map
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "Week1", 
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2000-09-14T07:00:00.000Z"
+                }
+            )
+
+        }
+
+        if(config.ClydeWeek2 == true && versionGlobal == 32){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push(
+                {
+                    eventType: "ClydeSeason2Part1", //Spaghetti Grotto Map Stage
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "Week2",
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2000-09-14T07:00:00.000Z"
+                }
+            )
+
+        }
+
+        if(config.ClydeWeek3 == true && versionGlobal == 32){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push(
+                {
+                    eventType: "ClydeSeason2Part2", //Ice Isle/ Redesigned Shark POI Map Stage
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "Week3",
+                    activeUntil: "9999-09-14T07:00:00.000Z",
+                    activeSince: "2000-09-14T07:00:00.000Z"
+                }
+            )
+
+        }
+
+        if(config.ClydeWeek4 == true && versionGlobal == 32){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push(
+                {
+                    eventType: "Week4", //Either Catty Corner POI or Juice WRLD POI
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "ClydeSeason3Part1",
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+            )
+
+        }
+
+        if(config.JuiceWRLDPOIStage1 == true && versionGlobal == 32){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push(
+                 {
+                    eventType: "KL1", //Juice WRLD POI Stage 1
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+            )
+
+        }
+
+        if(config.JuiceWRLDPOIStage2 == true && versionGlobal == 32){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push(
+                 {
+                    eventType: "KL2", //Juice WRLD POI Stage 2
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+            )
+
+        }
+
+        if(config.JuiceWRLDPOIStage3 == true && versionGlobal == 32){
+            timeline.channels['client-events']['states'][0]['activeEvents'].push(
+                 {
+                    eventType: "KL3", //Juice WRLD POI Stage 3
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+            )
+
+        }
 
         if(config.bEnableRuinHouseBeacon == true && versionGlobal == 10){
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
