@@ -2133,7 +2133,7 @@
       },
       "product_tag": "Product.BR.Build",
       "tagline": "The battle is building! \r\n Drop into the Battle Royale. Loot, build, explore, and fight in a game of 100 players competing to be the last one standing.",
-      "default_sub_link_code": "playlist_defaultsquad"
+      "default_sub_link_code": "playlist_defaultsolo"
     },
     "version": 1,
     "active": true,
