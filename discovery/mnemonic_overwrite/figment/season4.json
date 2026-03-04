@@ -1,0 +1,124 @@
+{
+    "lobby_background_image_urls": {
+        "url": "https://cdn2.unrealengine.com/og-s4-lobbybg-final-4096x2048-022fa4b8e5a1.jpg"
+    },
+    "pop_out_image_urls": {
+        "url": "https://cdn2.unrealengine.com/og-fg-1193x384-c88ed499503c.png"
+    },
+    "background_image_urls": {
+        "url": "https://cdn2.unrealengine.com/og-bg-1760x352-cb1db6fd4997.png"
+    },
+    "image_url": "https://cdn2.unrealengine.com/en-fn36-00-c1s4-discover-playlist-tiles-og-unranked-keyart-1920x1080-1920x1080-42e288b5433c.jpg",
+    "image_urls": {
+        "url_s": "https://cdn2.unrealengine.com/en-fn36-00-c1s4-discover-playlist-tiles-og-unranked-keyart-480x270-480x270-c5c9d009676c.jpg",
+        "url_m": "https://cdn2.unrealengine.com/en-fn36-00-c1s4-discover-playlist-tiles-og-unranked-keyart-640x360-640x360-8ceb77278d0c.jpg",
+        "url": "https://cdn2.unrealengine.com/en-fn36-00-c1s4-discover-playlist-tiles-og-unranked-keyart-1920x1080-1920x1080-42e288b5433c.jpg"
+    },
+    "alt_image_urls": {
+        "de": {
+            "url_s": "https://cdn2.unrealengine.com/de-fn36-00-c1s4-discover-playlist-tiles-og-unranked-keyart-480x270-480x270-6bbee8e97285.jpg",
+            "url_m": "https://cdn2.unrealengine.com/de-fn36-00-c1s4-discover-playlist-tiles-og-unranked-keyart-640x360-640x360-d4fd288b2305.jpg",
+            "url": "https://cdn2.unrealengine.com/de-fn36-00-c1s4-discover-playlist-tiles-og-unranked-keyart-1920x1080-1920x1080-ae3dba15ac76.jpg"
+        },
+        "ru": {
+            "url_s": "https://cdn2.unrealengine.com/ru-fn36-00-c1s4-discover-playlist-tiles-og-unranked-keyart-480x270-480x270-b20231bbb750.jpg",
+            "url_m": "https://cdn2.unrealengine.com/ru-fn36-00-c1s4-discover-playlist-tiles-og-unranked-keyart-640x360-640x360-99623a78096a.jpg",
+            "url": "https://cdn2.unrealengine.com/ru-fn36-00-c1s4-discover-playlist-tiles-og-unranked-keyart-1920x1080-1920x1080-794a1ad9aa2d.jpg"
+        },
+        "ko": {
+            "url_s": "https://cdn2.unrealengine.com/kr-fn36-00-c1s4-discover-playlist-tiles-og-unranked-keyart-480x270-480x270-590ba03dfec6.jpg",
+            "url_m": "https://cdn2.unrealengine.com/kr-fn36-00-c1s4-discover-playlist-tiles-og-unranked-keyart-640x360-640x360-627126e3654d.jpg",
+            "url": "https://cdn2.unrealengine.com/kr-fn36-00-c1s4-discover-playlist-tiles-og-unranked-keyart-1920x1080-1920x1080-c121b52668b4.jpg"
+        },
+        "zh-hant": {
+            "url_s": "https://cdn2.unrealengine.com/zhtw-fn36-00-c1s4-discover-playlist-tiles-og-unranked-keyart-480x270-480x270-40afc7ac67d2.jpg",
+            "url_m": "https://cdn2.unrealengine.com/zhtw-fn36-00-c1s4-discover-playlist-tiles-og-unranked-keyart-640x360-640x360-5074c6ddcab6.jpg",
+            "url": "https://cdn2.unrealengine.com/zhtw-fn36-00-c1s4-discover-playlist-tiles-og-unranked-keyart-1920x1080-1920x1080-924b2bd0285d.jpg"
+        },
+        "pt-BR": {
+            "url_s": "https://cdn2.unrealengine.com/pt-br-fn36-00-c1s4-discover-playlist-tiles-og-unranked-keyart-480x270-480x270-9b75434ff783.jpg",
+            "url_m": "https://cdn2.unrealengine.com/pt-br-fn36-00-c1s4-discover-playlist-tiles-og-unranked-keyart-640x360-640x360-7a6bc98386b2.jpg",
+            "url": "https://cdn2.unrealengine.com/pt-br-fn36-00-c1s4-discover-playlist-tiles-og-unranked-keyart-1920x1080-1920x1080-cfcf411ad0c9.jpg"
+        },
+        "zh-hans": {
+            "url_s": "https://cdn2.unrealengine.com/zhcn-fn36-00-c1s4-discover-playlist-tiles-og-unranked-keyart-480x270-480x270-e1902898e574.jpg",
+            "url_m": "https://cdn2.unrealengine.com/zhcn-fn36-00-c1s4-discover-playlist-tiles-og-unranked-keyart-640x360-640x360-b84e2741e416.jpg",
+            "url": "https://cdn2.unrealengine.com/zhcn-fn36-00-c1s4-discover-playlist-tiles-og-unranked-keyart-1920x1080-1920x1080-b1e16ac10f46.jpg"
+        },
+        "it": {
+            "url_s": "https://cdn2.unrealengine.com/it-fn36-00-c1s4-discover-playlist-tiles-og-unranked-keyart-480x270-480x270-114c46903ec4.jpg",
+            "url_m": "https://cdn2.unrealengine.com/it-fn36-00-c1s4-discover-playlist-tiles-og-unranked-keyart-640x360-640x360-794b0fed4e96.jpg",
+            "url": "https://cdn2.unrealengine.com/it-fn36-00-c1s4-discover-playlist-tiles-og-unranked-keyart-1920x1080-1920x1080-8f8686a28f5f.jpg"
+        },
+        "fr": {
+            "url_s": "https://cdn2.unrealengine.com/fr-fn36-00-c1s4-discover-playlist-tiles-og-unranked-keyart-480x270-480x270-92458c76abad.jpg",
+            "url_m": "https://cdn2.unrealengine.com/fr-fn36-00-c1s4-discover-playlist-tiles-og-unranked-keyart-640x360-640x360-2bea0ca80588.jpg",
+            "url": "https://cdn2.unrealengine.com/fr-fn36-00-c1s4-discover-playlist-tiles-og-unranked-keyart-1920x1080-1920x1080-2cd26deafa25.jpg"
+        },
+        "es": {
+            "url_s": "https://cdn2.unrealengine.com/es-es-fn36-00-c1s4-discover-playlist-tiles-og-unranked-keyart-480x270-480x270-df662c36fdd3.jpg",
+            "url_m": "https://cdn2.unrealengine.com/es-es-fn36-00-c1s4-discover-playlist-tiles-og-unranked-keyart-640x360-640x360-90891c1f0183.jpg",
+            "url": "https://cdn2.unrealengine.com/es-es-fn36-00-c1s4-discover-playlist-tiles-og-unranked-keyart-1920x1080-1920x1080-9d3f8a0a7ee6.jpg"
+        },
+        "ar": {
+            "url_s": "https://cdn2.unrealengine.com/ar-fn36-00-c1s4-discover-playlist-tiles-og-unranked-keyart-480x270-480x270-7f7525114fa8.jpg",
+            "url_m": "https://cdn2.unrealengine.com/ar-fn36-00-c1s4-discover-playlist-tiles-og-unranked-keyart-640x360-640x360-81f0f1a50eae.jpg",
+            "url": "https://cdn2.unrealengine.com/ar-fn36-00-c1s4-discover-playlist-tiles-og-unranked-keyart-1920x1080-1920x1080-2e2e24fa36d5.jpg"
+        },
+        "vi": {
+            "url_s": "https://cdn2.unrealengine.com/vi-fn36-00-c1s4-discover-playlist-tiles-og-unranked-keyart-480x270-480x270-975cb226ec9a.jpg",
+            "url_m": "https://cdn2.unrealengine.com/vi-fn36-00-c1s4-discover-playlist-tiles-og-unranked-keyart-640x360-640x360-070edd3ac233.jpg",
+            "url": "https://cdn2.unrealengine.com/vi-fn36-00-c1s4-discover-playlist-tiles-og-unranked-keyart-1920x1080-1920x1080-24967ca8eb26.jpg"
+        },
+        "th": {
+            "url_s": "https://cdn2.unrealengine.com/th-fn36-00-c1s4-discover-playlist-tiles-og-unranked-keyart-480x270-480x270-bcd22f7acb5e.jpg",
+            "url_m": "https://cdn2.unrealengine.com/th-fn36-00-c1s4-discover-playlist-tiles-og-unranked-keyart-640x360-640x360-3edf0d61097c.jpg",
+            "url": "https://cdn2.unrealengine.com/th-fn36-00-c1s4-discover-playlist-tiles-og-unranked-keyart-1920x1080-1920x1080-fd7fda131e13.jpg"
+        },
+        "ja": {
+            "url_s": "https://cdn2.unrealengine.com/jp-fn36-00-c1s4-discover-playlist-tiles-og-unranked-keyart-480x270-480x270-46c6fb49644e.jpg",
+            "url_m": "https://cdn2.unrealengine.com/jp-fn36-00-c1s4-discover-playlist-tiles-og-unranked-keyart-640x360-640x360-0536cc65ef82.jpg",
+            "url": "https://cdn2.unrealengine.com/jp-fn36-00-c1s4-discover-playlist-tiles-og-unranked-keyart-1920x1080-1920x1080-b7288e1873ef.jpg"
+        },
+        "id": {
+            "url_s": "https://cdn2.unrealengine.com/id-fn36-00-c1s4-discover-playlist-tiles-og-unranked-keyart-480x270-480x270-07db56e62aa4.jpg",
+            "url_m": "https://cdn2.unrealengine.com/id-fn36-00-c1s4-discover-playlist-tiles-og-unranked-keyart-640x360-640x360-1ceb42d51844.jpg",
+            "url": "https://cdn2.unrealengine.com/id-fn36-00-c1s4-discover-playlist-tiles-og-unranked-keyart-1920x1080-1920x1080-f1022fae6113.jpg"
+        },
+        "pl": {
+            "url_s": "https://cdn2.unrealengine.com/pl-fn36-00-c1s4-discover-playlist-tiles-og-unranked-keyart-480x270-480x270-21038ea1ddbc.jpg",
+            "url_m": "https://cdn2.unrealengine.com/pl-fn36-00-c1s4-discover-playlist-tiles-og-unranked-keyart-640x360-640x360-d89993186035.jpg",
+            "url": "https://cdn2.unrealengine.com/pl-fn36-00-c1s4-discover-playlist-tiles-og-unranked-keyart-1920x1080-1920x1080-abdb231006df.jpg"
+        },
+        "es-419": {
+            "url_s": "https://cdn2.unrealengine.com/es-mx-fn36-00-c1s4-discover-playlist-tiles-og-unranked-keyart-480x270-480x270-ad7dde665823.jpg",
+            "url_m": "https://cdn2.unrealengine.com/es-mx-fn36-00-c1s4-discover-playlist-tiles-og-unranked-keyart-640x360-640x360-a4bdaa951641.jpg",
+            "url": "https://cdn2.unrealengine.com/es-mx-fn36-00-c1s4-discover-playlist-tiles-og-unranked-keyart-1920x1080-1920x1080-f30d19cb36f3.jpg"
+        },
+        "tr": {
+            "url_s": "https://cdn2.unrealengine.com/tr-fn36-00-c1s4-discover-playlist-tiles-og-unranked-keyart-480x270-480x270-e1a6b895fa29.jpg",
+            "url_m": "https://cdn2.unrealengine.com/tr-fn36-00-c1s4-discover-playlist-tiles-og-unranked-keyart-640x360-640x360-39493e99f994.jpg",
+            "url": "https://cdn2.unrealengine.com/tr-fn36-00-c1s4-discover-playlist-tiles-og-unranked-keyart-1920x1080-1920x1080-2694b906807c.jpg"
+        }
+    },
+    "alt_tagline": {
+        "ar": "\u0627\u0633\u062a\u0631\u062c\u0639 \u062a\u062c\u0631\u0628\u0629 \u0628\u0627\u062a\u0644 \u0631\u0648\u064a\u0627\u0644 \u0645\u0646\u0630 \u0628\u062f\u0627\u064a\u0627\u062a\u0647\u0627 \u0641\u064a \u0627\u0644\u0641\u0635\u0644 1 \u0627\u0644\u0645\u0648\u0633\u06454. \u0627\u0647\u0628\u0637 \u0645\u062c\u062f\u062f\u064b\u0627 \u0648\u0627\u0633\u062a\u0643\u0634\u0641 \u062e\u0631\u064a\u0637\u0629 \u0627\u0644\u0639\u0648\u062f\u0629 \u0648\u0627\u062c\u0645\u0639 \u063a\u0646\u0627\u0626\u0645 \u0627\u0644\u0639\u0648\u062f\u0629 \u0648\u0639\u0650\u0634 \u0645\u0648\u0627\u0633\u0645 \u0627\u0644\u0639\u0648\u062f\u0629 \u0645\u0646 \u062c\u062f\u064a\u062f!",
+        "de": "Lass die Anf\u00e4nge von Battle Royale in Kapitel\u00a01\u00a0\u2013 Saison\u00a04 wiederaufleben. Lande erneut auf der OG-Karte, pl\u00fcndere OG-Beute und erlebe OG-Saisons von neuem!",
+        "es": "Disfruta de los or\u00edgenes de Battle Royale en el Cap\u00edtulo 1 - Temporada 4. \u00a1Salta del autob\u00fas y explora el mapa original, con el bot\u00edn original y revive las temporadas originales!",
+        "es-419": "Revive los inicios de Batalla campal con el Cap\u00edtulo\u00a01 - Temporada\u00a04. \u00a1Vuelve a dar el salto y explora el mapa original, recoge bot\u00edn cl\u00e1sico y disfruta de las primeras temporadas!",
+        "fr": "Replongez dans le Chapitre\u00a01 - Saison\u00a04 de Battle Royale pour explorer la carte originale, ramasser le butin original et revivre les saisons originales\u00a0!",
+        "it": "Rivivi Battaglia Reale dai suoi inizi nel Capitolo 1 Stagione 4. Torna al passato ed esplora la mappa OG, raccogli bottino OG e rivivi le stagioni OG!",
+        "ja": "\u30d0\u30c8\u30eb\u30ed\u30a4\u30e4\u30eb\u3092\u539f\u70b9\u306e\u30c1\u30e3\u30d7\u30bf\u30fc1 \u30b7\u30fc\u30ba\u30f34\u304b\u3089\u8ffd\u4f53\u9a13\u3057\u3088\u3046\u3002ORIGIN\u306e\u30b7\u30fc\u30ba\u30f3\u3067\u3001\u30aa\u30ea\u30b8\u30ca\u30eb\u306e\u30de\u30c3\u30d7\u3092\u63a2\u7d22\u3057\u3001\u30aa\u30ea\u30b8\u30ca\u30eb\u306e\u6226\u5229\u54c1\u3092\u96c6\u3081\u3088\u3046\uff01",
+        "ko": "\ucc55\ud130 1 \uc2dc\uc98c 4\uc5d0\uc11c \uc624\ub9ac\uc9c0\ub110 \ubc30\ud2c0\ub85c\uc584\uc744 \ub2e4\uc2dc \ud55c\ubc88 \uacbd\ud5d8\ud574 \ubcf4\uc138\uc694. OG \ub9f5\uc744 \ud0d0\ud5d8\ud558\uace0, OG \uc804\ub9ac\ud488\uc744 \ud68d\ub4dd\ud558\uace0, OG \uc2dc\uc98c\uc744 \ub2e4\uc2dc \uc990\uae38 \uc218 \uc788\uc2b5\ub2c8\ub2e4!",
+        "pl": "Prze\u017cyj Battle Royale od nowa w Sezonie\u00a04 Rozdzia\u0142u\u00a01. Wskakuj z powrotem do gry i odkrywaj map\u0119 OG, zbieraj \u0142upy OG i powr\u00f3\u0107 do sezon\u00f3w OG!",
+        "pt-BR": "Reviva os prim\u00f3rdios do Battle Royale no Cap\u00edtulo 1: Temporada 4. Mergulhe no passado e explore o mapa Raiz, colete saques Raiz e reviva Temporadas Raiz!",
+        "ru": "\u0412\u0441\u043f\u043e\u043c\u043d\u0438\u0442\u0435, \u043a\u0430\u043a\u043e\u0439 \u0431\u044b\u043b\u0430 \u00ab\u041a\u043e\u0440\u043e\u043b\u0435\u0432\u0441\u043a\u0430\u044f \u0431\u0438\u0442\u0432\u0430\u00bb \u0432 \u0441\u0435\u0437\u043e\u043d\u0435\u00a04 \u0433\u043b\u0430\u0432\u044b\u00a01. \u0412\u043e\u0437\u0432\u0440\u0430\u0449\u0430\u0439\u0442\u0435\u0441\u044c \u043d\u0430 \u043a\u0430\u0440\u0442\u0443, \u0447\u0442\u043e \u0431\u044b\u043b\u0430 \u0440\u0430\u043d\u044c\u0448\u0435, \u0441\u043e\u0431\u0438\u0440\u0430\u0439\u0442\u0435 \u0434\u043e\u0431\u044b\u0447\u0443 \u0438 \u0432\u0441\u043f\u043e\u043c\u0438\u043d\u0430\u0439\u0442\u0435 \u043f\u0440\u043e\u0448\u043b\u044b\u0435 \u0441\u0435\u0437\u043e\u043d\u044b!",
+        "tr": "Battle Royale'i 1. B\u00f6l\u00fcm: 4. Sezon'daki ba\u015flang\u0131c\u0131yla yeniden ya\u015fa. Oyuna dalarak Mazi haritas\u0131n\u0131 ke\u015ffet, Mazi ganimetlerini topla ve Mazi sezonlar\u0131n\u0131 yeniden ya\u015fa!",
+        "zh-hans": "\u4ece\u7b2c1\u7ae0\u7b2c4\u8d5b\u5b63\u5f00\u59cb\uff0c\u91cd\u6e29\u5927\u9003\u6740\u7684\u6700\u521d\u4f53\u9a8c\uff01\u91cd\u56de\u6000\u65e7\u5730\u56fe\uff0c\u6536\u96c6\u6000\u65e7\u6218\u5229\u54c1\uff0c\u91cd\u6e29\u6000\u65e7\u8d5b\u5b63\uff01",
+        "zh-hant": "\u5728\u7b2c 1 \u7ae0\u7b2c 4 \u8cfd\u5b63\uff0c\u91cd\u6eab\u300a\u5927\u9003\u6bba\u300b\u7684\u6700\u521d\u9762\u8c8c\u3002\u91cd\u56de\u7d93\u5178\uff0c\u63a2\u7d22\u300a\u61f7\u820a\u300b\u5730\u5716\uff0c\u6536\u96c6\u61f7\u820a\u6230\u5229\u54c1\uff0c\u91cd\u6eab\u61f7\u820a\u8cfd\u5b63\uff01",
+        "vi": "Tr\u1ea3i nghi\u1ec7m l\u1ea1i Cu\u1ed9c Chi\u1ebfn Sinh T\u1ed3n th\u1eddi k\u1ef3 \u0111\u1ea7u trong Ch\u01b0\u01a1ng 1 M\u00f9a 4. Nh\u1ea3y v\u00e0o tham chi\u1ebfn v\u00e0 th\u00e1m hi\u1ec3m b\u1ea3n \u0111\u1ed3 Di S\u1ea3n, thu th\u1eadp chi\u1ebfn l\u1ee3i ph\u1ea9m Di S\u1ea3n v\u00e0 tr\u1ea3i nghi\u1ec7m l\u1ea1i c\u00e1c m\u00f9a \u0111\u1ea7u ti\u00ean!",
+        "th": "\u0e22\u0e49\u0e2d\u0e19\u0e04\u0e27\u0e32\u0e21\u0e2b\u0e25\u0e31\u0e07\u0e41\u0e1a\u0e17\u0e40\u0e17\u0e34\u0e25\u0e23\u0e2d\u0e22\u0e31\u0e25\u0e22\u0e38\u0e04\u0e41\u0e23\u0e01\u0e43\u0e19\u0e1a\u0e17\u0e17\u0e35\u0e48 1 \u0e0b\u0e35\u0e0b\u0e31\u0e48\u0e19 4 \u0e2b\u0e27\u0e19\u0e04\u0e37\u0e19\u0e2a\u0e39\u0e48\u0e2a\u0e19\u0e32\u0e21 \u0e2a\u0e33\u0e23\u0e27\u0e08\u0e41\u0e1c\u0e19\u0e17\u0e35\u0e48\u0e40\u0e01\u0e48\u0e32 \u0e40\u0e01\u0e47\u0e1a\u0e44\u0e2d\u0e40\u0e17\u0e21\u0e40\u0e01\u0e48\u0e32\u0e46 \u0e41\u0e25\u0e49\u0e27\u0e22\u0e49\u0e2d\u0e19\u0e27\u0e31\u0e19\u0e27\u0e32\u0e19\u0e0b\u0e35\u0e0b\u0e31\u0e48\u0e19\u0e41\u0e23\u0e01\u0e01\u0e31\u0e19!",
+        "id": "Nikmati kembali Battle Royale dari awal pada Chapter 1 Musim 4. Masuk kembali dan jelajahi peta OG, kumpulkan jarahan OG, dan nikmati kembali musim OG!"
+    },
+    "tagline": "Relive Battle Royale from its beginnings in Chapter 1 Season 4. Drop back in and explore the OG map, collect OG loot, and relive OG seasons!"
+}

@@ -1,0 +1,86 @@
+{
+    "lobby_background_image_urls": {
+        "url": "https://cdn2.unrealengine.com/t-background-darkblue-2048x1024-4b5228ccabe2.png"
+    },
+    "pop_out_image_urls": {
+        "url": "https://cdn2.unrealengine.com/og-fg-1193x384-c88ed499503c.png"
+    },
+    "background_image_urls": {
+        "url": "https://cdn2.unrealengine.com/og-bg-1760x352-cb1db6fd4997.png"
+    },
+    "image_url": "https://cdn2.unrealengine.com/en-fn33-00-c1s1-discover-playlist-tiles-og-1920x1080-1920x1080-cdbbd8c48562.jpg",
+    "image_urls": {
+        "url_s": "https://cdn2.unrealengine.com/en-fn33-00-c1s1-discover-playlist-tiles-og-480x270-480x270-a40f03430d45.jpg",
+        "url_xs": "https://cdn2.unrealengine.com/en-fn33-00-c1s1-discover-playlist-tiles-og-256x144-256x144-399196a46eba.jpg",
+        "url_m": "https://cdn2.unrealengine.com/en-fn33-00-c1s1-discover-playlist-tiles-og-640x360-640x360-1faad400287e.jpg",
+        "url": "https://cdn2.unrealengine.com/en-fn33-00-c1s1-discover-playlist-tiles-og-1920x1080-1920x1080-cdbbd8c48562.jpg"
+    },
+    "alt_image_urls": {
+        "de": {
+            "url_s": "https://cdn2.unrealengine.com/de-fn33-00-c1s1-discover-playlist-tiles-og-480x270-480x270-885ef4e56e10.jpg",
+            "url_m": "https://cdn2.unrealengine.com/de-fn33-00-c1s1-discover-playlist-tiles-og-640x360-640x360-5debf9e5815e.jpg",
+            "url": "https://cdn2.unrealengine.com/de-fn33-00-c1s1-discover-playlist-tiles-og-1920x1080-1920x1080-9c81a114f52d.jpg"
+        },
+        "ru": {
+            "url_s": "https://cdn2.unrealengine.com/ru-fn33-00-c1s1-discover-playlist-tiles-og-480x270-480x270-5de2ae4b9a04.jpg",
+            "url_m": "https://cdn2.unrealengine.com/ru-fn33-00-c1s1-discover-playlist-tiles-og-640x360-640x360-beefc2e2b037.jpg",
+            "url": "https://cdn2.unrealengine.com/ru-fn33-00-c1s1-discover-playlist-tiles-og-1920x1080-1920x1080-fcc7fb035603.jpg"
+        },
+        "ko": {
+            "url_s": "https://cdn2.unrealengine.com/kr-fn33-00-c1s1-discover-playlist-tiles-og-480x270-480x270-bb4fde3031c5.jpg",
+            "url_m": "https://cdn2.unrealengine.com/kr-fn33-00-c1s1-discover-playlist-tiles-og-640x360-640x360-9501b73c2394.jpg",
+            "url": "https://cdn2.unrealengine.com/kr-fn33-00-c1s1-discover-playlist-tiles-og-1920x1080-1920x1080-9b080243d810.jpg"
+        },
+        "pt-BR": {
+            "url_s": "https://cdn2.unrealengine.com/pt-br-fn33-00-c1s1-discover-playlist-tiles-og-480x270-480x270-05f01c54e899.jpg",
+            "url_m": "https://cdn2.unrealengine.com/pt-br-fn33-00-c1s1-discover-playlist-tiles-og-640x360-640x360-ac026d7563ae.jpg",
+            "url": "https://cdn2.unrealengine.com/pt-br-fn33-00-c1s1-discover-playlist-tiles-og-1920x1080-1920x1080-c774ef5d818e.jpg"
+        },
+        "zh-hans": {
+            "url_s": "https://cdn2.unrealengine.com/zhcn-fn33-00-c1s1-discover-playlist-tiles-og-480x270-480x270-4c5e6202120c.jpg",
+            "url_m": "https://cdn2.unrealengine.com/zhcn-fn33-00-c1s1-discover-playlist-tiles-og-640x360-640x360-cdeb7ec569cf.jpg",
+            "url": "https://cdn2.unrealengine.com/zhcn-fn33-00-c1s1-discover-playlist-tiles-og-1920x1080-1920x1080-a7b458b42e65.jpg"
+        },
+        "it": {
+            "url_s": "https://cdn2.unrealengine.com/it-fn33-00-c1s1-discover-playlist-tiles-og-480x270-480x270-329be0c29196.jpg",
+            "url_m": "https://cdn2.unrealengine.com/it-fn33-00-c1s1-discover-playlist-tiles-og-640x360-640x360-01b6813e6df6.jpg",
+            "url": "https://cdn2.unrealengine.com/it-fn33-00-c1s1-discover-playlist-tiles-og-1920x1080-1920x1080-d16dedb6ec62.jpg"
+        },
+        "fr": {
+            "url_s": "https://cdn2.unrealengine.com/fr-fn33-00-c1s1-discover-playlist-tiles-og-480x270-480x270-0601e3bd9e43.jpg",
+            "url_m": "https://cdn2.unrealengine.com/fr-fn33-00-c1s1-discover-playlist-tiles-og-640x360-640x360-a8ae0e06a827.jpg",
+            "url": "https://cdn2.unrealengine.com/fr-fn33-00-c1s1-discover-playlist-tiles-og-1920x1080-1920x1080-beeb03e2271f.jpg"
+        },
+        "es": {
+            "url_s": "https://cdn2.unrealengine.com/es-es-fn33-00-c1s1-discover-playlist-tiles-og-480x270-480x270-39de8f25cf15.jpg",
+            "url_m": "https://cdn2.unrealengine.com/es-es-fn33-00-c1s1-discover-playlist-tiles-og-640x360-640x360-e27dac2d500a.jpg",
+            "url": "https://cdn2.unrealengine.com/es-es-fn33-00-c1s1-discover-playlist-tiles-og-1920x1080-1920x1080-cb571b3bf5e2.jpg"
+        },
+        "ar": {
+            "url_s": "https://cdn2.unrealengine.com/ar-fn33-00-c1s1-discover-playlist-tiles-og-640x360-640x360-f7781095aab0.jpg",
+            "url_m": "https://cdn2.unrealengine.com/ar-fn33-00-c1s1-discover-playlist-tiles-og-640x360-640x360-f7781095aab0.jpg",
+            "url": "https://cdn2.unrealengine.com/ar-fn33-00-c1s1-discover-playlist-tiles-og-1920x1080-1920x1080-db286d9e1cd6.jpg"
+        },
+        "ja": {
+            "url_s": "https://cdn2.unrealengine.com/jp-fn33-00-c1s1-discover-playlist-tiles-og-480x270-480x270-3178cc8e92d0.jpg",
+            "url_m": "https://cdn2.unrealengine.com/jp-fn33-00-c1s1-discover-playlist-tiles-og-640x360-640x360-db979f2813e9.jpg",
+            "url": "https://cdn2.unrealengine.com/jp-fn33-00-c1s1-discover-playlist-tiles-og-1920x1080-1920x1080-26797cdf6c29.jpg"
+        },
+        "pl": {
+            "url_s": "https://cdn2.unrealengine.com/pl-fn33-00-c1s1-discover-playlist-tiles-og-480x270-480x270-60a3847b12b6.jpg",
+            "url_m": "https://cdn2.unrealengine.com/pl-fn33-00-c1s1-discover-playlist-tiles-og-640x360-640x360-095b12110949.jpg",
+            "url": "https://cdn2.unrealengine.com/pl-fn33-00-c1s1-discover-playlist-tiles-og-1920x1080-1920x1080-ce76340346e3.jpg"
+        },
+        "es-419": {
+            "url_s": "https://cdn2.unrealengine.com/es-mx-fn33-00-c1s1-discover-playlist-tiles-og-480x270-480x270-4e225db5e59d.jpg",
+            "url_m": "https://cdn2.unrealengine.com/es-mx-fn33-00-c1s1-discover-playlist-tiles-og-640x360-640x360-811883b1a22c.jpg",
+            "url": "https://cdn2.unrealengine.com/es-mx-fn33-00-c1s1-discover-playlist-tiles-og-1920x1080-1920x1080-12b2e044acd3.jpg"
+        },
+        "tr": {
+            "url_s": "https://cdn2.unrealengine.com/tr-fn33-00-c1s1-discover-playlist-tiles-og-480x270-480x270-31a972018a26.jpg",
+            "url_m": "https://cdn2.unrealengine.com/tr-fn33-00-c1s1-discover-playlist-tiles-og-640x360-640x360-b9e9c72f7fc1.jpg",
+            "url": "https://cdn2.unrealengine.com/tr-fn33-00-c1s1-discover-playlist-tiles-og-1920x1080-1920x1080-a833bfbff13d.jpg"
+        }
+    },
+    "tagline": "Relive Battle Royale from its beginnings in Chapter 1 Season 2. Drop back in and explore the OG map, collect OG loot, and relive OG seasons!"
+}
