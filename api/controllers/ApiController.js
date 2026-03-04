@@ -187,7 +187,7 @@ module.exports = {
 	},
 
 	FrontendAssets: function (req, res) {
-		const { version } = getVersionInfo(req);
+		const {versionGlobal, version } = getVersionInfo(req);
 		const FrontendAssets = loadJSON('../responses/FortniteAssets.json');
 		const FortniteGameConfig = loadJSON('../FortniteGameConfig.json');
 		FrontendAssets.FortPlaylistAthena = {
@@ -210,9 +210,9 @@ module.exports = {
 				}
 			});
 		}
-		if (version >= 17.40) {
+		if (versionGlobal >= 39) {
 			Object.assign(FrontendAssets.FortPlaylistAthena.assets, {
-				"Playlist_MoleGame": {
+				"Playlist_DefaultDuo": {
 					meta: {
 						revision: 2,
 						headRevision: 2,
@@ -221,18 +221,19 @@ module.exports = {
 						promotedAt: "2023-11-27T06:43:00.452Z"
 					},
 					assetData: {
-						PreloadPersistentLevel: "/MoleMapUnderBase/Maps/Mole_UnderBase_Parent.Mole_UnderBase_Parent",
-						MinPlayersForPrivateServer: 1,
-						MinPlayers: 1,
-						GameData: "",
-						BuiltInGameFeaturePluginsToLoad: [
-							"MoleMapUnderBase",
-							"MoleGame",
-							"MoleUI",
-							"MoleAudio"
-						],
-						ModifierList: [],
-						AdditionalLevels: []
+						PreloadPersistentLevel: "/BRMapCh6/Maps/Hermes_Terrain.Hermes_Terrain",
+					}
+				},
+				"Playlist_Trios": {
+					meta: {
+						revision: 2,
+						headRevision: 2,
+						revisedAt: "2023-11-27T06:41:57.818Z",
+						promotion: 3,
+						promotedAt: "2023-11-27T06:43:00.452Z"
+					},
+					assetData: {
+						PreloadPersistentLevel: "/WildEstate/Maps/WildEstate_Terrain.WildEstate_Terrain",
 					}
 				}
 			});
@@ -1101,7 +1102,6 @@ module.exports = {
 				misc.bInEditor = true
 			}
 			else if(JSON.stringify(req.body).includes("WindowsClient")){
-				console.log(1)
 				misc.bInEditor = false
 			}
 		}

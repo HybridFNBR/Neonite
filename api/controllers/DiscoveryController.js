@@ -452,7 +452,7 @@ module.exports = {
 	},
 
 	mnemonicLinks: function (req, res) {
-		const { version } = getVersionInfo(req);
+		const { versionGlobal, version } = getVersionInfo(req);
 		if (version >= 23.00) {
 			if(version >= 33.00){playlistActive(discoveryv2, "set_figment_playlists", true, false)}
 			if(version >= 30.20){playlistActive(discoveryv2, "set_blastberry_playlists", true, false)}
@@ -468,6 +468,49 @@ module.exports = {
 					ref_id: "CreativeDiscoverySurface_FrontendV2:ByEpicFeeder"
 				});
 			}
+			if(versionGlobal >= 39){
+				updateMetadata(discoveryv2, "playlist_defaultsolo", {
+				"alt_title" : { "en": "CH7 BR Map", "de": "CH7 BR Kaart", "ru": "CH7 BR Карта", "ko": "CH7 BR 지도", "pt-BR": "Mapa CH7 BR", "en": "CH7 BR Map", "it": "CH7 Mappa BR", "fr": "CH7 Carte BR", "zh-CN": "", "es": "CH7 Mapa BR", "es-MX": "CH7 Mapa BR", "zh": "", "ar":"CH7 BR خريطة", "zh-Hant": "", "ja": "CH7 BR マップ", "pl": "CH7 Mapa BR", "es-419": "CH7 Mapa BR", "tr": "CH7 BR Haritası"}, //used DeepL for translations they may not be correct.
+				"image_url": "https://cms-assets.unrealengine.com/cm6l5gfpm05kr07my04cqgy2x/cmigg1t1l089n07nam0q9jd8b",
+				"image_urls": {
+					"url_s": "https://cms-assets.unrealengine.com/cm6l5gfpm05kr07my04cqgy2x/cmigg1t1l089n07nam0q9jd8b",
+					"url_xs": "https://cms-assets.unrealengine.com/cm6l5gfpm05kr07my04cqgy2x/cmigg1t1l089n07nam0q9jd8b",
+					"url_m": "https://cms-assets.unrealengine.com/cm6l5gfpm05kr07my04cqgy2x/cmigg1t1l089n07nam0q9jd8b",
+					"url": "https://cms-assets.unrealengine.com/cm6l5gfpm05kr07my04cqgy2x/cmigg1t1l089n07nam0q9jd8b"
+				},
+				"title": "CH7 BR Map",
+			});
+
+			updateMetadata(discoveryv2, "playlist_defaultduo", {
+				"alt_title" : {"en":"CH6 BR Map","de":"CH6 BR Kaart","ru":"CH6 BR Карта","ko":"CH6 BR 지도","pt-BR":"Mapa CH7 BR","it":"CH6 Mappa BR","fr":"CH6 Carte BR","zh-CN":"","es":"CH6 Mapa BR","es-MX":"CH6 Mapa BR","zh":"","ar":"CH6 BR خريطة","zh-Hant":"","ja":"CH6 BR マップ","pl":"CH6 Mapa BR","es-419":"CH6 Mapa BR","tr":"CH6 BR Haritası"},//used DeepL for translations they may not be correct.
+				"title": "CH6 BR Map",
+				"image_url": "https://cdn2.unrealengine.com/fortnite-battle-royale-chapter-6-season-1-hunters-modern-1920x1080-8ec1a8791b58.jpg",
+				"image_urls": {
+					"url_s": "https://cdn2.unrealengine.com/fortnite-battle-royale-chapter-6-season-1-hunters-modern-1920x1080-8ec1a8791b58.jpg",
+					"url_xs": "https://cdn2.unrealengine.com/fortnite-battle-royale-chapter-6-season-1-hunters-modern-1920x1080-8ec1a8791b58.jpg",
+					"url_m": "https://cdn2.unrealengine.com/fortnite-battle-royale-chapter-6-season-1-hunters-modern-1920x1080-8ec1a8791b58.jpg",
+					"url": "https://cdn2.unrealengine.com/fortnite-battle-royale-chapter-6-season-1-hunters-modern-1920x1080-8ec1a8791b58.jpg"
+				},
+				"lobby_background_image_urls": {
+					"url": "https://cdn2.unrealengine.com/mkart-ch6s4-lobby-bg-4096x2048-d73f821bb40c.jpg"
+				},
+			});
+
+			updateMetadata(discoveryv2, "playlist_trios", {
+				"alt_title" : {"en":"Simpsons BR Map","de":"Simpsons BR Kaart","ru":"Simpsons BR Карта","ko":"Simpsons BR 지도","pt-BR":"Mapa Simpsons BR","it":"Simpsons Mappa BR","fr":"Simpsons Carte BR","zh-CN":"","es":"Simpsons Mapa BR","es-MX":"Simpsons Mapa BR","zh":"","ar":"Simpsons BR خريطة","zh-Hant":"","ja":"Simpsons BR マップ","pl":"Simpsons Mapa BR","es-419":"Simpsons Mapa BR","tr":"Simpsons BR Haritası"}, //used DeepL for translations they may not be correct.
+				"title": "Simpsons BR Map",
+				"image_url": "https://cdn2.unrealengine.com/fortnite-x-the-simpsons-7-3840x2160-5e88ce59a64c.png",
+				"image_urls": {
+					"url_s": "https://cdn2.unrealengine.com/fortnite-x-the-simpsons-7-3840x2160-5e88ce59a64c.png",
+					"url_xs": "https://cdn2.unrealengine.com/fortnite-x-the-simpsons-7-3840x2160-5e88ce59a64c.png",
+					"url_m": "https://cdn2.unrealengine.com/fortnite-x-the-simpsons-7-3840x2160-5e88ce59a64c.png",
+					"url": "https://cdn2.unrealengine.com/fortnite-x-the-simpsons-7-3840x2160-5e88ce59a64c.png"
+				},
+				"lobby_background_image_urls": {
+					"url": "https://cdn2.unrealengine.com/mkart-ch6ms2-lobbybg-plate-4098x2048-c51669ab5daa.jpg"
+				},
+			});
+			}
 			return res.json(discoveryv2);
 		}
 		else {
@@ -477,9 +520,53 @@ module.exports = {
 	},
 
 	related: function (req, res) {
+		const { versionGlobal } = getVersionInfo(req);
 		const relatedResponse = {
 			parentLinks: [],
 			links: {}
+		}
+
+		if(versionGlobal >= 39){
+			updateMetadata(discoveryv2, "playlist_defaultsolo", {
+				"alt_title" : { "en": "CH7 BR Map", "de": "CH7 BR Kaart", "ru": "CH7 BR Карта", "ko": "CH7 BR 지도", "pt-BR": "Mapa CH7 BR", "en": "CH7 BR Map", "it": "CH7 Mappa BR", "fr": "CH7 Carte BR", "zh-CN": "", "es": "CH7 Mapa BR", "es-MX": "CH7 Mapa BR", "zh": "", "ar":"CH7 BR خريطة", "zh-Hant": "", "ja": "CH7 BR マップ", "pl": "CH7 Mapa BR", "es-419": "CH7 Mapa BR", "tr": "CH7 BR Haritası"}, 	//used DeepL for translations they may not be correct.
+				"title": "CH7 BR Map",
+				"image_urls": {
+					"url_s": "https://cms-assets.unrealengine.com/cm6l5gfpm05kr07my04cqgy2x/cmigg1t1l089n07nam0q9jd8b",
+					"url_xs": "https://cms-assets.unrealengine.com/cm6l5gfpm05kr07my04cqgy2x/cmigg1t1l089n07nam0q9jd8b",
+					"url_m": "https://cms-assets.unrealengine.com/cm6l5gfpm05kr07my04cqgy2x/cmigg1t1l089n07nam0q9jd8b",
+					"url": "https://cms-assets.unrealengine.com/cm6l5gfpm05kr07my04cqgy2x/cmigg1t1l089n07nam0q9jd8b"
+				},
+			});
+
+			updateMetadata(discoveryv2, "playlist_defaultduo", {
+				"alt_title" : {"en":"CH6 BR Map","de":"CH6 BR Kaart","ru":"CH6 BR Карта","ko":"CH6 BR 지도","pt-BR":"Mapa CH7 BR","it":"CH6 Mappa BR","fr":"CH6 Carte BR","zh-CN":"","es":"CH6 Mapa BR","es-MX":"CH6 Mapa BR","zh":"","ar":"CH6 BR خريطة","zh-Hant":"","ja":"CH6 BR マップ","pl":"CH6 Mapa BR","es-419":"CH6 Mapa BR","tr":"CH6 BR Haritası"},//used DeepL for translations they may not be correct.
+				"title": "CH6 BR Map",
+				"image_url": "https://cdn2.unrealengine.com/fortnite-battle-royale-chapter-6-season-1-hunters-modern-1920x1080-8ec1a8791b58.jpg",
+				"image_urls": {
+					"url_s": "https://cdn2.unrealengine.com/fortnite-battle-royale-chapter-6-season-1-hunters-modern-1920x1080-8ec1a8791b58.jpg",
+					"url_xs": "https://cdn2.unrealengine.com/fortnite-battle-royale-chapter-6-season-1-hunters-modern-1920x1080-8ec1a8791b58.jpg",
+					"url_m": "https://cdn2.unrealengine.com/fortnite-battle-royale-chapter-6-season-1-hunters-modern-1920x1080-8ec1a8791b58.jpg",
+					"url": "https://cdn2.unrealengine.com/fortnite-battle-royale-chapter-6-season-1-hunters-modern-1920x1080-8ec1a8791b58.jpg"
+				},
+				"lobby_background_image_urls": {
+					"url": "https://cdn2.unrealengine.com/mkart-ch6s4-lobby-bg-4096x2048-d73f821bb40c.jpg"
+				},
+			});
+
+			updateMetadata(discoveryv2, "playlist_trios", {
+				"alt_title" : {"en":"Simpsons BR Map","de":"Simpsons BR Kaart","ru":"Simpsons BR Карта","ko":"Simpsons BR 지도","pt-BR":"Mapa Simpsons BR","it":"Simpsons Mappa BR","fr":"Simpsons Carte BR","zh-CN":"","es":"Simpsons Mapa BR","es-MX":"Simpsons Mapa BR","zh":"","ar":"Simpsons BR خريطة","zh-Hant":"","ja":"Simpsons BR マップ","pl":"Simpsons Mapa BR","es-419":"Simpsons Mapa BR","tr":"Simpsons BR Haritası"}, 	//used DeepL for translations they may not be correct.
+				"title": "Simpsons BR Map",
+				"image_url": "https://cdn2.unrealengine.com/fortnite-x-the-simpsons-7-3840x2160-5e88ce59a64c.png",
+				"image_urls": {
+					"url_s": "https://cdn2.unrealengine.com/fortnite-x-the-simpsons-7-3840x2160-5e88ce59a64c.png",
+					"url_xs": "https://cdn2.unrealengine.com/fortnite-x-the-simpsons-7-3840x2160-5e88ce59a64c.png",
+					"url_m": "https://cdn2.unrealengine.com/fortnite-x-the-simpsons-7-3840x2160-5e88ce59a64c.png",
+					"url": "https://cdn2.unrealengine.com/fortnite-x-the-simpsons-7-3840x2160-5e88ce59a64c.png"
+				},
+				"lobby_background_image_urls": {
+					"url": "https://cdn2.unrealengine.com/mkart-ch6ms2-lobbybg-plate-4098x2048-c51669ab5daa.jpg"
+				},
+			});
 		}
 		const findPlaylist = discoveryv2.findIndex(i => i.mnemonic === req.params.playlistId);
 		if (discoveryv2[findPlaylist].metadata["sub_link_codes"]) {
