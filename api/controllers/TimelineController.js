@@ -646,7 +646,16 @@ module.exports = {
             "39.11":[
                 "EventFlag.S39_WinterFestTab", //Winterfest Tab 2025
                 "WF_IG_Avail"
-            ]
+            ],
+
+            "39.50|39.51":[
+                /*
+                "DC_Shock", // DragonCart Shock
+                "DC_RiftOut", // DragonCart Rifting Out
+                "DC_OrbRiftIn" // DragonCart Rifting in
+                "DC_RealityRifts" // DragonCart and Reality Rifts (Post Shock-Event)
+                */
+            ],
 
         })
 
