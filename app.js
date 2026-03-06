@@ -7,7 +7,7 @@ const config = ini.parse(fs.readFileSync("config.ini", "utf-8"));
 const keychain = JSON.parse(fs.readFileSync("./responses/keychain.json", "utf-8"));
 
 async function compareAndUpdateKeychain() {
-    const response = await axios.get('https://fortnitecentral.genxgames.gg/api/v1/aes', {validateStatus: () => true});    
+    const response = await axios.get('https://export-service.dillyapis.com/v1/aes', {validateStatus: () => true});    
     if (response.status === 200) {
         const data = response.data;
 
@@ -23,11 +23,11 @@ async function compareAndUpdateKeychain() {
         keychain.push(...keychainArray);
 
         fs.writeFileSync("./responses/keychain.json", JSON.stringify(keychain, null, 2));
-        NeoLog.Debug(`Fetched ${missingCount} New Keychains from Fortnite Central.`);
-    } 
+        NeoLog.Debug(`Fetched ${missingCount} New Keychains from dillyapis.`);
+    }
     else if (response.status !== 200) {
-        NeoLog.warn("Fortnite Central is down, falling back to dillyapis for the keychain");
-        const fallbackResponse = await axios.get('https://export-service.dillyapis.com/v1/aes', {validateStatus: () => true});
+        NeoLog.warn("Dillyapis is down, falling back to Fortnite Central for the keychain");
+        const fallbackResponse = await axios.get('https://fortnitecentral.genxgames.gg/api/v1/aes', {validateStatus: () => true});
         if (fallbackResponse.status === 200) {
             const data = fallbackResponse.data
             let missingCount = 0;
@@ -40,8 +40,9 @@ async function compareAndUpdateKeychain() {
                 }
             }
             keychain.push(...keychainArray);
+
             fs.writeFileSync("./responses/keychain.json", JSON.stringify(keychain, null, 2));
-            NeoLog.Debug(`Fetched ${missingCount} New Keychains From dillyapis`);
+            NeoLog.Debug(`Fetched ${missingCount} New Keychains from Fortnite Central.`);
         }
         else 
         {
