@@ -468,7 +468,7 @@ module.exports = {
 					ref_id: "CreativeDiscoverySurface_FrontendV2:ByEpicFeeder"
 				});
 			}
-			if(versionGlobal >= 39){
+			/*if(versionGlobal >= 39){
 				updateMetadata(discoveryv2, "playlist_defaultsolo", {
 				"alt_title" : { "en": "CH7 BR Map", "de": "CH7 BR Kaart", "ru": "CH7 BR Карта", "ko": "CH7 BR 지도", "pt-BR": "Mapa CH7 BR", "en": "CH7 BR Map", "it": "CH7 Mappa BR", "fr": "CH7 Carte BR", "zh-CN": "", "es": "CH7 Mapa BR", "es-MX": "CH7 Mapa BR", "zh": "", "ar":"CH7 BR خريطة", "zh-Hant": "", "ja": "CH7 BR マップ", "pl": "CH7 Mapa BR", "es-419": "CH7 Mapa BR", "tr": "CH7 BR Haritası"}, //used DeepL for translations they may not be correct.
 				"image_url": "https://cms-assets.unrealengine.com/cm6l5gfpm05kr07my04cqgy2x/cmigg1t1l089n07nam0q9jd8b",
@@ -510,7 +510,7 @@ module.exports = {
 					"url": "https://cdn2.unrealengine.com/mkart-ch6ms2-lobbybg-plate-4098x2048-c51669ab5daa.jpg"
 				},
 			});
-			}
+			}*/
 			return res.json(discoveryv2);
 		}
 		else {
@@ -526,7 +526,7 @@ module.exports = {
 			links: {}
 		}
 
-		if(versionGlobal >= 39){
+		/*if(versionGlobal >= 39){
 			updateMetadata(discoveryv2, "playlist_defaultsolo", {
 				"alt_title" : { "en": "CH7 BR Map", "de": "CH7 BR Kaart", "ru": "CH7 BR Карта", "ko": "CH7 BR 지도", "pt-BR": "Mapa CH7 BR", "en": "CH7 BR Map", "it": "CH7 Mappa BR", "fr": "CH7 Carte BR", "zh-CN": "", "es": "CH7 Mapa BR", "es-MX": "CH7 Mapa BR", "zh": "", "ar":"CH7 BR خريطة", "zh-Hant": "", "ja": "CH7 BR マップ", "pl": "CH7 Mapa BR", "es-419": "CH7 Mapa BR", "tr": "CH7 BR Haritası"}, 	//used DeepL for translations they may not be correct.
 				"title": "CH7 BR Map",
@@ -567,7 +567,7 @@ module.exports = {
 					"url": "https://cdn2.unrealengine.com/mkart-ch6ms2-lobbybg-plate-4098x2048-c51669ab5daa.jpg"
 				},
 			});
-		}
+		}*/
 		const findPlaylist = discoveryv2.findIndex(i => i.mnemonic === req.params.playlistId);
 		if (discoveryv2[findPlaylist].metadata["sub_link_codes"]) {
 			relatedResponse.parentLinks.push(discoveryv2[findPlaylist])
