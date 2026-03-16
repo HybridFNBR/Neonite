@@ -93,7 +93,7 @@ module.exports = {
 		if(versionGlobal >= 28){
 			account.token = clientCredentials.access_token
 		}
-		else{account.token = token }
+		else{account.token = `eg1~${token}` }
 		res.json({
 			"access_token": account.token,
 			"expires_in": 2147483647,
@@ -125,6 +125,7 @@ module.exports = {
     verifyToken: function(req, res){
         const JWT = req.headers.authorization.replace("bearer eg1~", "").replace("Bearer eg1~", "")
 		const JWTdecode = jsonwebtoken.decode(JWT)
+		console.log(req.headers.authorization)
 		res.json({
 			"token": req.headers.authorization,
 			"session_id": `${crypto.randomBytes(32).toString("hex")}`,
