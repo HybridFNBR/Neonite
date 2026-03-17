@@ -1,6 +1,6 @@
 const { getVersionInfo, loadJSON, misc} = require("../../config/defs")
 const discoveryv1 = loadJSON("../discovery/discoveryMenuV1.json");
-const discoveryv2 = loadJSON("../discovery/discoveryMenuV2.json")
+const baseDiscoveryV2 = loadJSON("../discovery/discoveryMenuV2.json")
 module.exports = {
 
 	//first interation of discovery api
@@ -82,7 +82,7 @@ module.exports = {
 						"playHistoryType": null
 					},
 					{
-						"panelName": "ByEpicConvergenceBlastberry",
+						"panelName": "ByEpicNoCompetitive",
 						"panelDisplayName": "By Epic",
 						"panelSubtitle": "Islands created by Epic Games",
 						"featureTags": [
@@ -453,6 +453,7 @@ module.exports = {
 
 	mnemonicLinks: function (req, res) {
 		const { versionGlobal, version } = getVersionInfo(req);
+		const discoveryv2 = structuredClone(baseDiscoveryV2);
 		if (version >= 23.00) {
 			if(version >= 33.00){
 				playlistActive(discoveryv2, "set_figment_playlists", true, false)
@@ -524,11 +525,11 @@ module.exports = {
 
 	related: function (req, res) {
 		const { version, versionGlobal } = getVersionInfo(req);
+		const discoveryv2 = structuredClone(baseDiscoveryV2);
 		const relatedResponse = {
 			parentLinks: [],
 			links: {}
 		}
-
 		if(versionGlobal >= 39){
 			updateMetadata(discoveryv2, "playlist_defaultsolo", {
 				"alt_title" : { "en": "CH7 BR Map", "de": "CH7 BR Kaart", "ru": "CH7 BR Карта", "ko": "CH7 BR 지도", "pt-BR": "Mapa CH7 BR", "en": "CH7 BR Map", "it": "CH7 Mappa BR", "fr": "CH7 Carte BR", "zh-CN": "", "es": "CH7 Mapa BR", "es-MX": "CH7 Mapa BR", "zh": "", "ar":"CH7 BR خريطة", "zh-Hant": "", "ja": "CH7 BR マップ", "pl": "CH7 Mapa BR", "es-419": "CH7 Mapa BR", "tr": "CH7 BR Haritası"}, 	//used DeepL for translations they may not be correct.
@@ -624,7 +625,7 @@ module.exports = {
 			res.status(404).end();
 		}
 		else if (version >= 23.00) {
-			for (const result of discoveryv2) {
+			for (const result of baseDiscoveryV2) {
 				if (result.mnemonic === req.params.playlistId) {
 					return res.json(result);
 				}
@@ -656,9 +657,7 @@ function playlistActive(discovery, mnemonic, bIsActive, bIsDisabled) {
 		findPlaylist.disabled = bIsDisabled
 	}
 }
-
 /**
-
  * 
  * @param {Array<Object>} discovery - json response
  * @param {string} gamemode - Gamemode ID

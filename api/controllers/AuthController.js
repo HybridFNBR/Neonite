@@ -93,7 +93,7 @@ module.exports = {
 		if(versionGlobal >= 28){
 			account.token = clientCredentials.access_token
 		}
-		else{account.token = token }
+		else{account.token = `eg1~${token}` }
 		res.json({
 			"access_token": account.token,
 			"expires_in": 2147483647,
