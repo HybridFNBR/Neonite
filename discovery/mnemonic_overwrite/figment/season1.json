@@ -1,0 +1,20 @@
+{
+    "lobby_background_image_urls": {
+        "url": "https://cdn2.unrealengine.com/t-background-darkblue-2048x1024-4b5228ccabe2.png"
+    },
+    "pop_out_image_urls": {
+        "url": "https://cdn2.unrealengine.com/og-fg-1193x384-c88ed499503c.png"
+    },
+    "background_image_urls": {
+        "url": "https://cdn2.unrealengine.com/og-bg-1760x352-cb1db6fd4997.png"
+    },
+    "image_url": "https://cdn2.unrealengine.com/en-fnfigment-c1s1-motd-1920x1080-1920x1080-33005a1f848a.jpg",
+    "image_urls": {
+        "url_s": "https://cdn2.unrealengine.com/en-fnfigment-c1s1-motd-1920x1080-480x270-1732987560494-480x270-5d6504c5b03f.jpg",
+        "url_xs": "https://cdn2.unrealengine.com/en-fnfigment-c1s1-motd-1920x1080-256x144-1732988313541-256x144-768fa9278862.jpg",
+        "url_m": "https://cdn2.unrealengine.com/en-fnfigment-c1s1-motd-1920x1080-640x360-1732987555946-640x360-cd9eeb6fa404.jpg",
+        "url": "https://cdn2.unrealengine.com/en-fnfigment-c1s1-motd-1920x1080-1920x1080-33005a1f848a.jpg"
+    },
+    "alt_image_urls": {},
+    "tagline": "Relive Battle Royale from its beginnings in Chapter 1 Season 1. Drop back in and explore the OG map, collect OG loot, and relive OG seasons starting December 6!"
+}

@@ -455,7 +455,10 @@ module.exports = {
 		const { versionGlobal, version } = getVersionInfo(req);
 		const discoveryv2 = structuredClone(baseDiscoveryV2);
 		if (version >= 23.00) {
-			if(version >= 33.00){playlistActive(discoveryv2, "set_figment_playlists", true, false)}
+			if(version >= 33.00){
+				playlistActive(discoveryv2, "set_figment_playlists", true, false)
+				addPlaylistOverwrite(discoveryv2, "figment", version)
+			}
 			if(version >= 30.20){playlistActive(discoveryv2, "set_blastberry_playlists", true, false)}
 			if(version >= 36.10){playlistActive(discoveryv2, "set_forbiddenfruit_nobuild_playlists", true, false)}
 			if(version >= 37.31){playlistActive(discoveryv2, "playlist_stridemice", true, false)}
@@ -521,7 +524,7 @@ module.exports = {
 	},
 
 	related: function (req, res) {
-		const { versionGlobal } = getVersionInfo(req);
+		const { version, versionGlobal } = getVersionInfo(req);
 		const discoveryv2 = structuredClone(baseDiscoveryV2);
 		const relatedResponse = {
 			parentLinks: [],
@@ -592,6 +595,7 @@ module.exports = {
 				}
 			}
 		}
+		addPlaylistOverwrite(relatedResponse.parentLinks, "figment", version);
 		res.json(relatedResponse);
 	},
 
@@ -654,6 +658,28 @@ function playlistActive(discovery, mnemonic, bIsActive, bIsDisabled) {
 	}
 }
 /**
+ * 
+ * @param {Array<Object>} discovery - json response
+ * @param {string} gamemode - Gamemode ID
+ * @param {any} metadata
+**/
+function addPlaylistOverwrite(discovery, gamemode, version) {
+	if(gamemode === "figment"){
+		if(version >= 33.00 && version <= 33.20){seasonNumber = 1}
+		else if(version >= 33.30 && version <= 34.10){seasonNumber = 2}
+		else if(version >= 34.20 && version <= 35.20){seasonNumber = 3}
+		else if(version >= 36.00 && version <= 36.30){seasonNumber = 4}
+		else if(version >= 37.00 && version <= 37.31){seasonNumber = 5}
+		else if(version >= 37.40 && version <= 39.00){seasonNumber = 6}
+		else if(version >= 39.10){seasonNumber = 7}
+		else{return}
+		const overwrite = loadJSON(`../discovery/mnemonic_overwrite/figment/season${seasonNumber}.json`);
+		updateMetadata(discovery, "set_figment_playlists", overwrite);
+	}
+}
+
+/**
+
  * 
  * @param {Array<Object>} discovery - json response
  * @param {string} mnemonic - Playlist ID
