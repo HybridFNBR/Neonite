@@ -1,0 +1,100 @@
+{
+    "alt_image_urls": {
+        "ar": {
+            "url": "https://cdn2.unrealengine.com/ar-fn33-00-c1s3-discover-playlist-tiles-og-1920x1080-1920x1080-231f920e3d74.jpg",
+            "url_m": "https://cdn2.unrealengine.com/ar-fn33-00-c1s3-discover-playlist-tiles-og-640x360-640x360-8b039240152f.jpg",
+            "url_s": "https://cdn2.unrealengine.com/ar-fn33-00-c1s3-discover-playlist-tiles-og-480x270-480x270-721e350b7ed2.jpg"
+        },
+        "de": {
+            "url": "https://cdn2.unrealengine.com/de-fn33-00-c1s3-discover-playlist-tiles-og-1920x1080-1920x1080-0413194f4108.jpg",
+            "url_m": "https://cdn2.unrealengine.com/de-fn33-00-c1s3-discover-playlist-tiles-og-640x360-640x360-b44409318d3a.jpg",
+            "url_s": "https://cdn2.unrealengine.com/de-fn33-00-c1s3-discover-playlist-tiles-og-480x270-480x270-6dd12b02266a.jpg"
+        },
+        "es": {
+            "url": "https://cdn2.unrealengine.com/es-es-fn33-00-c1s3-discover-playlist-tiles-og-1920x1080-1920x1080-7757c5db44a6.jpg",
+            "url_m": "https://cdn2.unrealengine.com/es-es-fn33-00-c1s3-discover-playlist-tiles-og-640x360-640x360-14f1727c7412.jpg",
+            "url_s": "https://cdn2.unrealengine.com/es-es-fn33-00-c1s3-discover-playlist-tiles-og-480x270-480x270-26d871299a8f.jpg"
+        },
+        "es-419": {
+            "url": "https://cdn2.unrealengine.com/es-mx-fn33-00-c1s3-discover-playlist-tiles-og-1920x1080-1920x1080-012f92d374fa.jpg",
+            "url_m": "https://cdn2.unrealengine.com/es-mx-fn33-00-c1s3-discover-playlist-tiles-og-640x360-640x360-f496c34b472a.jpg",
+            "url_s": "https://cdn2.unrealengine.com/es-mx-fn33-00-c1s3-discover-playlist-tiles-og-480x270-480x270-a22252861b89.jpg"
+        },
+        "fr": {
+            "url": "https://cdn2.unrealengine.com/fr-fn33-00-c1s3-discover-playlist-tiles-og-1920x1080-1920x1080-bf9f1f00e994.jpg",
+            "url_m": "https://cdn2.unrealengine.com/fr-fn33-00-c1s3-discover-playlist-tiles-og-640x360-640x360-d5abb27d0e7f.jpg",
+            "url_s": "https://cdn2.unrealengine.com/fr-fn33-00-c1s3-discover-playlist-tiles-og-480x270-480x270-bb45a0f1212c.jpg"
+        },
+        "it": {
+            "url": "https://cdn2.unrealengine.com/it-fn33-00-c1s3-discover-playlist-tiles-og-1920x1080-1920x1080-778ef9b59f32.jpg",
+            "url_m": "https://cdn2.unrealengine.com/it-fn33-00-c1s3-discover-playlist-tiles-og-640x360-640x360-29e92ccf6422.jpg",
+            "url_s": "https://cdn2.unrealengine.com/it-fn33-00-c1s3-discover-playlist-tiles-og-480x270-480x270-0812e1526165.jpg"
+        },
+        "ja": {
+            "url": "https://cdn2.unrealengine.com/jp-fn33-00-c1s3-discover-playlist-tiles-og-1920x1080-1920x1080-aafbe33655fa.jpg",
+            "url_m": "https://cdn2.unrealengine.com/jp-fn33-00-c1s3-discover-playlist-tiles-og-640x360-640x360-bae0f1a6c401.jpg",
+            "url_s": "https://cdn2.unrealengine.com/jp-fn33-00-c1s3-discover-playlist-tiles-og-480x270-480x270-eac1f4644990.jpg"
+        },
+        "ko": {
+            "url": "https://cdn2.unrealengine.com/kr-fn33-00-c1s3-discover-playlist-tiles-og-1920x1080-1920x1080-4a24815e7aad.jpg",
+            "url_m": "https://cdn2.unrealengine.com/kr-fn33-00-c1s3-discover-playlist-tiles-og-640x360-640x360-a93b6f309390.jpg",
+            "url_s": "https://cdn2.unrealengine.com/kr-fn33-00-c1s3-discover-playlist-tiles-og-480x270-480x270-5a1c2c94546b.jpg"
+        },
+        "pl": {
+            "url": "https://cdn2.unrealengine.com/pl-fn33-00-c1s3-discover-playlist-tiles-og-1920x1080-1920x1080-1a751c69fd76.jpg",
+            "url_m": "https://cdn2.unrealengine.com/pl-fn33-00-c1s3-discover-playlist-tiles-og-640x360-640x360-025e8f2065fd.jpg",
+            "url_s": "https://cdn2.unrealengine.com/pl-fn33-00-c1s3-discover-playlist-tiles-og-480x270-480x270-063212ede257.jpg"
+        },
+        "pt-BR": {
+            "url": "https://cdn2.unrealengine.com/pt-br-fn33-00-c1s3-discover-playlist-tiles-og-1920x1080-1920x1080-541604ab0e00.jpg",
+            "url_m": "https://cdn2.unrealengine.com/pt-br-fn33-00-c1s3-discover-playlist-tiles-og-640x360-640x360-f27477f2ee0d.jpg",
+            "url_s": "https://cdn2.unrealengine.com/pt-br-fn33-00-c1s3-discover-playlist-tiles-og-480x270-480x270-f972b0fac990.jpg"
+        },
+        "ru": {
+            "url": "https://cdn2.unrealengine.com/ru-fn33-00-c1s3-discover-playlist-tiles-og-1920x1080-1920x1080-a0fe3264cbe5.jpg",
+            "url_m": "https://cdn2.unrealengine.com/ru-fn33-00-c1s3-discover-playlist-tiles-og-640x360-640x360-900fa7bc3ec6.jpg",
+            "url_s": "https://cdn2.unrealengine.com/ru-fn33-00-c1s3-discover-playlist-tiles-og-480x270-480x270-90643d7626c9.jpg"
+        },
+        "tr": {
+            "url": "https://cdn2.unrealengine.com/tr-fn33-00-c1s3-discover-playlist-tiles-og-1920x1080-1920x1080-a2f8155d326c.jpg",
+            "url_m": "https://cdn2.unrealengine.com/tr-fn33-00-c1s3-discover-playlist-tiles-og-640x360-640x360-5f1f29dd9350.jpg",
+            "url_s": "https://cdn2.unrealengine.com/tr-fn33-00-c1s3-discover-playlist-tiles-og-480x270-480x270-29019a3b714c.jpg"
+        },
+        "zh-hans": {
+            "url": "https://cdn2.unrealengine.com/zhcn-fn33-00-c1s3-discover-playlist-tiles-og-1920x1080-1920x1080-1ef2c99c30b6.jpg",
+            "url_m": "https://cdn2.unrealengine.com/zhcn-fn33-00-c1s3-discover-playlist-tiles-og-640x360-640x360-f8c51afecda9.jpg",
+            "url_s": "https://cdn2.unrealengine.com/zhcn-fn33-00-c1s3-discover-playlist-tiles-og-480x270-480x270-8906223f303e.jpg"
+        }
+    },
+    "alt_tagline": {
+        "ar": " استرجع تجربة باتل رويال منذ بداياتها في الفصل 1 الموسم 3. اهبط مجددًا واستكشف خريطة العودة واجمع غنائم العودة وعِش مواسم العودة من جديد بدءًا من 6 ديسمبر!",
+        "de": "Lasst die Anfänge von Battle Royale in Kapitel 1 – Saison 3 wiederaufleben. Landet ab 6. Dezember erneut auf der OG-Karte, plündert OG-Beute und erlebt OG-Saisons von neuem!",
+        "es": "Disfruta de Battle Royale desde sus orígenes en el Capítulo 1 - Temporada 3. Salta del autobús y explora el mapa original con botín original y las temporadas originales a partir del 6 de diciembre.",
+        "es-419": "Vuelve a disfrutar de los inicios de Batalla campal con el Capítulo 1 - Temporada 3. ¡Vuelve a dar el salto y explora el mapa OG, recoge botín OG y disfruta de las temporadas OG a partir del 6 de diciembre!",
+        "fr": "Dès le 6 décembre, replongez dans le Chapitre 1 - Saison 3 de Battle Royale pour explorer la carte originale, ramasser le butin original et revivre les saisons originales !",
+        "it": "Rivivi Battaglia Reale dai suoi inizi nel Capitolo 1 Stagione 3. Torna al passato ed esplora la mappa OG, raccogli bottino OG e rivivi le stagioni OG a partire dal 6 dicembre!",
+        "ja": "しばらく原点に立ち返ろう。バトルロイヤルを原点のチャプター1 シーズン3から追体験しよう。12月6日(米国時間)から開幕するORIGINのシーズンで、オリジナルのマップを探索し、オリジナルの戦利品を集めよう！",
+        "ko": "챕터 1 시즌 3에서 배틀로얄을 그 시작부터 다시 한번 체험해 보세요. 12월 6일(미국 동부 시간)부터 OG 맵을 탐험하고, OG 전리품을 획득하고, OG 시즌을 다시 즐길 수 있습니다!",
+        "pl": "Przeżyj Battle Royale od nowa w Sezonie 3 Rozdziału 1. Od 6 grudnia wskakuj z powrotem i odkrywaj mapę OG, zbieraj łupy OG i poznawaj sezony OG!",
+        "pt-BR": "Reviva os primórdios do Battle Royale no Capítulo 1: Temporada 3. Mergulhe no passado e explore o mapa Raiz, colete saques Raiz e reviva Temporadas Raiz a partir de 6 de dezembro!",
+        "ru": "Вспомните, какой была «Королевская битва» в главе 1 сезона 3. Возвращайтесь на самую раннюю карту, собирайте добычу, которая попадалась раньше, и вспоминайте прошлые сезоны, начиная с 6 декабря.",
+        "tr": "Battle Royale'i 1. Bölüm: 3. Sezon'daki başlangıcıyla yeniden yaşa. 6 Aralık'tan itibaren oyuna dalarak Mazi haritasını keşfet, Mazi ganimetlerini topla ve Mazi sezonlarını yeniden yaşa."
+    },
+    "background_image_urls": {
+        "url": "https://cdn2.unrealengine.com/og-bg-1760x352-cb1db6fd4997.png"
+    },
+    "image_url": "https://cdn2.unrealengine.com/en-fn33-00-c1s3-discover-playlist-tiles-og-1920x1080-1920x1080-50b28e2430c1.jpg",
+    "image_urls": {
+        "url": "https://cdn2.unrealengine.com/en-fn33-00-c1s3-discover-playlist-tiles-og-1920x1080-1920x1080-50b28e2430c1.jpg",
+        "url_m": "https://cdn2.unrealengine.com/en-fn33-00-c1s3-discover-playlist-tiles-og-640x360-640x360-aaad8a6bc9eb.jpg",
+        "url_s": "https://cdn2.unrealengine.com/en-fn33-00-c1s3-discover-playlist-tiles-og-480x270-480x270-739e8af0aeb6.jpg",
+        "url_xs": "https://cdn2.unrealengine.com/en-fn33-00-c1s3-discover-playlist-tiles-og-256x144-256x144-dbf898e10073.jpg"
+    },
+    "lobby_background_image_urls": {
+        "url": "https://cdn2.unrealengine.com/mkart-fnog-34-20-lobbybg-4096x2048-0c32c8546f79.jpg"
+    },
+    "pop_out_image_urls": {
+        "url": "https://cdn2.unrealengine.com/og-fg-1193x384-c88ed499503c.png"
+    },
+    "tagline": "Relive Battle Royale from its beginnings in Chapter 1 Season 3. Drop back in and explore the OG map, collect OG loot, and relive OG seasons!"
+}
