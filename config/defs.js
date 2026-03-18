@@ -746,6 +746,19 @@ const Backgrounds = (version, versionGlobal, backgrounds, content) => {
         "https://cdn2.unrealengine.com/mkart-ch6s4-37-20-mural-update-lobby-bg-ltg-v13-1-stage5-4096x2048-9521957dae87.jpg",
         "https://cdn2.unrealengine.com/mkart-ch6s4-37-20-mural-update-lobby-bg-ltg-v14-1-stage6-4096x2048-59b63c4363c7.jpg"
     ];
+
+    const s39backgroundImages = [
+        "https://cdn2.unrealengine.com/mkart-ch7s1-lobby-stage01-final-4k-v3-4096x2048-f6be95824181.jpg",
+        "https://cdn2.unrealengine.com/mkart-ch7s1-lobby-stage02-final-4k-v3-4096x2048-61d0a886f7e4.jpg",
+        "https://cdn2.unrealengine.com/mkart-ch7s1-lobby-stage03-final-4k-v3-4096x2048-6dc5bdf49bb4.jpg",
+        "https://cdn2.unrealengine.com/mkart-ch7s1-lobby-stage04-final-4k-v3-4096x2048-3cd8f01c1dc9.jpg"
+    ]
+
+    const v3951backgroundImages = [
+        "https://cdn2.unrealengine.com/mkart-ch7s1-3951-lobbybg-v1-orb-4096x2048-ae9c19ac7c34.jpg",
+        "https://cdn2.unrealengine.com/mkart-ch7s1-3951-lobbybg-v2-orbrifted-4096x2048-b1e84cf25f41.jpg",
+        "https://cdn2.unrealengine.com/mkart-ch7s1-3951-lobbybg-v3-orblaser-4096x2048-d2a2acf6a920.jpg"
+    ]
     const s17backgroundStages = ["season17d", "season17c", "season17b", "season17"]
 
     const versionBackgrounds= Object.create({
@@ -921,6 +934,14 @@ const Backgrounds = (version, versionGlobal, backgrounds, content) => {
             stage: "season3940",
             backgroundImage: "https://cdn2.unrealengine.com/mkart-ch7s1-lobby-stage04-final-4k-v3-4096x2048-3cd8f01c1dc9.jpg"
         },
+        "39.50": {
+            stage: "defaultnotris",
+            backgroundImage: "https://cdn2.unrealengine.com/mkart-rocketcanyon-lobbybg-final-4096x2048-cb47d24d618f.jpg"
+        },
+        "39.51": {
+            stage: "defaultnotris",
+            backgroundImage: v3951backgroundImages[Math.floor(Math.random() * v3951backgroundImages.length)]
+        }
     });
 
     const versionGlobalBackgrounds = Object.create({
@@ -1007,6 +1028,10 @@ const Backgrounds = (version, versionGlobal, backgrounds, content) => {
             stage: "season3800",
             backgroundImage: "https://cdn2.unrealengine.com/mkart-ch6ms2-lobbybg-plate-4098x2048-c51669ab5daa.jpg"
         },
+        39: {
+            stage: "season3900",
+            backgroundImage: s39backgroundImages[Math.floor(Math.random() * s39backgroundImages.length)]
+        }
     });
     const versionBackground = versionBackgrounds[version] ?? versionGlobalBackgrounds[versionGlobal];
 

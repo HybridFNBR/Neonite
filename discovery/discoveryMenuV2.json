@@ -759,7 +759,6 @@
     "mnemonic": "campaign",
     "linkType": "SubGame",
     "metadata": {
-      "ownership_token": "Token:campaignaccess",
       "lobby_background_image_urls": {
         "url": "https://cdn2.unrealengine.com/stwwinterlobby-2048x1024-e9435f317f59.jpg"
       },
