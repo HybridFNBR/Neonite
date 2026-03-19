@@ -1,6 +1,6 @@
 {
   "name": "neonite",
-  "version": "2.7.6",
+  "version": "2.7.7",
   "description": "A Fortnite Private Server",
   "main": "app.js",
   "scripts": {

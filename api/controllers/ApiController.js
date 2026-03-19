@@ -3,7 +3,7 @@ const { default: axios } = require("axios");
 const fs = require('fs')
 const jsonwebtoken = require('jsonwebtoken');
 const ini = require('ini')
-const { getVersionInfo, loadJSON, VersionFilter, misc} = require("../../config/defs");
+const { getVersionInfo, loadJSON, VersionFilter, misc } = require("../../config/defs");
 const config = ini.parse(fs.readFileSync(path.join(__dirname, '../../config.ini'), 'utf-8'));
 let requested = false
 const fortnitegame = loadJSON("../responses/fortnitegame.json")
@@ -187,7 +187,7 @@ module.exports = {
 	},
 
 	FrontendAssets: function (req, res) {
-		const {versionGlobal, version } = getVersionInfo(req);
+		const { versionGlobal, version } = getVersionInfo(req);
 		const FrontendAssets = loadJSON('../responses/FortniteAssets.json');
 		const FortniteGameConfig = loadJSON('../FortniteGameConfig.json');
 		FrontendAssets.FortPlaylistAthena = {
@@ -212,18 +212,6 @@ module.exports = {
 		}
 		if (versionGlobal >= 39) {
 			Object.assign(FrontendAssets.FortPlaylistAthena.assets, {
-				"Playlist_DefaultDuo": {
-					meta: {
-						revision: 2,
-						headRevision: 2,
-						revisedAt: "2023-11-27T06:41:57.818Z",
-						promotion: 3,
-						promotedAt: "2023-11-27T06:43:00.452Z"
-					},
-					assetData: {
-						PreloadPersistentLevel: "/BRMapCh6/Maps/Hermes_Terrain.Hermes_Terrain",
-					}
-				},
 				"Playlist_Trios": {
 					meta: {
 						revision: 2,
@@ -237,6 +225,34 @@ module.exports = {
 					}
 				}
 			});
+			if (versionGlobal === 39) {
+				Object.assign(FrontendAssets.FortPlaylistAthena.assets, {
+					"Playlist_DefaultDuo": {
+						meta: {
+							revision: 2,
+							headRevision: 2,
+							revisedAt: "2023-11-27T06:41:57.818Z",
+							promotion: 3,
+							promotedAt: "2023-11-27T06:43:00.452Z"
+						},
+						assetData: {
+							PreloadPersistentLevel: "/BRMapCh6/Maps/Hermes_Terrain.Hermes_Terrain",
+						}
+					},
+					"Playlist_Trios": {
+						meta: {
+							revision: 2,
+							headRevision: 2,
+							revisedAt: "2023-11-27T06:41:57.818Z",
+							promotion: 3,
+							promotedAt: "2023-11-27T06:43:00.452Z"
+						},
+						assetData: {
+							PreloadPersistentLevel: "/WildEstate/Maps/WildEstate_Terrain.WildEstate_Terrain",
+						}
+					}
+				});
+			}
 		}
 		res.json(FrontendAssets)
 	},
@@ -1049,13 +1065,13 @@ module.exports = {
 		}
 		else {
 			const response = await axios.get(`https://cooked-content-live-cdn.epicgames.com${req.originalUrl}`, ({ responseType: 'arraybuffer' }))
-		res.set({
-			'Content-Type': 'binary/octet-stream',
-			'Content-Length': response.data.length,
-			'Last-Modified': response.headers['last-modified'],
-			'ETag': response.headers['etag'],
-			'x-amz-meta-content-md5': response.headers['x-amz-meta-content-md5']
-		});
+			res.set({
+				'Content-Type': 'binary/octet-stream',
+				'Content-Length': response.data.length,
+				'Last-Modified': response.headers['last-modified'],
+				'ETag': response.headers['etag'],
+				'x-amz-meta-content-md5': response.headers['x-amz-meta-content-md5']
+			});
 			fs.writeFileSync(cacheFile, response.data);
 			res.send(response.data);
 		}
@@ -1097,11 +1113,11 @@ module.exports = {
 	},
 
 	noContent: function (req, res) {
-		if(req.originalUrl.includes("/datarouter/api/v1/public/data")){
-			if(JSON.stringify(req.body).includes("WindowsCookedEditor")){
+		if (req.originalUrl.includes("/datarouter/api/v1/public/data")) {
+			if (JSON.stringify(req.body).includes("WindowsCookedEditor")) {
 				misc.bInEditor = true
 			}
-			else if(JSON.stringify(req.body).includes("WindowsClient")){
+			else if (JSON.stringify(req.body).includes("WindowsClient")) {
 				misc.bInEditor = false
 			}
 		}
