@@ -1,4 +1,4 @@
-const { getVersionInfo, loadJSON, misc} = require("../../config/defs")
+const { getVersionInfo, loadJSON, misc } = require("../../config/defs")
 const discoveryv1 = loadJSON("../discovery/discoveryMenuV1.json");
 const baseDiscoveryV2 = loadJSON("../discovery/discoveryMenuV2.json")
 module.exports = {
@@ -455,65 +455,65 @@ module.exports = {
 		const { versionGlobal, version } = getVersionInfo(req);
 		const discoveryv2 = structuredClone(baseDiscoveryV2);
 		if (version >= 23.00) {
-			if(version >= 33.00){
+			if (version >= 33.00) {
 				playlistActive(discoveryv2, "set_figment_playlists", true, false)
 				addPlaylistOverwrite(discoveryv2, "figment", version)
 			}
-			if(version >= 30.20){playlistActive(discoveryv2, "set_blastberry_playlists", true, false)}
-			if(version >= 36.10){playlistActive(discoveryv2, "set_forbiddenfruit_nobuild_playlists", true, false)}
-			if(version >= 37.31){playlistActive(discoveryv2, "playlist_stridemice", true, false)}
-			if(misc.bInEditor == true){ //scuffed way of doing it but works
+			if (version >= 30.20) { playlistActive(discoveryv2, "set_blastberry_playlists", true, false) }
+			if (version >= 36.10) { playlistActive(discoveryv2, "set_forbiddenfruit_nobuild_playlists", true, false) }
+			if (version >= 37.31) { playlistActive(discoveryv2, "playlist_stridemice", true, false) }
+			if (misc.bInEditor == true) { //scuffed way of doing it but works
 				playlistActive(discoveryv2, "playlist_pilgrimquickplay", false, true)
 				playlistActive(discoveryv2, "playlist_juno", false, true)
 			}
-			if(playlistManager[version]){playlistManager[version].forEach(playlist => playlistActive(discoveryv2, playlist, true, false))}
-			if(version >= 38.11){
+			if (playlistManager[version]) { playlistManager[version].forEach(playlist => playlistActive(discoveryv2, playlist, true, false)) }
+			if (version >= 38.11) {
 				updateMetadata(discoveryv2, "ref_panel_byepicfeeder_1", {
 					ref_id: "CreativeDiscoverySurface_FrontendV2:ByEpicFeeder"
 				});
 			}
-			if(versionGlobal >= 39){
+			if (versionGlobal >= 39) {
 				updateMetadata(discoveryv2, "playlist_defaultsolo", {
-				"alt_title" : { "en": "CH7 BR Map", "de": "CH7 BR Kaart", "ru": "CH7 BR Карта", "ko": "CH7 BR 지도", "pt-BR": "Mapa CH7 BR", "en": "CH7 BR Map", "it": "CH7 Mappa BR", "fr": "CH7 Carte BR", "zh-CN": "", "es": "CH7 Mapa BR", "es-MX": "CH7 Mapa BR", "zh": "", "ar":"CH7 BR خريطة", "zh-Hant": "", "ja": "CH7 BR マップ", "pl": "CH7 Mapa BR", "es-419": "CH7 Mapa BR", "tr": "CH7 BR Haritası"}, //used DeepL for translations they may not be correct.
-				"image_url": "https://cms-assets.unrealengine.com/cm6l5gfpm05kr07my04cqgy2x/cmigg1t1l089n07nam0q9jd8b",
-				"image_urls": {
-					"url_s": "https://cms-assets.unrealengine.com/cm6l5gfpm05kr07my04cqgy2x/cmigg1t1l089n07nam0q9jd8b",
-					"url_xs": "https://cms-assets.unrealengine.com/cm6l5gfpm05kr07my04cqgy2x/cmigg1t1l089n07nam0q9jd8b",
-					"url_m": "https://cms-assets.unrealengine.com/cm6l5gfpm05kr07my04cqgy2x/cmigg1t1l089n07nam0q9jd8b",
-					"url": "https://cms-assets.unrealengine.com/cm6l5gfpm05kr07my04cqgy2x/cmigg1t1l089n07nam0q9jd8b"
-				},
-				"title": "CH7 BR Map",
-			});
+					"alt_title": { "en": "CH7 BR Map", "de": "CH7 BR Kaart", "ru": "CH7 BR Карта", "ko": "CH7 BR 지도", "pt-BR": "Mapa CH7 BR", "en": "CH7 BR Map", "it": "CH7 Mappa BR", "fr": "CH7 Carte BR", "zh-CN": "", "es": "CH7 Mapa BR", "es-MX": "CH7 Mapa BR", "zh": "", "ar": "CH7 BR خريطة", "zh-Hant": "", "ja": "CH7 BR マップ", "pl": "CH7 Mapa BR", "es-419": "CH7 Mapa BR", "tr": "CH7 BR Haritası" }, //used DeepL for translations they may not be correct.
+					"image_url": "https://cms-assets.unrealengine.com/cm6l5gfpm05kr07my04cqgy2x/cmigg1t1l089n07nam0q9jd8b",
+					"image_urls": {
+						"url_s": "https://cms-assets.unrealengine.com/cm6l5gfpm05kr07my04cqgy2x/cmigg1t1l089n07nam0q9jd8b",
+						"url_xs": "https://cms-assets.unrealengine.com/cm6l5gfpm05kr07my04cqgy2x/cmigg1t1l089n07nam0q9jd8b",
+						"url_m": "https://cms-assets.unrealengine.com/cm6l5gfpm05kr07my04cqgy2x/cmigg1t1l089n07nam0q9jd8b",
+						"url": "https://cms-assets.unrealengine.com/cm6l5gfpm05kr07my04cqgy2x/cmigg1t1l089n07nam0q9jd8b"
+					},
+					"title": "CH7 BR Map",
+				});
 
-			updateMetadata(discoveryv2, "playlist_defaultduo", {
-				"alt_title" : {"en":"CH6 BR Map","de":"CH6 BR Kaart","ru":"CH6 BR Карта","ko":"CH6 BR 지도","pt-BR":"Mapa CH7 BR","it":"CH6 Mappa BR","fr":"CH6 Carte BR","zh-CN":"","es":"CH6 Mapa BR","es-MX":"CH6 Mapa BR","zh":"","ar":"CH6 BR خريطة","zh-Hant":"","ja":"CH6 BR マップ","pl":"CH6 Mapa BR","es-419":"CH6 Mapa BR","tr":"CH6 BR Haritası"},//used DeepL for translations they may not be correct.
-				"title": "CH6 BR Map",
-				"image_url": "https://cdn2.unrealengine.com/fortnite-battle-royale-chapter-6-season-1-hunters-modern-1920x1080-8ec1a8791b58.jpg",
-				"image_urls": {
-					"url_s": "https://cdn2.unrealengine.com/fortnite-battle-royale-chapter-6-season-1-hunters-modern-1920x1080-8ec1a8791b58.jpg",
-					"url_xs": "https://cdn2.unrealengine.com/fortnite-battle-royale-chapter-6-season-1-hunters-modern-1920x1080-8ec1a8791b58.jpg",
-					"url_m": "https://cdn2.unrealengine.com/fortnite-battle-royale-chapter-6-season-1-hunters-modern-1920x1080-8ec1a8791b58.jpg",
-					"url": "https://cdn2.unrealengine.com/fortnite-battle-royale-chapter-6-season-1-hunters-modern-1920x1080-8ec1a8791b58.jpg"
-				},
-				"lobby_background_image_urls": {
-					"url": "https://cdn2.unrealengine.com/mkart-ch6s4-lobby-bg-4096x2048-d73f821bb40c.jpg"
-				},
-			});
+				updateMetadata(discoveryv2, "playlist_defaultduo", {
+					"alt_title": { "en": "CH6 BR Map", "de": "CH6 BR Kaart", "ru": "CH6 BR Карта", "ko": "CH6 BR 지도", "pt-BR": "Mapa CH7 BR", "it": "CH6 Mappa BR", "fr": "CH6 Carte BR", "zh-CN": "", "es": "CH6 Mapa BR", "es-MX": "CH6 Mapa BR", "zh": "", "ar": "CH6 BR خريطة", "zh-Hant": "", "ja": "CH6 BR マップ", "pl": "CH6 Mapa BR", "es-419": "CH6 Mapa BR", "tr": "CH6 BR Haritası" },//used DeepL for translations they may not be correct.
+					"title": "CH6 BR Map",
+					"image_url": "https://cdn2.unrealengine.com/fortnite-battle-royale-chapter-6-season-1-hunters-modern-1920x1080-8ec1a8791b58.jpg",
+					"image_urls": {
+						"url_s": "https://cdn2.unrealengine.com/fortnite-battle-royale-chapter-6-season-1-hunters-modern-1920x1080-8ec1a8791b58.jpg",
+						"url_xs": "https://cdn2.unrealengine.com/fortnite-battle-royale-chapter-6-season-1-hunters-modern-1920x1080-8ec1a8791b58.jpg",
+						"url_m": "https://cdn2.unrealengine.com/fortnite-battle-royale-chapter-6-season-1-hunters-modern-1920x1080-8ec1a8791b58.jpg",
+						"url": "https://cdn2.unrealengine.com/fortnite-battle-royale-chapter-6-season-1-hunters-modern-1920x1080-8ec1a8791b58.jpg"
+					},
+					"lobby_background_image_urls": {
+						"url": "https://cdn2.unrealengine.com/mkart-ch6s4-lobby-bg-4096x2048-d73f821bb40c.jpg"
+					},
+				});
 
-			updateMetadata(discoveryv2, "playlist_trios", {
-				"alt_title" : {"en":"Simpsons BR Map","de":"Simpsons BR Kaart","ru":"Simpsons BR Карта","ko":"Simpsons BR 지도","pt-BR":"Mapa Simpsons BR","it":"Simpsons Mappa BR","fr":"Simpsons Carte BR","zh-CN":"","es":"Simpsons Mapa BR","es-MX":"Simpsons Mapa BR","zh":"","ar":"Simpsons BR خريطة","zh-Hant":"","ja":"Simpsons BR マップ","pl":"Simpsons Mapa BR","es-419":"Simpsons Mapa BR","tr":"Simpsons BR Haritası"}, //used DeepL for translations they may not be correct.
-				"title": "Simpsons BR Map",
-				"image_url": "https://cdn2.unrealengine.com/fortnite-x-the-simpsons-7-3840x2160-5e88ce59a64c.png",
-				"image_urls": {
-					"url_s": "https://cdn2.unrealengine.com/fortnite-x-the-simpsons-7-3840x2160-5e88ce59a64c.png",
-					"url_xs": "https://cdn2.unrealengine.com/fortnite-x-the-simpsons-7-3840x2160-5e88ce59a64c.png",
-					"url_m": "https://cdn2.unrealengine.com/fortnite-x-the-simpsons-7-3840x2160-5e88ce59a64c.png",
-					"url": "https://cdn2.unrealengine.com/fortnite-x-the-simpsons-7-3840x2160-5e88ce59a64c.png"
-				},
-				"lobby_background_image_urls": {
-					"url": "https://cdn2.unrealengine.com/mkart-ch6ms2-lobbybg-plate-4098x2048-c51669ab5daa.jpg"
-				},
-			});
+				updateMetadata(discoveryv2, "playlist_trios", {
+					"alt_title": { "en": "Simpsons BR Map", "de": "Simpsons BR Kaart", "ru": "Simpsons BR Карта", "ko": "Simpsons BR 지도", "pt-BR": "Mapa Simpsons BR", "it": "Simpsons Mappa BR", "fr": "Simpsons Carte BR", "zh-CN": "", "es": "Simpsons Mapa BR", "es-MX": "Simpsons Mapa BR", "zh": "", "ar": "Simpsons BR خريطة", "zh-Hant": "", "ja": "Simpsons BR マップ", "pl": "Simpsons Mapa BR", "es-419": "Simpsons Mapa BR", "tr": "Simpsons BR Haritası" }, //used DeepL for translations they may not be correct.
+					"title": "Simpsons BR Map",
+					"image_url": "https://cdn2.unrealengine.com/fortnite-x-the-simpsons-7-3840x2160-5e88ce59a64c.png",
+					"image_urls": {
+						"url_s": "https://cdn2.unrealengine.com/fortnite-x-the-simpsons-7-3840x2160-5e88ce59a64c.png",
+						"url_xs": "https://cdn2.unrealengine.com/fortnite-x-the-simpsons-7-3840x2160-5e88ce59a64c.png",
+						"url_m": "https://cdn2.unrealengine.com/fortnite-x-the-simpsons-7-3840x2160-5e88ce59a64c.png",
+						"url": "https://cdn2.unrealengine.com/fortnite-x-the-simpsons-7-3840x2160-5e88ce59a64c.png"
+					},
+					"lobby_background_image_urls": {
+						"url": "https://cdn2.unrealengine.com/mkart-ch6ms2-lobbybg-plate-4098x2048-c51669ab5daa.jpg"
+					},
+				});
 			}
 			return res.json(discoveryv2);
 		}
@@ -530,9 +530,22 @@ module.exports = {
 			parentLinks: [],
 			links: {}
 		}
-		if(versionGlobal >= 39){
+		if (version >= 33.00) {
+			playlistActive(discoveryv2, "set_figment_playlists", true, false)
+			addPlaylistOverwrite(discoveryv2, "figment", version)
+		}
+		if (version >= 30.20) { playlistActive(discoveryv2, "set_blastberry_playlists", true, false) }
+		if (version >= 36.10) { playlistActive(discoveryv2, "set_forbiddenfruit_nobuild_playlists", true, false) }
+		if (version >= 37.31) { playlistActive(discoveryv2, "playlist_stridemice", true, false) }
+		if (playlistManager[version]) { playlistManager[version].forEach(playlist => playlistActive(discoveryv2, playlist, true, false)) }
+		if (version >= 38.11) {
+			updateMetadata(discoveryv2, "ref_panel_byepicfeeder_1", {
+				ref_id: "CreativeDiscoverySurface_FrontendV2:ByEpicFeeder"
+			});
+		}
+		if (versionGlobal >= 39) {
 			updateMetadata(discoveryv2, "playlist_defaultsolo", {
-				"alt_title" : { "en": "CH7 BR Map", "de": "CH7 BR Kaart", "ru": "CH7 BR Карта", "ko": "CH7 BR 지도", "pt-BR": "Mapa CH7 BR", "en": "CH7 BR Map", "it": "CH7 Mappa BR", "fr": "CH7 Carte BR", "zh-CN": "", "es": "CH7 Mapa BR", "es-MX": "CH7 Mapa BR", "zh": "", "ar":"CH7 BR خريطة", "zh-Hant": "", "ja": "CH7 BR マップ", "pl": "CH7 Mapa BR", "es-419": "CH7 Mapa BR", "tr": "CH7 BR Haritası"}, 	//used DeepL for translations they may not be correct.
+				"alt_title": { "en": "CH7 BR Map", "de": "CH7 BR Kaart", "ru": "CH7 BR Карта", "ko": "CH7 BR 지도", "pt-BR": "Mapa CH7 BR", "en": "CH7 BR Map", "it": "CH7 Mappa BR", "fr": "CH7 Carte BR", "zh-CN": "", "es": "CH7 Mapa BR", "es-MX": "CH7 Mapa BR", "zh": "", "ar": "CH7 BR خريطة", "zh-Hant": "", "ja": "CH7 BR マップ", "pl": "CH7 Mapa BR", "es-419": "CH7 Mapa BR", "tr": "CH7 BR Haritası" }, 	//used DeepL for translations they may not be correct.
 				"title": "CH7 BR Map",
 				"image_urls": {
 					"url_s": "https://cms-assets.unrealengine.com/cm6l5gfpm05kr07my04cqgy2x/cmigg1t1l089n07nam0q9jd8b",
@@ -543,7 +556,7 @@ module.exports = {
 			});
 
 			updateMetadata(discoveryv2, "playlist_defaultduo", {
-				"alt_title" : {"en":"CH6 BR Map","de":"CH6 BR Kaart","ru":"CH6 BR Карта","ko":"CH6 BR 지도","pt-BR":"Mapa CH7 BR","it":"CH6 Mappa BR","fr":"CH6 Carte BR","zh-CN":"","es":"CH6 Mapa BR","es-MX":"CH6 Mapa BR","zh":"","ar":"CH6 BR خريطة","zh-Hant":"","ja":"CH6 BR マップ","pl":"CH6 Mapa BR","es-419":"CH6 Mapa BR","tr":"CH6 BR Haritası"},//used DeepL for translations they may not be correct.
+				"alt_title": { "en": "CH6 BR Map", "de": "CH6 BR Kaart", "ru": "CH6 BR Карта", "ko": "CH6 BR 지도", "pt-BR": "Mapa CH7 BR", "it": "CH6 Mappa BR", "fr": "CH6 Carte BR", "zh-CN": "", "es": "CH6 Mapa BR", "es-MX": "CH6 Mapa BR", "zh": "", "ar": "CH6 BR خريطة", "zh-Hant": "", "ja": "CH6 BR マップ", "pl": "CH6 Mapa BR", "es-419": "CH6 Mapa BR", "tr": "CH6 BR Haritası" },//used DeepL for translations they may not be correct.
 				"title": "CH6 BR Map",
 				"image_url": "https://cdn2.unrealengine.com/fortnite-battle-royale-chapter-6-season-1-hunters-modern-1920x1080-8ec1a8791b58.jpg",
 				"image_urls": {
@@ -558,7 +571,7 @@ module.exports = {
 			});
 
 			updateMetadata(discoveryv2, "playlist_trios", {
-				"alt_title" : {"en":"Simpsons BR Map","de":"Simpsons BR Kaart","ru":"Simpsons BR Карта","ko":"Simpsons BR 지도","pt-BR":"Mapa Simpsons BR","it":"Simpsons Mappa BR","fr":"Simpsons Carte BR","zh-CN":"","es":"Simpsons Mapa BR","es-MX":"Simpsons Mapa BR","zh":"","ar":"Simpsons BR خريطة","zh-Hant":"","ja":"Simpsons BR マップ","pl":"Simpsons Mapa BR","es-419":"Simpsons Mapa BR","tr":"Simpsons BR Haritası"}, 	//used DeepL for translations they may not be correct.
+				"alt_title": { "en": "Simpsons BR Map", "de": "Simpsons BR Kaart", "ru": "Simpsons BR Карта", "ko": "Simpsons BR 지도", "pt-BR": "Mapa Simpsons BR", "it": "Simpsons Mappa BR", "fr": "Simpsons Carte BR", "zh-CN": "", "es": "Simpsons Mapa BR", "es-MX": "Simpsons Mapa BR", "zh": "", "ar": "Simpsons BR خريطة", "zh-Hant": "", "ja": "Simpsons BR マップ", "pl": "Simpsons Mapa BR", "es-419": "Simpsons Mapa BR", "tr": "Simpsons BR Haritası" }, 	//used DeepL for translations they may not be correct.
 				"title": "Simpsons BR Map",
 				"image_url": "https://cdn2.unrealengine.com/fortnite-x-the-simpsons-7-3840x2160-5e88ce59a64c.png",
 				"image_urls": {
@@ -664,15 +677,15 @@ function playlistActive(discovery, mnemonic, bIsActive, bIsDisabled) {
  * @param {any} metadata
 **/
 function addPlaylistOverwrite(discovery, gamemode, version) {
-	if(gamemode === "figment"){
-		if(version >= 33.00 && version <= 33.20){seasonNumber = 1}
-		else if(version >= 33.30 && version <= 34.10){seasonNumber = 2}
-		else if(version >= 34.20 && version <= 35.20){seasonNumber = 3}
-		else if(version >= 36.00 && version <= 36.30){seasonNumber = 4}
-		else if(version >= 37.00 && version <= 37.31){seasonNumber = 5}
-		else if(version >= 37.40 && version <= 39.00){seasonNumber = 6}
-		else if(version >= 39.10){seasonNumber = 7}
-		else{return}
+	if (gamemode === "figment") {
+		if (version >= 33.00 && version <= 33.20) { seasonNumber = 1 }
+		else if (version >= 33.30 && version <= 34.10) { seasonNumber = 2 }
+		else if (version >= 34.20 && version <= 35.20) { seasonNumber = 3 }
+		else if (version >= 36.00 && version <= 36.30) { seasonNumber = 4 }
+		else if (version >= 37.00 && version <= 37.31) { seasonNumber = 5 }
+		else if (version >= 37.40 && version <= 39.00) { seasonNumber = 6 }
+		else if (version >= 39.10) { seasonNumber = 7 }
+		else { return }
 		const overwrite = loadJSON(`../discovery/mnemonic_overwrite/figment/season${seasonNumber}.json`);
 		updateMetadata(discovery, "set_figment_playlists", overwrite);
 	}
@@ -686,9 +699,9 @@ function addPlaylistOverwrite(discovery, gamemode, version) {
  * @param {any} metadata
 **/
 function updateMetadata(discovery, mnemonic, metadata) {
-    const findPlaylist = discovery.find(i => i.mnemonic === mnemonic);
-    if (!findPlaylist) return;
-    Object.assign(findPlaylist.metadata, metadata);
+	const findPlaylist = discovery.find(i => i.mnemonic === mnemonic);
+	if (!findPlaylist) return;
+	Object.assign(findPlaylist.metadata, metadata);
 }
 
 const playlistManager = {
