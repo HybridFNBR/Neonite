@@ -212,6 +212,7 @@ module.exports.routes = {
         skipAssets: false
     },
     'GET /api/content/v2/link/:linkId/cooked-content-package': 'ApiController.contentLinkPackage',
+    'GET /api/content/v4/link/:linkId/cooked-content-package': 'ApiController.contentLinkPackage',
     'GET /valkyrie/cooked-content/:projectId/:fnVersion/:v/:cookJob/alt/ChunksV4/:chunknum/:chunkFile': {
         controller: 'ApiController',
         action: 'cookedContentChunk',
