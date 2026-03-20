@@ -373,7 +373,7 @@ module.exports = {
 					stats(accountId, athenprofile, config, versionGlobal);
 					winterFest(accountId, athenprofile);
 					if (versionGlobal >= 33) { seasonPass(accountId, athenprofile, version, versionGlobal); }
-					for (const [questId, quest] of Object.entries(miniPassData)) {Profile.addItem(athenprofile, questId, quest)}
+					for (const [questId, quest] of Object.entries(miniPassData)) { Profile.addItem(athenprofile, questId, quest) }
 					if (version >= 28.00) { MPLockerLoadout(accountId, athenprofile); }
 					if (version <= 4.5 || VersionFilter.includes(versionGlobal || version)) { CH1Fix(accountId, athenprofile); }
 					Profile.bumpRvn(athenprofile);
@@ -921,6 +921,29 @@ module.exports = {
 				break;
 			}
 
+			case "SetFactionChoice": {
+				Profile.addItem(athenprofile, req.body["factionTokenTemplateId"], {
+					attributes: {
+						"level": 1,
+					},
+					"templateId": req.body["factionTokenTemplateId"],
+					"quantity": 1
+				});
+				Profile.bumpRvn(athenprofile);
+				Profile.saveProfile(accountId, "athena", athenprofile)
+				response.profileChanges[0] = {
+					"changeType": "itemAdded",
+					"itemId": req.body["factionTokenTemplateId"],
+					"item": {
+						"templateId": req.body["factionTokenTemplateId"],
+						"attributes": {
+							"level": 1
+						},
+						"quantity": 1
+					}
+				}
+				break;
+			}
 
 			default: {
 				return next(new ApiException(errors.com.epicgames.fortnite.operation_not_found).with(req.params.command));

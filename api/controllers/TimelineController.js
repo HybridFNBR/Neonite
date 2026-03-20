@@ -657,6 +657,29 @@ module.exports = {
                 */
             ],
 
+            "40.00|40.10|40.20|40.30":[
+                "EventFlag.Event_Rivals_Act_01", //Showdown Act1
+                "EventFlag.Event_Rivals_Act_02", //Showdown Act2
+                "EventFlag.Event_Rivals_Act_03", //Showdown Act3
+                "EventFlag.Event_Rivals_Gate_01", //Showdown Act1 Mid
+                "EventFlag.Event_Rivals_Gate_02", //Showdown Act1 End
+                "EventFlag.Event_Rivals_Gate_03", //Showdown Act2 Mid
+                "EventFlag.Event_Rivals_Gate_04", //Showdown Act2 End
+                "EventFlag.Event_Rivals_Gate_05", //Showdown Act3 End
+                "EventFlag.Event_Rivals_MS_00", //Showdown Milestone 1
+                "EventFlag.Event_Rivals_MS_01", //Showdown Milestone 2
+                "EventFlag.Event_Rivals_MS_02", //Showdown Milestone 3
+                "EventFlag.Event_Rivals_MS_03", //Showdown Milestone 4
+                "EventFlag.Event_Rivals_MS_04", //Showdown Milestone 5
+                "EventFlag.Event_Rivals_MS_05", //Showdown Milestone 6
+                "EventFlag.Event_Rivals_MS_06", //Showdown Milestone 7
+                "EventFlag.Event_Rivals_MS_07", //Showdown Milestone 8
+                "EventFlag.Event_Rivals_MS_08", //Showdown Milestone 9
+                "EventFlag.Event_Rivals_MS_09", //Showdown Milestone 10
+                "EventFlag.Event_Rivals_MS_10", //Showdown Milestone 11
+                "EventFlag.Event_Rivals_MS_11" //Showdown Milestone 12
+            ]
+
         })
 
         for (const key in versionEventFlags) {

@@ -1108,6 +1108,39 @@ module.exports = {
 		})
 	},
 
+	heraMesh: function (req, res) {
+		res.json({
+			"SpecialEventScriptMeshActorData": {},
+			"MeshNetworkedEvent.Clash.FactionB": {
+				"metadataStructName": "MeshNetworkedEventMetadata",
+				"metadataStructData": {
+					"requiredValue": 2000000000,
+					"bHasInitialized": true,
+					"bHasCompleted": false,
+					"currentValue": 2000000000
+				}
+			},
+			"MeshNetworkedEvent.Clash.FactionA": {
+				"metadataStructName": "MeshNetworkedEventMetadata",
+				"metadataStructData": {
+					"requiredValue": 2000000000,
+					"bHasInitialized": true,
+					"bHasCompleted": false,
+					"currentValue": 2000000000
+				}
+			},
+			"MeshNetworkedEvent.FactionDuelVictory": {
+				"metadataStructName": "MeshNetworkedEventMetadata",
+				"metadataStructData": {
+					"requiredValue": 4000000000,
+					"bHasInitialized": true,
+					"bHasCompleted": false,
+					"currentValue": 4000000000
+				}
+			}
+		})
+	},
+
 	okStatus: function (req, res) {
 		res.status(200).end()
 	},
@@ -1122,7 +1155,7 @@ module.exports = {
 			}
 		}
 		res.status(204).end()
-	}
+	},
 
 
 
