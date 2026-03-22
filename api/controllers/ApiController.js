@@ -1116,7 +1116,7 @@ module.exports = {
 				"metadataStructData": {
 					"requiredValue": 2000000000,
 					"bHasInitialized": true,
-					"bHasCompleted": false,
+					"bHasCompleted": true,
 					"currentValue": 2000000000
 				}
 			},
@@ -1125,7 +1125,7 @@ module.exports = {
 				"metadataStructData": {
 					"requiredValue": 2000000000,
 					"bHasInitialized": true,
-					"bHasCompleted": false,
+					"bHasCompleted": true,
 					"currentValue": 2000000000
 				}
 			},
@@ -1134,9 +1134,22 @@ module.exports = {
 				"metadataStructData": {
 					"requiredValue": 4000000000,
 					"bHasInitialized": true,
-					"bHasCompleted": false,
+					"bHasCompleted": true,
 					"currentValue": 4000000000
 				}
+			}
+		})
+	},
+
+	artemisMesh: function(req, res){
+		res.json({
+			"NightNightFrontend":{
+				"AreWeGettingSleepy": "VeryVerySleepyUwU",
+				"HasDaddyTuckedUsIn": false,
+				"ForcedPlaylist": false,
+				"Splines":[
+					"C624A3D18A8A2494288EE915D11518B7:/q+bDo9akBx2JId6QvLQW1YoN4jBEEn+QdzBXjB3OpQ="
+				]
 			}
 		})
 	},

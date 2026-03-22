@@ -239,5 +239,6 @@ module.exports.routes = {
     'POST /api/v1/fortnite-br/channel/interstitials/target': 'ApiController.noContent',
     'GET /api/v1/players/Fortnite/tokens': 'ApiController.playerTokens',
     'GET /api/community/v1/fn-client/community-highlights': 'ApiController.noContent',
-    'GET /mesh/Fortnite/Fortnite.Hera_Terrain.51188288/metadata': 'ApiController.heraMesh'
+    'GET /mesh/Fortnite/Fortnite.Hera_Terrain.51188288/metadata': 'ApiController.heraMesh',
+    'GET /mesh/Fortnite/Fortnite.Artemis_Terrain.22935214/metadata' : 'ApiController.artemisMesh',
 };
