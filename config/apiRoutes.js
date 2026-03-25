@@ -174,43 +174,6 @@ module.exports.routes = {
     'POST /api/v1/fortnite-br/channel/motd/target': 'FortniteGameController.motdTarget',
     'POST /api/v1/fortnite-br/interactions/contentHash': 'FortniteGameController.contentHash',
     'GET /fortnite/api/calendar/v1/timeline': 'TimelineController.timeline',
-    'GET /api/locker/v3/:deploymentId/account/:accountId/items': 'LockerController.lockerv3',
-    'PUT /api/locker/v3/:deploymentId/loadout/:loadoutType/account/:accountId/:loadout': {
-        action: "lockerLoadoutV3",
-        controller: 'LockerController',
-        skipAssets: false
-    },
-    'PUT /api/locker/v3/:deploymentId/loadout/:loadoutType/account/:accountId/loadout-preset/index/:presetIndex': {
-        action: "lockerPresetV3",
-        controller: 'LockerController',
-        skipAssets: false
-    },
-    'GET /api/locker/v4/:deploymentId/account/:accountId/items': 'LockerController.lockerv4',
-    'PUT /api/locker/v4/:deploymentId/account/:accountId/active-loadout-group': {
-        action: "lockerLoadoutV4",
-        controller: 'LockerController',
-        skipAssets: false
-    },
-    'PUT /api/locker/v4/:deploymentId/account/:accountId/loadout-group-preset/index/:presetIndex': {
-        action: "lockerGroupPresetV4",
-        controller: 'LockerController',
-        skipAssets: false
-    },
-    'PUT /api/locker/v4/:deploymentId/loadout/:loadoutType/account/:accountId/loadout-preset/index/:presetIndex': {
-        action: "lockerPresetV4",
-        controller: 'LockerController',
-        skipAssets: false
-    },
-    'POST /api/locker/v4/:deploymentId/account/:accountId/lock-in-immutable-item/:companion': {
-        action: "lockerImmutableItem",
-        controller: 'LockerController',
-        skipAssets: false
-    },
-    'PATCH /api/locker/v4/:deploymentId/account/:accountId/companion-name': {
-        action: "lockerCompanionName",
-        controller: 'LockerController',
-        skipAssets: false
-    },
     'GET /api/content/v2/link/:linkId/cooked-content-package': 'ApiController.contentLinkPackage',
     'GET /api/content/v4/link/:linkId/cooked-content-package': 'ApiController.contentLinkPackage',
     'GET /valkyrie/cooked-content/:projectId/:fnVersion/:v/:cookJob/alt/ChunksV4/:chunknum/:chunkFile': {

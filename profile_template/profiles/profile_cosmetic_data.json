@@ -1,0 +1,135 @@
+{
+  "cosmeticItems": [
+    {
+      "templateId": "AthenaCharacter:CID_001_Athena_Commando_F_Default",
+      "cosmeticItemId": "AthenaCharacter:CID_001_Athena_Commando_F_Default",
+      "athenaItemId": "d45a9b27-0587-4c42-8ea7-aa5626d37425",
+      "creationTime": "2024-09-09T20:57:09.477Z",
+      "updatedTime": "2025-06-15T23:29:59.446521080Z",
+      "activeVariants": {}
+    },
+    {
+      "templateId": "AthenaCharacter:CID_002_Athena_Commando_F_Default",
+      "cosmeticItemId": "AthenaCharacter:CID_002_Athena_Commando_F_Default",
+      "athenaItemId": "d45a9b27-0587-4c42-8ea7-aa5624d37425",
+      "creationTime": "2024-09-09T20:57:09.477Z",
+      "updatedTime": "2025-06-15T23:29:59.446521080Z",
+      "activeVariants": {}
+    },
+    {
+      "templateId": "AthenaCharacter:CID_003_Athena_Commando_F_Default",
+      "cosmeticItemId": "AthenaCharacter:CID_003_Athena_Commando_F_Default",
+      "athenaItemId": "d45a9b27-0587-4c42-8aa7-aa5624d37425",
+      "creationTime": "2024-09-09T20:57:09.477Z",
+      "updatedTime": "2025-06-15T23:29:59.446521080Z",
+      "activeVariants": {}
+    },
+    {
+      "templateId": "AthenaCharacter:CID_004_Athena_Commando_F_Default",
+      "cosmeticItemId": "AthenaCharacter:CID_004_Athena_Commando_F_Default",
+      "athenaItemId": "d45a9b27-0587-4c42-4aa7-aa5624d37425",
+      "creationTime": "2024-09-09T20:57:09.477Z",
+      "updatedTime": "2025-06-15T23:29:59.446521080Z",
+      "activeVariants": {}
+    },
+    {
+      "templateId": "AthenaCharacter:CID_005_Athena_Commando_M_Default",
+      "cosmeticItemId": "AthenaCharacter:CID_005_Athena_Commando_M_Default",
+      "athenaItemId": "d45a9b27-0587-4c42-4fa7-aa5624d37425",
+      "creationTime": "2024-09-09T20:57:09.477Z",
+      "updatedTime": "2025-06-15T23:29:59.446521080Z",
+      "activeVariants": {}
+    },
+    {
+      "templateId": "AthenaCharacter:CID_006_Athena_Commando_M_Default",
+      "cosmeticItemId": "AthenaCharacter:CID_006_Athena_Commando_M_Default",
+      "athenaItemId": "d45a9b27-0387-4c42-4fa8-aa5624d37425",
+      "creationTime": "2024-09-09T20:57:09.477Z",
+      "updatedTime": "2025-06-15T23:29:59.446521080Z",
+      "activeVariants": {}
+    },
+    {
+      "templateId": "AthenaCharacter:CID_007_Athena_Commando_M_Default",
+      "cosmeticItemId": "AthenaCharacter:CID_007_Athena_Commando_M_Default",
+      "athenaItemId": "d45a9b27-0387-4c42-7fa8-aa5624d37425",
+      "creationTime": "2024-09-09T20:57:09.477Z",
+      "updatedTime": "2025-06-15T23:29:59.446521080Z",
+      "activeVariants": {}
+    },
+    {
+      "templateId": "AthenaCharacter:CID_556_Athena_Commando_F_RebirthDefaultA",
+      "cosmeticItemId": "AthenaCharacter:CID_556_Athena_Commando_F_RebirthDefaultA",
+      "athenaItemId": "d45a9b27-0389-4c42-7fa8-aa5624d37425",
+      "creationTime": "2024-09-09T20:57:09.477Z",
+      "updatedTime": "2025-06-15T23:29:59.446521080Z",
+      "activeVariants": {}
+    },
+    {
+      "templateId": "AthenaCharacter:CID_557_Athena_Commando_F_RebirthDefaultB",
+      "cosmeticItemId": "AthenaCharacter:CID_557_Athena_Commando_F_RebirthDefaultB",
+      "athenaItemId": "d45a9b27-4389-4c42-7fa8-aa5624d37425",
+      "creationTime": "2024-09-09T20:57:09.477Z",
+      "updatedTime": "2025-06-15T23:29:59.446521080Z",
+      "activeVariants": {}
+    },
+    {
+      "templateId": "AthenaCharacter:CID_558_Athena_Commando_F_RebirthDefaultC",
+      "cosmeticItemId": "AthenaCharacter:CID_558_Athena_Commando_F_RebirthDefaultC",
+      "athenaItemId": "d45a9b57-4389-4c42-7fa8-aa5624d37425",
+      "creationTime": "2024-09-09T20:57:09.477Z",
+      "updatedTime": "2025-06-15T23:29:59.446521080Z",
+      "activeVariants": {}
+    },
+    {
+      "templateId": "AthenaCharacter:CID_559_Athena_Commando_F_RebirthDefaultD",
+      "cosmeticItemId": "AthenaCharacter:CID_559_Athena_Commando_F_RebirthDefaultD",
+      "athenaItemId": "d45a9b57-4389-4c42-7fa8-aa5624d37425",
+      "creationTime": "2424-09-09T20:57:09.477Z",
+      "updatedTime": "2025-06-15T23:29:59.446521080Z",
+      "activeVariants": {}
+    },
+    {
+      "templateId": "AthenaCharacter:CID_560_Athena_Commando_M_RebirthDefaultA",
+      "cosmeticItemId": "AthenaCharacter:CID_560_Athena_Commando_M_RebirthDefaultA",
+      "athenaItemId": "d45a9b57-4389-4c42-7fa8-aa5624d37425",
+      "creationTime": "3424-09-09T20:57:09.477Z",
+      "updatedTime": "2025-06-15T23:29:59.446521080Z",
+      "activeVariants": {}
+    },
+    {
+      "templateId": "AthenaPickaxe:DefaultPickaxe",
+      "cosmeticItemId": "AthenaPickaxe:DefaultPickaxe",
+      "athenaItemId": "d45a9z57-4389-4c42-7fz8-aa5624d37425",
+      "creationTime": "3424-09-09T20:57:09.477Z",
+      "updatedTime": "2025-06-15T23:29:59.446521080Z",
+      "activeVariants": {}
+    },
+    {
+      "templateId": "AthenaGlider:DefaultGlider",
+      "cosmeticItemId": "AthenaGlider:DefaultGlider",
+      "athenaItemId": "d45a9z57-4370-4c82-7fz8-aa5624d37425",
+      "creationTime": "3424-09-09T20:57:09.477Z",
+      "updatedTime": "2025-06-15T23:29:59.446521080Z",
+      "activeVariants": {}
+    },
+    {
+      "templateId": "AthenaDance:EID_DanceMoves",
+      "cosmeticItemId": "AthenaDance:EID_DanceMoves",
+      "athenaItemId": "d45a9z57-4375-4c82-7fz8-aa5624d37425",
+      "creationTime": "3424-09-09T20:57:09.477Z",
+      "updatedTime": "2025-06-15T23:29:59.446521080Z",
+      "activeVariants": {}
+    },
+    {
+      "templateId": "AthenaDance:EID_BoogieDown",
+      "cosmeticItemId": "AthenaDance:EID_BoogieDown",
+      "athenaItemId": "d45a9z57-4377-4c82-7fz8-aa5624d37425",
+      "creationTime": "3424-09-09T20:57:09.477Z",
+      "updatedTime": "2025-06-15T23:29:59.446521080Z",
+      "activeVariants": {}
+    }
+  ],
+  "cosmeticItemAccessTokens": [],
+  "requestTime": "2026-03-25T16:23:46.720841471Z",
+  "nextToken": "REMOVED DUE TO NOT KNOWING WHAT ITS CURRENTLY FOR."
+}
