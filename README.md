@@ -11,6 +11,7 @@
 
 <!-- ABOUT NEONITEV2 -->
 This Repo Serves as a continuation to support/maintain the Neonite V2 Project made by [Kemo](https://github.com/kem0x) for older and newer versions of Fortnite, Neonite Currently Supports 1.7.2 upto latest. 
+_Neonite is maintained with [Carbon](https://discord.com/invite/X525zyJtaU) in mind, i also recommend you install the latest node version and not LTS to avoid issues when trying to run Neonite_
 
 ## About Neonite V2
 
