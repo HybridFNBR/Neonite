@@ -132,5 +132,9 @@ module.exports = {
 		res.json({
 			blockedUsers: []
 		})
+	},
+
+	createParty: function(req, res){
+		res.status(204)
 	}
 }

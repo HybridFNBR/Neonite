@@ -36,4 +36,5 @@ module.exports.routes = {
         controller: 'LockerController',
         skipAssets: false
     },
+    'GET /api/locker/v4/:deploymentId/account/:accountId/cosmetic-data': 'LockerController.cosmeticData',
 }

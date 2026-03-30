@@ -340,5 +340,31 @@ module.exports = {
 		companionName.active = req.body.companionName
 		Profile.saveProfile(req.params.accountId, "athena", athenaProfile)
 		res.status(204).end()
+	},
+
+	cosmeticData: async function(req, res){
+		var accountId = req.params.accountId;
+		const getOrCreateCosmeticData = () => {
+			var cosmeticData = Profile.readProfile(accountId, "cosmetic_data");
+			if (!cosmeticData) {
+				NeoLog.Error(`Cosmetic Data Not Found for Account: ${accountId}, creating new Cosmetic Data`);
+				cosmeticData = Profile.readProfileTemplate("cosmetic_data");
+				if (!cosmeticData) {
+					NeoLog.Error("An Error Occured Trying To Read Cosmetic Data")
+				}
+				try {
+					fs.mkdirSync(`./profile/${accountId}/profiles`, { recursive: true });
+					Profile.saveProfile(accountId, "cosmetic_data", cosmeticData);
+				} catch (e) {
+					NeoLog.Error("Failed creating profile.");
+					throw e;
+				}
+
+			}
+			return res.json(cosmeticData)
+
+		};
+		getOrCreateCosmeticData()
 	}
+
 }

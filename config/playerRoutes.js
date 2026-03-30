@@ -15,6 +15,7 @@ module.exports.routes = {
         controller:'PlayerController', 
         skipAssets: false
     },
+    'ALL /party/api/v1/Fortnite/parties/:partyId/members/:accountId' : 'PlayerController.createParty',
     'GET /friends/api/v1/*/recent/fortnite':{
         action: "recentPlayers",
         controller:'PlayerController', 
