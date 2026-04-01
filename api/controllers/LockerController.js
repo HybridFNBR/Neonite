@@ -361,6 +361,8 @@ module.exports = {
 				}
 
 			}
+			cosmeticData.requestTime = 	new Date().toISOString();
+			delete cosmeticData.nextToken; //temp fix to stop it spamming requests in uefn
 			return res.json(cosmeticData)
 
 		};
