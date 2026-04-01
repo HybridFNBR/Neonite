@@ -677,7 +677,14 @@ module.exports = {
                 "EventFlag.Event_Rivals_MS_08", //Showdown Milestone 9
                 "EventFlag.Event_Rivals_MS_09", //Showdown Milestone 10
                 "EventFlag.Event_Rivals_MS_10", //Showdown Milestone 11
-                "EventFlag.Event_Rivals_MS_11" //Showdown Milestone 12
+                "EventFlag.Event_Rivals_MS_11", //Showdown Milestone 12
+                "DC_Rift_BlindBird",
+                "DC_RiftRotate3"
+            ],
+
+            "40.10":[
+                "EventFlag.Event_Foolnite_Activation", // April Fools 2026
+                "FF_BHMActivate", // April Fools 2026
             ]
 
         })
