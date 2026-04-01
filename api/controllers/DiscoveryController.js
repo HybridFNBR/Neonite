@@ -687,7 +687,8 @@ function addPlaylistOverwrite(discovery, gamemode, version) {
 		else if (version >= 36.00 && version <= 36.30) { seasonNumber = 4 }
 		else if (version >= 37.00 && version <= 37.31) { seasonNumber = 5 }
 		else if (version >= 37.40 && version <= 39.00) { seasonNumber = 6 }
-		else if (version >= 39.10) { seasonNumber = 7 }
+		else if (version >= 39.10 && version <= 40.00) { seasonNumber = 7 }
+		else if (version >= 40.10) { seasonNumber = 8 }
 		else { return }
 		const overwrite = loadJSON(`../discovery/mnemonic_overwrite/figment/season${seasonNumber}.json`);
 		updateMetadata(discovery, "set_figment_playlists", overwrite);
