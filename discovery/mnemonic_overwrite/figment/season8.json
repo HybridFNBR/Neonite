@@ -1,0 +1,98 @@
+{
+    "image_urls": {
+        "url_s": "https://cdn2.unrealengine.com/cdn-uploader-EN_FN_OG_C1S8_40-10_Takeover_DiscoverTile_-480x270-bb08b33f.jpg",
+        "url_m": "https://cdn2.unrealengine.com/cdn-uploader-EN_FN_OG_C1S8_40-10_Takeover_DiscoverTile_-640x360-5f42c89b.jpg",
+        "url": "https://cdn2.unrealengine.com/cdn-uploader-EN_FN_OG_C1S8_40-10_Takeover_DiscoverTile_-1920x1080-42323534.jpg"
+    },
+    "lobby_background_image_urls": {
+        "url": "https://cdn2.unrealengine.com/cdn-uploader-MKARTFNOGC1S8LobbyBG_ltg_v4.1-e405cd4c.jpg"
+    },
+    "image_url": "https://cdn2.unrealengine.com/cdn-uploader-EN_FN_OG_C1S8_40-10_Takeover_DiscoverTile_-1920x1080-42323534.jpg",
+    "alt_image_urls": {
+        "de": {
+            "url_s": "https://cdn2.unrealengine.com/cdn-uploader-DE_FNOG_C1S8_40-10_Screenshot_DiscoverTile_-480x270-c4b178ec.jpg",
+            "url_m": "https://cdn2.unrealengine.com/cdn-uploader-DE_FNOG_C1S8_40-10_Screenshot_DiscoverTile_-640x360-f7f2b336.jpg",
+            "url": "https://cdn2.unrealengine.com/cdn-uploader-DE_FNOG_C1S8_40-10_Screenshot_DiscoverTile_-1920x1080-39ab72e7.jpg"
+        },
+        "ru": {
+            "url_s": "https://cdn2.unrealengine.com/cdn-uploader-RU_FNOG_C1S8_40-10_Screenshot_DiscoverTile_-480x270-ad275fd9.jpg",
+            "url_m": "https://cdn2.unrealengine.com/cdn-uploader-RU_FNOG_C1S8_40-10_Screenshot_DiscoverTile_-640x360-199cde43.jpg",
+            "url": "https://cdn2.unrealengine.com/cdn-uploader-RU_FNOG_C1S8_40-10_Screenshot_DiscoverTile_-1920x1080-362e2a54.jpg"
+        },
+        "ko": {
+            "url_s": "https://cdn2.unrealengine.com/cdn-uploader-KR_FNOG_C1S8_40-10_Screenshot_DiscoverTile_-480x270-60a74721.jpg",
+            "url_m": "https://cdn2.unrealengine.com/cdn-uploader-KR_FNOG_C1S8_40-10_Screenshot_DiscoverTile_-640x360-9ef93002.jpg",
+            "url": "https://cdn2.unrealengine.com/cdn-uploader-KR_FNOG_C1S8_40-10_Screenshot_DiscoverTile_-1920x1080-02b623ce.jpg"
+        },
+        "zh-hant": {
+            "url_s": "https://cdn2.unrealengine.com/cdn-uploader-zhTW_FNOG_C1S8_40-10_Screenshot_DiscoverTile_-480x270-9c38aa56.jpg",
+            "url_m": "https://cdn2.unrealengine.com/cdn-uploader-zhTW_FNOG_C1S8_40-10_Screenshot_DiscoverTile_-640x360-0ee12fe4.jpg",
+            "url": "https://cdn2.unrealengine.com/cdn-uploader-zhTW_FNOG_C1S8_40-10_Screenshot_DiscoverTile_-1920x1080-e5d05888.jpg"
+        },
+        "pt-BR": {
+            "url_s": "https://cdn2.unrealengine.com/cdn-uploader-PT-BR_FNOG_C1S8_40-10_Screenshot_DiscoverTile_-480x270-02936e2d.jpg",
+            "url_m": "https://cdn2.unrealengine.com/cdn-uploader-PT-BR_FNOG_C1S8_40-10_Screenshot_DiscoverTile_-640x360-f5b50b8c.jpg",
+            "url": "https://cdn2.unrealengine.com/cdn-uploader-PT-BR_FNOG_C1S8_40-10_Screenshot_DiscoverTile_-1920x1080-c32b9897.jpg"
+        },
+        "zh-hans": {
+            "url_s": "https://cdn2.unrealengine.com/cdn-uploader-zhCN_FNOG_C1S8_40-10_Screenshot_DiscoverTile_-480x270-8c95c06d.jpg",
+            "url_m": "https://cdn2.unrealengine.com/cdn-uploader-zhCN_FNOG_C1S8_40-10_Screenshot_DiscoverTile_-640x360-1fe3c3bc.jpg",
+            "url": "https://cdn2.unrealengine.com/cdn-uploader-zhCN_FNOG_C1S8_40-10_Screenshot_DiscoverTile_-1920x1080-459613cc.jpg"
+        },
+        "it": {
+            "url_s": "https://cdn2.unrealengine.com/cdn-uploader-IT_FNOG_C1S8_40-10_Screenshot_DiscoverTile_-480x270-daf28e78.jpg",
+            "url_m": "https://cdn2.unrealengine.com/cdn-uploader-IT_FNOG_C1S8_40-10_Screenshot_DiscoverTile_-640x360-496bbc48.jpg",
+            "url": "https://cdn2.unrealengine.com/cdn-uploader-IT_FNOG_C1S8_40-10_Screenshot_DiscoverTile_-1920x1080-9e05ec39.jpg"
+        },
+        "fr": {
+            "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FR_FNOG_C1S8_40-10_Screenshot_DiscoverTile_-480x270-e7d59d40.jpg",
+            "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FR_FNOG_C1S8_40-10_Screenshot_DiscoverTile_-640x360-d6a957e1.jpg",
+            "url": "https://cdn2.unrealengine.com/cdn-uploader-FR_FNOG_C1S8_40-10_Screenshot_DiscoverTile_-1920x1080-64a39618.jpg"
+        },
+        "es": {
+            "url_s": "https://cdn2.unrealengine.com/cdn-uploader-ES-ES_FNOG_C1S8_40-10_Screenshot_DiscoverTile_-480x270-745ba351.jpg",
+            "url_m": "https://cdn2.unrealengine.com/cdn-uploader-ES-ES_FNOG_C1S8_40-10_Screenshot_DiscoverTile_-640x360-a52c4f30.jpg",
+            "url": "https://cdn2.unrealengine.com/cdn-uploader-ES-ES_FNOG_C1S8_40-10_Screenshot_DiscoverTile_-1920x1080-7bbd2079.jpg"
+        },
+        "ar": {
+            "url_s": "https://cdn2.unrealengine.com/cdn-uploader-AR_FNOG_C1S8_40-10_Screenshot_DiscoverTile_-480x270-3a9f30aa.jpg",
+            "url_m": "https://cdn2.unrealengine.com/cdn-uploader-AR_FNOG_C1S8_40-10_Screenshot_DiscoverTile_-640x360-ff91cfa0.jpg",
+            "url": "https://cdn2.unrealengine.com/cdn-uploader-AR_FNOG_C1S8_40-10_Screenshot_DiscoverTile_-1920x1080-2b99993b.jpg"
+        },
+        "vi": {
+            "url_s": "https://cdn2.unrealengine.com/cdn-uploader-VI_FNOG_C1S8_40-10_Screenshot_DiscoverTile_-480x270-3bc8d60f.jpg",
+            "url_m": "https://cdn2.unrealengine.com/cdn-uploader-VI_FNOG_C1S8_40-10_Screenshot_DiscoverTile_-640x360-a10166ee.jpg",
+            "url": "https://cdn2.unrealengine.com/cdn-uploader-VI_FNOG_C1S8_40-10_Screenshot_DiscoverTile_-1920x1080-0285a971.jpg"
+        },
+        "th": {
+            "url_s": "https://cdn2.unrealengine.com/cdn-uploader-TH_FNOG_C1S8_40-10_Screenshot_DiscoverTile_-480x270-6a017753.jpg",
+            "url_m": "https://cdn2.unrealengine.com/cdn-uploader-TH_FNOG_C1S8_40-10_Screenshot_DiscoverTile_-640x360-cb0c292b.jpg",
+            "url": "https://cdn2.unrealengine.com/cdn-uploader-TH_FNOG_C1S8_40-10_Screenshot_DiscoverTile_-1920x1080-70289c22.jpg"
+        },
+        "ja": {
+            "url_s": "https://cdn2.unrealengine.com/cdn-uploader-JP_FNOG_C1S8_40-10_Screenshot_DiscoverTile_-480x270-4d7e94c7.jpg",
+            "url_m": "https://cdn2.unrealengine.com/cdn-uploader-JP_FNOG_C1S8_40-10_Screenshot_DiscoverTile_-640x360-05526203.jpg",
+            "url": "https://cdn2.unrealengine.com/cdn-uploader-JP_FNOG_C1S8_40-10_Screenshot_DiscoverTile_-1920x1080-60ac7449.jpg"
+        },
+        "id": {
+            "url_s": "https://cdn2.unrealengine.com/cdn-uploader-ID_FNOG_C1S8_40-10_Screenshot_DiscoverTile_-480x270-ec9a1c49.jpg",
+            "url_m": "https://cdn2.unrealengine.com/cdn-uploader-ID_FNOG_C1S8_40-10_Screenshot_DiscoverTile_-640x360-d26fab87.jpg",
+            "url": "https://cdn2.unrealengine.com/cdn-uploader-ID_FNOG_C1S8_40-10_Screenshot_DiscoverTile_-1920x1080-ada1105e.jpg"
+        },
+        "pl": {
+            "url_s": "https://cdn2.unrealengine.com/cdn-uploader-PL_FNOG_C1S8_40-10_Screenshot_DiscoverTile_-480x270-402a1cdd.jpg",
+            "url_m": "https://cdn2.unrealengine.com/cdn-uploader-PL_FNOG_C1S8_40-10_Screenshot_DiscoverTile_-640x360-c3d3bba8.jpg",
+            "url": "https://cdn2.unrealengine.com/cdn-uploader-PL_FNOG_C1S8_40-10_Screenshot_DiscoverTile_-1920x1080-7c6d40ea.jpg"
+        },
+        "es-419": {
+            "url_s": "https://cdn2.unrealengine.com/cdn-uploader-ES-MX_FNOG_C1S8_40-10_Screenshot_DiscoverTile_-480x270-bd37f2d7.jpg",
+            "url_m": "https://cdn2.unrealengine.com/cdn-uploader-ES-MX_FNOG_C1S8_40-10_Screenshot_DiscoverTile_-640x360-d4086191.jpg",
+            "url": "https://cdn2.unrealengine.com/cdn-uploader-ES-MX_FNOG_C1S8_40-10_Screenshot_DiscoverTile_-1920x1080-eb2a2ee3.jpg"
+        },
+        "tr": {
+            "url_s": "https://cdn2.unrealengine.com/cdn-uploader-TR_FNOG_C1S8_40-10_Screenshot_DiscoverTile_-480x270-46553e18.jpg",
+            "url_m": "https://cdn2.unrealengine.com/cdn-uploader-TR_FNOG_C1S8_40-10_Screenshot_DiscoverTile_-640x360-fd9e795c.jpg",
+            "url": "https://cdn2.unrealengine.com/cdn-uploader-TR_FNOG_C1S8_40-10_Screenshot_DiscoverTile_-1920x1080-262a2a13.jpg"
+        }
+    }
+}
