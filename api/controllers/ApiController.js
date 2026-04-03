@@ -186,7 +186,7 @@ module.exports = {
 		})
 	},
 
-	FrontendAssets: function (req, res) {
+	dataAsset: function (req, res) {
 		const { versionGlobal, version } = getVersionInfo(req);
 		const FrontendAssets = loadJSON('../responses/FortniteAssets.json');
 		const FortniteGameConfig = loadJSON('../FortniteGameConfig.json');
@@ -255,6 +255,10 @@ module.exports = {
 			}
 		}
 		res.json(FrontendAssets)
+	},
+
+	dataAssetFortPlaylist: function(req, res){
+		return res.status(204).end()
 	},
 
 	catalog: function (req, res) {
