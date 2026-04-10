@@ -26,7 +26,7 @@ async function compareAndUpdateKeychain() {
         NeoLog.Debug(`Fetched ${missingCount} New Keychains from dillyapis.`);
     }
     else if (response.status !== 200) {
-        NeoLog.Error("Unable to connect to both Fortnite Central and dillyapis! Falling back to existing keychains on your local disk. You may experience issues!");
+        NeoLog.Error("Unable to connect to dillyapis! Falling back to existing keychains on your local disk. You may experience issues!");
     }
 }
 
