@@ -26,28 +26,7 @@ async function compareAndUpdateKeychain() {
         NeoLog.Debug(`Fetched ${missingCount} New Keychains from dillyapis.`);
     }
     else if (response.status !== 200) {
-        NeoLog.warn("Dillyapis is down, falling back to Fortnite Central for the keychain");
-        const fallbackResponse = await axios.get('https://fortnitecentral.genxgames.gg/api/v1/aes', {validateStatus: () => true});
-        if (fallbackResponse.status === 200) {
-            const data = fallbackResponse.data
-            let missingCount = 0;
-            const keychainArray = [];
-
-            for (const keys of data.dynamicKeys) {
-                if (!keychain.includes(keys.keychain)) {
-                    missingCount++;
-                    keychainArray.push(keys.keychain);
-                }
-            }
-            keychain.push(...keychainArray);
-
-            fs.writeFileSync("./responses/keychain.json", JSON.stringify(keychain, null, 2));
-            NeoLog.Debug(`Fetched ${missingCount} New Keychains from Fortnite Central.`);
-        }
-        else 
-        {
-            NeoLog.Error("Unable to connect to both Fortnite Central and dillyapis! Falling back to existing keychains on your local disk. You may experience issues!");
-        }
+        NeoLog.Error("Unable to connect to both Fortnite Central and dillyapis! Falling back to existing keychains on your local disk. You may experience issues!");
     }
 }
 
