@@ -336,6 +336,7 @@ const seasonPass = (accountId, athenprofile, version, versionGlobal) => {
         "s04pass_seasonasset",
         "junoseason05pass_seasonasset",
         "junoseason06pass_seasonasset",
+        "junoseason07pass_seasonasset",
         "sparks_season07_seasonasset",
         "sparks_season08_seasonasset",
         "musicpasss09_seasonasset",
@@ -343,16 +344,21 @@ const seasonPass = (accountId, athenprofile, version, versionGlobal) => {
         "musicpasss11_seasonasset",
         "musicpasss12_seasonasset",
         "musicpasss13_seasonasset",
+        "musicpasss14_seasonasset",
         "safflower_seasondata_seasonasset"
 
     ]
-    if (version == 37.40 || version == 37.50) { //Epic didnt remove the season 5 figment pass
+    if (version >= 37.40) { //Epic didnt remove the season 5 figment pass
         passArray = passArray.filter(item => item !== "figment_s05_passdata_seasonasset")
         delete athenprofile.items["AthenaSeason:figment_s05_passdata_seasonasset"]
     }
-    if (version == 37.50) { //Epic didnt remove the season 10 music pass
+    if (version >= 37.50) { //Epic didnt remove the season 10 music pass
         passArray = passArray.filter(item => item !== "musicpasss10_seasonasset")
         delete athenprofile.items["AthenaSeason:musicpasss10_seasonasset"]
+    }
+    if (version >= 40.20) { //Epic didnt remove the season 13 music pass
+        passArray = passArray.filter(item => item !== "musicpasss13_seasonasset")
+        delete athenprofile.items["AthenaSeason:musicpasss13_seasonasset"]
     }
     passArray.forEach(seasonPass => {
         Profile.addItem(athenprofile, `AthenaSeason:${seasonPass}`, {

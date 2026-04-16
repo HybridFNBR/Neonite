@@ -443,7 +443,7 @@ module.exports = {
 	worldInfo: function (req, res) {
 		const { version, versionGlobal } = getVersionInfo(req);
 		if (version >= 11.00 || versionGlobal >= 11) {
-			res.json(loadJSON("../responses/worldinfo.json"))
+			res.status(404).end()
 		}
 		else {
 			res.json({})

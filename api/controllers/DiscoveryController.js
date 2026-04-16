@@ -257,14 +257,6 @@ module.exports = {
 						"firstPage": {
 							"results": [
 								{
-									"linkCode": "campaign",
-									"isFavorite": false,
-									"globalCCU": 1,
-									"lockStatus": "UNLOCKED",
-									"lockStatusReason": "NONE",
-									"isVisible": true
-								},
-								{
 									"linkCode": "set_figment_playlists",
 									"isFavorite": false,
 									"globalCCU": 1,

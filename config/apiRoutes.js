@@ -205,5 +205,6 @@ module.exports.routes = {
     'GET /api/community/v1/fn-client/community-highlights': 'ApiController.noContent',
     'GET /mesh/Fortnite/Fortnite.Hera_Terrain.51188288/metadata': 'ApiController.heraMesh',
     'GET /mesh/Fortnite/Fortnite.Hera_Terrain.51618937/metadata': 'ApiController.heraMesh',
+    'GET /mesh/Fortnite/Fortnite.Hera_Terrain.51979515/metadata': 'ApiController.heraMesh',
     'GET /mesh/Fortnite/Fortnite.Artemis_Terrain.22935214/metadata' : 'ApiController.artemisMesh',
 };
