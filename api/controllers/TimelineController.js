@@ -679,7 +679,6 @@ module.exports = {
                 "EventFlag.Event_Rivals_MS_10", //Showdown Milestone 11
                 "EventFlag.Event_Rivals_MS_11", //Showdown Milestone 12
                 "DC_Rift_BlindBird",
-                "DC_RiftRotate3"
             ],
 
             "40.10":[

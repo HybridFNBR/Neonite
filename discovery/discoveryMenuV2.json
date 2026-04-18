@@ -1848,14 +1848,16 @@
         "0794-7216-8184",
         "9725-4954-0946",
         "3329-7199-7901",
-        "3545-0240-1020"
+        "3545-0240-1020",
+        "7674-2102-3124"
       ],
       "sub_link_codes": [
         "playlist_sunflowersolo",
         "playlist_dashberrysolo",
         "playlist_punchberrysolo",
         "playlist_timberstakesolo",
-        "playlist_sourspawnsolo"
+        "playlist_sourspawnsolo",
+        "playlist_piperbootsolo"
       ],
       "activated_public_date": "2025-07-23T00:00:00.000Z",
       "alt_image_urls": {
@@ -2202,9 +2204,9 @@
         "es-419": "DOMINIOS DEL CALAMAR",
         "tr": "SQUID GROUNDS"
       },
-      "favorite_override": "set_timberstake_playlists",
-      "parent_set": "set_timberstake_playlists",
-      "play_history_override": "set_timberstake_playlists",
+      "favorite_override": "set_blastberry_playlists",
+      "parent_set": "set_blastberry_playlists",
+      "play_history_override": "set_blastberry_playlists",
       "block_cascading_data": "true",
       "image_url": "https://cdn2.unrealengine.com/timberstakemapimage-720x405-78453f33096e.jpg",
       "product_tag": "Product.BlastBerry.Build",
@@ -2260,9 +2262,9 @@
         "es-419": "ISLA PESADILLA",
         "tr": "K\u00c2BUSLAR ADASI"
       },
-      "favorite_override": "set_sourspawn_playlists",
-      "parent_set": "set_sourspawn_playlists",
-      "play_history_override": "set_sourspawn_playlists",
+      "favorite_override": "set_blastberry_playlists",
+      "parent_set": "set_blastberry_playlists",
+      "play_history_override": "set_blastberry_playlists",
       "block_cascading_data": "true",
       "image_url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_37-50_Nitemare_EnviroScreenshot_Widget_-628x512-31108e93.jpg",
       "product_tag": "Product.BlastBerry.Build",
@@ -2275,6 +2277,64 @@
       "title": "Nitemare Island",
       "matchmaking": {
         "override_playlist": "playlist_sourspawnsolo"
+      }
+    },
+    "version": 1,
+    "active": true,
+    "disabled": false,
+    "created": "2025-05-05T20:29:16.611Z",
+    "published": "2025-05-05T20:29:16.611Z",
+    "updated": "2025-08-26T20:32:22.689Z",
+    "descriptionTags": [],
+    "moderationStatus": "Unmoderated",
+    "lastActivatedDate": "2025-05-05T20:29:16.542Z",
+    "discoveryIntent": "PUBLIC",
+    "linkState": "LIVE"
+  },
+  {
+    "namespace": "fn",
+    "accountId": "epic",
+    "creatorName": "Epic",
+    "mnemonic": "playlist_piperbootsolo",
+    "linkType": "BR:Playlist",
+    "metadata": {
+      "lobby_background_image_urls": {
+        "url": "https://cdn2.unrealengine.com/cdn-uploader-T_WCReloadLobby_StoneBridge-a1b7c45f.jpg"
+      },
+      "alt_title": {
+        "de": "SURF CITY",
+        "ru": "\u0421\u0401\u0420\u0424-\u0421\u0418\u0422\u0418",
+        "ko": "\uc11c\ud504 \uc2dc\ud2f0",
+        "pt": "ILHA DO SURFE",
+        "zh-hant": "\u6d6a\u57ce",
+        "zh-hans": "\u8e0f\u6d6a\u90fd\u5e02",
+        "it": "SOSTA SURF",
+        "fr": "CONTR\u00c9ES DU SURF",
+        "es": "CIUDAD SURF",
+        "ar": "\u0645\u062f\u064a\u0646\u0629 \u0627\u0644\u0623\u0645\u0648\u0627\u062c",
+        "vi": "TH\u00c0NH PH\u1ed0 S\u00d3NG X\u00d4",
+        "th": "\u0e40\u0e0b\u0e34\u0e23\u0e4c\u0e1f\u0e0b\u0e34\u0e15\u0e35\u0e49",
+        "ja": "\u30b5\u30fc\u30d5\u30b7\u30c6\u30a3",
+        "id": "KOTA SELANCAR",
+        "pl": "STOLICA SURFER\u00d3W",
+        "es-419": "CIUDAD SURF",
+        "tr": "S\u00d6RF \u015eEHR\u0130"
+      },
+      "favorite_override": "set_blastberry_playlists",
+      "parent_set": "set_blastberry_playlists",
+      "play_history_override": "set_blastberry_playlists",
+      "block_cascading_data": "true",
+      "image_url": "https://cdn2.unrealengine.com/fnbr-39-00-piperboot-map-628x512-79654ca00f78.jpg",
+      "product_tag": "Product.BlastBerry.Build",
+      "image_urls": {
+        "url_s": "https://cdn2.unrealengine.com/fnbr-39-00-piperboot-map-628x512-79654ca00f78.jpg",
+        "url_xs": "https://cdn2.unrealengine.com/fnbr-39-00-piperboot-map-628x512-79654ca00f78.jpg",
+        "url_m": "https://cdn2.unrealengine.com/fnbr-39-00-piperboot-map-628x512-79654ca00f78.jpg",
+        "url": "https://cdn2.unrealengine.com/fnbr-39-00-piperboot-map-628x512-79654ca00f78.jpg"
+      },
+      "title": "Surf City",
+      "matchmaking": {
+        "override_playlist": "playlist_piperbootsolo"
       }
     },
     "version": 1,

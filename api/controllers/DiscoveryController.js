@@ -453,7 +453,7 @@ module.exports = {
 			}
 			if (version >= 30.20) { playlistActive(discoveryv2, "set_blastberry_playlists", true, false) }
 			if (version >= 36.10) { playlistActive(discoveryv2, "set_forbiddenfruit_nobuild_playlists", true, false) }
-			if (version >= 37.31) { playlistActive(discoveryv2, "playlist_stridemice", true, false) }
+			if (version >= 37.31 && version < 40.20) { playlistActive(discoveryv2, "playlist_stridemice", true, false) }
 			if (misc.bInEditor == true) { //scuffed way of doing it but works
 				playlistActive(discoveryv2, "playlist_pilgrimquickplay", false, true)
 				playlistActive(discoveryv2, "playlist_juno", false, true)

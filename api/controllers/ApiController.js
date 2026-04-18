@@ -254,10 +254,84 @@ module.exports = {
 				});
 			}
 		}
+		Object.assign(FrontendAssets.FortPlaylistAthena.assets, {
+			"Playlist_SunflowerSolo": {
+				meta: {
+					revision: 2,
+					headRevision: 2,
+					revisedAt: "2023-11-27T06:41:57.818Z",
+					promotion: 3,
+					promotedAt: "2023-11-27T06:43:00.452Z"
+				},
+				assetData: {
+					"TimeOfDayManager": "/BlastBerryMap/Game/TimeOfDay/TODM/DSA_UEFN_Sunflower.DSA_UEFN_Sunflower_C"
+				}
+			},
+			"Playlist_DashBerrySolo": {
+				meta: {
+					revision: 2,
+					headRevision: 2,
+					revisedAt: "2023-11-27T06:41:57.818Z",
+					promotion: 3,
+					promotedAt: "2023-11-27T06:43:00.452Z"
+				},
+				assetData: {
+					"TimeOfDayManager": "/BlastBerryMap/Game/TimeOfDay/TODM/DSA_UEFN_Sunflower.DSA_UEFN_Sunflower_C"
+				}
+			},
+			"Playlist_TimberStakeSolo": {
+				meta: {
+					revision: 2,
+					headRevision: 2,
+					revisedAt: "2023-11-27T06:41:57.818Z",
+					promotion: 3,
+					promotedAt: "2023-11-27T06:43:00.452Z"
+				},
+				assetData: {
+					"TimeOfDayManager": "/c18c4fa1-4e7f-6d71-5747-149195af86f7/TimeOfDay/DaySequenceActors/DSA_SunFlower_Ch6s1.DSA_SunFlower_Ch6s1_C"
+				}
+			},
+			"Playlist_SourSpawnSolo": {
+				meta: {
+					revision: 2,
+					headRevision: 2,
+					revisedAt: "2023-11-27T06:41:57.818Z",
+					promotion: 3,
+					promotedAt: "2023-11-27T06:43:00.452Z"
+				},
+				assetData: {
+					"TimeOfDayManager": "/Game/TimeOfDay/DaySequence/DaySequenceActors/BR_Ch6/DSA_BR_Ch6S4_FNM25.DSA_BR_Ch6S4_FNM25_C"
+				}
+			},
+			"Playlist_PiperBootSolo": {
+				meta: {
+					revision: 2,
+					headRevision: 2,
+					revisedAt: "2023-11-27T06:41:57.818Z",
+					promotion: 3,
+					promotedAt: "2023-11-27T06:43:00.452Z"
+				},
+				assetData: {
+					"TimeOfDayManager": "/Game/TimeOfDay/DaySequence/DaySequenceActors/BR_Ch7/DSA_BR_Ch7S1.DSA_BR_Ch7S1_C"
+				}
+			},
+			"Playlist_MatchMistSolo": {
+				meta: {
+					revision: 2,
+					headRevision: 2,
+					revisedAt: "2023-11-27T06:41:57.818Z",
+					promotion: 3,
+					promotedAt: "2023-11-27T06:43:00.452Z"
+				},
+				assetData: {
+					"TimeOfDayManager": "/Game/TimeOfDay/DaySequence/DaySequenceActors/BR_Ch7/DSA_BR_Ch7S1.DSA_BR_Ch7S1_C"
+				}
+			}
+		});
 		res.json(FrontendAssets)
 	},
 
-	dataAssetFortPlaylist: function(req, res){
+	dataAssetFortPlaylist: function (req, res) {
 		return res.status(204).end()
 	},
 
@@ -1145,13 +1219,13 @@ module.exports = {
 		})
 	},
 
-	artemisMesh: function(req, res){
+	artemisMesh: function (req, res) {
 		res.json({
-			"NightNightFrontend":{
+			"NightNightFrontend": {
 				"AreWeGettingSleepy": "VeryVerySleepyUwU",
 				"HasDaddyTuckedUsIn": false,
 				"ForcedPlaylist": false,
-				"Splines":[
+				"Splines": [
 					"C624A3D18A8A2494288EE915D11518B7:/q+bDo9akBx2JId6QvLQW1YoN4jBEEn+QdzBXjB3OpQ="
 				]
 			}
