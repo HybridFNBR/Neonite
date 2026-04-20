@@ -1825,65 +1825,10 @@
   },
   {
     "namespace": "fn",
-    "accountId": "63ba52bf92554227820f4dd0a8cc6845",
-    "creatorName": "Epic Labs",
-    "mnemonic": "6990-4594-4017",
-    "linkType": "valkyrie:application",
-    "metadata": {
-        "quicksilver_id": "fab50a15-2263-4064-b687-369371020cef",
-        "gameFeaturesets": [
-            "fn1gfs"
-        ],
-        "image_url": "https://cdn-0001.qstv.on.epicgames.com/YtBoBftBrtakuLMOTU/image/landscape_comp.jpeg",
-        "public_modules": {},
-        "image_urls": {
-            "url_s": "https://cdn-0001.qstv.on.epicgames.com/YtBoBftBrtakuLMOTU/image/landscape_comp_s.jpeg",
-            "url_m": "https://cdn-0001.qstv.on.epicgames.com/YtBoBftBrtakuLMOTU/image/landscape_comp_m.jpeg",
-            "url": "https://cdn-0001.qstv.on.epicgames.com/YtBoBftBrtakuLMOTU/image/landscape_comp.jpeg"
-        },
-        "locale": "en",
-        "title": "Reload",
-        "video_vuid": "AZyGgnKSjyuBESItzS",
-        "matchmakingV2": {
-            "allowJoinInProgress": true,
-            "allowSquadFillOption": false,
-            "maxPlayers": 16,
-            "islandQueuePrivacy": "Unrestricted",
-            "maxSocialPartySize": 16,
-            "maxTeamCount": 16,
-            "maxTeamSize": 16
-        },
-        "mode": "live",
-        "tagline": "Reload",
-        "square_image_urls": {
-            "url_s": "https://cdn-0001.qstv.on.epicgames.com/AZyGgnKSjyuBESItzS/image/square_s.jpeg",
-            "url_m": "https://cdn-0001.qstv.on.epicgames.com/AZyGgnKSjyuBESItzS/image/square_m.jpeg",
-            "url": "https://cdn-0001.qstv.on.epicgames.com/AZyGgnKSjyuBESItzS/image/square.jpeg"
-        },
-        "supportCode": "epiclabs",
-        "projectId": "a22e7679-4a79-ce85-eaaf-16a2a0bae748",
-        "introduction": "\n\n",
-        "attributions": []
-    },
-    "version": 21,
-    "active": true,
-    "disabled": false,
-    "created": "2024-11-06T16:12:53.193Z",
-    "published": "2024-09-19T17:24:53.477Z",
-    "descriptionTags": [
-        "battle royale"
-    ],
-    "moderationStatus": "Approved",
-    "lastActivatedDate": "2024-11-06T16:12:53.422Z",
-    "discoveryIntent": "PRIVATE",
-    "linkState": "LIVE"
-  },
-  {
-    "namespace": "fn",
     "accountId": "epic",
     "creatorName": "Epic",
     "mnemonic": "playlist_sunflowersolo",
-    "linkType": "valkyrie:application",
+    "linkType": "BR:Playlist",
     "metadata": {
       "lobby_background_image_urls": {
         "url": "https://cdn2.unrealengine.com/blastberry-lobby-bg-final-notext-2560x1440-788db0478027.jpg"
@@ -1897,11 +1842,6 @@
       "predownload_link_codes": [
         "6990-4594-4017"
       ],
-      "quicksilver_id": "fab50a15-2263-4064-b687-369371020cef",
-        "gameFeaturesets": [
-            "fn1gfs"
-      ],
-      "projectId": "a22e7679-4a79-ce85-eaaf-16a2a0bae748",
       "alt_title": {
         "de": "Wagnis",
         "ru": "\u0422\u0440\u0438\u0443\u043c\u0444\u0430\u043d\u0442",
