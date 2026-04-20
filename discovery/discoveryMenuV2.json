@@ -1825,179 +1825,57 @@
   },
   {
     "namespace": "fn",
-    "accountId": "epic",
-    "creatorName": "Epic",
-    "mnemonic": "set_blastberry_playlists",
-    "linkType": "ModeSet",
+    "accountId": "63ba52bf92554227820f4dd0a8cc6845",
+    "creatorName": "Epic Labs",
+    "mnemonic": "6990-4594-4017",
+    "linkType": "valkyrie:application",
     "metadata": {
-      "required_content": {
-        "verse_uris": [
-          "/Fortnite.com/GameFeatures/BRRoot",
-          "/Fortnite.com/GameFeatures/CreativeRoot"
-        ]
-      },
-      "image_url": "https://cdn2.unrealengine.com/en-fnbr-30-20-blastberry-discoverytile-1920x1080-1920x1080-2422c0374c97.jpg",
-      "image_urls": {
-        "url_s": "https://cdn2.unrealengine.com/en-fnbr-30-20-blastberry-discoverytile-1920x1080-1920x1080-2422c0374c97.jpg",
-        "url_m": "https://cdn2.unrealengine.com/en-fnbr-30-20-blastberry-discoverytile-1920x1080-1920x1080-2422c0374c97.jpg",
-        "url": "https://cdn2.unrealengine.com/en-fnbr-30-20-blastberry-discoverytile-1920x1080-1920x1080-2422c0374c97.jpg"
-      },
-      "title": "Reload",
-      "predownload_link_codes": [
-        "6990-4594-4017",
-        "0794-7216-8184",
-        "9725-4954-0946",
-        "3329-7199-7901",
-        "3545-0240-1020",
-        "7674-2102-3124"
-      ],
-      "sub_link_codes": [
-        "playlist_sunflowersolo",
-        "playlist_dashberrysolo",
-        "playlist_punchberrysolo",
-        "playlist_timberstakesolo",
-        "playlist_sourspawnsolo",
-        "playlist_piperbootsolo"
-      ],
-      "activated_public_date": "2025-07-23T00:00:00.000Z",
-      "alt_image_urls": {
-        "de": {
-          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-480x270-f29af0c3.jpg",
-          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-640x360-cb7f04d0.jpg",
-          "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-1920x1080-0bfa4217.jpg"
+        "quicksilver_id": "fab50a15-2263-4064-b687-369371020cef",
+        "gameFeaturesets": [
+            "fn1gfs"
+        ],
+        "image_url": "https://cdn-0001.qstv.on.epicgames.com/YtBoBftBrtakuLMOTU/image/landscape_comp.jpeg",
+        "public_modules": {},
+        "image_urls": {
+            "url_s": "https://cdn-0001.qstv.on.epicgames.com/YtBoBftBrtakuLMOTU/image/landscape_comp_s.jpeg",
+            "url_m": "https://cdn-0001.qstv.on.epicgames.com/YtBoBftBrtakuLMOTU/image/landscape_comp_m.jpeg",
+            "url": "https://cdn-0001.qstv.on.epicgames.com/YtBoBftBrtakuLMOTU/image/landscape_comp.jpeg"
         },
-        "ru": {
-          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-480x270-72d07695.jpg",
-          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-640x360-70a7f915.jpg",
-          "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-1920x1080-481e285c.jpg"
+        "locale": "en",
+        "title": "Reload",
+        "video_vuid": "AZyGgnKSjyuBESItzS",
+        "matchmakingV2": {
+            "allowJoinInProgress": true,
+            "allowSquadFillOption": false,
+            "maxPlayers": 16,
+            "islandQueuePrivacy": "Unrestricted",
+            "maxSocialPartySize": 16,
+            "maxTeamCount": 16,
+            "maxTeamSize": 16
         },
-        "ko": {
-          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-480x270-d900f2a8.jpg",
-          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-640x360-e45732f6.jpg",
-          "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-1920x1080-47d351b7.jpg"
+        "mode": "live",
+        "tagline": "Reload",
+        "square_image_urls": {
+            "url_s": "https://cdn-0001.qstv.on.epicgames.com/AZyGgnKSjyuBESItzS/image/square_s.jpeg",
+            "url_m": "https://cdn-0001.qstv.on.epicgames.com/AZyGgnKSjyuBESItzS/image/square_m.jpeg",
+            "url": "https://cdn-0001.qstv.on.epicgames.com/AZyGgnKSjyuBESItzS/image/square.jpeg"
         },
-        "zh-hant": {
-          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-480x270-4b234311.jpg",
-          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-640x360-c64785f8.jpg",
-          "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-1920x1080-464a1c81.jpg"
-        },
-        "pt-BR": {
-          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-480x270-740ad8d6.jpg",
-          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-640x360-3f3afd27.jpg",
-          "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-1920x1080-c04f6ef7.jpg"
-        },
-        "zh-hans": {
-          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-480x270-3f4ec671.jpg",
-          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-640x360-d30f061c.jpg",
-          "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-1920x1080-6a3c51cf.jpg"
-        },
-        "it": {
-          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-480x270-6a7bc6a8.jpg",
-          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-640x360-1785a29e.jpg",
-          "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-1920x1080-1a7aeb37.jpg"
-        },
-        "fr": {
-          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-480x270-18ed7650.jpg",
-          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-640x360-ff551e4a.jpg",
-          "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-1920x1080-3ae4a2dc.jpg"
-        },
-        "es": {
-          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-480x270-7ac243b2.jpg",
-          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-640x360-7bd003b2.jpg",
-          "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-1920x1080-2e50f411.jpg"
-        },
-        "ar": {
-          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-480x270-4192129d.jpg",
-          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-640x360-96ad42db.jpg",
-          "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-1920x1080-d5065cd1.jpg"
-        },
-        "vi": {
-          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-480x270-99795eed.jpg",
-          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-640x360-ebf88700.jpg",
-          "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-1920x1080-fdbb24a6.jpg"
-        },
-        "th": {
-          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-480x270-f913ce04.jpg",
-          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-640x360-13e6d655.jpg",
-          "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-1920x1080-202c7bc4.jpg"
-        },
-        "ja": {
-          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-480x270-e473e668.jpg",
-          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-640x360-0a590c3d.jpg",
-          "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-1920x1080-54d3fcd9.jpg"
-        },
-        "id": {
-          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-480x270-5450e63b.jpg",
-          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-640x360-79e7cb80.jpg",
-          "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-1920x1080-3700dcda.jpg"
-        },
-        "pl": {
-          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-480x270-5c9c141c.jpg",
-          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-640x360-02cb8ccf.jpg",
-          "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-1920x1080-939ce5ae.jpg"
-        },
-        "es-419": {
-          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-480x270-5a14d7bd.jpg",
-          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-640x360-be082d65.jpg",
-          "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-1920x1080-7117d0ae.jpg"
-        },
-        "tr": {
-          "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-480x270-58b3468f.jpg",
-          "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-640x360-c8143495.jpg",
-          "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_38-10_ModMadness_Unranked_DiscoverPlaylistTile_-1920x1080-24a36681.jpg"
-        }
-      },
-      "alt_title": {
-        "de": "Reload",
-        "ru": "\u041f\u0435\u0440\u0435\u0437\u0430\u0440\u044f\u0434\u043a\u0430",
-        "ko": "\ub9ac\ub85c\ub4dc",
-        "zh-hant": "\u706b\u529b\u5168\u958b",
-        "pt-BR": "Reload",
-        "zh-hans": "\u706b\u529b\u5168\u5f00",
-        "it": "Rientro",
-        "fr": "Recharge",
-        "es": "Recarga",
-        "ar": "\u0627\u0644\u0625\u0639\u0627\u062f\u0629",
-        "vi": "T\u00e1i Chi\u1ebfn Th\u1ea7n T\u1ed1c",
-        "th": "\u0e23\u0e35\u0e42\u0e2b\u0e25\u0e14",
-        "ja": "\u30ea\u30ed\u30fc\u30c9",
-        "id": "Reload",
-        "pl": "Reaktywacja",
-        "es-419": "Fortnite: Recarga",
-        "tr": "Yeniden"
-      },
-      "alt_tagline": {
-        "de": "Fortnite Reload ist ein temporeiches Battle Royale-Spiel mit 40 Spielern, bei dem es darum geht, das Team zum Sieg zu f\u00fchren.  Erhalte einen Neustart, solange noch ein Teammitglied im Spiel aktiv ist!  Sammle Beute nach dem Neustart, um wieder kampfbereit zu sein!  Eliminiere Gegner, um den Neustart deiner Teammitglieder zu beschleunigen!  Zum Ende des Matches hin gibt es keine Neustarts mehr. Trommle dein Team zusammen und holt euch den epischen Sieg!",
-        "ru": "\u00ab\u041f\u0435\u0440\u0435\u0437\u0430\u0440\u044f\u0434\u043a\u0430\u00bb\u00a0\u2014 \u0434\u0438\u043d\u0430\u043c\u0438\u0447\u043d\u044b\u0439 \u0431\u043e\u0439 \u0432 \u0440\u0435\u0436\u0438\u043c\u0435 \u00ab\u041a\u043e\u0440\u043e\u043b\u0435\u0432\u0441\u043a\u043e\u0439 \u0431\u0438\u0442\u0432\u044b\u00bb \u0441 \u0443\u0447\u0430\u0441\u0442\u0438\u0435\u043c 40\u00a0\u0438\u0433\u0440\u043e\u043a\u043e\u0432, \u0441\u0442\u0440\u0435\u043c\u044f\u0449\u0438\u0445\u0441\u044f \u043f\u0440\u0438\u0432\u0435\u0441\u0442\u0438 \u0441\u0432\u043e\u0439 \u043e\u0442\u0440\u044f\u0434 \u043a \u043f\u043e\u0431\u0435\u0434\u0435.  \u0412\u044b \u043c\u043e\u0436\u0435\u0442\u0435 \u0432\u043e\u0437\u0440\u043e\u0436\u0434\u0430\u0442\u044c\u0441\u044f, \u043f\u043e\u043a\u0430 \u0436\u0438\u0432 \u0445\u043e\u0442\u044f \u0431\u044b \u043e\u0434\u0438\u043d \u0441\u043e\u044e\u0437\u043d\u0438\u043a! \u0418\u0449\u0438\u0442\u0435 \u0434\u043e\u0431\u044b\u0447\u0443 \u043f\u043e\u0441\u043b\u0435 \u0432\u043e\u0437\u0440\u043e\u0436\u0434\u0435\u043d\u0438\u044f, \u0447\u0442\u043e\u0431\u044b \u0432\u0435\u0440\u043d\u0443\u0442\u044c\u0441\u044f \u0432 \u0441\u0442\u0440\u043e\u0439! \u0423\u0441\u0442\u0440\u0430\u043d\u044f\u0439\u0442\u0435 \u043f\u0440\u043e\u0442\u0438\u0432\u043d\u0438\u043a\u043e\u0432, \u0447\u0442\u043e\u0431\u044b \u0431\u044b\u0441\u0442\u0440\u0435\u0435 \u0432\u043e\u0437\u0440\u043e\u0436\u0434\u0430\u0442\u044c \u0441\u043e\u044e\u0437\u043d\u0438\u043a\u043e\u0432!  \u0412\u043e\u0437\u0440\u043e\u0436\u0434\u0435\u043d\u0438\u044f \u043f\u0440\u0435\u043a\u0440\u0430\u0449\u0430\u044e\u0442\u0441\u044f \u043d\u0435\u0437\u0430\u0434\u043e\u043b\u0433\u043e \u0434\u043e \u043a\u043e\u043d\u0446\u0430 \u043c\u0430\u0442\u0447\u0430. \u041f\u043e\u043c\u043e\u0433\u0430\u0439\u0442\u0435 \u0442\u043e\u0432\u0430\u0440\u0438\u0449\u0430\u043c \u043f\u043e \u043e\u0442\u0440\u044f\u0434\u0443 \u043e\u0434\u0435\u0440\u0436\u0430\u0442\u044c \u043a\u043e\u0440\u043e\u043b\u0435\u0432\u0441\u043a\u0443\u044e \u043f\u043e\u0431\u0435\u0434\u0443!",
-        "ko": "\ud3ec\ud2b8\ub098\uc774\ud2b8 \ub9ac\ub85c\ub4dc\ub294 40\uba85\uc758 \ud50c\ub808\uc774\uc5b4\uac00 \ucc38\uc5ec\ud558\ub294 \ube60\ub978 \ud15c\ud3ec\uc758 \ubc30\ud2c0\ub85c\uc584 \uac8c\uc784\uc785\ub2c8\ub2e4. \ubaa9\ud45c\ub294 \ub2e8 \ud558\ub098, \ud300\uc744 \uc2b9\ub9ac\ub85c \uc774\ub044\ub294 \uac83\uc785\ub2c8\ub2e4.  \ub2e8 \ud55c \uba85\uc758 \ud300\uc6d0\uc774\ub77c\ub3c4 \uc0b4\uc544\ub0a8\uc558\ub2e4\uba74 \ub9ac\ubd80\ud2b8\ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4!  \ub9ac\ubd80\ud2b8 \ud6c4 \uc804\ub9ac\ud488\uc744 \ucc59\uaca8 \ub2e4\uc2dc \uc2f8\uc6b8 \ud0dc\uc138\ub97c \uac16\ucd94\uc138\uc694!  \ub2e4\ub978 \ud50c\ub808\uc774\uc5b4\ub97c \ucc98\uce58\ud558\uba74 \ud300\uc6d0\uc744 \ub354 \ube60\ub974\uac8c \ub9ac\ubd80\ud2b8\uc2dc\ud0ac \uc218 \uc788\uc2b5\ub2c8\ub2e4!  \ub9e4\uce58 \ub9c9\ubc14\uc9c0\uc5d0 \uc811\uc5b4\ub4e4\uba74 \ub9ac\ubd80\ud2b8\uac00 \uc911\ub2e8\ub429\ub2c8\ub2e4. \uc2a4\ucffc\ub4dc\uc640 \ud568\uaed8 \ube45\ud1a0\ub9ac \ub85c\uc584\uc744 \uc7c1\ucde8\ud558\uc138\uc694!",
-        "zh-hant": "Fortnite\u300a\u706b\u529b\u5168\u958b\u300b\u662f\u4e00\u6b3e 40 \u540d\u73a9\u5bb6\u53c3\u8207\u7684\u5feb\u7bc0\u594f\u300a\u5927\u9003\u6bba\u300b\u904a\u6232\uff0c\u76ee\u6a19\u662f\u5e36\u9818\u5c0f\u968a\u9081\u5411\u52dd\u5229\u3002 \u53ea\u8981\u6709\u968a\u53cb\u4ecd\u5728\u6230\u9b25\uff0c\u5c31\u53ef\u4ee5\u91cd\u555f\uff01 \u91cd\u555f\u5f8c\uff0c\u591a\u591a\u641c\u522e\uff0c\u8b93\u81ea\u5df1\u6062\u5fa9\u6230\u9b25\u72c0\u614b\uff01 \u6dd8\u6c70\u5c0d\u624b\u53ef\u4ee5\u8b93\u968a\u53cb\u66f4\u5feb\u91cd\u555f\uff01 \u5c0d\u6230\u63a5\u8fd1\u7d50\u675f\u6642\uff0c\u91cd\u555f\u5c07\u505c\u6b62\u3002\u8207\u5c0f\u968a\u7dca\u5bc6\u914d\u5408\uff0c\u722d\u53d6\u8f1d\u714c\u52dd\u5229\uff01",
-        "pt-BR": "Fortnite Reload \u00e9 uma experi\u00eancia fren\u00e9tica de Battle Royale para 40 pessoas em que o objetivo \u00e9 levar seu esquadr\u00e3o rumo \u00e0 vit\u00f3ria.  Ressurja se ao menos uma pessoa da sua equipe ainda estiver no p\u00e1reo!  Saqueie ap\u00f3s ressurgir para voltar com tudo!  Elimine oponentes para reinicializar colegas de equipe mais r\u00e1pido!  A reinicializa\u00e7\u00e3o ser\u00e1 desabilitada quando a partida estiver perto do fim. Sobreviva com seu esquadr\u00e3o para garantir a Vit\u00f3ria Royale!",
-        "zh-hans": "\u201cFortnite\u706b\u529b\u5168\u5f00\u201d\u662f\u4e00\u4e2a\u96c6\u7ed340\u540d\u73a9\u5bb6\u7684\u5feb\u8282\u594f\u5927\u9003\u6740\u6e38\u620f\u3002\u4f60\u7684\u76ee\u6807\u662f\u5e26\u9886\u961f\u4f0d\u8d70\u5411\u80dc\u5229\u3002 \u53ea\u8981\u8fd8\u6709\u4e00\u540d\u961f\u53cb\u5b58\u6d3b\uff0c\u5c31\u53ef\u4ee5\u65e0\u9650\u91cd\u751f\uff01 \u91cd\u751f\u540e\u8fdb\u884c\u641c\u522e\uff0c\u5feb\u901f\u6062\u590d\u5230\u6218\u6597\u72b6\u6001\uff01 \u6dd8\u6c70\u5bf9\u624b\u6765\u4f7f\u961f\u53cb\u66f4\u5feb\u91cd\u751f\uff01 \u6bd4\u8d5b\u4e34\u8fd1\u7ed3\u675f\u65f6\u5c06\u65e0\u6cd5\u91cd\u751f\u3002\u4e0e\u5c0f\u961f\u7d27\u5bc6\u534f\u4f5c\uff0c\u4e89\u53d6\u5927\u83b7\u5168\u80dc\uff01",
-        "it": "Fortnite Rientro \u00e8 un adrenalinico gioco di Battaglia reale per 40 giocatori. Porta la tua squadra alla vittoria!  Finch\u00e9 hai almeno un compagno ancora in azione, potrai riavviarti!  Dopo il riavvio, accumula bottino per tornare in condizione di combattere!  Elimina avversari per riavviare pi\u00f9 velocemente i compagni di squadra!  Verso la fine della partita non sar\u00e0 pi\u00f9 possibile riavviarsi. Rimani saldamente in squadra per assicurarti la Vittoria reale!",
-        "fr": "Recharge est un mode Battle Royale \u00e0 40\u00a0joueurs au rythme soutenu, dans lequel vous devez porter votre \u00e9quipe jusqu'\u00e0 la victoire.  Tant qu'un \u00e9quipier est encore en vie, vous pouvez revenir dans la partie\u00a0! \u00c0 votre retour, r\u00e9cup\u00e9rez du butin pour repartir au combat\u00a0! \u00c9liminez des adversaires pour r\u00e9tablir vos \u00e9quipiers plus rapidement\u00a0!  En fin de partie, les r\u00e9tablissements s'arr\u00eatent. Votre section doit tout donner pour d\u00e9crocher la Victoire royale\u00a0!",
-        "es": "Recarga es un trepidante modo de juego de Battle Royale para 40 jugadores centrado \u00fanicamente en lograr la victoria junto a tu escuadr\u00f3n.  \u00a1Podr\u00e1s reaparecer siempre que alg\u00fan miembro de tu equipo siga en pie!  \u00a1Acumula bot\u00edn tras reiniciarte y vuelve r\u00e1pidamente a la batalla!  \u00a1Elimina oponentes para reiniciar m\u00e1s r\u00e1pido a tus compa\u00f1eros!  Los reinicios se desactivar\u00e1n cuando se acerque el final de la partida. \u00a1Resiste junto a tu escuadr\u00f3n para lograr la victoria magistral!",
-        "ar": "Fortnite \u0627\u0644\u0625\u0639\u0627\u062f\u0629 \u0647\u064a \u0645\u0648\u0627\u062c\u0647\u0629 \u0628\u0627\u062a\u0644 \u0631\u0648\u064a\u0627\u0644 \u0633\u0631\u064a\u0639\u0629 \u0627\u0644\u0648\u062a\u064a\u0631\u0629 \u0645\u0643\u0648\u0646\u0629 \u0645\u0646 40 \u0644\u0627\u0639\u0628\u064b\u0627 \u0648\u062a\u062a\u0645\u062d\u0648\u0631 \u062d\u0648\u0644 \u0642\u064a\u0627\u062f\u0629 \u0627\u0644\u0641\u0631\u064a\u0642 \u0646\u062d\u0648 \u0627\u0644\u0646\u0635\u0631. \u064a\u0645\u0643\u0646\u0643 \u0627\u0644\u0639\u0648\u062f\u0629 \u0645\u0627 \u062f\u0627\u0645 \u0647\u0646\u0627\u0643 \u0632\u0645\u064a\u0644 \u0641\u0631\u064a\u0642 \u0641\u064a \u0627\u0644\u0642\u062a\u0627\u0644! \u062a\u0632\u0648\u0651\u062f \u0628\u0627\u0644\u063a\u0646\u0627\u0626\u0645 \u0628\u0639\u062f \u0627\u0644\u0639\u0648\u062f\u0629 \u0644\u062a\u0643\u0648\u0646 \u0645\u0633\u062a\u0639\u062f\u064b\u0627 \u0644\u0644\u0642\u062a\u0627\u0644 \u0645\u062c\u062f\u062f\u064b\u0627! \u0627\u0642\u0636\u0650 \u0639\u0644\u0649 \u0627\u0644\u062e\u0635\u0648\u0645 \u0644\u062a\u064f\u0639\u064a\u062f \u0632\u0645\u0644\u0627\u0621 \u0627\u0644\u0641\u0631\u064a\u0642 \u0628\u0634\u0643\u0644 \u0623\u0633\u0631\u0639! \u0633\u062a\u062a\u0648\u0642\u0641 \u0627\u0644\u0625\u0639\u0627\u062f\u0627\u062a \u0645\u0639 \u0627\u0642\u062a\u0631\u0627\u0628 \u0646\u0647\u0627\u064a\u0629 \u0627\u0644\u0645\u0648\u0627\u062c\u0647\u0629. \u0627\u0635\u0645\u062f \u0645\u0639 \u0641\u0631\u064a\u0642\u0643 \u0644\u062a\u062d\u0642\u0642\u0648\u0627 \u0627\u0644\u0627\u0646\u062a\u0635\u0627\u0631 \u0627\u0644\u0645\u0644\u0643\u064a!",
-        "vi": "Fortnite T\u00e1i Chi\u1ebfn Th\u1ea7n T\u1ed1c l\u00e0 m\u1ed9t Cu\u1ed9c Chi\u1ebfn Sinh T\u1ed3n t\u1ed1c \u0111\u1ed9 cao cho 40 ng\u01b0\u1eddi ch\u01a1i, n\u01a1i b\u1ea1n ph\u1ea3i d\u1eabn d\u1eaft c\u1ea3 bi\u1ec7t \u0111\u1ed9i \u0111\u1ebfn \u0111\u01b0\u1ee3c Chi\u1ebfn Th\u1eafng.  B\u1ea1n c\u00f3 th\u1ec3 t\u00e1i sinh mi\u1ec5n l\u00e0 c\u00f2n m\u1ed9t \u0111\u1ed3ng \u0111\u1ed9i ch\u01b0a b\u1ecb h\u1ea1!  L\u00ean \u0111\u1ed3 sau khi t\u00e1i sinh \u0111\u1ec3 tr\u1edf l\u1ea1i tr\u1ea1ng th\u00e1i chi\u1ebfn \u0111\u1ea5u t\u1ed1t nh\u1ea5t!  H\u1ea1 g\u1ee5c nhi\u1ec1u \u0111\u1ed1i th\u1ee7 \u0111\u1ec3 gi\u00fap \u0111\u1ed3ng \u0111\u1ed9i t\u00e1i sinh nhanh h\u01a1n!  Khi g\u1ea7n k\u1ebft th\u00fac tr\u1eadn \u0111\u1ea5u, ch\u1ebf \u0111\u1ed9 t\u00e1i sinh s\u1ebd d\u1eebng. H\u1ee3p l\u1ef1c c\u00f9ng bi\u1ec7t \u0111\u1ed9i c\u1ee7a b\u1ea1n \u0111\u1ec3 gi\u00e0nh l\u1ea5y H\u00e0o Quang Chi\u1ebfn Th\u1eafng ngay!",
-        "th": "Fortnite Reload \u0e40\u0e1b\u0e47\u0e19\u0e40\u0e01\u0e21\u0e41\u0e1a\u0e17\u0e40\u0e17\u0e34\u0e25\u0e23\u0e2d\u0e22\u0e31\u0e25\u0e08\u0e31\u0e07\u0e2b\u0e27\u0e30\u0e23\u0e27\u0e14\u0e40\u0e23\u0e47\u0e27\u0e14\u0e38\u0e40\u0e14\u0e37\u0e2d\u0e14 \u0e42\u0e14\u0e22\u0e1c\u0e39\u0e49\u0e40\u0e25\u0e48\u0e19 40 \u0e04\u0e19\u0e15\u0e49\u0e2d\u0e07\u0e1e\u0e32\u0e17\u0e35\u0e21\u0e44\u0e1b\u0e2a\u0e39\u0e48\u0e0a\u0e31\u0e22\u0e0a\u0e19\u0e30 \u0e1b\u0e25\u0e38\u0e01\u0e0a\u0e35\u0e1e\u0e44\u0e14\u0e49\u0e40\u0e2a\u0e21\u0e2d\u0e2b\u0e32\u0e01\u0e22\u0e31\u0e07\u0e21\u0e35\u0e2a\u0e21\u0e32\u0e0a\u0e34\u0e01\u0e17\u0e35\u0e21\u0e40\u0e2b\u0e25\u0e37\u0e2d\u0e23\u0e2d\u0e14\u0e2d\u0e22\u0e39\u0e48! \u0e40\u0e01\u0e47\u0e1a\u0e44\u0e2d\u0e40\u0e17\u0e21\u0e40\u0e1e\u0e34\u0e48\u0e21\u0e40\u0e15\u0e34\u0e21\u0e2b\u0e25\u0e31\u0e07\u0e16\u0e39\u0e01\u0e1b\u0e25\u0e38\u0e01\u0e0a\u0e35\u0e1e\u0e40\u0e1e\u0e37\u0e48\u0e2d\u0e43\u0e2b\u0e49\u0e1e\u0e23\u0e49\u0e2d\u0e21\u0e25\u0e38\u0e22\u0e15\u0e48\u0e2d! \u0e01\u0e33\u0e08\u0e31\u0e14\u0e28\u0e31\u0e15\u0e23\u0e39\u0e43\u0e2b\u0e49\u0e44\u0e14\u0e49 \u0e41\u0e25\u0e49\u0e27\u0e08\u0e30\u0e1b\u0e25\u0e38\u0e01\u0e0a\u0e35\u0e1e\u0e40\u0e1e\u0e37\u0e48\u0e2d\u0e19\u0e23\u0e48\u0e27\u0e21\u0e17\u0e35\u0e21\u0e44\u0e14\u0e49\u0e40\u0e23\u0e47\u0e27\u0e02\u0e36\u0e49\u0e19! \u0e44\u0e21\u0e48\u0e2a\u0e32\u0e21\u0e32\u0e23\u0e16\u0e1b\u0e25\u0e38\u0e01\u0e0a\u0e35\u0e1e\u0e44\u0e14\u0e49\u0e2d\u0e35\u0e01\u0e15\u0e48\u0e2d\u0e44\u0e1b\u0e40\u0e21\u0e37\u0e48\u0e2d\u0e43\u0e01\u0e25\u0e49\u0e08\u0e1a\u0e41\u0e21\u0e15\u0e0a\u0e4c  \u0e23\u0e27\u0e21\u0e17\u0e35\u0e21\u0e43\u0e2b\u0e49\u0e1e\u0e23\u0e49\u0e2d\u0e21 \u0e41\u0e25\u0e49\u0e27\u0e04\u0e27\u0e49\u0e32\u0e27\u0e34\u0e01\u0e15\u0e2d\u0e23\u0e35\u0e48\u0e23\u0e2d\u0e22\u0e31\u0e25\u0e21\u0e32\u0e04\u0e23\u0e2d\u0e07\u0e43\u0e2b\u0e49\u0e44\u0e14\u0e49!",
-        "ja": "\u300c\u30d5\u30a9\u30fc\u30c8\u30ca\u30a4\u30c8 \u30ea\u30ed\u30fc\u30c9\u300d\u306f40\u4eba\u306e\u30d7\u30ec\u30a4\u30e4\u30fc\u5bfe\u5fdc\u306e\u30d0\u30c8\u30eb\u30ed\u30a4\u30e4\u30eb\u30b2\u30fc\u30e0\u3002\u30b9\u30af\u30ef\u30c3\u30c9\u3092\u52dd\u5229\u3078\u5c0e\u304f\u3053\u3068\u306b\u7126\u70b9\u304c\u5f53\u3066\u3089\u308c\u3066\u3044\u308b\u305e\u3002  \u30c1\u30fc\u30e0\u30e1\u30a4\u30c8\u304c1\u4eba\u3067\u3082\u751f\u304d\u6b8b\u3063\u3066\u3044\u308b\u9650\u308a\u3001\u30ea\u30d6\u30fc\u30c8\u3067\u304d\u308b\uff01 \u30ea\u30d6\u30fc\u30c8\u5f8c\u306f\u6226\u5229\u54c1\u3092\u96c6\u3081\u3066\u6226\u95d8\u614b\u52e2\u3092\u6574\u3048\u3088\u3046\uff01 \u6575\u3092\u6483\u7834\u3059\u308c\u3070\u30c1\u30fc\u30e0\u30e1\u30a4\u30c8\u306e\u30ea\u30d6\u30fc\u30c8\u3092\u30b9\u30d4\u30fc\u30c9\u30a2\u30c3\u30d7\u3067\u304d\u308b\uff01  \u30de\u30c3\u30c1\u306e\u7d42\u76e4\u3067\u306f\u30ea\u30d6\u30fc\u30c8\u3067\u304d\u306a\u304f\u306a\u308b\u3002\u30b9\u30af\u30ef\u30c3\u30c9\u5168\u54e1\u3067\u3057\u3063\u304b\u308a\u96c6\u4e2d\u3057\u3066Victory Royale\u3092\u9054\u6210\u3057\u3088\u3046\uff01",
-        "id": "Fortnite Reload adalah game Battle Royale bertempo cepat dengan 40 pemain yang bertujuan membawa skuad menuju Kemenangan.  Reboot bisa dilakukan selama masih ada satu rekan tim yang bertahan!  Ambil semua jarahan setelah di-reboot agar siap tempur kembali!  Singkirkan lawan untuk mempercepat reboot rekan timmu!  Menjelang akhir pertandingan, reboot akan berhenti. Berjuanglah bersama skuadmu untuk meraih Victory Royale!",
-        "pl": "Fortnite: Reaktywacja to dynamiczna 40-osobowa gra Battle Royale, w kt\u00f3rej wiedziesz dru\u017cyn\u0119 do zwyci\u0119stwa.  Restartuj si\u0119, je\u015bli przy \u017cyciu pozostaje cho\u0107by jeden towarzysz!  Gromad\u017a \u0142upy po restarcie, by odzyska\u0107 form\u0119 bojow\u0105!  Likwiduj przeciwnik\u00f3w, by szybciej restartowa\u0107 towarzyszy!  Pod koniec meczu restarty przestaj\u0105 dzia\u0142a\u0107. Zgraj si\u0119 z oddzia\u0142em, by zdoby\u0107 Kr\u00f3lewskie Zwyci\u0119stwo!",
-        "es-419": "Fortnite: Recarga es un modo vertiginoso de Batalla campal para 40 jugadores donde lo \u00fanico que importa es llevar al escuadr\u00f3n a la victoria.  \u00a1Siempre que quede un miembro del equipo en pie, podr\u00e1s reiniciarte!  \u00a1Abast\u00e9cete tras reiniciarte y prep\u00e1rate para la batalla!  \u00a1Elimina oponentes para reiniciar a tus compa\u00f1eros m\u00e1s r\u00e1pido!  Cerca del final de la partida, se detendr\u00e1n los reinicios. \u00a1Mantegan la concentraci\u00f3n y aseguren su victoria campal!",
-        "tr": "Fortnite Yeniden, 40 oyunculu h\u0131zl\u0131 tempolu bir Battle Royale oyunudur ve amac\u0131 ekibi zafere ta\u015f\u0131makt\u0131r.  Tek bir tak\u0131m arkada\u015f\u0131n ayakta oldu\u011fu s\u00fcrece canlanabilirsin!  Canland\u0131ktan sonra sava\u015fabilecek duruma gelmek i\u00e7in ganimet topla!  Tak\u0131m arkada\u015flar\u0131n\u0131 daha h\u0131zl\u0131 canland\u0131rmak i\u00e7in rakip avla!  Ma\u00e7\u0131n sonlar\u0131na do\u011fru canland\u0131rmalar sonlan\u0131r. Azmin Zaferi'ni kazanmak i\u00e7in ekibinle hedefe odaklan!"
-      },
-      "product_tag": "Product.BlastBerry.Build",
-      "tagline": "Fortnite Reload is a 40-player fast-paced Battle Royale game that is all about carrying the squad to Victory.   \r\nReboot as long as one teammate is still in the action!  \r\nLoot up after rebooting to get back into fighting shape!  \r\nEliminate opponents to reboot teammates faster! \r\nNear the end of the match, reboots will stop. Lock in with your squad to secure the Victory Royale!  ",
-      "default_sub_link_code": "playlist_sunflowersolo"
+        "supportCode": "epiclabs",
+        "projectId": "a22e7679-4a79-ce85-eaaf-16a2a0bae748",
+        "introduction": "\n\n",
+        "attributions": []
     },
-    "version": 1,
-    "active": false,
-    "disabled": true,
-    "created": "2024-06-10T23:21:00.260Z",
-    "published": "2024-06-10T23:21:00.260Z",
-    "descriptionTags": [],
+    "version": 21,
+    "active": true,
+    "disabled": false,
+    "created": "2024-11-06T16:12:53.193Z",
+    "published": "2024-09-19T17:24:53.477Z",
+    "descriptionTags": [
+        "battle royale"
+    ],
     "moderationStatus": "Approved",
-    "lastActivatedDate": "2024-06-10T23:21:00.263Z",
-    "discoveryIntent": "PUBLIC",
+    "lastActivatedDate": "2024-11-06T16:12:53.422Z",
+    "discoveryIntent": "PRIVATE",
     "linkState": "LIVE"
   },
   {
@@ -2005,11 +1883,25 @@
     "accountId": "epic",
     "creatorName": "Epic",
     "mnemonic": "playlist_sunflowersolo",
-    "linkType": "BR:Playlist",
+    "linkType": "valkyrie:application",
     "metadata": {
       "lobby_background_image_urls": {
         "url": "https://cdn2.unrealengine.com/blastberry-lobby-bg-final-notext-2560x1440-788db0478027.jpg"
       },
+      "required_content": {
+        "verse_uris": [
+          "/Fortnite.com/GameFeatures/BRRoot",
+          "/Fortnite.com/GameFeatures/CreativeRoot"
+        ]
+      },
+      "predownload_link_codes": [
+        "6990-4594-4017"
+      ],
+      "quicksilver_id": "fab50a15-2263-4064-b687-369371020cef",
+        "gameFeaturesets": [
+            "fn1gfs"
+      ],
+      "projectId": "a22e7679-4a79-ce85-eaaf-16a2a0bae748",
       "alt_title": {
         "de": "Wagnis",
         "ru": "\u0422\u0440\u0438\u0443\u043c\u0444\u0430\u043d\u0442",
@@ -2029,9 +1921,6 @@
         "es-419": "Aventura",
         "tr": "G\u00fcm\u00fc\u015f"
       },
-      "favorite_override": "set_blastberry_playlists",
-      "parent_set": "set_blastberry_playlists",
-      "play_history_override": "set_blastberry_playlists",
       "image_url": "https://cdn2.unrealengine.com/fnreload-og-selection-628x512-0c59c26d6200.jpg",
       "product_tag": "Product.BlastBerry.Build",
       "dynamicXp": {
@@ -2067,9 +1956,18 @@
     "mnemonic": "playlist_dashberrysolo",
     "linkType": "BR:Playlist",
     "metadata": {
+      "required_content": {
+        "verse_uris": [
+          "/Fortnite.com/GameFeatures/BRRoot",
+          "/Fortnite.com/GameFeatures/CreativeRoot"
+        ]
+      },
       "lobby_background_image_urls": {
         "url": "https://cdn2.unrealengine.com/fortnite-reload-slurp-rush-the-slurpworks-1920x1080-e74ec5e20e44.jpg"
       },
+      "predownload_link_codes": [
+        "0794-7216-8184"
+      ],
       "alt_title": {
         "de": "SCHL\u00dcRFSCHUB",
         "ru": "\u041d\u0415\u041a\u0422\u0410\u0420\u041d\u042b\u0419 \u0428\u0422\u041e\u0420\u041c",
@@ -2089,10 +1987,6 @@
         "es-419": "FURIA DE SLURP",
         "tr": "GAZOZLA TAM GAZ"
       },
-      "favorite_override": "set_blastberry_playlists",
-      "parent_set": "set_blastberry_playlists",
-      "play_history_override": "set_blastberry_playlists",
-      "block_cascading_data": "true",
       "image_url": "https://cdn2.unrealengine.com/mkart-reload-dashberry-env-screenshots-lighting-v4-3-map-nostarterisland-628x512-007b5edb09bb.jpg",
       "product_tag": "Product.BlastBerry.Build",
       "image_urls": {
@@ -2127,6 +2021,15 @@
       "lobby_background_image_urls": {
         "url": "https://cdn2.unrealengine.com/mkart-reload-32-00-lobby-2048x1024-88d93a368f3d.jpg"
       },
+      "required_content": {
+        "verse_uris": [
+          "/Fortnite.com/GameFeatures/BRRoot",
+          "/Fortnite.com/GameFeatures/CreativeRoot"
+        ]
+      },
+      "predownload_link_codes": [
+        "9725-4954-0946"
+      ],
       "alt_title": {
         "de": "Oase",
         "ru": "\u041e\u0430\u0437\u0438\u0441",
@@ -2140,10 +2043,6 @@
         "es-419": "Oasis",
         "tr": "Vaha"
       },
-      "favorite_override": "set_blastberry_playlists",
-      "parent_set": "set_blastberry_playlists",
-      "play_history_override": "set_blastberry_playlists",
-      "block_cascading_data": "true",
       "image_url": "https://cdn2.unrealengine.com/fnreload-oasis-selection-628x512-37585c2173fc.jpg",
       "product_tag": "Product.BlastBerry.Build",
       "image_urls": {
@@ -2178,18 +2077,15 @@
       "lobby_background_image_urls": {
         "url": "https://cdn2.unrealengine.com/timberstake-lobby-4096x2048-9ad07d806d89.jpg"
       },
-      "matchmakingV2": {
-        "allowSquadFillOption": true,
-        "allowJoinInProgress": false,
-        "crossplayRequired": false,
-        "maxPlayers": 40,
-        "ratingType": "blastberry_build",
-        "maxSocialPartySize": 1,
-        "isRanked": false,
-        "maxTeamCount": 40,
-        "allowPrivateMatches": false,
-        "maxTeamSize": 1
+      "required_content": {
+        "verse_uris": [
+          "/Fortnite.com/GameFeatures/BRRoot",
+          "/Fortnite.com/GameFeatures/CreativeRoot"
+        ]
       },
+      "predownload_link_codes": [
+        "3329-7199-7901"
+      ],
       "alt_title": {
         "ar": "\u0645\u0644\u0627\u0639\u0628 \u0627\u0644\u062d\u0628\u0651\u0627\u0631",
         "de": "SQUID GROUNDS",
@@ -2243,6 +2139,15 @@
       "lobby_background_image_urls": {
         "url": "https://cdn2.unrealengine.com/cdn-uploader-Reload_Nitemare_Lobby_4K-0375a03c.jpg"
       },
+      "required_content": {
+        "verse_uris": [
+          "/Fortnite.com/GameFeatures/BRRoot",
+          "/Fortnite.com/GameFeatures/CreativeRoot"
+        ]
+      },
+      "predownload_link_codes": [
+        "3545-0240-1020"
+      ],
       "alt_title": {
         "de": "NITEMARE ISLAND",
         "ru": "\u041e\u0421\u0422\u0420\u041e\u0412 \u041a\u041e\u0428\u041c\u0410\u0420\u041e\u0412",
@@ -2301,6 +2206,15 @@
       "lobby_background_image_urls": {
         "url": "https://cdn2.unrealengine.com/cdn-uploader-T_WCReloadLobby_StoneBridge-a1b7c45f.jpg"
       },
+      "required_content": {
+        "verse_uris": [
+          "/Fortnite.com/GameFeatures/BRRoot",
+          "/Fortnite.com/GameFeatures/CreativeRoot"
+        ]
+      },
+      "predownload_link_codes": [
+        "7674-2102-3124"
+      ],
       "alt_title": {
         "de": "SURF CITY",
         "ru": "\u0421\u0401\u0420\u0424-\u0421\u0418\u0422\u0418",
@@ -2335,6 +2249,73 @@
       "title": "Surf City",
       "matchmaking": {
         "override_playlist": "playlist_piperbootsolo"
+      }
+    },
+    "version": 1,
+    "active": true,
+    "disabled": false,
+    "created": "2025-05-05T20:29:16.611Z",
+    "published": "2025-05-05T20:29:16.611Z",
+    "updated": "2025-08-26T20:32:22.689Z",
+    "descriptionTags": [],
+    "moderationStatus": "Unmoderated",
+    "lastActivatedDate": "2025-05-05T20:29:16.542Z",
+    "discoveryIntent": "PUBLIC",
+    "linkState": "LIVE"
+  },
+  {
+    "namespace": "fn",
+    "accountId": "epic",
+    "creatorName": "Epic",
+    "mnemonic": "playlist_matchmistsolo",
+    "linkType": "BR:Playlist",
+    "metadata": {
+      "lobby_background_image_urls": {
+        "url": "https://cdn2.unrealengine.com/cdn-uploader-MKART_Reload_EliteStronghold_LobbyBG_Final-abd89da4.jpg"
+      },
+      "required_content": {
+        "verse_uris": [
+          "/Fortnite.com/GameFeatures/BRRoot",
+          "/Fortnite.com/GameFeatures/CreativeRoot"
+        ]
+      },
+      "predownload_link_codes": [
+        "3859-0374-5733"
+      ],
+      "alt_title": {
+        "de": "ELITE\n STRONGHOLD",
+        "ru": "\u041e\u041f\u041b\u041e\u0422\n \u042d\u041b\u0418\u0422\u042b",
+        "ko": "\uc5d8\ub9ac\ud2b8\n \uc2a4\ud2b8\ub871\ud640\ub4dc",
+        "pt": "FORTALEZA\nDA ELITE",
+        "zh-hant": "\u83c1\u82f1\u8981\u585e",
+        "zh-hans": "\u7cbe\u82f1\n \u636e\u70b9",
+        "it": "FORTEZZA\n \u00c9LITE",
+        "fr": "BASTION DE\nL'\u00c9LITE",
+        "es": "FORTALEZA\n DE LA \u00c9LITE",
+        "ar": "\u0645\u0639\u0642\u0644\n\u0627\u0644\u0646\u062e\u0628\u0629",
+        "vi": "PH\u00c1O \u0110\u00c0I\n TINH NHU\u1ec6",
+        "th": "\u0e1b\u0e49\u0e2d\u0e21\u0e1b\u0e23\u0e32\u0e01\u0e32\u0e23\n \u0e2d\u0e35\u0e25\u0e35\u0e17",
+        "ja": "\u30a8\u30ea\u30fc\u30c8\n\u306e\u62e0\u70b9",
+        "id": "BENTENG\n ELITE",
+        "pl": "FORTECA\nELITY",
+        "es-419": "FORTALEZA\n DE LA \u00c9LITE",
+        "tr": "EL\u0130T\n MINTIKASI"
+      },
+      "favorite_override": "set_blastberry_playlists",
+      "parent_set": "set_blastberry_playlists",
+      "play_history_override": "set_blastberry_playlists",
+      "block_cascading_data": "true",
+      "image_url": "https://cdn2.unrealengine.com/cdn-uploader-FN_RELOAD_40-20_Matchmist_Elite_Stronghold_MatchmakingWidget_-628x512-a85ca7ee.jpg",
+      "product_tag": "Product.BlastBerry.Build",
+      "image_urls": {
+        "url_s": "https://cdn2.unrealengine.com/cdn-uploader-FN_RELOAD_40-20_Matchmist_Elite_Stronghold_MatchmakingWidget_-628x512-a85ca7ee.jpg",
+        "url_xs": "https://cdn2.unrealengine.com/cdn-uploader-FN_RELOAD_40-20_Matchmist_Elite_Stronghold_MatchmakingWidget_-628x512-a85ca7ee.jpg",
+        "url_m": "https://cdn2.unrealengine.com/cdn-uploader-FN_RELOAD_40-20_Matchmist_Elite_Stronghold_MatchmakingWidget_-628x512-a85ca7ee.jpg",
+        "url": "https://cdn2.unrealengine.com/cdn-uploader-FN_RELOAD_40-20_Matchmist_Elite_Stronghold_MatchmakingWidget_-628x512-a85ca7ee.jpg"
+      },
+      "title": "Elite Stronghold",
+      "matchmaking": {
+        "override_playlist": "playlist_matchmistsolo"
       }
     },
     "version": 1,

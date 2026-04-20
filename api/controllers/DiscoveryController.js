@@ -23,13 +23,13 @@ module.exports = {
 										"lastVisited": null,
 										"linkCode": "set_br_playlists",
 										"isFavorite": false,
-										"globalCCU": 1
+										"globalCCU": 0
 									},
 									{
 										"lastVisited": null,
 										"linkCode": "playlist_papaya",
 										"isFavorite": false,
-										"globalCCU": 1
+										"globalCCU": 0
 									},
 								],
 								"hasMore": false
@@ -68,7 +68,7 @@ module.exports = {
 									"lastVisited": null,
 									"linkCode": "reference_byepicnocompetitive_5",
 									"isFavorite": false,
-									"globalCCU": -1,
+									"globalCCU": 0,
 									"lockStatus": "UNLOCKED",
 									"lockStatusReason": "NONE",
 									"isVisible": true
@@ -93,7 +93,7 @@ module.exports = {
 								{
 									"linkCode": "playlist_durian",
 									"isFavorite": false,
-									"globalCCU": 1,
+									"globalCCU": 0,
 									"lockStatus": "UNLOCKED",
 									"lockStatusReason": "NONE",
 									"isVisible": true
@@ -101,7 +101,7 @@ module.exports = {
 								{
 									"linkCode": "set_br_playlists",
 									"isFavorite": false,
-									"globalCCU": 1,
+									"globalCCU": 0,
 									"lockStatus": "UNLOCKED",
 									"lockStatusReason": "NONE",
 									"isVisible": true
@@ -109,7 +109,7 @@ module.exports = {
 								{
 									"linkCode": "playlist_pilgrimquickplay",
 									"isFavorite": false,
-									"globalCCU": 1,
+									"globalCCU": 0,
 									"lockStatus": "UNLOCKED",
 									"lockStatusReason": "NONE",
 									"isVisible": true
@@ -117,7 +117,7 @@ module.exports = {
 								{
 									"linkCode": "playlist_juno",
 									"isFavorite": false,
-									"globalCCU": 1,
+									"globalCCU": 0,
 									"lockStatus": "UNLOCKED",
 									"lockStatusReason": "NONE",
 									"isVisible": true
@@ -125,7 +125,7 @@ module.exports = {
 								{
 									"linkCode": "playlist_beanstalk",
 									"isFavorite": false,
-									"globalCCU": 1,
+									"globalCCU": 0,
 									"lockStatus": "UNLOCKED",
 									"lockStatusReason": "NONE",
 									"isVisible": true
@@ -134,7 +134,7 @@ module.exports = {
 									"lastVisited": null,
 									"linkCode": "playlist_papaya",
 									"isFavorite": false,
-									"globalCCU": 1,
+									"globalCCU": 0,
 									"lockStatus": "UNLOCKED",
 									"lockStatusReason": "NONE",
 									"isVisible": true
@@ -167,7 +167,7 @@ module.exports = {
 									"lastVisited": null,
 									"linkCode": "ref_panel_byepicfeeder_1",
 									"isFavorite": false,
-									"globalCCU": -1,
+									"globalCCU": 0,
 									"lockStatus": "UNLOCKED",
 									"lockStatusReason": "NONE",
 									"isVisible": true
@@ -196,7 +196,7 @@ module.exports = {
 								{
 									"linkCode": "set_br_playlists",
 									"isFavorite": false,
-									"globalCCU": 1,
+									"globalCCU": 0,
 									"lockStatus": "UNLOCKED",
 									"lockStatusReason": "NONE",
 									"isVisible": true
@@ -204,7 +204,7 @@ module.exports = {
 								{
 									"linkCode": "playlist_pilgrimquickplay",
 									"isFavorite": false,
-									"globalCCU": 1,
+									"globalCCU": 0,
 									"lockStatus": "UNLOCKED",
 									"lockStatusReason": "NONE",
 									"isVisible": true
@@ -212,7 +212,7 @@ module.exports = {
 								{
 									"linkCode": "playlist_juno",
 									"isFavorite": false,
-									"globalCCU": 1,
+									"globalCCU": 0,
 									"lockStatus": "UNLOCKED",
 									"lockStatusReason": "NONE",
 									"isVisible": true
@@ -220,7 +220,7 @@ module.exports = {
 								{
 									"linkCode": "playlist_beanstalk",
 									"isFavorite": false,
-									"globalCCU": 1,
+									"globalCCU": 0,
 									"lockStatus": "UNLOCKED",
 									"lockStatusReason": "NONE",
 									"isVisible": true
@@ -229,57 +229,11 @@ module.exports = {
 									"lastVisited": null,
 									"linkCode": "playlist_papaya",
 									"isFavorite": false,
-									"globalCCU": 1,
+									"globalCCU": 0,
 									"lockStatus": "UNLOCKED",
 									"lockStatusReason": "NONE",
 									"isVisible": true
 								},
-							],
-							"hasMore": true,
-							"panelTargetName": null,
-							"pageMarker": null
-						},
-						"panelType": "AnalyticsList",
-						"playHistoryType": null
-					},
-					{
-						"panelName": "ByEpicConvergenceBlastberry",
-						"panelNativeDisplayName": "Other Modes By Epic",
-						"panelDisplayName": "Other Modes By Epic",
-						"panelSubtitle": null,
-						"featureTags": [
-							"col:7",
-							"horizontalScroll:false",
-							"hasViewAll:true",
-							"squareTiles:false",
-							"grid:4"
-						],
-						"firstPage": {
-							"results": [
-								{
-									"linkCode": "set_figment_playlists",
-									"isFavorite": false,
-									"globalCCU": 1,
-									"lockStatus": "UNLOCKED",
-									"lockStatusReason": "NONE",
-									"isVisible": true
-								},
-								{
-									"linkCode": "set_blastberry_playlists",
-									"isFavorite": false,
-									"globalCCU": 1,
-									"lockStatus": "UNLOCKED",
-									"lockStatusReason": "NONE",
-									"isVisible": true
-								},
-								{
-									"linkCode": "set_forbiddenfruit_nobuild_playlists",
-									"isFavorite": false,
-									"globalCCU": 1,
-									"lockStatus": "UNLOCKED",
-									"lockStatusReason": "NONE",
-									"isVisible": true
-								}
 							],
 							"hasMore": true,
 							"panelTargetName": null,
@@ -301,7 +255,7 @@ module.exports = {
 									"lastVisited": null,
 									"linkCode": "playlist_skymango",
 									"isFavorite": false,
-									"globalCCU": -1,
+									"globalCCU": 0,
 									"lockStatus": "UNLOCKED",
 									"lockStatusReason": "RATING_THRESHOLD",
 									"isVisible": true,
@@ -329,7 +283,7 @@ module.exports = {
 									"lastVisited": null,
 									"linkCode": "playlist_limerock",
 									"isFavorite": false,
-									"globalCCU": -1,
+									"globalCCU": 0,
 									"lockStatus": "UNLOCKED",
 									"lockStatusReason": "RATING_THRESHOLD",
 									"isVisible": true,
@@ -357,7 +311,7 @@ module.exports = {
 									"lastVisited": null,
 									"linkCode": "playlist_stridemice",
 									"isFavorite": false,
-									"globalCCU": -1,
+									"globalCCU": 0,
 									"lockStatus": "UNLOCKED",
 									"lockStatusReason": "RATING_THRESHOLD",
 									"isVisible": true,
@@ -385,7 +339,7 @@ module.exports = {
 									"lastVisited": null,
 									"linkCode": "playlist_ripehoneydew",
 									"isFavorite": false,
-									"globalCCU": -1,
+									"globalCCU": 0,
 									"lockStatus": "UNLOCKED",
 									"lockStatusReason": "RATING_THRESHOLD",
 									"isVisible": true,
@@ -413,7 +367,7 @@ module.exports = {
 									"lastVisited": null,
 									"linkCode": "playlist_quail",
 									"isFavorite": false,
-									"globalCCU": -1,
+									"globalCCU": 0,
 									"lockStatus": "UNLOCKED",
 									"lockStatusReason": "RATING_THRESHOLD",
 									"isVisible": true,
@@ -427,6 +381,119 @@ module.exports = {
 						"panelType": "CuratedList",
 						"playHistoryType": null,
 						"panelContexts": {}
+					},
+					{
+						"panelName": "ByEpicConvergenceReload",
+						"panelNativeDisplayName": "Reload Maps",
+						"panelDisplayName": "Reload Maps",
+						"panelSubtitle": null,
+						"featureTags": [
+							"col:5",
+						],
+						"firstPage": {
+							"results": [
+								{
+									"linkCode": "playlist_sunflowersolo",
+									"isFavorite": false,
+									"globalCCU": 0,
+									"lockStatus": "UNLOCKED",
+									"lockStatusReason": "NONE",
+									"isVisible": true
+								},
+								{
+									"linkCode": "playlist_punchberrysolo",
+									"isFavorite": false,
+									"globalCCU": 0,
+									"lockStatus": "UNLOCKED",
+									"lockStatusReason": "NONE",
+									"isVisible": true
+								},
+								{
+									"linkCode": "playlist_dashberrysolo",
+									"isFavorite": false,
+									"globalCCU": 0,
+									"lockStatus": "UNLOCKED",
+									"lockStatusReason": "NONE",
+									"isVisible": true
+								},
+								{
+									"linkCode": "playlist_timberstakesolo",
+									"isFavorite": false,
+									"globalCCU": 0,
+									"lockStatus": "UNLOCKED",
+									"lockStatusReason": "NONE",
+									"isVisible": true
+								},
+								{
+									"linkCode": "playlist_piperbootsolo",
+									"isFavorite": false,
+									"globalCCU": 0,
+									"lockStatus": "UNLOCKED",
+									"lockStatusReason": "NONE",
+									"isVisible": true
+								},
+								{
+									"linkCode": "playlist_matchmistsolo",
+									"isFavorite": false,
+									"globalCCU": 0,
+									"lockStatus": "UNLOCKED",
+									"lockStatusReason": "NONE",
+									"isVisible": true
+								}
+								
+							],
+							"hasMore": true,
+							"panelTargetName": null,
+							"pageMarker": null
+						},
+						"panelType": "AnalyticsList",
+						"playHistoryType": null
+					},
+					{
+						"panelName": "ByEpicConvergenceBlastberry",
+						"panelNativeDisplayName": "Other Modes By Epic",
+						"panelDisplayName": "Other Modes By Epic",
+						"panelSubtitle": null,
+						"featureTags": [
+							"col:7",
+							"horizontalScroll:false",
+							"hasViewAll:true",
+							"squareTiles:false",
+							"grid:4"
+						],
+						"firstPage": {
+							"results": [
+								{
+									"linkCode": "set_figment_playlists",
+									"isFavorite": false,
+									"globalCCU": 0,
+									"lockStatus": "UNLOCKED",
+									"lockStatusReason": "NONE",
+									"isVisible": true
+								},
+								{
+									"linkCode": "set_blastberry_playlists",
+									"isFavorite": false,
+									"globalCCU": 0,
+									"lockStatus": "UNLOCKED",
+									"lockStatusReason": "NONE",
+									"isVisible": true
+								},
+								{
+									"linkCode": "set_forbiddenfruit_nobuild_playlists",
+									"isFavorite": false,
+									"globalCCU": 0,
+									"lockStatus": "UNLOCKED",
+									"lockStatusReason": "NONE",
+									"isVisible": true
+								}
+							],
+							"hasMore": true,
+							"panelTargetName": null,
+							"pageMarker": null
+						},
+						"panelType": "AnalyticsList",
+						"playHistoryType": null
 					},
 				]
 			})
@@ -451,7 +518,6 @@ module.exports = {
 				playlistActive(discoveryv2, "set_figment_playlists", true, false)
 				addPlaylistOverwrite(discoveryv2, "figment", version)
 			}
-			if (version >= 30.20) { playlistActive(discoveryv2, "set_blastberry_playlists", true, false) }
 			if (version >= 36.10) { playlistActive(discoveryv2, "set_forbiddenfruit_nobuild_playlists", true, false) }
 			if (version >= 37.31 && version < 40.20) { playlistActive(discoveryv2, "playlist_stridemice", true, false) }
 			if (misc.bInEditor == true) { //scuffed way of doing it but works
@@ -527,7 +593,6 @@ module.exports = {
 			playlistActive(discoveryv2, "set_figment_playlists", true, false)
 			addPlaylistOverwrite(discoveryv2, "figment", version)
 		}
-		if (version >= 30.20) { playlistActive(discoveryv2, "set_blastberry_playlists", true, false) }
 		if (version >= 36.10) { playlistActive(discoveryv2, "set_forbiddenfruit_nobuild_playlists", true, false) }
 		if (version >= 37.31) { playlistActive(discoveryv2, "playlist_stridemice", true, false) }
 		if (playlistManager[version]) { playlistManager[version].forEach(playlist => playlistActive(discoveryv2, playlist, true, false)) }
