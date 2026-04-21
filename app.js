@@ -34,9 +34,22 @@ async function startBackend() {
     sails.lift({
         port: 5595,
         environment: "production",
-        hooks: {
-            session: false
+         hooks: {
+            grunt: false,
+            sockets: false,
+            pubsub: false,
+            session: false,
+            views: false,
+            blueprints: false,
+            helpers: false,
+            policies: false,
+            security: false,
+            services: false,
+            i18n: false,
+            request: false,
+            responses: false
         },
+        globals: false,
         log: {
             level: config.logLevel
         },
