@@ -3,6 +3,56 @@
     "namespace": "fn",
     "accountId": "epic",
     "creatorName": "Epic",
+    "mnemonic": "ref_panel_byepicfeederreload_1",
+    "linkType": "Reference",
+    "metadata": {
+      "ref_id": "CreativeDiscoverySurface_Frontend:ByEpicConvergenceReload",
+      "ref_qty": 8,
+      "feature_flags": [
+        "bypass_rating_check"
+      ],
+      "ref_type": "CreativeDiscoverySurfacePanel"
+    },
+    "version": 1,
+    "active": true,
+    "disabled": false,
+    "created": "2025-05-15T18:53:08.531Z",
+    "published": "2025-05-15T18:53:08.531Z",
+    "descriptionTags": [],
+    "moderationStatus": "Unmoderated",
+    "lastActivatedDate": "2025-05-15T18:53:08.536Z",
+    "discoveryIntent": "PUBLIC",
+    "linkState": "LIVE"
+  },
+  {
+    "namespace": "fn",
+    "accountId": "epic",
+    "creatorName": "Epic",
+    "mnemonic": "ref_panel_byepicfeedermoremodes_1",
+    "linkType": "Reference",
+    "metadata": {
+      "ref_id": "CreativeDiscoverySurface_Frontend:ByEpicConvergenceMoreModes",
+      "ref_qty": 8,
+      "feature_flags": [
+        "bypass_rating_check"
+      ],
+      "ref_type": "CreativeDiscoverySurfacePanel"
+    },
+    "version": 1,
+    "active": true,
+    "disabled": false,
+    "created": "2025-05-15T18:53:08.531Z",
+    "published": "2025-05-15T18:53:08.531Z",
+    "descriptionTags": [],
+    "moderationStatus": "Unmoderated",
+    "lastActivatedDate": "2025-05-15T18:53:08.536Z",
+    "discoveryIntent": "PUBLIC",
+    "linkState": "LIVE"
+  },
+  {
+    "namespace": "fn",
+    "accountId": "epic",
+    "creatorName": "Epic",
     "mnemonic": "ref_panel_byepicfeeder_1",
     "linkType": "Reference",
     "metadata": {

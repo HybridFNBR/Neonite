@@ -440,7 +440,7 @@ module.exports = {
 									"lockStatusReason": "NONE",
 									"isVisible": true
 								}
-								
+
 							],
 							"hasMore": true,
 							"panelTargetName": null,
@@ -450,7 +450,7 @@ module.exports = {
 						"playHistoryType": null
 					},
 					{
-						"panelName": "ByEpicConvergenceBlastberry",
+						"panelName": "ByEpicConvergenceMoreModes",
 						"panelNativeDisplayName": "Other Modes By Epic",
 						"panelDisplayName": "Other Modes By Epic",
 						"panelSubtitle": null,
@@ -529,6 +529,12 @@ module.exports = {
 				updateMetadata(discoveryv2, "ref_panel_byepicfeeder_1", {
 					ref_id: "CreativeDiscoverySurface_FrontendV2:ByEpicFeeder"
 				});
+				updateMetadata(discoveryv2, "ref_panel_byepicfeederreload_1", {
+					ref_id: "CreativeDiscoverySurface_FrontendV2:ByEpicConvergenceReload"
+				});
+				updateMetadata(discoveryv2, "ref_panel_byepicfeedermoremodes_1", {
+					ref_id: "CreativeDiscoverySurface_FrontendV2:ByEpicConvergenceMoreModes"
+				});
 			}
 			if (versionGlobal >= 39) {
 				updateMetadata(discoveryv2, "playlist_defaultsolo", {
@@ -542,7 +548,7 @@ module.exports = {
 					},
 					"title": "CH7 BR Map",
 				});
-				if(versionGlobal == 39){
+				if (versionGlobal == 39) {
 					updateMetadata(discoveryv2, "playlist_defaultduo", {
 						"alt_title": { "en": "CH6 BR Map", "de": "CH6 BR Kaart", "ru": "CH6 BR Карта", "ko": "CH6 BR 지도", "pt-BR": "Mapa CH7 BR", "it": "CH6 Mappa BR", "fr": "CH6 Carte BR", "zh-CN": "", "es": "CH6 Mapa BR", "es-MX": "CH6 Mapa BR", "zh": "", "ar": "CH6 BR خريطة", "zh-Hant": "", "ja": "CH6 BR マップ", "pl": "CH6 Mapa BR", "es-419": "CH6 Mapa BR", "tr": "CH6 BR Haritası" },//used DeepL for translations they may not be correct.
 						"title": "CH6 BR Map",
@@ -596,11 +602,6 @@ module.exports = {
 		if (version >= 36.10) { playlistActive(discoveryv2, "set_forbiddenfruit_nobuild_playlists", true, false) }
 		if (version >= 37.31) { playlistActive(discoveryv2, "playlist_stridemice", true, false) }
 		if (playlistManager[version]) { playlistManager[version].forEach(playlist => playlistActive(discoveryv2, playlist, true, false)) }
-		if (version >= 38.11) {
-			updateMetadata(discoveryv2, "ref_panel_byepicfeeder_1", {
-				ref_id: "CreativeDiscoverySurface_FrontendV2:ByEpicFeeder"
-			});
-		}
 		if (versionGlobal >= 39) {
 			updateMetadata(discoveryv2, "playlist_defaultsolo", {
 				"alt_title": { "en": "CH7 BR Map", "de": "CH7 BR Kaart", "ru": "CH7 BR Карта", "ko": "CH7 BR 지도", "pt-BR": "Mapa CH7 BR", "en": "CH7 BR Map", "it": "CH7 Mappa BR", "fr": "CH7 Carte BR", "zh-CN": "", "es": "CH7 Mapa BR", "es-MX": "CH7 Mapa BR", "zh": "", "ar": "CH7 BR خريطة", "zh-Hant": "", "ja": "CH7 BR マップ", "pl": "CH7 Mapa BR", "es-419": "CH7 Mapa BR", "tr": "CH7 BR Haritası" }, 	//used DeepL for translations they may not be correct.
@@ -613,7 +614,7 @@ module.exports = {
 				},
 			});
 
-			if(versionGlobal == 39){
+			if (versionGlobal == 39) {
 				updateMetadata(discoveryv2, "playlist_defaultduo", {
 					"alt_title": { "en": "CH6 BR Map", "de": "CH6 BR Kaart", "ru": "CH6 BR Карта", "ko": "CH6 BR 지도", "pt-BR": "Mapa CH7 BR", "it": "CH6 Mappa BR", "fr": "CH6 Carte BR", "zh-CN": "", "es": "CH6 Mapa BR", "es-MX": "CH6 Mapa BR", "zh": "", "ar": "CH6 BR خريطة", "zh-Hant": "", "ja": "CH6 BR マップ", "pl": "CH6 Mapa BR", "es-419": "CH6 Mapa BR", "tr": "CH6 BR Haritası" },//used DeepL for translations they may not be correct.
 					"title": "CH6 BR Map",
