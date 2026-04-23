@@ -2,3 +2,4 @@ node_modules/
 profile/
 NodeMonRun.cmd
 cache/
+api/controllers/xmpp.js

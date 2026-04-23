@@ -1,6 +1,6 @@
 {
   "name": "neonite",
-  "version": "2.9.6",
+  "version": "2.9.7",
   "description": "A Fortnite Private Server",
   "main": "app.js",
   "scripts": {
@@ -22,6 +22,9 @@
     "jsonwebtoken": "^9.0.3",
     "path": "^0.12.7",
     "sails": "^1.5.16",
-    "uuid": "^13.0.0"
+    "uuid": "^13.0.0",
+    "ws": "^8.20.0",
+    "xml-parser": "^1.2.1",
+    "xmlbuilder": "^15.1.1"
   }
 }

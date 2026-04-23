@@ -3,7 +3,7 @@ const { default: axios } = require("axios");
 const fs = require('fs')
 const jsonwebtoken = require('jsonwebtoken');
 const ini = require('ini')
-const { getVersionInfo, loadJSON, VersionFilter, misc } = require("../../config/defs");
+const { getVersionInfo, loadJSON, VersionFilter, misc, compareAndUpdateKeychain} = require("../../config/defs");
 const config = ini.parse(fs.readFileSync(path.join(__dirname, '../../config.ini'), 'utf-8'));
 let requested = false
 const fortnitegame = loadJSON("../responses/fortnitegame.json")
@@ -492,7 +492,8 @@ module.exports = {
 		return res.status(404).end()
 	},
 
-	keychain: function (req, res) {
+	keychain: async function (req, res) {
+		await compareAndUpdateKeychain();
 		const keychainArray = [
 			"46159C748694298198A52DC07476FDA3:4CLHOBqSrmS1RkG/SxZYi8Rc0zCmAKxXIBMMUHDl2ag=",
 			"1C6FDB12D706D59E15399DB8FD1EFD85:39JQsqlpGBC1xEz4qeYUYT8Nta0ZkYb3GvjEumq+bAM=",

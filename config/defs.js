@@ -3,7 +3,7 @@ const fs = require("fs");
 const path = require('path');
 const NeoLog = require("../structs/NeoLog")
 const { default: axios } = require("axios");
-
+const keychain = JSON.parse(fs.readFileSync("./responses/keychain.json", "utf-8"));
 const account = {
     displayName: "",
     accountId: "",
@@ -560,7 +560,7 @@ const loadJSON = (dirPath) => {
     const fullPath = path.join(__dirname, dirPath);
     const jsonData = fs.readFileSync(fullPath, 'utf-8');
     return JSON.parse(jsonData);
-};
+}
 
 const VersionFilter = [
     "Cert",
@@ -741,6 +741,30 @@ const billboard = (sectionID, offerGoupsectionID, stackRankValue, foregroundUrl,
 
     }
 };
+
+async function compareAndUpdateKeychain() {
+    const response = await axios.get('https://export-service.dillyapis.com/v1/aes', {validateStatus: () => true});    
+    if (response.status === 200) {
+        const data = response.data;
+
+        let missingCount = 0;
+        const keychainArray = [];
+
+        for (const keys of data.dynamicKeys) {
+            if (!keychain.includes(keys.keychain)) {
+                missingCount++;
+                keychainArray.push(keys.keychain);
+            }
+        }
+        keychain.push(...keychainArray);
+
+        fs.writeFileSync("./responses/keychain.json", JSON.stringify(keychain, null, 2));
+        NeoLog.Debug(`Fetched ${missingCount} New Keychains from dillyapis.`);
+    }
+    else if (response.status !== 200) {
+        NeoLog.Error("Unable to connect to dillyapis! Falling back to existing keychains on your local disk. You may experience issues!");
+    }
+}
 
 
 const Backgrounds = (version, versionGlobal, backgrounds, content) => {
@@ -1082,6 +1106,7 @@ const Playlists = (fortnitegame, version) => {
 
 }
 module.exports = {
+    compareAndUpdateKeychain,
     misc,
     getClientCredentials,
     winterFestPresents,

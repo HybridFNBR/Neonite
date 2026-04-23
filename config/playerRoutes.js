@@ -5,23 +5,21 @@ module.exports.routes = {
         skipAssets: false
     },
     'GET /party/api/v1/Fortnite/user/:accountId': 'PlayerController.localparty',
-    'GET /party/api/v1/*/parties/:partyId/members/:accountId/meta':{
-        action: "partyMeta",
-        controller:'PlayerController', 
-        skipAssets: false
-    },
     'POST /party/api/v1/*/user/:accountId/pings/:pingerId':{
         action: "pings",
         controller:'PlayerController', 
         skipAssets: false
     },
     'ALL /party/api/v1/Fortnite/parties/:partyId/members/:accountId' : 'PlayerController.createParty',
+    'ALL /party/api/v1/Fortnite/parties/:partyId': 'PlayerController.party',
+    'ALL /party/api/v1/*/parties/:partyId/members/:accountId/meta': 'PlayerController.partyMeta',
+    'POST /party/api/v1/*/parties/:partyId/members/:accountId/join': 'PlayerController.joinParty',
     'GET /friends/api/v1/*/recent/fortnite':{
         action: "recentPlayers",
         controller:'PlayerController', 
         skipAssets: false
     },
-    'GET /party/api/v1/Fortnite/user/hybrid/settings/privacy': 'PlayerController.settingsPrivacy',
+    'GET /party/api/v1/Fortnite/user/:accountId/settings/privacy': 'PlayerController.settingsPrivacy',
     'GET /party/api/v1/Fortnite/user/:accountId/notifications/undelivered/count': {
         action: "localparty",
         controller:'PlayerController', 
