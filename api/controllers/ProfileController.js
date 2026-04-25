@@ -5,7 +5,7 @@ const fs = require("fs");
 const { v4: uuidv4 } = require("uuid");
 const path = require('path');
 const ini = require('ini')
-const { getVersionInfo, MPLockerLoadout, CH1Fix, VersionFilter, loadJSON, stats, seasonPass, winterFest, winterFestPresents } = require("../../config/defs")
+const { getVersionInfo, MPLockerLoadout, CH1Fix, VersionFilter, loadJSON, stats, seasonPass, winterFest, winterFestPresents, accountResources} = require("../../config/defs")
 let miniPassData = loadJSON("../config/MiniPass.json")
 Array.prototype.insert = function (index, item) {
 	this.splice(index, 0, item);
@@ -372,6 +372,7 @@ module.exports = {
 				if (profileId === "athena") {
 					stats(accountId, athenprofile, config, versionGlobal);
 					winterFest(accountId, athenprofile);
+					accountResources(accountId, athenprofile)
 					if (versionGlobal >= 33) { seasonPass(accountId, athenprofile, version, versionGlobal); }
 					for (const [questId, quest] of Object.entries(miniPassData)) { Profile.addItem(athenprofile, questId, quest) }
 					if (version >= 28.00) { MPLockerLoadout(accountId, athenprofile); }

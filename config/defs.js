@@ -379,6 +379,24 @@ const seasonPass = (accountId, athenprofile, version, versionGlobal) => {
     Profile.saveProfile(accountId, "athena", athenprofile)
 };
 
+const accountResources = (accountId, athenprofile) => {
+    const accountResource = [
+        "s21_powerlevel",
+        "s23_eventcurrency"
+    ]
+
+    accountResource.forEach(resource => {
+        Profile.addItem(athenprofile, resource, {
+             attributes: {
+                "level": 1
+            },
+            "templateId": `AccountResource:${resource}`,
+            "quantity": 120000000
+        })
+    })
+    Profile.saveProfile(accountId, "athena", athenprofile)
+}
+
 const winterFest = (accountId, athenprofile) => {
     const winterFestRewardGraphs = [
         "AthenaRewardGraph:Winterfest",
@@ -1106,6 +1124,7 @@ const Playlists = (fortnitegame, version) => {
 
 }
 module.exports = {
+    accountResources,
     compareAndUpdateKeychain,
     misc,
     getClientCredentials,

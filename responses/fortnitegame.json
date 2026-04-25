@@ -1772,6 +1772,14 @@
           "resourceHeader": "Your Power Level",
           "moreInfoHeader": "Dragon Ball - Power Unleashed!",
           "eventCMSId": "StaminaEvent",
+          "eventBackgroundColor1": "#a12a00",
+          "eventBackgroundColor2": "#dd5b00",
+          "eventBackgroundColor3": "#e46000",
+          "rewardBackgroundColor1": "#500e00",
+          "rewardBackgroundColor2": "#850201",
+          "rewardBackgroundColor3": "#500e00",
+          "moreInfoBody": "Dragon Ball - Power Unleashed! is a set of challenges that allow you to increase your Power Level and earn Dragon Balls.\n\nCompleting quests will grant you Power Level and will advance you along the item track, unlocking cosmetic in-game rewards at certain intervals.\n\nComplete three quests from each category to earn Dragon Balls, and unlock the Shenron Glider when you collect all seven!\n\nAll Power Unleashed rewards can be obtained without purchase by completing quests. Buying rewards is optional.",
+          "accentColor": "00f0ff",
           "eventCTA": "Collect <text color=\"FCE104FF\">Dragon Balls</> to unlock the Shenron glider!",
           "_type": "Event Screen Data",
           "eventCTACompleted": "Shenron granted your wish!",
@@ -1792,7 +1800,8 @@
               "resourceValue": 150000000
             }
           ],
-          "moreInfoLegal": "Please note that in-game rewards, including the Shenron Glider, are not exclusive to Dragon Ball - Power Unleashed! and may be available later in the Item Shop for purchase at a potentially higher price.",
+          "keyArt": "https://cdn2.unrealengine.com/21br-stamina-questline-lineup-960x600-960x600-d3ce9ab6998e.png",
+          "ctaIcon": "https://cdn2.unrealengine.com/t-ui-stamina-rewardbanner-512x340-f4822138b49b.png",
           "purchaseLegal": "All Power Unleashed rewards can be obtained without purchase by completing quests. Buying rewards is optional."
         }
       ]

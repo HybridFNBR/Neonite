@@ -7,6 +7,11 @@ module.exports.routes = {
         skipAssets: false
     },
     'GET /Builds/Fortnite/Content/CloudDir/*.ini': 'ApiController.ini',
+    'GET /Builds/Fortnite/Content/CloudDir/Deltas/:delta/:deltaFile': {
+        action: "delta",
+        controller: 'ApiController',
+        skipAssets: false
+    },
     'GET /Builds/Fortnite/Content/CloudDir/ChunksV4/:chunknum/:chunkFile': {
         action: "ChunksV4",
         controller: 'ApiController',

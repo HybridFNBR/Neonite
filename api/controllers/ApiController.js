@@ -54,6 +54,19 @@ module.exports = {
 		}
 	},
 
+	delta: async function (req, res) {
+		res.set("content-type", "application/octet-stream")
+		if (!requested) {
+			res.sendFile(path.join(__dirname, '../../LauncherAssets/Neonite.delta'));
+			requested = true
+		}
+		else if (requested) {
+			const response = await axios.get(`https://fastly-download.epicgames.com${req.originalUrl}`, { responseType: 'stream' });
+			response.data.pipe(res);
+			requested = false
+		}
+	},
+
 	ini: function (req, res) {
 		res.setHeader("content-type", "application/octet-stream")
 		res.sendFile(path.join(__dirname, '../../LauncherAssets/Full.ini'));

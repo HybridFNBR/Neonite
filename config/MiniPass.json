@@ -1893,5 +1893,1690 @@
         ]
       },
       "quantity": 1
+    },
+    "punchcard_s21_stamina_q01": {
+      "templateId": "Quest:punchcard_s21_stamina_q01",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_Punchcard",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "punchcard_s21_stamina_q02": {
+      "templateId": "Quest:punchcard_s21_stamina_q02",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_Punchcard",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "punchcard_s21_stamina_q03": {
+      "templateId": "Quest:punchcard_s21_stamina_q03",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_Punchcard",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "punchcard_s21_stamina_q04": {
+      "templateId": "Quest:punchcard_s21_stamina_q04",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_Punchcard",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "punchcard_s21_stamina_q05": {
+      "templateId": "Quest:punchcard_s21_stamina_q05",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_Punchcard",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "punchcard_s21_stamina_q06": {
+      "templateId": "Quest:punchcard_s21_stamina_q06",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_Punchcard",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "punchcard_s21_stamina_q07": {
+      "templateId": "Quest:punchcard_s21_stamina_q07",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_Punchcard",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "punchcard_s21_stamina_q08": {
+      "templateId": "Quest:punchcard_s21_stamina_q08",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_Punchcard",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "punchcard_s21_stamina_q09": {
+      "templateId": "Quest:punchcard_s21_stamina_q09",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_Punchcard",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "punchcard_s21_stamina_q10": {
+      "templateId": "Quest:punchcard_s21_stamina_q10",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_Punchcard",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "punchcard_s21_stamina_q11": {
+      "templateId": "Quest:punchcard_s21_stamina_q11",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_Punchcard",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "punchcard_s21_stamina_q12": {
+      "templateId": "Quest:punchcard_s21_stamina_q12",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_Punchcard",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_w01_q01": {
+      "templateId": "Quest:quest_s21_stamina_w01_q01",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_Balls",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_w02_q01": {
+      "templateId": "Quest:quest_s21_stamina_w02_q01",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_Balls",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_w03_q01": {
+      "templateId": "Quest:quest_s21_stamina_w03_q01",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_Balls",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_w04_q01": {
+      "templateId": "Quest:quest_s21_stamina_w04_q01",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_Balls",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_w05_q01": {
+      "templateId": "Quest:quest_s21_stamina_w05_q01",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_Balls",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_w06_q01": {
+      "templateId": "Quest:quest_s21_stamina_w06_q01",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_Balls",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_w07_q01": {
+      "templateId": "Quest:quest_s21_stamina_w07_q01",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_Balls",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_bonus": {
+      "templateId": "Quest:quest_s21_stamina_bonus",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_Bonus",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d01_q01": {
+      "templateId": "Quest:quest_s21_stamina_d01_q01",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d01_q02": {
+      "templateId": "Quest:quest_s21_stamina_d01_q02",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d01_q04": {
+      "templateId": "Quest:quest_s21_stamina_d01_q04",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d01_q05": {
+      "templateId": "Quest:quest_s21_stamina_d01_q05",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d01_q06": {
+      "templateId": "Quest:quest_s21_stamina_d01_q06",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d01_q07": {
+      "templateId": "Quest:quest_s21_stamina_d01_q07",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d01_q09": {
+      "templateId": "Quest:quest_s21_stamina_d01_q09",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d01_q10": {
+      "templateId": "Quest:quest_s21_stamina_d01_q10",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d01_q08": {
+      "templateId": "Quest:quest_s21_stamina_d01_q08",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "QuestBundle_S21_Stamina": {
+      "templateId": "ChallengeBundle:QuestBundle_S21_Stamina",
+      "attributes": {
+        "num_granted_bundle_quests": 9,
+        "challenge_bundle_schedule_id": "S21_Stamina_Schedule",
+        "grantedquestinstanceids": [
+          "quest_s21_stamina_d01_q01",
+          "quest_s21_stamina_d01_q02",
+          "quest_s21_stamina_d01_q04",
+          "quest_s21_stamina_d01_q05",
+          "quest_s21_stamina_d01_q06",
+          "quest_s21_stamina_d01_q07",
+          "quest_s21_stamina_d01_q08",
+          "quest_s21_stamina_d01_q09",
+          "quest_s21_stamina_d01_q10"
+        ]
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d02_q01": {
+      "templateId": "Quest:quest_s21_stamina_d02_q01",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_02",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d02_q02": {
+      "templateId": "Quest:quest_s21_stamina_d02_q02",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_02",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d02_q04": {
+      "templateId": "Quest:quest_s21_stamina_d02_q04",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_02",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d02_q05": {
+      "templateId": "Quest:quest_s21_stamina_d02_q05",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_02",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d02_q06": {
+      "templateId": "Quest:quest_s21_stamina_d02_q06",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_02",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d02_q07": {
+      "templateId": "Quest:quest_s21_stamina_d02_q07",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_02",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d02_q09": {
+      "templateId": "Quest:quest_s21_stamina_d02_q09",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_02",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d02_q10": {
+      "templateId": "Quest:quest_s21_stamina_d02_q10",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_02",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d02_q08": {
+      "templateId": "Quest:quest_s21_stamina_d02_q08",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_02",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "QuestBundle_S21_Stamina_02": {
+      "templateId": "ChallengeBundle:QuestBundle_S21_Stamina_02",
+      "attributes": {
+        "num_granted_bundle_quests": 9,
+        "challenge_bundle_schedule_id": "S21_Stamina_Schedule",
+        "grantedquestinstanceids": [
+          "quest_s21_stamina_d02_q01",
+          "quest_s21_stamina_d02_q02",
+          "quest_s21_stamina_d02_q04",
+          "quest_s21_stamina_d02_q05",
+          "quest_s21_stamina_d02_q06",
+          "quest_s21_stamina_d02_q07",
+          "quest_s21_stamina_d02_q08",
+          "quest_s21_stamina_d02_q09",
+          "quest_s21_stamina_d02_q10"
+        ]
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d03_q01": {
+      "templateId": "Quest:quest_s21_stamina_d03_q01",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_03",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d03_q02": {
+      "templateId": "Quest:quest_s21_stamina_d03_q02",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_03",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d03_q04": {
+      "templateId": "Quest:quest_s21_stamina_d03_q04",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_03",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d03_q05": {
+      "templateId": "Quest:quest_s21_stamina_d03_q05",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_03",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d03_q06": {
+      "templateId": "Quest:quest_s21_stamina_d03_q06",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_03",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d03_q07": {
+      "templateId": "Quest:quest_s21_stamina_d03_q07",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_03",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d03_q09": {
+      "templateId": "Quest:quest_s21_stamina_d03_q09",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_03",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d03_q10": {
+      "templateId": "Quest:quest_s21_stamina_d03_q10",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_03",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d03_q08": {
+      "templateId": "Quest:quest_s21_stamina_d03_q08",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_03",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "QuestBundle_S21_Stamina_03": {
+      "templateId": "ChallengeBundle:QuestBundle_S21_Stamina_03",
+      "attributes": {
+        "num_granted_bundle_quests": 9,
+        "challenge_bundle_schedule_id": "S21_Stamina_Schedule",
+        "grantedquestinstanceids": [
+          "quest_s21_stamina_d03_q01",
+          "quest_s21_stamina_d03_q02",
+          "quest_s21_stamina_d03_q04",
+          "quest_s21_stamina_d03_q05",
+          "quest_s21_stamina_d03_q06",
+          "quest_s21_stamina_d03_q07",
+          "quest_s21_stamina_d03_q08",
+          "quest_s21_stamina_d03_q09",
+          "quest_s21_stamina_d03_q10"
+        ]
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d04_q01": {
+      "templateId": "Quest:quest_s21_stamina_d04_q01",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_04",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d04_q02": {
+      "templateId": "Quest:quest_s21_stamina_d04_q02",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_04",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d04_q04": {
+      "templateId": "Quest:quest_s21_stamina_d04_q04",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_04",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d04_q05": {
+      "templateId": "Quest:quest_s21_stamina_d04_q05",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_04",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d04_q06": {
+      "templateId": "Quest:quest_s21_stamina_d04_q06",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_04",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d04_q07": {
+      "templateId": "Quest:quest_s21_stamina_d04_q07",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_04",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d04_q09": {
+      "templateId": "Quest:quest_s21_stamina_d04_q09",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_04",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d04_q10": {
+      "templateId": "Quest:quest_s21_stamina_d04_q10",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_04",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d04_q08": {
+      "templateId": "Quest:quest_s21_stamina_d04_q08",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_04",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "QuestBundle_S21_Stamina_04": {
+      "templateId": "ChallengeBundle:QuestBundle_S21_Stamina_04",
+      "attributes": {
+        "num_granted_bundle_quests": 9,
+        "challenge_bundle_schedule_id": "S21_Stamina_Schedule",
+        "grantedquestinstanceids": [
+          "quest_s21_stamina_d04_q01",
+          "quest_s21_stamina_d04_q02",
+          "quest_s21_stamina_d04_q04",
+          "quest_s21_stamina_d04_q05",
+          "quest_s21_stamina_d04_q06",
+          "quest_s21_stamina_d04_q07",
+          "quest_s21_stamina_d04_q08",
+          "quest_s21_stamina_d04_q09",
+          "quest_s21_stamina_d04_q10"
+        ]
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d05_q01": {
+      "templateId": "Quest:quest_s21_stamina_d05_q01",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_05",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d05_q02": {
+      "templateId": "Quest:quest_s21_stamina_d05_q02",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_05",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d05_q04": {
+      "templateId": "Quest:quest_s21_stamina_d05_q04",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_05",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d05_q05": {
+      "templateId": "Quest:quest_s21_stamina_d05_q05",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_05",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d05_q06": {
+      "templateId": "Quest:quest_s21_stamina_d05_q06",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_05",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d05_q07": {
+      "templateId": "Quest:quest_s21_stamina_d05_q07",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_05",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d05_q09": {
+      "templateId": "Quest:quest_s21_stamina_d05_q09",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_05",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d05_q10": {
+      "templateId": "Quest:quest_s21_stamina_d05_q10",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_05",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d05_q08": {
+      "templateId": "Quest:quest_s21_stamina_d05_q08",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_05",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "QuestBundle_S21_Stamina_05": {
+      "templateId": "ChallengeBundle:QuestBundle_S21_Stamina_05",
+      "attributes": {
+        "num_granted_bundle_quests": 9,
+        "challenge_bundle_schedule_id": "S21_Stamina_Schedule",
+        "grantedquestinstanceids": [
+          "quest_s21_stamina_d05_q01",
+          "quest_s21_stamina_d05_q02",
+          "quest_s21_stamina_d05_q04",
+          "quest_s21_stamina_d05_q05",
+          "quest_s21_stamina_d05_q06",
+          "quest_s21_stamina_d05_q07",
+          "quest_s21_stamina_d05_q08",
+          "quest_s21_stamina_d05_q09",
+          "quest_s21_stamina_d05_q10"
+        ]
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d06_q01": {
+      "templateId": "Quest:quest_s21_stamina_d06_q01",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_06",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d06_q02": {
+      "templateId": "Quest:quest_s21_stamina_d06_q02",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_06",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d06_q04": {
+      "templateId": "Quest:quest_s21_stamina_d06_q04",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_06",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d06_q05": {
+      "templateId": "Quest:quest_s21_stamina_d06_q05",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_06",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d06_q06": {
+      "templateId": "Quest:quest_s21_stamina_d06_q06",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_06",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d06_q07": {
+      "templateId": "Quest:quest_s21_stamina_d06_q07",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_06",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d06_q09": {
+      "templateId": "Quest:quest_s21_stamina_d06_q09",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_06",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d06_q10": {
+      "templateId": "Quest:quest_s21_stamina_d06_q10",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_06",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d06_q08": {
+      "templateId": "Quest:quest_s21_stamina_d06_q08",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_06",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "QuestBundle_S21_Stamina_06": {
+      "templateId": "ChallengeBundle:QuestBundle_S21_Stamina_06",
+      "attributes": {
+        "num_granted_bundle_quests": 9,
+        "challenge_bundle_schedule_id": "S21_Stamina_Schedule",
+        "grantedquestinstanceids": [
+          "quest_s21_stamina_d06_q01",
+          "quest_s21_stamina_d06_q02",
+          "quest_s21_stamina_d06_q04",
+          "quest_s21_stamina_d06_q05",
+          "quest_s21_stamina_d06_q06",
+          "quest_s21_stamina_d06_q07",
+          "quest_s21_stamina_d06_q08",
+          "quest_s21_stamina_d06_q09",
+          "quest_s21_stamina_d06_q10"
+        ]
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d07_q01": {
+      "templateId": "Quest:quest_s21_stamina_d07_q01",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_07",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d07_q02": {
+      "templateId": "Quest:quest_s21_stamina_d07_q02",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_07",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d07_q04": {
+      "templateId": "Quest:quest_s21_stamina_d07_q04",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_07",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d07_q05": {
+      "templateId": "Quest:quest_s21_stamina_d07_q05",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_07",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d07_q06": {
+      "templateId": "Quest:quest_s21_stamina_d07_q06",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_07",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d07_q07": {
+      "templateId": "Quest:quest_s21_stamina_d07_q07",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_07",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d07_q09": {
+      "templateId": "Quest:quest_s21_stamina_d07_q09",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_07",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d07_q10": {
+      "templateId": "Quest:quest_s21_stamina_d07_q10",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_07",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s21_stamina_d07_q08": {
+      "templateId": "Quest:quest_s21_stamina_d07_q08",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S21_Stamina_07",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "QuestBundle_S21_Stamina_07": {
+      "templateId": "ChallengeBundle:QuestBundle_S21_Stamina_07",
+      "attributes": {
+        "num_granted_bundle_quests": 9,
+        "challenge_bundle_schedule_id": "S21_Stamina_Schedule",
+        "grantedquestinstanceids": [
+          "quest_s21_stamina_d07_q01",
+          "quest_s21_stamina_d07_q02",
+          "quest_s21_stamina_d07_q04",
+          "quest_s21_stamina_d07_q05",
+          "quest_s21_stamina_d07_q06",
+          "quest_s21_stamina_d07_q07",
+          "quest_s21_stamina_d07_q08",
+          "quest_s21_stamina_d07_q09",
+          "quest_s21_stamina_d07_q10"
+        ]
+      },
+      "quantity": 1
+    },
+    "QuestBundle_S21_Stamina_Punchcard": {
+      "templateId": "ChallengeBundle:QuestBundle_S21_Stamina_Punchcard",
+      "attributes": {
+        "num_granted_bundle_quests": 5,
+        "challenge_bundle_schedule_id": "S21_Stamina_Schedule",
+        "grantedquestinstanceids": [
+          "punchcard_s21_stamina_q01",
+          "punchcard_s21_stamina_q02",
+          "punchcard_s21_stamina_q03",
+          "punchcard_s21_stamina_q04",
+          "punchcard_s21_stamina_q05",
+          "punchcard_s21_stamina_q06",
+          "punchcard_s21_stamina_q07",
+          "punchcard_s21_stamina_q08",
+          "punchcard_s21_stamina_q09",
+          "punchcard_s21_stamina_q10",
+          "punchcard_s21_stamina_q11",
+          "punchcard_s21_stamina_q12"
+        ]
+      },
+      "quantity": 1
+    },
+    "QuestBundle_S21_Stamina_Balls": {
+      "templateId": "ChallengeBundle:QuestBundle_S21_Stamina_Balls",
+      "attributes": {
+        "num_granted_bundle_quests": 5,
+        "challenge_bundle_schedule_id": "S21_Stamina_Schedule",
+        "grantedquestinstanceids": [
+          "quest_s21_stamina_w01_q01",
+          "quest_s21_stamina_w02_q01",
+          "quest_s21_stamina_w03_q01",
+          "quest_s21_stamina_w04_q01",
+          "quest_s21_stamina_w05_q01",
+          "quest_s21_stamina_w06_q01",
+          "quest_s21_stamina_w07_q01"
+        ]
+      },
+      "quantity": 1
+    },
+    "QuestBundle_S21_Stamina_Bonus": {
+      "templateId": "ChallengeBundle:QuestBundle_S21_Stamina_Bonus",
+      "attributes": {
+        "num_granted_bundle_quests": 1,
+        "challenge_bundle_schedule_id": "S21_Stamina_Schedule",
+        "grantedquestinstanceids": [
+          "quest_s21_stamina_bonus"
+        ]
+      },
+      "quantity": 1
+    },
+    "S21_Stamina_Schedule": {
+      "templateId": "ChallengeBundleSchedule:S21_Stamina_Schedule",
+      "attributes": {
+        "unlock_epoch": "2024-06-13T08:00:00.000Z",
+        "level": 1,
+        "granted_bundles": [
+          "QuestBundle_S21_Stamina_Punchcard",
+          "QuestBundle_S21_Stamina_Balls",
+          "QuestBundle_S21_Stamina_Bonus",
+          "QuestBundle_S21_Stamina",
+          "QuestBundle_S21_Stamina_02",
+          "QuestBundle_S21_Stamina_03",
+          "QuestBundle_S21_Stamina_04",
+          "QuestBundle_S21_Stamina_05",
+          "QuestBundle_S21_Stamina_06",
+          "QuestBundle_S21_Stamina_07"
+        ]
+      },
+      "quantity": 1
+    },
+    "quest_s23_vaultbreakers_backbling_01": {
+      "templateId": "Quest:quest_s23_vaultbreakers_backbling_01",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S23_Vaultbreakers_Backbling",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "quest_s23_vaultbreakers_backbling_punchcard": {
+      "templateId": "Quest:quest_s23_vaultbreakers_backbling_punchcard",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S23_Vaultbreakers_ProgressiveBackbling_PunchCard",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "QuestBundle_S23_Vaultbreakers_Backbling": {
+      "templateId": "ChallengeBundle:QuestBundle_S23_Vaultbreakers_Backbling",
+      "attributes": {
+        "num_granted_bundle_quests": 1,
+        "challenge_bundle_schedule_id": "Vaultbreakers_ProgressiveBackbling_Schedule",
+        "grantedquestinstanceids": [
+          "quest_s23_vaultbreakers_backbling_01"
+        ]
+      },
+      "quantity": 1
+    },
+    "QuestBundle_S23_Vaultbreakers_ProgressiveBackbling_PunchCard": {
+      "templateId": "ChallengeBundle:QuestBundle_S23_Vaultbreakers_ProgressiveBackbling_PunchCard",
+      "attributes": {
+        "num_granted_bundle_quests": 1,
+        "challenge_bundle_schedule_id": "Vaultbreakers_ProgressiveBackbling_Schedule",
+        "grantedquestinstanceids": [
+          "quest_s23_vaultbreakers_backbling_punchcard"
+        ]
+      },
+      "quantity": 1
+    },
+    "rewardtrack_s23_vaultbreakers_q01": {
+      "templateId": "Quest:rewardtrack_s23_vaultbreakers_q01",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S23_Vaultbreakers_RewardTrack",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "rewardtrack_s23_vaultbreakers_q02": {
+      "templateId": "Quest:rewardtrack_s23_vaultbreakers_q02",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S23_Vaultbreakers_RewardTrack",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "rewardtrack_s23_vaultbreakers_q04": {
+      "templateId": "Quest:rewardtrack_s23_vaultbreakers_q04",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S23_Vaultbreakers_RewardTrack",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "rewardtrack_s23_vaultbreakers_q05": {
+      "templateId": "Quest:rewardtrack_s23_vaultbreakers_q05",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S23_Vaultbreakers_RewardTrack",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "rewardtrack_s23_vaultbreakers_q06": {
+      "templateId": "Quest:rewardtrack_s23_vaultbreakers_q06",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S23_Vaultbreakers_RewardTrack",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "rewardtrack_s23_vaultbreakers_q07": {
+      "templateId": "Quest:rewardtrack_s23_vaultbreakers_q07",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S23_Vaultbreakers_RewardTrack",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "rewardtrack_s23_vaultbreakers_q09": {
+      "templateId": "Quest:rewardtrack_s23_vaultbreakers_q09",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S23_Vaultbreakers_RewardTrack",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "rewardtrack_s23_vaultbreakers_q10": {
+      "templateId": "Quest:rewardtrack_s23_vaultbreakers_q10",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S23_Vaultbreakers_RewardTrack",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "rewardtrack_s23_vaultbreakers_q08": {
+      "templateId": "Quest:rewardtrack_s23_vaultbreakers_q08",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S23_Vaultbreakers_RewardTrack",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "rewardtrack_s23_vaultbreakers_q11": {
+      "templateId": "Quest:rewardtrack_s23_vaultbreakers_q11",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S23_Vaultbreakers_RewardTrack",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "rewardtrack_s23_vaultbreakers_q12": {
+      "templateId": "Quest:rewardtrack_s23_vaultbreakers_q12",
+      "attributes": {
+        "creation_time": "2024-06-13T09:10:41.871Z",
+        "quest_state": "Active",
+        "last_state_change_time": "2024-06-13T09:10:41.871Z",
+        "level": -1,
+        "challenge_bundle_id": "QuestBundle_S23_Vaultbreakers_RewardTrack",
+        "quest_rarity": "unattainable",
+        "xp_reward_scalar": 1
+      },
+      "quantity": 1
+    },
+    "QuestBundle_S23_Vaultbreakers_RewardTrack": {
+      "templateId": "ChallengeBundle:QuestBundle_S23_Vaultbreakers_RewardTrack",
+      "attributes": {
+        "num_granted_bundle_quests": 1,
+        "challenge_bundle_schedule_id": "Vaultbreakers_Schedule",
+        "grantedquestinstanceids": [
+          "rewardtrack_s23_vaultbreakers_q01",
+          "rewardtrack_s23_vaultbreakers_q02",
+          "rewardtrack_s23_vaultbreakers_q04",
+          "rewardtrack_s23_vaultbreakers_q05",
+          "rewardtrack_s23_vaultbreakers_q06",
+          "rewardtrack_s23_vaultbreakers_q07",
+          "rewardtrack_s23_vaultbreakers_q08",
+          "rewardtrack_s23_vaultbreakers_q09",
+          "rewardtrack_s23_vaultbreakers_q10",
+          "rewardtrack_s23_vaultbreakers_q11",
+          "rewardtrack_s23_vaultbreakers_q12"
+        ]
+      },
+      "quantity": 1
+    },
+    "Vaultbreakers_ProgressiveBackbling_Schedule": {
+      "templateId": "ChallengeBundleSchedule:Vaultbreakers_ProgressiveBackbling_Schedule",
+      "attributes": {
+        "unlock_epoch": "2024-06-13T08:00:00.000Z",
+        "level": 1,
+        "granted_bundles": [
+          "QuestBundle_S23_Vaultbreakers_Backbling",
+          "QuestBundle_S23_Vaultbreakers_ProgressiveBackbling_PunchCard"
+        ]
+      },
+      "quantity": 1
+    },
+    "Vaultbreakers_Schedule": {
+      "templateId": "ChallengeBundleSchedule:Vaultbreakers_Schedule",
+      "attributes": {
+        "unlock_epoch": "2024-06-13T08:00:00.000Z",
+        "level": 1,
+        "granted_bundles": [
+          "QuestBundle_S23_Vaultbreakers_RewardTrack"
+        ]
+      },
+      "quantity": 1
+    },
+    "Token:Athena_S21_Stamina_Token_01": {
+      "attributes": {
+        "max_level_bonus": 0,
+        "level": 1,
+        "item_seen": true,
+        "xp": 0,
+        "variants": [],
+        "favorite": false
+      },
+      "templateId": "Token:Athena_S21_Stamina_Token_01",
+      "quantity": 1
+    },
+    "Token:Athena_S21_Stamina_Token_02": {
+      "attributes": {
+        "max_level_bonus": 0,
+        "level": 1,
+        "item_seen": true,
+        "xp": 0,
+        "variants": [],
+        "favorite": false
+      },
+      "templateId": "Token:Athena_S21_Stamina_Token_02",
+      "quantity": 1
+    },
+    "Token:Athena_S21_Stamina_Token_03": {
+      "attributes": {
+        "max_level_bonus": 0,
+        "level": 1,
+        "item_seen": true,
+        "xp": 0,
+        "variants": [],
+        "favorite": false
+      },
+      "templateId": "Token:Athena_S21_Stamina_Token_03",
+      "quantity": 1
+    },
+    "Token:Athena_S21_Stamina_Token_04": {
+      "attributes": {
+        "max_level_bonus": 0,
+        "level": 1,
+        "item_seen": true,
+        "xp": 0,
+        "variants": [],
+        "favorite": false
+      },
+      "templateId": "Token:Athena_S21_Stamina_Token_04",
+      "quantity": 1
+    },
+    "Token:Athena_S21_Stamina_Token_05": {
+      "attributes": {
+        "max_level_bonus": 0,
+        "level": 1,
+        "item_seen": true,
+        "xp": 0,
+        "variants": [],
+        "favorite": false
+      },
+      "templateId": "Token:Athena_S21_Stamina_Token_05",
+      "quantity": 1
+    },
+    "Token:Athena_S21_Stamina_Token_06": {
+      "attributes": {
+        "max_level_bonus": 0,
+        "level": 1,
+        "item_seen": true,
+        "xp": 0,
+        "variants": [],
+        "favorite": false
+      },
+      "templateId": "Token:Athena_S21_Stamina_Token_06",
+      "quantity": 1
+    },
+    "Token:Athena_S21_Stamina_Token_07": {
+      "attributes": {
+        "max_level_bonus": 0,
+        "level": 1,
+        "item_seen": true,
+        "xp": 0,
+        "variants": [],
+        "favorite": false
+      },
+      "templateId": "Token:Athena_S21_Stamina_Token_07",
+      "quantity": 1
+    },
+    "Token:Athena_S21_Stamina_W01": {
+      "attributes": {
+        "max_level_bonus": 0,
+        "level": 1,
+        "item_seen": true,
+        "xp": 0,
+        "variants": [],
+        "favorite": false
+      },
+      "templateId": "Token:Athena_S21_Stamina_W01",
+      "quantity": 1
+    },
+    "Token:Athena_S21_Stamina_W02": {
+      "attributes": {
+        "max_level_bonus": 0,
+        "level": 1,
+        "item_seen": true,
+        "xp": 0,
+        "variants": [],
+        "favorite": false
+      },
+      "templateId": "Token:Athena_S21_Stamina_W02",
+      "quantity": 1
+    },
+    "Token:Athena_S21_Stamina_W03": {
+      "attributes": {
+        "max_level_bonus": 0,
+        "level": 1,
+        "item_seen": true,
+        "xp": 0,
+        "variants": [],
+        "favorite": false
+      },
+      "templateId": "Token:Athena_S21_Stamina_W03",
+      "quantity": 1
+    },
+    "Token:Athena_S21_Stamina_W04": {
+      "attributes": {
+        "max_level_bonus": 0,
+        "level": 1,
+        "item_seen": true,
+        "xp": 0,
+        "variants": [],
+        "favorite": false
+      },
+      "templateId": "Token:Athena_S21_Stamina_W04",
+      "quantity": 1
+    },
+    "Token:Athena_S21_Stamina_W05": {
+      "attributes": {
+        "max_level_bonus": 0,
+        "level": 1,
+        "item_seen": true,
+        "xp": 0,
+        "variants": [],
+        "favorite": false
+      },
+      "templateId": "Token:Athena_S21_Stamina_W05",
+      "quantity": 1
+    },
+    "Token:Athena_S21_Stamina_W06": {
+      "attributes": {
+        "max_level_bonus": 0,
+        "level": 1,
+        "item_seen": true,
+        "xp": 0,
+        "variants": [],
+        "favorite": false
+      },
+      "templateId": "Token:Athena_S21_Stamina_W06",
+      "quantity": 1
+    },
+    "Token:Athena_S21_Stamina_W07": {
+      "attributes": {
+        "max_level_bonus": 0,
+        "level": 1,
+        "item_seen": true,
+        "xp": 0,
+        "variants": [],
+        "favorite": false
+      },
+      "templateId": "Token:Athena_S21_Stamina_W07",
+      "quantity": 1
     }
   }

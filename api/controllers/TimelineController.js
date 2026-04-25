@@ -332,11 +332,19 @@ module.exports = {
             "11.30": [
                 "GALCD", // C2S1-related (Winterfest 2019)
                 "GALP", // C2S1-related (Winterfest 2019)
+                "WSL0", //Winter Snow Level 0
+                "WSL1", //Winter Snow Level 1
+                "WSL2", //Winter Snow Level 2
+                "WSL3" //Winter Snow Level 3
             ],
 
             "11.31": [
                 "EventFlag.LTE_WinterFest", // C2S1-related (Winterfest 2019)
                 "EventFlag.Winterfest.Tree", // C2S1-related (Winterfest 2019)
+                "WSL0", //Winter Snow Level 0
+                "WSL1", //Winter Snow Level 1
+                "WSL2", //Winter Snow Level 2
+                "WSL3", //Winter Snow Level 3
                 "WSFX3", // C2S1-related (Winterfest 2019)
                 "WSFX3F", // C2S1-related (Winterfest 2019)
                 "WD5", // C2S1-related (Winterfest 2019)
@@ -370,11 +378,14 @@ module.exports = {
             ],
 
             "12.30": [
+                "FEC01", //FE Cables 1
+                "FEC02", //FE Cables 2
                 "DPY01", // Deadpool Yacht
                 "EventFlag.DonutBattleBus", // Deadpool Battle Bus
             ],
 
             "12.40|12.41": [
+                "FEC03", //FE Cables 3
                 "JS01", // Travis Related (Stage Delivery Trucks)
                 "JS02", // Travis Related (Stage Partially Built)
                 "JP01", // Travis Teaser posters Appear (Stage)
@@ -388,7 +399,7 @@ module.exports = {
                 "JLL", // Travis Load level (Level)
             ],
 
-            "12.60|12.61":[
+            "12.60|12.61": [
                 "FLA01", // C2S2-related (Timers)
                 "FLCD01", // C2S2-related (Timers)
                 "FCD01", // C2S2-related (Timers)
@@ -396,7 +407,7 @@ module.exports = {
                 "FHS02", // Fritter Hatches STage 2
             ],
 
-            "13.40":[
+            "13.40": [
                 "SM1",//scorch marks
                 "LS_PRE",
                 "TC1",//thorhammer 'poi'
@@ -404,16 +415,23 @@ module.exports = {
                 "CBS1",//Coral buddies stage 1
             ],
 
-            "14.00":[
+            "14.00": [
+                "RLS0", //Rift Landmark Sphere 0(Ch2S4 related)
+                "RLS1", //Rift Landmark Sphere 1(Ch2S4 related)
+                "RLS2", //Rift Landmark Sphere 2(Ch2S4 related)
+                "RLS3", //Rift Landmark Sphere 3(Ch2S4 related)
+                "SL_01", //Stark Lab - SL_01(Ch2S4 related)
+                "SL_02", //Stark Lab - SL_02(Ch2S4 related)
+
                 "LS2", //Galactus Countdown(Ch2S4 related)
                 "HSS2", //Sky Distant Object(Ch2S4 related)
             ],
 
-            "14.30":[
+            "14.30": [
                 "SPJ02", //Sky Card for Junior(Ch2S4 related)
             ],
 
-            "14.60":[
+            "14.60": [
                 "FLA01", // C2S4-related (Timers)
                 "FSE01", // C2S4-related (Timers)
                 "FSE02", // C2S4-related (Timers)
@@ -423,7 +441,13 @@ module.exports = {
 
             ],
 
-            "17.20|17.30":[
+            "15.10:": [
+                "WSL1", //Winter Snow Level 1
+                "WSL2", //Winter Snow Level 2
+                "WSL3" //Winter Snow Level 3
+            ],
+
+            "17.20|17.30": [
                 "BEL01", // Leadup In-game/Leadup In-Lobby
                 "BET01", // Rift Tour-related (Countdown)
                 "BEL02", // Leadup In-game/Leadup In-Lobby
@@ -435,36 +459,135 @@ module.exports = {
                 "ABDSLP", //Slurpy: Abduction(Ch2S7 related)
             ],
 
-            "17.50":[
+            "17.50": [
                 "KEL01", // Operation Sky Fire Event-related
                 "KEL02", // Operation Sky Fire Event-related
                 "ABDFRM", //Farm: Abduction(Ch2S7 related)
             ],
 
-            "18.21":[
+            "18.21": [
                 "FNM21", // FNMares 2021
             ],
 
-            "19.01":[
+            "19.01": [
                 "EventFlag.LTE_WinterFest", // WinterFest 2021
                 "WF_IG_Avail", // WinterFest 2021
             ],
 
-            "20.40":[
+            "20.00": [
+                "WE_TBYB_BBRG", //War Effort: Boogie Bomb vs. Rift To Go TBYB
+                "WE_TBYB_BSB", //War Effort: Balloons vs. Bubble Shield TBYB
+                "WE_TRT_RR", //War Effort: Turrets - Rocky Reels
+                "WE_BB_RR", //War Effort: Battle Bus - Rocky Reels
+                "WE_CPA", //War Effort: Choppa Funding
+                "WE_BSB", //War Effort: Balloons vs. Bubble Shield Funding
+                "WE_TRT_TLT", //War Effort: Turrets - Tilted Towers
+                "WE_BB_TLT", //War Effort: Battle Bus - Tilted Towers
+                "WE_BBRG", //War Effort: Boogie Bomb vs. Rift To Go Funding
+                "WE_TRT_CCR", //War Effort: Turrets - Coney Crossroads
+                "WE_BB_CCR", //War Effort: Battle Bus - Coney Crossroads
+                "WE_TRT_CDC", //War Effort: Turrets - Condo Canyon
+                "WE_BB_CDC", //War Effort: Battle Bus - Condo Canyon
+                "WE_TRT_SCT", //War Effort: Turrets - Sanctuary
+                "WE_TRT", //War Effort: Turret Funding
+                "WE_BB", //War Effort: Battle Bus Funding
+                "WE_BB_SWS", //War Effort: Battle Bus - Workshop
+                "WE_BB_SCT", //War Effort: Battle Bus - Sanctuary
+                "WE_TRT_BGL", //War Effort: Turrets - Bugle
+                "WE_BB_BGL", //War Effort: Battle Bus - Bugle
+                "WE_RDCAR", //War Effort: Combat vs. Red Dot Funding
+                "WE_TBYB_RDCAR", //War Effort: Combat vs. Red Dot TBYB
+                "ResolveBus", //Resolve Battle Bus 2022
+                "LF01", //Lantern Fest
+            ],
+
+            "20.10":[
+                "BS_2_C", //Battle For Condo CLIENT
+                "BS_1_C", //Battle For Bugle CLIENT
+                "BS_2", //Battle For Condo
+                "BS_1", //Battle For Bugle
+            ],
+
+            "20.20":[
+                "BS_4_C", //Battle For Rocky CLIENT
+                "BS_3_C", //Battle For Coney CLIENT
+                "BS_4", //Battle For Rocky
+                "BS_3", //Battle For Coney
+            ],
+
+            "20.30": [
+                "BS_6_C", //Post Battles CLIENT
+                "BS_5_C", //Battle For Tilted CLIENT
+                "BS_6", //Post Battles
+                "BS_5", //Battle For Tilted
+            ],
+            
+            "20.40": [
                 "AL01", // Collision Event-related (Countdown)
                 "AL02", // Collision Event-related (Countdown)
                 "AS01", //Armadillo Start(Ch3S2 related)
                 "ARLU01", //ArmadilloRoll Lead Up(Ch3S2 related)
             ],
 
-            "21.30|21.40|21.50|21.51":[
-                "STMN_PH", // Dragon Ball Collab Preheat(21.30)
-                "Event_S21_Stamina", // Dragon Ball tab(21.40)
-                "RBB01", // Bugle Bloom (Closed)(21.30)
-                "NSSC02", // No Sweat Summer Concert (Constructed)(21.30)
+            "21.10": [
+                "BB01", //Reality Bloom: Butter Barn
+                "RBCT01", //Temple Bloom (Closed)
+                "RRT01", //Roots_Temple_01
+                "RRT02", //Roots_Temple_02
+                "RRSS01", //Roots_Sleepy_01
             ],
 
-            "22.40":[
+            "21.20": [
+                "NSSC01", //No Sweat Summer Concert (Construction)
+                "RBSS01", //Sleepy Bloom (Closed)
+                "RRSS02", //Roots_Sleepy_02,
+                "RRCC01" //Roots_Condo_01
+            ],
+
+            "21.30": [
+                "STMN_PH", //Stamina Preheat
+                "RBB01", // Bugle Bloom (Closed)
+                "RRB01", //Roots_Bugle_01
+                "RRB02", //Roots_Bugle_02
+                "RBCC02", //Condo Bloom (Open)
+                "RBSS02", //Sleepy Bloom (Open)
+                "RRCC02", //Roots_Condo_02
+                "NSSC02", // No Sweat Summer Concert (Constructed)
+                "NSRT0", //Rebuild Tilted Voting: First Round
+                "NSRT1", //Rebuild Tilted Voting: Second Round,
+                "NSRT2", //Rebuild Tilted Voting: Final Round
+                "RBTP1S2", //Rebuild Tilted Plot 1 Stage 2
+                "RBTP2S2", //Rebuild Tilted Plot 2 Stage 2
+                "RBTP3S2", //Rebuild Tilted Plot 3 Stage 2,
+
+            ],
+
+            "21.40|21.50|21.51": [
+                "Event_S21_Stamina", // Dragon Ball tab(21.40)
+            ],
+
+            "21.40": [
+                "StaminaBus", //Stamina Battle Bus
+                "RBTP1F", //Rebuild Tilted Plot 1 Final
+                "RBTP2F", //Rebuild Tilted Plot 2 Final
+                "RBTP3F", //Rebuild Tilted Plot 3 Final
+            ],
+
+            "21.50": [
+                "RainbowBus", //Rainbow Bus
+                "HB01" //Hyper Bloom (Locked)            
+            ],
+
+            "22.00": [
+                "FNBD05", //Fortnite Birthday Map Changes
+                "BirthdayBus5th" //5th Birthday Battle Bus
+            ],
+
+            "22.30": [
+                "EventFlag.FNCSBus" //FNCS BattleBus
+            ],
+
+            "22.40": [
                 "RL01", // Fracture In-Game Leadup
                 "RL02", // Fracture Radish Lobby Leadup
                 "RL12", // Fracture Lobby Leadup 2
@@ -490,40 +613,48 @@ module.exports = {
                 "EventFlag.LTE_WinterFestTab", // Winterfest 2022
             ],
 
+            "23.40": [
+                "EventFlag.Event_Vaultbreakers", // Most Wanted tab
+                "EventFlag.Event_S23_ProgressiveBackbling"
+            ],
+
             "23.50": [
                 "EventFlag.Event_Vaultbreakers", // Most Wanted tab
                 "EventFlag.Event_S23_FindIt", // Event_S23_FindIt
+                "EventFlag.Event_S23_ProgressiveBackbling",
                 "RG01", // RiftGate Stage 1
                 "RG02", // RiftGate Stage 2
                 "ST01", // Skytear Stage 1
                 "ST02", // Skytear Stage 2
+                "FNCSMajorBus", //FNCS Major BattleBus
+                "EventFlag.Event_S23Cipher"
             ],
 
-            "24.00|24.10":[
+            "24.00|24.10": [
                 "EventFlag.Event_S24_LanternFest", // Latern Fest 2023 
                 "Lanternfest", // Latern Fest 2023 
                 "EventFlag.Event_S24_SunBurst", // Sunburst 
                 "EventFlag.Event_S24_SpringFling", // Springfling 
             ],
 
-            "24.30|24.40":[
+            "24.30|24.40": [
                 "EventFlag.Event_PlotTwist", // Star Wars 2023 tab
             ],
 
-            "25.30":[
+            "25.30": [
                 "EventFlag.Event_BelongTreaty", // Jujutsu Kaisen tab
             ],
 
-            "27.11|31.41|32.11":[
+            "27.11|31.41|32.11": [
                 "DL01", // Durian & Kiln Event-related (Countdown)
                 "DL02", // Durian & Kiln Event-related (Countdown)
             ],
 
-            "28.10":[
+            "28.10": [
                 "EventFlag.Event_LinedNotebook_Teaser", // TMNT Tab countdown
             ],
 
-            "28.20|28.30":[
+            "28.20|28.30": [
                 "EventFlag.Event_LinedNotebook", // TMNT mini pass
                 /*
                 "CH5S1CPPE", //Pre-Emergence Event(Central Picnic)
@@ -538,19 +669,19 @@ module.exports = {
                 */
             ],
 
-            "29.00|29.01|29.10":[
+            "29.00|29.01|29.10": [
                 "EventFlag.Event_S29_SeasonalActivation",
                 "EventFlag.Event_S29_MidasActivation"
             ],
 
-            "29.20|29.30":[
+            "29.20|29.30": [
                 "EventFlag.Event_S29_ColdDay", // Avatar mini pass + cabbages
                 "AtlaShrines", // Avatar map changes
                 "AtlaScrolls", // Avatar map changes
                 "AtlaChests", // Avatar map changes
             ],
 
-            "29.40":[
+            "29.40": [
                 /*
                 "EventFlag.Event_Osiris",
                 "SUPERSPORT_BUILDUP_1",
@@ -567,7 +698,7 @@ module.exports = {
                 */
             ],
 
-            "30.20|30.30":[
+            "30.20|30.30": [
                 "EventFlag.Event_Greenhouse", //Pirates Of the Caribbean Mini Pass
                 "GreenhouseActive",
                 "RE_01_Cutout",
@@ -578,11 +709,11 @@ module.exports = {
                 "RE_03", //Nitro Pipeline Stage 3
             ],
 
-            "31.20|31.30":[
+            "31.20|31.30": [
                 "EventFlag.Event_ButtercakePass"
             ],
 
-            "31.41":[
+            "31.41": [
                 "StageA", //Kiln Buildup Stage 1
                 "StageB", //Kiln Buildup Stage 2
                 "StageC", //Kiln Buildup Stage 3
@@ -593,12 +724,12 @@ module.exports = {
                 //"Kiln_Preload_Event", //Kiln Preload Event
             ],
 
-            "33.11":[
+            "33.11": [
                 "EventFlag.S33_WinterFestTab", //2024 winterfest
                 "WF_IG_Avail", //2024 winterfest
             ],
 
-            "33.30":[
+            "33.30": [
                 "GrillMoon_Day1", //GrillMoon Mini Event Buildup Stages
                 "GrillMoon_Day2", //GrillMoon Mini Event Buildup Stages
                 "GrillMoon_Day3", //GrillMoon Mini Event Buildup Stages
@@ -607,7 +738,7 @@ module.exports = {
                 "GrillMoon_Event", //GrillMoon Mini Event
             ],
 
-            "34.30|34.40":[
+            "34.30|34.40": [
                 "GiftedTraveler_Phase1", //GiftedTraveler Buildup Stages(Daigo Portal Beams)
                 "GiftedTraveler_Phase2", //GiftedTraveler Buildup Stages(Daigo Portal Beams)
                 "GiftedTraveler_Phase3", //GiftedTraveler Buildup Stages(Daigo Portal Beams)
@@ -620,11 +751,11 @@ module.exports = {
                 "GiftedTraveler_Observer_Phase5", //GiftedTraveler_Observer Buildup Stages(Death Star Stages)
             ],
 
-            "35.20":[
+            "35.20": [
                 "RHDEvent", //Ripehoneydew Event Countdown
             ],
 
-            "36.30":[
+            "36.30": [
                 /*
                 "PC_01", //Pistol Canary Stage 1
                 "PC_02", //Pistol Canary Stage 2
@@ -639,16 +770,16 @@ module.exports = {
                 "PC_Timer", //Pistol Canary Countdown
             ],
 
-            "38.11":[
+            "38.11": [
                 "SM_Timer"
             ],
 
-            "39.11":[
+            "39.11": [
                 "EventFlag.S39_WinterFestTab", //Winterfest Tab 2025
                 "WF_IG_Avail"
             ],
 
-            "39.50|39.51":[
+            "39.50|39.51": [
                 /*
                 "DC_Shock", // DragonCart Shock
                 "DC_RiftOut", // DragonCart Rifting Out
@@ -657,7 +788,7 @@ module.exports = {
                 */
             ],
 
-            "40.00|40.10|40.20|40.30":[
+            "40.00|40.10|40.20|40.30": [
                 "EventFlag.Event_Rivals_Act_01", //Showdown Act1
                 "EventFlag.Event_Rivals_Act_02", //Showdown Act2
                 "EventFlag.Event_Rivals_Act_03", //Showdown Act3
@@ -681,7 +812,7 @@ module.exports = {
                 "DC_Rift_BlindBird",
             ],
 
-            "40.10":[
+            "40.10": [
                 "EventFlag.Event_Foolnite_Activation", // April Fools 2026
                 "FF_BHMActivate", // April Fools 2026
             ]
@@ -700,19 +831,19 @@ module.exports = {
                 });
             }
         }
-        
 
-        if (version >= 31.40 || version <= 33.10) {
+
+        if (version >= "31.40" || version <= "33.10") {
             timeline.channels["client-events"]["states"][0]["activeEvents"].push(
                 {
                     eventType: "EventFlag.Event_SpooktacularPass", // Brick or Treat LEGO pass 
                     activeUntil: "9999-09-14T07:00:00.000Z",
                     activeSince: "2024-03-01T00:50:00.000Z"
-                }                           
+                }
             )
         }
-        
-        if(versionGlobal == 10){
+
+        if (versionGlobal == 10) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "ITB", //IT Balloon 
@@ -722,83 +853,8 @@ module.exports = {
             )
         }
 
-        if(versionGlobal == 11 || versionGlobal == 15){
-            timeline.channels['client-events']['states'][0]['activeEvents'].push(
-                {
-                    eventType: "WSL0", //Snow Level
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "9999-09-14T07:00:00.000Z"
-                },
-                {
-                    eventType: "WSL1", //Snow Level
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "9999-09-14T07:00:00.000Z"
-                },
-                {
-                    eventType: "WSL2", //Snow Level
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "9999-09-14T07:00:00.000Z"
-                },
-                {
-                    eventType: "WSL3", //Snow Level
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2015-09-14T07:00:00.000Z"
-                },
-            )
-        }
-
-        if(versionGlobal == 12){
-            timeline.channels['client-events']['states'][0]['activeEvents'].push(
-                {
-                    eventType: "FEC01", //FE Cables Stage 1
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-14T07:00:00.000Z"
-                },
-                {
-                    eventType: "FEC02", //FE Cables Stage 2
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-14T07:00:00.000Z"
-                },
-                {
-                    eventType: "FEC03", //FE Cables Stage 3
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-14T07:00:00.000Z"
-                },
-            )
-        }
-
-        if(versionGlobal == 14){
+        if (versionGlobal == 14) {
             timeline.channels["client-events"]["states"][0]["activeEvents"].push(
-                {
-                    eventType: "RLS0", //Rift Landmark Sphere 0(Ch2S4 related)
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-14T07:00:00.000Z"
-                },
-                {
-                    eventType: "RLS1", //Rift Landmark Sphere 1(Ch2S4 related)
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-14T07:00:00.000Z"
-                },
-                {
-                    eventType: "RLS2", //Rift Landmark Sphere 2(Ch2S4 related)
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-14T07:00:00.000Z"
-                },
-                {
-                    eventType: "RLS3", //Rift Landmark Sphere 3(Ch2S4 related)
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-14T07:00:00.000Z"
-                },
-                {
-                    eventType: "SL_01", //Stark Lab - SL_01(Ch2S4 related)
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-14T07:00:00.000Z"
-                },
-                {
-                    eventType: "SL_02", //Stark Lab - SL_02(Ch2S4 related)
-                    activeUntil: "9999-09-14T07:00:00.000Z",
-                    activeSince: "2020-09-14T07:00:00.000Z"
-                },
                 {
                     eventType: "HSS0", //Hightower Sphere Stage 0(Ch2S4 related)
                     activeUntil: "9999-09-14T07:00:00.000Z",
@@ -857,7 +913,7 @@ module.exports = {
             )
         }
 
-        if(versionGlobal == 15){
+        if (versionGlobal == 15) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "WPICK02", //Wombat Complete Portal(Ch2S5 Portal related)
@@ -902,7 +958,7 @@ module.exports = {
             )
         }
 
-        if(versionGlobal == 16){
+        if (versionGlobal == 16) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "RPFS1", //Dino Egg Cracking(Ch2S6 related)
@@ -947,7 +1003,7 @@ module.exports = {
             )
         }
 
-        if(versionGlobal == 17){
+        if (versionGlobal == 17) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "WLCM1", //Welcome Party full-swing(Ch2S7 related)
@@ -1057,7 +1113,7 @@ module.exports = {
             )
         }
 
-        if(versionGlobal == 18){
+        if (versionGlobal == 18) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "GGL01", // Chapter 2 Finale Event-related (Countdown)
@@ -1074,7 +1130,8 @@ module.exports = {
                     activeUntil: "2023-10-18T07:00:00.000Z",
                     activeSince: "2022-10-10T06:00:00.000Z"
                 },
-                {   eventType: "LCCS01", // S18 Corruption?
+                {
+                    eventType: "LCCS01", // S18 Corruption?
                     activeUntil: "2023-10-18T07:00:00.000Z",
                     activeSince: "2022-10-10T06:00:00.000Z"
                 },
@@ -1166,7 +1223,7 @@ module.exports = {
             )
         }
 
-        if(versionGlobal == 19){
+        if (versionGlobal == 19) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "2021_SM01", //Snow Stage 01(Ch3S1 related)
@@ -1260,13 +1317,8 @@ module.exports = {
                 },
             )
         }
-        if(versionGlobal == 22){
+        if (versionGlobal == 22) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
-                {
-                    eventType: "FNBD05", //Fortnite Birthday Map Changes(Ch3S4 related)
-                    activeUntil: "9999-09-09T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
                 {
                     eventType: "S22_Vortex_Active", //S22 Nanomist Vortex(Ch3S4 related)
                     activeUntil: "9999-09-09T07:00:00.000Z",
@@ -1280,7 +1332,7 @@ module.exports = {
             )
         }
 
-        if(versionGlobal == 7 || versionGlobal == 11 || versionGlobal == 15 || versionGlobal == 19){
+        if (version === "7.10" || version === "11.31" || version === "15.10" || version === "19.01") {
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "TopSecret", //Holiday Bus (S7/S11/S15/S19)
                 activeUntil: "9999-09-14T07:00:00.000Z",
@@ -1288,7 +1340,7 @@ module.exports = {
             })
         }
 
-        if(versionGlobal == 14 || versionGlobal == 18 || versionGlobal == 22){
+        if (version === "14.40" || version === "18.40" || version === "22.20") {
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "EventFlag.HalloweenBattleBus", //Halloween Bus (S14/S18/S22)
                 activeUntil: "9999-09-14T07:00:00.000Z",
@@ -1301,7 +1353,7 @@ module.exports = {
 
 
 
-        if(config.ClydeWeek1 == true && versionGlobal == 32){
+        if (config.ClydeWeek1 == true && versionGlobal == 32) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "ClydeSeason1", //Base CH2: Remix Map
@@ -1309,7 +1361,7 @@ module.exports = {
                     activeSince: "2020-09-09T07:00:00.000Z"
                 },
                 {
-                    eventType: "Week1", 
+                    eventType: "Week1",
                     activeUntil: "9999-09-14T07:00:00.000Z",
                     activeSince: "2000-09-14T07:00:00.000Z"
                 }
@@ -1317,7 +1369,7 @@ module.exports = {
 
         }
 
-        if(config.ClydeWeek2 == true && versionGlobal == 32){
+        if (config.ClydeWeek2 == true && versionGlobal == 32) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "ClydeSeason2Part1", //Spaghetti Grotto Map Stage
@@ -1333,7 +1385,7 @@ module.exports = {
 
         }
 
-        if(config.ClydeWeek3 == true && versionGlobal == 32){
+        if (config.ClydeWeek3 == true && versionGlobal == 32) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "ClydeSeason2Part2", //Ice Isle/ Redesigned Shark POI Map Stage
@@ -1349,7 +1401,7 @@ module.exports = {
 
         }
 
-        if(config.ClydeWeek4 == true && versionGlobal == 32){
+        if (config.ClydeWeek4 == true && versionGlobal == 32) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "KL1", //Juice WRLD POI Stage 1
@@ -1370,9 +1422,9 @@ module.exports = {
 
         }
 
-        if(config.JuiceWRLDPOIStage1 == true && versionGlobal == 32){
+        if (config.JuiceWRLDPOIStage1 == true && versionGlobal == 32) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
-                 {
+                {
                     eventType: "KL1", //Juice WRLD POI Stage 1
                     activeUntil: "9999-09-09T07:00:00.000Z",
                     activeSince: "2020-09-09T07:00:00.000Z"
@@ -1381,9 +1433,9 @@ module.exports = {
 
         }
 
-        if(config.JuiceWRLDPOIStage2 == true && versionGlobal == 32){
+        if (config.JuiceWRLDPOIStage2 == true && versionGlobal == 32) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
-                 {
+                {
                     eventType: "KL2", //Juice WRLD POI Stage 2
                     activeUntil: "9999-09-09T07:00:00.000Z",
                     activeSince: "2020-09-09T07:00:00.000Z"
@@ -1392,9 +1444,9 @@ module.exports = {
 
         }
 
-        if(config.JuiceWRLDPOIStage3 == true && versionGlobal == 32){
+        if (config.JuiceWRLDPOIStage3 == true && versionGlobal == 32) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
-                 {
+                {
                     eventType: "KL3", //Juice WRLD POI Stage 3
                     activeUntil: "9999-09-09T07:00:00.000Z",
                     activeSince: "2020-09-09T07:00:00.000Z"
@@ -1403,7 +1455,7 @@ module.exports = {
 
         }
 
-        if(config.bEnableRuinHouseBeacon == true && versionGlobal == 10){
+        if (config.bEnableRuinHouseBeacon == true && versionGlobal == 10) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "RBPRH", // Ruined House Beacon Loaded(Chapter 1 Season 10)
@@ -1419,7 +1471,7 @@ module.exports = {
 
         }
 
-        if(config.bEnableGothemCityBeacon == true && version == 10.31){
+        if (config.bEnableGothemCityBeacon == true && version == 10.31) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "RBBMP", // Gothem City Beacon Loaded(Chapter 1 Season 10)
@@ -1435,7 +1487,7 @@ module.exports = {
 
         }
 
-        if(config.bEnableGreasyGroveBeacon == true && versionGlobal == 10){
+        if (config.bEnableGreasyGroveBeacon == true && versionGlobal == 10) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "RBPGG", // Greasy Grove Beacon Loaded(Chapter 1 Season 10)
@@ -1451,7 +1503,7 @@ module.exports = {
 
         }
 
-        if(config.bEnableMoistyPalmsBeacon == true && versionGlobal == 10){
+        if (config.bEnableMoistyPalmsBeacon == true && versionGlobal == 10) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "RBPMP", // Moisty Palms Beacon Loaded(Chapter 1 Season 10)
@@ -1467,7 +1519,7 @@ module.exports = {
 
         }
 
-        if(config.bEnableFrenzyFieldsBeacon == true && versionGlobal == 10){
+        if (config.bEnableFrenzyFieldsBeacon == true && versionGlobal == 10) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "RBPFI", // Frenzy Fields Beacon Loaded(Chapter 1 Season 10)
@@ -1483,7 +1535,7 @@ module.exports = {
 
         }
 
-        if(config.bEnableOakBeacon == true && versionGlobal == 10){
+        if (config.bEnableOakBeacon == true && versionGlobal == 10) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "RBPBO", // Oak Beacon Loaded(Chapter 1 Season 10)
@@ -1499,7 +1551,7 @@ module.exports = {
 
         }
 
-        if(config.bEnableVoidBeacon == true && versionGlobal == 10){
+        if (config.bEnableVoidBeacon == true && versionGlobal == 10) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "RBPVA", // Void Beacon Loaded(Chapter 1 Season 10)
@@ -1515,7 +1567,7 @@ module.exports = {
 
         }
 
-        if(config.bEnableRetailRowBeacon == true && versionGlobal == 10){
+        if (config.bEnableRetailRowBeacon == true && versionGlobal == 10) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "RBPRR", // Retail Row Beacon Loaded(Chapter 1 Season 10)
@@ -1531,7 +1583,7 @@ module.exports = {
 
         }
 
-        if(config.bEnableFloatingCubeIsland == true && versionGlobal == 10){
+        if (config.bEnableFloatingCubeIsland == true && versionGlobal == 10) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "RBFI", // Floating Cube Island(Chapter 1 Season 10)
@@ -1542,21 +1594,21 @@ module.exports = {
 
         }
 
-        if(config.RufusWeek2 == true && versionGlobal == 27){
+        if (config.RufusWeek2 == true && versionGlobal == 27) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "RufusWeek2", // Rufus Week 2(Chapter 4 Season OG)
                 activeUntil: "9999-09-14T07:00:00.000Z",
                 activeSince: "2000-09-14T07:00:00.000Z"
             })
         }
-        if(config.RufusWeek3 == true && versionGlobal == 27){
+        if (config.RufusWeek3 == true && versionGlobal == 27) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "RufusWeek3", // Rufus Week 3(Chapter 4 Season OG)
                 activeUntil: "9999-09-14T07:00:00.000Z",
                 activeSince: "2000-09-14T07:00:00.000Z"
             })
         }
-        if(config.RufusWeek4 == true && versionGlobal == 27){
+        if (config.RufusWeek4 == true && versionGlobal == 27) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "RufusWeek4", // Rufus Week 4(Chapter 4 Season OG)
                 activeUntil: "9999-09-14T07:00:00.000Z",
@@ -1564,43 +1616,43 @@ module.exports = {
             })
         }
 
-        if(config.TMNTStage1 == true){
+        if (config.TMNTStage1 == true) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "EventFlag.Event_LinedNotebook_Teaser1", // TMNT Tab Stage 1 
                 activeUntil: "9999-09-14T07:00:00.000Z",
                 activeSince: "2000-09-14T07:00:00.000Z"
             })
         }
-        if(config.TMNTStage2 == true){
+        if (config.TMNTStage2 == true) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "EventFlag.Event_LinedNotebook_Teaser2", // TMNT Tab Stage 2
                 activeUntil: "9999-09-14T07:00:00.000Z",
                 activeSince: "2000-09-14T07:00:00.000Z"
             })
         }
-        if(config.TMNTStage3 == true){
+        if (config.TMNTStage3 == true) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "EventFlag.Event_LinedNotebook_Teaser3", // TMNT Tab Stage 3
                 activeUntil: "9999-09-14T07:00:00.000Z",
                 activeSince: "2000-09-14T07:00:00.000Z"
             })
-        }    
-        
-        if(config.AtlaIceberg1 == true){
+        }
+
+        if (config.AtlaIceberg1 == true) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "AtlaIceberg1", // Avatar iceberg stage 1 
                 activeUntil: "9999-09-14T07:00:00.000Z",
                 activeSince: "2000-09-14T07:00:00.000Z"
             })
-        }  
-        if(config.AtlaIceberg2 == true){
+        }
+        if (config.AtlaIceberg2 == true) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "AtlaIceberg2", // Avatar iceberg stage 2 
                 activeUntil: "9999-09-14T07:00:00.000Z",
                 activeSince: "2000-09-14T07:00:00.000Z"
             },)
-        }   
-        if(config.AtlaIceberg3 == true){
+        }
+        if (config.AtlaIceberg3 == true) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "AtlaIceberg3", // Avatar iceberg stage 3
                 activeUntil: "9999-09-14T07:00:00.000Z",
@@ -1608,56 +1660,56 @@ module.exports = {
             })
         }
 
-        if(config.WaterLevel_0 == true && versionGlobal == 13){
+        if (config.WaterLevel_0 == true && versionGlobal == 13) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "WL0", // Water Level 0
                 activeUntil: "9999-09-14T07:00:00.000Z",
                 activeSince: "2000-09-14T07:00:00.000Z"
             })
         }
-        if(config.WaterLevel_1 == true && versionGlobal == 13){
+        if (config.WaterLevel_1 == true && versionGlobal == 13) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "WL1", // Water Level 1
                 activeUntil: "9999-09-14T07:00:00.000Z",
                 activeSince: "2000-09-14T07:00:00.000Z"
             })
         }
-        if(config.WaterLevel_2 == true && versionGlobal == 13){
+        if (config.WaterLevel_2 == true && versionGlobal == 13) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "WL2", // Water Level 2
                 activeUntil: "9999-09-14T07:00:00.000Z",
                 activeSince: "2000-09-14T07:00:00.000Z"
             })
         }
-        if(config.WaterLevel_3 == true && versionGlobal == 13){
+        if (config.WaterLevel_3 == true && versionGlobal == 13) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "WL3", // Water Level 3
                 activeUntil: "9999-09-14T07:00:00.000Z",
                 activeSince: "2000-09-14T07:00:00.000Z"
             })
         }
-        if(config.WaterLevel_4 == true && versionGlobal == 13){
+        if (config.WaterLevel_4 == true && versionGlobal == 13) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "WL4", // Water Level 4
                 activeUntil: "9999-09-14T07:00:00.000Z",
                 activeSince: "2000-09-14T07:00:00.000Z"
             })
         }
-        if(config.WaterLevel_5 == true && versionGlobal == 13){
+        if (config.WaterLevel_5 == true && versionGlobal == 13) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "WL5", // Water Level 5
                 activeUntil: "9999-09-14T07:00:00.000Z",
                 activeSince: "2000-09-14T07:00:00.000Z"
             })
         }
-        if(config.WaterLevel_6 == true && versionGlobal == 13){
+        if (config.WaterLevel_6 == true && versionGlobal == 13) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "WL6", // Water Level 6
                 activeUntil: "9999-09-14T07:00:00.000Z",
                 activeSince: "2000-09-14T07:00:00.000Z"
             })
         }
-        if(config.WaterLevel_7 == true && versionGlobal == 13){
+        if (config.WaterLevel_7 == true && versionGlobal == 13) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "WL7", // Water Level 7
                 activeUntil: "9999-09-14T07:00:00.000Z",
@@ -1665,18 +1717,18 @@ module.exports = {
             })
         }
         if (!requested) {
-                const activeEvents = timeline.channels['client-events'].states[0].activeEvents;
-                let count = 0;
-                for (const event of activeEvents) {
-                    if (event["eventType"]) {
-                        count++
-                    }
+            const activeEvents = timeline.channels['client-events'].states[0].activeEvents;
+            let count = 0;
+            for (const event of activeEvents) {
+                if (event["eventType"]) {
+                    count++
                 }
-                NeoLog.Log(`${count} Event Flags currently active`);
-                requested = true;
             }
-            res.json(timeline)
-
+            NeoLog.Log(`${count} Event Flags currently active`);
+            requested = true;
         }
+        res.json(timeline)
 
     }
+
+}
