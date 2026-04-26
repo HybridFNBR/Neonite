@@ -770,6 +770,13 @@ module.exports = {
                 "PC_Timer", //Pistol Canary Countdown
             ],
 
+            "37.31":[
+                "SM_Monolith_2",
+                "SM_Logo2",
+                "SM_PostEvent",
+                "SM_VoiceLog_5"
+            ],
+
             "38.11": [
                 "SM_Timer"
             ],

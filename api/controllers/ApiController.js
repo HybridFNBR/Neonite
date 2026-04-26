@@ -3,7 +3,7 @@ const { default: axios } = require("axios");
 const fs = require('fs')
 const jsonwebtoken = require('jsonwebtoken');
 const ini = require('ini')
-const { getVersionInfo, loadJSON, VersionFilter, misc, compareAndUpdateKeychain} = require("../../config/defs");
+const { getVersionInfo, loadJSON, VersionFilter, misc, compareAndUpdateKeychain } = require("../../config/defs");
 const config = ini.parse(fs.readFileSync(path.join(__dirname, '../../config.ini'), 'utf-8'));
 let requested = false
 const fortnitegame = loadJSON("../responses/fortnitegame.json")
@@ -224,31 +224,31 @@ module.exports = {
 			dataAssetBuilder(FrontendAssets, "FortPlaylistAthena", 1, FortniteGameConfig.playlist_config, FortniteGameConfig.playlist_settings);
 		}
 
-		if(versionGlobal >= 32) {
+		if (versionGlobal >= 32) {
 			dataAssetBuilder(FrontendAssets, "FortPlaylistAthena", 9, "Playlist_SunflowerSolo", {
 				TimeOfDayManager: "/BlastBerryMap/Game/TimeOfDay/TODM/DSA_UEFN_Sunflower.DSA_UEFN_Sunflower_C"
 			});
 		}
 
-		if(versionGlobal >= 34) {
+		if (versionGlobal >= 34) {
 			dataAssetBuilder(FrontendAssets, "FortPlaylistAthena", 9, "Playlist_DashBerrySolo", {
 				TimeOfDayManager: "/BlastBerryMap/Game/TimeOfDay/TODM/DSA_UEFN_Sunflower.DSA_UEFN_Sunflower_C"
 			});
 		}
 
-		if(version >= 36.10) {
+		if (version >= 36.10) {
 			dataAssetBuilder(FrontendAssets, "FortPlaylistAthena", 9, "Playlist_TimberStakeSolo", {
 				TimeOfDayManager: "/c18c4fa1-4e7f-6d71-5747-149195af86f7/TimeOfDay/DaySequenceActors/DSA_SunFlower_Ch6s1.DSA_SunFlower_Ch6s1_C"
 			});
 		}
 
-		if(version >= 37.50) {
+		if (version >= 37.50) {
 			dataAssetBuilder(FrontendAssets, "FortPlaylistAthena", 9, "Playlist_SourSpawnSolo", {
 				TimeOfDayManager: "/Game/TimeOfDay/DaySequence/DaySequenceActors/BR_Ch6/DSA_BR_Ch6S4_FNM25.DSA_BR_Ch6S4_FNM25_C"
 			});
 		}
 
-		if(versionGlobal >= 39) {
+		if (versionGlobal >= 39) {
 			dataAssetBuilder(FrontendAssets, "FortPlaylistAthena", 9, "Playlist_PiperBootSolo", {
 				TimeOfDayManager: "/Game/TimeOfDay/DaySequence/DaySequenceActors/BR_Ch7/DSA_BR_Ch7S1.DSA_BR_Ch7S1_C"
 			});
@@ -266,7 +266,7 @@ module.exports = {
 			}
 		}
 
-		if(version >= 40.20) {
+		if (version >= 40.20) {
 			dataAssetBuilder(FrontendAssets, "FortPlaylistAthena", 9, "Playlist_MatchMistSolo", {
 				TimeOfDayManager: "/Game/TimeOfDay/DaySequence/DaySequenceActors/BR_Ch7/DSA_BR_Ch7S1.DSA_BR_Ch7S1_C"
 			});
@@ -939,6 +939,11 @@ module.exports = {
 
 	sparks: async function (req, res) {
 		const data = (await axios.get('https://fortnitecontent-website-prod07.ol.epicgames.com/content/api/pages/fortnite-game/spark-tracks').catch(() => { })).data;
+		Object.values(data).forEach(item => {
+			if (item.track?.au) {
+				item.track.au = 'http://localhost:5595/cdn2-unrealengine' + new URL(item.track.au).pathname;
+			}
+		});
 		res.json(data);
 	},
 
@@ -955,6 +960,7 @@ module.exports = {
 	seasonPass: async function (req, res) {
 		try {
 			const data = await axios.get('https://fortnitecontent-website-prod07.ol.epicgames.com/content/api/pages/fortnite-game/seasonpasses')
+			data.data = JSON.parse(JSON.stringify(data.data).replaceAll('https://cdn2.unrealengine.com', 'http://localhost:5595/cdn2-unrealengine'));
 			res.json(data.data)
 		}
 		catch {
@@ -1176,6 +1182,30 @@ module.exports = {
 		})
 	},
 
+	cdnImages: async function (req, res) {
+		const cacheDir = path.join(process.cwd(), "cache/images");
+		const cacheFile = path.join(cacheDir, req.params.image);
+		if (!fs.existsSync(cacheDir)) {
+			fs.mkdirSync(cacheDir, { recursive: true });
+		}
+		if (fs.existsSync(cacheFile)) {
+			res.setHeader("Content-Type", "image/png");
+			return fs.createReadStream(cacheFile).pipe(res);
+		}
+		else {
+			const response = await axios.get(
+				`https://cdn2.unrealengine.com/${req.params.image}`,
+				{ responseType: "stream" }
+			);
+			res.set({
+				'Content-Type': response.headers["Content-Type"]
+			});
+			const fileStream = fs.createWriteStream(cacheFile);
+			response.data.pipe(fileStream);
+			response.data.pipe(res);
+		}
+	},
+
 	okStatus: function (req, res) {
 		res.status(200).end()
 	},
@@ -1191,7 +1221,5 @@ module.exports = {
 		}
 		res.status(204).end()
 	},
-
-
 
 };

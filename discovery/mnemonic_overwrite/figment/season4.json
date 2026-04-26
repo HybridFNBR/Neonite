@@ -1,6 +1,6 @@
 {
     "lobby_background_image_urls": {
-        "url": "https://cdn2.unrealengine.com/og-s4-lobbybg-final-4096x2048-022fa4b8e5a1.jpg"
+        "url": "http://localhost:5595/cdn2-unrealengine/og-s4-lobbybg-final-4096x2048-022fa4b8e5a1.jpg"
     },
     "pop_out_image_urls": {
         "url": "https://cdn2.unrealengine.com/og-fg-1193x384-c88ed499503c.png"

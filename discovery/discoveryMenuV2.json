@@ -324,7 +324,7 @@
     "linkType": "BR:Playlist",
     "metadata": {
       "lobby_background_image_urls": {
-        "url": "https://cdn2.unrealengine.com/juno-lobby-2560x1440-b8beae672ffb.png"
+        "url": "http://localhost:5595/cdn2-unrealengine/juno-lobby-2560x1440-b8beae672ffb.png"
       },
       "frontend_plugin": "JunoFrontendUI",
       "image_url": "https://cdn2.unrealengine.com/legofn-disco-1920-1920x1080-c5f52d11a179.jpg",
@@ -871,7 +871,7 @@
     "linkType": "BR:Playlist",
     "metadata": {
       "lobby_background_image_urls": {
-        "url": "https://cdn2.unrealengine.com/mainstage-s6-lobbybg-4096x2048-f8b07170cd6f.jpg"
+        "url": "http://localhost:5595/cdn2-unrealengine/mainstage-s6-lobbybg-4096x2048-f8b07170cd6f.jpg"
       },
       "internal_description_tags": [
         "guitar_peripheral_enabled"
@@ -1278,7 +1278,7 @@
     "linkType": "ModeSet",
     "metadata": {
       "lobby_background_image_urls": {
-        "url": "https://cdn2.unrealengine.com/cdn-uploader-Figment_C1S6_Lobby-7ba3539f.png"
+        "url": "http://localhost:5595/cdn2-unrealengine/cdn-uploader-Figment_C1S6_Lobby-7ba3539f.png"
       },
       "frontend_plugin": "FigmentFrontend",
       "pop_out_image_urls": {
@@ -1881,7 +1881,7 @@
     "linkType": "BR:Playlist",
     "metadata": {
       "lobby_background_image_urls": {
-        "url": "https://cdn2.unrealengine.com/blastberry-lobby-bg-final-notext-2560x1440-788db0478027.jpg"
+        "url": "http://localhost:5595/cdn2-unrealengine/blastberry-lobby-bg-final-notext-2560x1440-788db0478027.jpg"
       },
       "required_content": {
         "verse_uris": [
@@ -1953,7 +1953,7 @@
         ]
       },
       "lobby_background_image_urls": {
-        "url": "https://cdn2.unrealengine.com/fortnite-reload-slurp-rush-the-slurpworks-1920x1080-e74ec5e20e44.jpg"
+        "url": "http://localhost:5595/cdn2-unrealengine/fortnite-reload-slurp-rush-the-slurpworks-1920x1080-e74ec5e20e44.jpg"
       },
       "predownload_link_codes": [
         "0794-7216-8184"
@@ -2009,7 +2009,7 @@
     "linkType": "BR:Playlist",
     "metadata": {
       "lobby_background_image_urls": {
-        "url": "https://cdn2.unrealengine.com/mkart-reload-32-00-lobby-2048x1024-88d93a368f3d.jpg"
+        "url": "http://localhost:5595/cdn2-unrealengine/mkart-reload-32-00-lobby-2048x1024-88d93a368f3d.jpg"
       },
       "required_content": {
         "verse_uris": [
@@ -2065,7 +2065,7 @@
     "linkType": "BR:Playlist",
     "metadata": {
       "lobby_background_image_urls": {
-        "url": "https://cdn2.unrealengine.com/timberstake-lobby-4096x2048-9ad07d806d89.jpg"
+        "url": "http://localhost:5595/cdn2-unrealengine/timberstake-lobby-4096x2048-9ad07d806d89.jpg"
       },
       "required_content": {
         "verse_uris": [
@@ -2127,7 +2127,7 @@
     "linkType": "BR:Playlist",
     "metadata": {
       "lobby_background_image_urls": {
-        "url": "https://cdn2.unrealengine.com/cdn-uploader-Reload_Nitemare_Lobby_4K-0375a03c.jpg"
+        "url": "http://localhost:5595/cdn2-unrealengine/cdn-uploader-Reload_Nitemare_Lobby_4K-0375a03c.jpg"
       },
       "required_content": {
         "verse_uris": [
@@ -2194,7 +2194,7 @@
     "linkType": "BR:Playlist",
     "metadata": {
       "lobby_background_image_urls": {
-        "url": "https://cdn2.unrealengine.com/cdn-uploader-T_WCReloadLobby_StoneBridge-a1b7c45f.jpg"
+        "url": "http://localhost:5595/cdn2-unrealengine/cdn-uploader-T_WCReloadLobby_StoneBridge-a1b7c45f.jpg"
       },
       "required_content": {
         "verse_uris": [
@@ -2261,7 +2261,7 @@
     "linkType": "BR:Playlist",
     "metadata": {
       "lobby_background_image_urls": {
-        "url": "https://cdn2.unrealengine.com/cdn-uploader-MKART_Reload_EliteStronghold_LobbyBG_Final-abd89da4.jpg"
+        "url": "http://localhost:5595/cdn2-unrealengine/cdn-uploader-MKART_Reload_EliteStronghold_LobbyBG_Final-abd89da4.jpg"
       },
       "required_content": {
         "verse_uris": [
@@ -2328,7 +2328,7 @@
     "linkType": "ModeSet",
     "metadata": {
       "lobby_background_image_urls": {
-        "url": "https://cdn2.unrealengine.com/cdn-uploader-blitz_lobbybackground_2-9c8748aa.jpg"
+        "url": "http://localhost:5595/cdn2-unrealengine/cdn-uploader-blitz_lobbybackground_2-9c8748aa.jpg"
       },
       "frontend_plugin": "ForbiddenFruitFrontEnd",
       "pop_out_image_urls": {

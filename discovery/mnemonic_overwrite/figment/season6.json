@@ -1,6 +1,6 @@
 {
     "lobby_background_image_urls": {
-        "url": "https://cdn2.unrealengine.com/cdn-uploader-Figment_C1S6_Lobby-7ba3539f.png"
+        "url": "http://localhost:5595/cdn2-unrealengine/cdn-uploader-Figment_C1S6_Lobby-7ba3539f.png"
     },
     "pop_out_image_urls": {
         "url": "https://cdn2.unrealengine.com/cdn-uploader-FNFigment_38-00_ButterflyEvent_Foreground_-1096x384-ebf0ac24.png"

@@ -91,7 +91,7 @@
         "url_xs": "https://cdn2.unrealengine.com/en-fn33-00-c1s3-discover-playlist-tiles-og-256x144-256x144-dbf898e10073.jpg"
     },
     "lobby_background_image_urls": {
-        "url": "https://cdn2.unrealengine.com/mkart-fnog-34-20-lobbybg-4096x2048-0c32c8546f79.jpg"
+        "url": "http://localhost:5595/cdn2-unrealengine/mkart-fnog-34-20-lobbybg-4096x2048-0c32c8546f79.jpg"
     },
     "pop_out_image_urls": {
         "url": "https://cdn2.unrealengine.com/og-fg-1193x384-c88ed499503c.png"

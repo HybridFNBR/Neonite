@@ -212,4 +212,9 @@ module.exports.routes = {
     'GET /mesh/Fortnite/Fortnite.Hera_Terrain.51618937/metadata': 'ApiController.heraMesh',
     'GET /mesh/Fortnite/Fortnite.Hera_Terrain.51979515/metadata': 'ApiController.heraMesh',
     'GET /mesh/Fortnite/Fortnite.Artemis_Terrain.22935214/metadata' : 'ApiController.artemisMesh',
+    'GET /cdn2-unrealengine/:image' : {
+        controller: 'ApiController',
+        action: 'cdnImages',
+        skipAssets: false
+    },
 };

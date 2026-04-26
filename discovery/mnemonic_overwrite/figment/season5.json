@@ -1,6 +1,6 @@
 {
     "lobby_background_image_urls": {
-        "url": "https://cdn2.unrealengine.com/mkart-fnog-s5-lobbybg-final-4096x2048-b445e0eaa1c2.jpg"
+        "url": "http://localhost:5595/cdn2-unrealengine/mkart-fnog-s5-lobbybg-final-4096x2048-b445e0eaa1c2.jpg"
     },
     "pop_out_image_urls": {
         "url": "https://cdn2.unrealengine.com/en-fn36-00-c1s4-a-spot-foreground-1096x384-1096x384-7e470e253411.png"

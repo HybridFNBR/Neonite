@@ -5,7 +5,7 @@
         "url": "https://cdn2.unrealengine.com/cdn-uploader-EN_FN_OG_C1S8_40-10_Takeover_DiscoverTile_-1920x1080-42323534.jpg"
     },
     "lobby_background_image_urls": {
-        "url": "https://cdn2.unrealengine.com/cdn-uploader-MKARTFNOGC1S8LobbyBG_ltg_v4.1-no-overlay_size-e7725d6c.jpg"
+        "url": "http://localhost:5595/cdn2-unrealengine/cdn-uploader-MKARTFNOGC1S8LobbyBG_ltg_v4.1-no-overlay_size-e7725d6c.jpg"
     },
     "image_url": "https://cdn2.unrealengine.com/cdn-uploader-EN_FN_OG_C1S8_40-10_Takeover_DiscoverTile_-1920x1080-42323534.jpg",
     "alt_image_urls": {

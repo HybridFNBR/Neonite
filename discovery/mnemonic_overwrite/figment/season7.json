@@ -24,7 +24,7 @@
         "tr": "Battle Royale'i 1. B\u00f6l\u00fcm: 7. Sezon'daki ba\u015flang\u0131c\u0131yla yeniden ya\u015fa. Oyuna dalarak Mazi haritas\u0131n\u0131 ke\u015ffet, Mazi ganimetlerini topla ve Mazi sezonlar\u0131n\u0131 yeniden ya\u015fa!"
     },
     "lobby_background_image_urls": {
-        "url": "https://cdn2.unrealengine.com/cdn-uploader-MKART_FNOG_CH1S7_LobbyBG_Final_4K-aa683eb1.jpg"
+        "url": "http://localhost:5595/cdn2-unrealengine/cdn-uploader-MKART_FNOG_CH1S7_LobbyBG_Final_4K-aa683eb1.jpg"
     },
     "pop_out_image_urls": {
         "url": "https://cdn2.unrealengine.com/cdn-uploader-FN_OG_39-00_C7S1_ASpot_Foreground__Foreground_1096x384-1096x384-af0ac06d.png"

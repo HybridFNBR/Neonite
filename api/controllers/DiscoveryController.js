@@ -560,7 +560,7 @@ module.exports = {
 							"url": "https://cdn2.unrealengine.com/fortnite-battle-royale-chapter-6-season-1-hunters-modern-1920x1080-8ec1a8791b58.jpg"
 						},
 						"lobby_background_image_urls": {
-							"url": "https://cdn2.unrealengine.com/mkart-ch6s4-lobby-bg-4096x2048-d73f821bb40c.jpg"
+							"url": "http://localhost:5595/cdn2-unrealengine/mkart-ch6s4-lobby-bg-4096x2048-d73f821bb40c.jpg"
 						},
 					});
 				}
@@ -576,7 +576,7 @@ module.exports = {
 						"url": "https://cdn2.unrealengine.com/fortnite-x-the-simpsons-7-3840x2160-5e88ce59a64c.png"
 					},
 					"lobby_background_image_urls": {
-						"url": "https://cdn2.unrealengine.com/mkart-ch6ms2-lobbybg-plate-4098x2048-c51669ab5daa.jpg"
+						"url": "http://localhost:5595/cdn2-unrealengine/mkart-ch6ms2-lobbybg-plate-4098x2048-c51669ab5daa.jpg"
 					},
 				});
 			}

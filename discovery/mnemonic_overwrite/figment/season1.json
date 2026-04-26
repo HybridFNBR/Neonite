@@ -1,6 +1,6 @@
 {
     "lobby_background_image_urls": {
-        "url": "https://cdn2.unrealengine.com/t-background-darkblue-2048x1024-4b5228ccabe2.png"
+        "url": "http://localhost:5595/cdn2-unrealengine/t-background-darkblue-2048x1024-4b5228ccabe2.png"
     },
     "pop_out_image_urls": {
         "url": "https://cdn2.unrealengine.com/og-fg-1193x384-c88ed499503c.png"
