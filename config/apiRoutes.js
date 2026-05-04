@@ -132,6 +132,7 @@ module.exports.routes = {
         skipAssets: false
     },
     'GET /api/content/v2/launch-data': 'ApiController.noContent',
+    'GET /api/content/v4/launch-data': 'ApiController.noContent',
     'POST /api/v1/user/setting': 'ApiController.userSetting',
     'OPTIONS /v1/epic-settings/public/users/:accountId/*': {
         action: "noContent",
@@ -211,6 +212,7 @@ module.exports.routes = {
     'GET /mesh/Fortnite/Fortnite.Hera_Terrain.51188288/metadata': 'ApiController.heraMesh',
     'GET /mesh/Fortnite/Fortnite.Hera_Terrain.51618937/metadata': 'ApiController.heraMesh',
     'GET /mesh/Fortnite/Fortnite.Hera_Terrain.51979515/metadata': 'ApiController.heraMesh',
+    'GET /mesh/Fortnite/Fortnite.Hera_Terrain.52515996/metadata': 'ApiController.heraMesh',
     'GET /mesh/Fortnite/Fortnite.Artemis_Terrain.22935214/metadata' : 'ApiController.artemisMesh',
     'GET /cdn2-unrealengine/:image' : {
         controller: 'ApiController',

@@ -54,7 +54,7 @@ module.exports = {
 		var payload = Buffer.from(JSON.stringify(data, null, 0)).toString('base64');
 		NeoLog.Log(`Matchmaking into ${ParsedBckt.Playlist}`)
 		res.json({
-			"serviceUrl": "ws://localhost:5595",
+			"serviceUrl": "ws://localhost:80",
 			"ticketType": "mms-player",
 			"payload": payload,
 			"signature": undefined
@@ -108,6 +108,19 @@ module.exports = {
 			"account_id": req.body.account_id,
 			"data": req.body.data,
 			"allow":true
+		})
+	},
+
+	EosMatchmakingJoin: function(req, res){
+		res.json({
+			"ticketId": req.query.ticketId,
+		})
+	},
+
+	EosMatchmakingHeartbeat: function(req, res){
+		res.json({
+			"ticketState": "MATCHMAKING",
+			"terminalStateDetail": null
 		})
 	}
 }

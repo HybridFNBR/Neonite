@@ -6,6 +6,8 @@ module.exports.routes = {
     'GET /waitingroom/api/waitingroom': 'ApiController.noContent',
     'GET /fortnite/api/matchmaking/session/findPlayer/:id': 'MatchMakingController.findPlayer',
     'POST /api/verify/match': 'MatchMakingController.verifyMatch',
+    'POST /epic/matchmaking/v2/:deploymentId/ticket/join': 'MatchMakingController.EosMatchmakingJoin',
+    'PUT /epic/matchmaking/v2/:deploymentId/ticket/:ticketId/heartbeat': 'MatchMakingController.EosMatchmakingHeartbeat'
 
 
 }
