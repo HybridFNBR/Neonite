@@ -253,6 +253,11 @@ module.exports = {
 				TimeOfDayManager: "/Game/TimeOfDay/DaySequence/DaySequenceActors/BR_Ch7/DSA_BR_Ch7S1.DSA_BR_Ch7S1_C"
 			});
 		}
+		if (version >= 40.20) {
+			dataAssetBuilder(FrontendAssets, "FortPlaylistAthena", 9, "Playlist_MatchMistSolo", {
+				TimeOfDayManager: "/Game/TimeOfDay/DaySequence/DaySequenceActors/BR_Ch7/DSA_BR_Ch7S1.DSA_BR_Ch7S1_C"
+			});
+		}
 
 		if (versionGlobal >= 39) {
 			dataAssetBuilder(FrontendAssets, "FortPlaylistAthena", 1, "Playlist_Trios", {
@@ -265,10 +270,48 @@ module.exports = {
 				});
 			}
 		}
-
-		if (version >= 40.20) {
-			dataAssetBuilder(FrontendAssets, "FortPlaylistAthena", 9, "Playlist_MatchMistSolo", {
-				TimeOfDayManager: "/Game/TimeOfDay/DaySequence/DaySequenceActors/BR_Ch7/DSA_BR_Ch7S1.DSA_BR_Ch7S1_C"
+		if (misc.bInEditor === true) {
+			dataAssetBuilder(FrontendAssets, "CosmeticLoadoutSchema", 1, "LoadoutSchema_Character", {
+				"Slots": [
+					"/Game/Items/Loadouts/Slots/LoadoutSlot_Character.LoadoutSlot_Character",
+					"/Game/Items/Loadouts/Slots/LoadoutSlot_Backpack.LoadoutSlot_Backpack",
+					"/Game/Items/Loadouts/Slots/LoadoutSlot_Pickaxe.LoadoutSlot_Pickaxe",
+					"/Game/Items/Loadouts/Slots/LoadoutSlot_Glider.LoadoutSlot_Glider",
+					"",
+					"/Game/Items/Loadouts/Slots/LoadoutSlot_Contrails.LoadoutSlot_Contrails",
+					"/Game/Items/Loadouts/Slots/LoadoutSlot_Aura.LoadoutSlot_Aura",
+				]
+			});
+			dataAssetBuilder(FrontendAssets, "CosmeticLoadoutSchema", 1, "LoadoutSchema_LegoSets", {
+				"Slots": [
+					"",
+					""
+				],
+				bIsSchemaActivatable: false
+			});
+			dataAssetBuilder(FrontendAssets, "CosmeticLoadoutSchema", 1, "LoadoutSchema_Vehicle", {
+				"Slots": [
+					"",
+					"",
+					"",
+					"",
+					"",
+					"",
+					"",
+				],
+				bIsSchemaActivatable: false
+			});
+			dataAssetBuilder(FrontendAssets, "CosmeticLoadoutSchema", 1, "LoadoutSchema_Vehicle_SUV", {
+				"Slots": [
+					"",
+					"",
+					"",
+					"",
+					"",
+					"",
+					"",
+				],
+				bIsSchemaActivatable: false
 			});
 		}
 		res.json(FrontendAssets);
