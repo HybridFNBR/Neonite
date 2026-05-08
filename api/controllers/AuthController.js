@@ -11,7 +11,6 @@ const {account, getClientCredentials, getVersionInfo} = require("../../config/de
 module.exports = {
     oauthToken: async function(req, res){	
 		const { versionGlobal } = getVersionInfo(req);	  
-		const clientCredentials = await getClientCredentials();
 		switch (req.body.grant_type) {
 			case "client_credentials":
 				account.displayName = undefined;
@@ -91,6 +90,7 @@ module.exports = {
 			"jti": "132fac2cc9c94fa08fdc3e65fef24f07"
 		  },"RS256", {keyid:""})
 		if(versionGlobal >= 28){
+			const clientCredentials = await getClientCredentials();
 			account.token = clientCredentials.access_token
 		}
 		else{account.token = `eg1~${token}` }

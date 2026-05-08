@@ -22,7 +22,7 @@ const misc = {
 
 
 async function TCPRequests(method, domain, urlPath, options = {}) {
-    const { headers = {}, data = null } = options;
+    const { headers = {}, data = null, responseType = "json"} = options;
     const domains = await resolve(domain);
     const ips = domains.answers.filter(a => a.type === 1).map(a => a.address);
     const ip = ips[0];
@@ -33,7 +33,8 @@ async function TCPRequests(method, domain, urlPath, options = {}) {
             Host: domain,
             ...headers
         },
-        data
+        data,
+        responseType
     }).catch(err => {
         NeoLog.warn(`Error making TCP request to ${ip}${urlPath}: ${err.message}`);
     });
