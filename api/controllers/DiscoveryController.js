@@ -520,7 +520,7 @@ module.exports = {
 			}
 			if (version >= 36.10) { playlistActive(discoveryv2, "set_forbiddenfruit_nobuild_playlists", true, false) }
 			if (version >= 37.31 && version < 40.20) { playlistActive(discoveryv2, "playlist_stridemice", true, false) }
-			if (misc.bInEditor == true) { //scuffed way of doing it but works
+			if (misc.bInEditor === true) { //scuffed way of doing it but works
 				playlistActive(discoveryv2, "playlist_pilgrimquickplay", false, true)
 				playlistActive(discoveryv2, "playlist_juno", false, true)
 			}
@@ -538,7 +538,7 @@ module.exports = {
 			}
 			if (versionGlobal >= 39) {
 				updateMetadata(discoveryv2, "playlist_defaultsolo", {
-					"alt_title": { "en": "CH7 BR Map", "de": "CH7 BR Kaart", "ru": "CH7 BR Карта", "ko": "CH7 BR 지도", "pt-BR": "Mapa CH7 BR", "en": "CH7 BR Map", "it": "CH7 Mappa BR", "fr": "CH7 Carte BR", "zh-CN": "", "es": "CH7 Mapa BR", "es-MX": "CH7 Mapa BR", "zh": "", "ar": "CH7 BR خريطة", "zh-Hant": "", "ja": "CH7 BR マップ", "pl": "CH7 Mapa BR", "es-419": "CH7 Mapa BR", "tr": "CH7 BR Haritası" }, //used DeepL for translations they may not be correct.
+					"alt_title": {"de": "CH7 BR Kaart", "ru": "CH7 BR Карта", "ko": "CH7 BR 지도", "pt-BR": "Mapa CH7 BR", "en": "CH7 BR Map", "it": "CH7 Mappa BR", "fr": "CH7 Carte BR", "zh-CN": "", "es": "CH7 Mapa BR", "es-MX": "CH7 Mapa BR", "zh": "", "ar": "CH7 BR خريطة", "zh-Hant": "", "ja": "CH7 BR マップ", "pl": "CH7 Mapa BR", "es-419": "CH7 Mapa BR", "tr": "CH7 BR Haritası" }, //used DeepL for translations they may not be correct.
 					"image_url": "https://cms-assets.unrealengine.com/cm6l5gfpm05kr07my04cqgy2x/cmigg1t1l089n07nam0q9jd8b",
 					"image_urls": {
 						"url_s": "https://cms-assets.unrealengine.com/cm6l5gfpm05kr07my04cqgy2x/cmigg1t1l089n07nam0q9jd8b",
@@ -548,7 +548,7 @@ module.exports = {
 					},
 					"title": "CH7 BR Map",
 				});
-				if (versionGlobal == 39) {
+				if (versionGlobal === 39) {
 					updateMetadata(discoveryv2, "playlist_defaultduo", {
 						"alt_title": { "en": "CH6 BR Map", "de": "CH6 BR Kaart", "ru": "CH6 BR Карта", "ko": "CH6 BR 지도", "pt-BR": "Mapa CH7 BR", "it": "CH6 Mappa BR", "fr": "CH6 Carte BR", "zh-CN": "", "es": "CH6 Mapa BR", "es-MX": "CH6 Mapa BR", "zh": "", "ar": "CH6 BR خريطة", "zh-Hant": "", "ja": "CH6 BR マップ", "pl": "CH6 Mapa BR", "es-419": "CH6 Mapa BR", "tr": "CH6 BR Haritası" },//used DeepL for translations they may not be correct.
 						"title": "CH6 BR Map",
@@ -604,7 +604,7 @@ module.exports = {
 		if (playlistManager[version]) { playlistManager[version].forEach(playlist => playlistActive(discoveryv2, playlist, true, false)) }
 		if (versionGlobal >= 39) {
 			updateMetadata(discoveryv2, "playlist_defaultsolo", {
-				"alt_title": { "en": "CH7 BR Map", "de": "CH7 BR Kaart", "ru": "CH7 BR Карта", "ko": "CH7 BR 지도", "pt-BR": "Mapa CH7 BR", "en": "CH7 BR Map", "it": "CH7 Mappa BR", "fr": "CH7 Carte BR", "zh-CN": "", "es": "CH7 Mapa BR", "es-MX": "CH7 Mapa BR", "zh": "", "ar": "CH7 BR خريطة", "zh-Hant": "", "ja": "CH7 BR マップ", "pl": "CH7 Mapa BR", "es-419": "CH7 Mapa BR", "tr": "CH7 BR Haritası" }, 	//used DeepL for translations they may not be correct.
+				"alt_title": { "en": "CH7 BR Map", "de": "CH7 BR Kaart", "ru": "CH7 BR Карта", "ko": "CH7 BR 지도", "pt-BR": "Mapa CH7 BR", "it": "CH7 Mappa BR", "fr": "CH7 Carte BR", "zh-CN": "", "es": "CH7 Mapa BR", "es-MX": "CH7 Mapa BR", "zh": "", "ar": "CH7 BR خريطة", "zh-Hant": "", "ja": "CH7 BR マップ", "pl": "CH7 Mapa BR", "es-419": "CH7 Mapa BR", "tr": "CH7 BR Haritası" }, 	//used DeepL for translations they may not be correct.
 				"title": "CH7 BR Map",
 				"image_urls": {
 					"url_s": "https://cms-assets.unrealengine.com/cm6l5gfpm05kr07my04cqgy2x/cmigg1t1l089n07nam0q9jd8b",
@@ -614,7 +614,7 @@ module.exports = {
 				},
 			});
 
-			if (versionGlobal == 39) {
+			if (versionGlobal === 39) {
 				updateMetadata(discoveryv2, "playlist_defaultduo", {
 					"alt_title": { "en": "CH6 BR Map", "de": "CH6 BR Kaart", "ru": "CH6 BR Карта", "ko": "CH6 BR 지도", "pt-BR": "Mapa CH7 BR", "it": "CH6 Mappa BR", "fr": "CH6 Carte BR", "zh-CN": "", "es": "CH6 Mapa BR", "es-MX": "CH6 Mapa BR", "zh": "", "ar": "CH6 BR خريطة", "zh-Hant": "", "ja": "CH6 BR マップ", "pl": "CH6 Mapa BR", "es-419": "CH6 Mapa BR", "tr": "CH6 BR Haritası" },//used DeepL for translations they may not be correct.
 					"title": "CH6 BR Map",
@@ -735,9 +735,10 @@ function playlistActive(discovery, mnemonic, bIsActive, bIsDisabled) {
  * 
  * @param {Array<Object>} discovery - json response
  * @param {string} gamemode - Gamemode ID
- * @param {any} metadata
+ * @param {float} version - Game Version
 **/
 function addPlaylistOverwrite(discovery, gamemode, version) {
+	let seasonNumber
 	if (gamemode === "figment") {
 		if (version >= 33.00 && version <= 33.20) { seasonNumber = 1 }
 		else if (version >= 33.30 && version <= 34.10) { seasonNumber = 2 }

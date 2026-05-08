@@ -638,6 +638,7 @@ module.exports = {
 
 			case "EquipBattleRoyaleCustomization": {
 				let statName, itemToSlot
+				let bChanged
 				const item = profileData.items[req.body.itemToSlot];
 				switch (req.body.slotName) {
 					case "Character":

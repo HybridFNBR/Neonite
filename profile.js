@@ -55,12 +55,12 @@ module.exports = {
      * 
      * @param {any} profile the profile object, loaded from a file
      * @param {string} itemId the item ID
-     * @param {number} quantity the new quantity
+     * @param {number} newQuantity the new quantity
      * @param {any[]} profileChangesArr (optional) if a change is made, adds a profile change entry to the profileChanges array
      * @returns {boolean} if the a change is made
      */
     changeItemQuantity(profile, itemId, newQuantity, profileChangesArr) {
-        if (!profile.items[itemId] || profile.items[itemId].quantity == newQuantity) {
+        if (!profile.items[itemId] || profile.items[itemId].quantity === newQuantity) {
             return false;
         }
 

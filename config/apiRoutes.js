@@ -1,5 +1,5 @@
 module.exports.routes = {
-    'GET /launcher/api/public/distributionpoints': 'ApiController.distributionpoints',
+    'GET /launcher/api/public/distributionpoints': 'ApiController.distributionPoints',
     'GET /launcher/api/public/assets/:platform/:catalogItemId/:appName': 'ApiController.launcherCatalogItem',
     'GET /Builds/Fortnite/Content/CloudDir/*.manifest': {
         action: "manifest",
@@ -17,7 +17,7 @@ module.exports.routes = {
         controller: 'ApiController',
         skipAssets: false
     },
-    'GET /lightswitch/api/service/bulk/status': 'ApiController.lightSwitchbulk',
+    'GET /lightswitch/api/service/bulk/status': 'ApiController.lightSwitchBulk',
     'GET /lightswitch/api/service/:serviceId/status': 'ApiController.lightswitch',
     'ALL /api/v1/events/Fortnite/:event/history/:accountId': 'ApiController.eventHistory',
     'GET /fortnite/api/v2/versioncheck*': 'ApiController.versionCheck',

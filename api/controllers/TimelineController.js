@@ -12,7 +12,7 @@ module.exports = {
         let { version, versionGlobal, versionLegacy } = getVersionInfo(req);
         const keychain = loadJSON("../responses/keychain.json")
         var config = ini.parse(fs.readFileSync(path.join(__dirname, '../../config.ini'), 'utf-8'));
-        certVersions = [{
+        const certVersions = [{
             3700114: 1,
             3724489: 1,
             3729133: 1,
@@ -850,7 +850,7 @@ module.exports = {
             )
         }
 
-        if (versionGlobal == 10) {
+        if (versionGlobal === 10) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "ITB", //IT Balloon 
@@ -860,7 +860,7 @@ module.exports = {
             )
         }
 
-        if (versionGlobal == 14) {
+        if (versionGlobal === 14) {
             timeline.channels["client-events"]["states"][0]["activeEvents"].push(
                 {
                     eventType: "HSS0", //Hightower Sphere Stage 0(Ch2S4 related)
@@ -920,7 +920,7 @@ module.exports = {
             )
         }
 
-        if (versionGlobal == 15) {
+        if (versionGlobal === 15) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "WPICK02", //Wombat Complete Portal(Ch2S5 Portal related)
@@ -965,7 +965,7 @@ module.exports = {
             )
         }
 
-        if (versionGlobal == 16) {
+        if (versionGlobal === 16) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "RPFS1", //Dino Egg Cracking(Ch2S6 related)
@@ -1010,7 +1010,7 @@ module.exports = {
             )
         }
 
-        if (versionGlobal == 17) {
+        if (versionGlobal === 17) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "WLCM1", //Welcome Party full-swing(Ch2S7 related)
@@ -1120,7 +1120,7 @@ module.exports = {
             )
         }
 
-        if (versionGlobal == 18) {
+        if (versionGlobal === 18) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "GGL01", // Chapter 2 Finale Event-related (Countdown)
@@ -1230,7 +1230,7 @@ module.exports = {
             )
         }
 
-        if (versionGlobal == 19) {
+        if (versionGlobal === 19) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "2021_SM01", //Snow Stage 01(Ch3S1 related)
@@ -1324,7 +1324,7 @@ module.exports = {
                 },
             )
         }
-        if (versionGlobal == 22) {
+        if (versionGlobal === 22) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "S22_Vortex_Active", //S22 Nanomist Vortex(Ch3S4 related)
@@ -1360,7 +1360,7 @@ module.exports = {
 
 
 
-        if (config.ClydeWeek1 == true && versionGlobal == 32) {
+        if (config.ClydeWeek1 === true && versionGlobal === 32) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "ClydeSeason1", //Base CH2: Remix Map
@@ -1376,7 +1376,7 @@ module.exports = {
 
         }
 
-        if (config.ClydeWeek2 == true && versionGlobal == 32) {
+        if (config.ClydeWeek2 === true && versionGlobal === 32) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "ClydeSeason2Part1", //Spaghetti Grotto Map Stage
@@ -1392,7 +1392,7 @@ module.exports = {
 
         }
 
-        if (config.ClydeWeek3 == true && versionGlobal == 32) {
+        if (config.ClydeWeek3 === true && versionGlobal === 32) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "ClydeSeason2Part2", //Ice Isle/ Redesigned Shark POI Map Stage
@@ -1408,7 +1408,7 @@ module.exports = {
 
         }
 
-        if (config.ClydeWeek4 == true && versionGlobal == 32) {
+        if (config.ClydeWeek4 === true && versionGlobal === 32) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "KL1", //Juice WRLD POI Stage 1
@@ -1429,7 +1429,7 @@ module.exports = {
 
         }
 
-        if (config.JuiceWRLDPOIStage1 == true && versionGlobal == 32) {
+        if (config.JuiceWRLDPOIStage1 === true && versionGlobal === 32) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "KL1", //Juice WRLD POI Stage 1
@@ -1440,7 +1440,7 @@ module.exports = {
 
         }
 
-        if (config.JuiceWRLDPOIStage2 == true && versionGlobal == 32) {
+        if (config.JuiceWRLDPOIStage2 === true && versionGlobal === 32) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "KL2", //Juice WRLD POI Stage 2
@@ -1451,7 +1451,7 @@ module.exports = {
 
         }
 
-        if (config.JuiceWRLDPOIStage3 == true && versionGlobal == 32) {
+        if (config.JuiceWRLDPOIStage3 === true && versionGlobal === 32) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "KL3", //Juice WRLD POI Stage 3
@@ -1462,7 +1462,7 @@ module.exports = {
 
         }
 
-        if (config.bEnableRuinHouseBeacon == true && versionGlobal == 10) {
+        if (config.bEnableRuinHouseBeacon === true && versionGlobal === 10) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "RBPRH", // Ruined House Beacon Loaded(Chapter 1 Season 10)
@@ -1478,7 +1478,7 @@ module.exports = {
 
         }
 
-        if (config.bEnableGothemCityBeacon == true && version == 10.31) {
+        if (config.bEnableGothemCityBeacon === true && version === 10.31) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "RBBMP", // Gothem City Beacon Loaded(Chapter 1 Season 10)
@@ -1494,7 +1494,7 @@ module.exports = {
 
         }
 
-        if (config.bEnableGreasyGroveBeacon == true && versionGlobal == 10) {
+        if (config.bEnableGreasyGroveBeacon === true && versionGlobal === 10) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "RBPGG", // Greasy Grove Beacon Loaded(Chapter 1 Season 10)
@@ -1510,7 +1510,7 @@ module.exports = {
 
         }
 
-        if (config.bEnableMoistyPalmsBeacon == true && versionGlobal == 10) {
+        if (config.bEnableMoistyPalmsBeacon === true && versionGlobal === 10) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "RBPMP", // Moisty Palms Beacon Loaded(Chapter 1 Season 10)
@@ -1526,7 +1526,7 @@ module.exports = {
 
         }
 
-        if (config.bEnableFrenzyFieldsBeacon == true && versionGlobal == 10) {
+        if (config.bEnableFrenzyFieldsBeacon === true && versionGlobal === 10) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "RBPFI", // Frenzy Fields Beacon Loaded(Chapter 1 Season 10)
@@ -1542,7 +1542,7 @@ module.exports = {
 
         }
 
-        if (config.bEnableOakBeacon == true && versionGlobal == 10) {
+        if (config.bEnableOakBeacon === true && versionGlobal === 10) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "RBPBO", // Oak Beacon Loaded(Chapter 1 Season 10)
@@ -1558,7 +1558,7 @@ module.exports = {
 
         }
 
-        if (config.bEnableVoidBeacon == true && versionGlobal == 10) {
+        if (config.bEnableVoidBeacon === true && versionGlobal === 10) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "RBPVA", // Void Beacon Loaded(Chapter 1 Season 10)
@@ -1574,7 +1574,7 @@ module.exports = {
 
         }
 
-        if (config.bEnableRetailRowBeacon == true && versionGlobal == 10) {
+        if (config.bEnableRetailRowBeacon === true && versionGlobal === 10) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "RBPRR", // Retail Row Beacon Loaded(Chapter 1 Season 10)
@@ -1590,7 +1590,7 @@ module.exports = {
 
         }
 
-        if (config.bEnableFloatingCubeIsland == true && versionGlobal == 10) {
+        if (config.bEnableFloatingCubeIsland === true && versionGlobal === 10) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
                     eventType: "RBFI", // Floating Cube Island(Chapter 1 Season 10)
@@ -1601,21 +1601,21 @@ module.exports = {
 
         }
 
-        if (config.RufusWeek2 == true && versionGlobal == 27) {
+        if (config.RufusWeek2 === true && versionGlobal === 27) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "RufusWeek2", // Rufus Week 2(Chapter 4 Season OG)
                 activeUntil: "9999-09-14T07:00:00.000Z",
                 activeSince: "2000-09-14T07:00:00.000Z"
             })
         }
-        if (config.RufusWeek3 == true && versionGlobal == 27) {
+        if (config.RufusWeek3 === true && versionGlobal === 27) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "RufusWeek3", // Rufus Week 3(Chapter 4 Season OG)
                 activeUntil: "9999-09-14T07:00:00.000Z",
                 activeSince: "2000-09-14T07:00:00.000Z"
             })
         }
-        if (config.RufusWeek4 == true && versionGlobal == 27) {
+        if (config.RufusWeek4 === true && versionGlobal === 27) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "RufusWeek4", // Rufus Week 4(Chapter 4 Season OG)
                 activeUntil: "9999-09-14T07:00:00.000Z",
@@ -1623,21 +1623,21 @@ module.exports = {
             })
         }
 
-        if (config.TMNTStage1 == true) {
+        if (config.TMNTStage1 === true) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "EventFlag.Event_LinedNotebook_Teaser1", // TMNT Tab Stage 1 
                 activeUntil: "9999-09-14T07:00:00.000Z",
                 activeSince: "2000-09-14T07:00:00.000Z"
             })
         }
-        if (config.TMNTStage2 == true) {
+        if (config.TMNTStage2 === true) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "EventFlag.Event_LinedNotebook_Teaser2", // TMNT Tab Stage 2
                 activeUntil: "9999-09-14T07:00:00.000Z",
                 activeSince: "2000-09-14T07:00:00.000Z"
             })
         }
-        if (config.TMNTStage3 == true) {
+        if (config.TMNTStage3 === true) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "EventFlag.Event_LinedNotebook_Teaser3", // TMNT Tab Stage 3
                 activeUntil: "9999-09-14T07:00:00.000Z",
@@ -1645,21 +1645,21 @@ module.exports = {
             })
         }
 
-        if (config.AtlaIceberg1 == true) {
+        if (config.AtlaIceberg1 === true) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "AtlaIceberg1", // Avatar iceberg stage 1 
                 activeUntil: "9999-09-14T07:00:00.000Z",
                 activeSince: "2000-09-14T07:00:00.000Z"
             })
         }
-        if (config.AtlaIceberg2 == true) {
+        if (config.AtlaIceberg2 === true) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "AtlaIceberg2", // Avatar iceberg stage 2 
                 activeUntil: "9999-09-14T07:00:00.000Z",
                 activeSince: "2000-09-14T07:00:00.000Z"
             },)
         }
-        if (config.AtlaIceberg3 == true) {
+        if (config.AtlaIceberg3 === true) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "AtlaIceberg3", // Avatar iceberg stage 3
                 activeUntil: "9999-09-14T07:00:00.000Z",
@@ -1667,56 +1667,56 @@ module.exports = {
             })
         }
 
-        if (config.WaterLevel_0 == true && versionGlobal == 13) {
+        if (config.WaterLevel_0 === true && versionGlobal === 13) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "WL0", // Water Level 0
                 activeUntil: "9999-09-14T07:00:00.000Z",
                 activeSince: "2000-09-14T07:00:00.000Z"
             })
         }
-        if (config.WaterLevel_1 == true && versionGlobal == 13) {
+        if (config.WaterLevel_1 === true && versionGlobal === 13) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "WL1", // Water Level 1
                 activeUntil: "9999-09-14T07:00:00.000Z",
                 activeSince: "2000-09-14T07:00:00.000Z"
             })
         }
-        if (config.WaterLevel_2 == true && versionGlobal == 13) {
+        if (config.WaterLevel_2 === true && versionGlobal === 13) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "WL2", // Water Level 2
                 activeUntil: "9999-09-14T07:00:00.000Z",
                 activeSince: "2000-09-14T07:00:00.000Z"
             })
         }
-        if (config.WaterLevel_3 == true && versionGlobal == 13) {
+        if (config.WaterLevel_3 === true && versionGlobal === 13) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "WL3", // Water Level 3
                 activeUntil: "9999-09-14T07:00:00.000Z",
                 activeSince: "2000-09-14T07:00:00.000Z"
             })
         }
-        if (config.WaterLevel_4 == true && versionGlobal == 13) {
+        if (config.WaterLevel_4 === true && versionGlobal === 13) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "WL4", // Water Level 4
                 activeUntil: "9999-09-14T07:00:00.000Z",
                 activeSince: "2000-09-14T07:00:00.000Z"
             })
         }
-        if (config.WaterLevel_5 == true && versionGlobal == 13) {
+        if (config.WaterLevel_5 === true && versionGlobal === 13) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "WL5", // Water Level 5
                 activeUntil: "9999-09-14T07:00:00.000Z",
                 activeSince: "2000-09-14T07:00:00.000Z"
             })
         }
-        if (config.WaterLevel_6 == true && versionGlobal == 13) {
+        if (config.WaterLevel_6 === true && versionGlobal === 13) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "WL6", // Water Level 6
                 activeUntil: "9999-09-14T07:00:00.000Z",
                 activeSince: "2000-09-14T07:00:00.000Z"
             })
         }
-        if (config.WaterLevel_7 == true && versionGlobal == 13) {
+        if (config.WaterLevel_7 === true && versionGlobal === 13) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push({
                 eventType: "WL7", // Water Level 7
                 activeUntil: "9999-09-14T07:00:00.000Z",

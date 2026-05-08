@@ -3,7 +3,7 @@ const { default: axios } = require("axios");
 const fs = require('fs')
 const jsonwebtoken = require('jsonwebtoken');
 const ini = require('ini')
-const { getVersionInfo, loadJSON, VersionFilter, misc, compareAndUpdateKeychain } = require("../../config/defs");
+const { getVersionInfo, loadJSON, VersionFilter, misc, compareAndUpdateKeychain, TCPRequests} = require("../../config/defs");
 const config = ini.parse(fs.readFileSync(path.join(__dirname, '../../config.ini'), 'utf-8'));
 let requested = false
 const fortnitegame = loadJSON("../responses/fortnitegame.json")
@@ -11,7 +11,7 @@ const fortnitegame = loadJSON("../responses/fortnitegame.json")
 
 module.exports = {
 
-	distributionpoints: function (req, res) {
+	distributionPoints: function (req, res) {
 		res.json({
 			"distributions": [
 				"http://localhost:5595/",
@@ -48,7 +48,7 @@ module.exports = {
 			requested = true
 		}
 		else if (requested) {
-			const response = await axios.get(`https://fastly-download.epicgames.com${req.originalUrl}`, { responseType: 'stream' });
+			const response = TCPRequests('GET', 'fastly-download.epicgames.com', `${req.originalUrl}`, { responseType: 'stream' });
 			response.data.pipe(res);
 			requested = false
 		}
@@ -61,7 +61,7 @@ module.exports = {
 			requested = true
 		}
 		else if (requested) {
-			const response = await axios.get(`https://fastly-download.epicgames.com${req.originalUrl}`, { responseType: 'stream' });
+			const response = TCPRequests('GET', 'fastly-download.epicgames.com', `${req.originalUrl}`, { responseType: 'stream' });
 			response.data.pipe(res);
 			requested = false
 		}
@@ -86,10 +86,7 @@ module.exports = {
 			return fs.createReadStream(cacheFile).pipe(res);
 		}
 		else {
-			const response = await axios.get(
-				`https://fastly-download.epicgames.com${req.originalUrl}`,
-				{ responseType: "stream" }
-			);
+			const response = TCPRequests('GET', 'fastly-download.epicgames.com', `${req.originalUrl}`, { responseType: 'stream' });
 
 			const fileStream = fs.createWriteStream(cacheFile);
 			response.data.pipe(fileStream);
@@ -145,7 +142,7 @@ module.exports = {
 		}
 	},
 
-	lightSwitchbulk: function (req, res) {
+	lightSwitchBulk: function (req, res) {
 		const serviceId = req.query.serviceId ? req.query.serviceId.toLowerCase() : "fortnite";
 		res.json([
 			{
@@ -733,7 +730,7 @@ module.exports = {
 
 	eventsDownload: function (req, res) {
 		const { versionGlobal } = getVersionInfo(req);
-		if (versionGlobal == 9) { return res.status(404) }
+		if (versionGlobal === 9) { return res.status(404) }
 		res.json({
 			"player": {
 				"gameId": "Fortnite",
@@ -981,18 +978,18 @@ module.exports = {
 	},
 
 	sparks: async function (req, res) {
-		const data = (await axios.get('https://fortnitecontent-website-prod07.ol.epicgames.com/content/api/pages/fortnite-game/spark-tracks').catch(() => { })).data;
-		Object.values(data).forEach(item => {
+		const data = await TCPRequests('GET', 'fortnitecontent-website-prod07.ol.epicgames.com', "/content/api/pages/fortnite-game/spark-tracks");
+		Object.values(data.data).forEach(item => {
 			if (item.track?.au) {
 				item.track.au = 'http://localhost:5595/cdn2-unrealengine' + new URL(item.track.au).pathname;
 			}
 		});
-		res.json(data);
+		res.json(data.data);
 	},
 
 	eventScreen: async function (req, res) {
 		try {
-			const data = await axios.get('https://fortnitecontent-website-prod07.ol.epicgames.com/content/api/pages/fortnite-game/eventscreens');
+			const data = await TCPRequests('GET', 'fortnitecontent-website-prod07.ol.epicgames.com', "/content/api/pages/fortnite-game/eventscreens");
 			res.json(data.data);
 		}
 		catch {
@@ -1002,7 +999,7 @@ module.exports = {
 
 	seasonPass: async function (req, res) {
 		try {
-			const data = await axios.get('https://fortnitecontent-website-prod07.ol.epicgames.com/content/api/pages/fortnite-game/seasonpasses')
+			const data = await TCPRequests('GET', 'fortnitecontent-website-prod07.ol.epicgames.com', "/content/api/pages/fortnite-game/seasonpasses");
 			data.data = JSON.parse(JSON.stringify(data.data).replaceAll('https://cdn2.unrealengine.com', 'http://localhost:5595/cdn2-unrealengine'));
 			res.json(data.data)
 		}

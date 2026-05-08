@@ -1,7 +1,40 @@
 
+const crypto = require('crypto');
 module.exports = {
 	parties: function (req, res) {
-		res.status(204).end();
+		global.partyId = crypto.randomBytes(10).toString("hex")
+		res.json({
+			"id": global.partyId,
+			"created_at": new Date(),
+			"updated_at": new Date(),
+			"config": req.body.config,
+			"members": [
+				{
+					"account_id": req.body.join_info.connection.id.split("@")[0],
+					"meta": req.body.join_info.connection.meta,
+					"connections": [
+						{
+							"id": req.body.join_info.connection.id,
+							"connected_at": new Date(),
+							"updated_at": new Date(),
+							"yield_leadership": false,
+							"meta": {
+								"urn:epic:conn:platform_s": "WIN",
+								"urn:epic:conn:type_s": "game"
+							}
+						}
+					],
+					"revision": 0,
+					"updated_at": new Date(),
+					"joined_at": new Date(),
+					"role": "CAPTAIN"
+				}
+			],
+			"applicants": [],
+			"meta": req.body.meta,
+			"invites": [],
+			"revision": 0
+		})
 	},
 
 	localparty: function (req, res) {
@@ -12,11 +45,7 @@ module.exports = {
 			"pings": []
 		})
 	},
-
-	partyMeta: function (req, res) {
-		res.status(204).end()
-	},
-
+	
 	pings: function (req, res) {
 		res.json({
 			sent_by: req.params.pingerId,
@@ -134,7 +163,42 @@ module.exports = {
 		})
 	},
 
-	createParty: function(req, res){
+	createParty: function (req, res) {
 		res.status(204)
+	},
+
+	party: function (req, res) {
+		res.json({
+            "id": req.params.partyId,
+            "created_at": new Date(),
+            "updated_at": new Date(),
+            "config": {
+                "type": "DEFAULT",
+                "joinability": "OPEN",
+                "discoverability": "ALL",
+                "sub_type": "default",
+                "max_size": 16,
+                "invite_ttl": 14400,
+                "join_confirmation": false
+            },
+            "members": [],
+            "applicants": [],
+            "meta": {},
+            "invites": [],
+            "revision": 0
+        })
+	},
+
+	partyMeta: function (req, res) {
+        res.status(204).end()
+
+	},
+
+	joinParty: function (req, res) {
+		res.json({
+			"status": "JOINED",
+			"party_id":
+				req.params.partyId
+		})
 	}
 }
