@@ -34,6 +34,8 @@ async function TCPRequests(method, domain, urlPath, options = {}) {
             ...headers
         },
         data
+    }).catch(err => {
+        NeoLog.warn(`Error making TCP request to ${ip}${urlPath}: ${err.message}`);
     });
 
     return response;
