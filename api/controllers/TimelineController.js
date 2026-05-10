@@ -1022,21 +1022,6 @@ module.exports = {
         if (versionGlobal === 17) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
-                    eventType: "STL01_N", //Holly Settlement Normal House 1(Ch2S7 related)
-                    activeUntil: "2020-09-09T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "STL02_N", //Holly Settlement Normal House 2(Ch2S7 related)
-                    activeUntil: "2020-09-09T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "STL03_N", //Holly Settlement Normal House 3(Ch2S7 related)
-                    activeUntil: "2020-09-09T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                {
                     eventType: "GRAN01", //Mural Stage 1(Ch2S7 related)
                     activeUntil: "9999-09-09T07:00:00.000Z",
                     activeSince: "9999-09-09T07:00:00.000Z"
