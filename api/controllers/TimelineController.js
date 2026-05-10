@@ -447,6 +447,15 @@ module.exports = {
                 "WSL3" //Winter Snow Level 3
             ],
 
+            "17.10": [
+                "WLCM1", //Welcome Party full-swing(Ch2S7 related)
+                "STL01", //Holly Settlement House 1(Ch2S7 related)
+                "STL02", //Holly Settlement House 2(Ch2S7 related)
+                "STL03", //Holly Settlement House 3(Ch2S7 related)
+                "AVOC1", //Egg spawn 1(Ch2S7 related)
+                "AVOC3", //Egg spawn 3(Ch2S7 related)
+            ],
+
             "17.20|17.30": [
                 "BEL01", // Leadup In-game/Leadup In-Lobby
                 "BET01", // Rift Tour-related (Countdown)
@@ -1013,38 +1022,18 @@ module.exports = {
         if (versionGlobal === 17) {
             timeline.channels['client-events']['states'][0]['activeEvents'].push(
                 {
-                    eventType: "WLCM1", //Welcome Party full-swing(Ch2S7 related)
-                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    eventType: "STL01_N", //Holly Settlement Normal House 1(Ch2S7 related)
+                    activeUntil: "2020-09-09T07:00:00.000Z",
                     activeSince: "2020-09-09T07:00:00.000Z"
                 },
                 {
-                    eventType: "WLCM2", //Welcome Party is over(Ch2S7 related)
-                    activeUntil: "9999-09-09T07:00:00.000Z",
-                    activeSince: "9999-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "STL01", //Holly Settlement House 1(Ch2S7 related)
-                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    eventType: "STL02_N", //Holly Settlement Normal House 2(Ch2S7 related)
+                    activeUntil: "2020-09-09T07:00:00.000Z",
                     activeSince: "2020-09-09T07:00:00.000Z"
                 },
                 {
-                    eventType: "STL02", //Holly Settlement House 2(Ch2S7 related)
-                    activeUntil: "9999-09-09T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "STL03", //Holly Settlement House 3(Ch2S7 related)
-                    activeUntil: "9999-09-09T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "AVOC1", //Egg spawn 1(Ch2S7 related)
-                    activeUntil: "9999-09-09T07:00:00.000Z",
-                    activeSince: "2020-09-09T07:00:00.000Z"
-                },
-                {
-                    eventType: "AVOC3", //Egg spawn 3(Ch2S7 related)
-                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    eventType: "STL03_N", //Holly Settlement Normal House 3(Ch2S7 related)
+                    activeUntil: "2020-09-09T07:00:00.000Z",
                     activeSince: "2020-09-09T07:00:00.000Z"
                 },
                 {
