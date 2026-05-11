@@ -3,9 +3,9 @@ const fs = require("fs");
 const path = require('path');
 const NeoLog = require("../structs/NeoLog")
 const { default: axios } = require("axios");
-const { TCPClient } = require('dns2');
+const { UDPClient  } = require('dns2');
 const keychain = JSON.parse(fs.readFileSync("./responses/keychain.json", "utf-8"));
-const resolve = TCPClient({
+const resolve = UDPClient({
     dns: '8.8.8.8'
 });
 
