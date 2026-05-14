@@ -1131,17 +1131,17 @@ const Playlists = (fortnitegame, version) => {
         }
     }
 
-    const unvaulting = getPlaylist("Playlist_UnvaultingEvent");
+    const unvaulting = getPlaylist("Playlist_Music_Med");
     if (unvaulting) {
         unvaulting.image = "https://neonite.cdn.cbn.lol/UnvaultingEventLTMImage.png";
     }
 
-    const finalShowdown = getPlaylist("Playlist_FinalShowdownEvent");
+    const finalShowdown = getPlaylist("Playlist_Music_Higher");
     if (finalShowdown) {
         finalShowdown.image = "https://neonite.cdn.cbn.lol/FinalShowdownEventLTMImage.png";
     }
 
-    const theEnd = getPlaylist("Playlist_TheEndEvent");
+    const theEnd = getPlaylist("Playlist_Music_Highest");
     if (theEnd) {
         theEnd.image = "https://neonite.cdn.cbn.lol/TheEndEventLTMImage.png";
     }
