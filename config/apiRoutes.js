@@ -23,6 +23,7 @@ module.exports.routes = {
     'POST /api/v1/assets/Fortnite/:version/:netcl/FortPlaylistAthena/:playlistId': 'ApiController.dataAssetFortPlaylist',
     'GET /fortnite/api/storefront/v2/catalog': 'ApiController.catalog',
     'GET /catalog/api/shared/bulk/offers': 'ApiController.catalogBulk',
+    'POST /catalog/api/shared/namespace/fn/bulk/offers': 'ApiController.catalogBulk',
     'POST /fortnite/api/game/v2/grant_access/:accountId': 'ApiController.noContent',
     'GET /fortnite/api/game/v2/enabled_features': 'ApiController.enabledFeatures',
     'POST /datarouter/api/v1/public/data': {
@@ -57,9 +58,9 @@ module.exports.routes = {
     'POST /content-controls/:accountId/verify-pin': 'ApiController.verifyPin',
     'GET /api/v2/interactions/aggregated/Fortnite/:accountId': 'ApiController.noContent',
     'POST /fortnite/api/game/v2/profileToken/verify/*': {
-        action: "noContent", 
-        controller: 'ApiController', 
-        skipAssets: false 
+        action: "noContent",
+        controller: 'ApiController',
+        skipAssets: false
     },
     'GET /api/v1/namespace/fn/worlds/accessibleTo/:accountId': 'ApiController.fetchLegoWorlds',
     'POST /api/v1/namespace/fn/worlds/account/:accountId': 'ApiController.makeLegoWorlds',
@@ -188,10 +189,10 @@ module.exports.routes = {
         action: 'cookedContentPlugin',
         skipAssets: false
     },
-    'GET /api/v1/games/fortnite/tracks/activeBy/*': { 
-        controller: 'ApiController', 
-        action: 'noContent', 
-        skipAssets: false 
+    'GET /api/v1/games/fortnite/tracks/activeBy/*': {
+        controller: 'ApiController',
+        action: 'noContent',
+        skipAssets: false
     },
     'GET /api/v1/games/fortnite/trackprogress/*': {
         controller: 'ApiController',
@@ -208,10 +209,16 @@ module.exports.routes = {
     'GET /mesh/Fortnite/Fortnite.Hera_Terrain.51618937/metadata': 'ApiController.heraMesh',
     'GET /mesh/Fortnite/Fortnite.Hera_Terrain.51979515/metadata': 'ApiController.heraMesh',
     'GET /mesh/Fortnite/Fortnite.Hera_Terrain.52515996/metadata': 'ApiController.heraMesh',
-    'GET /mesh/Fortnite/Fortnite.Artemis_Terrain.22935214/metadata' : 'ApiController.artemisMesh',
-    'GET /cdn2-unrealengine/:image' : {
+    'GET /mesh/Fortnite/Fortnite.Artemis_Terrain.22935214/metadata': 'ApiController.artemisMesh',
+    'GET /mesh/Fortnite/Fortnite.Hera_Terrain.52998544/metadata': 'ApiController.heraMesh',
+    'GET /cdn2-unrealengine/:image': {
         controller: 'ApiController',
         action: 'cdnImages',
+        skipAssets: false
+    },
+    'GET /api/magpie/v2/deployment/:deploymentId/domain/FN1/account/:accountId/workspace/default/linkMode/live/inventory': {
+        controller: 'ApiController',
+        action: 'magpieInventory',
         skipAssets: false
     },
 };

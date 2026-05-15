@@ -510,14 +510,14 @@ module.exports = {
                 "LF01", //Lantern Fest
             ],
 
-            "20.10":[
+            "20.10": [
                 "BS_2_C", //Battle For Condo CLIENT
                 "BS_1_C", //Battle For Bugle CLIENT
                 "BS_2", //Battle For Condo
                 "BS_1", //Battle For Bugle
             ],
 
-            "20.20":[
+            "20.20": [
                 "BS_4_C", //Battle For Rocky CLIENT
                 "BS_3_C", //Battle For Coney CLIENT
                 "BS_4", //Battle For Rocky
@@ -530,7 +530,7 @@ module.exports = {
                 "BS_6", //Post Battles
                 "BS_5", //Battle For Tilted
             ],
-            
+
             "20.40": [
                 "AL01", // Collision Event-related (Countdown)
                 "AL02", // Collision Event-related (Countdown)
@@ -779,7 +779,7 @@ module.exports = {
                 "PC_Timer", //Pistol Canary Countdown
             ],
 
-            "37.31":[
+            "37.31": [
                 "SM_Monolith_2",
                 "SM_Logo2",
                 "SM_PostEvent",
@@ -804,7 +804,7 @@ module.exports = {
                 */
             ],
 
-            "40.00|40.10|40.20|40.30": [
+            "40.00|40.10|40.20|40.30|40.40": [
                 "EventFlag.Event_Rivals_Act_01", //Showdown Act1
                 "EventFlag.Event_Rivals_Act_02", //Showdown Act2
                 "EventFlag.Event_Rivals_Act_03", //Showdown Act3
@@ -831,6 +831,12 @@ module.exports = {
             "40.10": [
                 "EventFlag.Event_Foolnite_Activation", // April Fools 2026
                 "FF_BHMActivate", // April Fools 2026
+            ],
+
+            "40.40":[
+                "EventFlag.Event_MorningBellQuests_S40_Pt1",
+                "EventFlag.Event_MorningBellQuests_S40_Pt2",
+                "EventFlag.Event_FlameCeleb_S40"
             ]
 
         })

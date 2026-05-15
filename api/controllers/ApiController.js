@@ -3,7 +3,7 @@ const { default: axios } = require("axios");
 const fs = require('fs')
 const jsonwebtoken = require('jsonwebtoken');
 const ini = require('ini')
-const { getVersionInfo, loadJSON, VersionFilter, misc, compareAndUpdateKeychain, TCPRequests} = require("../../config/defs");
+const { getVersionInfo, loadJSON, VersionFilter, misc, compareAndUpdateKeychain, TCPRequests } = require("../../config/defs");
 const config = ini.parse(fs.readFileSync(path.join(__dirname, '../../config.ini'), 'utf-8'));
 let requested = false
 const fortnitegame = loadJSON("../responses/fortnitegame.json")
@@ -53,7 +53,7 @@ module.exports = {
 			requested = false
 		}
 	},
-	
+
 	ini: function (req, res) {
 		res.setHeader("content-type", "application/octet-stream")
 		res.sendFile(path.join(__dirname, '../../LauncherAssets/Full.ini'));
@@ -1024,11 +1024,21 @@ module.exports = {
 		}
 	},
 
+	magpieInventory: function (req, res) {
+		console.log(req.body)
+		res.json({
+			"accountId": req.params.accountId,
+			"deploymentId": req.params.deploymentId,
+			"domain": "FN1",
+			"inventory": [],
+			"linkMode": "live",
+			"workspace": "default"
+		})
+	},
+
 	questProgress: function (req, res) {
 		const { versionGlobal } = getVersionInfo(req);
 		res.json({
-			"questProgress": {},
-			"tokens": [],
 			"accountXp": {
 				"dynamicXp": {
 					"timespan": 0,
@@ -1039,10 +1049,10 @@ module.exports = {
 					"boosterXpMult": 0,
 					"weeklyExcessXpMult": 1,
 					"currentWeekXp": 0,
-					"currentWeek": 1
+					"currentWeek": 9
 				},
 				"playtimeXp": {
-					"currentWeek": 1,
+					"currentWeek": 9,
 					"currentWeekXp": 0
 				},
 				"restedXp": 0,
@@ -1070,10 +1080,7 @@ module.exports = {
 			return fs.createReadStream(cacheFile).pipe(res);
 		}
 		else {
-			const response = await axios.get(
-				`https://cosmo.fdeb.live.use1a.on.epicgames.com${req.originalUrl}`,
-				{ responseType: "stream" }
-			);
+			const response = await TCPRequests('GET', 'cosmo.fdeb.live.use1a.on.epicgames.com', req.originalUrl, { responseType: "stream" })
 			res.set({
 				'Content-Type': response.headers["Content-Type"]
 			});
