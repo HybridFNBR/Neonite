@@ -89,6 +89,11 @@ module.exports = {
                                 eventType: "Papaya_Theater", //Party Royale Theater
                                 activeUntil: "9999-12-31T23:59:59.999Z",
                                 activeSince: "2021-06-05T14:00:00.000Z"
+                            },
+                            {
+                                eventType: "GGL05", //Season 18 Downtime Screen TODM/Logic(full transition plays with this setup but water props dont show, though its all controlled with this flag its just time based)
+                                activeUntil: new Date(Date.now() + 60000).toISOString(),
+                                activeSince: new Date().toISOString(),
                             }
                             /*
                             {
@@ -476,6 +481,10 @@ module.exports = {
 
             "18.21": [
                 "FNM21", // FNMares 2021
+            ],
+
+            "18.40":[
+                //"GGL05" //Downtime Screen TODM
             ],
 
             "19.01": [
