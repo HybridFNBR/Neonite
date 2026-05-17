@@ -805,9 +805,7 @@ module.exports = {
             ],
 
             "40.00|40.10|40.20|40.30|40.40": [
-                "EventFlag.Event_Rivals_Act_01", //Showdown Act1
-                "EventFlag.Event_Rivals_Act_02", //Showdown Act2
-                "EventFlag.Event_Rivals_Act_03", //Showdown Act3
+                "EventFlag.Event_Rivals_Act_04", //Showdown Act4
                 "EventFlag.Event_Rivals_Gate_01", //Showdown Act1 Mid
                 "EventFlag.Event_Rivals_Gate_02", //Showdown Act1 End
                 "EventFlag.Event_Rivals_Gate_03", //Showdown Act2 Mid

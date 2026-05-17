@@ -4,7 +4,7 @@ cd /d %~dp0
 where node >nul 2>&1
 if %ERRORLEVEL% NEQ 0 (
     echo NodeJS is not installed. Downloading NodeJS. Trying to install it automatically. Make sure to follow the installer instructions.
-    powershell -Command "winget install OpenJS.NodeJS.LTS; if (!$?) { exit 1 }"
+    powershell -Command "winget install OpenJS.NodeJS; if (!$?) { exit 1 }"
     if %ERRORLEVEL% NEQ 0 (
         echo Failed to install NodeJS automatically. Please install NodeJS manually. See https://nodejs.org/en/download/prebuilt-installer
         echo After installing NodeJS, run this script again to continue using NeoniteV2.
