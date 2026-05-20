@@ -177,9 +177,7 @@ module.exports = {
 			for (const LoadoutSchema in req.body.loadouts) {
 				if (LoadoutSchema === "CosmeticLoadout:LoadoutSchema_Mimosa") continue;
 				const schema = req.body.loadouts[LoadoutSchema];
-				NeoLog.Log(schema)
 				schema.loadoutSlots.forEach(slot => {
-					NeoLog.Log(slot)
 					if (slot.equippedItemId) {
 						const [backendType, itemId] = slot.equippedItemId.split(":");
 						slot.equippedItemId = `${backendType}:${itemId}`;
