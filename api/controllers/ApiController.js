@@ -49,8 +49,8 @@ module.exports = {
 		}
 		else if (requested) {
 			const response = await TCPRequests('GET', 'fastly-download.epicgames.com', `${req.originalUrl}`, { responseType: 'stream' });
-			response.data.pipe(res);
 			requested = false
+			response.data.pipe(res);
 		}
 	},
 
@@ -247,7 +247,7 @@ module.exports = {
 				});
 			}
 		}
-		if (misc.bInEditor === true) {
+		/*if (misc.bInEditor === true) {
 			dataAssetBuilder(FrontendAssets, "CosmeticLoadoutSchema", 1, "LoadoutSchema_Character", {
 				"Slots": [
 					"/Game/Items/Loadouts/Slots/LoadoutSlot_Character.LoadoutSlot_Character",
@@ -290,7 +290,7 @@ module.exports = {
 				],
 				bIsSchemaActivatable: false
 			});
-		}
+		}*/
 		res.json(FrontendAssets);
 	},
 
