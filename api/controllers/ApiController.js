@@ -1197,22 +1197,19 @@ module.exports = {
 	},
 
 	downtimeMeshNetwork: function (req, res) {
-		const response = {
+		res.json({
 			"NightNightFrontend": {
 				"AreWeGettingSleepy": "VeryVerySleepyUwU",
 				"HasDaddyTuckedUsIn": config.bEnableDowntimeScreen,
 				"ForcedPlaylist": false,
-				"Splines": []
-			}
-		}
-		if(config.bEnableDowntimeScreen == true){
-			response.NightNightFrontend.Splines.push(
-				"C624A3D18A8A2494288EE915D11518B7:/q+bDo9akBx2JId6QvLQW1YoN4jBEEn+QdzBXjB3OpQ=",
+				"Splines": [
+					"C624A3D18A8A2494288EE915D11518B7:/q+bDo9akBx2JId6QvLQW1YoN4jBEEn+QdzBXjB3OpQ=",
+  				"F00E08CB606091AEFAB37D9B0A01B833:uEmoAK5xdbd8KefVf9o7uJiGcGTYk2r9QevsGe4vBII=",
 				"857A238C0BA80D892571ACE78CD3187C:eLLEqOAgRjz78Z4YT6dLxL3DetAW1c2BM4oTPp912ak=",
 				"60CE6E28E6993C1DC1C58E839E7A7284:ZlOTwn6YbAK9HetjsiQo0AS1jwJQnLJY7NkR5i7o2/g="
-			)
-		}
-		res.json(response)
+				]
+			}
+		})
 	},
 
 	cdnImages: async function (req, res) {

@@ -55,6 +55,12 @@ module.exports = {
 						'+ExperimentalBucketPercentList=(ExperimentNum=27,Name="ShowMultiProductItemShop",BucketPercents=(100,0,0),WinningBucketIndex=-1)'
 					);
 				}
+				if (version === "22.40") {
+					fileContent = fileContent.replace(
+						';NightNightPluginName=RadishRoot',
+						'NightNightPluginName=RadishRoot'
+					);
+				}
 				else if (version === "17.30") {
 					fileContent = fileContent.replace(
 						'bEnableSocialTab=false',
