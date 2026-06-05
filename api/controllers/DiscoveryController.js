@@ -243,6 +243,34 @@ module.exports = {
 						"playHistoryType": null
 					},
 					{
+						"panelName": "SmartTunaPre",
+						"panelDisplayName": "End of Season Live Event",
+						"panelSubtitle": "End of Season Live Event",
+						"featureTags": [
+							"bannerItemRow"
+						],
+						"firstPage": {
+							"results": [
+								{
+									"lastVisited": null,
+									"linkCode": "playlist_smarttunapre",
+									"isFavorite": false,
+									"globalCCU": 0,
+									"lockStatus": "UNLOCKED",
+									"lockStatusReason": "RATING_THRESHOLD",
+									"isVisible": true,
+									"favoriteStatus": "NONE"
+								}
+							],
+							"hasMore": false,
+							"panelTargetName": null,
+							"pageMarker": null
+						},
+						"panelType": "CuratedList",
+						"playHistoryType": null,
+						"panelContexts": {}
+					},
+					{
 						"panelName": "SkyMango",
 						"panelDisplayName": "Chapter Finale Zero Hour",
 						"panelSubtitle": "Chapter Finale Zero Hour",
@@ -773,4 +801,5 @@ const playlistManager = {
 	"35.20": ["playlist_ripehoneydew"],
 	"37.51": ["playlist_limerock"],
 	"38.11": ["playlist_skymango"],
+	"40.41": ["playlist_smarttunapre"]
 };

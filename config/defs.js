@@ -999,7 +999,23 @@ const Backgrounds = (version, versionGlobal, backgrounds, content) => {
         "39.51": {
             stage: "defaultnotris",
             backgroundImage: v3951backgroundImages[Math.floor(Math.random() * v3951backgroundImages.length)]
-        }
+        },
+        "40.20":{
+            stage: "defaultblurryfloor",
+            backgroundImage: "http://localhost:5595/cdn2-unrealengine/mkart-fnbr-40-20-lobbybg-final-4096x2048-117eac73cdcd.jpg"
+        },
+        "40.30":{
+            stage: "defaultblurryfloor",
+            backgroundImage: "http://localhost:5595/cdn2-unrealengine/mkart-fnbr-ch7s2-40-30-lobbybg-final-4096x2048-b8ba188ee990.jpg"
+        },
+        "40.40":{
+            stage: "season4040",
+            backgroundImage: "http://localhost:5595/cdn2-unrealengine/mkart-fnbr-ch7s2-venison-40-40-lobbybg-final-3840x2022-bd790399258a.jpg"
+        },
+        "40.41":{
+            stage: "season4041",
+            backgroundImage: "http://localhost:5595/cdn2-unrealengine/mkart-fnbr-smarttuna-lobbybg-withfx-final-4k-4703x2477-81899f28574e.jpg"
+        },
     });
 
     const versionGlobalBackgrounds = Object.create({
@@ -1089,6 +1105,10 @@ const Backgrounds = (version, versionGlobal, backgrounds, content) => {
         39: {
             stage: "season3900",
             backgroundImage: s39backgroundImages[Math.floor(Math.random() * s39backgroundImages.length)]
+        },
+        40: {
+            stage: "season4000",
+            backgroundImage: "http://localhost:5595/cdn2-unrealengine/mkart-fnbr-ch7s2-lobbybg-final-4k-4096x2048-4572ba5a2d95.jpg"
         }
     });
     const versionBackground = versionBackgrounds[version] ?? versionGlobalBackgrounds[versionGlobal];
