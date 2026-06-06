@@ -1027,16 +1027,422 @@ module.exports = {
 	},
 
 	magpieInventory: function (req, res) {
-		console.log(req.body)
 		res.json({
 			"accountId": req.params.accountId,
 			"deploymentId": req.params.deploymentId,
 			"domain": "FN1",
-			"inventory": [],
+			"inventory": [
+				{
+					"counts": {
+						"BurntPeanut_Variation_A": 2,
+						"DemonSprite_Variant_A": 2,
+						"DemonSprite_Variant_Galaxy": 2,
+						"DemonSprite_Variant_Gold": 2,
+						"DuckSprite_Variant_A": 2,
+						"DuckSprite_Variant_Candy": 2,
+						"DuckSprite_Variant_Galaxy": 2,
+						"DuckSprite_Variant_Gold": 2,
+						"EarthSprite_Variant_A": 2,
+						"EarthSprite_Variant_Candy": 2,
+						"EarthSprite_Variant_Galaxy": 2,
+						"EarthSprite_Variant_Gold": 2,
+						"GhostSprite_Variant_A": 2,
+						"GhostSprite_Variant_Candy": 2,
+						"GhostSprite_Variant_Galaxy": 2,
+						"GhostSprite_Variant_Gold": 2,
+						"KingSprite_Variant_A": 2,
+						"KingSprite_Variant_Candy": 2,
+						"KingSprite_Variant_Galaxy": 2,
+						"KingSprite_Variant_Gold": 2,
+						"PunkSprite_Variant_A": 2,
+						"PunkSprite_Variant_Candy": 2,
+						"PunkSprite_Variant_Galaxy": 2,
+						"PunkSprite_Variant_Gold": 2,
+						"SleepySprite_Variant_A": 2,
+						"SleepySprite_Variant_Candy": 2,
+						"SleepySprite_Variant_Galactic": 2,
+						"SleepySprite_Variant_Gold": 2,
+						"Spitfire_Variation_A": 2,
+						"Spitfire_Variation_Candy": 2,
+						"Spitfire_Variation_Galaxy": 2,
+						"Spitfire_Variation_Gold": 2,
+						"Water_Variant_Base": 2,
+						"Water_Variant_Candy": 2,
+						"Water_Variant_Galaxy": 2,
+						"Water_Variant_Gold": 2,
+						"ZeroPointSprite_Variant_A": 2,
+						"ZeroPointSprite_Variant_Candy": 2,
+						"ZeroPointSprite_Variant_Galaxy": 2,
+						"ZeroPointSprite_Variant_Gold": 2,
+						"DemonSprite_Variant_Candy": 2
+					},
+					"entitlementMetadata": {},
+					"metadata": "{\"StarterRelic\":\"EarthSprite_Variant_A\",\"EquippedVariant\":\"None\"}",
+					"metadataSchemaVersion": 0,
+					"moduleId": "70329e8f-f377-4a73-90cf-76b7ace87a07",
+					"purchasedEntitlementConsequentialToGameplay": false
+				}
+			],
 			"linkMode": "live",
 			"workspace": "default"
 		})
 	},
+
+	extractableRelics: function (req, res) {
+		const spirit = req.body.relicId;
+		res.json({
+			deploymentId: null,
+			accountId: null,
+			domain: null,
+			linkMode: null,
+			workspace: null,
+			inventory: [{
+				moduleId: "70329e8f-f377-4a73-90cf-76b7ace87a07",
+				purchasedEntitlementConsequentialToGameplay: false,
+				counts: {
+					[spirit]: 2
+				},
+				metadata: JSON.stringify({
+					StarterRelic: spirit,
+					EquippedVariant: spirit
+				})
+			}]
+		})
+	},
+
+	extractableRelicsCatalog: function (req, res) {
+		res.json({
+			"PunkSprite_Variant_Candy": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 10000
+				},
+				"templateId": "ExtractableRelic:punksprite_variant_candy"
+			},
+			"SleepySprite_Variant_Candy": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 10000
+				},
+				"templateId": "ExtractableRelic:sleepysprite_variant_candy"
+			},
+			"Water_Variant_Gold": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 4000
+				},
+				"templateId": "ExtractableRelic:water_variant_gold"
+			},
+			"BurntPeanut_Variation_A": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 7500
+				},
+				"templateId": "ExtractableRelic:burntpeanut_variation_a"
+			},
+			"PunkSprite_Variant_Galaxy": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 10000
+				},
+				"templateId": "ExtractableRelic:punksprite_variant_galaxy"
+			},
+			"ZeroPointSprite_Variant_A": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 7500
+				},
+				"templateId": "ExtractableRelic:zeropointsprite_variant_a"
+			},
+			"SleepySprite_Variant_A": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 5000
+				},
+				"templateId": "ExtractableRelic:sleepysprite_variant_a"
+			},
+			"DemonSprite_Variant_Gold": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 6000
+				},
+				"templateId": "ExtractableRelic:demonsprite_variant_gold"
+			},
+			"Spitfire_Variation_Candy": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 4000
+				},
+				"templateId": "ExtractableRelic:spitfire_variation_candy"
+			},
+			"DemonSprite_Variant_A": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 3000
+				},
+				"templateId": "ExtractableRelic:demonsprite_variant_a"
+			},
+			"GhostSprite_Variant_Candy": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 6000
+				},
+				"templateId": "ExtractableRelic:ghostsprite_variant_candy"
+			},
+			"ZeroPointSprite_Variant_Candy": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 15000
+				},
+				"templateId": "ExtractableRelic:zeropointsprite_variant_candy"
+			},
+			"DemonSprite_Variant_Galaxy": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 6000
+				},
+				"templateId": "ExtractableRelic:demonsprite_variant_galaxy"
+			},
+			"Water_Variant_Galaxy": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 4000
+				},
+				"templateId": "ExtractableRelic:water_variant_galaxy"
+			},
+			"ZeroPointSprite_Variant_Gold": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 15000
+				},
+				"templateId": "ExtractableRelic:zeropointsprite_variant_gold"
+			},
+			"EarthSprite_Variant_Galaxy": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 4000
+				},
+				"templateId": "ExtractableRelic:earthsprite_variant_galaxy"
+			},
+			"EarthSprite_Variant_Gold": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 4000
+				},
+				"templateId": "ExtractableRelic:earthsprite_variant_gold"
+			},
+			"PunkSprite_Variant_A": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 5000
+				},
+				"templateId": "ExtractableRelic:punksprite_variant_a"
+			},
+			"SleepySprite_Variant_Gold": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 10000
+				},
+				"templateId": "ExtractableRelic:sleepysprite_variant_gold"
+			},
+			"Water_Variant_Candy": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 4000
+				},
+				"templateId": "ExtractableRelic:water_variant_candy"
+			},
+			"GhostSprite_Variant_Galaxy": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 6000
+				},
+				"templateId": "ExtractableRelic:ghostsprite_variant_galaxy"
+			},
+			"KingSprite_Variant_A": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 3000
+				},
+				"templateId": "ExtractableRelic:kingsprite_variant_a"
+			},
+			"ZeroPointSprite_Variant_Galaxy": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 15000
+				},
+				"templateId": "ExtractableRelic:zeropointsprite_variant_galaxy"
+			},
+			"GhostSprite_Variant_A": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 3000
+				},
+				"templateId": "ExtractableRelic:ghostsprite_variant_a"
+			},
+			"Spitfire_Variation_A": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": true,
+					"summonCost": 100
+				},
+				"templateId": "ExtractableRelic:spitfire_variation_a"
+			},
+			"KingSprite_Variant_Galaxy": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 6000
+				},
+				"templateId": "ExtractableRelic:kingsprite_variant_galaxy"
+			},
+			"EarthSprite_Variant_Candy": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 4000
+				},
+				"templateId": "ExtractableRelic:earthsprite_variant_candy"
+			},
+			"Spitfire_Variation_Gold": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 4000
+				},
+				"templateId": "ExtractableRelic:spitfire_variation_gold"
+			},
+			"PunkSprite_Variant_Gold": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 10000
+				},
+				"templateId": "ExtractableRelic:punksprite_variant_gold"
+			},
+			"KingSprite_Variant_Gold": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 6000
+				},
+				"templateId": "ExtractableRelic:kingsprite_variant_gold"
+			},
+			"Spitfire_Variation_Galaxy": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 4000
+				},
+				"templateId": "ExtractableRelic:spitfire_variation_galaxy"
+			},
+			"EarthSprite_Variant_A": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": true,
+					"summonCost": 100
+				},
+				"templateId": "ExtractableRelic:earthsprite_variant_a"
+			},
+			"DuckSprite_Variant_Gold": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 6000
+				},
+				"templateId": "ExtractableRelic:ducksprite_variant_gold"
+			},
+			"DuckSprite_Variant_Galaxy": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 6000
+				},
+				"templateId": "ExtractableRelic:ducksprite_variant_galaxy"
+			},
+			"DuckSprite_Variant_Candy": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 6000
+				},
+				"templateId": "ExtractableRelic:ducksprite_variant_candy"
+			},
+			"DemonSprite_Variant_Candy": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 6000
+				},
+				"templateId": "ExtractableRelic:demonsprite_variant_candy"
+			},
+			"Water_Variant_Base": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": true,
+					"summonCost": 100
+				},
+				"templateId": "ExtractableRelic:water_variant_base"
+			},
+			"SleepySprite_Variant_Galactic": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 10000
+				},
+				"templateId": "ExtractableRelic:sleepysprite_variant_galactic"
+			},
+			"KingSprite_Variant_Candy": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 6000
+				},
+				"templateId": "ExtractableRelic:kingsprite_variant_candy"
+			},
+			"DuckSprite_Variant_A": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 3000
+				},
+				"templateId": "ExtractableRelic:ducksprite_variant_a"
+			},
+			"GhostSprite_Variant_Gold": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 6000
+				},
+				"templateId": "ExtractableRelic:ghostsprite_variant_gold"
+			}
+		})
+	},
+
 
 	questProgress: function (req, res) {
 		const { versionGlobal } = getVersionInfo(req);
@@ -1084,7 +1490,7 @@ module.exports = {
 		else {
 			const response = await TCPRequests('GET', 'cosmo.fdeb.live.use1a.on.epicgames.com', req.originalUrl, { responseType: "stream" })
 			res.set({
-				'Content-Type': response.headers["Content-Type"]
+				'Content-Type': "image/png",
 			});
 			const fileStream = fs.createWriteStream(cacheFile);
 			response.data.pipe(fileStream);
@@ -1206,9 +1612,9 @@ module.exports = {
 				"ForcedPlaylist": false,
 				"Splines": [
 					"C624A3D18A8A2494288EE915D11518B7:/q+bDo9akBx2JId6QvLQW1YoN4jBEEn+QdzBXjB3OpQ=",
-  				"F00E08CB606091AEFAB37D9B0A01B833:uEmoAK5xdbd8KefVf9o7uJiGcGTYk2r9QevsGe4vBII=",
-				"857A238C0BA80D892571ACE78CD3187C:eLLEqOAgRjz78Z4YT6dLxL3DetAW1c2BM4oTPp912ak=",
-				"60CE6E28E6993C1DC1C58E839E7A7284:ZlOTwn6YbAK9HetjsiQo0AS1jwJQnLJY7NkR5i7o2/g="
+					"F00E08CB606091AEFAB37D9B0A01B833:uEmoAK5xdbd8KefVf9o7uJiGcGTYk2r9QevsGe4vBII=",
+					"857A238C0BA80D892571ACE78CD3187C:eLLEqOAgRjz78Z4YT6dLxL3DetAW1c2BM4oTPp912ak=",
+					"60CE6E28E6993C1DC1C58E839E7A7284:ZlOTwn6YbAK9HetjsiQo0AS1jwJQnLJY7NkR5i7o2/g="
 				]
 			}
 		})

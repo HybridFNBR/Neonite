@@ -225,4 +225,6 @@ module.exports.routes = {
         action: 'magpieInventory',
         skipAssets: false
     },
+    'POST  /fortnite/api/game/v2/extractablerelics/:moduleId/:num/:accountId/executecommand': 'ApiController.extractableRelics',
+    'GET /fortnite/api/game/v2/extractablerelics/:moduleId/:num/getBackendCatalog' : 'ApiController.extractableRelicsCatalog',
 };

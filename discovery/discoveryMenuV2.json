@@ -2002,9 +2002,7 @@
       "title": "Battle Royale",
       "locale": "en",
       "video_vuid": "DpfVjiXQaFTRgOaGFE",
-      "matchmaking_plugins": [
-        "HazelnutSpread_RivalsFrontend"
-      ],
+      "frontend_plugin": "BattleRoyaleExperienceFrontend",
       "sub_link_codes": [
         "playlist_defaultsolo",
         "playlist_defaultduo",
