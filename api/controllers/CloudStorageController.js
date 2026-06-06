@@ -41,7 +41,7 @@ module.exports = {
 		let fileContent = fs.readFileSync(filePath, 'utf-8')	
 		switch (req.params.fileName) {
 			case 'DefaultEngine.ini':
-				if (version === "32.11" || version === "35.20" || version === "37.51" || version === "38.11") {
+				if (version === "32.11" || version === "35.20" || version === "37.51" || version === "38.11" || version === "40.41") {
 					fileContent = fileContent.replace(
 						';Fort.Event.bForceOffLoadingScreen=1',
 						'Fort.Event.bForceOffLoadingScreen=1'
