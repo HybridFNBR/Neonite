@@ -1026,56 +1026,20 @@ module.exports = {
 		}
 	},
 
-	magpieInventory: function (req, res) {
+	magpieInventory: async function (req, res) {
+		if (misc.relicPurchased === true) {
+			misc.counts[misc.relicId] = misc.counts[misc.relicId] + 1
+			const extractableRelicsCatalog = await axios.get(`http://localhost:5595/fortnite/api/game/v2/extractablerelics/70329e8f-f377-4a73-90cf-76b7ace87a07/8/getBackendCatalog`)
+			misc.counts.Currency_ExtractionPoints -= extractableRelicsCatalog.data[misc.relicId].attributes["summonCost"];
+			misc.relicPurchased = false;
+		}
 		res.json({
 			"accountId": req.params.accountId,
 			"deploymentId": req.params.deploymentId,
 			"domain": "FN1",
 			"inventory": [
 				{
-					"counts": {
-						"BurntPeanut_Variation_A": 2,
-						"DemonSprite_Variant_A": 2,
-						"DemonSprite_Variant_Galaxy": 2,
-						"DemonSprite_Variant_Gold": 2,
-						"DuckSprite_Variant_A": 2,
-						"DuckSprite_Variant_Candy": 2,
-						"DuckSprite_Variant_Galaxy": 2,
-						"DuckSprite_Variant_Gold": 2,
-						"EarthSprite_Variant_A": 2,
-						"EarthSprite_Variant_Candy": 2,
-						"EarthSprite_Variant_Galaxy": 2,
-						"EarthSprite_Variant_Gold": 2,
-						"GhostSprite_Variant_A": 2,
-						"GhostSprite_Variant_Candy": 2,
-						"GhostSprite_Variant_Galaxy": 2,
-						"GhostSprite_Variant_Gold": 2,
-						"KingSprite_Variant_A": 2,
-						"KingSprite_Variant_Candy": 2,
-						"KingSprite_Variant_Galaxy": 2,
-						"KingSprite_Variant_Gold": 2,
-						"PunkSprite_Variant_A": 2,
-						"PunkSprite_Variant_Candy": 2,
-						"PunkSprite_Variant_Galaxy": 2,
-						"PunkSprite_Variant_Gold": 2,
-						"SleepySprite_Variant_A": 2,
-						"SleepySprite_Variant_Candy": 2,
-						"SleepySprite_Variant_Galactic": 2,
-						"SleepySprite_Variant_Gold": 2,
-						"Spitfire_Variation_A": 2,
-						"Spitfire_Variation_Candy": 2,
-						"Spitfire_Variation_Galaxy": 2,
-						"Spitfire_Variation_Gold": 2,
-						"Water_Variant_Base": 2,
-						"Water_Variant_Candy": 2,
-						"Water_Variant_Galaxy": 2,
-						"Water_Variant_Gold": 2,
-						"ZeroPointSprite_Variant_A": 2,
-						"ZeroPointSprite_Variant_Candy": 2,
-						"ZeroPointSprite_Variant_Galaxy": 2,
-						"ZeroPointSprite_Variant_Gold": 2,
-						"DemonSprite_Variant_Candy": 2
-					},
+					"counts": misc.counts,
 					"entitlementMetadata": {},
 					"metadata": "{\"StarterRelic\":\"EarthSprite_Variant_A\",\"EquippedVariant\":\"None\"}",
 					"metadataSchemaVersion": 0,
@@ -1090,24 +1054,34 @@ module.exports = {
 
 	extractableRelics: function (req, res) {
 		const spirit = req.body.relicId;
-		res.json({
-			deploymentId: null,
-			accountId: null,
-			domain: null,
-			linkMode: null,
-			workspace: null,
-			inventory: [{
-				moduleId: "70329e8f-f377-4a73-90cf-76b7ace87a07",
-				purchasedEntitlementConsequentialToGameplay: false,
-				counts: {
-					[spirit]: 2
-				},
-				metadata: JSON.stringify({
-					StarterRelic: spirit,
-					EquippedVariant: spirit
+		switch (req.body.commandId) {
+			case "purchase":
+				misc.relicPurchased = true
+				misc.relicId = req.body.relicId;
+				res.status(204).send() //not sure what the response is yet but this works fine
+				break;
+			case "equip":
+				res.json({
+					deploymentId: null,
+					accountId: null,
+					domain: null,
+					linkMode: null,
+					workspace: null,
+					inventory: [{
+						moduleId: "70329e8f-f377-4a73-90cf-76b7ace87a07",
+						purchasedEntitlementConsequentialToGameplay: false,
+						counts: {
+							[spirit]: 2
+						},
+						metadata: JSON.stringify({
+							StarterRelic: spirit,
+							EquippedVariant: spirit
+						})
+					}]
 				})
-			}]
-		})
+			break;
+
+		}
 	},
 
 	extractableRelicsCatalog: function (req, res) {

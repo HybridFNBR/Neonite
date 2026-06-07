@@ -16,7 +16,53 @@ const account = {
 };
 
 const misc = {
-    bInEditor: false
+    bInEditor: false,
+    relicPurchased: false,
+    relicId: "",
+    counts: {
+		"Currency_ExtractionPoints": 999999,
+		"BurntPeanut_Variation_A": 1,
+		"DemonSprite_Variant_A": 1,
+		"DemonSprite_Variant_Galaxy": 1,
+		"DemonSprite_Variant_Gold": 1,
+		"DuckSprite_Variant_A": 1,
+		"DuckSprite_Variant_Candy": 1,
+		"DuckSprite_Variant_Galaxy": 1,
+		"DuckSprite_Variant_Gold": 1,
+		"EarthSprite_Variant_A": 1,
+		"EarthSprite_Variant_Candy": 1,
+		"EarthSprite_Variant_Galaxy": 1,
+		"EarthSprite_Variant_Gold": 1,
+		"GhostSprite_Variant_A": 1,
+		"GhostSprite_Variant_Candy": 1,
+		"GhostSprite_Variant_Galaxy": 1,
+		"GhostSprite_Variant_Gold": 1,
+		"KingSprite_Variant_A": 1,
+		"KingSprite_Variant_Candy": 1,
+		"KingSprite_Variant_Galaxy": 1,
+		"KingSprite_Variant_Gold": 1,
+		"PunkSprite_Variant_A": 1,
+		"PunkSprite_Variant_Candy": 1,
+		"PunkSprite_Variant_Galaxy": 1,
+		"PunkSprite_Variant_Gold": 1,
+		"SleepySprite_Variant_A": 1,
+		"SleepySprite_Variant_Candy": 1,
+		"SleepySprite_Variant_Galactic": 1,
+		"SleepySprite_Variant_Gold": 1,
+		"Spitfire_Variation_A": 1,
+		"Spitfire_Variation_Candy": 1,
+		"Spitfire_Variation_Galaxy": 1,
+		"Spitfire_Variation_Gold": 1,
+		"Water_Variant_Base": 1,
+		"Water_Variant_Candy": 1,
+		"Water_Variant_Galaxy": 1,
+		"Water_Variant_Gold": 1,
+		"ZeroPointSprite_Variant_A": 1,
+		"ZeroPointSprite_Variant_Candy": 1,
+		"ZeroPointSprite_Variant_Galaxy": 1,
+		"ZeroPointSprite_Variant_Gold": 1,
+		"DemonSprite_Variant_Candy": 1
+	}
 }
 //will prob get more use out of this as time goes on
 
