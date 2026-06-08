@@ -1027,6 +1027,7 @@ module.exports = {
 	},
 
 	magpieInventory: async function (req, res) {
+		if(misc.bInEditor === true){res.status(404)}
 		if (misc.relicPurchased === true) {
 			misc.counts[misc.relicId] = misc.counts[misc.relicId] + 1
 			const extractableRelicsCatalog = await axios.get(`http://localhost:5595/fortnite/api/game/v2/extractablerelics/70329e8f-f377-4a73-90cf-76b7ace87a07/8/getBackendCatalog`)
