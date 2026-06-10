@@ -267,9 +267,13 @@ module.exports = {
 		const JWT = req.headers.authorization.replace("bearer eg1~", "").replace("Bearer eg1~", "")
 		const JWTdecode = jsonwebtoken.decode(JWT)
 		res.json({
-			"expiresInSeconds": 2147483647,
+			"expiresInSeconds": 300,
 			"code": crypto.randomBytes(32).toString("hex"),
 			"creatingClientId": JWTdecode["clid"],
 		})
+	},
+
+	revoke: function(req, res){
+		res.status(204).end()
 	}
 }
