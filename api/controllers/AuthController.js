@@ -1,16 +1,16 @@
 const crypto = require('crypto');
-const {ApiException} = require('../../structs/errors');
+const { ApiException } = require('../../structs/errors');
 const errors = require("../../structs/errors");
 const jsonwebtoken = require('jsonwebtoken');
 const ini = require('ini')
 const fs = require('fs')
 const path = require("path");
 const config = ini.parse(fs.readFileSync(path.join(__dirname, '../../config.ini'), 'utf-8'));
-const {account, getClientCredentials, getVersionInfo} = require("../../config/defs");
+const { account, getClientCredentials, getVersionInfo } = require("../../config/defs");
 
 module.exports = {
-    oauthToken: async function(req, res){	
-		const { versionGlobal } = getVersionInfo(req);	  
+	oauthToken: async function (req, res) {
+		const { versionGlobal } = getVersionInfo(req);
 		switch (req.body.grant_type) {
 			case "client_credentials":
 				account.displayName = undefined;
@@ -59,16 +59,16 @@ module.exports = {
 				account.displayName = req.body.exchange_code;
 				account.accountId = req.body.exchange_code;
 				break;
-				
+
 			default:
 				throw new ApiException(errors.com.epicgames.common.oauth.unsupported_grant_type).with(req.body.grant_type)
-        }
-		
-		if(config.bEnableOverride === true){
+		}
+
+		if (config.bEnableOverride === true) {
 			account.displayName = config.username
 			account.accountId = config.username
 		}
-        let token = jsonwebtoken.sign({
+		let token = jsonwebtoken.sign({
 			"app": "prod-fn",
 			"sub": account.accountId,
 			"mver": false,
@@ -88,12 +88,12 @@ module.exports = {
 			"exp": 2147483647,
 			"iat": 1725882476,
 			"jti": "132fac2cc9c94fa08fdc3e65fef24f07"
-		  },"RS256", {keyid:""})
-		if(versionGlobal >= 28){
+		}, "RS256", { keyid: "" })
+		if (versionGlobal >= 28) {
 			const clientCredentials = await getClientCredentials();
 			account.token = clientCredentials.access_token
 		}
-		else{account.token = `eg1~${token}` }
+		else { account.token = `eg1~${token}` }
 		res.json({
 			"access_token": account.token,
 			"expires_in": 2147483647,
@@ -107,10 +107,10 @@ module.exports = {
 			"internal_client": true,
 			"client_service": "prod-fn",
 			"scope": [
-			  "basic_profile",
-			  "friends_list",
-			  "openid",
-			  "presence"
+				"basic_profile",
+				"friends_list",
+				"openid",
+				"presence"
 			],
 			"displayName": account.displayName,
 			"app": "prod-fn",
@@ -120,10 +120,10 @@ module.exports = {
 			"acr": "urn:epic:loa:aal1",
 			"auth_time": "1999-01-12T00:20:15.542Z"
 		})
-    },
+	},
 
-    verifyToken: function(req, res){
-        const JWT = req.headers.authorization.replace("bearer eg1~", "").replace("Bearer eg1~", "")
+	verifyToken: function (req, res) {
+		const JWT = req.headers.authorization.replace("bearer eg1~", "").replace("Bearer eg1~", "")
 		const JWTdecode = jsonwebtoken.decode(JWT)
 		res.json({
 			"token": req.headers.authorization,
@@ -141,10 +141,10 @@ module.exports = {
 			"in_app_id": JWTdecode["sub"],
 			"device_id": "89776e294d5c27ba1ef4e59fab402ea7",
 			"scope": [
-			  "basic_profile",
-			  "friends_list",
-			  "openid",
-			  "presence"
+				"basic_profile",
+				"friends_list",
+				"openid",
+				"presence"
 			],
 			"product_id": "prod-fn",
 			"sandbox_id": "fn",
@@ -155,8 +155,8 @@ module.exports = {
 		})
 	},
 
-    accountInfo: function(req, res){
-        res.json({
+	accountInfo: function (req, res) {
+		res.json({
 			id: req.params.accountId,
 			displayName: req.params.accountId,
 			"email": "neonite@dev.com",
@@ -182,39 +182,39 @@ module.exports = {
 			"externalAuths": {},
 
 		})
-    },
+	},
 
-    displayName: function(req, res){
-        res.json({
+	displayName: function (req, res) {
+		res.json({
 			"id": req.params.displayName,
 			"displayName": req.params.displayName,
 			"externalAuths": {}
 		});
-    },
+	},
 
-	discoveryToken: function(req, res){
+	discoveryToken: function (req, res) {
 		const useragent = req.headers["user-agent"];
 		const regex = useragent.match(/\+\+Fortnite\+Release-\d+\.\d+/);
 		res.json({
-			"branchName" : regex[0],
-			"appId" : "Fortnite",
-			"token" : `${crypto.randomBytes(10).toString("hex")}=`
+			"branchName": regex[0],
+			"appId": "Fortnite",
+			"token": `${crypto.randomBytes(10).toString("hex")}=`
 		})
 	},
 
-	publicAccount: function(req, res){
+	publicAccount: function (req, res) {
 		res.json([{
 			id: req.query.accountId,
 			displayName: req.query.accountId,
 			externalAuths: {}
-		}])	
+		}])
 	},
-	
-	externalAuths: function(req, res){
+
+	externalAuths: function (req, res) {
 		res.json([])
 	},
 
-	tokenInfo: function(req, res){
+	tokenInfo: function (req, res) {
 		const base64 = req.headers.authorization.replace("Basic ", "")
 		const decodedString = atob(base64);
 		const [username, password] = decodedString.split(':')
@@ -227,12 +227,12 @@ module.exports = {
 			"account_id": account.accountId,
 			"client_id": password,
 			"application_id": "fghi45672f0QV6b6B1KntLd7JR7RFLWc"
-		  })
+		})
 
 
 	},
 
-	publicKey: function(req, res){
+	publicKey: function (req, res) {
 		let jwt = jsonwebtoken.sign({
 			"account_id": account.accountId,
 			"generated": 1731795408,
@@ -241,7 +241,7 @@ module.exports = {
 			"key": req.body.key,
 			"expiration": "9999-12-31T23:59:59.999Z",
 			"type": "legacy"
-		},"EdDSA",  {keyid:"20230621"})
+		}, "EdDSA", { keyid: "20230621" })
 		res.json({
 			"key": req.body.key,
 			"account_id": account.accountId,
@@ -251,15 +251,25 @@ module.exports = {
 			"jwt": jwt,
 			"type": "legacy"
 		})
-		
+
 	},
 
-	credentials: function(req, res){
+	credentials: function (req, res) {
 		res.json({
 			"username": "1742530227:00027b91959a4c57a1272efcc4d7480f",
 			"password": crypto.randomBytes(16).toString("base64"),
 			"ttl": 9999999,
 			"uris": []
-		  })
+		})
+	},
+
+	exchange: function (req, res) {
+		const JWT = req.headers.authorization.replace("bearer eg1~", "").replace("Bearer eg1~", "")
+		const JWTdecode = jsonwebtoken.decode(JWT)
+		res.json({
+			"expiresInSeconds": 2147483647,
+			"code": crypto.randomBytes(32).toString("hex"),
+			"creatingClientId": JWTdecode["clid"],
+		})
 	}
 }

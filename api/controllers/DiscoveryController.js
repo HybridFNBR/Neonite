@@ -633,7 +633,8 @@ module.exports = {
 			parentLinks: [],
 			links: {}
 		}
-		if (!global.discoveryv2) {await axios.post('http://localhost:5595/links/api/fn/mnemonic', {},{ headers: {'User-Agent': req.headers['user-agent'] }});
+		if (!global.discoveryv2) {
+			await axios.post('http://localhost:5595/links/api/fn/mnemonic', {}, { headers: { 'User-Agent': req.headers['user-agent'] } });
 		} //incase someone decides to restart neonite for any reason
 
 		const findPlaylist = global.discoveryv2.findIndex(i => i.mnemonic === req.params.playlistId);
@@ -701,6 +702,23 @@ module.exports = {
 				}
 			}
 		}
+	},
+
+	linkEntries: function (req, res) {
+		res.json({
+			[req.body["linkCodes"][0]]: {
+				"lastVisited": null,
+				"linkCode": req.body["linkCodes"][0],
+				"isFavorite": false,
+				"globalCCU": 1,
+				"likePercent": null,
+				"refId": null,
+				"lockStatus": "UNLOCKED",
+				"lockStatusReason": "RATING_THRESHOLD",
+				"isVisible": true,
+				"favoriteStatus": "NONE"
+			}
+		})
 	}
 
 }

@@ -23,6 +23,7 @@ module.exports.routes = {
     'POST /api/v1/links/favorites/:accountId/check': 'DiscoveryController.favoritesCheck',
     'POST /api/v1/links/lock-status/:accountId/check': 'DiscoveryController.lockStatus',
     'GET /links/api/fn/mnemonic/:playlistId': 'DiscoveryController.mnemonicPlaylist',
+    'POST /api/v2/discovery/link-entries': 'DiscoveryController.linkEntries'
 
 
 
