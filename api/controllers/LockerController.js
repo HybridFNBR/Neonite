@@ -2,12 +2,12 @@ const Profile = require("../../profile");
 const { v4: uuidv4 } = require("uuid");
 const NeoLog = require("../../structs/NeoLog");
 const fs = require("fs");
-const {getVersionInfo} = require("../../config/defs")
+const { getVersionInfo } = require("../../config/defs")
 
 module.exports = {
-    lockerv3: async function(req, res){
+	lockerv3: async function (req, res) {
 		var accountId = req.params.accountId;
-        const getOrCreateLockerProfile = () => {
+		const getOrCreateLockerProfile = () => {
 			var lockerData = Profile.readLockerProfile(accountId, 3);
 			if (!lockerData) {
 				NeoLog.Error(`Locker Not Found for Account: ${accountId}, creating new Locker`);
@@ -34,10 +34,10 @@ module.exports = {
 
 		};
 		getOrCreateLockerProfile()
-		
-    },
 
-	lockerLoadoutV3: async function(req, res){
+	},
+
+	lockerLoadoutV3: async function (req, res) {
 		var accountId = req.params.accountId;
 		var lockerData = Profile.readLockerProfile(accountId, 3);
 		const activeLoadout = lockerData["activeLoadouts"].find(loadout => loadout.loadoutType === req.params.loadoutType);
@@ -45,7 +45,7 @@ module.exports = {
 		if (!activeLoadout) {
 			NeoLog.Error(`Invalid Loadout: ${req.params.loadoutType}`)
 		}
-		switch(req.params.loadout) {
+		switch (req.params.loadout) {
 			case "active-loadout":
 				activeLoadout["loadoutSlots"] = req.body["loadoutSlots"];
 				activeLoadout["updatedTime"] = new Date().toISOString();
@@ -68,15 +68,15 @@ module.exports = {
 		})
 	},
 
-	lockerPresetV3: async function(req, res){
+	lockerPresetV3: async function (req, res) {
 		var accountId = req.params.accountId;
 		var lockerData = Profile.readLockerProfile(accountId, 3);
 		let displayName = req.body["displayName"] || "";
-		
-		let existingPreset = lockerData["loadoutPresets"].find(preset => 
+
+		let existingPreset = lockerData["loadoutPresets"].find(preset =>
 			preset.presetIndex === parseInt(req.params.presetIndex)
 		);
-		
+
 		if (existingPreset) {
 			existingPreset.athenaItemId = req.body.athenaItemId;
 			existingPreset.loadoutSlots = req.body.loadoutSlots;
@@ -98,14 +98,14 @@ module.exports = {
 				"displayName": displayName,
 				"presetFavoriteStatus": "EMPTY"
 			});
-		} 
+		}
 		else {
 			const presetId = uuidv4();
 			lockerData["loadoutPresets"].push({
 				"deploymentId": req.params.deploymentId,
 				"accountId": accountId,
 				"loadoutType": req.params.loadoutType,
-				"presetId": presetId, 
+				"presetId": presetId,
 				"presetIndex": parseInt(req.params.presetIndex),
 				"athenaItemId": req.body.athenaItemId,
 				"creationTime": new Date().toISOString(),
@@ -132,9 +132,9 @@ module.exports = {
 
 	},
 
-	lockerv4: async function(req, res){
+	lockerv4: async function (req, res) {
 		var accountId = req.params.accountId;
-        const getOrCreateLockerProfile = () => {
+		const getOrCreateLockerProfile = () => {
 			var lockerData = Profile.readLockerProfile(accountId, 4);
 			if (!lockerData) {
 				NeoLog.Error(`Locker Not Found for Account: ${accountId}, creating new Locker`);
@@ -142,7 +142,7 @@ module.exports = {
 
 				lockerData["activeLoadoutGroup"].accountId = accountId
 				lockerData["activeLoadoutGroup"].creationTime = new Date().toISOString();
-				lockerData["activeLoadoutGroup"].updatedTime = new Date().toISOString()				
+				lockerData["activeLoadoutGroup"].updatedTime = new Date().toISOString()
 
 				if (!lockerData) {
 					NeoLog.Error("An Error Occured Trying To Read Locker Data")
@@ -160,22 +160,21 @@ module.exports = {
 
 		};
 		getOrCreateLockerProfile()
-		
-    },
 
-	lockerLoadoutV4: function(req, res){
-		const {version} = getVersionInfo(req);
+	},
+
+	lockerLoadoutV4: function (req, res) {
+		const { version } = getVersionInfo(req);
 		var accountId = req.params.accountId;
 		var lockerData = Profile.readLockerProfile(accountId, 4);
-		if(req.body.equippedPresetId){
+		if (req.body.equippedPresetId) {
 			lockerData["activeLoadoutGroup"].equippedPresetId = req.body.equippedPresetId
 		}
-		else if(!req.body.equippedPresetId){
+		else if (!req.body.equippedPresetId) {
 			delete lockerData["activeLoadoutGroup"].equippedPresetId
 		}
-		if(version >= 37.40){
+		if (version >= 37.40) {
 			for (const LoadoutSchema in req.body.loadouts) {
-				if (LoadoutSchema === "CosmeticLoadout:LoadoutSchema_Mimosa") continue;
 				const schema = req.body.loadouts[LoadoutSchema];
 				schema.loadoutSlots.forEach(slot => {
 					if (slot.equippedItemId) {
@@ -185,30 +184,30 @@ module.exports = {
 				});
 			}
 		}
-		lockerData["activeLoadoutGroup"].updatedTime = new Date().toISOString()	
+		lockerData["activeLoadoutGroup"].updatedTime = new Date().toISOString()
 		lockerData["activeLoadoutGroup"].loadouts = req.body["loadouts"]
 		Profile.saveLocker(accountId, 4, lockerData)
 		return res.json(lockerData["activeLoadoutGroup"])
 
 	},
 
-	lockerGroupPresetV4: function(req, res){
+	lockerGroupPresetV4: function (req, res) {
 		var accountId = req.params.accountId;
 		var lockerData = Profile.readLockerProfile(accountId, 4);
 		let displayName = req.body["displayName"]
 		const presetId = uuidv4();
-		
-		let existingPreset = lockerData["loadoutGroupPresets"].find(preset => 
+
+		let existingPreset = lockerData["loadoutGroupPresets"].find(preset =>
 			preset.presetIndex === parseInt(req.params.presetIndex)
 		);
-		if(existingPreset){
+		if (existingPreset) {
 			existingPreset.athenaItemId = req.body.athenaItemId;
 			existingPreset.loadoutSlots = req.body.loadouts;
 			existingPreset.updatedTime = new Date().toISOString();
 			existingPreset.displayName = displayName;
 			Profile.saveLocker(accountId, 4, lockerData);
 		}
-		else{
+		else {
 			lockerData["loadoutGroupPresets"].push({
 				"accountId": accountId,
 				"athenaItemId": req.body.athenaItemId,
@@ -237,15 +236,15 @@ module.exports = {
 
 
 	//will be implemented sometime in the future
-	lockerPresetV4: async function(req, res){
+	lockerPresetV4: async function (req, res) {
 		var accountId = req.params.accountId;
 		var lockerData = Profile.readLockerProfile(accountId, 4);
 		let displayName = req.body["displayName"] || "";
-		
-		let existingPreset = lockerData["loadoutPresets"].find(preset => 
+
+		let existingPreset = lockerData["loadoutPresets"].find(preset =>
 			preset.presetIndex === parseInt(req.params.presetIndex) && preset.loadoutType === req.params.loadoutType
 		);
-		
+
 		if (existingPreset) {
 			existingPreset.athenaItemId = req.body.athenaItemId;
 			existingPreset.loadoutSlots = req.body.loadoutSlots;
@@ -267,14 +266,14 @@ module.exports = {
 				"displayName": displayName,
 				"presetFavoriteStatus": "EMPTY"
 			});
-		} 
+		}
 		else {
 			const presetId = uuidv4();
 			lockerData["loadoutPresets"].push({
 				"deploymentId": req.params.deploymentId,
 				"accountId": accountId,
 				"loadoutType": req.params.loadoutType,
-				"presetId": presetId, 
+				"presetId": presetId,
 				"presetIndex": parseInt(req.params.presetIndex),
 				"athenaItemId": req.body.athenaItemId,
 				"creationTime": new Date().toISOString(),
@@ -301,30 +300,29 @@ module.exports = {
 
 	},
 
-	lockerImmutableItem: async function(req, res){
+	lockerImmutableItem: async function (req, res) {
 		const athenaProfile = Profile.readProfile(req.params.accountId, "athena")
 		const companionUUID = req.params.companion.split(":").pop(); //has to be UUID(example:"4fa32b64-2e03-416c-9d12-05aad6c5b9d1") otherwise Fortnite does not send the request
 		const companionVarients = athenaProfile.items[companionUUID].attributes
 		companionVarients["locked_in"] = true
 		for (const channel in req.body.variants) {
-			const variantTag = req.body.variants[channel].variantTag;
+			let variantTag = req.body.variants[channel].variantTag;
+			const variant = req.body.variants[channel]
 			const findVarient = companionVarients["variants"].find(v => v.channel === channel);
 
+			if (variant.additionalData) {
+				variantTag = `${variantTag}.${variant.additionalData}`;
+			}
 			if (findVarient) {
 				findVarient["active"] = variantTag;
-				if (!findVarient["owned"].includes(variantTag)) {
-					findVarient.owned.push(variantTag);
-				}
-			} 
+			}
 			else {
 				companionVarients["variants"].push({
 					channel,
 					active: variantTag,
-					owned: [variantTag]
 				});
-				
+
 			}
-			//not like we really need this check but may aswell.
 		}
 		Profile.changeItemAttribute(athenaProfile, companionUUID, "variants", companionVarients.variants);
 		Profile.bumpRvn(athenaProfile);
@@ -332,7 +330,7 @@ module.exports = {
 		res.status(204).end()
 	},
 
-	lockerCompanionName: async function(req, res){
+	lockerCompanionName: async function (req, res) {
 		const athenaProfile = Profile.readProfile(req.params.accountId, "athena")
 		const companionUUID = req.body.cosmeticItemId.split(":").pop()
 		const companionVarients = athenaProfile.items[companionUUID].attributes.variants
@@ -342,7 +340,7 @@ module.exports = {
 		res.status(204).end()
 	},
 
-	cosmeticData: async function(req, res){
+	cosmeticData: async function (req, res) {
 		var accountId = req.params.accountId;
 		const getOrCreateCosmeticData = () => {
 			var cosmeticData = Profile.readProfile(accountId, "cosmetic_data");
@@ -361,7 +359,7 @@ module.exports = {
 				}
 
 			}
-			cosmeticData.requestTime = 	new Date().toISOString();
+			cosmeticData.requestTime = new Date().toISOString();
 			delete cosmeticData.nextToken; //temp fix to stop it spamming requests in uefn
 			return res.json(cosmeticData)
 
