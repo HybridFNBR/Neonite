@@ -552,9 +552,6 @@ module.exports = {
 			if (misc.bInEditor === true) { //scuffed way of doing it but works
 				playlistActive(global.discoveryv2, "playlist_pilgrimquickplay", false, true)
 				playlistActive(global.discoveryv2, "playlist_juno", false, true)
-				updateMetadata(global.discoveryv2, "set_br_playlists", {
-					"frontend_plugin": ""
-				});
 			}
 			if (playlistManager[version]) { playlistManager[version].forEach(playlist => playlistActive(discoveryv2, playlist, true, false)) }
 			if (version >= 38.11) {
