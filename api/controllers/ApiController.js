@@ -1,4 +1,5 @@
 const path = require('path');
+const NeoLog = require("../../structs/NeoLog")
 const { default: axios } = require("axios");
 const fs = require('fs')
 const jsonwebtoken = require('jsonwebtoken');
@@ -526,7 +527,12 @@ module.exports = {
 	},
 
 	keychain: async function (req, res) {
-		await compareAndUpdateKeychain();
+		try{
+			await compareAndUpdateKeychain();
+		}
+		catch{
+			NeoLog.Error("Unable to connect to dillyapis! Falling back to existing keychains on your local disk. Some Encrypted Assets may not be accessible")
+		}
 		const keychainArray = [
 			"46159C748694298198A52DC07476FDA3:4CLHOBqSrmS1RkG/SxZYi8Rc0zCmAKxXIBMMUHDl2ag=",
 			"1C6FDB12D706D59E15399DB8FD1EFD85:39JQsqlpGBC1xEz4qeYUYT8Nta0ZkYb3GvjEumq+bAM=",

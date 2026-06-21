@@ -7,10 +7,11 @@ const fs = require('fs')
 const path = require("path");
 const config = ini.parse(fs.readFileSync(path.join(__dirname, '../../config.ini'), 'utf-8'));
 const { account, getClientCredentials, getVersionInfo } = require("../../config/defs");
+const NeoLog = require('../../structs/NeoLog');
 
 module.exports = {
 	oauthToken: async function (req, res) {
-		const { versionGlobal } = getVersionInfo(req);
+		const {version, versionGlobal } = getVersionInfo(req);
 		switch (req.body.grant_type) {
 			case "client_credentials":
 				account.displayName = undefined;
@@ -90,8 +91,14 @@ module.exports = {
 			"jti": "132fac2cc9c94fa08fdc3e65fef24f07"
 		}, "RS256", { keyid: "" })
 		if (versionGlobal >= 28) {
-			const clientCredentials = await getClientCredentials();
-			account.token = clientCredentials.access_token
+			try{
+				const clientCredentials = await getClientCredentials();
+				account.token = clientCredentials.access_token
+			}
+			catch{
+				NeoLog.Error(`Failed to grab Client Credentials token for Season 28+(${version}), Falling back to locally made JWT`)
+				account.token = `eg1~${token}`
+			}
 		}
 		else { account.token = `eg1~${token}` }
 		res.json({
