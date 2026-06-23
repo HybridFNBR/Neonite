@@ -131,7 +131,7 @@ module.exports = {
 +TextReplacements=(Category=Game, bIsMinimalPatch=true, Namespace="Fortnite.FortAthenaMatchmakingWidget", Key="Header.MatchmakingError.Number", NativeString="Matchmaking error (#1)", LocalizedStrings=(("en","<text color=\\"FC0303\\">Only the Lobby is supported(For Carbon Users)</>")))
 +TextReplacements=(Category=Game, bIsMinimalPatch=true, Namespace="Fortnite.MatchmakingText", Key="Header.MatchmakingError.Number", NativeString="Matchmaking error (#1)", LocalizedStrings=(("en","<text color=\\"FC0303\\">Only the Lobby is supported(For Carbon Users)</>")))
 
-+TextReplacements=(Category=Game, bIsMinimalPatch=true, Namespace="Fortnite.MatchmakingText", Key="FailedToConnectToMMS", NativeString="We had trouble talking to the matchmaker. Give it another shot, but if the problem continues, check out {CheckStatusURL}.", LocalizedStrings=(("en","In order to go In-Game you must have<text color=\\"FC0303\\"> UEFN Installed</> and also have Launched in the<text color=\\"FC0303\\"> UEFN MODE via the Carbon Launcher</> relaunch and try again")))`
++TextReplacements=(Category=Game, bIsMinimalPatch=true, Namespace="Fortnite.MatchmakingText", Key="FailedToConnectToMMS", NativeString="We had trouble talking to the matchmaker. Give it another shot, but if the problem continues, check out {CheckStatusURL}.", LocalizedStrings=(("en","In order to go In-Game you must have<text color=\\"FC0303\\"> UEFN Installed for this version of Fortnite(${version})</> and also have Launched in the<text color=\\"FC0303\\"> UEFN MODE via the Carbon Launcher</> relaunch and try again")))`
 					);
 
 				}
