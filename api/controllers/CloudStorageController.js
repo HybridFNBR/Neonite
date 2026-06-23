@@ -2,7 +2,7 @@ const path = require('path');
 const crypto = require("crypto");
 const fs = require('fs');
 const hotfixPath = path.join(__dirname, '../../hotfixes/');
-const { getVersionInfo } = require("../../config/defs")
+const { getVersionInfo, misc } = require("../../config/defs");
 
 module.exports = {
 	cloudstoragesystem: async function (req, res) {
@@ -38,7 +38,7 @@ module.exports = {
 		res.setHeader("content-type", "application/octet-stream");
 		const { version, versionGlobal } = getVersionInfo(req);
 		const filePath = path.join(__dirname, '../../hotfixes/', req.params.fileName);
-		let fileContent = fs.readFileSync(filePath, 'utf-8')	
+		let fileContent = fs.readFileSync(filePath, 'utf-8')
 		switch (req.params.fileName) {
 			case 'DefaultEngine.ini':
 				if (version === "32.11" || version === "35.20" || version === "37.51" || version === "38.11" || version === "40.41") {
@@ -47,7 +47,7 @@ module.exports = {
 						'Fort.Event.bForceOffLoadingScreen=1'
 					);
 				}
-			break;
+				break;
 			case 'DefaultRuntimeOptions.ini':
 				if (version === "26.20") {
 					fileContent = fileContent.replace(
@@ -124,16 +124,26 @@ module.exports = {
 					const [defaultvalue, replacedValue] = replacements[version];
 					fileContent = fileContent.replace(defaultvalue, replacedValue);
 				}
-			break;
+				if (misc.bInEditor == false && version >= "30.10") {
+					fileContent = fileContent.replace(
+						'[/Script/FortniteGame.FortTextHotfixConfig]',
+						`[/Script/FortniteGame.FortTextHotfixConfig]
++TextReplacements=(Category=Game, bIsMinimalPatch=true, Namespace="Fortnite.FortAthenaMatchmakingWidget", Key="Header.MatchmakingError.Number", NativeString="Matchmaking error (#1)", LocalizedStrings=(("en","<text color=\\"FC0303\\">Only the Lobby is supported(For Carbon Users)</>")))
++TextReplacements=(Category=Game, bIsMinimalPatch=true, Namespace="Fortnite.MatchmakingText", Key="Header.MatchmakingError.Number", NativeString="Matchmaking error (#1)", LocalizedStrings=(("en","<text color=\\"FC0303\\">Only the Lobby is supported(For Carbon Users)</>")))
+
++TextReplacements=(Category=Game, bIsMinimalPatch=true, Namespace="Fortnite.MatchmakingText", Key="FailedToConnectToMMS", NativeString="We had trouble talking to the matchmaker. Give it another shot, but if the problem continues, check out {CheckStatusURL}.", LocalizedStrings=(("en","In order to go In-Game you must have<text color=\\"FC0303\\"> UEFN Installed</> and also have Launched in the<text color=\\"FC0303\\"> UEFN MODE via the Carbon Launcher</> relaunch and try again")))`
+					);
+
+				}
+				break;
 		}
-		
 		res.send(fileContent);
 	},
 
 
 	user: async function (req, res) {
 		const accountId = req.params.accountId;
-		const {versionGlobal} = getVersionInfo(req);
+		const { versionGlobal } = getVersionInfo(req);
 		const cloudStoragePath = path.join(__dirname, `../../profile/${accountId}/cloudstorage/S${versionGlobal}`);
 		if (!fs.existsSync(cloudStoragePath)) {
 			fs.mkdirSync(cloudStoragePath, { recursive: true });
@@ -168,7 +178,7 @@ module.exports = {
 	},
 
 	userFile: async function (req, res) {
-		const {versionGlobal} = getVersionInfo(req);
+		const { versionGlobal } = getVersionInfo(req);
 		const accountId = req.params.accountId;
 		const fileName = req.params.fileName;
 		const filePath = path.join(__dirname, `../../profile/${accountId}/cloudstorage/S${versionGlobal}/${fileName}`);
@@ -188,7 +198,7 @@ module.exports = {
 	},
 
 	userPutFile: function (req, res) {
-		const {versionGlobal} = getVersionInfo(req);
+		const { versionGlobal } = getVersionInfo(req);
 		const accountId = req.params.accountId;
 		const fileName = req.params.fileName;
 		const cloudStoragePath = path.join(__dirname, `../../profile/${accountId}/cloudstorage/S${versionGlobal}`);
