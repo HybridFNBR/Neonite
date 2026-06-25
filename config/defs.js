@@ -426,6 +426,7 @@ const seasonPass = (accountId, athenprofile, version, versionGlobal) => {
         "figment_s06_passdata_seasonasset",
         "figment_s07_passdata_seasonasset",
         "figment_s08_passdata_seasonasset",
+        "figment_s09_passdata_seasonasset",
         "junoseason1pass",
         "junoseason2pass",
         "s3pass_seasonasset",
