@@ -1079,6 +1079,60 @@
     "namespace": "fn",
     "accountId": "epic",
     "creatorName": "Epic",
+    "mnemonic": "playlist_figment_doofy",
+    "linkType": "BR:Playlist",
+    "metadata": {
+      "frontend_plugin": "FigmentFrontend",
+      "aspot_title": "Fortnite OG: Unvaulting Event",
+      "pop_out_image_urls": {
+            "url": "https://cdn2.unrealengine.com/cdn-uploader-FN_OG_C1S8_40-10_DarkVoyager_ASpot_Foreground_%281%29-1096x384-07aef0ef.png"
+        },
+        "background_image_urls": {
+            "url": "https://cdn2.unrealengine.com/cdn-uploader-FN_OG_C1S8_40-10_DarkVoyager_ASpot_Background_(1)-1760x352-830aff73.png"
+        },
+      "lobby_background_image_urls": {
+            "url": "http://localhost:5595/cdn2-unrealengine/cdn-uploader-MKARTFNOGC1S8LobbyBG_ltg_v4.1-no-overlay_size-e7725d6c.jpg"
+        },
+      "matchmakingV2": {
+        "allowSquadFillOption": true,
+        "allowJoinInProgress": false,
+        "crossplayRequired": true,
+        "maxPlayers": 100,
+        "ratingType": "fun",
+        "maxSocialPartySize": 1,
+        "isRanked": false,
+        "maxTeamCount": 100,
+        "allowPrivateMatches": false,
+        "maxTeamSize": 1
+      },
+      "alt_title": {},
+      "image_url": "https://cdn2.unrealengine.com/links-admin-EN_FN_OG_C1S8_40-10_VaultOpening_DiscoverTile_1920x1080-ade1dba6.jpg",
+      "product_tag": "Product.Figment",
+      "image_urls": {
+        "url_s": "https://cdn2.unrealengine.com/links-admin-EN_FN_OG_C1S8_40-10_VaultOpening_DiscoverTile_480x270-e117dd65.jpg",
+        "url_m": "https://cdn2.unrealengine.com/links-admin-EN_FN_OG_C1S8_40-10_VaultOpening_DiscoverTile_640x360-6382774d.jpg",
+        "url": "https://cdn2.unrealengine.com/links-admin-EN_FN_OG_C1S8_40-10_VaultOpening_DiscoverTile_1920x1080-ade1dba6.jpg"
+      },
+      "matchmaking": {
+        "override_playlist": "playlist_figment_doofy"
+      },
+      "title": "Fortnite OG: Unvaulting Event"
+    },
+    "version": 1,
+    "active": false,
+    "disabled": true,
+    "created": "2024-10-28T22:28:35.306Z",
+    "published": "2024-10-28T22:28:35.306Z",
+    "descriptionTags": [],
+    "moderationStatus": "Unmoderated",
+    "lastActivatedDate": "2024-10-28T22:28:35.310Z",
+    "discoveryIntent": "PUBLIC",
+    "linkState": "LIVE"
+  },
+  {
+    "namespace": "fn",
+    "accountId": "epic",
+    "creatorName": "Epic",
     "mnemonic": "playlist_figmentsolo",
     "linkType": "BR:Playlist",
     "metadata": {
@@ -1806,12 +1860,12 @@
     "linkType": "BR:Playlist",
     "metadata": {
       "required_content": {
-            "verse_uris": [
-                "/Fortnite.com/GameFeatures/BRRoot",
-                "/Fortnite.com/GameFeatures/FNEC_Biome_Assets",
-                "/Fortnite.com/GameFeatures/GetAwayCar"
-            ]
-        },
+        "verse_uris": [
+          "/Fortnite.com/GameFeatures/BRRoot",
+          "/Fortnite.com/GameFeatures/FNEC_Biome_Assets",
+          "/Fortnite.com/GameFeatures/GetAwayCar"
+        ]
+      },
       "pop_out_image_urls": {
         "url": "https://cdn2.unrealengine.com/cdn-uploader-FNBR_C7S2_EndEvent_SmartTuna_A-Spot_KeyArt_052026_FG(1)-95de3f3f.png"
       },

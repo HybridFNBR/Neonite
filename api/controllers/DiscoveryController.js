@@ -244,6 +244,34 @@ module.exports = {
 						"playHistoryType": null
 					},
 					{
+						"panelName": "FigmentDoofy",
+						"panelDisplayName": "Fortnite OG: Unvaulting Event",
+						"panelSubtitle": "Fortnite OG: Unvaulting Event",
+						"featureTags": [
+							"bannerItemRow"
+						],
+						"firstPage": {
+							"results": [
+								{
+									"lastVisited": null,
+									"linkCode": "playlist_figment_doofy",
+									"isFavorite": false,
+									"globalCCU": 0,
+									"lockStatus": "UNLOCKED",
+									"lockStatusReason": "RATING_THRESHOLD",
+									"isVisible": true,
+									"favoriteStatus": "NONE"
+								}
+							],
+							"hasMore": false,
+							"panelTargetName": null,
+							"pageMarker": null
+						},
+						"panelType": "CuratedList",
+						"playHistoryType": null,
+						"panelContexts": {}
+					},
+					{
 						"panelName": "SmartTunaPre",
 						"panelDisplayName": "End of Season Live Event",
 						"panelSubtitle": "End of Season Live Event",
@@ -751,7 +779,8 @@ function addPlaylistOverwrite(discovery, gamemode, version) {
 		else if (version >= 37.00 && version <= 37.31) { seasonNumber = 5 }
 		else if (version >= 37.40 && version <= 39.00) { seasonNumber = 6 }
 		else if (version >= 39.10 && version <= 40.00) { seasonNumber = 7 }
-		else if (version >= 40.10) { seasonNumber = 8 }
+		else if (version >= 40.10 && version <= 41.00) { seasonNumber = 8 }
+		else if (version >= 41.10) { seasonNumber = 9 }
 		else { return }
 		const overwrite = loadJSON(`../discovery/mnemonic_overwrite/figment/season${seasonNumber}.json`);
 		updateMetadata(discovery, "set_figment_playlists", overwrite);
@@ -777,5 +806,6 @@ const playlistManager = {
 	"35.20": ["playlist_ripehoneydew"],
 	"37.51": ["playlist_limerock"],
 	"38.11": ["playlist_skymango"],
-	"40.41": ["playlist_smarttunapre"]
+	"40.41": ["playlist_smarttunapre"],
+	"40.00": ["playlist_figment_doofy"]
 };
