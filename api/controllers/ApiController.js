@@ -1952,6 +1952,68 @@ module.exports = {
 		}
 	},
 
+	socsSettingQuery: function (req, res) {
+		res.json({
+			"settings": [
+				{
+					"id": "v1AccessibilityAllowVoiceDictation",
+					"userOverrides": [],
+					"default": "false"
+				},
+				{
+					"id": "v1AccessibilityReadMessagesAloud",
+					"userOverrides": [],
+					"default": "false"
+				},
+				{
+					"id": "v1GlobalNicknamesHasSeenDisclosure",
+					"userOverrides": [],
+					"default": "false"
+				},
+				{
+					"id": "v1VoiceChatMode",
+					"userOverrides": [],
+					"default": "openMic"
+				},
+				{
+					"id": "v1VoiceChatReportingDisclosureAcceptanceStatus",
+					"userOverrides": [
+						{
+							"scopes": {},
+							"value": "seen-not-accepted"
+						}
+					],
+					"default": "never-shown"
+				},
+				{
+					"id": "v1VoiceInputDevice",
+					"userOverrides": [],
+					"default": ""
+				},
+				{
+					"id": "v1VoiceInputVolume",
+					"userOverrides": [],
+					"default": "50"
+				},
+				{
+					"id": "v1VoiceOutputDevice",
+					"userOverrides": [],
+					"default": ""
+				},
+				{
+					"id": "v1VoiceOutputVolume",
+					"userOverrides": [],
+					"default": "50"
+				},
+				{
+					"id": "v1VoicePushToTalkKeybinding",
+					"userOverrides": [],
+					"default": ""
+				}
+			]
+		})
+	},
+
 	okStatus: function (req, res) {
 		res.status(200).end()
 	},

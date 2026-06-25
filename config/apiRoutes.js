@@ -228,4 +228,5 @@ module.exports.routes = {
     },
     'POST  /fortnite/api/game/v2/extractablerelics/:moduleId/:num/:accountId/executecommand': 'ApiController.extractableRelics',
     'GET /fortnite/api/game/v2/extractablerelics/:moduleId/:num/getBackendCatalog' : 'ApiController.extractableRelicsCatalog',
+    'POST /epic/socs/v1/users/:accountId/settings/query': 'ApiController.socsSettingQuery'
 };
