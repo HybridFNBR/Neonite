@@ -211,6 +211,7 @@ module.exports.routes = {
     'GET /mesh/Fortnite/Fortnite.Hera_Terrain.51979515/metadata': 'ApiController.heraMesh',
     'GET /mesh/Fortnite/Fortnite.Hera_Terrain.52515996/metadata': 'ApiController.heraMesh',
     'GET /mesh/Fortnite/Fortnite.Hera_Terrain.52998544/metadata': 'ApiController.heraMesh',
+    'GET /mesh/Fortnite/Fortnite.SkyMango_WP.54820372/metadata': 'ApiController.heraMesh',
     'GET /mesh/Fortnite/Fortnite.Artemis_Terrain.22935214/metadata': 'ApiController.downtimeMeshNetwork',
     'GET /mesh/Fortnite/Fortnite.Artemis_Terrain.20133078/metadata': 'ApiController.downtimeMeshNetwork',
     'GET /mesh/Fortnite/Fortnite.Apollo_Terrain.14675445/metadata': 'ApiController.downtimeMeshNetwork',

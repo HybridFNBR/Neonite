@@ -527,10 +527,10 @@ module.exports = {
 	},
 
 	keychain: async function (req, res) {
-		try{
+		try {
 			await compareAndUpdateKeychain();
 		}
-		catch{
+		catch {
 			NeoLog.Error("Unable to connect to dillyapis! Falling back to existing keychains on your local disk. Some Encrypted Assets may not be accessible")
 		}
 		const keychainArray = [
@@ -1085,7 +1085,7 @@ module.exports = {
 						})
 					}]
 				})
-			break;
+				break;
 
 		}
 	},
@@ -1419,6 +1419,334 @@ module.exports = {
 					"summonCost": 6000
 				},
 				"templateId": "ExtractableRelic:ghostsprite_variant_gold"
+			},
+			"AirSprite_Variant_A": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 1000
+				},
+				"templateId": "ExtractableRelic:airsprite_variant_a"
+			},
+			"AirSprite_Variant_Candy": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 1000
+				},
+				"templateId": "ExtractableRelic:airsprite_variant_candy"
+			},
+			"AirSprite_Variant_Galaxy": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 1000
+				},
+				"templateId": "ExtractableRelic:airsprite_variant_galaxy"
+			},
+			"AirSprite_Variant_Gold": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 1000
+				},
+				"templateId": "ExtractableRelic:airsprite_variant_gold"
+			},
+			"AirSprite_Variant_Holofoil": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 1000
+				},
+				"templateId": "ExtractableRelic:airsprite_variant_holofoil"
+			},
+			"BossSprite_Variant_A": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 1000
+				},
+				"templateId": "ExtractableRelic:bosssprite_variant_a"
+			},
+			"BossSprite_Variant_Candy": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 1000
+				},
+				"templateId": "ExtractableRelic:bosssprite_variant_candy"
+			},
+			"BossSprite_Variant_Galaxy": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 1000
+				},
+				"templateId": "ExtractableRelic:bosssprite_variant_galaxy"
+			},
+			"BossSprite_Variant_Gold": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 1000
+				},
+				"templateId": "ExtractableRelic:bosssprite_variant_gold"
+			},
+			"FishySprite_Variant_A": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 1000
+				},
+				"templateId": "ExtractableRelic:fishysprite_variant_a"
+			},
+			"FishySprite_Variant_Candy": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 1000
+				},
+				"templateId": "ExtractableRelic:fishysprite_variant_candy"
+			},
+			"FishySprite_Variant_Galaxy": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 1000
+				},
+				"templateId": "ExtractableRelic:fishysprite_variant_galaxy"
+			},
+			"FishySprite_Variant_Gold": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 1000
+				},
+				"templateId": "ExtractableRelic:fishysprite_variant_gold"
+			},
+			"SoccerSprite_Variant_A": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 1000
+				},
+				"templateId": "ExtractableRelic:soccersprite_variant_a"
+			},
+			"SoccerSprite_Variant_Candy": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 1000
+				},
+				"templateId": "ExtractableRelic:soccersprite_variant_candy"
+			},
+			"SoccerSprite_Variant_Galaxy": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 1000
+				},
+				"templateId": "ExtractableRelic:soccersprite_variant_galaxy"
+			},
+			"SoccerSprite_Variant_Gold": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 1000
+				},
+				"templateId": "ExtractableRelic:soccersprite_variant_gold"
+			},
+			"SoccerSprite_Variant_Holofoil": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 1000
+				},
+				"templateId": "ExtractableRelic:soccersprite_variant_holofoil"
+			},
+			"DrifterSprite_Variant_A": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 1000
+				},
+				"templateId": "ExtractableRelic:driftersprite_variant_a"
+			},
+			"DrifterSprite_Variant_Candy": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 1000
+				},
+				"templateId": "ExtractableRelic:driftersprite_variant_candy"
+			},
+			"DrifterSprite_Variant_Galaxy": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 1000
+				},
+				"templateId": "ExtractableRelic:driftersprite_variant_galaxy"
+			},
+			"DrifterSprite_Variant_Gem": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 1000
+				},
+				"templateId": "ExtractableRelic:driftersprite_variant_gem"
+			},
+			"DrifterSprite_Variant_Gold": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 1000
+				},
+				"templateId": "ExtractableRelic:driftersprite_variant_gold"
+			},
+			"GrimSprite_Variant_A": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 1000
+				},
+				"templateId": "ExtractableRelic:grimsprite_variant_a"
+			},
+			"GrimSprite_Variant_Candy": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 1000
+				},
+				"templateId": "ExtractableRelic:grimsprite_variant_candy"
+			},
+			"GrimSprite_Variant_Galaxy": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 1000
+				},
+				"templateId": "ExtractableRelic:grimsprite_variant_galaxy"
+			},
+			"GrimSprite_Variant_Gold": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 1000
+				},
+				"templateId": "ExtractableRelic:grimsprite_variant_gold"
+			},
+			"SevenSprite_Variant_A": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 1000
+				},
+				"templateId": "ExtractableRelic:sevensprite_variant_a"
+			},
+			"SevenSprite_Variant_Candy": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 1000
+				},
+				"templateId": "ExtractableRelic:sevensprite_variant_candy"
+			},
+			"SevenSprite_Variant_Galaxy": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 1000
+				},
+				"templateId": "ExtractableRelic:sevensprite_variant_galaxy"
+			},
+			"SevenSprite_Variant_Gold": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 1000
+				},
+				"templateId": "ExtractableRelic:sevensprite_variant_gold"
+			},
+			"SevenSprite_Variant_Holofoil": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 1000
+				},
+				"templateId": "ExtractableRelic:sevensprite_variant_holofoil"
+			},
+			"DuckSprite_Variant_Gem": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 1000
+				},
+				"templateId": "ExtractableRelic:ducksprite_variant_gem"
+			},
+			"EarthSprite_Variant_Gem": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 1000
+				},
+				"templateId": "ExtractableRelic:earthsprite_variant_gem"
+			},
+			"DemonSprite_Variant_Gem": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 1000
+				},
+				"templateId": "ExtractableRelic:demonsprite_variant_gem"
+			},
+			"Water_Variant_Gem": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 1000
+				},
+				"templateId": "ExtractableRelic:water_variant_gem"
+			},
+			"Water_Variant_Holofoil": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 1000
+				},
+				"templateId": "ExtractableRelic:water_variant_holofoil"
+			},
+			"GhostSprite_Variant_Holofoil": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 1000
+				},
+				"templateId": "ExtractableRelic:ghostsprite_variant_holofoil"
+			},
+			"Spitfire_Variation_Holofoil": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 1000
+				},
+				"templateId": "ExtractableRelic:spitfire_variation_holofoil"
+			},
+			"KingSprite_Variant_Holofoil": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 1000
+				},
+				"templateId": "ExtractableRelic:kingsprite_variant_holofoil"
+			},
+			"ZeroPointSprite_Variant_Gem": {
+				"_private": false,
+				"attributes": {
+					"bIsStarter": false,
+					"summonCost": 1000
+				},
+				"templateId": "ExtractableRelic:zeropointsprite_variant_gem"
 			}
 		})
 	},

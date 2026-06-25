@@ -3,7 +3,7 @@ const fs = require("fs");
 const path = require('path');
 const NeoLog = require("../structs/NeoLog")
 const { default: axios } = require("axios");
-const { UDPClient  } = require('dns2');
+const { UDPClient } = require('dns2');
 const keychain = JSON.parse(fs.readFileSync("./responses/keychain.json", "utf-8"));
 const resolve = UDPClient({
     dns: '8.8.8.8'
@@ -20,55 +20,96 @@ const misc = {
     relicPurchased: false,
     relicId: "",
     counts: {
-		"Currency_ExtractionPoints": 999999,
-		"BurntPeanut_Variation_A": 1,
-		"DemonSprite_Variant_A": 1,
-		"DemonSprite_Variant_Galaxy": 1,
-		"DemonSprite_Variant_Gold": 1,
-		"DuckSprite_Variant_A": 1,
-		"DuckSprite_Variant_Candy": 1,
-		"DuckSprite_Variant_Galaxy": 1,
-		"DuckSprite_Variant_Gold": 1,
-		"EarthSprite_Variant_A": 1,
-		"EarthSprite_Variant_Candy": 1,
-		"EarthSprite_Variant_Galaxy": 1,
-		"EarthSprite_Variant_Gold": 1,
-		"GhostSprite_Variant_A": 1,
-		"GhostSprite_Variant_Candy": 1,
-		"GhostSprite_Variant_Galaxy": 1,
-		"GhostSprite_Variant_Gold": 1,
-		"KingSprite_Variant_A": 1,
-		"KingSprite_Variant_Candy": 1,
-		"KingSprite_Variant_Galaxy": 1,
-		"KingSprite_Variant_Gold": 1,
-		"PunkSprite_Variant_A": 1,
-		"PunkSprite_Variant_Candy": 1,
-		"PunkSprite_Variant_Galaxy": 1,
-		"PunkSprite_Variant_Gold": 1,
-		"SleepySprite_Variant_A": 1,
-		"SleepySprite_Variant_Candy": 1,
-		"SleepySprite_Variant_Galactic": 1,
-		"SleepySprite_Variant_Gold": 1,
-		"Spitfire_Variation_A": 1,
-		"Spitfire_Variation_Candy": 1,
-		"Spitfire_Variation_Galaxy": 1,
-		"Spitfire_Variation_Gold": 1,
-		"Water_Variant_Base": 1,
-		"Water_Variant_Candy": 1,
-		"Water_Variant_Galaxy": 1,
-		"Water_Variant_Gold": 1,
-		"ZeroPointSprite_Variant_A": 1,
-		"ZeroPointSprite_Variant_Candy": 1,
-		"ZeroPointSprite_Variant_Galaxy": 1,
-		"ZeroPointSprite_Variant_Gold": 1,
-		"DemonSprite_Variant_Candy": 1
-	}
+        "Currency_ExtractionPoints": 999999,
+        "BurntPeanut_Variation_A": 1,
+        "DemonSprite_Variant_A": 1,
+        "DemonSprite_Variant_Galaxy": 1,
+        "DemonSprite_Variant_Gold": 1,
+        "DuckSprite_Variant_A": 1,
+        "DuckSprite_Variant_Candy": 1,
+        "DuckSprite_Variant_Galaxy": 1,
+        "DuckSprite_Variant_Gold": 1,
+        "EarthSprite_Variant_A": 1,
+        "EarthSprite_Variant_Candy": 1,
+        "EarthSprite_Variant_Galaxy": 1,
+        "EarthSprite_Variant_Gold": 1,
+        "GhostSprite_Variant_A": 1,
+        "GhostSprite_Variant_Candy": 1,
+        "GhostSprite_Variant_Galaxy": 1,
+        "GhostSprite_Variant_Gold": 1,
+        "KingSprite_Variant_A": 1,
+        "KingSprite_Variant_Candy": 1,
+        "KingSprite_Variant_Galaxy": 1,
+        "KingSprite_Variant_Gold": 1,
+        "PunkSprite_Variant_A": 1,
+        "PunkSprite_Variant_Candy": 1,
+        "PunkSprite_Variant_Galaxy": 1,
+        "PunkSprite_Variant_Gold": 1,
+        "SleepySprite_Variant_A": 1,
+        "SleepySprite_Variant_Candy": 1,
+        "SleepySprite_Variant_Galactic": 1,
+        "SleepySprite_Variant_Gold": 1,
+        "Spitfire_Variation_A": 1,
+        "Spitfire_Variation_Candy": 1,
+        "Spitfire_Variation_Galaxy": 1,
+        "Spitfire_Variation_Gold": 1,
+        "Water_Variant_Base": 1,
+        "Water_Variant_Candy": 1,
+        "Water_Variant_Galaxy": 1,
+        "Water_Variant_Gold": 1,
+        "ZeroPointSprite_Variant_A": 1,
+        "ZeroPointSprite_Variant_Candy": 1,
+        "ZeroPointSprite_Variant_Galaxy": 1,
+        "ZeroPointSprite_Variant_Gold": 1,
+        "DemonSprite_Variant_Candy": 1,
+        "AirSprite_Variant_A": 1,
+        "AirSprite_Variant_Candy": 1,
+        "AirSprite_Variant_Galaxy": 1,
+        "AirSprite_Variant_Gold": 1,
+        "AirSprite_Variant_Holofoil": 1,
+        "BossSprite_Variant_A": 1,
+        "BossSprite_Variant_Candy": 1,
+        "BossSprite_Variant_Galaxy": 1,
+        "BossSprite_Variant_Gold": 1,
+        "FishySprite_Variant_A": 1,
+        "FishySprite_Variant_Candy": 1,
+        "FishySprite_Variant_Galaxy": 1,
+        "FishySprite_Variant_Gold": 1,
+        "SoccerSprite_Variant_A": 1,
+        "SoccerSprite_Variant_Candy": 1,
+        "SoccerSprite_Variant_Galaxy": 1,
+        "SoccerSprite_Variant_Gold": 1,
+        "SoccerSprite_Variant_Holofoil": 1,
+        "DrifterSprite_Variant_A": 1,
+        "DrifterSprite_Variant_Candy": 1,
+        "DrifterSprite_Variant_Galaxy": 1,
+        "DrifterSprite_Variant_Gem": 1,
+        "DrifterSprite_Variant_Gold": 1,
+        "GrimSprite_Variant_A": 1,
+        "GrimSprite_Variant_Candy": 1,
+        "GrimSprite_Variant_Galaxy": 1,
+        "GrimSprite_Variant_Gold": 1,
+        "SevenSprite_Variant_A": 1,
+        "SevenSprite_Variant_Candy": 1,
+        "SevenSprite_Variant_Galaxy": 1,
+        "SevenSprite_Variant_Gold": 1,
+        "SevenSprite_Variant_Holofoil": 1,
+        "DuckSprite_Variant_Gem": 1,
+        "EarthSprite_Variant_Gem": 1,
+        "DemonSprite_Variant_Gem": 1,
+        "Water_Variant_Gem": 1,
+        "Water_Variant_Holofoil": 1,
+        "GhostSprite_Variant_Holofoil": 1,
+        "Spitfire_Variation_Holofoil": 1,
+        "KingSprite_Variant_Holofoil": 1,
+        "ZeroPointSprite_Variant_Gem": 1
+    }
 }
 //will prob get more use out of this as time goes on
 
 
 async function TCPRequests(method, domain, urlPath, options = {}) {
-    const { headers = {}, data = null, responseType = "json"} = options;
+    const { headers = {}, data = null, responseType = "json" } = options;
     const domains = await resolve(domain);
     const ips = domains.answers.filter(a => a.type === 1).map(a => a.address);
     const ip = ips[0];
@@ -1046,19 +1087,19 @@ const Backgrounds = (version, versionGlobal, backgrounds, content) => {
             stage: "defaultnotris",
             backgroundImage: v3951backgroundImages[Math.floor(Math.random() * v3951backgroundImages.length)]
         },
-        "40.20":{
+        "40.20": {
             stage: "defaultblurryfloor",
             backgroundImage: "http://localhost:5595/cdn2-unrealengine/mkart-fnbr-40-20-lobbybg-final-4096x2048-117eac73cdcd.jpg"
         },
-        "40.30":{
+        "40.30": {
             stage: "defaultblurryfloor",
             backgroundImage: "http://localhost:5595/cdn2-unrealengine/mkart-fnbr-ch7s2-40-30-lobbybg-final-4096x2048-b8ba188ee990.jpg"
         },
-        "40.40":{
+        "40.40": {
             stage: "season4040",
             backgroundImage: "http://localhost:5595/cdn2-unrealengine/mkart-fnbr-ch7s2-venison-40-40-lobbybg-final-3840x2022-bd790399258a.jpg"
         },
-        "40.41":{
+        "40.41": {
             stage: "season4041",
             backgroundImage: "http://localhost:5595/cdn2-unrealengine/mkart-fnbr-smarttuna-lobbybg-withfx-final-4k-4703x2477-81899f28574e.jpg"
         },
