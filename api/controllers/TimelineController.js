@@ -2,16 +2,24 @@
 const path = require('path');
 const fs = require('fs')
 const ini = require('ini')
-const { getVersionInfo, loadJSON } = require("../../config/defs");
+const { getVersionInfo, loadJSON, compareAndUpdateKeychain} = require("../../config/defs");
 const NeoLog = require('../../structs/NeoLog');
 let requested = false;
 
 
 module.exports = {
-    timeline: function (req, res) {
+    timeline: async function (req, res) {
         let { version, versionGlobal, versionLegacy } = getVersionInfo(req);
         const keychain = loadJSON("../responses/keychain.json")
         var config = ini.parse(fs.readFileSync(path.join(__dirname, '../../config.ini'), 'utf-8'));
+        try {
+			if(config.bRefreshKeychainViaTimeline == true){
+				await compareAndUpdateKeychain();
+			}
+		}
+		catch {
+			NeoLog.Error("Unable to connect to dillyapis! Falling back to existing keychains on your local disk. Some Encrypted Assets may not be accessible")
+		}
         const certVersions = [{
             3700114: 1,
             3724489: 1,
@@ -33,6 +41,8 @@ module.exports = {
                 versionGlobal = cl[versionLegacy]
             }
         });
+
+
         const timeline = {
             channels: {
                 "standalone-store": {},

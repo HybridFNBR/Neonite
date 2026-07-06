@@ -1,6 +1,7 @@
 const sails = require("sails");
 const fs = require("fs");
 const ini = require("ini");
+const NeoLog = require("./structs/NeoLog");
 const config = ini.parse(fs.readFileSync("config.ini", "utf-8"));
 
 
@@ -27,11 +28,14 @@ async function startBackend() {
         log: {
             level: config.logLevel
         },
-    }, (err) => {
+    },
+    (err) => {
         if (err) {
             console.error(err);
         }
-    });
+    },
+    NeoLog.Log("Neonite is up and listening on port 5595!")
+);
 }
 
 startBackend();
