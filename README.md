@@ -14,9 +14,6 @@ This Repo Serves as a continuation to support/maintain the Neonite V2 Project ma
 
 _Neonite is maintained with [Carbon](https://discord.com/invite/X525zyJtaU) in mind, i also recommend you install the latest node version and not LTS to avoid issues when trying to run Neonite_
 
-## Notice:
-this repo will eventually stop getting updated due to there being a rewriiten version in Golang currently in beta so i can iron out all/most the issues before stopping updates [Diamene](https://github.com/HybridFNBR/Diamene-Beta)
-
 ## About Neonite V2
 
 Neonite V2 is a popular private server written in [Node.js](https://nodejs.org/en/download/current/), aimed to provide a fun yet easy-to-use program for people wanting to customize their Fortnite experience.
