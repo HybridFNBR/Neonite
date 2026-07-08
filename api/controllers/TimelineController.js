@@ -1724,7 +1724,7 @@ module.exports = {
             if (config.MechStage1 === true) {
                 timeline.channels['client-events']['states'][0]['activeEvents'].push(
                     {
-                        eventType: "Tob1", // Mech Stage 1
+                        eventType: "Tob0", // Mech Stage 1
                         activeUntil: "9999-09-14T07:00:00.000Z",
                         activeSince: "2000-09-14T07:00:00.000Z"
                     },
@@ -1738,12 +1738,12 @@ module.exports = {
             if (config.MechStage2 === true) {
                 timeline.channels['client-events']['states'][0]['activeEvents'].push(
                     {
-                        eventType: "Tob2", // Mech Stage 2
+                        eventType: "Tob1", // Mech Stage 2
                         activeUntil: "9999-09-14T07:00:00.000Z",
                         activeSince: "2000-09-14T07:00:00.000Z"
                     },
                     {
-                        eventType: "Tob01", // Robot Construction Site
+                        eventType: "Tob01", // Mech Stage 1
                         activeUntil: "9999-09-14T07:00:00.000Z",
                         activeSince: "2000-09-14T07:00:00.000Z"
                     }
@@ -1752,7 +1752,7 @@ module.exports = {
             if (config.MechStage3 === true) {
                 timeline.channels['client-events']['states'][0]['activeEvents'].push(
                     {
-                        eventType: "Tob3", // Mech Stage 3
+                        eventType: "Tob2", // Mech Stage 3
                         activeUntil: "9999-09-14T07:00:00.000Z",
                         activeSince: "2000-09-14T07:00:00.000Z"
                     },
@@ -1766,7 +1766,7 @@ module.exports = {
             if (config.MechStage4 === true) {
                 timeline.channels['client-events']['states'][0]['activeEvents'].push(
                     {
-                        eventType: "Tob4", // Mech Stage 4
+                        eventType: "Tob3", // Mech Stage 4
                         activeUntil: "9999-09-14T07:00:00.000Z",
                         activeSince: "2000-09-14T07:00:00.000Z"
                     },
@@ -1780,7 +1780,7 @@ module.exports = {
             if (config.MechStage5 === true) {
                 timeline.channels['client-events']['states'][0]['activeEvents'].push(
                     {
-                        eventType: "Tob5", // Mech Stage 5
+                        eventType: "Tob4", // Mech Stage 5
                         activeUntil: "9999-09-14T07:00:00.000Z",
                         activeSince: "2000-09-14T07:00:00.000Z"
                     },
@@ -1794,7 +1794,7 @@ module.exports = {
             if (config.MechStage6 === true) {
                 timeline.channels['client-events']['states'][0]['activeEvents'].push(
                     {
-                        eventType: "Tob6", // Mech Stage 6
+                        eventType: "Tob5", // Mech Stage 6
                         activeUntil: "9999-09-14T07:00:00.000Z",
                         activeSince: "2000-09-14T07:00:00.000Z"
                     },
@@ -1808,7 +1808,7 @@ module.exports = {
             if (config.MechStage7 === true) {
                 timeline.channels['client-events']['states'][0]['activeEvents'].push(
                     {
-                        eventType: "Tob7", // Mech Stage 7
+                        eventType: "Tob6", // Mech Stage 7
                         activeUntil: "9999-09-14T07:00:00.000Z",
                         activeSince: "2000-09-14T07:00:00.000Z"
                     },
@@ -1822,7 +1822,21 @@ module.exports = {
             if (config.MechStage8 === true) {
                 timeline.channels['client-events']['states'][0]['activeEvents'].push(
                     {
-                        eventType: "Tob8", // Mech Stage 8
+                        eventType: "Tob7", // Mech Stage 8
+                        activeUntil: "9999-09-14T07:00:00.000Z",
+                        activeSince: "2000-09-14T07:00:00.000Z"
+                    },
+                    {
+                        eventType: "Tob01", // Robot Construction Site
+                        activeUntil: "9999-09-14T07:00:00.000Z",
+                        activeSince: "2000-09-14T07:00:00.000Z"
+                    }
+                )
+            }
+            if (config.MechStage9 === true) {
+                timeline.channels['client-events']['states'][0]['activeEvents'].push(
+                    {
+                        eventType: "Tob8", // Mech Stage 9
                         activeUntil: "9999-09-14T07:00:00.000Z",
                         activeSince: "2000-09-14T07:00:00.000Z"
                     },
