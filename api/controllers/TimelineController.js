@@ -1729,7 +1729,7 @@ module.exports = {
                         activeSince: "2000-09-14T07:00:00.000Z"
                     },
                     {
-                        eventType: "Tob01", // Mech Stage 1
+                        eventType: "Tob01", // Robot Construction Site
                         activeUntil: "9999-09-14T07:00:00.000Z",
                         activeSince: "2000-09-14T07:00:00.000Z"
                     }
@@ -1743,7 +1743,7 @@ module.exports = {
                         activeSince: "2000-09-14T07:00:00.000Z"
                     },
                     {
-                        eventType: "Tob01", // Mech Stage 1
+                        eventType: "Tob01", // Robot Construction Site
                         activeUntil: "9999-09-14T07:00:00.000Z",
                         activeSince: "2000-09-14T07:00:00.000Z"
                     }
