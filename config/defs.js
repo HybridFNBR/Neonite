@@ -880,7 +880,7 @@ async function compareAndUpdateKeychain() {
         NeoLog.Error("Unable to connect to dillyapis! Falling back to existing keychains on your local disk. You may experience issues!");
     }
 }
-
+NeoLog.Log("Neonite is up and listening on port 5595!")
 
 const Backgrounds = (version, versionGlobal, backgrounds, content) => {
     //random backgrounds
