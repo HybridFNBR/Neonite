@@ -216,6 +216,7 @@ module.exports.routes = {
     'GET /mesh/Fortnite/Fortnite.Artemis_Terrain.20133078/metadata': 'ApiController.downtimeMeshNetwork',
     'GET /mesh/Fortnite/Fortnite.Apollo_Terrain.14675445/metadata': 'ApiController.downtimeMeshNetwork',
     'GET /mesh/Fortnite/Fortnite.Apollo_Terrain.18045599/metadata': 'ApiController.downtimeMeshNetwork',
+    'GET /mesh/Fortnite/Fortnite.Apollo_Terrain.17227462/metadata': 'ApiController.downtimeMeshNetwork',
     'GET /cdn2-unrealengine/:image': {
         controller: 'ApiController',
         action: 'cdnImages',
