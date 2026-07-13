@@ -1028,39 +1028,83 @@ module.exports = {
 		}
 	},
 
-	magpieInventory: async function (req, res) {
-		if (misc.relicPurchased === true) {
-			misc.counts[misc.relicId] = misc.counts[misc.relicId] + 1
-			const extractableRelicsCatalog = await axios.get(`http://localhost:5595/fortnite/api/game/v2/extractablerelics/70329e8f-f377-4a73-90cf-76b7ace87a07/8/getBackendCatalog`)
-			misc.counts.Currency_ExtractionPoints -= extractableRelicsCatalog.data[misc.relicId].attributes["summonCost"];
-			misc.relicPurchased = false;
+	magpieInventory: function (req, res) {
+		if (config.relicStarterScreen && !misc.relicStarterScreenDone) {
+			res.json({
+				"accountId": req.params.accountId,
+				"deploymentId": req.params.deploymentId,
+				"domain": "FN1",
+				"inventory": [],
+				"linkMode": "live",
+				"workspace": "default"
+			})
 		}
-		res.json({
-			"accountId": req.params.accountId,
-			"deploymentId": req.params.deploymentId,
-			"domain": "FN1",
-			"inventory": [
-				{
-					"counts": misc.counts,
-					"entitlementMetadata": {},
-					"metadata": "{\"StarterRelic\":\"EarthSprite_Variant_A\",\"EquippedVariant\":\"None\"}",
-					"metadataSchemaVersion": 0,
-					"moduleId": "70329e8f-f377-4a73-90cf-76b7ace87a07",
-					"purchasedEntitlementConsequentialToGameplay": false
+		else {
+			const spriteCollection = loadJSON("../responses/sprites/collection.json")
+			const entitlementMetadata = {}
+
+			for (const key in spriteCollection) {
+				if (key !== "Currency_ExtractionPoints") {
+					// set level and mastered status
+					entitlementMetadata[key] = JSON.stringify({
+						xp: parseInt(config.relicXP),
+						ml: config.relicMastered
+					})
+
+					// set to owned
+					if (config.allRelicsOwned) {
+						spriteCollection[key] = 2
+					}
 				}
-			],
-			"linkMode": "live",
-			"workspace": "default"
-		})
+			}
+
+			res.json({
+				"accountId": req.params.accountId,
+				"deploymentId": req.params.deploymentId,
+				"domain": "FN1",
+				"inventory": [
+					{
+						"counts": spriteCollection,
+						"entitlementMetadata": entitlementMetadata,
+						"metadata": "{\"StarterRelic\":\"EarthSprite_Variant_A\",\"EquippedVariant\":\"None\"}",
+						"metadataSchemaVersion": 0,
+						"moduleId": "70329e8f-f377-4a73-90cf-76b7ace87a07",
+						"purchasedEntitlementConsequentialToGameplay": false
+					}
+				],
+				"linkMode": "live",
+				"workspace": "default"
+			})
+		}
 	},
 
-	extractableRelics: function (req, res) {
-		const spirit = req.body.relicId;
+	extractableRelics: async function (req, res) {
+		const sprite = req.body.relicId;
+		const spriteCollection = loadJSON("../responses/sprites/collection.json")
+
 		switch (req.body.commandId) {
 			case "purchase":
-				misc.relicPurchased = true
-				misc.relicId = req.body.relicId;
-				res.status(204).send() //not sure what the response is yet but this works fine
+				spriteCollection[sprite] = 2
+
+				const extractableRelicsCatalog = loadJSON("../responses/sprites/catalog.json")
+				spriteCollection.Currency_ExtractionPoints -= (extractableRelicsCatalog[sprite]?.attributes?.summonCost ?? 0);
+
+				fs.writeFileSync("./responses/sprites/collection.json", JSON.stringify(spriteCollection, null, 2))
+
+				res.status({
+					deploymentId: null,
+					accountId: null,
+					domain: null,
+					linkMode: null,
+					workspace: null,
+					inventory: [{
+						moduleId: "70329e8f-f377-4a73-90cf-76b7ace87a07",
+						purchasedEntitlementConsequentialToGameplay: false,
+						counts: {
+							[sprite]: 2
+						},
+					}]
+				})
 				break;
 			case "equip":
 				res.json({
@@ -1073,678 +1117,48 @@ module.exports = {
 						moduleId: "70329e8f-f377-4a73-90cf-76b7ace87a07",
 						purchasedEntitlementConsequentialToGameplay: false,
 						counts: {
-							[spirit]: 2
+							[sprite]: 2
 						},
 						metadata: JSON.stringify({
-							StarterRelic: spirit,
-							EquippedVariant: spirit
+							StarterRelic: sprite,
+							EquippedVariant: sprite
 						})
 					}]
 				})
 				break;
+			case "starter":
+				misc.relicStarterScreenDone = true;
 
+				spriteCollection[sprite] = 2
+				spriteCollection.Currency_ExtractionPoints = 999999
+
+				fs.writeFileSync("./responses/sprites/collection.json", JSON.stringify(spriteCollection, null, 2))
+
+				res.json({
+					deploymentId: null,
+					accountId: null,
+					domain: null,
+					linkMode: null,
+					workspace: null,
+					inventory: [{
+						moduleId: "70329e8f-f377-4a73-90cf-76b7ace87a07",
+						purchasedEntitlementConsequentialToGameplay: false,
+						counts: {
+							[sprite]: 2,
+							Currency_ExtractionPoints: 999999
+						},
+						metadata: JSON.stringify({
+							StarterRelic: sprite
+						})
+					}]
+				})
+				break;
 		}
 	},
 
 	extractableRelicsCatalog: function (req, res) {
-		res.json({
-			"PunkSprite_Variant_Candy": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 10000
-				},
-				"templateId": "ExtractableRelic:punksprite_variant_candy"
-			},
-			"SleepySprite_Variant_Candy": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 10000
-				},
-				"templateId": "ExtractableRelic:sleepysprite_variant_candy"
-			},
-			"Water_Variant_Gold": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 4000
-				},
-				"templateId": "ExtractableRelic:water_variant_gold"
-			},
-			"BurntPeanut_Variation_A": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 7500
-				},
-				"templateId": "ExtractableRelic:burntpeanut_variation_a"
-			},
-			"PunkSprite_Variant_Galaxy": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 10000
-				},
-				"templateId": "ExtractableRelic:punksprite_variant_galaxy"
-			},
-			"ZeroPointSprite_Variant_A": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 7500
-				},
-				"templateId": "ExtractableRelic:zeropointsprite_variant_a"
-			},
-			"SleepySprite_Variant_A": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 5000
-				},
-				"templateId": "ExtractableRelic:sleepysprite_variant_a"
-			},
-			"DemonSprite_Variant_Gold": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 6000
-				},
-				"templateId": "ExtractableRelic:demonsprite_variant_gold"
-			},
-			"Spitfire_Variation_Candy": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 4000
-				},
-				"templateId": "ExtractableRelic:spitfire_variation_candy"
-			},
-			"DemonSprite_Variant_A": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 3000
-				},
-				"templateId": "ExtractableRelic:demonsprite_variant_a"
-			},
-			"GhostSprite_Variant_Candy": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 6000
-				},
-				"templateId": "ExtractableRelic:ghostsprite_variant_candy"
-			},
-			"ZeroPointSprite_Variant_Candy": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 15000
-				},
-				"templateId": "ExtractableRelic:zeropointsprite_variant_candy"
-			},
-			"DemonSprite_Variant_Galaxy": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 6000
-				},
-				"templateId": "ExtractableRelic:demonsprite_variant_galaxy"
-			},
-			"Water_Variant_Galaxy": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 4000
-				},
-				"templateId": "ExtractableRelic:water_variant_galaxy"
-			},
-			"ZeroPointSprite_Variant_Gold": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 15000
-				},
-				"templateId": "ExtractableRelic:zeropointsprite_variant_gold"
-			},
-			"EarthSprite_Variant_Galaxy": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 4000
-				},
-				"templateId": "ExtractableRelic:earthsprite_variant_galaxy"
-			},
-			"EarthSprite_Variant_Gold": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 4000
-				},
-				"templateId": "ExtractableRelic:earthsprite_variant_gold"
-			},
-			"PunkSprite_Variant_A": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 5000
-				},
-				"templateId": "ExtractableRelic:punksprite_variant_a"
-			},
-			"SleepySprite_Variant_Gold": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 10000
-				},
-				"templateId": "ExtractableRelic:sleepysprite_variant_gold"
-			},
-			"Water_Variant_Candy": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 4000
-				},
-				"templateId": "ExtractableRelic:water_variant_candy"
-			},
-			"GhostSprite_Variant_Galaxy": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 6000
-				},
-				"templateId": "ExtractableRelic:ghostsprite_variant_galaxy"
-			},
-			"KingSprite_Variant_A": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 3000
-				},
-				"templateId": "ExtractableRelic:kingsprite_variant_a"
-			},
-			"ZeroPointSprite_Variant_Galaxy": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 15000
-				},
-				"templateId": "ExtractableRelic:zeropointsprite_variant_galaxy"
-			},
-			"GhostSprite_Variant_A": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 3000
-				},
-				"templateId": "ExtractableRelic:ghostsprite_variant_a"
-			},
-			"Spitfire_Variation_A": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": true,
-					"summonCost": 100
-				},
-				"templateId": "ExtractableRelic:spitfire_variation_a"
-			},
-			"KingSprite_Variant_Galaxy": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 6000
-				},
-				"templateId": "ExtractableRelic:kingsprite_variant_galaxy"
-			},
-			"EarthSprite_Variant_Candy": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 4000
-				},
-				"templateId": "ExtractableRelic:earthsprite_variant_candy"
-			},
-			"Spitfire_Variation_Gold": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 4000
-				},
-				"templateId": "ExtractableRelic:spitfire_variation_gold"
-			},
-			"PunkSprite_Variant_Gold": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 10000
-				},
-				"templateId": "ExtractableRelic:punksprite_variant_gold"
-			},
-			"KingSprite_Variant_Gold": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 6000
-				},
-				"templateId": "ExtractableRelic:kingsprite_variant_gold"
-			},
-			"Spitfire_Variation_Galaxy": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 4000
-				},
-				"templateId": "ExtractableRelic:spitfire_variation_galaxy"
-			},
-			"EarthSprite_Variant_A": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": true,
-					"summonCost": 100
-				},
-				"templateId": "ExtractableRelic:earthsprite_variant_a"
-			},
-			"DuckSprite_Variant_Gold": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 6000
-				},
-				"templateId": "ExtractableRelic:ducksprite_variant_gold"
-			},
-			"DuckSprite_Variant_Galaxy": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 6000
-				},
-				"templateId": "ExtractableRelic:ducksprite_variant_galaxy"
-			},
-			"DuckSprite_Variant_Candy": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 6000
-				},
-				"templateId": "ExtractableRelic:ducksprite_variant_candy"
-			},
-			"DemonSprite_Variant_Candy": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 6000
-				},
-				"templateId": "ExtractableRelic:demonsprite_variant_candy"
-			},
-			"Water_Variant_Base": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": true,
-					"summonCost": 100
-				},
-				"templateId": "ExtractableRelic:water_variant_base"
-			},
-			"SleepySprite_Variant_Galactic": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 10000
-				},
-				"templateId": "ExtractableRelic:sleepysprite_variant_galactic"
-			},
-			"KingSprite_Variant_Candy": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 6000
-				},
-				"templateId": "ExtractableRelic:kingsprite_variant_candy"
-			},
-			"DuckSprite_Variant_A": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 3000
-				},
-				"templateId": "ExtractableRelic:ducksprite_variant_a"
-			},
-			"GhostSprite_Variant_Gold": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 6000
-				},
-				"templateId": "ExtractableRelic:ghostsprite_variant_gold"
-			},
-			"AirSprite_Variant_A": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 1000
-				},
-				"templateId": "ExtractableRelic:airsprite_variant_a"
-			},
-			"AirSprite_Variant_Candy": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 1000
-				},
-				"templateId": "ExtractableRelic:airsprite_variant_candy"
-			},
-			"AirSprite_Variant_Galaxy": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 1000
-				},
-				"templateId": "ExtractableRelic:airsprite_variant_galaxy"
-			},
-			"AirSprite_Variant_Gold": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 1000
-				},
-				"templateId": "ExtractableRelic:airsprite_variant_gold"
-			},
-			"AirSprite_Variant_Holofoil": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 1000
-				},
-				"templateId": "ExtractableRelic:airsprite_variant_holofoil"
-			},
-			"BossSprite_Variant_A": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 1000
-				},
-				"templateId": "ExtractableRelic:bosssprite_variant_a"
-			},
-			"BossSprite_Variant_Candy": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 1000
-				},
-				"templateId": "ExtractableRelic:bosssprite_variant_candy"
-			},
-			"BossSprite_Variant_Galaxy": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 1000
-				},
-				"templateId": "ExtractableRelic:bosssprite_variant_galaxy"
-			},
-			"BossSprite_Variant_Gold": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 1000
-				},
-				"templateId": "ExtractableRelic:bosssprite_variant_gold"
-			},
-			"FishySprite_Variant_A": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 1000
-				},
-				"templateId": "ExtractableRelic:fishysprite_variant_a"
-			},
-			"FishySprite_Variant_Candy": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 1000
-				},
-				"templateId": "ExtractableRelic:fishysprite_variant_candy"
-			},
-			"FishySprite_Variant_Galaxy": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 1000
-				},
-				"templateId": "ExtractableRelic:fishysprite_variant_galaxy"
-			},
-			"FishySprite_Variant_Gold": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 1000
-				},
-				"templateId": "ExtractableRelic:fishysprite_variant_gold"
-			},
-			"SoccerSprite_Variant_A": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 1000
-				},
-				"templateId": "ExtractableRelic:soccersprite_variant_a"
-			},
-			"SoccerSprite_Variant_Candy": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 1000
-				},
-				"templateId": "ExtractableRelic:soccersprite_variant_candy"
-			},
-			"SoccerSprite_Variant_Galaxy": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 1000
-				},
-				"templateId": "ExtractableRelic:soccersprite_variant_galaxy"
-			},
-			"SoccerSprite_Variant_Gold": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 1000
-				},
-				"templateId": "ExtractableRelic:soccersprite_variant_gold"
-			},
-			"SoccerSprite_Variant_Holofoil": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 1000
-				},
-				"templateId": "ExtractableRelic:soccersprite_variant_holofoil"
-			},
-			"DrifterSprite_Variant_A": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 1000
-				},
-				"templateId": "ExtractableRelic:driftersprite_variant_a"
-			},
-			"DrifterSprite_Variant_Candy": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 1000
-				},
-				"templateId": "ExtractableRelic:driftersprite_variant_candy"
-			},
-			"DrifterSprite_Variant_Galaxy": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 1000
-				},
-				"templateId": "ExtractableRelic:driftersprite_variant_galaxy"
-			},
-			"DrifterSprite_Variant_Gem": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 1000
-				},
-				"templateId": "ExtractableRelic:driftersprite_variant_gem"
-			},
-			"DrifterSprite_Variant_Gold": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 1000
-				},
-				"templateId": "ExtractableRelic:driftersprite_variant_gold"
-			},
-			"GrimSprite_Variant_A": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 1000
-				},
-				"templateId": "ExtractableRelic:grimsprite_variant_a"
-			},
-			"GrimSprite_Variant_Candy": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 1000
-				},
-				"templateId": "ExtractableRelic:grimsprite_variant_candy"
-			},
-			"GrimSprite_Variant_Galaxy": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 1000
-				},
-				"templateId": "ExtractableRelic:grimsprite_variant_galaxy"
-			},
-			"GrimSprite_Variant_Gold": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 1000
-				},
-				"templateId": "ExtractableRelic:grimsprite_variant_gold"
-			},
-			"SevenSprite_Variant_A": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 1000
-				},
-				"templateId": "ExtractableRelic:sevensprite_variant_a"
-			},
-			"SevenSprite_Variant_Candy": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 1000
-				},
-				"templateId": "ExtractableRelic:sevensprite_variant_candy"
-			},
-			"SevenSprite_Variant_Galaxy": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 1000
-				},
-				"templateId": "ExtractableRelic:sevensprite_variant_galaxy"
-			},
-			"SevenSprite_Variant_Gold": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 1000
-				},
-				"templateId": "ExtractableRelic:sevensprite_variant_gold"
-			},
-			"SevenSprite_Variant_Holofoil": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 1000
-				},
-				"templateId": "ExtractableRelic:sevensprite_variant_holofoil"
-			},
-			"DuckSprite_Variant_Gem": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 1000
-				},
-				"templateId": "ExtractableRelic:ducksprite_variant_gem"
-			},
-			"EarthSprite_Variant_Gem": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 1000
-				},
-				"templateId": "ExtractableRelic:earthsprite_variant_gem"
-			},
-			"DemonSprite_Variant_Gem": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 1000
-				},
-				"templateId": "ExtractableRelic:demonsprite_variant_gem"
-			},
-			"Water_Variant_Gem": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 1000
-				},
-				"templateId": "ExtractableRelic:water_variant_gem"
-			},
-			"Water_Variant_Holofoil": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 1000
-				},
-				"templateId": "ExtractableRelic:water_variant_holofoil"
-			},
-			"GhostSprite_Variant_Holofoil": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 1000
-				},
-				"templateId": "ExtractableRelic:ghostsprite_variant_holofoil"
-			},
-			"Spitfire_Variation_Holofoil": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 1000
-				},
-				"templateId": "ExtractableRelic:spitfire_variation_holofoil"
-			},
-			"KingSprite_Variant_Holofoil": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 1000
-				},
-				"templateId": "ExtractableRelic:kingsprite_variant_holofoil"
-			},
-			"ZeroPointSprite_Variant_Gem": {
-				"_private": false,
-				"attributes": {
-					"bIsStarter": false,
-					"summonCost": 1000
-				},
-				"templateId": "ExtractableRelic:zeropointsprite_variant_gem"
-			}
-		})
+		const relicsCatalog = loadJSON("../responses/sprites/catalog.json")
+		res.json(relicsCatalog)
 	},
 
 
