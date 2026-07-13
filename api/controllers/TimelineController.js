@@ -2,7 +2,7 @@
 const path = require('path');
 const fs = require('fs')
 const ini = require('ini')
-const { getVersionInfo, loadJSON, compareAndUpdateKeychain} = require("../../config/defs");
+const { getVersionInfo, loadJSON, compareAndUpdateKeychain } = require("../../config/defs");
 const NeoLog = require('../../structs/NeoLog');
 let requested = false;
 
@@ -13,13 +13,13 @@ module.exports = {
         const keychain = loadJSON("../responses/keychain.json")
         var config = ini.parse(fs.readFileSync(path.join(__dirname, '../../config.ini'), 'utf-8'));
         try {
-			if(config.bRefreshKeychainViaTimeline == true){
-				await compareAndUpdateKeychain();
-			}
-		}
-		catch {
-			NeoLog.Error("Unable to connect to dillyapis! Falling back to existing keychains on your local disk. Some Encrypted Assets may not be accessible")
-		}
+            if (config.bRefreshKeychainViaTimeline == true) {
+                await compareAndUpdateKeychain();
+            }
+        }
+        catch {
+            NeoLog.Error("Unable to connect to dillyapis! Falling back to existing keychains on your local disk. Some Encrypted Assets may not be accessible")
+        }
         const certVersions = [{
             3700114: 1,
             3724489: 1,
@@ -493,7 +493,7 @@ module.exports = {
                 "FNM21", // FNMares 2021
             ],
 
-            "18.40":[
+            "18.40": [
                 //"GGL05" //Downtime Screen TODM
             ],
 
@@ -850,7 +850,7 @@ module.exports = {
                 "FF_BHMActivate", // April Fools 2026
             ],
 
-            "40.40":[
+            "40.40": [
                 "EventFlag.Event_MorningBellQuests_S40_Pt1",
                 "EventFlag.Event_MorningBellQuests_S40_Pt2",
                 "EventFlag.Event_FlameCeleb_S40"
@@ -1719,6 +1719,135 @@ module.exports = {
                 activeUntil: "9999-09-14T07:00:00.000Z",
                 activeSince: "2000-09-14T07:00:00.000Z"
             })
+        }
+        if (version === "9.30") {
+            if (config.MechStage1 === true) {
+                timeline.channels['client-events']['states'][0]['activeEvents'].push(
+                    {
+                        eventType: "Tob0", // Mech Stage 1
+                        activeUntil: "9999-09-14T07:00:00.000Z",
+                        activeSince: "2000-09-14T07:00:00.000Z"
+                    },
+                    {
+                        eventType: "Tob01", // Robot Construction Site
+                        activeUntil: "9999-09-14T07:00:00.000Z",
+                        activeSince: "2000-09-14T07:00:00.000Z"
+                    }
+                )
+            }
+            if (config.MechStage2 === true) {
+                timeline.channels['client-events']['states'][0]['activeEvents'].push(
+                    {
+                        eventType: "Tob1", // Mech Stage 2
+                        activeUntil: "9999-09-14T07:00:00.000Z",
+                        activeSince: "2000-09-14T07:00:00.000Z"
+                    },
+                    {
+                        eventType: "Tob01", // Robot Construction Site
+                        activeUntil: "9999-09-14T07:00:00.000Z",
+                        activeSince: "2000-09-14T07:00:00.000Z"
+                    }
+                )
+            }
+            if (config.MechStage3 === true) {
+                timeline.channels['client-events']['states'][0]['activeEvents'].push(
+                    {
+                        eventType: "Tob2", // Mech Stage 3
+                        activeUntil: "9999-09-14T07:00:00.000Z",
+                        activeSince: "2000-09-14T07:00:00.000Z"
+                    },
+                    {
+                        eventType: "Tob01", // Robot Construction Site
+                        activeUntil: "9999-09-14T07:00:00.000Z",
+                        activeSince: "2000-09-14T07:00:00.000Z"
+                    }
+                )
+            }
+            if (config.MechStage4 === true) {
+                timeline.channels['client-events']['states'][0]['activeEvents'].push(
+                    {
+                        eventType: "Tob3", // Mech Stage 4
+                        activeUntil: "9999-09-14T07:00:00.000Z",
+                        activeSince: "2000-09-14T07:00:00.000Z"
+                    },
+                    {
+                        eventType: "Tob01", // Robot Construction Site
+                        activeUntil: "9999-09-14T07:00:00.000Z",
+                        activeSince: "2000-09-14T07:00:00.000Z"
+                    }
+                )
+            }
+            if (config.MechStage5 === true) {
+                timeline.channels['client-events']['states'][0]['activeEvents'].push(
+                    {
+                        eventType: "Tob4", // Mech Stage 5
+                        activeUntil: "9999-09-14T07:00:00.000Z",
+                        activeSince: "2000-09-14T07:00:00.000Z"
+                    },
+                    {
+                        eventType: "Tob01", // Robot Construction Site
+                        activeUntil: "9999-09-14T07:00:00.000Z",
+                        activeSince: "2000-09-14T07:00:00.000Z"
+                    }
+                )
+            }
+            if (config.MechStage6 === true) {
+                timeline.channels['client-events']['states'][0]['activeEvents'].push(
+                    {
+                        eventType: "Tob5", // Mech Stage 6
+                        activeUntil: "9999-09-14T07:00:00.000Z",
+                        activeSince: "2000-09-14T07:00:00.000Z"
+                    },
+                    {
+                        eventType: "Tob01", // Robot Construction Site
+                        activeUntil: "9999-09-14T07:00:00.000Z",
+                        activeSince: "2000-09-14T07:00:00.000Z"
+                    }
+                )
+            }
+            if (config.MechStage7 === true) {
+                timeline.channels['client-events']['states'][0]['activeEvents'].push(
+                    {
+                        eventType: "Tob6", // Mech Stage 7
+                        activeUntil: "9999-09-14T07:00:00.000Z",
+                        activeSince: "2000-09-14T07:00:00.000Z"
+                    },
+                    {
+                        eventType: "Tob01", // Robot Construction Site
+                        activeUntil: "9999-09-14T07:00:00.000Z",
+                        activeSince: "2000-09-14T07:00:00.000Z"
+                    }
+                )
+            }
+            if (config.MechStage8 === true) {
+                timeline.channels['client-events']['states'][0]['activeEvents'].push(
+                    {
+                        eventType: "Tob7", // Mech Stage 8
+                        activeUntil: "9999-09-14T07:00:00.000Z",
+                        activeSince: "2000-09-14T07:00:00.000Z"
+                    },
+                    {
+                        eventType: "Tob01", // Robot Construction Site
+                        activeUntil: "9999-09-14T07:00:00.000Z",
+                        activeSince: "2000-09-14T07:00:00.000Z"
+                    }
+                )
+            }
+            if (config.MechStage9 === true) {
+                timeline.channels['client-events']['states'][0]['activeEvents'].push(
+                    {
+                        eventType: "Tob8", // Mech Stage 9
+                        activeUntil: "9999-09-14T07:00:00.000Z",
+                        activeSince: "2000-09-14T07:00:00.000Z"
+                    },
+                    {
+                        eventType: "Tob01", // Robot Construction Site
+                        activeUntil: "9999-09-14T07:00:00.000Z",
+                        activeSince: "2000-09-14T07:00:00.000Z"
+                    }
+                )
+            }
+
         }
         if (!requested) {
             const activeEvents = timeline.channels['client-events'].states[0].activeEvents;
