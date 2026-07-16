@@ -654,5 +654,133 @@
 			"summonCost": 1000
 		},
 		"templateId": "ExtractableRelic:zeropointsprite_variant_gem"
+	},
+	"BossSprite_Variant_Cube": {
+		"_private": false,
+		"attributes": {
+			"bIsStarter": false,
+			"summonCost": 1000
+		},
+		"templateId": "ExtractableRelic:bosssprite_variant_cube"
+	},
+	"DuckSprite_Variant_Cube": {
+		"_private": false,
+		"attributes": {
+			"bIsStarter": false,
+			"summonCost": 1000
+		},
+		"templateId": "ExtractableRelic:ducksprite_variant_cube"
+	},
+	"EarthSprite_Variant_Cube": {
+		"_private": false,
+		"attributes": {
+			"bIsStarter": false,
+			"summonCost": 1000
+		},
+		"templateId": "ExtractableRelic:earthsprite_variant_cube"
+	},
+	"FishySprite_Variant_Cube": {
+		"_private": false,
+		"attributes": {
+			"bIsStarter": false,
+			"summonCost": 1000
+		},
+		"templateId": "ExtractableRelic:fishysprite_variant_cube"
+	},
+	"FossilMealSprite_Variant_A": {
+		"_private": false,
+		"attributes": {
+			"bIsStarter": false,
+			"summonCost": 1000
+		},
+		"templateId": "ExtractableRelic:fossilmealsprite_variant_a"
+	},
+	"FossilMealSprite_Variant_Candy": {
+		"_private": false,
+		"attributes": {
+			"bIsStarter": false,
+			"summonCost": 1000
+		},
+		"templateId": "ExtractableRelic:fossilmealsprite_variant_candy"
+	},
+	"FossilMealSprite_Variant_Cube": {
+		"_private": false,
+		"attributes": {
+			"bIsStarter": false,
+			"summonCost": 1000
+		},
+		"templateId": "ExtractableRelic:fossilmealsprite_variant_cube"
+	},
+	"FossilMealSprite_Variant_Galaxy": {
+		"_private": false,
+		"attributes": {
+			"bIsStarter": false,
+			"summonCost": 1000
+		},
+		"templateId": "ExtractableRelic:fossilmealsprite_variant_galaxy"
+	},
+	"FossilMealSprite_Variant_Gold": {
+		"_private": false,
+		"attributes": {
+			"bIsStarter": false,
+			"summonCost": 1000
+		},
+		"templateId": "ExtractableRelic:fossilmealsprite_variant_gold"
+	},
+	"FossilMealSprite_Variant_Holofoil": {
+		"_private": false,
+		"attributes": {
+			"bIsStarter": false,
+			"summonCost": 1000
+		},
+		"templateId": "ExtractableRelic:fossilmealsprite_variant_holofoil"
+	},
+	"GrimSprite_Variant_Cube": {
+		"_private": false,
+		"attributes": {
+			"bIsStarter": false,
+			"summonCost": 1000
+		},
+		"templateId": "ExtractableRelic:grimsprite_variant_cube"
+	},
+	"PunkSprite_Variant_Cube": {
+		"_private": false,
+		"attributes": {
+			"bIsStarter": false,
+			"summonCost": 1000
+		},
+		"templateId": "ExtractableRelic:punksprite_variant_cube"
+	},
+	"SleepySprite_Variant_Cube": {
+		"_private": false,
+		"attributes": {
+			"bIsStarter": false,
+			"summonCost": 1000
+		},
+		"templateId": "ExtractableRelic:sleepysprite_variant_cube"
+	},
+	"Spitfire_Variation_Cube": {
+		"_private": false,
+		"attributes": {
+			"bIsStarter": false,
+			"summonCost": 1000
+		},
+		"templateId": "ExtractableRelic:spitfire_variation_cube"
+	},
+	"CompanyStargazer_Variant_A": {
+		"_private": false,
+		"attributes": {
+			"bIsStarter": false,
+			"summonCost": 1000
+		},
+		"templateId": "ExtractableRelic:companystargazer_variant_a"
+	},
+	"CokeParmesan_Variant_A": {
+		"_private": false,
+		"attributes": {
+			"bIsStarter": false,
+			"summonCost": 1000
+		},
+		"templateId": "ExtractableRelic:cokeparmesan_variant_a"
 	}
 }

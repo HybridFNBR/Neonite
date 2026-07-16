@@ -81,5 +81,21 @@
 	"GhostSprite_Variant_Holofoil": 1,
 	"Spitfire_Variation_Holofoil": 1,
 	"KingSprite_Variant_Holofoil": 1,
-	"ZeroPointSprite_Variant_Gem": 1
+	"ZeroPointSprite_Variant_Gem": 1,
+	"BossSprite_Variant_Cube": 1,
+	"DuckSprite_Variant_Cube": 1,
+	"EarthSprite_Variant_Cube": 1,
+	"FishySprite_Variant_Cube": 1,
+	"FossilMealSprite_Variant_A": 1,
+	"FossilMealSprite_Variant_Candy": 1,
+	"FossilMealSprite_Variant_Cube": 1,
+	"FossilMealSprite_Variant_Galaxy": 1,
+	"FossilMealSprite_Variant_Gold": 1,
+	"FossilMealSprite_Variant_Holofoil": 1,
+	"GrimSprite_Variant_Cube": 1,
+	"PunkSprite_Variant_Cube": 1,
+	"SleepySprite_Variant_Cube": 1,
+	"Spitfire_Variation_Cube": 1,
+	"CompanyStargazer_Variant_A": 1,
+	"CokeParmesan_Variant_A": 1
 }
