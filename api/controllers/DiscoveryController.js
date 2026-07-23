@@ -807,5 +807,5 @@ const playlistManager = {
 	"37.51": ["playlist_limerock"],
 	"38.11": ["playlist_skymango"],
 	"40.41": ["playlist_smarttunapre"],
-	"40.00": ["playlist_figment_doofy"]
+	"41.00": ["playlist_figment_doofy"]
 };
