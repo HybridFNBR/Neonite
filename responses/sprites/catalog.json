@@ -71,6 +71,102 @@
 		},
 		"templateId": "ExtractableRelic:spitfire_variation_candy"
 	},
+    "CokeParmesanSprite": {
+        "_private": false,
+        "attributes": {
+            "bIsStarter": false,
+            "summonCost": 5000
+        },
+        "templateId": "ExtractableRelic:cokeparmesansprite"
+    },
+    "FillerGruntSprite": {
+        "_private": false,
+        "attributes": {
+            "bIsStarter": false,
+            "summonCost": 3000
+        },
+        "templateId": "ExtractableRelic:fillergruntsprite"
+    },
+    "LlamaSprite_Variant_A": {
+        "_private": false,
+        "attributes": {
+            "bIsStarter": false,
+            "summonCost": 10000
+        },
+        "templateId": "ExtractableRelic:llamasprite_variant_a"
+    },
+    "LlamaSprite_Variant_Candy": {
+        "_private": false,
+        "attributes": {
+            "bIsStarter": false,
+            "summonCost": 8000
+        },
+        "templateId": "ExtractableRelic:llamasprite_variant_candy"
+    },
+    "LlamaSprite_Variant_Galaxy": {
+        "_private": false,
+        "attributes": {
+            "bIsStarter": false,
+            "summonCost": 12000
+        },
+        "templateId": "ExtractableRelic:llamasprite_variant_galaxy"
+    },
+    "LlamaSprite_Variant_Gem": {
+        "_private": false,
+        "attributes": {
+            "bIsStarter": false,
+            "summonCost": 10000
+        },
+        "templateId": "ExtractableRelic:llamasprite_variant_gem"
+    },
+    "PedicureAntacidSprite": {
+        "_private": false,
+        "attributes": {
+            "bIsStarter": false,
+            "summonCost": 5000
+        },
+        "templateId": "ExtractableRelic:pedicureantacidsprite"
+    },
+    "PeelySprite_Variant_A": {
+        "_private": false,
+        "attributes": {
+            "bIsStarter": false,
+            "summonCost": 7500
+        },
+        "templateId": "ExtractableRelic:peelysprite_variant_a"
+    },
+    "PeelySprite_Variant_Candy": {
+        "_private": false,
+        "attributes": {
+            "bIsStarter": false,
+            "summonCost": 6000
+        },
+        "templateId": "ExtractableRelic:peelysprite_variant_candy"
+    },
+    "PeelySprite_Variant_Galaxy": {
+        "_private": false,
+        "attributes": {
+            "bIsStarter": false,
+            "summonCost": 10000
+        },
+        "templateId": "ExtractableRelic:peelysprite_variant_galaxy"
+    },
+    "PeelySprite_Variant_Gold": {
+        "_private": false,
+        "attributes": {
+            "bIsStarter": false,
+            "summonCost": 12000
+        },
+        "templateId": "ExtractableRelic:peelysprite_variant_gold"
+    },
+    "PeelySprite_Variant_Holofoil": {
+        "_private": false,
+        "attributes": {
+            "bIsStarter": false,
+            "summonCost": 10000
+        },
+        "templateId": "ExtractableRelic:peelysprite_variant_holofoil"
+    },
 	"DemonSprite_Variant_A": {
 		"_private": false,
 		"attributes": {
