@@ -1317,22 +1317,23 @@ module.exports = {
 		}
 	},
 
-	contentLinkPackage: async function (req, res) {
-		/*
-		 * This endpoint requires auth on Epics server
-		 * The data in this cooked-content-package changes every update
-		 * It gets routed trough a caching server which stores this and requests new ones when needed
-		*/
-		const response = await axios.post(`https://epic-cache.neptune.cbn.lol/content/cooked-content`, {
-			linkCode: req.params.linkId,
-			role: req.query.role || "client",
-			client: req.query.platform || "windows",
-			majorVersion: parseInt(req.query.major),
-			minorVersion: parseInt(req.query.minor),
-			patch: parseInt(req.query.patch)
-		});
-		res.json(response.data.result);
-	},
+	 contentLinkPackage: async function (req, res) {
+        /*
+         * This endpoint requires auth on Epics server
+         * The data in this cooked-content-package changes every update
+         * It gets routed trough a caching server which stores this and requests new ones when needed
+        */
+        const response = await axios.post(`https://epic-cache-dev.neptune.cbn.lol/content/cooked-content`, {
+            linkCode: req.params.linkId,
+            role: req.query.role || "client",
+            client: req.query.platform || "windows",
+            majorVersion: parseInt(req.query.major),
+            minorVersion: parseInt(req.query.minor),
+            patch: parseInt(req.query.patch),
+            shaderformat: req.query.shaderformat || "",
+        });
+        res.json(response.data.result);
+    },
 
 	cookedContentChunk: async function (req, res) {
 		res.setHeader("Content-Type", "application/octet-stream");

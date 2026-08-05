@@ -848,6 +848,7 @@
         "url_m": "https://cdn2.unrealengine.com/partyroyalelogo-640-640x360-afb9a7354760.jpg",
         "url": "https://cdn2.unrealengine.com/partyroyalelogo-1920-1920x1080-199a4b893ba3.jpg"
       },
+      "product_tag": "Product.BR.Papaya",
       "tagline": "Welcome to the Party! Leave your weapons and mats behind and hang out with friends, play games, perfect your skydive and more. The party’s just getting started!",
       "matchmaking": {
         "override_playlist": "playlist_papaya"
@@ -2545,6 +2546,72 @@
       "title": "Elite Stronghold",
       "matchmaking": {
         "override_playlist": "playlist_matchmistsolo"
+      }
+    },
+    "version": 1,
+    "active": true,
+    "disabled": false,
+    "created": "2025-05-05T20:29:16.611Z",
+    "published": "2025-05-05T20:29:16.611Z",
+    "updated": "2025-08-26T20:32:22.689Z",
+    "descriptionTags": [],
+    "moderationStatus": "Unmoderated",
+    "lastActivatedDate": "2025-05-05T20:29:16.542Z",
+    "discoveryIntent": "PUBLIC",
+    "linkState": "LIVE"
+  },
+  {
+    "namespace": "fn",
+    "accountId": "epic",
+    "creatorName": "Epic",
+    "mnemonic": "playlist_ropesmilesolo",
+    "linkType": "BR:Playlist",
+    "metadata": {
+      "lobby_background_image_urls": {
+        "url": "http://localhost:5595/cdn2-unrealengine/cdn-uploader-MKART_Reload_RopeSmile_41.30_LobbBG_Final_4K-be5327cb.jpg"
+      },
+      "required_content": {
+        "verse_uris": [
+          "/Fortnite.com/GameFeatures/BRRoot",
+          "/Fortnite.com/GameFeatures/CreativeRoot"
+        ]
+      },
+      "predownload_link_codes": [
+        "6055-0112-2417"
+      ],
+      "alt_title": {
+        "de": "Springfield",
+        "ru": "\u0421\u043f\u0440\u0438\u043d\u0433\u0444\u0438\u043b\u0434",
+        "ko": "\uc2a4\ud504\ub9c1\ud544\ub4dc",
+        "pt": "Springfield",
+        "zh-hant": "\u6625\u7530\u5e02",
+        "zh-hans": "\u6625\u7530",
+        "it": "Springfield",
+        "fr": "Springfield",
+        "es": "Springfield",
+        "ar": "\u0633\u0628\u0631\u064a\u0646\u063a\u0641\u064a\u0644\u062f",
+        "vi": "Springfield",
+        "th": "\u0e2a\u0e1b\u0e23\u0e34\u0e07\u0e1f\u0e35\u0e25\u0e14\u0e4c",
+        "ja": "\u30b9\u30d7\u30ea\u30f3\u30b0\u30d5\u30a3\u30fc\u30eb\u30c9",
+        "id": "Springfield",
+        "pl": "Springfield",
+        "es-419": "Springfield",
+        "tr": "Springfield"
+      },
+      "favorite_override": "set_blastberry_playlists",
+      "parent_set": "set_blastberry_playlists",
+      "play_history_override": "set_blastberry_playlists",
+      "block_cascading_data": "true",
+      "image_url": "https://cdn2.unrealengine.com/links-admin-EN_FNBR_Reload_41-30_Ropesmile_KeyArt_DiscoverTile_1920x1080-885032bc.jpg",
+      "product_tag": "Product.BlastBerry.Build",
+      "image_urls": {
+            "url_s": "https://cdn2.unrealengine.com/links-admin-EN_FNBR_Reload_41-30_Ropesmile_KeyArt_DiscoverTile_480x270-f8d72718.jpg",
+            "url_m": "https://cdn2.unrealengine.com/links-admin-EN_FNBR_Reload_41-30_Ropesmile_KeyArt_DiscoverTile_640x360-bbbb83d1.jpg",
+            "url": "https://cdn2.unrealengine.com/links-admin-EN_FNBR_Reload_41-30_Ropesmile_KeyArt_DiscoverTile_1920x1080-885032bc.jpg"
+        },
+      "title": "Springfield",
+      "matchmaking": {
+        "override_playlist": "playlist_ropesmilesolo"
       }
     },
     "version": 1,
