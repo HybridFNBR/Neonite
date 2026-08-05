@@ -496,6 +496,14 @@ module.exports = {
 									"lockStatus": "UNLOCKED",
 									"lockStatusReason": "NONE",
 									"isVisible": true
+								},
+								{
+									"linkCode": "playlist_ropesmilesolo",
+									"isFavorite": false,
+									"globalCCU": 0,
+									"lockStatus": "UNLOCKED",
+									"lockStatusReason": "NONE",
+									"isVisible": true
 								}
 
 							],
