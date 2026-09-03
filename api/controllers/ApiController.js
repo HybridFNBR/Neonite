@@ -65,7 +65,7 @@ module.exports = {
 		res.setHeader("Content-Type", "application/octet-stream");
 
 		const cacheDir = path.join(process.cwd(), "cache/ChunksV4");
-		const cacheFile = path.join(cacheDir, req.params.chunkFile);
+		const cacheFile = path.join(cacheDir, path.basename(req.params.chunkFile));
 
 		if (!fs.existsSync(cacheDir)) {
 			fs.mkdirSync(cacheDir, { recursive: true });
@@ -86,7 +86,7 @@ module.exports = {
 		res.setHeader("Content-Type", "application/octet-stream");
 
 		const cacheDir = path.join(process.cwd(), "cache/ias");
-		const cacheFile = path.join(cacheDir, req.params.Hash);
+		const cacheFile = path.join(cacheDir, path.basename(req.params.Hash));
 
 		if (!fs.existsSync(cacheDir)) {
 			fs.mkdirSync(cacheDir, { recursive: true });
@@ -107,7 +107,7 @@ module.exports = {
 		res.setHeader("Content-Type", "application/octet-stream");
 
 		const cacheDir = path.join(process.cwd(), "cache/ias");
-		const cacheFile = path.join(cacheDir, req.params.chunkFile);
+		const cacheFile = path.join(cacheDir, path.basename(req.params.chunkFile));
 
 		if (!fs.existsSync(cacheDir)) {
 			fs.mkdirSync(cacheDir, { recursive: true });
@@ -613,7 +613,7 @@ module.exports = {
 			"iss": "epicgames",
 			"exp": 1701790200,
 			"iat": 1701789900
-		}, "ES256");
+		}, require('crypto').randomBytes(32).toString('hex'), { algorithm: "HS256" });
 		res.set("Content-Type", "application/jwt;charset=utf-8")
 		res.send(`wasp~${waspToken}`)
 	},
