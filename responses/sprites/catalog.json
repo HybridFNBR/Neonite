@@ -1,1227 +1,1227 @@
 {
-  "FossilMealSprite_Variant_Holofoil" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 10000
-    },
-    "templateId" : "ExtractableRelic:fossilmealsprite_variant_holofoil"
-  },
-  "PedicureAntacidSprite_Variant_A" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 6750
-    },
-    "templateId" : "ExtractableRelic:pedicureantacidsprite_variant_a"
-  },
-  "PeelySprite_Variant_Gold" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 6750
-    },
-    "templateId" : "ExtractableRelic:peelysprite_variant_gold"
-  },
-  "SleepySprite_Variant_Candy" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 6750
-    },
-    "templateId" : "ExtractableRelic:sleepysprite_variant_candy"
-  },
-  "PunkSprite_Variant_Galaxy" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 6750
-    },
-    "templateId" : "ExtractableRelic:punksprite_variant_galaxy"
-  },
-  "DemonSprite_Variant_Gold" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 4000
-    },
-    "templateId" : "ExtractableRelic:demonsprite_variant_gold"
-  },
-  "Spitfire_Variation_Candy" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 2700
-    },
-    "templateId" : "ExtractableRelic:spitfire_variation_candy"
-  },
-  "EarthSprite_Variant_Cube" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 2700
-    },
-    "templateId" : "ExtractableRelic:earthsprite_variant_cube"
-  },
-  "ZeroPointSprite_Variant_Candy" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 10000
-    },
-    "templateId" : "ExtractableRelic:zeropointsprite_variant_candy"
-  },
-  "DemonSprite_Variant_Galaxy" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 4000
-    },
-    "templateId" : "ExtractableRelic:demonsprite_variant_galaxy"
-  },
-  "Water_Variant_Galaxy" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 2700
-    },
-    "templateId" : "ExtractableRelic:water_variant_galaxy"
-  },
-  "DrifterSprite_Variant_Gold" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 4000
-    },
-    "templateId" : "ExtractableRelic:driftersprite_variant_gold"
-  },
-  "DemonSprite_Variant_Gem" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 4000
+  "FossilMealSprite_Variant_Holofoil": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 10000
+    },
+    "templateId": "ExtractableRelic:fossilmealsprite_variant_holofoil"
+  },
+  "PedicureAntacidSprite_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:pedicureantacidsprite_variant_a"
+  },
+  "PeelySprite_Variant_Gold": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:peelysprite_variant_gold"
+  },
+  "SleepySprite_Variant_Candy": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:sleepysprite_variant_candy"
+  },
+  "PunkSprite_Variant_Galaxy": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:punksprite_variant_galaxy"
+  },
+  "DemonSprite_Variant_Gold": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 4000
+    },
+    "templateId": "ExtractableRelic:demonsprite_variant_gold"
+  },
+  "Spitfire_Variation_Candy": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 2700
+    },
+    "templateId": "ExtractableRelic:spitfire_variation_candy"
+  },
+  "EarthSprite_Variant_Cube": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 2700
+    },
+    "templateId": "ExtractableRelic:earthsprite_variant_cube"
+  },
+  "ZeroPointSprite_Variant_Candy": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 10000
+    },
+    "templateId": "ExtractableRelic:zeropointsprite_variant_candy"
+  },
+  "DemonSprite_Variant_Galaxy": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 4000
+    },
+    "templateId": "ExtractableRelic:demonsprite_variant_galaxy"
+  },
+  "Water_Variant_Galaxy": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 2700
+    },
+    "templateId": "ExtractableRelic:water_variant_galaxy"
+  },
+  "DrifterSprite_Variant_Gold": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 4000
+    },
+    "templateId": "ExtractableRelic:driftersprite_variant_gold"
+  },
+  "DemonSprite_Variant_Gem": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 4000
     },
-    "templateId" : "ExtractableRelic:demonsprite_variant_gem"
+    "templateId": "ExtractableRelic:demonsprite_variant_gem"
   },
-  "EarthSprite_Variant_Galaxy" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 2700
+  "EarthSprite_Variant_Galaxy": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 2700
     },
-    "templateId" : "ExtractableRelic:earthsprite_variant_galaxy"
+    "templateId": "ExtractableRelic:earthsprite_variant_galaxy"
   },
-  "GhostSprite_Variant_Galaxy" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 4000
+  "GhostSprite_Variant_Galaxy": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 4000
     },
-    "templateId" : "ExtractableRelic:ghostsprite_variant_galaxy"
+    "templateId": "ExtractableRelic:ghostsprite_variant_galaxy"
   },
-  "SevenSprite_Variant_A" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 4500
+  "SevenSprite_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 4500
     },
-    "templateId" : "ExtractableRelic:sevensprite_variant_a"
+    "templateId": "ExtractableRelic:sevensprite_variant_a"
   },
-  "Spitfire_Variation_A" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : true,
-      "summonCost" : 100
+  "Spitfire_Variation_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": true,
+      "summonCost": 100
     },
-    "templateId" : "ExtractableRelic:spitfire_variation_a"
+    "templateId": "ExtractableRelic:spitfire_variation_a"
   },
-  "Water_Variant_Gem" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 2700
+  "Water_Variant_Gem": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 2700
     },
-    "templateId" : "ExtractableRelic:water_variant_gem"
+    "templateId": "ExtractableRelic:water_variant_gem"
   },
-  "LlamaSprite_Variant_Galaxy" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 6750
+  "LlamaSprite_Variant_Galaxy": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
     },
-    "templateId" : "ExtractableRelic:llamasprite_variant_galaxy"
+    "templateId": "ExtractableRelic:llamasprite_variant_galaxy"
   },
-  "Spitfire_Variation_Gold" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 2700
+  "Spitfire_Variation_Gold": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 2700
     },
-    "templateId" : "ExtractableRelic:spitfire_variation_gold"
+    "templateId": "ExtractableRelic:spitfire_variation_gold"
   },
-  "LlamaSprite_Variant_A" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 4500
+  "LlamaSprite_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 4500
     },
-    "templateId" : "ExtractableRelic:llamasprite_variant_a"
+    "templateId": "ExtractableRelic:llamasprite_variant_a"
   },
-  "Spitfire_Variation_Galaxy" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 2700
+  "Spitfire_Variation_Galaxy": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 2700
     },
-    "templateId" : "ExtractableRelic:spitfire_variation_galaxy"
+    "templateId": "ExtractableRelic:spitfire_variation_galaxy"
   },
-  "LlamaSprite_Variant_Candy" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 6750
+  "LlamaSprite_Variant_Candy": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
     },
-    "templateId" : "ExtractableRelic:llamasprite_variant_candy"
+    "templateId": "ExtractableRelic:llamasprite_variant_candy"
   },
-  "GrimSprite_Variant_Galaxy" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 10000
+  "GrimSprite_Variant_Galaxy": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 10000
     },
-    "templateId" : "ExtractableRelic:grimsprite_variant_galaxy"
+    "templateId": "ExtractableRelic:grimsprite_variant_galaxy"
   },
-  "AirSprite_Variant_Galaxy" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 2700
+  "AirSprite_Variant_Galaxy": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 2700
     },
-    "templateId" : "ExtractableRelic:airsprite_variant_galaxy"
+    "templateId": "ExtractableRelic:airsprite_variant_galaxy"
   },
-  "CokeParmesan_Variant_A" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 6750
+  "CokeParmesan_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
     },
-    "templateId" : "ExtractableRelic:cokeparmesan_variant_a"
+    "templateId": "ExtractableRelic:cokeparmesan_variant_a"
   },
-  "FishySprite_Variant_Candy" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 2700
+  "FishySprite_Variant_Candy": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 2700
     },
-    "templateId" : "ExtractableRelic:fishysprite_variant_candy"
+    "templateId": "ExtractableRelic:fishysprite_variant_candy"
   },
-  "AirSprite_Variant_A" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 1800
+  "AirSprite_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 1800
     },
-    "templateId" : "ExtractableRelic:airsprite_variant_a"
+    "templateId": "ExtractableRelic:airsprite_variant_a"
   },
-  "SoccerSprite_Variant_A" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 2700
+  "SoccerSprite_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 2700
     },
-    "templateId" : "ExtractableRelic:soccersprite_variant_a"
+    "templateId": "ExtractableRelic:soccersprite_variant_a"
   },
-  "GhostSprite_Variant_Gold" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 4000
+  "GhostSprite_Variant_Gold": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 4000
     },
-    "templateId" : "ExtractableRelic:ghostsprite_variant_gold"
+    "templateId": "ExtractableRelic:ghostsprite_variant_gold"
   },
-  "FossilMealSprite_Variant_A" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 6750
+  "FossilMealSprite_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
     },
-    "templateId" : "ExtractableRelic:fossilmealsprite_variant_a"
+    "templateId": "ExtractableRelic:fossilmealsprite_variant_a"
   },
-  "GrimSprite_Variant_A" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 6750
+  "GrimSprite_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
     },
-    "templateId" : "ExtractableRelic:grimsprite_variant_a"
+    "templateId": "ExtractableRelic:grimsprite_variant_a"
   },
-  "FillerGruntSprite_Variant_A" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 6750
+  "FillerGruntSprite_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
     },
-    "templateId" : "ExtractableRelic:fillergruntsprite_variant_a"
+    "templateId": "ExtractableRelic:fillergruntsprite_variant_a"
   },
-  "AirSprite_Variant_Candy" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 2700
+  "AirSprite_Variant_Candy": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 2700
     },
-    "templateId" : "ExtractableRelic:airsprite_variant_candy"
+    "templateId": "ExtractableRelic:airsprite_variant_candy"
   },
-  "AirSprite_Variant_Gold" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 2700
+  "AirSprite_Variant_Gold": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 2700
     },
-    "templateId" : "ExtractableRelic:airsprite_variant_gold"
+    "templateId": "ExtractableRelic:airsprite_variant_gold"
   },
-  "ZeroPointSprite_Variant_Holofoil" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 10000
+  "ZeroPointSprite_Variant_Holofoil": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 10000
     },
-    "templateId" : "ExtractableRelic:zeropointsprite_variant_holofoil"
+    "templateId": "ExtractableRelic:zeropointsprite_variant_holofoil"
   },
-  "ZeroPointSprite_Variant_Quack" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 10000
+  "ZeroPointSprite_Variant_Quack": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 10000
     },
-    "templateId" : "ExtractableRelic:zeropointsprite_variant_quack"
+    "templateId": "ExtractableRelic:zeropointsprite_variant_quack"
   },
-  "DemonSprite_Variant_A" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 2700
+  "DemonSprite_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 2700
     },
-    "templateId" : "ExtractableRelic:demonsprite_variant_a"
+    "templateId": "ExtractableRelic:demonsprite_variant_a"
   },
-  "FishySprite_Variant_Galaxy" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 2700
+  "FishySprite_Variant_Galaxy": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 2700
     },
-    "templateId" : "ExtractableRelic:fishysprite_variant_galaxy"
+    "templateId": "ExtractableRelic:fishysprite_variant_galaxy"
   },
-  "BossSprite_Variant_A" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 4500
+  "BossSprite_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 4500
     },
-    "templateId" : "ExtractableRelic:bosssprite_variant_a"
+    "templateId": "ExtractableRelic:bosssprite_variant_a"
   },
-  "ZeroPointSprite_Variant_Gold" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 10000
+  "ZeroPointSprite_Variant_Gold": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 10000
     },
-    "templateId" : "ExtractableRelic:zeropointsprite_variant_gold"
+    "templateId": "ExtractableRelic:zeropointsprite_variant_gold"
   },
-  "EarthSprite_Variant_Gold" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 2700
+  "EarthSprite_Variant_Gold": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 2700
     },
-    "templateId" : "ExtractableRelic:earthsprite_variant_gold"
+    "templateId": "ExtractableRelic:earthsprite_variant_gold"
   },
-  "Water_Variant_Candy" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 2700
+  "Water_Variant_Candy": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 2700
     },
-    "templateId" : "ExtractableRelic:water_variant_candy"
+    "templateId": "ExtractableRelic:water_variant_candy"
   },
-  "FishySprite_Variant_Cube" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 2700
+  "FishySprite_Variant_Cube": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 2700
     },
-    "templateId" : "ExtractableRelic:fishysprite_variant_cube"
+    "templateId": "ExtractableRelic:fishysprite_variant_cube"
   },
-  "GrimSprite_Variant_Gem" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 10000
+  "GrimSprite_Variant_Gem": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 10000
     },
-    "templateId" : "ExtractableRelic:grimsprite_variant_gem"
+    "templateId": "ExtractableRelic:grimsprite_variant_gem"
   },
-  "KingSprite_Variant_A" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 2700
+  "KingSprite_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 2700
     },
-    "templateId" : "ExtractableRelic:kingsprite_variant_a"
+    "templateId": "ExtractableRelic:kingsprite_variant_a"
   },
-  "ZeroPointSprite_Variant_Galaxy" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 10000
+  "ZeroPointSprite_Variant_Galaxy": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 10000
     },
-    "templateId" : "ExtractableRelic:zeropointsprite_variant_galaxy"
+    "templateId": "ExtractableRelic:zeropointsprite_variant_galaxy"
   },
-  "GrimSprite_Variant_Candy" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 10000
+  "GrimSprite_Variant_Candy": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 10000
     },
-    "templateId" : "ExtractableRelic:grimsprite_variant_candy"
+    "templateId": "ExtractableRelic:grimsprite_variant_candy"
   },
-  "EarthSprite_Variant_Candy" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 2700
+  "EarthSprite_Variant_Candy": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 2700
     },
-    "templateId" : "ExtractableRelic:earthsprite_variant_candy"
+    "templateId": "ExtractableRelic:earthsprite_variant_candy"
   },
-  "BossSprite_Variant_Gold" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 6750
+  "BossSprite_Variant_Gold": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
     },
-    "templateId" : "ExtractableRelic:bosssprite_variant_gold"
+    "templateId": "ExtractableRelic:bosssprite_variant_gold"
   },
-  "DuckSprite_Variant_Gold" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 4000
+  "DuckSprite_Variant_Gold": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 4000
     },
-    "templateId" : "ExtractableRelic:ducksprite_variant_gold"
+    "templateId": "ExtractableRelic:ducksprite_variant_gold"
   },
-  "FossilMealSprite_Variant_Galaxy" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 10000
+  "FossilMealSprite_Variant_Galaxy": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 10000
     },
-    "templateId" : "ExtractableRelic:fossilmealsprite_variant_galaxy"
+    "templateId": "ExtractableRelic:fossilmealsprite_variant_galaxy"
   },
-  "SoccerSprite_Variant_Gold" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 4000
+  "SoccerSprite_Variant_Gold": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 4000
     },
-    "templateId" : "ExtractableRelic:soccersprite_variant_gold"
+    "templateId": "ExtractableRelic:soccersprite_variant_gold"
   },
-  "DuckSprite_Variant_Gem" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 4000
+  "DuckSprite_Variant_Gem": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 4000
     },
-    "templateId" : "ExtractableRelic:ducksprite_variant_gem"
+    "templateId": "ExtractableRelic:ducksprite_variant_gem"
   },
-  "DemonSprite_Variant_Candy" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 4000
+  "DemonSprite_Variant_Candy": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 4000
     },
-    "templateId" : "ExtractableRelic:demonsprite_variant_candy"
+    "templateId": "ExtractableRelic:demonsprite_variant_candy"
   },
-  "Water_Variant_Base" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : true,
-      "summonCost" : 100
+  "Water_Variant_Base": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": true,
+      "summonCost": 100
     },
-    "templateId" : "ExtractableRelic:water_variant_base"
+    "templateId": "ExtractableRelic:water_variant_base"
   },
-  "KingSprite_Variant_Holofoil" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 4000
+  "KingSprite_Variant_Holofoil": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 4000
     },
-    "templateId" : "ExtractableRelic:kingsprite_variant_holofoil"
+    "templateId": "ExtractableRelic:kingsprite_variant_holofoil"
   },
-  "FossilMealSprite_Variant_Cube" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 10000
+  "FossilMealSprite_Variant_Cube": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 10000
     },
-    "templateId" : "ExtractableRelic:fossilmealsprite_variant_cube"
+    "templateId": "ExtractableRelic:fossilmealsprite_variant_cube"
   },
-  "SleepySprite_Variant_Galactic" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 6750
+  "SleepySprite_Variant_Galactic": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
     },
-    "templateId" : "ExtractableRelic:sleepysprite_variant_galactic"
+    "templateId": "ExtractableRelic:sleepysprite_variant_galactic"
   },
-  "DuckSprite_Variant_A" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 2700
+  "DuckSprite_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 2700
     },
-    "templateId" : "ExtractableRelic:ducksprite_variant_a"
+    "templateId": "ExtractableRelic:ducksprite_variant_a"
   },
-  "SevenSprite_Variant_Gold" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 6750
+  "SevenSprite_Variant_Gold": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
     },
-    "templateId" : "ExtractableRelic:sevensprite_variant_gold"
+    "templateId": "ExtractableRelic:sevensprite_variant_gold"
   },
-  "Spitfire_Variation_Holofoil" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 2700
+  "Spitfire_Variation_Holofoil": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 2700
     },
-    "templateId" : "ExtractableRelic:spitfire_variation_holofoil"
+    "templateId": "ExtractableRelic:spitfire_variation_holofoil"
   },
-  "PeelySprite_Variant_Holofoil" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 6750
+  "PeelySprite_Variant_Holofoil": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
     },
-    "templateId" : "ExtractableRelic:peelysprite_variant_holofoil"
+    "templateId": "ExtractableRelic:peelysprite_variant_holofoil"
   },
-  "BossSprite_Variant_Candy" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 6750
+  "BossSprite_Variant_Candy": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
     },
-    "templateId" : "ExtractableRelic:bosssprite_variant_candy"
+    "templateId": "ExtractableRelic:bosssprite_variant_candy"
   },
-  "BossSprite_Variant_Galaxy" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 6750
+  "BossSprite_Variant_Galaxy": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
     },
-    "templateId" : "ExtractableRelic:bosssprite_variant_galaxy"
+    "templateId": "ExtractableRelic:bosssprite_variant_galaxy"
   },
-  "GrimSprite_Variant_Cube" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 10000
+  "GrimSprite_Variant_Cube": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 10000
     },
-    "templateId" : "ExtractableRelic:grimsprite_variant_cube"
+    "templateId": "ExtractableRelic:grimsprite_variant_cube"
   },
-  "PeelySprite_Variant_A" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 4500
+  "PeelySprite_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 4500
     },
-    "templateId" : "ExtractableRelic:peelysprite_variant_a"
+    "templateId": "ExtractableRelic:peelysprite_variant_a"
   },
-  "FishySprite_Variant_A" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 1800
+  "FishySprite_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 1800
     },
-    "templateId" : "ExtractableRelic:fishysprite_variant_a"
+    "templateId": "ExtractableRelic:fishysprite_variant_a"
   },
-  "SevenSprite_Variant_Holofoil" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 6750
+  "SevenSprite_Variant_Holofoil": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
     },
-    "templateId" : "ExtractableRelic:sevensprite_variant_holofoil"
+    "templateId": "ExtractableRelic:sevensprite_variant_holofoil"
   },
-  "SoccerSprite_Variant_Galaxy" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 4000
+  "SoccerSprite_Variant_Galaxy": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 4000
     },
-    "templateId" : "ExtractableRelic:soccersprite_variant_galaxy"
+    "templateId": "ExtractableRelic:soccersprite_variant_galaxy"
   },
-  "SoccerSprite_Variant_Holofoil" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 4000
+  "SoccerSprite_Variant_Holofoil": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 4000
     },
-    "templateId" : "ExtractableRelic:soccersprite_variant_holofoil"
+    "templateId": "ExtractableRelic:soccersprite_variant_holofoil"
   },
-  "EarthSprite_Variant_Quack" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 2700
+  "EarthSprite_Variant_Quack": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 2700
     },
-    "templateId" : "ExtractableRelic:earthsprite_variant_quack"
+    "templateId": "ExtractableRelic:earthsprite_variant_quack"
   },
-  "SleepySprite_Variant_Gold" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 6750
+  "SleepySprite_Variant_Gold": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
     },
-    "templateId" : "ExtractableRelic:sleepysprite_variant_gold"
+    "templateId": "ExtractableRelic:sleepysprite_variant_gold"
   },
-  "PunkSprite_Variant_Cube" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 6750
+  "PunkSprite_Variant_Cube": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
     },
-    "templateId" : "ExtractableRelic:punksprite_variant_cube"
+    "templateId": "ExtractableRelic:punksprite_variant_cube"
   },
-  "FossilMealSprite_Variant_Gold" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 10000
+  "FossilMealSprite_Variant_Gold": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 10000
     },
-    "templateId" : "ExtractableRelic:fossilmealsprite_variant_gold"
+    "templateId": "ExtractableRelic:fossilmealsprite_variant_gold"
   },
-  "GhostSprite_Variant_A" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 2700
+  "GhostSprite_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 2700
     },
-    "templateId" : "ExtractableRelic:ghostsprite_variant_a"
+    "templateId": "ExtractableRelic:ghostsprite_variant_a"
   },
-  "DrifterSprite_Variant_A" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 2700
+  "DrifterSprite_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 2700
     },
-    "templateId" : "ExtractableRelic:driftersprite_variant_a"
+    "templateId": "ExtractableRelic:driftersprite_variant_a"
   },
-  "DrifterSprite_Variant_Gem" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 4000
+  "DrifterSprite_Variant_Gem": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 4000
     },
-    "templateId" : "ExtractableRelic:driftersprite_variant_gem"
+    "templateId": "ExtractableRelic:driftersprite_variant_gem"
   },
-  "FishySprite_Variant_Gold" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 2700
+  "FishySprite_Variant_Gold": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 2700
     },
-    "templateId" : "ExtractableRelic:fishysprite_variant_gold"
+    "templateId": "ExtractableRelic:fishysprite_variant_gold"
   },
-  "ZeroPointSprite_Variant_Gem" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 10000
+  "ZeroPointSprite_Variant_Gem": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 10000
     },
-    "templateId" : "ExtractableRelic:zeropointsprite_variant_gem"
+    "templateId": "ExtractableRelic:zeropointsprite_variant_gem"
   },
-  "BossSprite_Variant_Cube" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 6750
+  "BossSprite_Variant_Cube": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
     },
-    "templateId" : "ExtractableRelic:bosssprite_variant_cube"
+    "templateId": "ExtractableRelic:bosssprite_variant_cube"
   },
-  "FossilMealSprite_Variant_Candy" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 10000
+  "FossilMealSprite_Variant_Candy": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 10000
     },
-    "templateId" : "ExtractableRelic:fossilmealsprite_variant_candy"
+    "templateId": "ExtractableRelic:fossilmealsprite_variant_candy"
   },
-  "DuckSprite_Variant_Galaxy" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 4000
+  "DuckSprite_Variant_Galaxy": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 4000
     },
-    "templateId" : "ExtractableRelic:ducksprite_variant_galaxy"
+    "templateId": "ExtractableRelic:ducksprite_variant_galaxy"
   },
-  "ZeroPointSprite_Variant_Cube" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 10000
+  "ZeroPointSprite_Variant_Cube": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 10000
     },
-    "templateId" : "ExtractableRelic:zeropointsprite_variant_cube"
+    "templateId": "ExtractableRelic:zeropointsprite_variant_cube"
   },
-  "GrimSprite_Variant_Holofoil" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 10000
+  "GrimSprite_Variant_Holofoil": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 10000
     },
-    "templateId" : "ExtractableRelic:grimsprite_variant_holofoil"
+    "templateId": "ExtractableRelic:grimsprite_variant_holofoil"
   },
-  "CompanyStargazer_Variant_A" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 6750
+  "CompanyStargazer_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
     },
-    "templateId" : "ExtractableRelic:companystargazer_variant_a"
+    "templateId": "ExtractableRelic:companystargazer_variant_a"
   },
-  "PeelySprite_Variant_Galaxy" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 6750
+  "PeelySprite_Variant_Galaxy": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
     },
-    "templateId" : "ExtractableRelic:peelysprite_variant_galaxy"
+    "templateId": "ExtractableRelic:peelysprite_variant_galaxy"
   },
-  "LlamaSprite_Variant_Gold" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 6750
+  "LlamaSprite_Variant_Gold": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
     },
-    "templateId" : "ExtractableRelic:llamasprite_variant_gold"
+    "templateId": "ExtractableRelic:llamasprite_variant_gold"
   },
-  "PunkSprite_Variant_Candy" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 6750
+  "PunkSprite_Variant_Candy": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
     },
-    "templateId" : "ExtractableRelic:punksprite_variant_candy"
+    "templateId": "ExtractableRelic:punksprite_variant_candy"
   },
-  "Water_Variant_Gold" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 2700
+  "Water_Variant_Gold": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 2700
     },
-    "templateId" : "ExtractableRelic:water_variant_gold"
+    "templateId": "ExtractableRelic:water_variant_gold"
   },
-  "Spitfire_Variation_Cube" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 2700
+  "Spitfire_Variation_Cube": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 2700
     },
-    "templateId" : "ExtractableRelic:spitfire_variation_cube"
+    "templateId": "ExtractableRelic:spitfire_variation_cube"
   },
-  "BurntPeanut_Variation_A" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 6750
+  "BurntPeanut_Variation_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
     },
-    "templateId" : "ExtractableRelic:burntpeanut_variation_a"
+    "templateId": "ExtractableRelic:burntpeanut_variation_a"
   },
-  "ZeroPointSprite_Variant_A" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 6750
+  "ZeroPointSprite_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
     },
-    "templateId" : "ExtractableRelic:zeropointsprite_variant_a"
+    "templateId": "ExtractableRelic:zeropointsprite_variant_a"
   },
-  "SleepySprite_Variant_A" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 4500
+  "SleepySprite_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 4500
     },
-    "templateId" : "ExtractableRelic:sleepysprite_variant_a"
+    "templateId": "ExtractableRelic:sleepysprite_variant_a"
   },
-  "GhostSprite_Variant_Candy" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 4000
+  "GhostSprite_Variant_Candy": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 4000
     },
-    "templateId" : "ExtractableRelic:ghostsprite_variant_candy"
+    "templateId": "ExtractableRelic:ghostsprite_variant_candy"
   },
-  "SevenSprite_Variant_Galaxy" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 6750
+  "SevenSprite_Variant_Galaxy": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
     },
-    "templateId" : "ExtractableRelic:sevensprite_variant_galaxy"
+    "templateId": "ExtractableRelic:sevensprite_variant_galaxy"
   },
-  "AirSprite_Variant_Holofoil" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 2700
+  "AirSprite_Variant_Holofoil": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 2700
     },
-    "templateId" : "ExtractableRelic:airsprite_variant_holofoil"
+    "templateId": "ExtractableRelic:airsprite_variant_holofoil"
   },
-  "GrimSprite_Variant_Gold" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 10000
+  "GrimSprite_Variant_Gold": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 10000
     },
-    "templateId" : "ExtractableRelic:grimsprite_variant_gold"
+    "templateId": "ExtractableRelic:grimsprite_variant_gold"
   },
-  "PunkSprite_Variant_A" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 4500
+  "PunkSprite_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 4500
     },
-    "templateId" : "ExtractableRelic:punksprite_variant_a"
+    "templateId": "ExtractableRelic:punksprite_variant_a"
   },
-  "Water_Variant_Holofoil" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 2700
+  "Water_Variant_Holofoil": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 2700
     },
-    "templateId" : "ExtractableRelic:water_variant_holofoil"
+    "templateId": "ExtractableRelic:water_variant_holofoil"
   },
-  "KingSprite_Variant_Galaxy" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 4000
+  "KingSprite_Variant_Galaxy": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 4000
     },
-    "templateId" : "ExtractableRelic:kingsprite_variant_galaxy"
+    "templateId": "ExtractableRelic:kingsprite_variant_galaxy"
   },
-  "Water_Variant_Quack" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 2700
+  "Water_Variant_Quack": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 2700
     },
-    "templateId" : "ExtractableRelic:water_variant_quack"
+    "templateId": "ExtractableRelic:water_variant_quack"
   },
-  "PunkSprite_Variant_Gold" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 6750
+  "PunkSprite_Variant_Gold": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
     },
-    "templateId" : "ExtractableRelic:punksprite_variant_gold"
+    "templateId": "ExtractableRelic:punksprite_variant_gold"
   },
-  "KingSprite_Variant_Gold" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 4000
+  "KingSprite_Variant_Gold": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 4000
     },
-    "templateId" : "ExtractableRelic:kingsprite_variant_gold"
+    "templateId": "ExtractableRelic:kingsprite_variant_gold"
   },
-  "GhostSprite_Variant_Holofoil" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 4000
+  "GhostSprite_Variant_Holofoil": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 4000
     },
-    "templateId" : "ExtractableRelic:ghostsprite_variant_holofoil"
+    "templateId": "ExtractableRelic:ghostsprite_variant_holofoil"
   },
-  "LlamaSprite_Variant_Gem" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 6750
+  "LlamaSprite_Variant_Gem": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
     },
-    "templateId" : "ExtractableRelic:llamasprite_variant_gem"
+    "templateId": "ExtractableRelic:llamasprite_variant_gem"
   },
-  "SleepySprite_Variant_Cube" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 6750
+  "SleepySprite_Variant_Cube": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
     },
-    "templateId" : "ExtractableRelic:sleepysprite_variant_cube"
+    "templateId": "ExtractableRelic:sleepysprite_variant_cube"
   },
-  "EarthSprite_Variant_A" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : true,
-      "summonCost" : 100
+  "EarthSprite_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": true,
+      "summonCost": 100
     },
-    "templateId" : "ExtractableRelic:earthsprite_variant_a"
+    "templateId": "ExtractableRelic:earthsprite_variant_a"
   },
-  "PeelySprite_Variant_Candy" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 6750
+  "PeelySprite_Variant_Candy": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
     },
-    "templateId" : "ExtractableRelic:peelysprite_variant_candy"
+    "templateId": "ExtractableRelic:peelysprite_variant_candy"
   },
-  "SoccerSprite_Variant_Candy" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 4000
+  "SoccerSprite_Variant_Candy": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 4000
     },
-    "templateId" : "ExtractableRelic:soccersprite_variant_candy"
+    "templateId": "ExtractableRelic:soccersprite_variant_candy"
   },
-  "DuckSprite_Variant_Candy" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 4000
+  "DuckSprite_Variant_Candy": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 4000
     },
-    "templateId" : "ExtractableRelic:ducksprite_variant_candy"
+    "templateId": "ExtractableRelic:ducksprite_variant_candy"
   },
-  "DrifterSprite_Variant_Galaxy" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 4000
+  "DrifterSprite_Variant_Galaxy": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 4000
     },
-    "templateId" : "ExtractableRelic:driftersprite_variant_galaxy"
+    "templateId": "ExtractableRelic:driftersprite_variant_galaxy"
   },
-  "EarthSprite_Variant_Gem" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 2700
+  "EarthSprite_Variant_Gem": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 2700
     },
-    "templateId" : "ExtractableRelic:earthsprite_variant_gem"
+    "templateId": "ExtractableRelic:earthsprite_variant_gem"
   },
-  "KingSprite_Variant_Candy" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 4000
+  "KingSprite_Variant_Candy": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 4000
     },
-    "templateId" : "ExtractableRelic:kingsprite_variant_candy"
+    "templateId": "ExtractableRelic:kingsprite_variant_candy"
   },
-  "DrifterSprite_Variant_Candy" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 4000
+  "DrifterSprite_Variant_Candy": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 4000
     },
-    "templateId" : "ExtractableRelic:driftersprite_variant_candy"
+    "templateId": "ExtractableRelic:driftersprite_variant_candy"
   },
-  "SevenSprite_Variant_Candy" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 6750
+  "SevenSprite_Variant_Candy": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
     },
-    "templateId" : "ExtractableRelic:sevensprite_variant_candy"
+    "templateId": "ExtractableRelic:sevensprite_variant_candy"
   },
-  "Spitfire_Variation_Quack" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 2700
+  "Spitfire_Variation_Quack": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 2700
     },
-    "templateId" : "ExtractableRelic:spitfire_variation_quack"
+    "templateId": "ExtractableRelic:spitfire_variation_quack"
   },
-  "KillswitchSprite_Variant_Gold" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 2100
+  "KillswitchSprite_Variant_Gold": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 2100
     },
-    "templateId" : "ExtractableRelic:killswitchsprite_variant_gold"
+    "templateId": "ExtractableRelic:killswitchsprite_variant_gold"
   },
-  "BushRangerSprite_Variant_CheatMaster" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 1500
+  "BushRangerSprite_Variant_CheatMaster": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 1500
     },
-    "templateId" : "ExtractableRelic:bushrangersprite_variant_cheatmaster"
+    "templateId": "ExtractableRelic:bushrangersprite_variant_cheatmaster"
   },
-  "NarrowFleaSprite_Variant_A" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 1500
+  "NarrowFleaSprite_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 1500
     },
-    "templateId" : "ExtractableRelic:narrowfleasprite_variant_a"
+    "templateId": "ExtractableRelic:narrowfleasprite_variant_a"
   },
-  "NarrowFleaSprite_Variant_CheatMaster" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 1800
+  "NarrowFleaSprite_Variant_CheatMaster": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 1800
     },
-    "templateId" : "ExtractableRelic:narrowfleasprite_variant_cheatmaster"
+    "templateId": "ExtractableRelic:narrowfleasprite_variant_cheatmaster"
   },
-  "CosmicThunderDoubleJumpSprite_Variant_A" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 1750
+  "CosmicThunderDoubleJumpSprite_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 1750
     },
-    "templateId" : "ExtractableRelic:cosmicthunderdoublejumpsprite_variant_a"
+    "templateId": "ExtractableRelic:cosmicthunderdoublejumpsprite_variant_a"
   },
-  "CrownSprite_Variant_CheatMaster" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 2400
+  "CrownSprite_Variant_CheatMaster": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 2400
     },
-    "templateId" : "ExtractableRelic:crownsprite_variant_cheatmaster"
+    "templateId": "ExtractableRelic:crownsprite_variant_cheatmaster"
   },
-  "Jonesy_Variant_Gold" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 1500
+  "Jonesy_Variant_Gold": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 1500
     },
-    "templateId" : "ExtractableRelic:jonesy_variant_gold"
+    "templateId": "ExtractableRelic:jonesy_variant_gold"
   },
-  "BushRangerSprite_Variant_A" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : true,
-      "summonCost" : 100
+  "BushRangerSprite_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": true,
+      "summonCost": 100
     },
-    "templateId" : "ExtractableRelic:bushrangersprite_variant_a"
+    "templateId": "ExtractableRelic:bushrangersprite_variant_a"
   },
-  "KillswitchSprite_Variant_CheatMaster" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 2100
+  "KillswitchSprite_Variant_CheatMaster": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 2100
     },
-    "templateId" : "ExtractableRelic:killswitchsprite_variant_cheatmaster"
+    "templateId": "ExtractableRelic:killswitchsprite_variant_cheatmaster"
   },
-  "StormScoutSprite_Variant_A" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 1250
+  "StormScoutSprite_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 1250
     },
-    "templateId" : "ExtractableRelic:stormscoutsprite_variant_a"
+    "templateId": "ExtractableRelic:stormscoutsprite_variant_a"
   },
-  "Jonesy_Variant_A" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : true,
-      "summonCost" : 100
+  "Jonesy_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": true,
+      "summonCost": 100
     },
-    "templateId" : "ExtractableRelic:jonesy_variant_a"
+    "templateId": "ExtractableRelic:jonesy_variant_a"
   },
-  "StormScoutSprite_Variant_CheatMaster" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 1500
+  "StormScoutSprite_Variant_CheatMaster": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 1500
     },
-    "templateId" : "ExtractableRelic:stormscoutsprite_variant_cheatmaster"
+    "templateId": "ExtractableRelic:stormscoutsprite_variant_cheatmaster"
   },
-  "StormScoutSprite_Variant_Gold" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 1500
+  "StormScoutSprite_Variant_Gold": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 1500
     },
-    "templateId" : "ExtractableRelic:stormscoutsprite_variant_gold"
+    "templateId": "ExtractableRelic:stormscoutsprite_variant_gold"
   },
-  "CrownSprite_Variant_Gold" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 2400
+  "CrownSprite_Variant_Gold": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 2400
     },
-    "templateId" : "ExtractableRelic:crownsprite_variant_gold"
+    "templateId": "ExtractableRelic:crownsprite_variant_gold"
   },
-  "Dwarf_Variant_Gold" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 1500
+  "Dwarf_Variant_Gold": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 1500
     },
-    "templateId" : "ExtractableRelic:dwarf_variant_gold"
+    "templateId": "ExtractableRelic:dwarf_variant_gold"
   },
-  "Klombo_Variant_CheatMaster" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 2400
+  "Klombo_Variant_CheatMaster": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 2400
     },
-    "templateId" : "ExtractableRelic:klombo_variant_cheatmaster"
+    "templateId": "ExtractableRelic:klombo_variant_cheatmaster"
   },
-  "NarrowFleaMonkeySprite_Variant_A" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 1500
+  "NarrowFleaMonkeySprite_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 1500
     },
-    "templateId" : "ExtractableRelic:narrowfleamonkeysprite_variant_a"
+    "templateId": "ExtractableRelic:narrowfleamonkeysprite_variant_a"
   },
-  "NarrowFleaMonkeySprite_Variant_CheatMaster" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 1800
+  "NarrowFleaMonkeySprite_Variant_CheatMaster": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 1800
     },
-    "templateId" : "ExtractableRelic:narrowfleamonkeysprite_variant_cheatmaster"
+    "templateId": "ExtractableRelic:narrowfleamonkeysprite_variant_cheatmaster"
   },
-  "8BitBlaster_Variant_CheatMaster" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 1500
+  "8BitBlaster_Variant_CheatMaster": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 1500
     },
-    "templateId" : "ExtractableRelic:8bitblaster_variant_cheatmaster"
+    "templateId": "ExtractableRelic:8bitblaster_variant_cheatmaster"
   },
-  "Dwarf_Variant_A" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : true,
-      "summonCost" : 100
+  "Dwarf_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": true,
+      "summonCost": 100
     },
-    "templateId" : "ExtractableRelic:dwarf_variant_a"
+    "templateId": "ExtractableRelic:dwarf_variant_a"
   },
-  "8BitBlaster_Variant_Gold" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 1500
+  "8BitBlaster_Variant_Gold": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 1500
     },
-    "templateId" : "ExtractableRelic:8bitblaster_variant_gold"
+    "templateId": "ExtractableRelic:8bitblaster_variant_gold"
   },
-  "Klombo_Variant_Gold" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 2400
+  "Klombo_Variant_Gold": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 2400
     },
-    "templateId" : "ExtractableRelic:klombo_variant_gold"
+    "templateId": "ExtractableRelic:klombo_variant_gold"
   },
-  "NarrowFleaMonkeySprite_Variant_Gold" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 1800
+  "NarrowFleaMonkeySprite_Variant_Gold": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 1800
     },
-    "templateId" : "ExtractableRelic:narrowfleamonkeysprite_variant_gold"
+    "templateId": "ExtractableRelic:narrowfleamonkeysprite_variant_gold"
   },
-  "ReloadOverTimeSprite_Variant_CheatMaster" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 1800
+  "ReloadOverTimeSprite_Variant_CheatMaster": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 1800
     },
-    "templateId" : "ExtractableRelic:reloadovertimesprite_variant_cheatmaster"
+    "templateId": "ExtractableRelic:reloadovertimesprite_variant_cheatmaster"
   },
-  "NarrowFleaSprite_Variant_Gold" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 1800
+  "NarrowFleaSprite_Variant_Gold": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 1800
     },
-    "templateId" : "ExtractableRelic:narrowfleasprite_variant_gold"
+    "templateId": "ExtractableRelic:narrowfleasprite_variant_gold"
   },
-  "Klombo_Variant_A" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 2000
+  "Klombo_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 2000
     },
-    "templateId" : "ExtractableRelic:klombo_variant_a"
+    "templateId": "ExtractableRelic:klombo_variant_a"
   },
-  "KillswitchSprite_Variant_A" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 1750
+  "KillswitchSprite_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 1750
     },
-    "templateId" : "ExtractableRelic:killswitchsprite_variant_a"
+    "templateId": "ExtractableRelic:killswitchsprite_variant_a"
   },
-  "ReloadOverTimeSprite_Variant_A" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 1500
+  "ReloadOverTimeSprite_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 1500
     },
-    "templateId" : "ExtractableRelic:reloadovertimesprite_variant_a"
+    "templateId": "ExtractableRelic:reloadovertimesprite_variant_a"
   },
-  "CosmicThunderDoubleJumpSprite_Variant_CheatMaster" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 2100
+  "CosmicThunderDoubleJumpSprite_Variant_CheatMaster": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 2100
     },
-    "templateId" : "ExtractableRelic:cosmicthunderdoublejumpsprite_variant_cheatmaster"
+    "templateId": "ExtractableRelic:cosmicthunderdoublejumpsprite_variant_cheatmaster"
   },
-  "Jonesy_Variant_CheatMaster" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 1500
+  "Jonesy_Variant_CheatMaster": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 1500
     },
-    "templateId" : "ExtractableRelic:jonesy_variant_cheatmaster"
+    "templateId": "ExtractableRelic:jonesy_variant_cheatmaster"
   },
-  "ReloadOverTimeSprite_Variant_Gold" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 1800
+  "ReloadOverTimeSprite_Variant_Gold": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 1800
     },
-    "templateId" : "ExtractableRelic:reloadovertimesprite_variant_gold"
+    "templateId": "ExtractableRelic:reloadovertimesprite_variant_gold"
   },
-  "CosmicThunderDoubleJumpSprite_Variant_Gold" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 2100
+  "CosmicThunderDoubleJumpSprite_Variant_Gold": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 2100
     },
-    "templateId" : "ExtractableRelic:cosmicthunderdoublejumpsprite_variant_gold"
+    "templateId": "ExtractableRelic:cosmicthunderdoublejumpsprite_variant_gold"
   },
-  "8BitBlaster_Variant_A" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 1250
+  "8BitBlaster_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 1250
     },
-    "templateId" : "ExtractableRelic:8bitblaster_variant_a"
+    "templateId": "ExtractableRelic:8bitblaster_variant_a"
   },
-  "BushRangerSprite_Variant_Gold" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 1500
+  "BushRangerSprite_Variant_Gold": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 1500
     },
-    "templateId" : "ExtractableRelic:bushrangersprite_variant_gold"
+    "templateId": "ExtractableRelic:bushrangersprite_variant_gold"
   },
-  "Dwarf_Variant_CheatMaster" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 1500
+  "Dwarf_Variant_CheatMaster": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 1500
     },
-    "templateId" : "ExtractableRelic:dwarf_variant_cheatmaster"
+    "templateId": "ExtractableRelic:dwarf_variant_cheatmaster"
   },
-  "CrownSprite_Variant_A" : {
-    "_private" : false,
-    "attributes" : {
-      "bIsStarter" : false,
-      "summonCost" : 2000
+  "CrownSprite_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 2000
     },
-    "templateId" : "ExtractableRelic:crownsprite_variant_a"
+    "templateId": "ExtractableRelic:crownsprite_variant_a"
   },
   "OvershieldSprite": {
     "_private": false,
@@ -1454,5 +1454,373 @@
       "summonCost": 6750
     },
     "templateId": "ExtractableRelic:stormscoutsprite_variant_loothacker"
+  },
+  "KillswitchSprite_Variant_Reaper": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:killswitchsprite_variant_reaper"
+  },
+  "BushRangerSprite_Variant_Reaper": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:bushrangersprite_variant_reaper"
+  },
+  "NarrowFleaMonkeySprite_Variant_Reaper": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:narrowfleamonkeysprite_variant_reaper"
+  },
+  "OvershieldSprite_Variant_Reaper": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:overshieldsprite_variant_reaper"
+  },
+  "WinnerBSprite_Variant_Reaper": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:winnerbsprite_variant_reaper"
+  },
+  "CrownSprite_Variant_Reaper": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:crownsprite_variant_reaper"
+  },
+  "ReloadOverTimeSprite_Variant_Reaper": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:reloadovertimesprite_variant_reaper"
+  },
+  "GhostDamage_Variant_CheatMaster": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:ghostdamage_variant_cheatmaster"
+  },
+  "GhostDamage_Variant_Reaper": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:ghostdamage_variant_reaper"
+  },
+  "GhostDamage_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:ghostdamage_variant_a"
+  },
+  "GhostDamage_Variant_LootHacker": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:ghostdamage_variant_loothacker"
+  },
+  "GhostDamage_Variant_Gold": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:ghostdamage_variant_gold"
+  },
+  "BodySlamSprite_Variant_CheatMaster": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:bodyslamsprite_variant_cheatmaster"
+  },
+  "BodySlamSprite_Variant_LootHacker": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:bodyslamsprite_variant_loothacker"
+  },
+  "BodySlamSprite_Variant_Reaper": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:bodyslamsprite_variant_reaper"
+  },
+  "BodySlamSprite_Variant_Gold": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:bodyslamsprite_variant_gold"
+  },
+  "BodySlamSprite_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:bodyslamsprite_variant_a"
+  },
+  "StormScoutSprite_Variant_Reaper": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:stormscoutsprite_variant_reaper"
+  },
+  "ImprovedSlide_Variant_CheatMaster": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:improvedslide_variant_cheatmaster"
+  },
+  "ImprovedSlide_Variant_Gold": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:improvedslide_variant_gold"
+  },
+  "ImprovedSlide_Variant_LootHacker": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:improvedslide_variant_loothacker"
+  },
+  "WinnerCSprite_Variant_Reaper": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:winnercsprite_variant_reaper"
+  },
+  "IncreaseHealsSprite_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:increasehealssprite_variant_a"
+  },
+  "Klombo_Variant_Reaper": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:klombo_variant_reaper"
+  },
+  "IncreaseHealsSprite_Variant_CheatMaster": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:increasehealssprite_variant_cheatmaster"
+  },
+  "IncreaseHealsSprite_Variant_Reaper": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:increasehealssprite_variant_reaper"
+  },
+  "IncreaseHealsSprite_Variant_LootHacker": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:increasehealssprite_variant_loothacker"
+  },
+  "IncreaseHealsSprite_Variant_Gold": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:increasehealssprite_variant_gold"
+  },
+  "NarrowFleaSprite_Variant_Reaper": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:narrowfleasprite_variant_reaper"
+  },
+  "8BitBlaster_Variant_Reaper": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:8bitblaster_variant_reaper"
+  },
+  "CosmicThunderDoubleJumpSprite_Variant_Reaper": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:cosmicthunderdoublejumpsprite_variant_reaper"
+  },
+  "CosmicThunderDoubleJumpSprite_Variant_TrickTreat": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:cosmicthunderdoublejumpsprite_variant_tricktreat"
+  },
+  "BirthdaySprite_Variant_Reaper": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:birthdaysprite_variant_reaper"
+  },
+  "CosmicThunderDoubleJumpSprite_Variant_Candy": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:cosmicthunderdoublejumpsprite_variant_candy"
+  },
+  "Jonesy_Variant_Reaper": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:jonesy_variant_reaper"
+  },
+  "BirthdaySprite_Variant_CheatMaster": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:birthdaysprite_variant_cheatmaster"
+  },
+  "BirthdaySprite_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:birthdaysprite_variant_a"
+  },
+  "BirthdaySprite_Variant_LootHacker": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:birthdaysprite_variant_loothacker"
+  },
+  "BirthdaySprite_Variant_Gold": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:birthdaysprite_variant_gold"
+  },
+  "WinnerASprite_Variant_Reaper": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:winnerasprite_variant_reaper"
+  },
+  "WinnerASprite_Variant_CheatMaster": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:winnerasprite_variant_cheatmaster"
+  },
+  "WinnerASprite_Variant_LootHacker": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:winnerasprite_variant_loothacker"
+  },
+  "WinnerASprite_Variant_Gold": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:winnerasprite_variant_gold"
+  },
+  "WinnerASprite_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:winnerasprite_variant_a"
+  },
+  "Dwarf_Variant_Reaper": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:dwarf_variant_reaper"
+  },
+  "WinnerDSprite_Variant_CheatMaster": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:winnerdsprite_variant_cheatmaster"
   }
 }
