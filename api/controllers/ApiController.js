@@ -1326,7 +1326,7 @@ module.exports = {
          * The data in this cooked-content-package changes every update
          * It gets routed trough a caching server which stores this and requests new ones when needed
         */
-        const response = await axios.post(`https://epic-cache-dev.neptune.cbn.lol/content/cooked-content`, {
+        const response = await axios.post(`https://epic-cache.neptune.cbn.lol/content/cooked-content`, {
             linkCode: req.params.linkId,
             role: req.query.role || "client",
             client: req.query.platform || "windows",
