@@ -1261,38 +1261,15 @@ module.exports = {
 	},
 
 	extractableRelicsCatalog: function (req, res) {
-		const relicsCatalog = loadJSON("../responses/sprites/catalog.json")
-		res.json(relicsCatalog)
+		res.json(loadJSON("../responses/sprites/catalog.json"))
 	},
 
 
 	questProgress: function (req, res) {
 		const { versionGlobal } = getVersionInfo(req);
-		res.json({
-			"accountXp": {
-				"dynamicXp": {
-					"timespan": 0,
-					"bucketXp": 0,
-					"bankXp": 0,
-					"bankXpMult": 0,
-					"boosterBucketXp": 0,
-					"boosterXpMult": 0,
-					"weeklyExcessXpMult": 1,
-					"currentWeekXp": 0,
-					"currentWeek": 9
-				},
-				"playtimeXp": {
-					"currentWeek": 9,
-					"currentWeekXp": 0
-				},
-				"restedXp": 0,
-				"seasonXp": 0,
-				"seasonLevel": config.Level,
-				"seasonNumber": versionGlobal,
-				"seasonBegin": "2025-06-01T13:00:00Z",
-				"timeDilation": 0
-			}
-		})
+		const questsv3 = loadJSON("../responses/questsv3.json")
+		questsv3["accountXp"].seasonNumber = versionGlobal
+		res.json(questsv3)
 	},
 
 	cosmoFdeb: async function (req, res) {

@@ -37,4 +37,5 @@ module.exports.routes = {
         controller:'EosController', 
         skipAssets: false
     },
+    'GET /epic/party/internal/v2/users/:accountId': 'EosController.eosParty'
 }
