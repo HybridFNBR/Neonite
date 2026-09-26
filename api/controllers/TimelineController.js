@@ -857,10 +857,11 @@ module.exports = {
             ],
 
             "42.10|42.20": [ //assuming first stage is active for 2 versions
-                "DustyUpdate_A"
+                //"DustyUpdate_A"
                //"DustyUpdate_B"
                //"DustyUpdate_C"
-               //"DustyUpdate_D" //might make it a config but this is fine for now
+               "DustyUpdate_D", //might make it a config but this is fine for now
+               "EventFlag.Event_S42_Birthday"
             ]
 
         })
