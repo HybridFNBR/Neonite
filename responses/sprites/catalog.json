@@ -1822,5 +1822,373 @@
       "summonCost": 6750
     },
     "templateId": "ExtractableRelic:winnerdsprite_variant_cheatmaster"
+  },
+  "PhaseDashSprite": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:phasedashsprite"
+  },
+  "PhaseDashSprite_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:phasedashsprite_variant_a"
+  },
+  "PhaseDashSprite_Variant_CheatMaster": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:phasedashsprite_variant_cheatmaster"
+  },
+  "PhaseDashSprite_Variant_Gold": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:phasedashsprite_variant_gold"
+  },
+  "PhaseDashSprite_Variant_LootHacker": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:phasedashsprite_variant_loothacker"
+  },
+  "PhaseDashSprite_Variant_Reaper": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:phasedashsprite_variant_reaper"
+  },
+  "PhaseDashSprite_Variant_TrickTreat": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:phasedashsprite_variant_tricktreat"
+  },
+  "HealthSiphonSprite": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:healthsiphonsprite"
+  },
+  "HealthSiphonSprite_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:healthsiphonsprite_variant_a"
+  },
+  "HealthSiphonSprite_Variant_CheatMaster": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:healthsiphonsprite_variant_cheatmaster"
+  },
+  "HealthSiphonSprite_Variant_Gold": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:healthsiphonsprite_variant_gold"
+  },
+  "HealthSiphonSprite_Variant_LootHacker": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:healthsiphonsprite_variant_loothacker"
+  },
+  "HealthSiphonSprite_Variant_Reaper": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:healthsiphonsprite_variant_reaper"
+  },
+  "HealthSiphonSprite_Variant_TrickTreat": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:healthsiphonsprite_variant_tricktreat"
+  },
+  "IncreasedMeleeSprite": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:increasedmeleesprite"
+  },
+  "IncreasedMeleeSprite_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:increasedmeleesprite_variant_a"
+  },
+  "IncreasedMeleeSprite_Variant_CheatMaster": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:increasedmeleesprite_variant_cheatmaster"
+  },
+  "IncreasedMeleeSprite_Variant_Gold": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:increasedmeleesprite_variant_gold"
+  },
+  "IncreasedMeleeSprite_Variant_LootHacker": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:increasedmeleesprite_variant_loothacker"
+  },
+  "IncreasedMeleeSprite_Variant_Reaper": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:increasedmeleesprite_variant_reaper"
+  },
+  "IncreasedMeleeSprite_Variant_TrickTreat": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:increasedmeleesprite_variant_tricktreat"
+  },
+  "BirthdaySprite_Variant_TrickTreat": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:birthdaysprite_variant_tricktreat"
+  },
+  "BodySlamSprite_Variant_TrickTreat": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:bodyslamsprite_variant_tricktreat"
+  },
+  "BushRangerSprite_Variant_TrickTreat": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:bushrangersprite_variant_tricktreat"
+  },
+  "CrownSprite_Variant_TrickTreat": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:crownsprite_variant_tricktreat"
+  },
+  "Dwarf_Variant_TrickTreat": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:dwarf_variant_tricktreat"
+  },
+  "GhostDamage_Variant_TrickTreat": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:ghostdamage_variant_tricktreat"
+  },
+  "IncreaseHealsSprite_Variant_TrickTreat": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:increasehealssprite_variant_tricktreat"
+  },
+  "Jonesy_Variant_TrickTreat": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:jonesy_variant_tricktreat"
+  },
+  "KillswitchSprite_Variant_TrickTreat": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:killswitchsprite_variant_tricktreat"
+  },
+  "Klombo_Variant_TrickTreat": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:klombo_variant_tricktreat"
+  },
+  "NarrowFleaMonkeySprite_Variant_TrickTreat": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:narrowfleamonkeysprite_variant_tricktreat"
+  },
+  "NarrowFleaSprite_Variant_TrickTreat": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:narrowfleasprite_variant_tricktreat"
+  },
+  "OvershieldSprite_Variant_TrickTreat": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:overshieldsprite_variant_tricktreat"
+  },
+  "ReloadOverTimeSprite_Variant_TrickTreat": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:reloadovertimesprite_variant_tricktreat"
+  },
+  "StormScoutSprite_Variant_TrickTreat": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:stormscoutsprite_variant_tricktreat"
+  },
+  "WinnerASprite_Variant_TrickTreat": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:winnerasprite_variant_tricktreat"
+  },
+  "WinnerBSprite_Variant_TrickTreat": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:winnerbsprite_variant_tricktreat"
+  },
+  "WinnerCSprite_Variant_TrickTreat": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:winnercsprite_variant_tricktreat"
+  },
+  "WinnerDSprite": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:winnerdsprite"
+  },
+  "WinnerDSprite_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:winnerdsprite_variant_a"
+  },
+  "WinnerDSprite_Variant_Gold": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:winnerdsprite_variant_gold"
+  },
+  "WinnerDSprite_Variant_LootHacker": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:winnerdsprite_variant_loothacker"
+  },
+  "WinnerDSprite_Variant_Reaper": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:winnerdsprite_variant_reaper"
+  },
+  "WinnerDSprite_Variant_TrickTreat": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:winnerdsprite_variant_tricktreat"
+  },
+  "8BitBlaster_Variant_TrickTreat": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:8bitblaster_variant_tricktreat"
   }
 }
