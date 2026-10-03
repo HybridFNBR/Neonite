@@ -885,6 +885,23 @@ module.exports = {
 				break;
 			}
 
+			case "ExecuteTerminalCommand": {
+				if(req.body.command === "s7h-50p-r03"){
+					response.notifications = [
+					{
+						"type":              "terminalCommandResult",
+						"primary":           true,
+						"client_request_id": "",
+						"canRepeat":         true,
+						"rewardGranted":     true,
+						"successActionTag":  "Athena.Quests.S42.Story.SheerWill.CheatCode.Success",
+						"questTemplateId":   "Quest:quest_s42_story_sheerwill_p02_q05",
+					}
+				];
+				}
+				break;
+			}
+
 			case "RefundMtxPurchase": {
 				response.profileChanges[0] = {
 					"changeType": "itemAdded",
