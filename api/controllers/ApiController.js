@@ -1291,9 +1291,14 @@ module.exports = {
 			res.set({
 				'Content-Type': "image/png",
 			});
-			const fileStream = fs.createWriteStream(cacheFile);
-			response.data.pipe(fileStream);
-			response.data.pipe(res);
+			if(response == null){
+				fs.createReadStream(path.join("./Fallback.png")).pipe(res);
+			}
+			else{
+				const fileStream = fs.createWriteStream(cacheFile);
+				response.data.pipe(fileStream);
+				response.data.pipe(res);
+			}
 		}
 	},
 
