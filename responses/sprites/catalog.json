@@ -2190,5 +2190,141 @@
       "summonCost": 6750
     },
     "templateId": "ExtractableRelic:8bitblaster_variant_tricktreat"
+  },
+  "PhaseDashSprite_Variant_Quack": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:phasedashsprite_variant_quack"
+  },
+  "Jonesy_Variant_Quack": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:jonesy_variant_quack"
+  },
+  "CargoLyingSprite_Variant_TrickTreat": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:cargolyingsprite_variant_tricktreat"
+  },
+  "CargoLyingSprite_Variant_Gold": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:cargolyingsprite_variant_gold"
+  },
+  "CargoLyingSprite_Variant_CheatMaster": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:cargolyingsprite_variant_cheatmaster"
+  },
+  "CargoLyingSprite_Variant_LootHacker": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:cargolyingsprite_variant_loothacker"
+  },
+  "CargoLyingSprite_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:cargolyingsprite_variant_a"
+  },
+  "CargoLyingSprite_Variant_Reaper": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:cargolyingsprite_variant_reaper"
+  },
+  "WinnerE_Variant_LootHacker": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:winnere_variant_loothacker"
+  },
+  "WinnerE_Variant_Reaper": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:winnere_variant_reaper"
+  },
+  "WinnerE_Variant_CheatMaster": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:winnere_variant_cheatmaster"
+  },
+  "WinnerE_Variant_Gold": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:winnere_variant_gold"
+  },
+  "WinnerE_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:winnere_variant_a"
+  },
+  "WinnerE_Variant_TrickTreat": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:winnere_variant_tricktreat"
+  },
+  "Dwarf_Variant_Quack": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:dwarf_variant_quack"
+  },
+  "BushRangerSprite_Variant_Quack": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:bushrangersprite_variant_quack"
+  },
+  "Klombo_Variant_Quack": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:klombo_variant_quack"
   }
 }

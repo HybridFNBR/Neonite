@@ -272,5 +272,22 @@
   "WinnerDSprite_Variant_LootHacker": 1,
   "WinnerDSprite_Variant_Reaper": 1,
   "WinnerDSprite_Variant_TrickTreat": 1,
-  "8BitBlaster_Variant_TrickTreat": 1
+  "8BitBlaster_Variant_TrickTreat": 1,
+  "PhaseDashSprite_Variant_Quack": 1,
+  "JonesySprite_Variant_Quack": 1,
+  "CargoLyingSprite_Variant_TrickTreat": 1,
+  "CargoLyingSprite_Variant_Gold": 1,
+  "CargoLyingSprite_Variant_CheatMaster": 1,
+  "CargoLyingSprite_Variant_LootHacker": 1,
+  "CargoLyingSprite_Variant_A": 1,
+  "CargoLyingSprite_Variant_Reaper": 1,
+  "WinnerESprite_Variant_LootHacker": 1,
+  "WinnerESprite_Variant_Reaper": 1,
+  "WinnerESprite_Variant_CheatMaster": 1,
+  "WinnerESprite_Variant_Gold": 1,
+  "WinnerESprite_Variant_A": 1,
+  "WinnerESprite_Variant_TrickTreat": 1,
+  "DwarfSprite_Variant_Quack": 1,
+  "BushRanger_Variant_Quack": 1,
+  "KlomboSprite_Variant_Quack": 1
 }
