@@ -12,13 +12,13 @@ module.exports = {
         let { version, versionGlobal, versionLegacy } = getVersionInfo(req);
         const keychain = loadJSON("../responses/keychain.json")
         var config = ini.parse(fs.readFileSync(path.join(__dirname, '../../config.ini'), 'utf-8'));
-        try {
-            if (config.bRefreshKeychainViaTimeline == true) {
+        if (config.bRefreshKeychainViaTimeline == true) {
+            try {
                 await compareAndUpdateKeychain();
             }
-        }
-        catch {
-            NeoLog.Error("Unable to connect to dillyapis! Falling back to existing keychains on your local disk. Some Encrypted Assets may not be accessible")
+            catch {
+                NeoLog.Error("Unable to connect to keychain endpoints! Falling back to existing keychains on your local disk. Some assets may not be decrypted!");
+            }
         }
         const certVersions = [{
             3700114: 1,
@@ -857,10 +857,11 @@ module.exports = {
             ],
 
             "42.10|42.20": [ //assuming first stage is active for 2 versions
-                "DustyUpdate_A"
-               //"DustyUpdate_B"
-               //"DustyUpdate_C"
-               //"DustyUpdate_D" //might make it a config but this is fine for now
+                //"DustyUpdate_A"
+                //"DustyUpdate_B"
+                //"DustyUpdate_C"
+                "DustyUpdate_D", //might make it a config but this is fine for now
+                "EventFlag.Event_S42_Birthday"
             ]
 
         })
@@ -1337,6 +1338,111 @@ module.exports = {
                 },
                 {
                     eventType: "S22_Vortex_Active", //S22 Nanomist Vortex(Ch3S4 related)
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+            )
+        }
+
+        if (versionGlobal === 42) {
+            timeline.channels['client-events']['states'][0]['activeEvents'].push(
+                {
+                    eventType: "EventFlag.Event_S42_Audiologs_4200",
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "EventFlag.Event_S42_Birthday",
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "EventFlag.Event_S42_BlockStackCosmetics",
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "EventFlag.Event_S42_SpriteMastery_P01",
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "EventFlag.Event_S42_SpriteMastery_P02",
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "EventFlag.Event_S42_CosmicThunder_TutorialQuests",
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "EventFlag.Event_S42_NarrowFlea",
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "EventFlag.PreviousSeason_SpriteDust",
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "EventFlag.ProgressionTrack_S42",
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "EventFlag.Event_S42_Story_BlockStack_BonusGoals",
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "EventFlag.Event_S42_Story_BlockStack_P01",
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "EventFlag.Event_S42_Story_BlockStack_P02",
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "EventFlag.ProgressionTrack_S42",
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "EventFlag.Event_S42_Story_HeroicTale_BonusGoals",
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "EventFlag.Event_S42_Story_HeroicTale",
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "EventFlag.Event_S42_Story_PhoenixKick",
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "EventFlag.Event_S42_Story_SheerWill_BonusGoals",
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "EventFlag.Event_S42_Story_SheerWill_P01",
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "EventFlag.Event_S42_Story_SheerWill_P02",
+                    activeUntil: "9999-09-09T07:00:00.000Z",
+                    activeSince: "2020-09-09T07:00:00.000Z"
+                },
+                {
+                    eventType: "EventFlag.ProgressionTrack",
                     activeUntil: "9999-09-09T07:00:00.000Z",
                     activeSince: "2020-09-09T07:00:00.000Z"
                 },
@@ -1855,6 +1961,114 @@ module.exports = {
                 )
             }
 
+        }
+
+        if (config.NiceSharkTeaserStage1 === true) {
+            timeline.channels['client-events']['states'][0]['activeEvents'].push({
+                eventType: "NS_Stage1", // NiceShark Stage 1
+                activeUntil: "9999-12-01T21:10:00.000Z",
+                activeSince: "2020-11-21T07:00:00.000Z"
+            })
+        }
+
+        if (config.NiceSharkTeaserStage2 === true) {
+            timeline.channels['client-events']['states'][0]['activeEvents'].push({
+                eventType: "NS_Stage2", // NiceShark Stage 2
+                activeUntil: "9999-12-01T21:10:00.000Z",
+                activeSince: "2020-11-21T07:00:00.000Z"
+            })
+        }
+
+        if (config.NiceSharkTeaserStage3 === true) {
+            timeline.channels['client-events']['states'][0]['activeEvents'].push({
+                eventType: "NS_Stage3", // NiceShark Stage 3
+                activeUntil: "9999-12-01T21:10:00.000Z",
+                activeSince: "2020-11-21T07:00:00.000Z"
+            })
+        }
+
+        if (config.NiceSharkTeaserStage4 === true) {
+            timeline.channels['client-events']['states'][0]['activeEvents'].push({
+                eventType: "NS_Stage4", // NiceShark Stage 4
+                activeUntil: "9999-12-01T21:10:00.000Z",
+                activeSince: "2020-11-21T07:00:00.000Z"
+            })
+        }
+
+        if (config.NiceSharkTeaserStage5 === true) {
+            timeline.channels['client-events']['states'][0]['activeEvents'].push({
+                eventType: "NS_Stage5", // NiceShark Stage 5
+                activeUntil: "9999-12-01T21:10:00.000Z",
+                activeSince: "2020-11-21T07:00:00.000Z"
+            })
+        }
+
+        if (config.NiceSharkTeaserStage6 === true) {
+            timeline.channels['client-events']['states'][0]['activeEvents'].push({
+                eventType: "NS_Stage6", // NiceShark Stage 6
+                activeUntil: "9999-12-01T21:10:00.000Z",
+                activeSince: "2020-11-21T07:00:00.000Z"
+            })
+        }
+
+        if (config.NiceSharkMusicDay1 === true) {
+            timeline.channels['client-events']['states'][0]['activeEvents'].push(
+                {
+                    eventType: "NS_MusicDay1", // NiceShark Music Day 1
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },
+                {
+                    eventType: "NS_Stage6", // NiceShark Stage 6
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                }
+            )
+        }
+
+        if (config.NiceSharkMusicDay2 === true) {
+            timeline.channels['client-events']['states'][0]['activeEvents'].push(
+                {
+                    eventType: "NS_MusicDay2", // NiceShark Music Day 2
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },
+                {
+                    eventType: "NS_Stage6", // NiceShark Stage 6
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                }
+            )
+        }
+
+        if (config.NiceSharkMusicDay3 === true) {
+            timeline.channels['client-events']['states'][0]['activeEvents'].push(
+                {
+                    eventType: "NS_MusicDay3", // NiceShark Music Day 3
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },
+                {
+                    eventType: "NS_Stage6", // NiceShark Stage 6
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                }
+            )
+        }
+
+        if (config.NiceSharkMusicDay4 === true) {
+            timeline.channels['client-events']['states'][0]['activeEvents'].push(
+                {
+                    eventType: "NS_MusicDay3_2", // NiceShark Music Day 4
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                },
+                {
+                    eventType: "NS_Stage6", // NiceShark Stage 6
+                    activeUntil: "9999-12-01T21:10:00.000Z",
+                    activeSince: "2020-11-21T07:00:00.000Z"
+                }
+            )
         }
         if (!requested) {
             const activeEvents = timeline.channels['client-events'].states[0].activeEvents;

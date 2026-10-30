@@ -198,104 +198,104 @@ module.exports = {
 			};
 		};
 
-		if(version >= 17.40){
+		if (version >= 17.40) {
 			dataAssetBuilder(FrontendAssets, "FortCreativeDiscoverySurface", 2, "CreativeDiscoverySurface_Frontend", {
-                  "AnalyticsId": "v538",
-                  "TestCohorts": [
-                      {
-                          "AnalyticsId": "c-1v2_v2_c727",
-                          "CohortSelector": "PlayerDeterministic",
-                          "PlatformBlacklist": [],
-                          "CountryCodeBlocklist": [],
-                          "ContentPanels": [
-                              {
-                                  "NumPages": 1,
-                                  "AnalyticsId": "p1114",
-                                  "PanelType": "AnalyticsList",
-                                  "AnalyticsListName": "ByEpicNoBigBattle",
-                                  "CuratedListOfLinkCodes": [],
-                                  "ModelName": "",
-                                  "PageSize": 7,
-                                  "PlatformBlacklist": [],
-                                  "PanelName": "ByEpicNoBigBattle6Col",
-                                  "MetricInterval": "",
-                                  "CountryCodeBlocklist": [],
-                                  "SkippedEntriesCount": 0,
-                                  "SkippedEntriesPercent": 0,
-                                  "SplicedEntries": [],
-                                  "PlatformWhitelist": [],
-                                  "MMRegionBlocklist": [],
-                                  "EntrySkippingMethod": "None",
-                                  "PanelDisplayName": {
-                                      "Category": "Game",
-                                      "NativeCulture": "",
-                                      "Namespace": "CreativeDiscoverySurface_Frontend",
-                                      "LocalizedStrings": [],
-                                      "bIsMinimalPatch": false,
-                                      "NativeString": "LTMS",
-                                      "Key": "ByEpicNoBigBattle6Col"
-                                  },
-                                  "PlayHistoryType": "RecentlyPlayed",
-                                  "bLowestToHighest": false,
-                                  "PanelLinkCodeBlacklist": [],
-                                  "CountryCodeAllowlist": [],
-                                  "PanelLinkCodeWhitelist": [],
-                                  "FeatureTags": [
-                                    "col:5"
-                                ],
-                                  "MMRegionAllowlist": [],
-                                  "MetricName": ""
-                              },
-                              {
-                                  "NumPages": 2,
-                                  "AnalyticsId": "p969|88dba0c4e2af76447df43d1e31331a3d",
-                                  "PanelType": "AnalyticsList",
-                                  "AnalyticsListName": "EventPanel",
-                                  "CuratedListOfLinkCodes": [],
-                                  "ModelName": "",
-                                  "PageSize": 25,
-                                  "PlatformBlacklist": [],
-                                  "PanelName": "EventPanel",
-                                  "MetricInterval": "",
-                                  "CountryCodeBlocklist": [],
-                                  "SkippedEntriesCount": 0,
-                                  "SkippedEntriesPercent": 0,
-                                  "SplicedEntries": [],
-                                  "PlatformWhitelist": [],
-                                  "MMRegionBlocklist": [],
-                                  "EntrySkippingMethod": "None",
-                                  "PanelDisplayName": {
-                                      "Category": "Game",
-                                      "NativeCulture": "",
-                                      "Namespace": "CreativeDiscoverySurface_Frontend",
-                                      "LocalizedStrings": [],
-                                      "bIsMinimalPatch": false,
-                                      "NativeString": "Event LTMS",
-                                      "Key": "EventPanel"
-                                  },
-                                  "PlayHistoryType": "RecentlyPlayed",
-                                  "bLowestToHighest": false,
-                                  "PanelLinkCodeBlacklist": [],
-                                  "CountryCodeAllowlist": [],
-                                  "PanelLinkCodeWhitelist": [],
-                                  "FeatureTags": [
-                                      "col:6"
-                                  ],
-                                  "MMRegionAllowlist": [],
-                                  "MetricName": ""
-                              }
-                          ],
-                          "PlatformWhitelist": [],
-                          "SelectionChance": 0.1,
-                          "TestName": "testing"
-                        }
-                      ],
-                      "GlobalLinkCodeBlacklist": [],
-                      "SurfaceName": "CreativeDiscoverySurface_Frontend",
-                      "TestName": "20.10_4/11/2022_hero_combat_popularConsole",
-                      "primaryAssetId": "FortCreativeDiscoverySurface:CreativeDiscoverySurface_Frontend",
-                      "GlobalLinkCodeWhitelist": []
-                    });
+				"AnalyticsId": "v538",
+				"TestCohorts": [
+					{
+						"AnalyticsId": "c-1v2_v2_c727",
+						"CohortSelector": "PlayerDeterministic",
+						"PlatformBlacklist": [],
+						"CountryCodeBlocklist": [],
+						"ContentPanels": [
+							{
+								"NumPages": 1,
+								"AnalyticsId": "p1114",
+								"PanelType": "AnalyticsList",
+								"AnalyticsListName": "ByEpicNoBigBattle",
+								"CuratedListOfLinkCodes": [],
+								"ModelName": "",
+								"PageSize": 7,
+								"PlatformBlacklist": [],
+								"PanelName": "ByEpicNoBigBattle6Col",
+								"MetricInterval": "",
+								"CountryCodeBlocklist": [],
+								"SkippedEntriesCount": 0,
+								"SkippedEntriesPercent": 0,
+								"SplicedEntries": [],
+								"PlatformWhitelist": [],
+								"MMRegionBlocklist": [],
+								"EntrySkippingMethod": "None",
+								"PanelDisplayName": {
+									"Category": "Game",
+									"NativeCulture": "",
+									"Namespace": "CreativeDiscoverySurface_Frontend",
+									"LocalizedStrings": [],
+									"bIsMinimalPatch": false,
+									"NativeString": "LTMS",
+									"Key": "ByEpicNoBigBattle6Col"
+								},
+								"PlayHistoryType": "RecentlyPlayed",
+								"bLowestToHighest": false,
+								"PanelLinkCodeBlacklist": [],
+								"CountryCodeAllowlist": [],
+								"PanelLinkCodeWhitelist": [],
+								"FeatureTags": [
+									"col:5"
+								],
+								"MMRegionAllowlist": [],
+								"MetricName": ""
+							},
+							{
+								"NumPages": 2,
+								"AnalyticsId": "p969|88dba0c4e2af76447df43d1e31331a3d",
+								"PanelType": "AnalyticsList",
+								"AnalyticsListName": "EventPanel",
+								"CuratedListOfLinkCodes": [],
+								"ModelName": "",
+								"PageSize": 25,
+								"PlatformBlacklist": [],
+								"PanelName": "EventPanel",
+								"MetricInterval": "",
+								"CountryCodeBlocklist": [],
+								"SkippedEntriesCount": 0,
+								"SkippedEntriesPercent": 0,
+								"SplicedEntries": [],
+								"PlatformWhitelist": [],
+								"MMRegionBlocklist": [],
+								"EntrySkippingMethod": "None",
+								"PanelDisplayName": {
+									"Category": "Game",
+									"NativeCulture": "",
+									"Namespace": "CreativeDiscoverySurface_Frontend",
+									"LocalizedStrings": [],
+									"bIsMinimalPatch": false,
+									"NativeString": "Event LTMS",
+									"Key": "EventPanel"
+								},
+								"PlayHistoryType": "RecentlyPlayed",
+								"bLowestToHighest": false,
+								"PanelLinkCodeBlacklist": [],
+								"CountryCodeAllowlist": [],
+								"PanelLinkCodeWhitelist": [],
+								"FeatureTags": [
+									"col:6"
+								],
+								"MMRegionAllowlist": [],
+								"MetricName": ""
+							}
+						],
+						"PlatformWhitelist": [],
+						"SelectionChance": 0.1,
+						"TestName": "testing"
+					}
+				],
+				"GlobalLinkCodeBlacklist": [],
+				"SurfaceName": "CreativeDiscoverySurface_Frontend",
+				"TestName": "20.10_4/11/2022_hero_combat_popularConsole",
+				"primaryAssetId": "FortCreativeDiscoverySurface:CreativeDiscoverySurface_Frontend",
+				"GlobalLinkCodeWhitelist": []
+			});
 		}
 
 		if (config.FortniteGameConfig === true && version >= 24.00) {
@@ -627,13 +627,12 @@ module.exports = {
 	},
 
 	keychain: async function (req, res) {
-		try {
-			if(config.bRefreshKeychainViaKeychainEndpoint == true){
+		if (config.bRefreshKeychainViaKeychainEndpoint == true) {
+			try {
 				await compareAndUpdateKeychain();
+			} catch (err) {
+				NeoLog.Error("Unable to connect to keychain endpoints! Falling back to existing keychains on your local disk. Some assets may not be decrypted!");
 			}
-		}
-		catch {
-			NeoLog.Error("Unable to connect to dillyapis! Falling back to existing keychains on your local disk. Some Encrypted Assets may not be accessible")
 		}
 		const keychainArray = [
 			"46159C748694298198A52DC07476FDA3:4CLHOBqSrmS1RkG/SxZYi8Rc0zCmAKxXIBMMUHDl2ag=",
@@ -1130,10 +1129,10 @@ module.exports = {
 	},
 
 	magpieInventory: function (req, res) {
-		const {versionGlobal} = getVersionInfo(req);
+		const { versionGlobal } = getVersionInfo(req);
 		let metadata
-		if(versionGlobal === 41){metadata = "{\"StarterRelic\":\"EarthSprite_Variant_A\",\"EquippedVariant\":\"None\"}"}
-		if(versionGlobal === 42){metadata = "{\"StarterRelic\":\"Jonesy_Variant_A\",\"EquippedVariant\":\"None\"}"}
+		if (versionGlobal === 41) { metadata = "{\"StarterRelic\":\"EarthSprite_Variant_A\",\"EquippedVariant\":\"None\"}" }
+		if (versionGlobal === 42) { metadata = "{\"StarterRelic\":\"Jonesy_Variant_A\",\"EquippedVariant\":\"None\"}" }
 		if (config.relicStarterScreen && !misc.relicStarterScreenDone) {
 			res.json({
 				"accountId": req.params.accountId,
@@ -1261,38 +1260,15 @@ module.exports = {
 	},
 
 	extractableRelicsCatalog: function (req, res) {
-		const relicsCatalog = loadJSON("../responses/sprites/catalog.json")
-		res.json(relicsCatalog)
+		res.json(loadJSON("../responses/sprites/catalog.json"))
 	},
 
 
 	questProgress: function (req, res) {
 		const { versionGlobal } = getVersionInfo(req);
-		res.json({
-			"accountXp": {
-				"dynamicXp": {
-					"timespan": 0,
-					"bucketXp": 0,
-					"bankXp": 0,
-					"bankXpMult": 0,
-					"boosterBucketXp": 0,
-					"boosterXpMult": 0,
-					"weeklyExcessXpMult": 1,
-					"currentWeekXp": 0,
-					"currentWeek": 9
-				},
-				"playtimeXp": {
-					"currentWeek": 9,
-					"currentWeekXp": 0
-				},
-				"restedXp": 0,
-				"seasonXp": 0,
-				"seasonLevel": config.Level,
-				"seasonNumber": versionGlobal,
-				"seasonBegin": "2025-06-01T13:00:00Z",
-				"timeDilation": 0
-			}
-		})
+		const questsv3 = loadJSON("../responses/questsv3.json")
+		questsv3["accountXp"].seasonNumber = versionGlobal
+		res.json(questsv3)
 	},
 
 	cosmoFdeb: async function (req, res) {
@@ -1314,29 +1290,34 @@ module.exports = {
 			res.set({
 				'Content-Type': "image/png",
 			});
-			const fileStream = fs.createWriteStream(cacheFile);
-			response.data.pipe(fileStream);
-			response.data.pipe(res);
+			if (response == null) {
+				fs.createReadStream(path.join("./Fallback.png")).pipe(res);
+			}
+			else {
+				const fileStream = fs.createWriteStream(cacheFile);
+				response.data.pipe(fileStream);
+				response.data.pipe(res);
+			}
 		}
 	},
 
-	 contentLinkPackage: async function (req, res) {
-        /*
-         * This endpoint requires auth on Epics server
-         * The data in this cooked-content-package changes every update
-         * It gets routed trough a caching server which stores this and requests new ones when needed
-        */
-        const response = await axios.post(`https://epic-cache-dev.neptune.cbn.lol/content/cooked-content`, {
-            linkCode: req.params.linkId,
-            role: req.query.role || "client",
-            client: req.query.platform || "windows",
-            majorVersion: parseInt(req.query.major),
-            minorVersion: parseInt(req.query.minor),
-            patch: parseInt(req.query.patch),
-            shaderformat: req.query.shaderformat || "",
-        });
-        res.json(response.data.result);
-    },
+	contentLinkPackage: async function (req, res) {
+		/*
+		 * This endpoint requires auth on Epics server
+		 * The data in this cooked-content-package changes every update
+		 * It gets routed trough a caching server which stores this and requests new ones when needed
+		*/
+		const response = await axios.post(`https://epic-cache.neptune.cbn.lol/content/cooked-content`, {
+			linkCode: req.params.linkId,
+			role: req.query.role || "client",
+			client: req.query.platform || "windows",
+			majorVersion: parseInt(req.query.major),
+			minorVersion: parseInt(req.query.minor),
+			patch: parseInt(req.query.patch),
+			shaderformat: req.query.shaderformat || "",
+		});
+		res.json(response.data.result);
+	},
 
 	cookedContentChunk: async function (req, res) {
 		res.setHeader("Content-Type", "application/octet-stream");
@@ -1544,5 +1525,14 @@ module.exports = {
 		}
 		res.status(204).end()
 	},
+
+	installation: function (req, res) {
+		res.status(304)
+	},
+
+	operations: function (req, res) {
+		res.status(304)
+	},
+
 
 };

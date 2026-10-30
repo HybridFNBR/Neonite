@@ -793,7 +793,25 @@ async function compareAndUpdateKeychain() {
         fs.writeFileSync("./responses/keychain.json", JSON.stringify(keychain, null, 2));
     }
     else if (response.status !== 200) {
-        NeoLog.Error("Unable to connect to dillyapis! Falling back to existing keychains on your local disk. You may experience issues!");
+        const fallbackResponse = await axios.get('https://fnapi.cbn.lol/api/v1/aeskeys');
+        if (fallbackResponse.status === 200) {
+            const data = fallbackResponse.data;
+            let missingCount = 0;
+            const keychainArray = [];
+            for (const keys of data.keys) {
+                if (!keychain.includes(keys.keyChain)) {
+                    missingCount++;
+                    keychainArray.push(keys.keyChain);
+                    NeoLog.Debug(`New Keychain added: ${keys.name}, ${keys.filesCount} Files)`)
+                }
+            }
+            keychain.push(...keychainArray);
+
+            fs.writeFileSync("./responses/keychain.json", JSON.stringify(keychain, null, 2));
+        }
+        else{
+           NeoLog.Error("Unable to connect to keychain endpoints! Falling back to existing keychains on your local disk. Some assets may not be decrypted!");
+        }
     }
 }
 NeoLog.Log("Neonite is up and listening on port 5595!")

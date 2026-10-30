@@ -2891,6 +2891,13 @@ module.exports = {
     res.json({
       "conversations": []
     })
+  },
+
+  eosParty: function(req, res){
+    res.json({
+      "invites": [],
+			"join_requests":[],
+    })
   }
 }
 

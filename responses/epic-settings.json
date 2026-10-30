@@ -247,7 +247,7 @@
         "parentLimitFromOrgLevel": true,
         "effectiveValue": "everybody",
         "effectiveSource": "preference",
-        "effectiveValueUpdatedAt": 1726266558782,
+        "effectiveValueUpdatedAt": 1764894186259,
         "isOrgLevel": false,
         "definition": {
           "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
@@ -296,6 +296,16 @@
               }
             },
             {
+              "value": "friends-team-connections",
+              "translations": {
+                "en": {
+                  "label": "TBD",
+                  "userNotice": "TBD",
+                  "parentNotice": "TBD"
+                }
+              }
+            },
+            {
               "value": "everybody",
               "translations": {
                 "en": {
@@ -332,7 +342,7 @@
         "parentLimitFromOrgLevel": true,
         "effectiveValue": "nobody",
         "effectiveSource": "preference",
-        "effectiveValueUpdatedAt": 1758571271525,
+        "effectiveValueUpdatedAt": 1788648589236,
         "isOrgLevel": false,
         "definition": {
           "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
@@ -377,6 +387,16 @@
                   "label": "Friends & Teammates",
                   "userNotice": "You can voice chat with players in their Epic friends list and platform friends list, and those on their team.",
                   "parentNotice": "Your child can voice chat with players in their Epic friends list and platform friends list, and those on their team."
+                }
+              }
+            },
+            {
+              "value": "friends-team-connections",
+              "translations": {
+                "en": {
+                  "label": "TBD",
+                  "userNotice": "TBD",
+                  "parentNotice": "TBD"
                 }
               }
             },
@@ -480,7 +500,7 @@
         "preferredValueFromOrgLevel": true,
         "effectiveValue": false,
         "effectiveSource": "default",
-        "effectiveValueUpdatedAt": 1761157183252,
+        "effectiveValueUpdatedAt": 1765292862619,
         "isOrgLevel": false,
         "definition": {
           "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
@@ -519,7 +539,7 @@
         "preferredValueFromOrgLevel": true,
         "effectiveValue": false,
         "effectiveSource": "default",
-        "effectiveValueUpdatedAt": 1729607628519,
+        "effectiveValueUpdatedAt": 1765292862617,
         "isOrgLevel": false,
         "definition": {
           "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
@@ -601,7 +621,7 @@
         "preferredValueFromOrgLevel": true,
         "effectiveValue": false,
         "effectiveSource": "default",
-        "effectiveValueUpdatedAt": 1729607628519,
+        "effectiveValueUpdatedAt": 1765292862625,
         "isOrgLevel": false,
         "definition": {
           "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
@@ -630,6 +650,45 @@
             "applyConsentToEnforcedUsersOnly": false,
             "defaultValue": false,
             "defaultPreference": false
+          }
+        }
+      },
+      {
+        "namespace": "communities",
+        "settingName": "experience",
+        "preferredValue": true,
+        "preferredValueFromOrgLevel": true,
+        "effectiveValue": true,
+        "effectiveSource": "default",
+        "effectiveValueUpdatedAt": 1791929246652,
+        "isOrgLevel": false,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
+          "namespace": "communities",
+          "settingName": "experience",
+          "valueType": "boolean",
+          "allowProductOverrides": "none",
+          "inheritFromOrg": true,
+          "translations": {
+            "en": {
+              "label": "Communities Experience",
+              "userNotice": "Personalized messages about communities you are following, events you are interested in, and replies to you",
+              "parentNotice": "Personalized messages about communities your child is following, events they are interested in, and replies to them"
+            }
+          },
+          "options": [],
+          "restrictiveOrder": "falseRestrictive",
+          "userHidden": false,
+          "required": false,
+          "dataStorage": "raw",
+          "maximumScheduleWindowsPerDay": 0,
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentType": "none",
+            "applyConsentToEnforcedUsersOnly": false,
+            "defaultValue": true,
+            "defaultPreference": true
           }
         }
       },
@@ -676,12 +735,12 @@
       {
         "namespace": "party",
         "settingName": "party-joinability",
-        "preferredValue": "Private",
-        "preferredValueUpdatedAt": 1751764843565,
+        "preferredValue": "Public",
+        "preferredValueUpdatedAt": 1775053362299,
         "preferredValueFromOrgLevel": false,
-        "effectiveValue": "Private",
+        "effectiveValue": "Public",
         "effectiveSource": "preference",
-        "effectiveValueUpdatedAt": 1751764843565,
+        "effectiveValueUpdatedAt": 1788472348124,
         "isOrgLevel": false,
         "definition": {
           "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
@@ -729,8 +788,8 @@
             "consentTypeRequired": "none",
             "consentType": "none",
             "applyConsentToEnforcedUsersOnly": false,
-            "defaultValue": "Public",
-            "defaultPreference": "Public",
+            "defaultValue": "Private",
+            "defaultPreference": "Private",
             "enforcedLimit": "Public"
           }
         }
@@ -857,6 +916,116 @@
       },
       {
         "namespace": "profile",
+        "settingName": "paper-canister",
+        "preferredValue": "unsupervised",
+        "preferredValueFromOrgLevel": false,
+        "effectiveValue": "unsupervised",
+        "effectiveSource": "default",
+        "isOrgLevel": false,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
+          "namespace": "profile",
+          "settingName": "paper-canister",
+          "valueType": "option",
+          "translations": {
+            "en": {
+              "label": "TBD",
+              "userNotice": "TBD",
+              "parentNotice": "TBD"
+            }
+          },
+          "options": [
+            {
+              "value": "disabled",
+              "translations": {
+                "en": {
+                  "label": "Disabled",
+                  "userNotice": "TBD",
+                  "parentNotice": "TBD"
+                }
+              }
+            },
+            {
+              "value": "supervised",
+              "translations": {
+                "en": {
+                  "label": "Supervised",
+                  "userNotice": "TBD",
+                  "parentNotice": "TBD"
+                }
+              }
+            },
+            {
+              "value": "unsupervised",
+              "translations": {
+                "en": {
+                  "label": "Unsupervised",
+                  "userNotice": "TBD",
+                  "parentNotice": "TBD"
+                }
+              }
+            }
+          ],
+          "restrictiveOrder": "firstRestrictive",
+          "userHidden": false,
+          "required": false,
+          "dataStorage": "readOnly",
+          "maximumScheduleWindowsPerDay": 0,
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentType": "none",
+            "applyConsentToEnforcedUsersOnly": false,
+            "defaultValue": "unsupervised",
+            "defaultPreference": "unsupervised"
+          }
+        }
+      },
+      {
+        "namespace": "profile",
+        "settingName": "wavy-spoiler",
+        "preferredValue": true,
+        "preferredValueFromOrgLevel": true,
+        "parentLimit": true,
+        "parentLimitFromOrgLevel": true,
+        "effectiveValue": true,
+        "effectiveSource": "default",
+        "effectiveValueUpdatedAt": 1791403536388,
+        "isOrgLevel": false,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
+          "namespace": "profile",
+          "settingName": "wavy-spoiler",
+          "valueType": "boolean",
+          "allowProductOverrides": "ageBrackets",
+          "inheritFromOrg": true,
+          "translations": {
+            "en": {
+              "label": "Collaboration",
+              "userNotice": "Control whether creation, publishing and playtesting can be done with a team or only solo.",
+              "parentNotice": "Control whether creation, publishing and playtesting by your child can be done with a team or only solo."
+            }
+          },
+          "options": [],
+          "restrictiveOrder": "falseRestrictive",
+          "userHidden": true,
+          "required": false,
+          "dataStorage": "raw",
+          "maximumScheduleWindowsPerDay": 0,
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentTypeUnderParentalControl": "opt-in-unverified",
+            "consentType": "opt-in-unverified",
+            "applyConsentToEnforcedUsersOnly": true,
+            "defaultValue": true,
+            "defaultPreference": true,
+            "defaultParentLimit": true
+          }
+        }
+      },
+      {
+        "namespace": "profile",
         "settingName": "allow-create-experiences",
         "preferredValue": true,
         "preferredValueFromOrgLevel": false,
@@ -893,6 +1062,45 @@
             "defaultValue": true,
             "defaultPreference": true,
             "defaultParentLimit": true
+          }
+        }
+      },
+      {
+        "namespace": "profile",
+        "settingName": "club-chalk",
+        "preferredValue": true,
+        "preferredValueFromOrgLevel": true,
+        "effectiveValue": true,
+        "effectiveSource": "default",
+        "effectiveValueUpdatedAt": 1766094493033,
+        "isOrgLevel": false,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
+          "namespace": "profile",
+          "settingName": "club-chalk",
+          "valueType": "boolean",
+          "allowProductOverrides": "ageBrackets",
+          "inheritFromOrg": true,
+          "translations": {
+            "en": {
+              "label": "TBD",
+              "userNotice": "TBD",
+              "parentNotice": "TBD"
+            }
+          },
+          "options": [],
+          "restrictiveOrder": "falseRestrictive",
+          "userHidden": false,
+          "required": false,
+          "dataStorage": "raw",
+          "maximumScheduleWindowsPerDay": 0,
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentType": "none",
+            "applyConsentToEnforcedUsersOnly": false,
+            "defaultValue": true,
+            "defaultPreference": true
           }
         }
       },
@@ -971,6 +1179,149 @@
             "applyConsentToEnforcedUsersOnly": false,
             "defaultValue": true,
             "defaultPreference": true
+          }
+        }
+      },
+      {
+        "namespace": "profile",
+        "settingName": "station-vacation",
+        "preferredValue": true,
+        "preferredValueFromOrgLevel": true,
+        "parentLimit": true,
+        "parentLimitFromOrgLevel": true,
+        "effectiveValue": true,
+        "effectiveSource": "default",
+        "effectiveValueUpdatedAt": 1773754945267,
+        "isOrgLevel": false,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
+          "namespace": "profile",
+          "settingName": "station-vacation",
+          "valueType": "boolean",
+          "allowProductOverrides": "ageBrackets",
+          "inheritFromOrg": true,
+          "translations": {
+            "en": {
+              "label": "TBD",
+              "userNotice": "TBD",
+              "parentNotice": "TBD"
+            }
+          },
+          "options": [],
+          "restrictiveOrder": "falseRestrictive",
+          "userHidden": true,
+          "required": false,
+          "dataStorage": "raw",
+          "maximumScheduleWindowsPerDay": 0,
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentTypeUnderParentalControl": "opt-in-unverified",
+            "consentType": "opt-in-unverified",
+            "applyConsentToEnforcedUsersOnly": true,
+            "defaultValue": true,
+            "defaultPreference": true,
+            "defaultParentLimit": true
+          }
+        }
+      },
+      {
+        "namespace": "profile",
+        "settingName": "weighted-vase",
+        "preferredValue": "unsupervised",
+        "preferredValueFromOrgLevel": false,
+        "effectiveValue": "unsupervised",
+        "effectiveSource": "default",
+        "isOrgLevel": false,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
+          "namespace": "profile",
+          "settingName": "weighted-vase",
+          "valueType": "option",
+          "translations": {
+            "en": {
+              "label": "TBD",
+              "userNotice": "TBD",
+              "parentNotice": "TBD"
+            }
+          },
+          "options": [
+            {
+              "value": "supervised-once",
+              "translations": {
+                "en": {
+                  "label": "Supervised Once",
+                  "userNotice": "TBD",
+                  "parentNotice": "TBD"
+                }
+              }
+            },
+            {
+              "value": "unsupervised",
+              "translations": {
+                "en": {
+                  "label": "Unsupervised",
+                  "userNotice": "TBD",
+                  "parentNotice": "TBD"
+                }
+              }
+            }
+          ],
+          "restrictiveOrder": "firstRestrictive",
+          "userHidden": false,
+          "required": false,
+          "dataStorage": "readOnly",
+          "maximumScheduleWindowsPerDay": 0,
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentType": "none",
+            "applyConsentToEnforcedUsersOnly": false,
+            "defaultValue": "unsupervised",
+            "defaultPreference": "unsupervised"
+          }
+        }
+      },
+      {
+        "namespace": "profile",
+        "settingName": "fast-fries",
+        "preferredValue": true,
+        "preferredValueFromOrgLevel": true,
+        "parentLimit": true,
+        "parentLimitFromOrgLevel": true,
+        "effectiveValue": true,
+        "effectiveSource": "default",
+        "effectiveValueUpdatedAt": 1791403536387,
+        "isOrgLevel": false,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
+          "namespace": "profile",
+          "settingName": "fast-fries",
+          "valueType": "boolean",
+          "allowProductOverrides": "ageBrackets",
+          "inheritFromOrg": true,
+          "translations": {
+            "en": {
+              "label": "Social Visibility (Creator Enabled Option)",
+              "userNotice": "Turn on and off the visibility of social links on My Socials device and Creator Pages",
+              "parentNotice": "Turn on and off the visibility of social links on your childs My Socials device and Creator Pages"
+            }
+          },
+          "options": [],
+          "restrictiveOrder": "falseRestrictive",
+          "userHidden": true,
+          "required": false,
+          "dataStorage": "raw",
+          "maximumScheduleWindowsPerDay": 0,
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentTypeUnderParentalControl": "opt-in-unverified",
+            "consentType": "opt-in-unverified",
+            "applyConsentToEnforcedUsersOnly": true,
+            "defaultValue": true,
+            "defaultPreference": true,
+            "defaultParentLimit": true
           }
         }
       },
@@ -1313,7 +1664,7 @@
         "preferredValueFromOrgLevel": false,
         "effectiveValue": true,
         "effectiveSource": "preference",
-        "effectiveValueUpdatedAt": 1726266558826,
+        "effectiveValueUpdatedAt": 1780581060809,
         "isOrgLevel": false,
         "definition": {
           "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
@@ -1684,7 +2035,7 @@
         "preferredValueFromOrgLevel": true,
         "parentLimit": "ACB_AGE_M",
         "parentLimitFromOrgLevel": false,
-        "parentLimitUpdatedAt": 1721737772452,
+        "parentLimitUpdatedAt": 1791661411666,
         "effectiveValue": "ACB_AGE_M",
         "effectiveSource": "default",
         "effectiveValueUpdatedAt": 1726266558872,
@@ -1742,9 +2093,9 @@
             "consentTypeUnderParentalControl": "opt-in-unverified",
             "consentType": "opt-in-unverified",
             "applyConsentToEnforcedUsersOnly": true,
-            "defaultValue": "ACB_AGE_R18",
-            "defaultPreference": "ACB_AGE_R18",
-            "defaultParentLimit": "ACB_AGE_R18"
+            "defaultValue": "ACB_AGE_M",
+            "defaultPreference": "ACB_AGE_M",
+            "defaultParentLimit": "ACB_AGE_M"
           }
         }
       },
@@ -1755,7 +2106,7 @@
         "preferredValueFromOrgLevel": true,
         "parentLimit": "CERO_AGE_15",
         "parentLimitFromOrgLevel": false,
-        "parentLimitUpdatedAt": 1721737772453,
+        "parentLimitUpdatedAt": 1791661411667,
         "effectiveValue": "CERO_AGE_15",
         "effectiveSource": "default",
         "effectiveValueUpdatedAt": 1726266558870,
@@ -1813,23 +2164,23 @@
             "consentTypeUnderParentalControl": "opt-in-unverified",
             "consentType": "opt-in-unverified",
             "applyConsentToEnforcedUsersOnly": true,
-            "defaultValue": "Unrated",
-            "defaultPreference": "Unrated",
-            "defaultParentLimit": "Unrated"
+            "defaultValue": "CERO_AGE_15",
+            "defaultPreference": "CERO_AGE_15",
+            "defaultParentLimit": "CERO_AGE_15"
           }
         }
       },
       {
         "namespace": "ratings",
         "settingName": "limit-classind",
-        "preferredValue": "CLASSIND_AGE_12",
+        "preferredValue": "CLASSIND_AGE_16",
         "preferredValueFromOrgLevel": true,
-        "parentLimit": "CLASSIND_AGE_12",
+        "parentLimit": "CLASSIND_AGE_16",
         "parentLimitFromOrgLevel": false,
-        "parentLimitUpdatedAt": 1721737772452,
-        "effectiveValue": "CLASSIND_AGE_12",
+        "parentLimitUpdatedAt": 1791661411666,
+        "effectiveValue": "CLASSIND_AGE_16",
         "effectiveSource": "default",
-        "effectiveValueUpdatedAt": 1726266558868,
+        "effectiveValueUpdatedAt": 1791661411666,
         "isOrgLevel": false,
         "definition": {
           "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
@@ -1856,6 +2207,15 @@
               }
             },
             {
+              "value": "CLASSIND_AGE_6",
+              "translations": {
+                "en": {
+                  "label": "6 years",
+                  "parentNotice": "TBD"
+                }
+              }
+            },
+            {
               "value": "CLASSIND_AGE_10",
               "translations": {
                 "en": {
@@ -1872,6 +2232,24 @@
                   "parentNotice": "TBD"
                 }
               }
+            },
+            {
+              "value": "CLASSIND_AGE_14",
+              "translations": {
+                "en": {
+                  "label": "14 years",
+                  "parentNotice": "TBD"
+                }
+              }
+            },
+            {
+              "value": "CLASSIND_AGE_16",
+              "translations": {
+                "en": {
+                  "label": "16 years",
+                  "parentNotice": "TBD"
+                }
+              }
             }
           ],
           "restrictiveOrder": "firstRestrictive",
@@ -1884,9 +2262,9 @@
             "consentTypeUnderParentalControl": "opt-in-unverified",
             "consentType": "opt-in-unverified",
             "applyConsentToEnforcedUsersOnly": true,
-            "defaultValue": "CLASSIND_AGE_18",
-            "defaultPreference": "CLASSIND_AGE_18",
-            "defaultParentLimit": "CLASSIND_AGE_18"
+            "defaultValue": "CLASSIND_AGE_16",
+            "defaultPreference": "CLASSIND_AGE_16",
+            "defaultParentLimit": "CLASSIND_AGE_16"
           }
         }
       },
@@ -1897,7 +2275,7 @@
         "preferredValueFromOrgLevel": true,
         "parentLimit": "CSRR_AGE_12",
         "parentLimitFromOrgLevel": false,
-        "parentLimitUpdatedAt": 1721737772453,
+        "parentLimitUpdatedAt": 1791661411667,
         "effectiveValue": "CSRR_AGE_12",
         "effectiveSource": "default",
         "effectiveValueUpdatedAt": 1726266558874,
@@ -1955,9 +2333,80 @@
             "consentTypeUnderParentalControl": "opt-in-unverified",
             "consentType": "opt-in-unverified",
             "applyConsentToEnforcedUsersOnly": true,
-            "defaultValue": "Unrated",
-            "defaultPreference": "Unrated",
-            "defaultParentLimit": "Unrated"
+            "defaultValue": "CSRR_AGE_12",
+            "defaultPreference": "CSRR_AGE_12",
+            "defaultParentLimit": "CSRR_AGE_12"
+          }
+        }
+      },
+      {
+        "namespace": "ratings",
+        "settingName": "limit-dgsc",
+        "preferredValue": "TCA_AGE_PG_12",
+        "preferredValueFromOrgLevel": false,
+        "parentLimit": "TCA_AGE_PG_12",
+        "parentLimitFromOrgLevel": false,
+        "parentLimitUpdatedAt": 1791661411667,
+        "effectiveValue": "TCA_AGE_PG_12",
+        "effectiveSource": "default",
+        "effectiveValueUpdatedAt": 1781459627225,
+        "isOrgLevel": false,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
+          "namespace": "ratings",
+          "settingName": "limit-dgsc",
+          "valueType": "option",
+          "allowProductOverrides": "ageBrackets",
+          "inheritFromOrg": true,
+          "translations": {
+            "en": {
+              "label": "DGSC limit",
+              "parentNotice": "TBD"
+            }
+          },
+          "options": [
+            {
+              "value": "TCA_AGE_G",
+              "translations": {
+                "en": {
+                  "label": "G",
+                  "parentNotice": "TBD"
+                }
+              }
+            },
+            {
+              "value": "TCA_AGE_P",
+              "translations": {
+                "en": {
+                  "label": "P",
+                  "parentNotice": "TBD"
+                }
+              }
+            },
+            {
+              "value": "TCA_AGE_PG_12",
+              "translations": {
+                "en": {
+                  "label": "PG 12",
+                  "parentNotice": "TBD"
+                }
+              }
+            }
+          ],
+          "restrictiveOrder": "firstRestrictive",
+          "userHidden": true,
+          "required": false,
+          "dataStorage": "raw",
+          "maximumScheduleWindowsPerDay": 0,
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentTypeUnderParentalControl": "opt-in-unverified",
+            "consentType": "opt-in-unverified",
+            "applyConsentToEnforcedUsersOnly": true,
+            "defaultValue": "TCA_AGE_PG_12",
+            "defaultPreference": "TCA_AGE_PG_12",
+            "defaultParentLimit": "TCA_AGE_PG_12"
           }
         }
       },
@@ -1968,10 +2417,10 @@
         "preferredValueFromOrgLevel": true,
         "parentLimit": "ESRB_AGE_T",
         "parentLimitFromOrgLevel": false,
-        "parentLimitUpdatedAt": 1721737772452,
+        "parentLimitUpdatedAt": 1791661411666,
         "effectiveValue": "ESRB_AGE_T",
         "effectiveSource": "default",
-        "effectiveValueUpdatedAt": 1726266558878,
+        "effectiveValueUpdatedAt": 1781459627231,
         "isOrgLevel": false,
         "definition": {
           "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
@@ -2026,9 +2475,9 @@
             "consentTypeUnderParentalControl": "opt-in-unverified",
             "consentType": "opt-in-unverified",
             "applyConsentToEnforcedUsersOnly": true,
-            "defaultValue": "Unrated",
-            "defaultPreference": "Unrated",
-            "defaultParentLimit": "Unrated"
+            "defaultValue": "ESRB_AGE_T",
+            "defaultPreference": "ESRB_AGE_T",
+            "defaultParentLimit": "ESRB_AGE_T"
           }
         }
       },
@@ -2039,7 +2488,7 @@
         "preferredValueFromOrgLevel": true,
         "parentLimit": "FPB_AGE_13",
         "parentLimitFromOrgLevel": false,
-        "parentLimitUpdatedAt": 1721737772453,
+        "parentLimitUpdatedAt": 1791661411666,
         "effectiveValue": "FPB_AGE_13",
         "effectiveSource": "default",
         "effectiveValueUpdatedAt": 1726266558883,
@@ -2106,9 +2555,9 @@
             "consentTypeUnderParentalControl": "opt-in-unverified",
             "consentType": "opt-in-unverified",
             "applyConsentToEnforcedUsersOnly": true,
-            "defaultValue": "Unrated",
-            "defaultPreference": "Unrated",
-            "defaultParentLimit": "Unrated"
+            "defaultValue": "FPB_AGE_13",
+            "defaultPreference": "FPB_AGE_13",
+            "defaultParentLimit": "FPB_AGE_13"
           }
         }
       },
@@ -2119,7 +2568,7 @@
         "preferredValueFromOrgLevel": true,
         "parentLimit": "GCAM_AGE_12",
         "parentLimitFromOrgLevel": false,
-        "parentLimitUpdatedAt": 1721737772453,
+        "parentLimitUpdatedAt": 1791661411667,
         "effectiveValue": "GCAM_AGE_12",
         "effectiveSource": "default",
         "effectiveValueUpdatedAt": 1726266558880,
@@ -2177,23 +2626,23 @@
             "consentTypeUnderParentalControl": "opt-in-unverified",
             "consentType": "opt-in-unverified",
             "applyConsentToEnforcedUsersOnly": true,
-            "defaultValue": "Unrated",
-            "defaultPreference": "Unrated",
-            "defaultParentLimit": "Unrated"
+            "defaultValue": "GCAM_AGE_12",
+            "defaultPreference": "GCAM_AGE_12",
+            "defaultParentLimit": "GCAM_AGE_12"
           }
         }
       },
       {
         "namespace": "ratings",
         "settingName": "limit-generic",
-        "preferredValue": "GEN_AGE_12",
+        "preferredValue": "GEN_AGE_16",
         "preferredValueFromOrgLevel": true,
-        "parentLimit": "GEN_AGE_12",
+        "parentLimit": "GEN_AGE_16",
         "parentLimitFromOrgLevel": false,
-        "parentLimitUpdatedAt": 1721737772452,
-        "effectiveValue": "GEN_AGE_12",
+        "parentLimitUpdatedAt": 1791661411666,
+        "effectiveValue": "GEN_AGE_16",
         "effectiveSource": "default",
-        "effectiveValueUpdatedAt": 1726266558876,
+        "effectiveValueUpdatedAt": 1791661411666,
         "isOrgLevel": false,
         "definition": {
           "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
@@ -2236,6 +2685,15 @@
                   "parentNotice": "TBD"
                 }
               }
+            },
+            {
+              "value": "GEN_AGE_16",
+              "translations": {
+                "en": {
+                  "label": "16+",
+                  "parentNotice": "TBD"
+                }
+              }
             }
           ],
           "restrictiveOrder": "firstRestrictive",
@@ -2248,9 +2706,89 @@
             "consentTypeUnderParentalControl": "opt-in-unverified",
             "consentType": "opt-in-unverified",
             "applyConsentToEnforcedUsersOnly": true,
-            "defaultValue": "Unrated",
-            "defaultPreference": "Unrated",
-            "defaultParentLimit": "Unrated"
+            "defaultValue": "GEN_AGE_16",
+            "defaultPreference": "GEN_AGE_16",
+            "defaultParentLimit": "GEN_AGE_16"
+          }
+        }
+      },
+      {
+        "namespace": "ratings",
+        "settingName": "limit-gmedia",
+        "preferredValue": "GMEDIA_AGE_16",
+        "preferredValueFromOrgLevel": false,
+        "parentLimit": "GMEDIA_AGE_16",
+        "parentLimitFromOrgLevel": false,
+        "parentLimitUpdatedAt": 1791661411667,
+        "effectiveValue": "GMEDIA_AGE_16",
+        "effectiveSource": "default",
+        "effectiveValueUpdatedAt": 1781459627228,
+        "isOrgLevel": false,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
+          "namespace": "ratings",
+          "settingName": "limit-gmedia",
+          "valueType": "option",
+          "allowProductOverrides": "ageBrackets",
+          "inheritFromOrg": true,
+          "translations": {
+            "en": {
+              "label": "Gmedia limit",
+              "parentNotice": "TBD"
+            }
+          },
+          "options": [
+            {
+              "value": "GMEDIA_AGE_3",
+              "translations": {
+                "en": {
+                  "label": "3",
+                  "parentNotice": "TBD"
+                }
+              }
+            },
+            {
+              "value": "GMEDIA_AGE_7",
+              "translations": {
+                "en": {
+                  "label": "7",
+                  "parentNotice": "TBD"
+                }
+              }
+            },
+            {
+              "value": "GMEDIA_AGE_12",
+              "translations": {
+                "en": {
+                  "label": "12",
+                  "parentNotice": "TBD"
+                }
+              }
+            },
+            {
+              "value": "GMEDIA_AGE_16",
+              "translations": {
+                "en": {
+                  "label": "16",
+                  "parentNotice": "TBD"
+                }
+              }
+            }
+          ],
+          "restrictiveOrder": "firstRestrictive",
+          "userHidden": true,
+          "required": false,
+          "dataStorage": "raw",
+          "maximumScheduleWindowsPerDay": 0,
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentTypeUnderParentalControl": "opt-in-unverified",
+            "consentType": "opt-in-unverified",
+            "applyConsentToEnforcedUsersOnly": true,
+            "defaultValue": "GMEDIA_AGE_16",
+            "defaultPreference": "GMEDIA_AGE_16",
+            "defaultParentLimit": "GMEDIA_AGE_16"
           }
         }
       },
@@ -2261,7 +2799,7 @@
         "preferredValueFromOrgLevel": true,
         "parentLimit": "GRAC_AGE_12",
         "parentLimitFromOrgLevel": false,
-        "parentLimitUpdatedAt": 1721737772453,
+        "parentLimitUpdatedAt": 1791661411666,
         "effectiveValue": "GRAC_AGE_12",
         "effectiveSource": "default",
         "effectiveValueUpdatedAt": 1726266558885,
@@ -2310,10 +2848,81 @@
             "consentTypeUnderParentalControl": "opt-in-unverified",
             "consentType": "opt-in-unverified",
             "applyConsentToEnforcedUsersOnly": true,
-            "defaultValue": "GRAC_AGE_ADULT",
-            "defaultPreference": "GRAC_AGE_ADULT",
-            "defaultParentLimit": "GRAC_AGE_15",
-            "enforcedLimit": "GRAC_AGE_15"
+            "defaultValue": "GRAC_AGE_12",
+            "defaultPreference": "GRAC_AGE_12",
+            "defaultParentLimit": "GRAC_AGE_12",
+            "enforcedLimit": "GRAC_AGE_12"
+          }
+        }
+      },
+      {
+        "namespace": "ratings",
+        "settingName": "limit-igrs",
+        "preferredValue": "IGRS_AGE_13",
+        "preferredValueFromOrgLevel": false,
+        "parentLimit": "IGRS_AGE_13",
+        "parentLimitFromOrgLevel": false,
+        "parentLimitUpdatedAt": 1791661411667,
+        "effectiveValue": "IGRS_AGE_13",
+        "effectiveSource": "default",
+        "effectiveValueUpdatedAt": 1781459627215,
+        "isOrgLevel": false,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
+          "namespace": "ratings",
+          "settingName": "limit-igrs",
+          "valueType": "option",
+          "allowProductOverrides": "ageBrackets",
+          "inheritFromOrg": true,
+          "translations": {
+            "en": {
+              "label": "IGRS limit",
+              "parentNotice": "TBD"
+            }
+          },
+          "options": [
+            {
+              "value": "IGRS_AGE_3",
+              "translations": {
+                "en": {
+                  "label": "3",
+                  "parentNotice": "TBD"
+                }
+              }
+            },
+            {
+              "value": "IGRS_AGE_7",
+              "translations": {
+                "en": {
+                  "label": "7",
+                  "parentNotice": "TBD"
+                }
+              }
+            },
+            {
+              "value": "IGRS_AGE_13",
+              "translations": {
+                "en": {
+                  "label": "13",
+                  "parentNotice": "TBD"
+                }
+              }
+            }
+          ],
+          "restrictiveOrder": "firstRestrictive",
+          "userHidden": true,
+          "required": false,
+          "dataStorage": "raw",
+          "maximumScheduleWindowsPerDay": 0,
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentTypeUnderParentalControl": "opt-in-unverified",
+            "consentType": "opt-in-unverified",
+            "applyConsentToEnforcedUsersOnly": true,
+            "defaultValue": "IGRS_AGE_13",
+            "defaultPreference": "IGRS_AGE_13",
+            "defaultParentLimit": "IGRS_AGE_13"
           }
         }
       },
@@ -2324,7 +2933,7 @@
         "preferredValueFromOrgLevel": true,
         "parentLimit": "MRO_AGE_12",
         "parentLimitFromOrgLevel": false,
-        "parentLimitUpdatedAt": 1721737772453,
+        "parentLimitUpdatedAt": 1791661411667,
         "effectiveValue": "MRO_AGE_12",
         "effectiveSource": "default",
         "effectiveValueUpdatedAt": 1726266558905,
@@ -2382,9 +2991,9 @@
             "consentTypeUnderParentalControl": "opt-in-unverified",
             "consentType": "opt-in-unverified",
             "applyConsentToEnforcedUsersOnly": true,
-            "defaultValue": "Unrated",
-            "defaultPreference": "Unrated",
-            "defaultParentLimit": "Unrated"
+            "defaultValue": "MRO_AGE_12",
+            "defaultPreference": "MRO_AGE_12",
+            "defaultParentLimit": "MRO_AGE_12"
           }
         }
       },
@@ -2395,7 +3004,7 @@
         "preferredValueFromOrgLevel": true,
         "parentLimit": "OFLC_AGE_13",
         "parentLimitFromOrgLevel": false,
-        "parentLimitUpdatedAt": 1721737772452,
+        "parentLimitUpdatedAt": 1791661411666,
         "effectiveValue": "OFLC_AGE_13",
         "effectiveSource": "default",
         "effectiveValueUpdatedAt": 1726266558895,
@@ -2453,23 +3062,23 @@
             "consentTypeUnderParentalControl": "opt-in-unverified",
             "consentType": "opt-in-unverified",
             "applyConsentToEnforcedUsersOnly": true,
-            "defaultValue": "Unrated",
-            "defaultPreference": "Unrated",
-            "defaultParentLimit": "Unrated"
+            "defaultValue": "OFLC_AGE_13",
+            "defaultPreference": "OFLC_AGE_13",
+            "defaultParentLimit": "OFLC_AGE_13"
           }
         }
       },
       {
         "namespace": "ratings",
         "settingName": "limit-pegi",
-        "preferredValue": "PEGI_AGE_12",
+        "preferredValue": "PEGI_AGE_16",
         "preferredValueFromOrgLevel": true,
-        "parentLimit": "PEGI_AGE_12",
+        "parentLimit": "PEGI_AGE_16",
         "parentLimitFromOrgLevel": false,
-        "parentLimitUpdatedAt": 1721737772452,
-        "effectiveValue": "PEGI_AGE_12",
+        "parentLimitUpdatedAt": 1791661411666,
+        "effectiveValue": "PEGI_AGE_16",
         "effectiveSource": "default",
-        "effectiveValueUpdatedAt": 1726266558888,
+        "effectiveValueUpdatedAt": 1791661411666,
         "isOrgLevel": false,
         "definition": {
           "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
@@ -2512,6 +3121,15 @@
                   "parentNotice": "TBD"
                 }
               }
+            },
+            {
+              "value": "PEGI_AGE_16",
+              "translations": {
+                "en": {
+                  "label": "PEGI 16",
+                  "parentNotice": "TBD"
+                }
+              }
             }
           ],
           "restrictiveOrder": "firstRestrictive",
@@ -2524,9 +3142,9 @@
             "consentTypeUnderParentalControl": "opt-in-unverified",
             "consentType": "opt-in-unverified",
             "applyConsentToEnforcedUsersOnly": true,
-            "defaultValue": "Unrated",
-            "defaultPreference": "Unrated",
-            "defaultParentLimit": "Unrated"
+            "defaultValue": "PEGI_AGE_16",
+            "defaultPreference": "PEGI_AGE_16",
+            "defaultParentLimit": "PEGI_AGE_16"
           }
         }
       },
@@ -2537,7 +3155,7 @@
         "preferredValueFromOrgLevel": true,
         "parentLimit": "RUSSIA_AGE_12",
         "parentLimitFromOrgLevel": false,
-        "parentLimitUpdatedAt": 1721737772452,
+        "parentLimitUpdatedAt": 1791661411666,
         "effectiveValue": "RUSSIA_AGE_12",
         "effectiveSource": "default",
         "effectiveValueUpdatedAt": 1726266558893,
@@ -2595,9 +3213,9 @@
             "consentTypeUnderParentalControl": "opt-in-unverified",
             "consentType": "opt-in-unverified",
             "applyConsentToEnforcedUsersOnly": true,
-            "defaultValue": "RUSSIA_AGE_18",
-            "defaultPreference": "RUSSIA_AGE_18",
-            "defaultParentLimit": "RUSSIA_AGE_18"
+            "defaultValue": "RUSSIA_AGE_12",
+            "defaultPreference": "RUSSIA_AGE_12",
+            "defaultParentLimit": "RUSSIA_AGE_12"
           }
         }
       },
@@ -2608,10 +3226,10 @@
         "preferredValueFromOrgLevel": true,
         "parentLimit": "USK_AGE_16",
         "parentLimitFromOrgLevel": false,
-        "parentLimitUpdatedAt": 1721737772452,
+        "parentLimitUpdatedAt": 1791661411666,
         "effectiveValue": "USK_AGE_16",
         "effectiveSource": "default",
-        "effectiveValueUpdatedAt": 1726266558898,
+        "effectiveValueUpdatedAt": 1781459627221,
         "isOrgLevel": false,
         "definition": {
           "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
@@ -2675,9 +3293,9 @@
             "consentTypeUnderParentalControl": "opt-in-unverified",
             "consentType": "opt-in-unverified",
             "applyConsentToEnforcedUsersOnly": true,
-            "defaultValue": "Unrated",
-            "defaultPreference": "Unrated",
-            "defaultParentLimit": "Unrated"
+            "defaultValue": "USK_AGE_16",
+            "defaultPreference": "USK_AGE_16",
+            "defaultParentLimit": "USK_AGE_16"
           }
         }
       },
@@ -2710,6 +3328,7 @@
               "translations": {
                 "en": {
                   "label": "ACB",
+                  "userNotice": "TBD",
                   "parentNotice": "TBD"
                 }
               }
@@ -2739,6 +3358,16 @@
               "translations": {
                 "en": {
                   "label": "ClassInd",
+                  "userNotice": "TBD",
+                  "parentNotice": "TBD"
+                }
+              }
+            },
+            {
+              "value": "DGSC",
+              "translations": {
+                "en": {
+                  "label": "DGSC",
                   "userNotice": "TBD",
                   "parentNotice": "TBD"
                 }
@@ -2785,10 +3414,30 @@
               }
             },
             {
+              "value": "Gmedia",
+              "translations": {
+                "en": {
+                  "label": "Gmedia",
+                  "userNotice": "TBD",
+                  "parentNotice": "TBD"
+                }
+              }
+            },
+            {
               "value": "Generic",
               "translations": {
                 "en": {
                   "label": "IARC Generic",
+                  "userNotice": "TBD",
+                  "parentNotice": "TBD"
+                }
+              }
+            },
+            {
+              "value": "IGRS",
+              "translations": {
+                "en": {
+                  "label": "IGRS",
                   "userNotice": "TBD",
                   "parentNotice": "TBD"
                 }
@@ -2862,12 +3511,12 @@
       {
         "namespace": "stats",
         "settingName": "show-in-leaderboard",
-        "preferredValue": true,
-        "preferredValueUpdatedAt": 1712945737022,
+        "preferredValue": false,
+        "preferredValueUpdatedAt": 1767644564176,
         "preferredValueFromOrgLevel": false,
-        "effectiveValue": true,
+        "effectiveValue": false,
         "effectiveSource": "preference",
-        "effectiveValueUpdatedAt": 1726266558901,
+        "effectiveValueUpdatedAt": 1767644564176,
         "isOrgLevel": false,
         "definition": {
           "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
@@ -2897,6 +3546,372 @@
             "defaultValue": true,
             "defaultPreference": true,
             "enforcedLimit": true
+          }
+        }
+      },
+      {
+        "namespace": "time",
+        "settingName": "activity-create-limits-enabled",
+        "preferredValue": false,
+        "preferredValueFromOrgLevel": true,
+        "parentLimit": false,
+        "parentLimitFromOrgLevel": true,
+        "effectiveValue": false,
+        "effectiveSource": "default",
+        "effectiveValueUpdatedAt": 1775741226466,
+        "isOrgLevel": false,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
+          "namespace": "time",
+          "settingName": "activity-create-limits-enabled",
+          "valueType": "boolean",
+          "allowProductOverrides": "ageBrackets",
+          "inheritFromOrg": true,
+          "translations": {
+            "en": {
+              "label": "TBD",
+              "userNotice": "TBD",
+              "parentNotice": "TBD"
+            }
+          },
+          "options": [],
+          "restrictiveOrder": "falsePermissive",
+          "userHidden": true,
+          "required": false,
+          "dataStorage": "raw",
+          "maximumScheduleWindowsPerDay": 0,
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentTypeUnderParentalControl": "opt-in-unverified",
+            "consentType": "opt-in-unverified",
+            "applyConsentToEnforcedUsersOnly": true,
+            "defaultValue": false,
+            "defaultPreference": false,
+            "defaultParentLimit": false
+          }
+        }
+      },
+      {
+        "namespace": "time",
+        "settingName": "activity-create-minutes-allowed",
+        "preferredValue": 1440,
+        "preferredValueFromOrgLevel": true,
+        "parentLimit": 1440,
+        "parentLimitFromOrgLevel": true,
+        "parentLimitScheduleEnabled": false,
+        "scheduleCalculatedFromTimeZone": "Europe/London",
+        "effectiveValue": 1440,
+        "effectiveSource": "default",
+        "effectiveValueUpdatedAt": 1775741226467,
+        "isOrgLevel": false,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
+          "namespace": "time",
+          "settingName": "activity-create-minutes-allowed",
+          "valueType": "numeric",
+          "numericValueFormat": "integer",
+          "numberOfDecimals": 0,
+          "min": 0,
+          "max": 1440,
+          "incrementOrDecrementBy": 1,
+          "allowProductOverrides": "ageBrackets",
+          "inheritFromOrg": true,
+          "translations": {
+            "en": {
+              "label": "TBD",
+              "userNotice": "TBD",
+              "parentNotice": "TBD"
+            }
+          },
+          "options": [],
+          "restrictiveOrder": "lowRestrictive",
+          "userHidden": true,
+          "required": false,
+          "dataStorage": "raw",
+          "maximumScheduleWindowsPerDay": 1,
+          "schedulePeriod": "1d",
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentTypeUnderParentalControl": "opt-in-unverified",
+            "consentType": "opt-in-unverified",
+            "applyConsentToEnforcedUsersOnly": true,
+            "defaultValue": 1440,
+            "defaultPreference": 1440,
+            "defaultParentLimit": 1440
+          }
+        }
+      },
+      {
+        "namespace": "time",
+        "settingName": "activity-create-request-additional-time",
+        "preferredValue": true,
+        "preferredValueFromOrgLevel": true,
+        "parentLimit": true,
+        "parentLimitFromOrgLevel": true,
+        "effectiveValue": true,
+        "effectiveSource": "default",
+        "effectiveValueUpdatedAt": 1775741226469,
+        "isOrgLevel": false,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
+          "namespace": "time",
+          "settingName": "activity-create-request-additional-time",
+          "valueType": "boolean",
+          "allowProductOverrides": "ageBrackets",
+          "inheritFromOrg": true,
+          "translations": {
+            "en": {
+              "label": "TBD",
+              "userNotice": "TBD",
+              "parentNotice": "TBD"
+            }
+          },
+          "options": [],
+          "restrictiveOrder": "falseRestrictive",
+          "userHidden": true,
+          "required": false,
+          "dataStorage": "raw",
+          "maximumScheduleWindowsPerDay": 0,
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentTypeUnderParentalControl": "opt-in-unverified",
+            "consentType": "opt-in-unverified",
+            "applyConsentToEnforcedUsersOnly": true,
+            "defaultValue": true,
+            "defaultPreference": true,
+            "defaultParentLimit": true
+          }
+        }
+      },
+      {
+        "namespace": "time",
+        "settingName": "activity-create-schedule",
+        "preferredValue": true,
+        "preferredValueFromOrgLevel": true,
+        "parentLimit": true,
+        "parentLimitFromOrgLevel": true,
+        "parentLimitScheduleEnabled": false,
+        "scheduleCalculatedFromTimeZone": "Europe/London",
+        "effectiveValue": true,
+        "effectiveSource": "default",
+        "effectiveValueUpdatedAt": 1775741226462,
+        "isOrgLevel": false,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
+          "namespace": "time",
+          "settingName": "activity-create-schedule",
+          "valueType": "boolean",
+          "allowProductOverrides": "ageBrackets",
+          "inheritFromOrg": true,
+          "translations": {
+            "en": {
+              "label": "TBD",
+              "userNotice": "TBD",
+              "parentNotice": "TBD"
+            }
+          },
+          "options": [],
+          "restrictiveOrder": "falseRestrictive",
+          "userHidden": true,
+          "required": false,
+          "dataStorage": "raw",
+          "maximumScheduleWindowsPerDay": 5,
+          "schedulePeriod": "5m",
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentTypeUnderParentalControl": "opt-in-unverified",
+            "consentType": "opt-in-unverified",
+            "applyConsentToEnforcedUsersOnly": true,
+            "defaultValue": true,
+            "defaultPreference": true,
+            "defaultParentLimit": true
+          }
+        }
+      },
+      {
+        "namespace": "time",
+        "settingName": "activity-play-limits-enabled",
+        "preferredValue": false,
+        "preferredValueFromOrgLevel": true,
+        "parentLimit": false,
+        "parentLimitFromOrgLevel": true,
+        "effectiveValue": false,
+        "effectiveSource": "default",
+        "effectiveValueUpdatedAt": 1775741226473,
+        "isOrgLevel": false,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
+          "namespace": "time",
+          "settingName": "activity-play-limits-enabled",
+          "valueType": "boolean",
+          "allowProductOverrides": "ageBrackets",
+          "inheritFromOrg": true,
+          "translations": {
+            "en": {
+              "label": "TBD",
+              "userNotice": "TBD",
+              "parentNotice": "TBD"
+            }
+          },
+          "options": [],
+          "restrictiveOrder": "falsePermissive",
+          "userHidden": true,
+          "required": false,
+          "dataStorage": "raw",
+          "maximumScheduleWindowsPerDay": 0,
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentTypeUnderParentalControl": "opt-in-unverified",
+            "consentType": "opt-in-unverified",
+            "applyConsentToEnforcedUsersOnly": true,
+            "defaultValue": false,
+            "defaultPreference": false,
+            "defaultParentLimit": false
+          }
+        }
+      },
+      {
+        "namespace": "time",
+        "settingName": "activity-play-minutes-allowed",
+        "preferredValue": 1440,
+        "preferredValueFromOrgLevel": true,
+        "parentLimit": 1440,
+        "parentLimitFromOrgLevel": true,
+        "parentLimitScheduleEnabled": false,
+        "scheduleCalculatedFromTimeZone": "Europe/London",
+        "effectiveValue": 1440,
+        "effectiveSource": "default",
+        "effectiveValueUpdatedAt": 1775741226460,
+        "isOrgLevel": false,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
+          "namespace": "time",
+          "settingName": "activity-play-minutes-allowed",
+          "valueType": "numeric",
+          "numericValueFormat": "integer",
+          "numberOfDecimals": 0,
+          "min": 0,
+          "max": 1440,
+          "incrementOrDecrementBy": 1,
+          "allowProductOverrides": "ageBrackets",
+          "inheritFromOrg": true,
+          "translations": {
+            "en": {
+              "label": "TBD",
+              "userNotice": "TBD",
+              "parentNotice": "TBD"
+            }
+          },
+          "options": [],
+          "restrictiveOrder": "lowRestrictive",
+          "userHidden": true,
+          "required": false,
+          "dataStorage": "raw",
+          "maximumScheduleWindowsPerDay": 1,
+          "schedulePeriod": "1d",
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentTypeUnderParentalControl": "opt-in-unverified",
+            "consentType": "opt-in-unverified",
+            "applyConsentToEnforcedUsersOnly": true,
+            "defaultValue": 1440,
+            "defaultPreference": 1440,
+            "defaultParentLimit": 1440
+          }
+        }
+      },
+      {
+        "namespace": "time",
+        "settingName": "activity-play-request-additional-time",
+        "preferredValue": true,
+        "preferredValueFromOrgLevel": true,
+        "parentLimit": true,
+        "parentLimitFromOrgLevel": true,
+        "effectiveValue": true,
+        "effectiveSource": "default",
+        "effectiveValueUpdatedAt": 1775741226471,
+        "isOrgLevel": false,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
+          "namespace": "time",
+          "settingName": "activity-play-request-additional-time",
+          "valueType": "boolean",
+          "allowProductOverrides": "ageBrackets",
+          "inheritFromOrg": true,
+          "translations": {
+            "en": {
+              "label": "TBD",
+              "userNotice": "TBD",
+              "parentNotice": "TBD"
+            }
+          },
+          "options": [],
+          "restrictiveOrder": "falseRestrictive",
+          "userHidden": true,
+          "required": false,
+          "dataStorage": "raw",
+          "maximumScheduleWindowsPerDay": 0,
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentTypeUnderParentalControl": "opt-in-unverified",
+            "consentType": "opt-in-unverified",
+            "applyConsentToEnforcedUsersOnly": true,
+            "defaultValue": true,
+            "defaultPreference": true,
+            "defaultParentLimit": true
+          }
+        }
+      },
+      {
+        "namespace": "time",
+        "settingName": "activity-play-schedule",
+        "preferredValue": true,
+        "preferredValueFromOrgLevel": true,
+        "parentLimit": true,
+        "parentLimitFromOrgLevel": true,
+        "parentLimitScheduleEnabled": false,
+        "scheduleCalculatedFromTimeZone": "Europe/London",
+        "effectiveValue": true,
+        "effectiveSource": "default",
+        "effectiveValueUpdatedAt": 1775741226464,
+        "isOrgLevel": false,
+        "definition": {
+          "orgId": "cc5b83aa-cb5c-4b4b-a800-a7dd64edacc0",
+          "productId": "6fdb114c-3fbc-4ced-bc5b-55bcdba5c8f6",
+          "namespace": "time",
+          "settingName": "activity-play-schedule",
+          "valueType": "boolean",
+          "allowProductOverrides": "ageBrackets",
+          "inheritFromOrg": true,
+          "translations": {
+            "en": {
+              "label": "TBD",
+              "userNotice": "TBD",
+              "parentNotice": "TBD"
+            }
+          },
+          "options": [],
+          "restrictiveOrder": "falseRestrictive",
+          "userHidden": true,
+          "required": false,
+          "dataStorage": "raw",
+          "maximumScheduleWindowsPerDay": 5,
+          "schedulePeriod": "5m",
+          "ageBracket": {
+            "consentTypeRequired": "none",
+            "consentTypeUnderParentalControl": "opt-in-unverified",
+            "consentType": "opt-in-unverified",
+            "applyConsentToEnforcedUsersOnly": true,
+            "defaultValue": true,
+            "defaultPreference": true,
+            "defaultParentLimit": true
           }
         }
       },
@@ -2951,6 +3966,7 @@
         "parentLimit": 1440,
         "parentLimitFromOrgLevel": true,
         "parentLimitScheduleEnabled": false,
+        "scheduleCalculatedFromTimeZone": "Europe/London",
         "effectiveValue": 1440,
         "effectiveSource": "default",
         "effectiveValueUpdatedAt": 1729607628510,
@@ -3001,6 +4017,7 @@
         "parentLimit": true,
         "parentLimitFromOrgLevel": true,
         "parentLimitScheduleEnabled": false,
+        "scheduleCalculatedFromTimeZone": "Europe/London",
         "effectiveValue": true,
         "effectiveSource": "default",
         "effectiveValueUpdatedAt": 1729607628510,
@@ -3126,7 +4143,7 @@
     ]
   },
   "meta": {
-    "requestId": "EOS-yOyVcehirEeISnp_FYYjHA-znTCkQI05kGvYfT3mEps6w",
-    "timestamp": "2025-10-31T18:40:53.136Z"
+    "requestId": "EOS-TNErLWyC2USulO7WWEHK-Q-QH_tg92fQ0KrrdQp31Onkg",
+    "timestamp": "2026-10-16T00:01:07.514Z"
   }
 }
