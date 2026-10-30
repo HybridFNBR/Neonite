@@ -1042,6 +1042,14 @@ const Backgrounds = (version, versionGlobal, backgrounds, content) => {
             stage: "defaultnotris",
             backgroundImage: "http://localhost:5595/cdn2-unrealengine/mkart-fnbr-41-30-lobbybg-final-4k-3840x2022-38116a092515.jpg"
         },
+         "42.30": {
+            stage: "season4230",
+            backgroundImage: "http://localhost:5595/cdn2-unrealengine/mkart-fnbr-ch7s4-42-30-fortnitemares-lobbybg-final-3840x2022-9b70d8f5d59b.jpg"
+        },
+         "42.40": {
+            stage: "season4230",
+            backgroundImage: "http://localhost:5595/cdn2-unrealengine/mkart-fnbr-ch7s4-42-30-fortnitemares-lobbybg-final-3840x2022-9b70d8f5d59b.jpg"
+        },
     });
 
     const versionGlobalBackgrounds = Object.create({
@@ -1139,6 +1147,10 @@ const Backgrounds = (version, versionGlobal, backgrounds, content) => {
         41: {
             stage: "season4100",
             backgroundImage: "http://localhost:5595/cdn2-unrealengine/ch7s3-lobby-final-4096x2048-386aa58f2d9f.jpg"
+        },
+        42: {
+            stage: "season4200",
+            backgroundImage: "http://localhost:5595/cdn2-unrealengine/mkart-ch7s4-lobbybg-v2-1mb-4096x2048-b4d326d49e84.jpg"
         }
     });
     const versionBackground = versionBackgrounds[version] ?? versionGlobalBackgrounds[versionGlobal];
