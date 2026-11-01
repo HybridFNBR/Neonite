@@ -2326,5 +2326,285 @@
       "summonCost": 6750
     },
     "templateId": "ExtractableRelic:klombo_variant_quack"
+  },
+  "PeelyBones_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:peelybones_variant_a"
+  },
+  "PeelyBones_Variant_Jeweled": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:peelybones_variant_jeweled"
+  },
+  "PeelyBones_Variant_Cursed": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:peelybones_variant_cursed"
+  },
+  "Parrot_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:parrot_variant_a"
+  },
+  "Parrot_Variant_Cursed": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:parrot_variant_cursed"
+  },
+  "Parrot_Variant_Jeweled": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:parrot_variant_jeweled"
+  },
+  "BarrelOfFish_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:barreloffish_variant_a"
+  },
+  "BarrelOfFish_Variant_Cursed": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:barreloffish_variant_cursed"
+  },
+  "BarrelOfFish_Variant_Jeweled": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:barreloffish_variant_jeweled"
+  },
+  "TreasureChest_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:treasurechest_variant_a"
+  },
+  "TreasureChest_Variant_Cursed": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:treasurechest_variant_cursed"
+  },
+  "TreasureChest_Variant_Jeweled": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:treasurechest_variant_jeweled"
+  },
+  "TreasureMap_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:treasuremap_variant_a"
+  },
+  "TreasureMap_Variant_Jeweled": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:treasuremap_variant_jeweled"
+  },
+  "TreasureMap_Variant_Cursed": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:treasuremap_variant_cursed"
+  },
+  "Compass_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:compass_variant_a"
+  },
+  "Compass_Variant_Cursed": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:compass_variant_cursed"
+  },
+  "Compass_Variant_Jeweled": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:compass_variant_jeweled"
+  },
+  "UnbotheredFish_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:unbotheredfish_variant_a"
+  },
+  "UnbotheredFish_Variant_Jeweled": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:unbotheredfish_variant_jeweled"
+  },
+  "UnbotheredFish_Variant_Cursed": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:unbotheredfish_variant_cursed"
+  },
+  "StarLight_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:starlight_variant_a"
+  },
+  "Squibbly_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:squibbly_variant_a"
+  },
+  "Squibbly_Variant_Cursed": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:squibbly_variant_cursed"
+  },
+  "Squibbly_Variant_Jeweled": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:squibbly_variant_jeweled"
+  },
+  "PlaymakerBrewery_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:playmakerbrewery_variant_a"
+  },
+  "PlaymakerBrewery_Variant_Jeweled": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:playmakerbrewery_variant_jeweled"
+  },
+  "PlaymakerBrewery_Variant_Cursed": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:playmakerbrewery_variant_cursed"
+  },
+  "RookGecko_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:rookgecko_variant_a"
+  },
+  "RookGecko_Variant_Cursed": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:rookgecko_variant_cursed"
+  },
+  "RookGecko_Variant_Jeweled": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:rookgecko_variant_jeweled"
+  },
+  "CoinPile_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:coinpile_variant_a"
+  },
+  "CoinPile_Variant_Cursed": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:coinpile_variant_cursed"
+  },
+  "CoinPile_Variant_Jeweled": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:coinpile_variant_jeweled"
+  },
+  "FeedJet_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:feedjet_variant_a"
   }
 }

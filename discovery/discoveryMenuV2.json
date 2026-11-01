@@ -28,6 +28,174 @@
     "namespace": "fn",
     "accountId": "epic",
     "creatorName": "Epic",
+    "mnemonic": "ref_settings_hero_20261016_f307c034",
+    "linkType": "Reference",
+    "metadata": {
+      "ref_id": "set_br_playlists",
+      "hero_background_image_urls": {
+        "url": "https://cdn2.unrealengine.com/fnbr-32-00-c5s5-kiln-discoverplaylist-tiles-br-1920x1080-1920x1080-cd1887394e2c.jpg"
+      },
+      "hero_tagline": "The battle is building!\r\nDrop into the Battle Royale. Loot, build, explore, and fight in a game of 100 players competing to be the last one standing.",
+      "ref_type": "ExperienceLink",
+      "rating_override_link": "set_br_playlists",
+      "alt_hero_tagline": {
+        "de": "Überlebe allein in einer Schlacht bis auf den letzten Spieler.",
+        "ru": "Отправляйтесь на битву в одиночку и переживите всех соперников.",
+        "ko": "죽느냐 사느냐... 혼자서 싸우는 서바이벌 혈투!",
+        "pt-BR": "Entre sozinho em uma batalha para ser o último sobrevivente.",
+        "it": "Combatti in solitaria fino a diventare l'ultimo superstite.",
+        "fr": "Combattez en solitaire et soyez le dernier survivant.",
+        "zh-CN": "",
+        "es": "Entra en solitario en un combate para ser el último en pie.",
+        "es-MX": "Entra por tu cuenta a un combate y pelea hasta que solo quedes tú en pie.",
+        "zh": "",
+        "ar": "خُض المعركة بمفردك لتصبح آخر من يتبقى من اللاعبين.",
+        "zh-Hant": "",
+        "ja": "単身でバトルに飛び込み、最後の1人になるまで生き残れ。",
+        "pl": "Walcz samotnie w bitwie do ostatniego.",
+        "es-419": "Entra por tu cuenta a un combate y pelea hasta que solo quedes tú en pie.",
+        "tr": "Savaşa tek başına gir ve hayatta kalan son kişi ol."
+      }
+    },
+    "version": 1,
+    "active": true,
+    "disabled": false,
+    "created": "2026-10-16T22:24:02.672Z",
+    "published": "2026-10-16T22:24:02.672Z",
+    "updated": "2026-10-19T12:55:00.643Z",
+    "descriptionTags": [
+      "dot-aspot",
+      "hero-generated"
+    ],
+    "moderationStatus": "Unmoderated",
+    "lastActivatedDate": "2026-10-16T22:24:02.678Z",
+    "discoveryIntent": "PUBLIC",
+    "linkState": "LIVE"
+  },
+  {
+    "namespace": "fn",
+    "accountId": "epic",
+    "creatorName": "Epic",
+    "mnemonic": "ref_settings_hero_20261021_152083de",
+    "linkType": "Reference",
+    "metadata": {
+      "ref_id": "set_figment_playlists",
+      "hero_background_image_urls": {
+        "url": "https://cdn2.unrealengine.com/fnbr-32-00-c5s5-kiln-discoverplaylist-tiles-br-1920x1080-1920x1080-cd1887394e2c.jpg"
+      },
+      "hero_tagline": "Relive Battle Royale from its beginnings in Chapter 1. Drop back in and explore the OG map, collect OG loot, and relive OG seasons!",
+      "ref_type": "ExperienceLink",
+      "rating_override_link": "set_figment_playlists",
+      "alt_hero_tagline": {}
+    },
+    "version": 1,
+    "active": true,
+    "disabled": false,
+    "created": "2026-10-16T22:24:02.672Z",
+    "published": "2026-10-16T22:24:02.672Z",
+    "updated": "2026-10-19T12:55:00.643Z",
+    "descriptionTags": [
+      "dot-aspot",
+      "hero-generated"
+    ],
+    "moderationStatus": "Unmoderated",
+    "lastActivatedDate": "2026-10-16T22:24:02.678Z",
+    "discoveryIntent": "PUBLIC",
+    "linkState": "LIVE"
+  },
+  {
+    "namespace": "fn",
+    "accountId": "epic",
+    "creatorName": "Epic",
+    "mnemonic": "ref_settings_hero_20261015_2e23b6f1",
+    "linkType": "Reference",
+    "metadata": {
+      "ref_id": "playlist_pilgrimquickplay",
+      "hero_background_image_urls": {
+        "url": "https://cdn2.unrealengine.com/en-fnsp-06-discoverytile-mainstage-1920x1080-1920x1080-1262fa4ea6b9.jpg"
+      },
+      "hero_tagline": "Play in a band with friends or perform solo on stage with hit music by your favorite artists in Fortnite Festival! On the Main Stage, play a featured rotation of Jam Tracks. Compete against friends for the best performance or team up to climb the leaderboards. The festival is just beginning with more Jam Tracks, Music Icons, concerts, and stages coming soon. Take your stage in Fortnite Festival!",
+      "ref_type": "ExperienceLink",
+      "rating_override_link": "playlist_pilgrimquickplay",
+      "alt_hero_tagline": {
+        "de": "Spiele mit Freunden in einer Band oder tritt solo auf der B\u00fchne auf mit Hits von deinen Lieblingsk\u00fcnstlern in Fortnite Festival! Spiele vorgestellte wechselnde Jam-Songs auf der Hauptb\u00fchne. Tritt gegen Freunde an und schaue, wer die beste Performance bietet, oder schlie\u00dft euch zusammen und erklimmt die Bestenlisten. Das Festival f\u00e4ngt gerade erst an und schon bald werden weitere Jam-Songs, Musikikonen, Konzerte und B\u00fchnen erscheinen. Betritt die B\u00fchne in Fortnite Festival!",
+        "ru": "\u0412\u044b\u0441\u0442\u0443\u043f\u0430\u0439\u0442\u0435 \u0432 \u0433\u0440\u0443\u043f\u043f\u0435 \u0441 \u0434\u0440\u0443\u0437\u044c\u044f\u043c\u0438 \u0438\u043b\u0438 \u0438\u0441\u043f\u043e\u043b\u043d\u044f\u0439\u0442\u0435 \u043b\u044e\u0431\u0438\u043c\u044b\u0435 \u043a\u043e\u043c\u043f\u043e\u0437\u0438\u0446\u0438\u0438 \u0441\u043e\u043b\u043e \u0438 \u043f\u043e\u043a\u043e\u0440\u0438\u0442\u0435 \u0441\u0446\u0435\u043d\u0443 \u0432 Fortnite Festival! \u0418\u0433\u0440\u0430\u0439\u0442\u0435 \u043d\u0430 \u0413\u043b\u0430\u0432\u043d\u043e\u0439 \u0441\u0446\u0435\u043d\u0435 \u0445\u0438\u0442\u044b \u0438\u0437 \u0440\u0435\u0433\u0443\u043b\u044f\u0440\u043d\u043e \u043e\u0431\u043d\u043e\u0432\u043b\u044f\u044e\u0449\u0435\u0439\u0441\u044f \u043f\u043e\u0434\u0431\u043e\u0440\u043a\u0438. \u0421\u043e\u0440\u0435\u0432\u043d\u0443\u0439\u0442\u0435\u0441\u044c \u0441 \u0434\u0440\u0443\u0437\u044c\u044f\u043c\u0438 \u0437\u0430 \u0437\u0432\u0430\u043d\u0438\u0435 \u043b\u0443\u0447\u0448\u0435\u0433\u043e \u0438\u0441\u043f\u043e\u043b\u043d\u0438\u0442\u0435\u043b\u044f \u0438\u043b\u0438 \u043f\u043e\u043a\u043e\u0440\u044f\u0439\u0442\u0435 \u043c\u0438\u0440\u043e\u0432\u044b\u0435 \u0441\u043f\u0438\u0441\u043a\u0438 \u043b\u0438\u0434\u0435\u0440\u043e\u0432 \u043e\u0434\u043d\u043e\u0439 \u0433\u0440\u0443\u043f\u043f\u043e\u0439. \u0424\u0435\u0441\u0442\u0438\u0432\u0430\u043b\u044c \u0442\u043e\u043b\u044c\u043a\u043e \u043d\u0430\u0447\u0438\u043d\u0430\u0435\u0442\u0441\u044f! \u0412\u043f\u0435\u0440\u0435\u0434\u0438 \u043c\u043d\u043e\u0433\u043e \u043d\u043e\u0432\u044b\u0445 \u043f\u0435\u0441\u0435\u043d, \u0437\u0432\u0451\u0437\u0434, \u043a\u043e\u043d\u0446\u0435\u0440\u0442\u043e\u0432 \u0438 \u043f\u043b\u043e\u0449\u0430\u0434\u043e\u043a. \u0421\u0446\u0435\u043d\u0430 \u0436\u0434\u0451\u0442 \u0432 Fortnite Festival!",
+        "ko": "\uce5c\uad6c\uc640 \ud568\uaed8 \ubc34\ub4dc\ub97c \uacb0\uc131\ud558\uc5ec \uc5f0\uc8fc\ud558\uac70\ub098, \ud3ec\ud2b8\ub098\uc774\ud2b8 \ud398\uc2a4\ud2f0\ubc8c\uc5d0\uc11c \ubb34\ub300\uc5d0 \uc62c\ub77c\uac00 \uc88b\uc544\ud558\ub294 \uc544\ud2f0\uc2a4\ud2b8\uac00 \uc791\uace1\ud55c \ud788\ud2b8\uace1\uc744 \uc194\ub85c\ub85c \uc5f0\uc8fc\ud558\uc138\uc694! \uba54\uc778 \uc2a4\ud14c\uc774\uc9c0\uc5d0\uc11c \uc7bc \ud2b8\ub799 \ucd94\ucc9c \ub85c\ud14c\uc774\uc158\uc744 \uc5f0\uc8fc\ud574 \ubcf4\uc138\uc694. \ucd5c\uace0\uc758 \uacf5\uc5f0\uc744 \uc704\ud574 \uce5c\uad6c\ub4e4\uacfc \ud568\uaed8 \uacbd\uc7c1\ud558\uac70\ub098, \ud300\uc744 \uc774\ub904 \uc21c\uc704\ub97c \uc62c\ub824\ubcf4\uc138\uc694. \ud398\uc2a4\ud2f0\ubc8c\uc740 \uc774\uc81c \uc2dc\uc791\uc785\ub2c8\ub2e4. \uc870\ub9cc\uac04 \uc7bc \ud2b8\ub799\uacfc \uc74c\uc545\uacc4\uc758 \uc544\uc774\ucf58, \ucf58\uc11c\ud2b8, \uc2a4\ud14c\uc774\uc9c0\uac00 \ub354 \ucd94\uac00\ub429\ub2c8\ub2e4! \ud3ec\ud2b8\ub098\uc774\ud2b8 \ud398\uc2a4\ud2f0\ubc8c\uc5d0\uc11c \ub098\ub9cc\uc758 \ubb34\ub300\uc5d0 \uc624\ub974\uc138\uc694!",
+        "pt-BR": "Suba ao palco e toque numa banda com a galera ou solo, interpretando sucessos dos seus artistas favoritos no Fortnite Festival! Toque uma sele\u00e7\u00e3o rotativa de M\u00fasicas no Palco Principal. Dispute com outras pessoas ou forme sua banda para alcan\u00e7ar o topo da tabela de lideran\u00e7a. O festival est\u00e1 s\u00f3 come\u00e7ando: muitas M\u00fasicas, \u00edcones musicais, shows e palcos ainda est\u00e3o por vir. Suba no palco no Fortnite Festival!",
+        "zh-hans": "\u53c2\u52a0\u300aFortnite \u97f3\u4e50\u8282\u300b\uff0c\u5728\u821e\u53f0\u4e0a\u72ec\u594f\u6216\u4e0e\u597d\u53cb\u7ec4\u961f\u6f14\u594f\u81ea\u5df1\u6700\u7231\u97f3\u4e50\u5bb6\u7684\u70ed\u95e8\u66f2\u76ee\uff01\u5728\u4e3b\u821e\u53f0\u4e0a\u8f6e\u6362\u6f14\u594f\u7cbe\u9009\u5373\u5174\u66f2\u76ee\u3002\u4e0e\u597d\u53cb\u540c\u53f0\u7ade\u6f14\uff0c\u5b9e\u73b0\u6700\u4f73\u8868\u73b0\uff0c\u6216\u7ec4\u961f\u51b2\u51fb\u6392\u884c\u699c\u699c\u9996\u3002\u97f3\u4e50\u8282\u624d\u521a\u521a\u62c9\u5f00\u5e37\u5e55\uff0c\u63a5\u4e0b\u6765\u4f1a\u5f88\u5feb\u63a8\u51fa\u66f4\u591a\u5373\u5174\u66f2\u76ee\u3001\u97f3\u4e50\u5076\u50cf\u3001\u97f3\u4e50\u4f1a\u548c\u821e\u53f0\u3002\u5728\u300aFortnite \u97f3\u4e50\u8282\u300b\u4e2d\u767b\u53f0\u6f14\u51fa\u5427\uff01",
+        "it": "Suona in una band con gli amici o esibisciti da solista sul palco con i grandi successi dei tuoi artisti preferiti in Fortnite Festival! Una selezione di tracce Jam in evidenza ti aspetta sul Palco principale. Competi a colpi di performance contro gli amici o unisciti a loro per scalare le classifiche. Il Festival \u00e8 solo all'inizio, con tante nuove tracce Jam, icone musicali, concerti e palchi presto in arrivo. Sali sul palco in Fortnite Festival!",
+        "fr": "Jouez en groupe avec des amis ou en solo sur les chansons de vos artistes pr\u00e9f\u00e9r\u00e9s dans Fortnite Festival ! Montez sur la sc\u00e8ne principale en choisissant parmi une rotation de pistes musicales \u00e0 la une. Faites une meilleure performance que vos amis ou montez un groupe et hissez-vous en haut du classement. Ce n'est que le d\u00e9but. De nouveaux concerts, pistes musicales, ic\u00f4nes de la musique et concerts arriveront prochainement. Faites votre entr\u00e9e sur sc\u00e8ne dans Fortnite Festival !",
+        "es": "\u00a1S\u00fabete al escenario con una banda de amigos o en solitario y toca los temazos de tus artistas favoritos en Fortnite Festival! En el escenario principal podr\u00e1s tocar una rotaci\u00f3n de temas de improvisaci\u00f3n. Compite contra amigos para ver qui\u00e9n act\u00faa mejor o forma equipo para subir en los marcadores. El festival acaba de comenzar y pronto habr\u00e1 m\u00e1s temas de improvisaci\u00f3n, \u00eddolos musicales, conciertos y escenarios. \u00a1Sube al escenario en Fortnite Festival!",
+        "ar": "\u0627\u0639\u0632\u0641 \u0641\u064a \u0641\u0631\u0642\u0629 \u0645\u0639 \u0627\u0644\u0623\u0635\u062f\u0642\u0627\u0621 \u0623\u0648 \u0642\u0645 \u0628\u0623\u062f\u0627\u0621 \u0645\u0646\u0641\u0631\u062f \u0639\u0644\u0649 \u0627\u0644\u0645\u0633\u0631\u062d \u0645\u0639 \u0623\u063a\u0627\u0646\u064d \u0631\u0627\u0626\u062c\u0629 \u0644\u0644\u0641\u0646\u0627\u0646\u064a\u0646 \u0627\u0644\u0645\u0641\u0636\u0644\u064a\u0646 \u0644\u062f\u064a\u0643 \u0641\u064a Fortnite Festival! \u0627\u0639\u0632\u0641 \u0645\u0642\u0637\u0648\u0639\u0627\u062a \u0627\u0644\u0639\u0632\u0641 \u0627\u0644\u0645\u0645\u064a\u0632\u0629 \u0627\u0644\u0645\u062a\u0646\u0627\u0648\u0628\u0629 \u0639\u0644\u0649 \u0627\u0644\u0645\u0633\u0631\u062d \u0627\u0644\u0631\u0626\u064a\u0633\u064a. \u062a\u0646\u0627\u0641\u0633 \u0645\u0639 \u0627\u0644\u0623\u0635\u062f\u0642\u0627\u0621 \u0639\u0644\u0649 \u0623\u0641\u0636\u0644 \u0623\u062f\u0627\u0621 \u0623\u0648 \u0627\u0646\u0636\u0645 \u0625\u0644\u0649 \u0641\u0631\u064a\u0642 \u0644\u0644\u0627\u0631\u062a\u0642\u0627\u0621 \u0641\u064a \u0644\u0648\u062d\u0627\u062a \u0627\u0644\u0645\u062a\u0635\u062f\u0631\u064a\u0646. \u0628\u062f\u0623 \u0627\u0644\u0645\u0647\u0631\u062c\u0627\u0646 \u0644\u0644\u062a\u0648 \u0645\u0639 \u0627\u0644\u0645\u0632\u064a\u062f \u0645\u0646 \u0645\u0642\u0637\u0648\u0639\u0627\u062a \u0627\u0644\u0639\u0632\u0641 \u0648\u0623\u064a\u0642\u0648\u0646\u0627\u062a \u0627\u0644\u0645\u0648\u0633\u064a\u0642\u0649 \u0648\u062d\u0641\u0644\u0627\u062a \u0648\u0645\u0633\u0627\u0631\u062d \u0642\u0627\u062f\u0645\u0629 \u0642\u0631\u064a\u0628\u064b\u0627. \u0647\u064a\u0645\u0646 \u0639\u0644\u0649 \u0627\u0644\u0645\u0633\u0631\u062d \u0641\u064a Fortnite Festival!",
+        "ja": "\u304a\u6c17\u306b\u5165\u308a\u306e\u30a2\u30fc\u30c6\u30a3\u30b9\u30c8\u306e\u30d2\u30c3\u30c8\u30ca\u30f3\u30d0\u30fc\u3092\u30b9\u30c6\u30fc\u30b8\u3067\u6f14\u594f\u3057\u3088\u3046\u3002\u300cFortnite Festival\u300d\u3067\u306f\u30d5\u30ec\u30f3\u30c9\u3068\u30d0\u30f3\u30c9\u3092\u7d44\u3093\u3067\u3082\u3044\u3044\u3057\u3001\u30bd\u30ed\u3067\u3082\u697d\u3057\u3081\u308b\u305e\uff01 \u30e1\u30a4\u30f3\u30b9\u30c6\u30fc\u30b8\u3067\u3001\u30ed\u30fc\u30c6\u30fc\u30b7\u30e7\u30f3\u3055\u308c\u308b\u304a\u3059\u3059\u3081\u306e\u30b8\u30e3\u30e0\u30c8\u30e9\u30c3\u30af\u3092\u6f14\u594f\u3057\u3088\u3046\u3002\u30d5\u30ec\u30f3\u30c9\u3068\u6700\u9ad8\u306e\u30d1\u30d5\u30a9\u30fc\u30de\u30f3\u30b9\u3092\u76ee\u6307\u3057\u3066\u7af6\u3044\u5408\u3063\u305f\u308a\u3001\u30c1\u30fc\u30e0\u3092\u7d44\u3093\u3067\u30e9\u30f3\u30ad\u30f3\u30b0\u3092\u99c6\u3051\u4e0a\u308d\u3046\u3002\u30d5\u30a7\u30b9\u30c6\u30a3\u30d0\u30eb\u306f\u307e\u3060\u59cb\u307e\u3063\u305f\u3070\u304b\u308a\u3002\u4eca\u5f8c\u3082\u30b8\u30e3\u30e0\u30c8\u30e9\u30c3\u30af\u3001\u30df\u30e5\u30fc\u30b8\u30c3\u30af\u306e\u30a2\u30a4\u30b3\u30f3\u3001\u30b3\u30f3\u30b5\u30fc\u30c8\u3001\u30b9\u30c6\u30fc\u30b8\u304c\u8ffd\u52a0\u3055\u308c\u308b\u4e88\u5b9a\u3060\u3002\u300cFortnite Festival\u300d\u3067\u30b9\u30c6\u30fc\u30b8\u306b\u7acb\u3068\u3046\uff01",
+        "pl": "Graj ze znajomymi w zespole lub wyst\u0119puj solo, wykonuj\u0105c popularne utwory swoich ulubionych artyst\u00f3w w Fortnite Festival! Na Scenie G\u0142\u00f3wnej mo\u017cna wykonywa\u0107 wyr\u00f3\u017cnion\u0105 rotacj\u0119 \u015bcie\u017cek jamowych. Rywalizuj ze znajomymi o najlepszy wyst\u0119p lub po\u0142\u0105czcie si\u0142y i wspinajcie si\u0119 po szczeblach tablic wynik\u00f3w. Festiwal dopiero si\u0119 zaczyna: wkr\u00f3tce do gry trafi\u0105 nowe \u015bcie\u017cki jamowe, ikony muzyczne, koncerty i sceny. Wejd\u017a na scen\u0119 w Fortnite Festival!",
+        "es-419": "\u00a1Toca en una banda con amigos o interpreta las mejores canciones de tus artistas favoritos en solitario sobre el escenario de Fortnite Festival! Toca una selecci\u00f3n variada de pistas en el Escenario principal. Compite contra tus amigos para ver qui\u00e9n da la mejor actuaci\u00f3n o forma un equipo para ascender en los marcadores. El festival acaba de empezar y habr\u00e1 m\u00e1s pistas, \u00edconos musicales, conciertos y escenarios pr\u00f3ximamente. \u00a1Sube al escenario en Fortnite Festival!",
+        "tr": "Fortnite Festival'de en sevdi\u011fin sanat\u00e7\u0131lar\u0131n en be\u011fenilen \u015fark\u0131lar\u0131n\u0131 ister arkada\u015flar\u0131nla grup olarak \u00e7al ister tek ba\u015f\u0131na sergile! Ana Sahne'de \u00f6ne \u00e7\u0131kan m\u00fczik par\u00e7alar\u0131ndan olu\u015fan bir listeyi \u00e7al. En iyi performans\u0131 kimin sergileyece\u011fini g\u00f6rmek i\u00e7in arkada\u015flar\u0131nla yar\u0131\u015f ya da s\u0131ralamalarda y\u00fckselmek i\u00e7in onlarla birlik ol. Yak\u0131nda gelecek daha fazla m\u00fczik par\u00e7as\u0131, m\u00fczik ikonu, konser ve sahneyle as\u0131l festival daha yeni ba\u015fl\u0131yor. Fortnite Festival sahnesinde yerini al!"
+      }
+    },
+    "version": 1,
+    "active": true,
+    "disabled": false,
+    "created": "2026-10-16T22:24:02.672Z",
+    "published": "2026-10-16T22:24:02.672Z",
+    "updated": "2026-10-19T12:55:00.643Z",
+    "descriptionTags": [
+      "dot-aspot",
+      "hero-generated"
+    ],
+    "moderationStatus": "Unmoderated",
+    "lastActivatedDate": "2026-10-16T22:24:02.678Z",
+    "discoveryIntent": "PUBLIC",
+    "linkState": "LIVE"
+  },
+  {
+    "namespace": "fn",
+    "accountId": "epic",
+    "creatorName": "Epic",
+    "mnemonic": "ref_settings_hero_20261021_21519252",
+    "linkType": "Reference",
+    "metadata": {
+      "ref_id": "playlist_juno",
+      "hero_background_image_urls": {
+        "url": "https://cdn2.unrealengine.com/legofn-disco-1920-1920x1080-c5f52d11a179.jpg"
+      },
+      "hero_tagline": "Explore vast, open worlds where the magic of LEGO® building and Fortnite collide. Find the ultimate survival crafting LEGO adventure in Fortnite!",
+      "ref_type": "ExperienceLink",
+      "rating_override_link": "playlist_juno",
+      "alt_hero_tagline": {
+        "ar": "استكشف عوالم مفتوحة شاسعة حيث يتلاقى سحر بناء LEGO® وFortnite. اعثر على أفضل مغامرة LEGO للنجاة في Fortnite!",
+        "de": "Erkunde riesige offene Welten, in denen die Magie des Bauens von LEGO® und Fortnite aufeinandertreffen. In Fortnite findest du das ultimative LEGO-Abenteuer, in dem sich alles ums Überleben und Crafting dreht!",
+        "ru": "Исследуйте огромные открытые миры, где соединяются чудеса строительства LEGO® и приключения Fortnite. Отправьтесь в незабываемое путешествие с LEGO® в Fortnite и сделайте всё, чтобы выжить!",
+        "ko": "레고® 조립의 마법과 포트나이트가 만나는 광대한 오픈 월드를 탐험해 보세요. 포트나이트에서 궁극의 서바이벌 크래프팅 레고 어드벤처를 만나 보세요!",
+        "pt-BR": "Explore vastos mundos abertos onde a magia da construção LEGO® encontra o Fortnite. Descubra a mais completa aventura LEGO® de criação e sobrevivência no Fortnite!",
+        "ja": "LEGO®の建築の魔法とフォートナイトが出会う、広大なオープンワールドを探索しよう。 究極のサバイバル・クラフトLEGOアドベンチャーをフォートナイトで！",
+        "it": "Esplora vasti mondi aperti dove Fortnite incontra la magia delle costruzioni LEGO®. L'avventura LEGO definitiva ti aspetta in Fortnite!",
+        "fr": "Explorez de vastes mondes ouverts où les univers de Fortnite et LEGO® s'entremêlent pour un résultat haut en couleur ! Vivez une formidable expérience de survie et de construction LEGO dans Fortnite !",
+        "pl": "Eksploruj rozległe, otwarte światy, w których magia budowania LEGO® łączy się z Fortnite. Odkryj w Fortnite niesamowitą przygodę LEGO z elementami przetrwania i wytwarzania!",
+        "es": "Explora gigantescos mundos abiertos en los que la magia de la construcción de LEGO® se mezcla con Fortnite. ¡Descubre la aventura de supervivencia y construcción definitiva de LEGO en Fortnite!",
+        "es-419": "Explora vastos mundos abiertos donde la magia de la construcción de LEGO® y Fortnite se fusionan. ¡Descubre la aventura de supervivencia y fabricación definitiva de LEGO® en Fortnite!",
+        "tr": "Büyülü LEGO® yapılarının Fortnite ile buluştuğu muazzam açık dünyaları keşfet. Hayatta kalma ve üretim temalı muhteşem bir LEGO macerası şimdi Fortnite'ta!"
+      }
+    },
+    "version": 1,
+    "active": true,
+    "disabled": false,
+    "created": "2026-10-16T22:24:02.672Z",
+    "published": "2026-10-16T22:24:02.672Z",
+    "updated": "2026-10-19T12:55:00.643Z",
+    "descriptionTags": [
+      "dot-aspot",
+      "hero-generated"
+    ],
+    "moderationStatus": "Unmoderated",
+    "lastActivatedDate": "2026-10-16T22:24:02.678Z",
+    "discoveryIntent": "PUBLIC",
+    "linkState": "LIVE"
+  },
+  {
+    "namespace": "fn",
+    "accountId": "epic",
+    "creatorName": "Epic",
     "mnemonic": "ref_panel_byepicfeedermoremodes_1",
     "linkType": "Reference",
     "metadata": {
@@ -326,7 +494,16 @@
       "lobby_background_image_urls": {
         "url": "http://localhost:5595/cdn2-unrealengine/juno-lobby-2560x1440-b8beae672ffb.png"
       },
+      "logo_image_urls": {
+        "url": "https://cdn2.unrealengine.com/cdn-uploader-FNJN_42-40_Odyssey_MasterBuild_BrickorTreat_DiscoverTile_Logo_-1440x617-4f028794.png"
+      },
       "frontend_plugin": "JunoFrontendUI",
+      "matchmaking_plugins": [
+        "JunoReadyUpErrors",
+        "JunoReadyUpErrorsUI",
+        "JunoPlayButton",
+        "JunoWorldManagementUI"
+      ],
       "image_url": "https://cdn2.unrealengine.com/legofn-disco-1920-1920x1080-c5f52d11a179.jpg",
       "requiresArbitratedWorldId": true,
       "image_urls": {
@@ -337,6 +514,14 @@
       },
       "matchmaking": {
         "override_playlist": "playlist_juno"
+      },
+      "required_content": {
+        "server": {},
+        "client": {
+          "verse_paths": [
+            "/Fortnite.com/GameFeatures/JunoRoot"
+          ]
+        }
       },
       "title": "LEGO Fortnite",
       "alt_title": {
@@ -379,6 +564,7 @@
     "created": "2022-08-11T20:17:42.128Z",
     "published": "2023-11-07T23:01:02.564Z",
     "descriptionTags": [],
+    "linkCategory": "LEGO",
     "moderationStatus": "Unmoderated",
     "lastActivatedDate": "2022-08-11T20:17:42.132Z",
     "discoveryIntent": "PUBLIC"
@@ -890,7 +1076,6 @@
         "override_playlist": "playlist_pilgrimquickplay"
       },
       "title": "Festival Main Stage",
-      "video_vuid": "TmspZBuurWGUxdzbkg",
       "alt_square_image_urls": {
         "de": {
           "url": "https://cdn2.unrealengine.com/de-fnsp-06-discoverytile-mainstage-480x480-480x480-bb86c450d70e.jpg"
@@ -1075,60 +1260,6 @@
     "moderationStatus": "Approved",
     "lastActivatedDate": "2022-09-12T15:11:15.048Z",
     "discoveryIntent": "PUBLIC"
-  },
-  {
-    "namespace": "fn",
-    "accountId": "epic",
-    "creatorName": "Epic",
-    "mnemonic": "playlist_figment_doofy",
-    "linkType": "BR:Playlist",
-    "metadata": {
-      "frontend_plugin": "FigmentFrontend",
-      "aspot_title": "Fortnite OG: Unvaulting Event",
-      "pop_out_image_urls": {
-            "url": "https://cdn2.unrealengine.com/cdn-uploader-FN_OG_C1S8_40-10_DarkVoyager_ASpot_Foreground_%281%29-1096x384-07aef0ef.png"
-        },
-        "background_image_urls": {
-            "url": "https://cdn2.unrealengine.com/cdn-uploader-FN_OG_C1S8_40-10_DarkVoyager_ASpot_Background_(1)-1760x352-830aff73.png"
-        },
-      "lobby_background_image_urls": {
-            "url": "http://localhost:5595/cdn2-unrealengine/cdn-uploader-MKARTFNOGC1S8LobbyBG_ltg_v4.1-no-overlay_size-e7725d6c.jpg"
-        },
-      "matchmakingV2": {
-        "allowSquadFillOption": true,
-        "allowJoinInProgress": false,
-        "crossplayRequired": true,
-        "maxPlayers": 100,
-        "ratingType": "fun",
-        "maxSocialPartySize": 1,
-        "isRanked": false,
-        "maxTeamCount": 100,
-        "allowPrivateMatches": false,
-        "maxTeamSize": 1
-      },
-      "alt_title": {},
-      "image_url": "https://cdn2.unrealengine.com/links-admin-EN_FN_OG_C1S8_40-10_VaultOpening_DiscoverTile_1920x1080-ade1dba6.jpg",
-      "product_tag": "Product.Figment",
-      "image_urls": {
-        "url_s": "https://cdn2.unrealengine.com/links-admin-EN_FN_OG_C1S8_40-10_VaultOpening_DiscoverTile_480x270-e117dd65.jpg",
-        "url_m": "https://cdn2.unrealengine.com/links-admin-EN_FN_OG_C1S8_40-10_VaultOpening_DiscoverTile_640x360-6382774d.jpg",
-        "url": "https://cdn2.unrealengine.com/links-admin-EN_FN_OG_C1S8_40-10_VaultOpening_DiscoverTile_1920x1080-ade1dba6.jpg"
-      },
-      "matchmaking": {
-        "override_playlist": "playlist_figment_doofy"
-      },
-      "title": "Fortnite OG: Unvaulting Event"
-    },
-    "version": 1,
-    "active": false,
-    "disabled": true,
-    "created": "2024-10-28T22:28:35.306Z",
-    "published": "2024-10-28T22:28:35.306Z",
-    "descriptionTags": [],
-    "moderationStatus": "Unmoderated",
-    "lastActivatedDate": "2024-10-28T22:28:35.310Z",
-    "discoveryIntent": "PUBLIC",
-    "linkState": "LIVE"
   },
   {
     "namespace": "fn",
@@ -1335,6 +1466,9 @@
       "lobby_background_image_urls": {
         "url": "http://localhost:5595/cdn2-unrealengine/cdn-uploader-Figment_C1S6_Lobby-7ba3539f.png"
       },
+      "logo_image_urls": {
+        "url": "https://cdn3.unrealengine.com/t-ui-og-gamelogo-1440x608-c53e3ad3d2f9.png"
+      },
       "frontend_plugin": "FigmentFrontend",
       "pop_out_image_urls": {
         "url": "https://cdn2.unrealengine.com/cdn-uploader-FNFigment_38-00_ButterflyEvent_Foreground_-1096x384-ebf0ac24.png"
@@ -1352,7 +1486,6 @@
         "url": "https://cdn2.unrealengine.com/cdn-uploader-EN_FN_OG_C1S6_OG_Lineup_DiscoverPlaylistTile_-1920x1080-74a22028.jpg"
       },
       "title": "Fortnite OG",
-      "video_vuid": "qXaZdMSokWKCZguVyg",
       "sub_link_codes": [
         "playlist_figmentsolo",
         "playlist_figmentduo",
@@ -2054,9 +2187,11 @@
         "url_m": "https://cdn2.unrealengine.com/fnbr-32-00-c5s5-kiln-discoverplaylist-tiles-br--640x360-640x360-5eca3596f397.jpg",
         "url": "https://cdn2.unrealengine.com/fnbr-32-00-c5s5-kiln-discoverplaylist-tiles-br-1920x1080-1920x1080-cd1887394e2c.jpg"
       },
+      "logo_image_urls": {
+        "url": "https://cdn3.unrealengine.com/t-ui-battleroyale-gamelogo-1440x608-c130a51383f6.png"
+      },
       "title": "Battle Royale",
       "locale": "en",
-      "video_vuid": "DpfVjiXQaFTRgOaGFE",
       "frontend_plugin": "BattleRoyaleExperienceFrontend",
       "sub_link_codes": [
         "playlist_defaultsolo",
@@ -2122,6 +2257,9 @@
     "metadata": {
       "lobby_background_image_urls": {
         "url": "http://localhost:5595/cdn2-unrealengine/blastberry-lobby-bg-final-notext-2560x1440-788db0478027.jpg"
+      },
+      "logo_image_urls": {
+        "url": "https://cdn3.unrealengine.com/t-ui-reload-gamelogo-1440x608-fa30ed8fd7e8.png"
       },
       "required_content": {
         "verse_uris": [
@@ -2198,6 +2336,9 @@
       "predownload_link_codes": [
         "0794-7216-8184"
       ],
+      "logo_image_urls": {
+        "url": "https://cdn3.unrealengine.com/t-ui-reload-gamelogo-1440x608-fa30ed8fd7e8.png"
+      },
       "alt_title": {
         "de": "SCHL\u00dcRFSCHUB",
         "ru": "\u041d\u0415\u041a\u0422\u0410\u0420\u041d\u042b\u0419 \u0428\u0422\u041e\u0420\u041c",
@@ -2250,6 +2391,9 @@
     "metadata": {
       "lobby_background_image_urls": {
         "url": "http://localhost:5595/cdn2-unrealengine/mkart-reload-32-00-lobby-2048x1024-88d93a368f3d.jpg"
+      },
+      "logo_image_urls": {
+        "url": "https://cdn3.unrealengine.com/t-ui-reload-gamelogo-1440x608-fa30ed8fd7e8.png"
       },
       "required_content": {
         "verse_uris": [
@@ -2306,6 +2450,9 @@
     "metadata": {
       "lobby_background_image_urls": {
         "url": "http://localhost:5595/cdn2-unrealengine/timberstake-lobby-4096x2048-9ad07d806d89.jpg"
+      },
+      "logo_image_urls": {
+        "url": "https://cdn3.unrealengine.com/t-ui-reload-gamelogo-1440x608-fa30ed8fd7e8.png"
       },
       "required_content": {
         "verse_uris": [
@@ -2368,6 +2515,9 @@
     "metadata": {
       "lobby_background_image_urls": {
         "url": "http://localhost:5595/cdn2-unrealengine/cdn-uploader-Reload_Nitemare_Lobby_4K-0375a03c.jpg"
+      },
+      "logo_image_urls": {
+        "url": "https://cdn3.unrealengine.com/t-ui-reload-gamelogo-1440x608-fa30ed8fd7e8.png"
       },
       "required_content": {
         "verse_uris": [
@@ -2436,6 +2586,9 @@
       "lobby_background_image_urls": {
         "url": "http://localhost:5595/cdn2-unrealengine/cdn-uploader-T_WCReloadLobby_StoneBridge-a1b7c45f.jpg"
       },
+      "logo_image_urls": {
+        "url": "https://cdn3.unrealengine.com/t-ui-reload-gamelogo-1440x608-fa30ed8fd7e8.png"
+      },
       "required_content": {
         "verse_uris": [
           "/Fortnite.com/GameFeatures/BRRoot",
@@ -2502,6 +2655,9 @@
     "metadata": {
       "lobby_background_image_urls": {
         "url": "http://localhost:5595/cdn2-unrealengine/cdn-uploader-MKART_Reload_EliteStronghold_LobbyBG_Final-abd89da4.jpg"
+      },
+      "logo_image_urls": {
+        "url": "https://cdn3.unrealengine.com/t-ui-reload-gamelogo-1440x608-fa30ed8fd7e8.png"
       },
       "required_content": {
         "verse_uris": [
@@ -2570,6 +2726,9 @@
       "lobby_background_image_urls": {
         "url": "http://localhost:5595/cdn2-unrealengine/cdn-uploader-MKART_Reload_RopeSmile_41.30_LobbBG_Final_4K-be5327cb.jpg"
       },
+      "logo_image_urls": {
+        "url": "https://cdn3.unrealengine.com/t-ui-reload-gamelogo-1440x608-fa30ed8fd7e8.png"
+      },
       "required_content": {
         "verse_uris": [
           "/Fortnite.com/GameFeatures/BRRoot",
@@ -2605,13 +2764,82 @@
       "image_url": "https://cdn2.unrealengine.com/links-admin-EN_FNBR_Reload_41-30_Ropesmile_KeyArt_DiscoverTile_1920x1080-885032bc.jpg",
       "product_tag": "Product.BlastBerry.Build",
       "image_urls": {
-            "url_s": "https://cdn2.unrealengine.com/links-admin-EN_FNBR_Reload_41-30_Ropesmile_KeyArt_DiscoverTile_480x270-f8d72718.jpg",
-            "url_m": "https://cdn2.unrealengine.com/links-admin-EN_FNBR_Reload_41-30_Ropesmile_KeyArt_DiscoverTile_640x360-bbbb83d1.jpg",
-            "url": "https://cdn2.unrealengine.com/links-admin-EN_FNBR_Reload_41-30_Ropesmile_KeyArt_DiscoverTile_1920x1080-885032bc.jpg"
-        },
+        "url_s": "https://cdn2.unrealengine.com/links-admin-EN_FNBR_Reload_41-30_Ropesmile_KeyArt_DiscoverTile_480x270-f8d72718.jpg",
+        "url_m": "https://cdn2.unrealengine.com/links-admin-EN_FNBR_Reload_41-30_Ropesmile_KeyArt_DiscoverTile_640x360-bbbb83d1.jpg",
+        "url": "https://cdn2.unrealengine.com/links-admin-EN_FNBR_Reload_41-30_Ropesmile_KeyArt_DiscoverTile_1920x1080-885032bc.jpg"
+      },
       "title": "Springfield",
       "matchmaking": {
         "override_playlist": "playlist_ropesmilesolo"
+      }
+    },
+    "version": 1,
+    "active": true,
+    "disabled": false,
+    "created": "2025-05-05T20:29:16.611Z",
+    "published": "2025-05-05T20:29:16.611Z",
+    "updated": "2025-08-26T20:32:22.689Z",
+    "descriptionTags": [],
+    "moderationStatus": "Unmoderated",
+    "lastActivatedDate": "2025-05-05T20:29:16.542Z",
+    "discoveryIntent": "PUBLIC",
+    "linkState": "LIVE"
+  },
+  {
+    "namespace": "fn",
+    "accountId": "epic",
+    "creatorName": "Epic",
+    "mnemonic": "playlist_blendheadedsolo",
+    "linkType": "BR:Playlist",
+    "metadata": {
+      "lobby_background_image_urls": {
+        "url": "http://localhost:5595/cdn2-unrealengine/blitz-38-11-strangerthings-lobbybackground-3840x2160-85bae20125fa.jpg"
+      },
+      "logo_image_urls": {
+        "url": "https://cdn3.unrealengine.com/t-ui-reload-gamelogo-1440x608-fa30ed8fd7e8.png"
+      },
+      "required_content": {
+        "verse_uris": [
+          "/Fortnite.com/GameFeatures/BRRoot",
+          "/Fortnite.com/GameFeatures/CreativeRoot"
+        ]
+      },
+      "predownload_link_codes": [
+        "2775-7679-6282"
+      ],
+      "alt_title": {
+        "de": "Stranger Things",
+        "ru": "\u041e\u0447\u0435\u043d\u044c \u0441\u0442\u0440\u0430\u043d\u043d\u044b\u0435 \u0434\u0435\u043b\u0430",
+        "ko": "\uae30\ubb18\ud55c \uc774\uc57c\uae30",
+        "pt": "Stranger Things",
+        "zh-hant": "\u5947\u7269\u8a9e",
+        "zh-hans": "\u602a\u5947\u7269\u8bed",
+        "it": "Stranger Things",
+        "fr": "Stranger Things",
+        "es": "Stranger Things",
+        "ar": "Stranger Things",
+        "vi": "Stranger Things",
+        "th": "\u0e2a\u0e40\u0e15\u0e23\u0e19\u0e40\u0e08\u0e2d\u0e23\u0e4c \u0e18\u0e34\u0e07\u0e2a\u0e4c",
+        "ja": "\u30b9\u30c8\u30ec\u30f3\u30b8\u30e3\u30fc\u30fb\u30b7\u30f3\u30b0\u30b9",
+        "id": "Stranger Things",
+        "pl": "Stranger Things",
+        "es-419": "Stranger Things",
+        "tr": "Stranger Things"
+      },
+      "favorite_override": "set_blastberry_playlists",
+      "parent_set": "set_blastberry_playlists",
+      "play_history_override": "set_blastberry_playlists",
+      "block_cascading_data": "true",
+      "image_url": "https://cdn2.unrealengine.com/links-admin-DE_FNBR_42-30_Reload_NitemareIsland_StrangerThings_DiscoverTile_1920x1080-d7d7c999.jpg",
+      "product_tag": "Product.BlastBerry.Build",
+      "image_urls": {
+        "url_s": "https://cdn2.unrealengine.com/links-admin-DE_FNBR_42-30_Reload_NitemareIsland_StrangerThings_DiscoverTile_480x270-d1525532.jpg",
+        "url_m": "https://cdn2.unrealengine.com/links-admin-DE_FNBR_42-30_Reload_NitemareIsland_StrangerThings_DiscoverTile_640x360-73eb0a13.jpg",
+        "url": "https://cdn2.unrealengine.com/links-admin-DE_FNBR_42-30_Reload_NitemareIsland_StrangerThings_DiscoverTile_1920x1080-d7d7c999.jpg"
+      },
+      "title": "Stranger Things",
+      "matchmaking": {
+        "override_playlist": "playlist_blendheadedsolo"
       }
     },
     "version": 1,

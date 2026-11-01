@@ -151,6 +151,298 @@ module.exports = {
 				]
 			})
 		}
+		else if (version >= 43.00) {
+			return res.json({
+				"panels": [
+					{
+						"panelName": "ReDiscover - HeroWidget",
+						"panelNativeDisplayName": "Hero Spot",
+						"panelDisplayName": "Hero Spot",
+						"panelSubtitle": null,
+						"featureTags": [
+							"heroCarousel",
+							"hideCCU",
+							"showIfEmpty:false"
+						],
+						"analyticsId": null,
+						"firstPage": {
+							"results": [
+								{
+									"lastVisited": null,
+									"linkCode": "ref_settings_hero_20261016_f307c034",
+									"isFavorite": false,
+									"globalCCU": -1,
+									"refId": "set_br_playlists",
+									"likePercent": null,
+									"lockStatus": "UNLOCKED",
+									"lockStatusReason": "RATING_THRESHOLD",
+									"isVisible": true,
+									"favoriteStatus": "NONE",
+									"isBookmarked": false
+								},
+								{
+									"lastVisited": null,
+									"linkCode": "ref_settings_hero_20261021_152083de",
+									"isFavorite": false,
+									"globalCCU": -1,
+									"refId": "set_figment_playlists",
+									"likePercent": null,
+									"lockStatus": "UNLOCKED",
+									"lockStatusReason": "RATING_THRESHOLD",
+									"isVisible": true,
+									"favoriteStatus": "NONE",
+									"isBookmarked": false
+								},
+								{
+									"lastVisited": null,
+									"linkCode": "ref_settings_hero_20261015_2e23b6f1",
+									"isFavorite": false,
+									"globalCCU": -1,
+									"refId": "playlist_pilgrimquickplay",
+									"likePercent": null,
+									"lockStatus": "UNLOCKED",
+									"lockStatusReason": "NONE",
+									"isVisible": true,
+									"favoriteStatus": "NONE",
+									"isBookmarked": false
+								},
+								{
+									"lastVisited": null,
+									"linkCode": "ref_settings_hero_20261021_21519252",
+									"isFavorite": false,
+									"globalCCU": -1,
+									"refId": "playlist_juno",
+									"likePercent": null,
+									"lockStatus": "UNLOCKED",
+									"lockStatusReason": "RATING_THRESHOLD",
+									"isVisible": true,
+									"favoriteStatus": "NONE",
+									"isBookmarked": false
+								}
+							],
+							"hasMore": false,
+							"panelTargetName": null,
+							"pageMarker": null,
+							"panelContexts": null
+						},
+						"panelType": "CuratedList",
+						"playHistoryType": null,
+						"panelContexts": {},
+						"uri": null,
+						"panelSortKey": null
+					},
+					{
+						"panelName": "ByEpicFeeder",
+						"panelNativeDisplayName": "By Epic",
+						"panelDisplayName": "By Epic",
+						"panelSubtitle": null,
+						"featureTags": [
+							"col:5",
+							"squareTiles:false",
+							"showIfEmpty:false",
+							"grid:5",
+							"horizontalScroll:true",
+							"maxVisibleRows:1",
+							"hasViewAll:true",
+							"activitySelectAction:Lobby",
+							"tilesBeforeViewAll:8"
+						],
+						"analyticsId": null,
+						"firstPage": {
+							"results": [
+								{
+									"linkCode": "set_br_playlists",
+									"isFavorite": false,
+									"globalCCU": 0,
+									"lockStatus": "UNLOCKED",
+									"lockStatusReason": "NONE",
+									"isVisible": true
+								},
+								{
+									"linkCode": "set_figment_playlists",
+									"isFavorite": false,
+									"globalCCU": 0,
+									"lockStatus": "UNLOCKED",
+									"lockStatusReason": "NONE",
+									"isVisible": true
+								},
+								{
+									"linkCode": "playlist_pilgrimquickplay",
+									"isFavorite": false,
+									"globalCCU": 0,
+									"lockStatus": "UNLOCKED",
+									"lockStatusReason": "NONE",
+									"isVisible": true
+								},
+								{
+									"linkCode": "playlist_juno",
+									"isFavorite": false,
+									"globalCCU": 0,
+									"lockStatus": "UNLOCKED",
+									"lockStatusReason": "NONE",
+									"isVisible": true
+								},
+								{
+									"lastVisited": null,
+									"linkCode": "playlist_papaya",
+									"isFavorite": false,
+									"globalCCU": 0,
+									"lockStatus": "UNLOCKED",
+									"lockStatusReason": "NONE",
+									"isVisible": true
+								},
+								{
+									"linkCode": "playlist_beanstalk",
+									"isFavorite": false,
+									"globalCCU": 0,
+									"lockStatus": "UNLOCKED",
+									"lockStatusReason": "NONE",
+									"isVisible": true
+								}
+							],
+							"hasMore": false,
+							"panelTargetName": null,
+							"pageMarker": null,
+							"panelContexts": null
+						},
+						"panelType": "AnalyticsList",
+						"playHistoryType": null
+					},
+					{
+						"panelName": "ByEpicConvergenceReload",
+						"panelNativeDisplayName": "Reload Maps",
+						"panelDisplayName": "Reload Maps",
+						"panelSubtitle": null,
+						"featureTags": [
+							"col:5",
+							"horizontalScroll:false",
+							"maxVisibleRows:2",
+							"hasViewAll:true",
+							"grid:6"
+						],
+						"firstPage": {
+							"results": [
+								{
+									"linkCode": "playlist_sunflowersolo",
+									"isFavorite": false,
+									"globalCCU": 0,
+									"lockStatus": "UNLOCKED",
+									"lockStatusReason": "NONE",
+									"isVisible": true
+								},
+								{
+									"linkCode": "playlist_punchberrysolo",
+									"isFavorite": false,
+									"globalCCU": 0,
+									"lockStatus": "UNLOCKED",
+									"lockStatusReason": "NONE",
+									"isVisible": true
+								},
+								{
+									"linkCode": "playlist_dashberrysolo",
+									"isFavorite": false,
+									"globalCCU": 0,
+									"lockStatus": "UNLOCKED",
+									"lockStatusReason": "NONE",
+									"isVisible": true
+								},
+								{
+									"linkCode": "playlist_timberstakesolo",
+									"isFavorite": false,
+									"globalCCU": 0,
+									"lockStatus": "UNLOCKED",
+									"lockStatusReason": "NONE",
+									"isVisible": true
+								},
+								{
+									"linkCode": "playlist_sourspawnsolo",
+									"isFavorite": false,
+									"globalCCU": 0,
+									"lockStatus": "UNLOCKED",
+									"lockStatusReason": "NONE",
+									"isVisible": true
+								},
+								{
+									"linkCode": "playlist_piperbootsolo",
+									"isFavorite": false,
+									"globalCCU": 0,
+									"lockStatus": "UNLOCKED",
+									"lockStatusReason": "NONE",
+									"isVisible": true
+								},
+								{
+									"linkCode": "playlist_matchmistsolo",
+									"isFavorite": false,
+									"globalCCU": 0,
+									"lockStatus": "UNLOCKED",
+									"lockStatusReason": "NONE",
+									"isVisible": true
+								},
+								{
+									"linkCode": "playlist_ropesmilesolo",
+									"isFavorite": false,
+									"globalCCU": 0,
+									"lockStatus": "UNLOCKED",
+									"lockStatusReason": "NONE",
+									"isVisible": true
+								},
+								{
+									"linkCode": "playlist_blendheadedsolo",
+									"isFavorite": false,
+									"globalCCU": 0,
+									"lockStatus": "UNLOCKED",
+									"lockStatusReason": "NONE",
+									"isVisible": true
+								}
+							],
+							"hasMore": true,
+							"panelTargetName": null,
+							"pageMarker": null
+						},
+						"panelType": "AnalyticsList",
+						"playHistoryType": null
+					},
+					{
+						"panelName": "ByEpicConvergenceMoreModes",
+						"panelNativeDisplayName": "Other Modes By Epic",
+						"panelDisplayName": "Other Modes By Epic",
+						"panelSubtitle": null,
+						"featureTags": [
+							"col:7",
+							"horizontalScroll:false",
+							"hasViewAll:false",
+							"squareTiles:false",
+							"grid:3"
+						],
+						"firstPage": {
+							"results": [
+								{
+									"linkCode": "set_figment_playlists",
+									"isFavorite": false,
+									"globalCCU": 0,
+									"lockStatus": "UNLOCKED",
+									"lockStatusReason": "NONE",
+									"isVisible": true
+								},
+								{
+									"linkCode": "set_forbiddenfruit_nobuild_playlists",
+									"isFavorite": false,
+									"globalCCU": 0,
+									"lockStatus": "UNLOCKED",
+									"lockStatusReason": "NONE",
+									"isVisible": true
+								}
+							],
+							"hasMore": true,
+							"panelTargetName": null,
+							"pageMarker": null
+						},
+						"panelType": "AnalyticsList",
+						"playHistoryType": null
+					}
+				]
+			})
+		}
 		else {
 			return res.json({
 				"panels": [
