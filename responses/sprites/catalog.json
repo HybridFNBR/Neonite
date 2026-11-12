@@ -2606,5 +2606,197 @@
       "summonCost": 6750
     },
     "templateId": "ExtractableRelic:feedjet_variant_a"
+  },
+  "PeelyBones_Variant_LiquidGold": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:peelybones_variant_liquidgold"
+  },
+  "Parrot_Variant_LiquidGold": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:parrot_variant_liquidgold"
+  },
+  "BarrelOfFish_Variant_LiquidGold": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:barreloffish_variant_liquidgold"
+  },
+  "TreasureChest_Variant_LiquidGold": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:treasurechest_variant_liquidgold"
+  },
+  "TreasureMap_Variant_LiquidGold": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:treasuremap_variant_liquidgold"
+  },
+  "Compass_Variant_LiquidGold": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:compass_variant_liquidgold"
+  },
+  "PirateCalamari_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:piratecalamari_variant_a"
+  },
+  "PirateCalamari_Variant_LiquidGold": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:piratecalamari_variant_liquidgold"
+  },
+  "PirateCalamari_Variant_Jeweled": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:piratecalamari_variant_jeweled"
+  },
+  "PirateCalamari_Variant_Cursed": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:piratecalamari_variant_cursed"
+  },
+  "UnbotheredFish_Variant_LiquidGold": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:unbotheredfish_variant_liquidgold"
+  },
+  "WhiteTiger_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:whitetiger_variant_a"
+  },
+  "WhiteTiger_Variant_LiquidGold": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:whitetiger_variant_liquidgold"
+  },
+  "WhiteTiger_Variant_Jeweled": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:whitetiger_variant_jeweled"
+  },
+  "WhiteTiger_Variant_Cursed": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:whitetiger_variant_cursed"
+  },
+  "PlaymakerBrewery_Variant_LiquidGold": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:playmakerbrewery_variant_liquidgold"
+  },
+  "RookGecko_Variant_LiquidGold": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:rookgecko_variant_liquidgold"
+  },
+  "DaffodilChurn_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:daffodilchurn_variant_a"
+  },
+  "DaffodilChurn_Variant_LiquidGold": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:daffodilchurn_variant_liquidgold"
+  },
+  "DaffodilChurn_Variant_Cursed": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:daffodilchurn_variant_cursed"
+  },
+  "DaffodilChurn_Variant_Jeweled": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:daffodilchurn_variant_jeweled"
+  },
+  "CoinPile_Variant_LiquidGold": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:coinpile_variant_liquidgold"
+  },
+  "Squibbly_Variant_LiquidGold": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:squibbly_variant_liquidgold"
+  },
+  "YortMelee_Variant_A": {
+    "_private": false,
+    "attributes": {
+      "bIsStarter": false,
+      "summonCost": 6750
+    },
+    "templateId": "ExtractableRelic:yortmelee_variant_a"
   }
 }

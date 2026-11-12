@@ -357,6 +357,7 @@ const seasonPass = (accountId, athenprofile, version, versionGlobal) => {
         "musicpasss13_seasonasset",
         "musicpasss14_seasonasset",
         "musicpasss15_seasonasset",
+        "musicpasss16_seasonasset",
         "safflower_seasondata_seasonasset"
 
     ]
